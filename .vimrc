@@ -17,7 +17,7 @@ set sts=4
 set ts=4
 set autoindent
 set path+=**
-" test
+" stop that
 " set cursorline
 " set cursorcolumn
 set wildmenu
