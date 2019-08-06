@@ -1,0 +1,24 @@
+#!/bin/bash
+
+sc(){
+    # open .script file in vim
+    file=$(find /home/infiniter/Code/scripts/* | fzf)
+    if [[ ! -z $file ]]; then
+        vim $file
+    fi
+}
+co(){
+    # open Code file in vim
+    file=$(find /home/infiniter/Code/* | fzf)
+    if [[ ! -z $file ]]; then
+        vim $file
+    fi
+}
+c() {
+    # change directory and list its files
+    cd "$@" && ls;
+}
+
+zat() {
+    zathura $1 & exit;
+}
