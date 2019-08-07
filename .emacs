@@ -24,7 +24,7 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-    (neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
+    (magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -81,3 +81,4 @@
 
 (setq org-agenda-files (list "~/.org/work_todo.org"
                              "~/.org/home_todo.org"))
+(global-set-key (kbd "C-x g") 'magit-status)
