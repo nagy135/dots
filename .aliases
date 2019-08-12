@@ -58,4 +58,4 @@ alias mpd="mpd ~/.config/mpd/mpd.conf"
 alias notify-send="notify-send -i 'none'"
 alias lr="lego_refresh"
 
-haha
+merged LOL
