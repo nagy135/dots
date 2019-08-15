@@ -10,7 +10,11 @@
 
 ;; Set default font size
 (set-face-attribute 'default nil :height 120)
+<<<<<<< HEAD
 (set-frame-font "League Mono 10" nil t)
+=======
+(set-frame-font "League Mono 13" nil t)
+>>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 
 ;; Package settings
 (require 'package)
@@ -37,13 +41,35 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
+<<<<<<< HEAD
     (helm-projectile ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode linum-relative jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
+=======
+    (emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode linum-relative jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
+>>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(org-block ((t (:inherit fixed-pitch))))
+ '(org-document-info ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-document-title ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono" :height 2.0 :underline nil))))
+ '(org-indent ((t (:inherit (org-hide fixed-pitch)))))
+ '(org-level-1 ((t (:inherit default :foreground "#19a85b" :slant normal :weight normal :height 1.75 :width normal :foundry "UKWN" :family "League Mono"))))
+ '(org-level-2 ((t (:inherit default :foreground "#304bcc" :slant normal :weight normal :height 1.5 :width normal :foundry "UKWN" :family "League Mono"))))
+ '(org-level-3 ((t (:inherit default :foreground "#c22330" :slant normal :weight normal :height 1.25 :width normal :foundry "UKWN" :family "League Mono"))))
+ '(org-level-4 ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono" :height 1.1))))
+ '(org-level-5 ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono"))))
+ '(org-level-6 ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono"))))
+ '(org-level-7 ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono"))))
+ '(org-level-8 ((t (:inherit default :weight bold :foreground "#f0fef0" :font "League Mono"))))
+ '(org-link ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-tag ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim ((t (:inherit (shadow fixed-pitch))))))
 
 ;; Evil 
 (require 'evil)
@@ -121,8 +147,53 @@
                 (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
                 (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)))
 
+;; Create notes from highlighted text ->> "~/.random_notes" with comment
+(defun highlight-to-notes (start end)
+  (interactive "r")
+    (if (use-region-p)
+        (let ((regionp (buffer-substring start end)))
+            (write-region (concat "* "(read-from-minibuffer "Set comment to note: *") "\n" regionp "\n\n") t "~/.random_notes.org" t))))
+
 ;; Org mode
 (require 'org)
+(setq org-hide-emphasis-markers t)
+(font-lock-add-keywords 'org-mode
+                        '(("^ *\\([-]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(let* ((variable-tuple
+        (cond ((x-list-fonts "League Mono") '(:font "League Mono"))
+              ((x-list-fonts "FontAwesome")   '(:font "FontAwesome"))
+              ((x-list-fonts "Verdana")         '(:font "Verdana"))
+              ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+              (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+       (base-font-color     (face-foreground 'default nil 'default))
+       (headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+
+  (custom-theme-set-faces
+   'user
+   `(org-level-8 ((t (,@headline ,@variable-tuple))))
+   `(org-level-7 ((t (,@headline ,@variable-tuple))))
+   `(org-level-6 ((t (,@headline ,@variable-tuple))))
+   `(org-level-5 ((t (,@headline ,@variable-tuple))))
+   `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+   `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+   `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+   `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+   `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))))
+(custom-theme-set-faces
+ 'user
+ '(org-block                 ((t (:inherit fixed-pitch))))
+ '(org-document-info         ((t (:foreground "dark orange"))))
+ '(org-document-info-keyword ((t (:inherit (shadow fixed-pitch)))))
+ '(org-link                  ((t (:foreground "royal blue" :underline t))))
+ '(org-meta-line             ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-property-value        ((t (:inherit fixed-pitch))) t)
+ '(org-special-keyword       ((t (:inherit (font-lock-comment-face fixed-pitch)))))
+ '(org-tag                   ((t (:inherit (shadow fixed-pitch) :weight bold :height 0.8))))
+ '(org-verbatim              ((t (:inherit (shadow fixed-pitch)))))
+ '(org-indent                ((t (:inherit (org-hide fixed-pitch))))))
 (setq org-log-done t)
 (setq org-agenda-files (list "~/.org/work_todo.org"
                              "~/.org/home_todo.org"))
@@ -160,7 +231,12 @@
 (define-key global-map "\C-cs" 'shell) ;; helm search in tags
 (define-key global-map "\C-cn" '(helm :sources projects-list)) ;; Choose between options
 (define-key global-map (kbd "C-x C-b")'helm-buffers-list) ;; Choose open buffer
+<<<<<<< HEAD
 (global-set-key (kbd "C-c g") 'ag-proj-regex) ;; search in custom projects
+=======
+(global-set-key (kbd "C-c C-g") 'ag-proj-regex) ;; search in custom projects
+(global-set-key (kbd "C-c h n") 'highlight-to-notes) ;; search in custom projects
+>>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 ;;(global-set-key (kbd "C-c p") (lambda() (interactive)(find-file my-new-global-var)(find-file-in-project)))
 ;;(global-set-key (kbd "C-c p")  (projectile-find-file))
 ;;(global-set-key (kbd "C-c g") (lambda() (interactive)(change-folder-ag)))
