@@ -10,11 +10,7 @@
 
 ;; Set default font size
 (set-face-attribute 'default nil :height 120)
-<<<<<<< HEAD
 (set-frame-font "League Mono 10" nil t)
-=======
-(set-frame-font "League Mono 13" nil t)
->>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 
 ;; Package settings
 (require 'package)
@@ -41,11 +37,7 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-<<<<<<< HEAD
-    (helm-projectile ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode linum-relative jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
-=======
     (emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode linum-relative jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
->>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -231,12 +223,8 @@
 (define-key global-map "\C-cs" 'shell) ;; helm search in tags
 (define-key global-map "\C-cn" '(helm :sources projects-list)) ;; Choose between options
 (define-key global-map (kbd "C-x C-b")'helm-buffers-list) ;; Choose open buffer
-<<<<<<< HEAD
-(global-set-key (kbd "C-c g") 'ag-proj-regex) ;; search in custom projects
-=======
 (global-set-key (kbd "C-c C-g") 'ag-proj-regex) ;; search in custom projects
 (global-set-key (kbd "C-c h n") 'highlight-to-notes) ;; search in custom projects
->>>>>>> 7178f6bcb45e3f38af95c7d4d8c7aec5ccf2acaf
 ;;(global-set-key (kbd "C-c p") (lambda() (interactive)(find-file my-new-global-var)(find-file-in-project)))
 ;;(global-set-key (kbd "C-c p")  (projectile-find-file))
 ;;(global-set-key (kbd "C-c g") (lambda() (interactive)(change-folder-ag)))
