@@ -3,7 +3,7 @@
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-message t) ;; hide the startup message
-(global-linum-mode t) ;; enable line numbers globally
+;; (global-linum-mode t) ;; enable line numbers globally
 
 
 ;; Set default font size
@@ -36,7 +36,7 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-    (emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode linum-relative jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
+    (eyebrowse emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -73,11 +73,14 @@
 (require 'projectile)
 
 ;; Relative numbers
-(require 'linum-relative)
+;; (require 'linum-relative)
 
 ;; Ag
 (require 'ag)
 
+;; Eyebrowse
+(eyebrowse-mode t)
+(eyebrowse-setup-evil-keys)
 
 ;; Auto Complete
 (require 'auto-complete-config)
@@ -134,8 +137,8 @@
 (defun highlight-to-notes (start end)
   (interactive "r")
     (if (use-region-p)
-        (let ((regionp (buffer-substring start end)))
-            (write-region (concat "* "(read-from-minibuffer "Set comment to note: *") "\n" regionp "\n\n") t "~/.random_notes.org" t))))
+        (let ((this-file-path (buffer-file-name))(regionp (buffer-substring start end)))
+            (write-region (concat "* "(read-from-minibuffer "Set comment to note: *") "\n" "** " this-file-path "\n" regionp "\n\n") t "~/.random_notes.org" t))))
 
 ;; Org mode
 (require 'org)
@@ -182,32 +185,41 @@
                              "~/.org/home_todo.org"))
 
 ;; Setup projectile projects
-(setq projects-list '("~/Code/django/joga" "~/Code/GoLemon" "~/go/src/github.com/nagy135/lego/"))
+(setq projects-list '("~/Code/joga" "~/go/src/github.com/nagy135/lego/"))
 (dolist (project-path projects-list)
   (projectile-add-known-project project-path))
+(setq helm-locate-project-list projects-list)
 
 ;; Modes
-(linum-relative-mode) ;; relative numberline mode
+;; (linum-relative-mode) ;; relative numberline mode
 (evil-commentary-mode) ;; commentary mode (gcc)
 (global-evil-surround-mode) ;; surround mode
 
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+
 ;; Bindings
+(global-set-key (kbd "C-x f") 'helm-find-files) ;; because i press it a lot without control
 (global-set-key (kbd "C-h C-h") 'helm-M-x) ;; use helm instead of default help
 (global-set-key (kbd "C-u") 'evil-scroll-up) ;; why isnt this default?
 (global-set-key (kbd "C-x C-s") 'eval-buffer) ;; evaluate current buffer
 (global-set-key (kbd "C-x C-c") (lambda() (interactive)(find-file "~/.emacs"))) ;; open .emacs file
 (global-set-key (kbd "C-x g") 'magit-status) ;; git status
-(define-key global-map "\C-cp" 'projectile-find-file-in-known-projects) ;; find file in projects from projects-list
+;; (define-key global-map "\C-cp" 'projectile-find-file-in-known-projects) ;; find file in projects from projects-list
+(define-key global-map (kbd "C-c p") 'helm-projects-find-files) ;; find file in projects from projects-list
 (define-key global-map "\C-cg" 'ag-project) ;; ag string in current project
 (define-key global-map "\C-xp" 'ac-complete-filename) ;; filepath completion
 (define-key global-map (kbd "M-p M-i") 'package-install) ;; fast package-install
 (define-key global-map "\C-ca" 'org-agenda) ;; show org todo agenda
 (define-key global-map "\C-ct" 'helm-semantic-or-imenu) ;; helm search in tags
-(define-key global-map "\C-cs" 'shell) ;; helm search in tags
+(define-key global-map "\C-cs" 'eshell) ;; helm search in tags
 (define-key global-map "\C-cn" '(helm :sources projects-list)) ;; Choose between options
 (define-key global-map (kbd "C-x C-b")'helm-buffers-list) ;; Choose open buffer
 (global-set-key (kbd "C-c C-g") 'ag-proj-regex) ;; search in custom projects
 (global-set-key (kbd "C-c h n") 'highlight-to-notes) ;; search in custom projects
+(global-set-key (kbd "C-c f n") 'show-file-name) ;; show file path of current buffer
 ;;(global-set-key (kbd "C-c p") (lambda() (interactive)(find-file my-new-global-var)(find-file-in-project)))
 ;;(global-set-key (kbd "C-c p")  (projectile-find-file))
 ;;(global-set-key (kbd "C-c g") (lambda() (interactive)(change-folder-ag)))
