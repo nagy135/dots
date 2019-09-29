@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# echo -n "" > ~/lego.log
+# /home/infiniter/go/bin/lego &> ~/lego.log
+/home/infiniter/go/bin/lego &
+echo $! > /tmp/lego.pid

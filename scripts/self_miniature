@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ ! -f /tmp/self_miniature_running ]]; then
+    mplayer tv://device=/dev/video01 & disown
+    echo $! > /tmp/self_miniature_running
+else
+  #close
+  kill "$(cat /tmp/self_miniature_running)"
+  rm /tmp/self_miniature_running
+fi

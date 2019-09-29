@@ -1,0 +1,9 @@
+#!/bin/bash
+
+count=$(pacman -Qu)
+
+if [[ $count -gt -1 ]]; then
+    echo "$count"
+else
+    echo "nic"
+fi

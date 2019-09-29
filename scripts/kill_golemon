@@ -1,0 +1,19 @@
+#!/bin/bash
+
+pkill -f subscribe_cpu &> /dev/null
+pkill -f subscribe_music &> /dev/null
+pkill -f subscribe_volume &> /dev/null
+pkill -f subscribe_battery &> /dev/null
+pkill -f subscribe_date &> /dev/null
+pkill -f subscribe_workspaces &> /dev/null
+pkill -f subscribe_ &> /dev/null
+pkill -f lemonbar &> /dev/null
+pkill -f stalonetray &> /dev/null
+# pkill -f golemon &> /dev/null
+
+# ps aux | grep golemon | egrep -v "nvim" | awk '{print $2}' | xargs -t kill 2> /dev/null
+
+ps aux | grep -e "./golemon" | grep -v -e "grep" | awk '{print $2}' | xargs -t kill
+
+
+# notify-send -t 2000 "GoLemon" "All subprocesses terminated"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ! $(pidof neomutt) ]]; then
+    alacritty --class 'neomutt' -e neomutt &> /dev/null &
+else
+    wmctrl -x -a neomutt
+fi

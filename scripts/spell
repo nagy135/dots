@@ -1,0 +1,10 @@
+#!/bin/bash
+
+word=$1
+
+res=$(echo $word | aspell pipe | sed -n '2,$p' | sed -r '/^\*\s*$/d' | sed -r '/^\s*$/d' | awk '{ s = ""; for (i = 5; i <= NF; i++) s = s $i " "; print $2 " ==> " s }' )
+if [[ `echo "$res" | wc -c` -eq 1 ]]; then
+    echo -en "✓ Correct ✓"
+else
+    echo "$res"
+fi

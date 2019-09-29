@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -f /tmp/full_date ]]; then
+    rm /tmp/full_date
+else
+    touch /tmp/full_date
+fi
+lego_refresh "date"

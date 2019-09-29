@@ -1,0 +1,5 @@
+#!/bin/bash
+connected=$(nmcli -t d status | awk -F ':' '{print $4}')
+strength=$(iwconfig wlp1s0 | grep Signal | sed 's/.*\(level=\)\(.*\)/\2/' | sed 's/[[:space:]]//g' | sed 's/[[:alpha:]]//g')
+strength=$((100+$strength))
+notify-send "Current Wifi" "$connected ($strength%)"

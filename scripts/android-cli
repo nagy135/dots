@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [[ $1 == "--mount" ]]; then
+    jmtpfs -o allow_other /mnt/android_mountpoint
+elif [[ $1 == "--umount" ]]; then
+    umount /mnt/android_mountpoint
+    exit 0
+elif [[ $1 == "--cd" ]]; then
+    echo "Cant change your current directory.
+    But YOU can. Like this:
+    cd /tmp/android_mountpoint"
+    exit 1
+elif [[ $1 == "--help" ]]; then
+    echo "    Mounts/unmounts android device connected via USB to /mnt/android_mount
+
+    Usage:
+      android-cli [options]
+
+    Options:
+      --mount                        Mount device
+      --umount                       Umount device
+      --cd                           Change directory
+      --help                         Show this help"
+elif [[ $# -eq 0 ]]; then
+    echo "No arguments given. Use --help option."
+    exit 1
+fi

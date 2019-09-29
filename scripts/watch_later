@@ -1,0 +1,21 @@
+#!/bin/bash
+
+folder="~/.config/mpv/watch_later/"
+
+if [[ $(cat $folder | wc -l) -eq 0 ]]; then
+    exit 0
+fi
+
+chosen=$(echo "$folder" | dmenu -i -p 'Choose file to continue')
+if [[ $chosen == '' ]]; then
+    exit 1
+else
+    url=$(echo $chosen | awk -F "YouTube" '{print $2}' | sed 's/^.//' | sed 's/.$//')
+    if [[ $1 == '--clipboard' ]]; then
+        echo $url | xclip -selection clipboard
+    elif [[ $1 == '--qutebrowser' ]]; then
+        qutebrowser $url
+    else
+        youtube-viewer --player=mpv --resolution=720p "$url"
+    fi
+fi

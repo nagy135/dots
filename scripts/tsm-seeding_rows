@@ -1,0 +1,10 @@
+#!/bin/python
+
+import subprocess
+
+data = subprocess.Popen(["transmission-remote -l | grep -e '100%' | grep -e 'Done'"], shell=True, stdout=subprocess.PIPE, universal_newlines=True)
+data = [item.strip().split() for item in data.stdout.readlines()]
+for item in data:
+    if item[8] == 'Seeding':
+        item.append('SEEDING')
+    print(item[0] + ' - ' + ' '.join(item[9:]))

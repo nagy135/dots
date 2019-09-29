@@ -1,0 +1,24 @@
+#!/bin/sh -e
+
+sleep 0.2
+# Take a screenshot
+scrot /tmp/screen_locked.png
+
+# Pixellate it 10x
+mogrify -scale 10% -scale 1000% /tmp/screen_locked.png
+# mogrify -blur 0x6 /tmp/screen_locked.png # SLOW AS FCK
+
+# Add Rick and Morty
+convert /tmp/screen_locked.png ~/Pictures/rick_and_morty.png -geometry 900x800+510+140 -composite /tmp/screen_locked_rick_morty.png
+
+# Lock screen displaying this image.
+i3lock -i /tmp/screen_locked_rick_morty.png \
+    --insidewrongcolor=c223309f \
+    --insidevercolor=19a85b9f \
+    --insidecolor=304bcccf \
+    --ringwrongcolor=c223309f \
+    --ringcolor=19a85b9f \
+    --linecolor=0b0b0b9f \
+    --keyhlcolor=2dc189aa \
+    --bshlcolor=f9dc2baa \
+    --screen=1

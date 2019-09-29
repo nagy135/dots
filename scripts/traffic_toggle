@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ -f /tmp/traffic_toggle ]]; then
+    rm /tmp/traffic_toggle
+else
+    echo "toggled on" > /tmp/traffic_toggle
+fi

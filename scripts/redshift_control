@@ -1,0 +1,47 @@
+#!/bin/bash
+
+value=0
+if [[ $1 == "-init" ]]; then
+    echo "6000" > /tmp/current_redshift
+    value=6000
+elif [[ $1 == '-day' ]] || [[ $1 == 'day' ]]; then
+    actual=6000
+    volnoti_val=$(python -c "print(int($actual/60))")
+    volnoti-show -1 ~/.scripts/resources/redshift_red.png -2 ~/.scripts/resources/redshift_red_mid.png -3 ~/.scripts/resources/redshift_blue.png -4 ~/.scripts/resources/redshift_blue.png $volnoti_val
+    echo "$actual" > /tmp/current_redshift
+    value=$actual
+elif [[ $1 == '-night' ]] || [[ $1 == 'night' ]]; then
+    actual=2200
+    volnoti_val=$(python -c "print(int($actual/60))")
+    volnoti-show -1 ~/.scripts/resources/redshift_red.png -2 ~/.scripts/resources/redshift_red_mid.png -3 ~/.scripts/resources/redshift_blue.png -4 ~/.scripts/resources/redshift_blue.png $volnoti_val
+    echo "$actual" > /tmp/current_redshift
+    value=$actual
+else
+    runcount=$(ps -aux | grep volnoti | wc -l)
+    if [ $runcount -lt 2 ]; then
+        volnoti -a 0.9 -t 2 -r 20
+    fi
+    if [[ $1 -gt 0 ]]; then
+        actual=$(cat /tmp/current_redshift)
+        actual=$(($actual+200))
+        if [[ $actual -gt 6000 ]]; then
+            actual=6000
+        fi
+        volnoti_val=$(python -c "print(int($actual/60))")
+        volnoti-show -1 ~/.scripts/resources/redshift_red.png -2 ~/.scripts/resources/redshift_red_mid.png -3 ~/.scripts/resources/redshift_blue.png -4 ~/.scripts/resources/redshift_blue.png $volnoti_val
+        echo "$actual" > /tmp/current_redshift
+        value=$actual
+    elif [[ $1 -lt 0 ]]; then
+        actual=$(cat /tmp/current_redshift)
+        actual=$(($actual-200))
+        if [[ $actual -lt 0 ]]; then
+            actual=0
+        fi
+        volnoti_val=$(python -c "print(int($actual/60))")
+        volnoti-show -1 ~/.scripts/resources/redshift_red.png -2 ~/.scripts/resources/redshift_red_mid.png -3 ~/.scripts/resources/redshift_blue.png -4 ~/.scripts/resources/redshift_blue.png $volnoti_val
+        echo "$actual" > /tmp/current_redshift
+        value=$actual
+    fi
+fi
+lego_refresh "redshift"
+redshift -P -O $value

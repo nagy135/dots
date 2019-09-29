@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# pamac checkupdates -a | sed '/Out of Date/Q' | sed '/^\s*$/d' # print everything until Out of Date and remove empty lines
+# pacman -Qu ? maybe
+
+
+while true; do
+    stamp=$(date +"%H:%M");
+    pamac_raw=$(pamac checkupdates -a )
+    echo "$pamac_raw"
+    pamac_output=$(echo "$pamac_raw" | sed '/Out of/Q')
+    out_of_date=$(echo "$pamac_raw" | sed -e '1,/Out of/ d' | wc -l)
+    num_packages=$(echo "$pamac_output" | grep 'available update' | awk '{print $1}')
+    aur_packages=$(echo "$pamac_output" | grep AUR | wc -l)
+    normal_packages=$(($num_packages-$aur_packages))
+
+    if [[ ! -z $out_of_date ]]; then
+        out_of_date_message="\nOut of date: $out_of_date"
+    fi
+
+    if [[ $num_packages -gt 0 ]]; then
+        if [[ $aur_packages -gt 0 ]]; then
+            notify-send -t 3000 "Pacman" "$num_packages updates available (AUR $aur_packages)$out_of_date_message"
+        else
+            notify-send -t 3000 "Pacman" "$num_packages updates available$out_of_date_message"
+        fi
+    fi
+    # 5 hours sleep
+    sleep 18000
+done

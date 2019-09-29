@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ! $(pidof ncmpcpp) ]]; then
+    alacritty --class 'ncmpcpp' -e ncmpcpp &> /dev/null &
+else
+    bspc desktop -f 10
+fi

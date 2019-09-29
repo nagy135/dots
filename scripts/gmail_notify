@@ -1,0 +1,12 @@
+#!/bin/python
+
+import subprocess
+import xmltodict
+
+data = subprocess.Popen(['curl -u viktor.nagy1995:infidag5a5al61 --silent "https://mail.google.com/mail/feed/atom/inbox"'], shell=True, stdout=subprocess.PIPE, universal_newlines=True)
+datadict = xmltodict.parse(data.stdout.read())
+for entry in datadict['feed']['entry']:
+    print(entry['modified'], entry['title'])
+
+# data = [item.strip().split() for item in data.stdout.readlines()]
+# print(data[0])

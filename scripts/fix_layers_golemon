@@ -1,0 +1,12 @@
+#!/bin/bash
+
+bar=$(xdo id -a bar)
+if [[ $bar == "" ]]; then
+    bar=$(xdo id -N lemonbar)
+fi
+
+root=$(xdo id -N Bspwm -n root | sort | head -n 1)
+tray=$(xdo id -a stalonetray)
+
+xdo above -t $root $bar
+xdo above -t $bar $tray

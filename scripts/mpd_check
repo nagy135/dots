@@ -1,0 +1,27 @@
+#!/bin/bash
+
+mpc_master_val=$(mpc)
+
+my_string=$( echo "$mpc_master_val" | sed '2q;d')
+mpc_val_1=$( echo "$mpc_master_val" | sed '1q;d')
+mpc_val_2=$( echo "$mpc_master_val" | sed '2q;d' | sed 's/.* \([0-9]*:[0-9]*\/[0-9]*:[0-9]*\).*/\1/')
+random_val=$(echo "$mpc_master_val" | sed '3q;d' | awk '{print $6}')
+if [[ $random_val == "on" ]]; then
+    random_val=" "
+else
+    random_val=""
+fi
+# volume_val=$(echo "$mpc_master_val" | sed '3q;d' | awk '{print $2}')
+
+if [[ $my_string =~ "playing" ]]; then
+    echo "$mpc_val_1 [$mpc_val_2]$random_val  "
+else
+    line_count=$(echo "$mpc_master_val" | wc -l)
+    if [[ $line_count -eq 1 ]]; then
+        echo ""
+    else
+        echo "$mpc_val_1 [$mpc_val_2] $random_val  "
+    fi
+    echo "\n"
+    echo "#444444"
+fi

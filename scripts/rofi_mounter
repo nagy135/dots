@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [[ $1 == '--umount' ]]; then
+    mounted_points=$(lsblk | grep part | awk '{print $7}' | sed '/^\s*$/d' | sed '/^\/$/d' | grep -v "boot/efi" | grep -v SWAP)
+    if [[ $mounted_points != '' ]]; then
+        chosen=$(echo -e "$mounted_points\nExit" | dmenu -i -p 'Choose mount point to unmount')
+        if [[ -d $chosen ]]; then
+            sudo umount $chosen
+        fi
+    else
+ 5al       echo -e "Exit" | dmenu -i -p 'Nothing to unmount' > /dev/null
+        exit 1
+    fi
+
+elif [[ $1 == '--mount' ]]; then
+    devices=$(lsblk -l | grep part | sed '/part\s\//d' | sed '/^\s*$/d' | sed '/^\/$/d' | grep -v "boot/efi" | grep -v SWAP | sed '/\s\/$/d' | awk '{print $1}')
+    if [[ $devices != '' ]]; then
+        chosen_device=$(echo -e "$devices\nExit" | dmenu -i -p 'Choose device to mount')
+        if [[ $chosen_device == 'Exit' ]]; then
+            exit 0
+        else
+            mount_points=$(ls -1 /mnt)
+            chosen_mountpoint=$(echo -e "$mount_points\nExit" | dmenu -i -p 'Choose mount point to mount on (or create new one and run again)')
+            sudo mount /dev/$chosen_device /mnt/$chosen_mountpoint
+        fi
+    else
+        echo -e "Exit" | dmenu -i -p 'Nothing to mount' > /dev/null
+    fi
+else
+    echo "Usage: mounter-cli [OPTION]"
+    echo ""
+    echo "Mounts devices to previously created mountpoints."
+    echo ""
+    echo "Options:"
+    echo "  --mount                    mounts device"
+    echo "  --umount                   unmounts device"
+fi

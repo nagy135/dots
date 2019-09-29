@@ -1,0 +1,3 @@
+#!/bin/bash
+
+google-chrome-stable https://docs.python.org/3/search.html?q=dict

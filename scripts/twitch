@@ -1,0 +1,9 @@
+#!/bin/bash
+if [[ $# -gt 1 ]]; then
+    if [[ $1 == "-qt" ]]; then
+        stream=$(echo $2 | sed 's/.*\///')
+        streamlink -p mpv --http-header Client-ID=jzkbprff40iqj646a697cyrvl0zt2m6 twitch.tv/$stream best &> /dev/null
+    fi
+else
+    streamlink -p mpv --http-header Client-ID=jzkbprff40iqj646a697cyrvl0zt2m6 twitch.tv/$1 best
+fi

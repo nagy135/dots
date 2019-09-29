@@ -1,0 +1,13 @@
+#!/bin/bash
+
+log="/home/infiniter/.net_speed"
+
+res=$(curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python)
+echo "$res"
+
+echo "" >> $log
+echo $(date) >> $log
+echo "" >> $log
+echo "$res" >> $log
+echo "" >> $log
+echo "##############################################################################" >> $log

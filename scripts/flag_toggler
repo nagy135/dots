@@ -1,0 +1,45 @@
+#!/bin/bash
+
+[[ $1 == "" ]] && echo "No argument" && exit 1
+
+case "$1" in
+    sticky)
+        bspc node -g sticky
+        ;;
+    marked)
+        bspc node -g marked
+        ;;
+    private)
+        bspc node -g private
+        ;;
+    locked)
+        bspc node -g locked
+        ;;
+esac
+
+bspc subscribe -c 1 | while read line; do
+    line=$(echo $line | sed 's/^.*G\(.*\)/\1/g')
+    echo $line
+    sticky=0
+    marked=0
+    private=0
+    locked=0
+    [[ $line == *"S"* ]] && sticky=1
+    [[ $line == *"M"* ]] && marked=1
+    [[ $line == *"P"* ]] && private=1
+    [[ $line == *"L"* ]] && locked=1
+
+    [[ $sticky -eq 1 ]]  && result="${result} <span foreground='#f9dc2b'>Sticky</span>"
+    [[ $marked -eq 1 ]]  && result="${result} <span foreground='#304bcc'>Marked</span>"
+    [[ $private -eq 1 ]] && result="${result} <span foreground='#19a85b'>Private</span>"
+    [[ $locked -eq 1 ]]  && result="${result} <span foreground='#c22330'>Locked</span>"
+
+    flag_jpg="~/.scripts/resources/flag.jpg"
+    if [[ ! ${#result} -eq 0 ]]; then
+        result=$(echo $result | sed 's/^\s*//' | tr ' ' ' \| ')
+        notify-send -t 1000 -u normal -i $flag_jpg " " "$result"
+    else
+        notify-send -u critical -t 1000 -i $flag_jpg "None" ""
+    fi
+    exit 0
+done

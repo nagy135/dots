@@ -1,0 +1,16 @@
+#!/bin/bash
+active=""
+streams=(riotgames yassuo llstylez loltyler1 shiphtur nightblue3 boxbox hashinshin SoloRenektonOnly)
+for stream in ${streams[@]}; do
+    res=$(curl -H 'Accept: application/vnd.twitchtv.v4+json' -H 'Client-ID: jzkbprff40iqj646a697cyrvl0zt2m6' -X GET "https://api.twitch.tv/kraken/streams/$stream" | jq -r '.stream')
+    if [[ $res == 'null' ]]; then
+        nothing=1
+    else
+        active="$stream\n$active"
+    fi
+done
+choice=$(echo -e $active | dmenu -i -p 'Choose stream to watch')
+if [[ $choice != '' ]]; then
+    twitch $choice &
+    exit 0
+fi

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+ICON="~/.scripts/resources/tmux.png"
+
+if [[ $1 == 'kill' ]]; then
+    chosen=$(tmux ls | awk -F: '{print $1}' | rofi -theme "~/.config/rofi/tmux_warning.rasi" -dmenu -i -p 'Kill tmux session')
+    [[ ! -z $chosen ]] && notify-send -i $ICON -t 2000 "Tmux session killed" && alacritty --class toggle_tmux -e tmux kill-session -t "$chosen" &> /dev/null &
+    exit 0
+elif [[ $1 == 'create' ]]; then
+    chosen=$(tmux ls | awk -F: '{print $1}' | rofi -theme input.rasi -dmenu -i -p 'Create tmux session')
+    [[ ! -z $chosen ]] && notify-send -i $ICON -t 2000 "Created" "$chosen" && tmux new -s $chosen
+    exit 0
+elif [[ $1 == "list" ]]; then
+    pid=$(xdotool search --classname toggle_tmux getwindowpid)
+    chosen=$(tmux ls | awk -F: '{print $1}' | rofi -theme "~/.config/rofi/tmux.rasi" -dmenu -i -p 'Switch tmux session')
+    [[ ! -z $chosen ]] && [[ $pid != '' ]] && kill $pid
+    [[ ! -z $chosen ]] && alacritty --class toggle_tmux -e tmux new-session -A -s "$chosen" &> /dev/null &
+    exit 0
+else
+    pid=$(xdotool search --classname toggle_tmux getwindowpid)
+    if [[ $pid != '' ]]; then # its running
+        wid=$(xdotool search --classname toggle_tmux)
+        [[ $(xdotool getwindowfocus) -eq $wid ]] && kill $pid && notify-send -u critical -t 2000 -i $ICON "Tmux killed" && exit 0
+        current_desktop=$(bspc query -D -d focused --names)
+        current_desktop=$((current_desktop-1))
+        wmctrl -l -p | awk '{print $2 " " $3}' | sed -n "/^$current_desktop.*/p" | awk '{print $2}' | grep -Fxq $pid && xdotool windowactivate $wid && exit 0
+        bspc node $wid -d $(bspc query -D -d focused --names)
+        xdotool windowactivate $wid
+    else
+        alacritty --class toggle_tmux -e tmux new-session -A -s stuff &> /dev/null &
+    fi
+fi

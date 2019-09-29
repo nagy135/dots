@@ -1,0 +1,4 @@
+#!/bin/sh
+
+notify-send "Torrent Downloaded" "$TR_TORRENT_NAME"
+/usr/bin/lego_refresh "torrent"

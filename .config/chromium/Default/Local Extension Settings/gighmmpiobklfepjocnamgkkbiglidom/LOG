@@ -1,25 +1,9 @@
-2019/09/29-10:55:39.054 321a Reusing MANIFEST /home/infiniter/.config/chromium/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/MANIFEST-000001
-2019/09/29-10:55:39.056 321a Recovering log #621
-2019/09/29-10:55:39.144 321a Level-0 table #624: started
-2019/09/29-10:55:39.228 321a Level-0 table #624: 4511104 bytes OK
-2019/09/29-10:55:39.240 321a Delete type=0 #621
-2019/09/29-10:56:40.633 32ed Level-0 table #627: started
-2019/09/29-10:56:40.722 32ed Level-0 table #627: 4511269 bytes OK
-2019/09/29-10:56:40.733 32ed Delete type=0 #625
-2019/09/29-10:56:44.162 32ed Level-0 table #629: started
-2019/09/29-10:56:44.256 32ed Level-0 table #629: 4522541 bytes OK
-2019/09/29-10:56:44.268 32ed Delete type=0 #626
-2019/09/29-10:56:44.271 32ed Compacting 4@0 + 2@1 files
-2019/09/29-10:56:44.382 32ed Generated table #630@0: 1 keys, 4522220 bytes
-2019/09/29-10:56:44.391 32ed Generated table #631@0: 5 keys, 443 bytes
-2019/09/29-10:56:44.391 32ed Compacted 4@0 + 2@1 files => 4522663 bytes
-2019/09/29-10:56:44.400 32ed compacted to: files[ 0 2 1 0 0 0 0 ]
-2019/09/29-10:56:44.400 32ed Delete type=2 #622
-2019/09/29-10:56:44.401 32ed Delete type=2 #629
-2019/09/29-10:56:44.402 32ed Delete type=2 #627
-2019/09/29-10:56:44.403 32ed Delete type=2 #624
-2019/09/29-10:56:44.403 32ed Delete type=2 #619
-2019/09/29-10:56:44.403 32ed Delete type=2 #618
-2019/09/29-10:58:33.321 32ed Level-0 table #633: started
-2019/09/29-10:58:33.408 32ed Level-0 table #633: 4532350 bytes OK
-2019/09/29-10:58:33.421 32ed Delete type=0 #628
+2019/09/29-19:02:05.975 7921 Reusing MANIFEST /home/infiniter/.config/chromium/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/MANIFEST-000001
+2019/09/29-19:02:05.976 7921 Recovering log #632
+2019/09/29-19:02:05.976 7921 Reusing old log /home/infiniter/.config/chromium/Default/Local Extension Settings/gighmmpiobklfepjocnamgkkbiglidom/000632.log 
+2019/09/29-19:03:07.634 7c12 Level-0 table #636: started
+2019/09/29-19:03:07.727 7c12 Level-0 table #636: 4532547 bytes OK
+2019/09/29-19:03:07.739 7c12 Delete type=0 #632
+2019/09/29-19:04:10.107 7c12 Level-0 table #638: started
+2019/09/29-19:04:10.232 7c12 Level-0 table #638: 4532621 bytes OK
+2019/09/29-19:04:10.243 7c12 Delete type=0 #635

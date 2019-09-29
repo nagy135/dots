@@ -1,10 +1,10 @@
 # GIMP action-history
 
-(history-item "edit-paste" 1)
+(history-item "edit-paste" 0)
 (history-item "file-export" 2)
-(history-item "file-quit" 2)
-(history-item "image-new" 1)
-(history-item "file-open" 2)
+(history-item "file-quit" 3)
+(history-item "image-new" 0)
+(history-item "file-open" 3)
 (history-item "view-zoom-in" 1)
 (history-item "tools-crop" 1)
 (history-item "tools-scale" 3)

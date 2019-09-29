@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ ! $(pidof htop) ]]; then
+    alacritty --class 'htop' -e htop &> /dev/null &
+else
+    bspc desktop -f 9
+fi

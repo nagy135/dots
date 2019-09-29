@@ -1,0 +1,36 @@
+#!/bin/bash
+
+interface='wlp1s0'
+status_full=$(nmcli d status)
+
+status=$( echo "$status_full" | grep $interface | awk '{ print $3 }')
+if [[ $status == 'disconnected' ]]; then
+    wifi_list=$(nmcli -t d wifi list --rescan yes | awk -F ':' '{print $2 " (" $6 "%)" }')
+    chosen=$( echo "$wifi_list" | dmenu -i -p 'Choose network to connect to')
+    if [[ $chosen != '' ]]; then
+        chosen=$(echo $chosen | sed 's/ (.*)//')
+        # nmcli r wifi off; nmcli r wifi on;
+        notify-send "Wifi" "connecting to $chosen..."
+        nmcli d wifi connect "$chosen"
+        while [[ $( nmcli d status | grep $interface | awk '{ print $3 }') != 'connected' ]]; do
+            sleep 2
+        done
+        notify-send "Wifi" "Connected to $(nmcli -t d status | grep $interface | awk -F ':' '{ print $4 }')"
+        echo 'wifi' > /tmp/refresh; \
+        /home/infiniter/Code/Pylemon/pylemon_signal 10
+        exit 0
+    else
+        exit 1
+    fi
+else
+    connected=$( echo "$status_full" | grep $interface | awk '{ print $4 }')
+    choice=$( echo -e "Yes\nNo" | dmenu -i -p "Disconnect from $connected ?")
+    if [[ $choice == '' || $choice == 'No' ]]; then
+        exit 1
+    else
+        nmcli d disconnect $interface
+        notify-send "Wifi" "Successfully disconnected"
+        echo 'wifi' > /tmp/refresh; \
+        /home/infiniter/Code/Pylemon/pylemon_signal 10
+    fi
+fi

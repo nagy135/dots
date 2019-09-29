@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ $1 == "-first" ]]; then
+    rm /tmp/sleep_check_timer &> /dev/null
+    echo "one minute remaining" > /tmp/sleep_check_timer
+
+    chosen=$(echo -e "Continue\nHibernate" | dmenu -i -p 'Time to SLEEP ! ...Do you still want to continue?')
+    if [ $chosen = 'Continue' ]; then
+        rm /tmp/sleep_check_timer &> /dev/null
+        exit 0
+    elif [ $chosen = 'Hibernate' ]; then
+        rm /tmp/sleep_check_timer &> /dev/null
+        echo "Test" > ~/test_hib
+    fi
+elif [[ $1 == "-second" ]]; then
+    if [[ -f /tmp/sleep_check_timer ]]; then
+        echo "Test" > ~/test_sec
+    fi
+fi

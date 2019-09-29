@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [[ $1 == 'mark' ]]; then
+    active_window=$2
+    choice=$(dmenu -theme /usr/share/rofi/themes/dmenu.rasi -i -p 'Press mark to save to: ')
+    if [[ $choice != '' ]]; then
+        sed -i "/$choice:/d" /tmp/bspwm_marks
+        echo "$choice:$active_window" >> /tmp/bspwm_marks
+        name=$(xdotool getwindowname $active_window)
+        notify-send -i 'none' 'Mark set' "$choice ($name)"
+    fi
+elif [[ $1 == 'show' ]]; then
+    choice=$(dmenu -theme /usr/share/rofi/themes/dmenu.rasi -i -p 'Press mark focus: ')
+    if [[ $choice != '' ]]; then
+        window=$(cat /tmp/bspwm_marks | sed -n "/$choice:/p")
+        if [[ $window != '' ]]; then
+            bspc node -f $(echo $window | awk -F: '{print $2}')
+        else
+            sed -i "/$choice:/d" /tmp/bspwm_marks #clean if died already
+            notify-send -i 'none' 'Mark not set' "$choice"
+        fi
+    fi
+elif [[ $1 == 'clean' ]]; then
+    if [[ $(cat /tmp/bspwm_marks | wc -l) -eq 0 ]]; then
+        notify-send -i 'none' 'Mark delete' 'No active mark'
+    else
+        choice=$(cat /tmp/bspwm_marks | awk -F: '{print $1}' | dmenu -theme /usr/share/rofi/themes/dmenu.rasi -i -p 'Select mark to delete: ')
+        if [[ $choice != '' ]]; then
+            sed -i "/$choice:/d" /tmp/bspwm_marks
+            notify-send -i 'none' 'Mark deleted' "$choice"
+        fi
+    fi
+fi
+exit 0

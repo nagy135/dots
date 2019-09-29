@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ $1 == '-first' ]]; then
+    echo "whatever" > /tmp/night
+    notify-send -t 5000 "WARNING" "Device will turn hibernating in 10 minutes...delete /tmp/night" --icon=dialog-information
+elif [[ $1 == '-second' ]]; then
+    if [[ -f /tmp/night ]]; then
+        systemctl hibernate
+    fi
+fi

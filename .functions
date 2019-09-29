@@ -29,6 +29,6 @@ zat() {
 
 update_dots(){
     # copy relevant files and change directory
-    cp -r ~/.vim/colors ~/.vimrc ~/.tmux.conf ~/.config ~/.aliases ~/.functions ~/.zshrc ~/.emacs ~/.dots
+    cp -r ~/Code/scripts ~/.vim/colors ~/.vimrc ~/.tmux.conf ~/.config ~/.aliases ~/.functions ~/.zshrc ~/.emacs ~/.dots
     cd ~/.dots
 }

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo $(speedtest-cli --json --no-upload | python3 -c "
+import sys, json
+down = json.load(sys.stdin)['download']
+print(str(round(down / 8000000, 2)) + 'MB/s')
+")

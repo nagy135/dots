@@ -1,0 +1,11 @@
+#!/bin/bash
+
+lines=$(curl wttr.in 2> /dev/null | sed -n '4,7p;9q' | sed 's/\x1b\[[0-9;]*m//g' | sed 's/^.\{,14\}//' | sed 's/  / /')
+temp=$(echo "$lines" | sed -n '1p;2q' | sed 's/--/ to -/')
+wind=$(echo "$lines" | sed -n '2p;3q' | sed 's/↘/wind: /' | xargs)
+view=$(echo "$lines" | sed -n '3p;4q' )
+rain=$(echo "$lines" | sed -n '4p' )
+echo $rain
+
+
+notify-send -i 'none' 'Weather' "\ntemp:$temp\n$wind\nview:$view\nrain:$rain"

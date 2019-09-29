@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+cat ~/.aliases | sed 's/^alias \(.*\)\(="\)\(.*\)\("\)/\1 = \3/'
