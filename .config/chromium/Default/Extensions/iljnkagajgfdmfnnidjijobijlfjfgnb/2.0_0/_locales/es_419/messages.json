@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Cree, edite y comparta hojas de cálculo de Excel. Trabaje con otras personas en tiempo real. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Todas sus notas en un solo lugar y a su alcance dondequiera que vaya."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Cree, edite y comparta presentaciones de PowerPoint.  Trabaje con otras personas en tiempo real. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Cree, edite y comparta documentos de Word. Trabaje con otras personas en tiempo real. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

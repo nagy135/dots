@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Opret, rediger og del Excel-regneark. Arbejd med andre i realtid. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Alle dine noter på ét sted og med dig overalt."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Opret, rediger og del PowerPoint-præsentationer.  Arbejd med andre i realtid. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Opret, rediger og del Word-dokumenter. Arbejd med andre i realtid. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

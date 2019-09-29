@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel elektronik tabloları oluşturun, düzenleyin ve paylaşın. Aynı anda başkalarıyla birlikte çalışın. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Tüm notlarınız tek bir yerde ve her zaman sizinle."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint sunumları oluşturun, düzenleyin ve paylaşın.  Aynı anda başkalarıyla birlikte çalışın. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Word belgeleri oluşturun, düzenleyin ve paylaşın. Aynı anda başkalarıyla birlikte çalışın. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

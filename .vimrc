@@ -17,7 +17,6 @@ set sts=4
 set ts=4
 set autoindent
 set path+=**
-" stop that
 " set cursorline
 " set cursorcolumn
 set wildmenu
@@ -241,7 +240,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mhinz/vim-startify'
     " Plug 'ycm-core/YouCompleteMe'
-    " Plug 'junegunn/goyo.vim'
+    Plug 'junegunn/goyo.vim'
     " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end()
 "}}}

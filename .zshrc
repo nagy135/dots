@@ -13,6 +13,9 @@ else
     source ~/.zplugin/bin/zplugin.zsh
 fi
 
+# Enable colors and change prompt:
+autoload -U colors && colors
+
 autoload -Uz _zplugin
 (( ${+_comps} )) && _comps[zplugin]=_zplugin
 
@@ -57,6 +60,19 @@ bindkey -v
 # https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
 # 10ms for key sequences
 KEYTIMEOUT=1
+#
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
+
 
 # show vim status
 # http://zshwiki.org/home/examples/zlewidgets
@@ -67,18 +83,31 @@ function zle-line-init zle-keymap-select {
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
+zle -N edit-command-line
+
+bindkey '^e' edit-command-line
 
 # add missing vim hotkeys
 # http://zshwiki.org/home/zle/vi-mode
 bindkey -a u undo
 bindkey -a '^T' redo
 bindkey '^?' backward-delete-char  #backspace
+#
+
+zle -N zle-line-init
 
 # history search in vim mode
 # http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
 # ctrl+r to search history
 bindkey -M viins '^r' history-incremental-search-backward
 bindkey -M vicmd '^r' history-incremental-search-backward
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 source ~/.zsh/keybinds.zsh
 
@@ -88,3 +117,6 @@ export XDG_CONFIG_HOME=/home/infiniter/.config
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+
+# Load zsh-syntax-highlighting; should be last.
+source ~/.zsh/clones/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

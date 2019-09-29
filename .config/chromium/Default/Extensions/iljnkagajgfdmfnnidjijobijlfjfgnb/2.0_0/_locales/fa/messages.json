@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "صفحه های گسترده Excel را ایجاد کرده، ویرایش کنید و به اشتراک بگذارید. در کوتاه ترین زمان با دیگران ارتباط برقرار کنید. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "تمام یادداشت های شما در یک مکان و در هرکجا با شما هستند."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "ارائه های PowerPoint را ایجاد کرده، ویرایش کنید و به اشتراک بگذارید.  در کوتاه ترین زمان با دیگران ارتباط برقرار کنید. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "اسناد Word را ایجاد کرده، ویرایش کنید و به اشتراک بگذارید. در کوتاه ترین زمان با دیگران ارتباط برقرار کنید. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

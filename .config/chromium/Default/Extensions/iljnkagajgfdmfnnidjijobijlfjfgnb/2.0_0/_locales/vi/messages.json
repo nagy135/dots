@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Tạo, chỉnh sửa và chia sẻ bảng tính Excel. Làm việc với những người khác trong thời gian thực. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Tất cả ghi chú của bạn ở một nơi và luôn ở bên bạn, ở bất cứ nơi đâu."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Tạo, chỉnh sửa và chia sẻ bản trình bày PowerPoint.  Làm việc với những người khác trong thời gian thực. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Tạo, chỉnh sửa và chia sẻ tài liệu Word. Làm việc với những người khác trong thời gian thực. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

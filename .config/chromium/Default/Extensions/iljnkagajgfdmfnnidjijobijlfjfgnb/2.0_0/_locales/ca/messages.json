@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Creeu, editeu i compartiu fulls de càlcul de l’Excel. Treballeu amb altres persones en temps real."
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Totes les notes en un sol lloc i al vostre abast, des de qualsevol ubicació."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Creeu, editeu i compartiu presentacions del PowerPoint.  Treballeu amb altres persones en temps real. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Creeu, editeu i compartiu documents del Word. Treballeu amb altres persones en temps real. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Создавайте, редактируйте таблицы Excel и делитесь ими. Работайте вместе с другими людьми в режиме реального времени. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Все ваши заметки в одной записной книжке, которая всегда под рукой."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Создавайте, редактируйте презентации PowerPoint и делитесь ими.  Работайте вместе с другими людьми в режиме реального времени. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Создавайте, редактируйте документы Word и делитесь ими. Работайте вместе с другими людьми в режиме реального времени. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

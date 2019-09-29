@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "أنشئ جداول بيانات Excel وعدّلها، وشاركها. اعمل مع الآخرين في الوقت الحقيقي."
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "احتفظ بجميع ملاحظاتك في مكان واحد، وتمكن من الوصول إليها أينما كنت."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "أنشئ عروض PowerPoint وعدّلها، وشاركها.  اعمل مع الآخرين في الوقت الحقيقي."
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "أنشئ مستندات Word وعدّلها، وشاركها. اعمل مع الآخرين في الوقت الحقيقي."
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

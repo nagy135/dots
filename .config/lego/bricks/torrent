@@ -1,0 +1,79 @@
+#!/bin/bash
+
+lines=$(transmission-remote -l | grep -E 'Downloading|Up & Down' | grep -oP '\d+%' )
+res_line=''
+
+i=0
+for j in $(echo "$lines")
+do
+    i=$((i+1))
+    res_line="$res_line $i($j) "
+done
+
+lines=$(transmission-remote -l)
+count1=$(echo "$lines" | grep Downloading | wc -l)
+idle_count=$(echo "$lines" | grep -v '100%' | grep -E "Idle|Queued" | wc -l)
+seed_count=$(echo "$lines" | grep -e 'Seeding' -e 'Done.*Idle' | wc -l)
+stopped_count=$(echo "$lines" | grep -e 'Stopped' | wc -l)
+seed_running_count=$(echo "$lines" | grep -e 'Seeding' | wc -l)
+count2=$(echo "$lines" | grep 'Up & Down' | wc -l)
+count=$(($count1+$count2+$seed_count+$idle_count))
+goal=$(($count*100))
+
+down_block=""
+seed_block=""
+wait_block=""
+stopped_block=""
+
+waiter=""
+if [[ $idle_count -gt 0 ]]; then
+    wait_block=" ($idle_count) "
+fi
+seeder=""
+if [[ $seed_count -gt 0 ]]; then
+    seed_block=" ($seed_count)"
+fi
+
+stopper=""
+if [[ $stopped_count -gt 0 ]]; then
+    stopped_block=" ($stopped_count)"
+fi
+
+
+if [[ $count -gt 0 ]]; then
+    percentages=$(echo "$lines" | grep -E 'Downloading|Up & Down' | grep -oP '\d+(?=%)')
+    echo "$percentages" > /tmp/torrentdata
+
+    done=$(awk '{s+=$1} END {print s}' /tmp/torrentdata)
+    done=$(($done+($seed_count*100)))
+
+    res=$(echo $(($done*100/$goal))'%')
+    if [[ $(($count1 + $count2)) -gt 0 ]]; then
+        down_block="$res_line"
+    else
+        if [[ $seed_count -gt 0 ]]; then
+            seed_block=" ($seed_count)"
+        fi
+        if [[ $idle_count -gt 0 ]]; then
+            wait_block=" ($idle_count)"
+        fi
+        if [[ $stopped_count -gt 0 ]]; then
+            stopped_block=" ($stopped_count)"
+        fi
+    fi
+fi
+
+
+res=$(echo -e "$wait_block$down_block$seed_block$stopped_block")
+if [[ $(($count1 + $count2)) -gt 0 ]]; then
+    echo -en "%{F#19a85b}$res%{F-}"
+elif [[ $seed_running_count -gt 0 ]]; then
+    echo -en "%{F#f9dc2b}$res%{F-}"
+else
+    echo -en $res
+fi
+
+# if [[ $(($count1 + $count2 + $idle_count)) -gt 0 ]]; then
+#     sleep 5
+#     echo 'torrent' > /tmp/golemon_refresh; /home/infiniter/Code/GoLemon/signal ;
+# fi

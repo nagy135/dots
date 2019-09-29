@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "สร้าง แก้ไข และแบ่งปันกระดาษคำนวณ Excel ทำงานกับผู้อื่นแบบเรียลไทม์ "
+   },
+   "excel_title": {
+      "message": "Excel ออนไลน์"
+   },
+   "onenote_description": {
+      "message": "บันทึกย่อทั้งหมดอยู่ในที่เดียวกัน และพร้อมให้คุณใช้ได้ทุกที่"
+   },
+   "onenote_title": {
+      "message": "OneNote ออนไลน์"
+   },
+   "powerpoint_description": {
+      "message": "สร้าง แก้ไข และแบ่งปันงานนำเสนอ PowerPoint  ทำงานกับผู้อื่นแบบเรียลไทม์ "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint ออนไลน์"
+   },
+   "word_description": {
+      "message": "สร้าง แก้ไข และแบ่งปันเอกสาร Word ทำงานกับผู้อื่นแบบเรียลไทม์ "
+   },
+   "word_title": {
+      "message": "Word ออนไลน์"
+   }
+}

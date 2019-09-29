@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Luo, muokkaa ja jaa Excel-laskentataulukoita. Tee yhteistyötä reaaliajassa. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Kaikki muistiinpanosi – yhdessä paikassa, mukanasi kaikkialla."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Luo, muokkaa ja jaa PowerPoint-esityksiä.  Tee yhteistyötä reaaliajassa. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Luo, muokkaa ja jaa Word-asiakirjoja. Tee yhteistyötä reaaliajassa. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

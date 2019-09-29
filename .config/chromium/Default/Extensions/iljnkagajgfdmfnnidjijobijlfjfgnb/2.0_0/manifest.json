@@ -1,0 +1,19 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "https://office.live.com/start/Excel.aspx?WT.mc_id=016_Chrome_Web_Store_App_Excel_1"
+      },
+      "urls": [ "*://office.live.com/start/Excel.aspx/" ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_excel_description__",
+   "icons": {
+      "128": "ChromeStore_ExcelTile_128x128x32.png",
+      "256": "ChromeStore_ExcelTile_256x256x32.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkvoTk+s0V2J/64T38hrCbSaK7ryzYYmpgFV1GfiNCadP/RGktawcZ+deQ5K1PFORR37+CvgQt9HHuXiMl11ioyd1li+Q1DGy2WPjGbHuHuFIjjLLhnmRYEKCMYspNuThZl1b6/FKvnA8UiQ51+ib0vUgT/hzT/FmsVjfWIoGtOQK7qhwT0P0CpNRfza7WYUjAlw2upc9iVXbIuitGPbScbUc7c3NLP/f8NOiHAYbDn10LbiMit3JsXRuAZh3vQcn+1P+EdggS7wYKcZcvBkeAj984EDx0kY5I1gwrNXPCB0lhAaAmxl+24K0EPKmJoB/jk1x9L/HbbzH5Tocg+MDBwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_excel_title__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

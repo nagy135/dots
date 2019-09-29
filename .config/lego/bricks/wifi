@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+WIFISTR=$( iwconfig wlp1s0 | grep "Link" | sed 's/ //g' | sed 's/LinkQuality=//g' | sed 's/\/.*//g')
+STRENGTH=$( iwconfig wlp1s0 | grep -e "Signal level" | sed 's/.*\(-[1-9]\+\) \(dBm\)/\1/')
+COLOR="19a85b"
+if [[ $STRENGTH -lt -70 ]]; then
+    COLOR="c22330"
+else
+    COLOR="19a85b"
+fi
+# if [[ $STRENGTH -lt -80 ]]; then
+#     COLOR="c22330"
+# elif [[ $STRENGTH -lt -70 ]]; then
+#     COLOR="a03d38"
+# elif [[ $STRENGTH -lt -60 ]]; then
+#     COLOR="7e5841"
+# elif [[ $STRENGTH -lt -50 ]]; then
+#     COLOR="5c7249"
+# elif [[ $STRENGTH -lt -40 ]]; then
+#     COLOR="3a8d52"
+# elif [[ $STRENGTH -lt -30 ]]; then
+#     COLOR="19a85b"
+# fi
+if [[ ! -z $WIFISTR ]] ; then
+    WIFISTR=$(( ${WIFISTR} * 100 / 70))
+    ESSID=$(iwconfig wlp1s0 | grep ESSID | sed 's/ //g' | sed 's/.*://' | cut -d "\"" -f 2)
+    if [[ $WIFISTR -ge 1 ]] ; then
+        echo -en "%{F#$COLOR}\uf1eb%{F-}"
+        # echo -e "\uf1eb ${ESSID} ${WIFISTR}%"
+    fi
+else
+    echo -en "%{F#ff1320}Disconnected%{F-}"
+fi

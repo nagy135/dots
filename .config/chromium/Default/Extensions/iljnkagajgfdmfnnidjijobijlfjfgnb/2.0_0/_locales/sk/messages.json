@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Vytvárajte, upravuje a zdieľajte excelové tabuľkové hárky. Spolupracujte s ostatnými v reálnom čase. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Všetky poznámky máte na jednom mieste a vždy so sebou."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Vytvárajte, upravuje a zdieľajte powerpointové prezentácie.  Spolupracujte s ostatnými v reálnom čase. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Vytvárajte, upravuje a zdieľajte wordové dokumenty. Spolupracujte s ostatnými v reálnom čase. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

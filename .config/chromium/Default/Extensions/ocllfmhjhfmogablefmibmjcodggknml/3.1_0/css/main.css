@@ -1,0 +1,14 @@
+#RT_tabs, #RT_tabs * {-webkit-box-sizing:content-box}
+#RT_tabs {position:fixed;background:black;border:2px solid black;z-index:2147483647;top:30px;padding:15px;font-size:14px;-webkit-border-radius: 15px}
+#RT_tabs img {padding:0;margin:0}
+
+#extensionTitle {color:gray;text-align:center;padding-bottom:5px}
+#extensionTitle, .RT_title {font:normal 15px Calibri,Verdana,Arial,sans-serif}
+.RT_outerTab {padding:1px;-webkit-border-radius:5px}
+.RT_selected {background:#1478E3}
+.RT_tab {cursor:pointer;background:white;height:16px;margin:5px;padding:5px;-webkit-border-radius:5px}
+#RT_tabs .RT_favicon {padding-right:5px;margin:0}
+.RT_title {float:left;color:black}
+
+#RT_tabs #RT_donateButton {cursor:pointer;padding-top:7px;text-align:center}
+#RT_tabs #RT_donateButton img {margin:0 auto}

@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel ಸ್ಪ್ರೆಡ್ಶೀಟ್ಗಳನ್ನು ರಚಿಸಿ, ಸಂಪಾದಿಸಿ ಮತ್ತು ಹಂಚಿರಿ. ನೈಜ ಸಮಯದಲ್ಲಿ ಇತರರೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸಿ. "
+   },
+   "excel_title": {
+      "message": "Excel ಆನ್‌ಲೈನ್"
+   },
+   "onenote_description": {
+      "message": "ನಿಮ್ಮ ಎಲ್ಲ ಟಿಪ್ಪಣಿಗಳು ಒಂದು ಸ್ಥಳದಲ್ಲಿ ಮತ್ತು ನಿಮ್ಮೊಂದಿಗೆ ಎಲ್ಲಿ ಬೇಕಾದರೂ."
+   },
+   "onenote_title": {
+      "message": "OneNote ಆನ್‌ಲೈನ್"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint ಪ್ರಸ್ತುತಿಗಳನ್ನು ರಚಿಸಿ, ಸಂಪಾದಿಸಿ ಮತ್ತು ಹಂಚಿರಿ.  ನೈಜ ಸಮಯದಲ್ಲಿ ಇತರರೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸಿ. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint ಆನ್‌ಲೈನ್"
+   },
+   "word_description": {
+      "message": "Word ದಾಖಲೆಗಳನ್ನು ರಚಿಸಿ, ಸಂಪಾದಿಸಿ ಮತ್ತು ಹಂಚಿರಿ. ನೈಜ ಸಮಯದಲ್ಲಿ ಇತರರೊಂದಿಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸಿ. "
+   },
+   "word_title": {
+      "message": "Word ಆನ್‌ಲೈನ್"
+   }
+}

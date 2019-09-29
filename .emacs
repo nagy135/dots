@@ -1,9 +1,9 @@
-;; Basic Settings
+;; BASIC Settings
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 (setq inhibit-startup-message t) ;; hide the startup message
-;; (global-linum-mode t) ;; enable line numbers globally
+(global-linum-mode t) ;; enable line numbers globally
 
 
 ;; Set default font size
@@ -34,10 +34,12 @@
  '(custom-safe-themes
    (quote
     ("0d456bc74e0ffa4bf5b69b0b54dac5104512c324199e96fc9f3a1db10dfa31f3" default)))
+ '(ivy-mode t)
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-    (django-theme snippet autopair paredit-everywhere eyebrowse emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil))))
+    (beacon rainbow-mode treemacs-evil treemacs ztree evil-magit all-the-icons-gnus all-the-icons-dired all-the-icons-ivy doom-themes doom-modeline doom django-theme snippet autopair paredit-everywhere eyebrowse emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil)))
+ '(zoom-size (quote (0.618 . 0.618))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -86,6 +88,19 @@
 ;; Eyebrowse
 (eyebrowse-mode t)
 (eyebrowse-setup-evil-keys)
+(defun eyebrowse-get-open-ws ()
+  (interactive)
+  (message
+   (substring-no-properties
+    (eyebrowse-mode-line-indicator)))
+  )
+
+;; Beacon
+(beacon-mode 1)
+
+;; Doom
+(require 'doom-modeline)
+(doom-modeline-mode 1)
 
 ;; Auto Complete
 (require 'auto-complete-config)
@@ -217,6 +232,7 @@
 (define-key global-map "\C-cg" 'ag-project) ;; ag string in current project
 (define-key global-map "\C-xp" 'ac-complete-filename) ;; filepath completion
 (define-key global-map (kbd "M-p M-i") 'package-install) ;; fast package-install
+(define-key global-map (kbd "M-p M-d") 'package-delete) ;; fast package-delete
 (define-key global-map "\C-ca" 'org-agenda) ;; show org todo agenda
 (define-key global-map "\C-ct" 'helm-semantic-or-imenu) ;; helm search in tags
 (define-key global-map "\C-cs" 'eshell) ;; helm search in tags
@@ -225,6 +241,9 @@
 (global-set-key (kbd "C-c C-g") 'ag-proj-regex) ;; search in custom projects
 (global-set-key (kbd "C-c h n") 'highlight-to-notes) ;; search in custom projects
 (global-set-key (kbd "C-c f n") 'show-file-name) ;; show file path of current buffer
+(global-set-key (kbd "C-c C-w l") 'eyebrowse-get-open-ws) ;; show file path of current buffer
+(global-set-key (kbd "C-c r") 'ranger) ;; open ranger
+(global-set-key (kbd "C-c k") 'rainbow-mode) ;; colors
 ;;(global-set-key (kbd "C-c p") (lambda() (interactive)(find-file my-new-global-var)(find-file-in-project)))
 ;;(global-set-key (kbd "C-c p")  (projectile-find-file))
 ;;(global-set-key (kbd "C-c g") (lambda() (interactive)(change-folder-ag)))

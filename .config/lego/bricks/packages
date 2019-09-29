@@ -1,0 +1,8 @@
+#!/bin/bash
+
+num_packages=$(pacman -Qu | wc -l)
+
+if [[ $num_packages -gt 0 ]]; then
+    message="\uf187 $num_packages"
+    echo -en "%{F#f9dc2b}$message%{F-}"
+fi

@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel स्प्रैडशीट बनाएँ, संपादित करें और साझा करें. रीयल-टाइम में अन्य लोगों के साथ काम करें. "
+   },
+   "excel_title": {
+      "message": "Excel ऑनलाइन"
+   },
+   "onenote_description": {
+      "message": "आपके सभी नोट एक ही स्थान पर और कहीं भी आपके साथ."
+   },
+   "onenote_title": {
+      "message": "OneNote ऑनलाइन"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint प्रस्तुतियाँ बनाएँ, संपादित करें और साझा करें.  रीयल-टाइम में अन्य लोगों के साथ काम करें. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint ऑनलाइन"
+   },
+   "word_description": {
+      "message": "Word दस्तावेज़ बनाएँ, संपादित करें और साझा करें.   रीयल-टाइम में अन्य लोगों के साथ काम करें. "
+   },
+   "word_title": {
+      "message": "Word ऑनलाइन"
+   }
+}

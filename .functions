@@ -1,18 +1,21 @@
 #!/bin/bash
 
-sc(){
-    # open .script file in vim
-    file=$(find /home/infiniter/Code/scripts/* | fzf)
+fzfvim(){
+    # find file in $1, open it with vim and put it into clipboard
+    file=$(find $1 | fzf)
     if [[ ! -z $file ]]; then
         vim $file
     fi
+    echo $file | xclip -sel clipboard
+    echo $file
+}
+sc(){
+    # open .script file in vim
+    fzfvim "/home/infiniter/Code/scripts"
 }
 co(){
     # open Code file in vim
-    file=$(find /home/infiniter/Code/* | fzf)
-    if [[ ! -z $file ]]; then
-        vim $file
-    fi
+    fzfvim "/home/infiniter/Code"
 }
 c() {
     # change directory and list its files
@@ -20,5 +23,12 @@ c() {
 }
 
 zat() {
+    # open zathura in background
     zathura $1 & exit;
+}
+
+update_dots(){
+    # copy relevant files and change directory
+    cp -r ~/.vim/colors ~/.vimrc ~/.tmux.conf ~/.config ~/.aliases ~/.functions ~/.zshrc ~/.emacs ~/.dots
+    cd ~/.dots
 }

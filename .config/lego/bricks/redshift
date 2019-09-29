@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+if [[ -f /tmp/current_redshift ]]; then
+    current_var=$(cat /tmp/current_redshift)
+    from="#ff0000"
+    to="#d2e3e3"
+    percent=$(($current_var*100/6000))
+    color=$(colgrad $percent $from $to)
+    fancy_var=$(python -c "print(str($current_var/1000) + 'K')")
+    echo -en "%{F$color} $fancy_var%{F-}"
+fi

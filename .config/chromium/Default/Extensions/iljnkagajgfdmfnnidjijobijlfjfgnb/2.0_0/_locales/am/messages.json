@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "የ Excel የቀመርሉሆችን ፍጠር፣ አርትዕ እና አጋራ።  ከሌሎች ጋር በእውነተኛ ጊዜ ስራ።"
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "ሁሉም የእርስዎ ማስታወሻዎች በማንኛውም ስፍራ ከእርስዎ ጋር በአንድ ቦታ።"
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "የPowerPoint አቅርቦቶችን ፍጠር፣ አርትዕ እና አጋራ።     ከሌሎች ጋር በእውነተኛ ጊዜ ስራ።"
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Word ሰነዶችን ፍጠር፣ አርትዕ እና አጋራ። ከሌሎች ጋር በእውነተኛ ጊዜ ስራ።"
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}
