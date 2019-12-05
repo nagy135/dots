@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+if [ -f /tmp/dragging ]; then
+    xdotool mouseup 1
+    rm /tmp/dragging
+else
+    xdotool mousedown 1
+    touch /tmp/dragging
+fi

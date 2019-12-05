@@ -1,0 +1,7 @@
+#!/bin/bash
+
+killall lemon_run; killall sleepkiller; killall lemonbar; killall stalonetray
+
+MYPID=$( ps faux | grep '/home/infiniter/Code/lemonscripts/lemon' | grep -vw grep | awk '{ print $2 }' );
+echo ${MYPID};
+kill -9 ${MYPID};

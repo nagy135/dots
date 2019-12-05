@@ -1,0 +1,60 @@
+#!/bin/bash
+
+HISTORY="/home/infiniter/.local/share/qutebrowser/mpv_history"
+
+if [[ $1 == '--clear' ]]; then
+    echo -n "" > $HISTORY
+    notify-send -t 1500 "MPV history" "Cleared"
+    exit 0
+fi
+
+if [[ $(cat $HISTORY | wc -l) -eq 0 ]]; then
+    notify-send -t 1500 "MPV history" "Empty"
+    exit 0
+fi
+
+if [[ $1 == '--clipboard' ]] || [[ $1 == '--qutebrowser' ]]; then
+    type=$(echo $1 | tr -d '-')
+    chosen=$(tac $HISTORY | rofi -dmenu -i -p "MPV history - $type")
+else
+    mesg=$(echo -e "MPV: Enter - Clipboard: Alt+1 - Qutebrowser: Alt+2 - Chrome: Alt+3" | column -s '-' -t)
+    chosen=$(tac $HISTORY | rofi -dmenu -mesg "$mesg" -i -p 'MPV history')
+    signal=$?
+fi
+
+if [[ $chosen == '' ]]; then
+    exit 1
+else
+    if [[ $(echo $chosen | sed '/.*\(twitch\.tv\).*/d' | wc -l) -eq 1 ]]; then
+        url=$(echo $chosen | awk -F "YouTube" '{print $2}' | sed 's/^.//' | sed 's/.$//')
+    else
+        url=$(echo $chosen | awk -F "Twitch" '{print $2}' | sed 's/^.//' | sed 's/.$//')
+    fi
+
+    if [[ $1 == '--clipboard' ]]; then
+        echo $url | xclip -selection clipboard
+        notify-send -i 'none' "Clipboard content" "$url"
+    elif [[ $1 == '--qutebrowser' ]]; then
+        qutebrowser $url
+    else
+        # if ran without arguments, signals can decide behavior
+        if [[ $signal -eq 10 ]]; then
+            echo $url | xclip -selection clipboard
+            notify-send -i 'none' "Clipboard content" "$url"
+        elif [[ $signal -eq 11 ]]; then
+            qutebrowser $url
+        elif [[ $signal -eq 12 ]]; then
+            chromium "$url"
+        else
+            if [[ $(echo $url | sed '/.*\(twitch\.tv\).*/d' | wc -l) -eq 0 ]]; then
+                mpv $url
+                if [[ $? -gt 0 ]]; then
+                    notify-send -i 'none' -t 2000 "Twitch" "Could not play stream"
+                fi
+            else
+                youtube-viewer --no-interactive --player=mpv --resolution=720p "$url"
+                # mpv $url
+            fi
+        fi
+    fi
+fi

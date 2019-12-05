@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel-munkafüzeteket hozhat létre, szerkeszthet és oszthat meg. Valós időben dolgozhat rajtuk másokkal együtt. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Minden jegyzetét egy helyen tárolhatja, és mindig magával viheti."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint-bemutatókat hozhat létre, szerkeszthet és oszthat meg.  Valós időben dolgozhat rajtuk másokkal együtt. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Word-dokumentumokat hozhat létre, szerkeszthet és oszthat meg. Valós időben dolgozhat rajtuk másokkal együtt. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

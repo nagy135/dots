@@ -1,0 +1,7 @@
+#!/bin/bash
+
+chosen=$(ls  /home/infiniter/Pictures/Wallpapers | grep -e '\.jpg\|\.png' | dmenu -i -p 'Choose wallpaper')
+if [[ $chosen != '' ]]; then
+    feh --bg-fill /home/infiniter/Pictures/Wallpapers/$chosen
+fi
+exit 0

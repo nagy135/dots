@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel スプレッドシートを作成、編集、共有します。リアルタイムで共同作業ができます。 "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "すべてのメモをひとつにまとめて、いつでも、どこでも持ち歩けます。"
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint プレゼンテーションを作成、編集、共有します。リアルタイムで共同作業ができます。 "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Word ドキュメントを作成、編集、共有します。リアルタイムで共同作業ができます。 "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

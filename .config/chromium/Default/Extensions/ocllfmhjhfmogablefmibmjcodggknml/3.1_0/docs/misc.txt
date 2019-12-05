@@ -1,0 +1,52 @@
+document.addEventListener('keydown', keyDown, false);
+document.addEventListener('keyup', keyUp, false);
+
+$("iframe").ready( function() {
+	alert("readyoutside: " + $(this).contents());
+	//this.contentWindow.documen
+});
+
+$(document).ready(function() {
+
+	$('iframe').ready(function() {
+	  //$('body', $('iframe').contents()).html('Hello World!');
+	});
+
+	$("iframe").ready( function() {
+		alert("ready: " + this);
+		//this.contentWindow.documen
+	});
+
+	$("iframe").each( function(index) {
+		alert("iframe: " + this.name + " _ " + this.contentDocument);
+		alert($(this.contentDocument).find("body").html());
+		$(this.contentDocument).bind('keydown', keyDown, false);
+		$(this.contentDocument).bind('keyup', keyUp, false);
+		//this.addEventListener('keydown', function() { alert('key'); }, false);
+		$(this.contentDocument).ready( function() {
+			alert('readyinside');			
+			//this.addEventListener('mousemove', function() { alert('key'); }, false);
+			//this.addEventListener('keyup', keyUp, false);
+		});
+		//this.contentWindow.documen
+	});
+
+	$('iframe').load(function() {
+		alert('onload: ' + this);
+	});
+
+	if (window.frameElement) {
+		alert("id: " + window.frameElement.src);
+	}
+
+	var frame = $("#wys_frame");
+	if (frame.length) {
+		//alert(frame.attr("name"));
+	}
+
+	$(window).blur( function() {
+		if ($('#RT_tabs').is(':visible')) {
+			hideCycler();
+		}
+	});
+});

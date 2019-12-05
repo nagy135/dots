@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+wid=$1
+class=$2
+instance=$3
+monitor=$4
+desktop=$5
+node=$6
+
+
+logger 'IT WOOOOORKS'
+
+if [[ "$class" == "mpv" ]]; then
+    logger 'mpv inside'
+    target=$(wmctrl -lG | grep -e '\s0\s' | grep mpv | awk '{print $1}')
+    if [[ $target != '' ]]; then
+        logger 'target found'
+        bspc node $target -p east -o 0.45
+        echo "state=tiled"
+    fi
+fi

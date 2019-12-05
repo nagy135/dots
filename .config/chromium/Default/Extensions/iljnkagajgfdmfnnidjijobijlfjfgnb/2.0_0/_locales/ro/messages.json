@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Creați, editați și partajați foi de calcul Excel. Lucrați cu alte persoane în timp real. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Toate notele se află într-un singur loc și vă însoțesc oriunde."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Creați, editați și partajați prezentări PowerPoint.  Lucrați cu alte persoane în timp real. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Creați, editați și partajați documente Word. Lucrați cu alte persoane în timp real. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

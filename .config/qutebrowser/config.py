@@ -157,6 +157,7 @@ c.colors.completion.item.selected.bg = "#f9dc2b"
 
 c.colors.completion.item.selected.fg = "#000000"
 
+
 # Bindings for normal mode
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
@@ -167,6 +168,7 @@ config.bind(';;C', 'spawn chromium {hint-url}')
 config.bind(';;m', 'hint links spawn mpv {hint-url}')
 config.bind(';;M', 'spawn mpv {url}')
 config.bind('m', 'hint links userscript myscript')
+config.bind(';;y', 'hint links userscript add-youtube-queue')
 config.bind('b', 'hint links userscript open_download')
 config.bind('M', 'spawn --userscript myscript')
 config.bind(';M', 'hint --rapid links spawn umpv {hint-url}')
@@ -212,7 +214,7 @@ config.bind(';p', 'enter-mode passthrough')
 config.bind(';p', 'leave-mode', mode='passthrough')
 config.bind('<Ctrl-V>', 'enter-mode insert', mode='normal')
 config.bind('gd', 'tab-give')
-config.bind(';m', 'hint inputs ;; jseval -q document.activeElement.value = "viktor.nagy1995@gmail.com" ;; enter-mode normal', mode="normal")
+config.bind(';m', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/darculized/darculized-all-sites.css ""', mode="normal")
 config.bind('gs', 'jseval -q document.getElementsByClassName("rc")[0].firstChild.firstChild.click()', mode="normal")
 # config.bind(';m', 'hint inputs ', mode="normal")
 

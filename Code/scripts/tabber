@@ -1,0 +1,11 @@
+#!/bin/bash
+
+DIRECTORY=~/Documents/Tabs
+TMP_TAB=/tmp/tabber.png
+
+maim -s $TMP_TAB
+
+if [[ -f $TMP_TAB ]]; then
+    name=$(rofi -theme input.rasi -dmenu -i -p 'Name this tab image')
+    [[ ! -z $name ]] && mv $TMP_TAB $DIRECTORY/$name.png && notify-send -t 2000 -i none "TABBER" "tab saved as $DIRECTORY/$name.png"
+fi

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ $1 = "toggle" ]]; then
+    result=$( cat /tmp/actual_layout )
+    if [[ $result = "us" ]]; then
+        echo "sk" > /tmp/actual_layout
+        setxkbmap -layout sk qwerty
+        notify-send -t 1000 -u normal " " "<span foreground='red' font-size='35000' font_weight='bold'> SK </span>" -i /home/infiniter/Pictures/keyboard.png
+    elif [[ $result = "sk" ]]; then
+        echo "us" > /tmp/actual_layout
+        setxkbmap -layout us
+        notify-send -t 1000 -u normal " " "<span foreground='white' font-size='35000' font_weight='bold'> US </span>" -i /home/infiniter/Pictures/keyboard.png
+    fi
+else
+    if [[ $# -eq 0 ]]; then
+        echo "No arguments given"
+    else
+        echo "$1" > /tmp/actual_layout
+    fi
+fi
+lego_refresh "layout"

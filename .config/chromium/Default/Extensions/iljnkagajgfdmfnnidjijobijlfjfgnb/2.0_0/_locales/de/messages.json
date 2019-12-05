@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Erstellen, bearbeiten und teilen Sie Excel-Tabellen. Arbeiten Sie mit anderen in Echtzeit zusammen. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Alle Ihre Notizen – an einem Speicherort und immer verfügbar, jederzeit!"
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Erstellen, bearbeiten und teilen Sie PowerPoint-Präsentationen.  Arbeiten Sie mit anderen in Echtzeit zusammen. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Erstellen, bearbeiten und teilen Sie Word-Dokumente. Arbeiten Sie mit anderen in Echtzeit zusammen. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash -e /home/infiniter/Apps/RimWorldAlpha16Linux/start_RimWorld.sh &

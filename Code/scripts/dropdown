@@ -1,0 +1,38 @@
+#!/bin/bash
+
+type=$1
+
+
+if [[ $type == 'python' ]]; then
+    # python shell dropdown
+    instance=$(xdotool search --classname python_dropdown)
+    if [[ $instance == '' ]]; then
+        #just open it if not running
+        alacritty --class python_dropdown -e python &> /dev/null &
+    else
+        #toggle
+        if [[ $(xprop -id $instance | grep WM_STATE_HIDDEN) != '' ]]; then
+            bspc node $instance -g hidden=off
+            bspc node $instance -d $(bspc query -D -d focused)
+            bspc node $instance -f
+        else
+            bspc node $instance -g hidden=on
+        fi
+    fi
+else
+    # plain terminal dropdown
+    instance=$(xdotool search --classname plain_dropdown)
+    if [[ $instance == '' ]]; then
+        #just open it if not running
+        alacritty --class plain_dropdown &> /dev/null &
+    else
+        #toggle
+        if [[ $(xprop -id $instance | grep WM_STATE_HIDDEN) != '' ]]; then
+            bspc node $instance -g hidden=off
+            bspc node $instance -d $(bspc query -D -d focused)
+            bspc node $instance -f
+        else
+            bspc node $instance -g hidden=on
+        fi
+    fi
+fi

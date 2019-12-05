@@ -1,0 +1,28 @@
+#!/bin/bash
+
+QUICKLIST=~/.scripts/resources/quicklist
+QUICKDATA=~/.scripts/resources/quickdata
+
+if [[ $1 == '--reset' ]]; then
+    echo -n "" > $QUICKLIST
+    echo -n "" > $QUICKDATA
+    echo "database reseted"
+    exit 0
+fi
+
+if [[ $1 == '-a' ]]; then
+    echo $2 >> $QUICKDATA
+    echo -n '' > $QUICKLIST
+    cat $QUICKDATA | cut -f 2 -d '-' | sed 's/^\s*//' | sed 's/\s*$//' > $QUICKLIST
+    echo "item added"
+    exit 0
+fi
+
+[[ ! -s $QUICKDATA ]] && notify-send -t 2000 -i none "QuickQuite" "Empty database" && exit 1
+
+choice=$(cat $QUICKLIST | rofi -theme /usr/share/rofi/themes/infi_black_narrow.rasi -dmenu -i -p "QuickQute")
+if [[ $choice != '' ]]; then
+    url=$(cat $QUICKDATA | grep "$choice" | cut -f 1 -d "-" | sed 's/^\s*//' | sed 's/\s*$//')
+    qutebrowser "$url"
+    exit 0
+fi

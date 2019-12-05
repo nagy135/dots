@@ -38,7 +38,7 @@ bspc rule -a Steam desktop='^7' follow=on
 # }}}
 
 bspc config window_gap 10
-bspc config top_padding 25
+bspc config top_padding 30
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0

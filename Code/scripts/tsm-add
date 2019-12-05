@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ICON="~/.scripts/resources/transmission.png"
+runcount=$(ps -aux | grep transmission-daemon | wc -l)
+if [ $runcount -gt 1 ]; then
+    for i in ~/Downloads/*.torrent; do
+        [ -f "$i" ] || break
+        transmission-remote -a "$i"
+        notify-send -i $ICON -t 3000 "Added torrent" "${i##*/}"
+        rm "$i"
+        sleep 1
+    done
+else
+    transmission-daemon &
+    echo "Turning transmission-daemon ON...run again"
+fi
+torrent_notifier &

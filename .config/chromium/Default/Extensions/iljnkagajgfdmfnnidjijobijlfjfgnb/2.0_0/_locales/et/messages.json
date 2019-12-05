@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Saate luua, redigeerida ja ühiselt kasutada Exceli arvutustabeleid. Võite teistega reaalajas koos töötada. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Kõik teie märkmed on ühes kohas ja alati käepärast."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Saate luua, redigeerida ja ühiselt kasutada PowerPointi esitlusi.  Võite teistega reaalajas koos töötada. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Saate luua, redigeerida ja ühiselt kasutada Wordi dokumente. Võite teistega reaalajas koos töötada. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

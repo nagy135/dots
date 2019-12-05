@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 == '-a' ]]; then
+    alacritty -e sudo pikaur -Syu ;
+    echo "packages" > /tmp/golemon_refresh; /home/infiniter/Code/GoLemon/signal
+else
+    alacritty -e sudo pacman -Syu ;
+    echo "packages" > /tmp/golemon_refresh; /home/infiniter/Code/GoLemon/signal
+fi

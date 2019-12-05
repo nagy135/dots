@@ -1,0 +1,6 @@
+#!/bin/bash
+
+line=$(bspc subscribe -c 1 | sed 's/.*L\([A-Z]\+\).*/\1/')
+
+[[ $line == 'M' ]] && echo 'M' && exit 0
+echo 'T'

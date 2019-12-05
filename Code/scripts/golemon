@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd /home/infiniter/Code/GoLemon/
+./golemon &
+# ./subscribe_cpu 3 &
+# ./subscribe_date 60 &
+./subscribe_music &
+# ./subscribe_battery 60 &
+# ./subscribe_volume &
+./subscribe_workspaces &
+
+sleep 2
+
+bar=$(xdo id -a bar)
+root=$(xdo id -N Bspwm -n root | sort | head -n 1)
+
+xdo above -t $root $bar

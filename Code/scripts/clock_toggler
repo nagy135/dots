@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ ! -f /tmp/clock_pid_file ]]; then
+  #open
+  urxvt -g 110x10+332+350 -e ~/Code/scripts/figlet_clock & disown
+  echo $! > /tmp/clock_pid_file
+else
+  #close
+  kill "$(cat /tmp/clock_pid_file)"
+  rm /tmp/clock_pid_file
+fi

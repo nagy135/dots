@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "建立、編輯與共用 Excel 工作表。與他人即時共同工作。 "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "可隨時隨地存取筆記。"
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "建立、編輯與共用 PowerPoint 簡報。與他人即時共同工作。 "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "建立、編輯與共用 Word 文件。與他人即時共同工作。 "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PIDFILE="/tmp/parentwatch.pid"
+
+if [[ -f $PIDFILE ]]; then
+    kill $(cat $PIDFILE)
+    rm $PIDFILE
+    notify-send -t 3000 -i none "parentWatch" "Daemon killed"
+    exit 0
+else
+    parentwatch --run &
+    echo $! > /tmp/parentwatch.pid
+    notify-send -t 3000 -i none "parentWatch" "Daemon started"
+fi

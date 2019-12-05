@@ -1,0 +1,7 @@
+#!/bin/bash
+nicks=$(cat ~/.scripts/resources/fcb_db.html | iconv -t utf-8 | grep facebook.com | awk 'NR % 2 == 0' | sed "s/.*www\.facebook\.com\/\([a-zA-Z\.0-9]\+\?\).*/\1/")
+
+choice=$(echo -e "$nicks" | dmenu -i -p 'Choose stream to watch')
+if [[ $choice != '' ]]; then
+    surf "https://www.facebook.com/messages/t/$choice"
+fi

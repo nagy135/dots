@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+help_text=$(echo -e "Upload: Alt+1 - Save: Alt+2 - Default: Enter" | column -s '-' -t)
+line1=$(echo "${help_text}" | head -1)
+HELP="${line1}"
+menu=$(echo -e "< Return to Main Menu\n---\n1 Monitor\n2 Fullscreen\n3 Area" | rofi  -dmenu -mesg "${HELP}" -p "Screenshot > ")
+rofi_exit=$?
+echo "rofi_exit" $rofi_exit
+if [[ $rofi_exit -eq 10 ]]; then
+    echo "first"
+elif [[ $rofi_exit -eq 11 ]]; then
+    echo "second"
+else
+    echo "default"
+fi
+echo "menu: " $menu

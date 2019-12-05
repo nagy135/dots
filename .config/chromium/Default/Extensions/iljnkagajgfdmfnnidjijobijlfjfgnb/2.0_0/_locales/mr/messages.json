@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel स्प्रेडशीट तयार करा, संपादित करा आणि सामायिक करा. इतरांसह रीअल-टाईममध्ये कार्य करा "
+   },
+   "excel_title": {
+      "message": "Excel ऑनलाइन"
+   },
+   "onenote_description": {
+      "message": "आपल्या सर्व नोट्स आपल्यासह आणि एकाच ठिकाणी, कुठेही."
+   },
+   "onenote_title": {
+      "message": "OneNote ऑनलाइन"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint सादरीकरणे तयार करा, संपादित करा आणि सामायिक करा.  इतरांसह रीअल-टाईममध्ये कार्य करा "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint ऑनलाइन"
+   },
+   "word_description": {
+      "message": "Word दस्तऐवज तयार करा, संपादित करा आणि सामायिक करा. इतरांसह रीअल-टाईममध्ये कार्य करा "
+   },
+   "word_title": {
+      "message": "Word ऑनलाइन"
+   }
+}

@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Créez, modifiez et partagez des feuilles de calcul Excel. Collaborez en temps réel. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Vos notes sont stockées dans un emplacement unique et vous accompagnent en tout lieu."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Créez, modifiez et partagez des présentations PowerPoint.  Collaborez en temps réel. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Créez, modifiez et partagez des documents Word. Collaborez en temps réel. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

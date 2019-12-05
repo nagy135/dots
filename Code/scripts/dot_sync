@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CLONE_DIR=~/dots
+
+if [[ $1 == 'upload' ]]; then
+    echo 'not implemented'
+else
+    echo 'fetching new dots...'
+    cd $CLONE_DIR
+    git pull
+fi

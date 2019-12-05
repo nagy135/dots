@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xdotool mousedown 1 ; xdotool mouseup 1

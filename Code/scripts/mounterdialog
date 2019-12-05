@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+gpgemail=$( dialog --title "Luke's mutt/offlineIMAP password wizard" --inputbox "Insert the email address with which you originally created your GPG key pair. This is NOT necessarily the email you want to configure." 10 60 3>&1 1>&2 2>&3 3>&- )
+	while ! [[ "${gpgemail}" =~ ${emailre} ]]; do
+		gpgemail=$(dialog --no-cancel --title "Luke's mutt/offlineIMAP autoconfig" --inputbox "That's not a valid email address. Please input the entire address." 10 60 3>&1 1>&2 2>&3 3>&1)
+	done
+
+
+
+
+	dialog --title "Finalizing your account." --infobox "The account \"$title\"'s password has been changed. Now attempting to configure mail directories...
+
+	iport=$(dialog --inputbox "What is your server's IMAP port number? (Usually 993)" 10 60 3>&1 1>&2 2>&3 3>&-)
+
+
+	choices=$(dialog --separate-output --checklist "Select all desired email accounts with <SPACE>." 15 40 16 "${accounts[@]}" 2>&1 >/dev/tty)
+	if [ -z "$choices" ];
+		then
+			clear
+		else
+		userchoices=$(IFS="|"; keys="${choices[*]}"; keys="${keys//|/\\|}"; grep -w "${keys}" /tmp/numbered  | awk '{print $2}')
+	fi ;}

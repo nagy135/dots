@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Buat, edit, dan bagikan spreadsheet Excel. Bekerja dengan orang lain dalam waktu nyata. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Semua catatan Anda—dalam satu tempat dan dapat diakses di mana pun."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Buat, edit, dan bagikan presentasi PowerPoint.  Bekerja dengan orang lain dalam waktu nyata. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Buat, edit, dan bagikan dokumen Word. Bekerja dengan orang lain dalam waktu nyata. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

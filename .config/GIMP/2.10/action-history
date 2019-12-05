@@ -1,0 +1,23 @@
+# GIMP action-history
+
+(history-item "file-export" 4)
+(history-item "file-quit" 1)
+(history-item "edit-paste" 1)
+(history-item "file-open" 4)
+(history-item "image-new" 3)
+(history-item "view-zoom-in" 1)
+(history-item "tools-crop" 1)
+(history-item "tools-scale" 3)
+(history-item "tools-gradient" 0)
+(history-item "tools-text" 0)
+(history-item "view-close" 0)
+(history-item "select-all" 0)
+(history-item "edit-copy" 1)
+(history-item "tools-smudge" 0)
+(history-item "edit-cut" 0)
+(history-item "image-scale" 0)
+(history-item "tools-move" 0)
+(history-item "file-export-as" 0)
+(history-item "file-save-as" 1)
+
+# end of action-history

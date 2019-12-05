@@ -1,0 +1,12 @@
+#!/bin/bash
+
+killall lemonbar &> /dev/null
+pkill -f pylemon_wakeup &> /dev/null
+pkill -f subscribe_workspaces &> /dev/null
+pkill -f stalonetray &> /dev/null
+
+cd /home/infiniter/Code/Pylemon
+until python pylemon.py 2> /home/infiniter/pylemon_dump; do
+    echo "Pylemon crashed, respawning" >> /home/infiniter/pylemon_dump
+    sleep 1
+done

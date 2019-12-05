@@ -1,0 +1,18 @@
+#!/bin/bash
+
+raw=$(amixer get Master)
+
+val=$(echo "$raw" | grep % | head -n 1 | sed -n 's/^.*\[\(.*\)%\].*/\1/p')
+
+mute=$(echo "$raw" | grep % | grep off | wc -l)
+
+if [[ $mute -gt 0 ]]; then
+  text=" MUTE"
+elif [ $val -gt 60 ]; then
+  text=" $val"
+elif [ $val -gt 30 ]; then
+  text=" $val"
+elif [ $val -gt 0 ]; then
+  text=" $val"
+fi
+echo -ne "%{F#d2e2e2}$text%{F-}"

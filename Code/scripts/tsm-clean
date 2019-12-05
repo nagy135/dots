@@ -1,0 +1,15 @@
+#!/bin/bash
+
+choices=$(tsm-seeding_rows)
+if [[ $choices == '' ]]; then
+    exit 1
+fi
+
+echo "$choices"
+choice=$( echo "$choices" | dmenu -i -p 'Choose item to stop seeding')
+if [[ $choice != '' ]]; then
+    choice=$(echo $choice | awk '{print $1}')
+    transmission-remote -t $choice -r
+else
+    exit 1
+fi

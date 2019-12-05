@@ -1,0 +1,73 @@
+#!/bin/bash
+
+PIDFILE=/tmp/pomodoro.pid
+TITLE="POMODORO"
+WORK_CYCLE=5
+BREAK_CYCLE=2
+SLEEP_LENGTH=60
+ICON="~/.scripts/resources/pomodoro.png"
+SOUND=~/.scripts/resources/pomodoro.mp3
+
+generate_stamp(){
+    hour=$(date +%H)
+    min=$(date +%M)
+    stamp=$(($hour*60+$min))
+    echo $stamp
+}
+
+notify(){
+    notify-send -t 2000 -i $ICON " " "<span font-size='20000' font_weight='bold'>$1\n</span>"
+}
+
+sound_notify(){
+    mplayer $SOUND &
+}
+
+start_cycle(){
+    sound_notify
+    state='work'
+    start_stamp=$(generate_stamp)
+    while true; do
+        current_stamp=$(generate_stamp)
+        difference=$(($current_stamp - $start_stamp))
+        if [[ $state == 'work' ]] && [[ $difference -ge $WORK_CYCLE ]]; then
+            notify 'Break starts'
+            sound_notify
+            state='break'
+            start_stamp=$(generate_stamp)
+        elif [[ $state == 'break' ]] && [[ $difference -ge $BREAK_CYCLE ]]; then
+            notify 'Work starts'
+            sound_notify
+            state='work'
+            start_stamp=$(generate_stamp)
+        else
+            [[ $state == 'work' ]] && remaining=$(($WORK_CYCLE-$difference))
+            [[ $state == 'break' ]] && remaining=$(($BREAK_CYCLE-$difference))
+            notify "$state : $remaining min"
+        fi
+        sleep $SLEEP_LENGTH
+    done
+}
+pause_cycle(){
+    echo pause
+}
+
+if [[ $1 == '--start' ]]; then
+    if [[ -f $PIDFILE ]]; then
+        notify-send -t 2000 -u critical -i $ICON "$TITLE" "already running ..."
+    else
+        echo $$ > $PIDFILE
+        start_cycle
+    fi
+    exit 0
+elif [[ $1 == '--pause' ]]; then
+    pause_cycle
+elif [[ $1 == '--kill' ]]; then
+    if [[ -f $PIDFILE ]]; then
+        kill $(cat $PIDFILE)
+        rm $PIDFILE
+    else
+        notify-send -t 2000 -u critical -i $ICON "$TITLE" "is not running"
+    fi
+    exit 0
+fi

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ $1 == "--prompt" ]]; then
+    echo "Hibernate" > /tmp/hibernate_scheduled
+    i3-nagbar -m 'Battery low!' -b 'Hibernate!' 'pm-hibernate' >/dev/null 2>&1 &
+    # res="$(zenity --entry --text='Hibernate or Continue?')"
+    # if [[ $res == "Continue" ]]; then
+    #     rm /tmp/hibernate_scheduled
+    #     exit 0
+    # fi
+elif [[ $# -eq 0 ]]; then
+   if [[ -f /tmp/hibernate_scheduled ]]; then
+        rm /tmp/hibernate_scheduled
+        systemctl hibernate
+   fi
+fi

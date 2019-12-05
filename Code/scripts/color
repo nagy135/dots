@@ -1,0 +1,6 @@
+#!/bin/bash
+
+colors=$(cat ~/.local/share/colors)
+
+choice=$(echo "$colors" | rofi -dmenu -i -p "Pick color" -theme ~/.config/rofi/tmux.rasi )
+[[ ! -z $choice ]] && echo $choice | grep -oP "(?<=').*(?=')" | tr -d '\n' | xclip -sel clipboard

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ ! -f /tmp/screencast_pid ]]; then
+    if [[ $1 == "-audio" ]]; then
+        ffmpeg -video_size 1920x1080 -framerate 35 -f x11grab -i :0.0 -f alsa -ac 2 -i pulse ~/Videos/screencast_$(date +%s).mp4 &> /dev/null & echo $! > /tmp/screencast_pid; exit 1
+    else
+        ffmpeg -f x11grab -s 1920x1080 -i :0.0 ~/Videos/screencast_$(date +%s).mp4 &> /dev/null & echo $! > /tmp/screencast_pid; exit 1
+    fi
+else
+  #close
+  kill "$(cat /tmp/screencast_pid)"
+  rm /tmp/screencast_pid
+fi

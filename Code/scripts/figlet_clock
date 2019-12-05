@@ -1,0 +1,12 @@
+#!/bin/bash
+echo ''
+echo -ne ''
+keypress=''
+while true
+do
+    date +'%H : %M : %S = %d . %m . %y' | figlet -w 130 -f big | sed 's/^/  /' > /tmp/figlet_clock_dump
+    echo "$(acpi | sed 's/^/                              /')" >> /tmp/figlet_clock_dump
+    cat /tmp/figlet_clock_dump
+    sleep 1
+done
+exit 0

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+notify-send 'i work' 'lala'
+echo 'date|battery|wifi|packages' > /tmp/golemon_refresh; /home/infiniter/Code/GoLemon/signal ;

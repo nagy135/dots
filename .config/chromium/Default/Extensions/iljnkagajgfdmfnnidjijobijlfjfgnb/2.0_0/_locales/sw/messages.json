@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Unda, hariri na ushiriki laha jedwali za Excel. Fanya kazi na wengine katika muda halisi. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Madokezo yako yote ukiwa nayo, mahali pamoja na popote."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Unda, hariri na ushiriki mawasilisho ya PowerPoint.  Fanya kazi na wengine katika muda halisi. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Unda, hariri na ushiriki nyaraka za Word. Fanya kazi na wengine katika muda halisi. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

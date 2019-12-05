@@ -366,7 +366,7 @@
 #    urgency = normal
 #
 [subtube]
-    summary = *SubTube - Update*
+    summary = *SUBTUBE - Update*
     set_stack_tag = 55
     font = League Mono 24
 

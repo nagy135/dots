@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [[ $1 == --record ]]; then
+    position=$(xdotool getmouselocation)
+    x=$(echo $position | awk '{print $1'} | awk -F: '{print $2}' )
+    y=$(echo $position | awk '{print $2'} | awk -F: '{print $2}' )
+    echo "$x $y" >> ~/.scripts/resources/copycasso_clicks
+elif [[ $1 == --pen ]]; then
+    position=$(xdotool getmouselocation)
+    x=$(echo $position | awk '{print $1'} | awk -F: '{print $2}' )
+    y=$(echo $position | awk '{print $2'} | awk -F: '{print $2}' )
+    echo 'penup' >> .scripts/resources/copycasso_clicks
+    echo "$x $y" >> ~/.scripts/resources/copycasso_clicks
+    echo 'pendown' >> .scripts/resources/copycasso_clicks
+elif [[ $1 == --clear ]]; then
+    > ~/.scripts/resources/copycasso_clicks
+    rm /tmp/copycasso_penup &> /dev/null
+elif [[ $1 == --move ]]; then
+    IFS=$'\n'
+    set -f
+    first=$(cat ~/.scripts/resources/copycasso_clicks | head -n 1)
+    x1=$( echo $first | awk '{print $1}')
+    y1=$( echo $first | awk '{print $2}')
+    xdotool mousemove $x1 $y1
+    sleep 1
+    xdotool mousedown 1
+    for i in $(cat < ~/.scripts/resources/copycasso_clicks); do
+        if [[ $i == 'penup' ]]; then
+            xdotool mouseup 1
+        elif [[ $i == 'pendown' ]]; then
+            xdotool mousedown 1
+        else
+            x=$( echo $i | awk '{print $1}' )
+            y=$( echo $i | awk '{print $2}' )
+            xdotool mousemove $x $y
+        fi
+        sleep 0.00001
+    done
+    xdotool mouseup 1
+fi

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+LC_TIME=en_US.UTF-8
+
+TIME=$(date "+%H:%M")
+[ -f /tmp/full_date ] && TIME=$(date "+%H:%M:%S %{F#f9dc2b}%a %e %b%{F-}")
+
+echo -n "%{F#d2e2e2}$TIME%{F-}"

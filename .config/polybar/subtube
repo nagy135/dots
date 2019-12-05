@@ -1,7 +1,7 @@
 #!/bin/bash
 
-news=$(ls ~/.scripts/resources/thumbnails | wc -l)
-q=$(cat ~/.scripts/resources/subtube_queue | wc -l)
+news=$(ls /usr/share/subtube/resources/thumbnails | wc -l)
+q=$(cat /usr/share/subtube/resources/subtube_queue | wc -l)
 queue=""
 if [[ $q -gt 0 ]]; then
     queue="($q)"
@@ -9,4 +9,6 @@ fi
 
 if [[ $news -gt 0 ]] || [[ $q -gt 0 ]]; then
     echo -en " $news$queue"
+else
+    echo -en " empty"
 fi

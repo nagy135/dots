@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if pgrep -x 'nm-applet' &> /dev/null
+then
+    killall nm-applet
+else
+    nm-applet &
+fi
+
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$(xdo id -a bar)"
+xdo above -t "$(xdo id -a bar)" "$(xdo id -a stalonetray)"

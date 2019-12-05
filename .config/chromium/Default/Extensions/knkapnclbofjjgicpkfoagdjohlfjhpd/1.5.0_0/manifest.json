@@ -1,0 +1,19 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://littlealchemy.com/"
+      },
+      "urls": [ "*://littlealchemy.com/" ]
+   },
+   "description": "A simple but addictive game. Start with four basic items and use them to find dinosaurs, unicorns and spaceships!",
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHG77wRLh8u6+APxcnbpfLYEVTBq7VSd83aIl5rrubYSDoIOWQtt5INEFfoUpdMyZ70yubOFfeA7CKpN74RL+IvbIxF9sl+PO+MuiyHR81wCHQeC1ZOpM8plBLWbJ8y02d/W07NaHkCuId4i4AWqWJR9jZ9juu7w7Yv0CSeDqKywIDAQAB",
+   "manifest_version": 2,
+   "name": "Little Alchemy",
+   "offline_enabled": true,
+   "permissions": [ "background" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.0"
+}

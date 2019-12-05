@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Create, edit and share Excel spreadsheets. Work with others on shared projects, in real-time."
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "All your notes—in one place and with you, anywhere.  Get things done with your friends, family, classmates, and colleagues."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Create, edit and share PowerPoint presentations.  Work with others on shared projects, in real-time."
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Create, edit and share Word documents. Work with others on shared projects, in real-time."
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

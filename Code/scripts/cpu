@@ -1,0 +1,5 @@
+#!/bin/bash
+
+loads=($(mpstat -P ALL 1 1 | awk '/Average:/ && $2 ~ /[0-9]/ {print $3}' | tr ',' '.'))
+average=$( python -c "print(int((float('${loads[0]}') + float('${loads[1]}') + float('${loads[2]}') + float('${loads[3]}'))/4))")
+notify-send -t 4000 "CPU usage" "$average %" -i /home/infiniter/Pictures/cpu.png

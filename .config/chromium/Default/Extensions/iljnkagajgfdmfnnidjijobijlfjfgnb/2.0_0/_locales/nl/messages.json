@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Excel-spreadsheet maken, bewerken en delen. Met anderen samenwerken in realtime. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Al uw notities op één locatie en altijd beschikbaar, overal."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "PowerPoint-presentaties maken, bewerken en delen.  Met anderen samenwerken in realtime. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Word-documenten maken, bewerken en delen. Met anderen samenwerken in realtime. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

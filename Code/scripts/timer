@@ -1,0 +1,34 @@
+#!/bin/bash
+
+type=$(echo -en "countdown\nuntil" | dmenu -theme /usr/share/rofi/themes/dmenu.rasi -i -p 'Choose mode: ')
+if [[ $type == "" ]]; then
+    exit 0
+fi
+time=$(echo -n "" | dmenu -theme /usr/share/rofi/themes/dmenu.rasi -i -p 'Set time: ')
+if [[ $time == "" ]]; then
+    exit 0
+fi
+
+if [[ $type == "countdown" ]]; then
+    multiplier=1
+    sum=0
+    if [[ $(echo "$time" | tr ":" "\n" | wc -l) -eq 1 ]]; then
+        sum=$time
+    else
+        min=$(echo "$time" | awk -F: '{print $1}')
+        sec=$(echo "$time" | awk -F: '{print $2}')
+        sum=$((60*min+sec))
+    fi
+    while [[ $((sum-1)) -ge 0 ]]; do
+        sum=$((sum-1))
+        sleep 1
+    done
+    notify-send "Countdown" "Countdown ended"
+elif [[ $type == "until" ]]; then
+    target=$(date -d $time +%s)
+    while [[ $((target-now)) -ge 0 ]]; do
+        now=$(date +%s)
+        sleep 1
+    done
+    notify-send "Timer" "Timer ended"
+fi

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+clip_val=$(xclip -selection c -o)
+notify-send "Clipboard" "$clip_val" --icon=none

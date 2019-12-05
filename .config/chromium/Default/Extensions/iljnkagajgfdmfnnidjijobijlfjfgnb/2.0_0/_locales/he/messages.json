@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "צור, ערוך ושתף גליונות אלקטרוניים של Excel. עבוד עם אחרים בזמן אמת. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "כל ההערות שלך במקום אחד ואיתך, בכל מקום."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "צור, ערוך ושתף מצגות PowerPoint.  עבוד עם אחרים בזמן אמת. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "צור, ערוך ושתף מסמכי Word. עבוד עם אחרים בזמן אמת. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

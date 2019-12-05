@@ -1,0 +1,8 @@
+#!/usr/bin/python
+import sys
+
+def time_to_sec(t):
+    vals = t.split(':')
+    return int(vals[0]) * 60 + int(vals[1])
+
+print(str(int(round(time_to_sec(sys.argv[1]) / time_to_sec(sys.argv[2]) * 100, 2))) + "%")

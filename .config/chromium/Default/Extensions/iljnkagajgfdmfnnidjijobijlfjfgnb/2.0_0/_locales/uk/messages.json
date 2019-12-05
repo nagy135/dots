@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Створюйте та редагуйте електронні таблиці Excel, надавайте до них спільний доступ. Працюйте разом у реальному часі "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Усі ваші нотатки зібрані в одному місці й доступні звідусіль."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Створюйте та редагуйте презентації PowerPoint, надавайте до них спільний доступ.  Працюйте разом у реальному часі "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Створюйте та редагуйте документи Word, надавайте до них спільний доступ. Працюйте разом у реальному часі "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

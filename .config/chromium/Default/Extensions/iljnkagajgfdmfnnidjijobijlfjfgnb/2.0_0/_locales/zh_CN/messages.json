@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "创建、编辑和共享 Excel 电子表格。与其他人实时协作。 "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "你所有的笔记均在一个位置，并且无论你身在何处，它们始终与你相随。"
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "创建、 编辑和共享 PowerPoint 演示文稿。与其他人实时协作。 "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "创建、 编辑和共享 Word 文档。与其他人实时协作。 "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

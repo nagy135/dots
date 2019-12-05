@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pkill -f subscribe_workspaces
+pkill -f subscribe_music
+pkill -f subscribe_volume
+pkill -f subscribe_date
+pkill -f subscribe_battery
+pkill -f subscribe_cpu
+pkill -f subscribe_battery
+pkill -f stalonetray
+pkill -f lemonbar
+ps aux | grep pylemon | egrep -v "nvim" | awk '{print $2}' | xargs -t kill

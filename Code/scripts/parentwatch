@@ -1,0 +1,57 @@
+#!/bin/bash
+
+
+LOG_FILE="/tmp/parentwatch.log"
+INTERVAL=2
+
+convertsecs() {
+ ((h=${1}/3600))
+ ((m=(${1}%3600)/60))
+ ((s=${1}%60))
+ printf "%02d:%02d:%02d\n" $h $m $s
+}
+
+if [[ $1 == '--run' ]]; then
+    while true
+    do
+        wid=$(xdotool getwindowfocus)
+        class_line=$(xprop -id $wid | grep WM_CLASS)
+
+        result=""
+        while [[ $(echo $class_line | sed 's/[^"]//g' | wc -c) -gt 1 ]]
+        do
+            item=$(echo $class_line | sed 's/^.*\"\([a-zA-Z_^\"]*\)\"/\1/g' | tr -d ',')
+            [[ ! -z $result ]] && result+="__"
+            lowercase=$(echo $item | tr '[A-Z]' '[a-z]')
+            result="$result$lowercase"
+            class_line=$(echo $class_line | sed "s/$item//g" | sed 's/""//g')
+        done
+        echo $result >> $LOG_FILE
+        sleep $INTERVAL
+    done
+elif [[ $1 == '--clear' ]]; then
+    rm -f $LOG_FILE
+elif [[ $1 == '--print' ]]; then
+    [[ ! -f $LOG_FILE ]] && echo "no log file" && exit 1
+    res=$(sort $LOG_FILE | uniq -c | sort -bgr)
+    while IFS= read -r line; do
+        secs=$(echo $line | sed 's/^\s*//' | sed 's/^\([0-9]*\).*/\1/')
+        secs=$(($secs*$INTERVAL))
+        secs=$(convertsecs $secs)
+        text=$(echo $line | sed 's/[0-9]*//' | sed 's/\s*//')
+        echo "$secs $text"
+    done <<< "$res"
+elif [[ $1 == '--notify' ]]; then
+    [[ ! -f $LOG_FILE ]] && echo "no log file" && exit 1
+    res=$(sort $LOG_FILE | uniq -c | sort -bgr | sed 's/^\s*//')
+    echo "$res"
+    while IFS= read -r line; do
+        secs=$(echo $line | sed 's/^\s*//' | sed 's/^\([0-9]*\).*/\1/')
+        secs=$(($secs*$INTERVAL))
+        secs=$(convertsecs $secs)
+        text=$(echo $line | sed 's/[0-9]*//' | sed 's/\s*//')
+        echo "$secs $text" >> /tmp/parentwatch_tmp_mem
+    done <<< "$res"
+    notify-send -t 2000 -i none "Recent activity" "$(cat /tmp/parentwatch_tmp_mem)"
+    rm -rf /tmp/parentwatch_tmp_mem
+fi

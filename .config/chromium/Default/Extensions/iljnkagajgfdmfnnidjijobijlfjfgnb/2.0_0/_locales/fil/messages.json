@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Gumawa, mag-edit at magbahagi ng mga spreadsheet sa Excel. Gumawa kasabay ang iba ng real-time "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Lahat ng iyong tala—sa isang lugar at kasama mo, kahit saan."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Gumawa, mag-edit at magbahagi ng mga presentation sa PowerPoint.  Gumawa kasabay ang iba ng real-time "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Gumawa, mag-edit at magbahagi ng mga dokumento sa Word. Gumawa kasabay ang iba ng real-time "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

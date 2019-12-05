@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Ustvarite in uredite Excelove preglednice ter jih dajte v skupno rabo. Delajte z drugimi v realnem času. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Vsi vaši zapiski na enem mestu, vedno z vami, kjer koli ste."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Ustvarite in uredite PowerPointove predstavitve ter jih dajte v skupno rabo.  Delajte z drugimi v realnem času. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Ustvarite in uredite Wordove dokumente ter jih dajte v skupno rabo. Delajte z drugimi v realnem času. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

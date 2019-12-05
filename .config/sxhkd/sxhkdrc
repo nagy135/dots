@@ -24,7 +24,7 @@ super + alt + e
 
 ### restart golemon
 super + space
-    killall polybar ; polybar top
+    killall polybar ; polybar_launch
     # export XDG_CONFIG_HOME="$HOME/.config" ; start_lego
 
 ### kill golemon
@@ -34,6 +34,10 @@ super + shift + space
 ### make sxhkd reload its configuration files
 super + Escape
     pkill -USR1 -x sxhkd
+
+### kill sxhkd
+super + ctrl + Escape
+    killall sxhkd
 
 ### quit bspwm normally
 super + alt + Escape
@@ -100,6 +104,10 @@ super + shift + semicolon
 
 ### rofi open file from ~/Downloads
 super + z
+    open_downloaded clipboard
+
+### rofi open file from ~/Downloads
+super + shift + z
     open_downloaded
 
 ### dunst show memory statistics
@@ -363,9 +371,17 @@ super + c
 super + ctrl + c
     chromium --incognito
 
+### color to clipboard
+super + alt + c
+    color
+
 ### open qutebrowser
 super + q
     qutebrowser
+
+### quickqute (speed launcher for qutebrowser)
+super + shift + q
+    quickqute
 
 ### open ranger
 super + shift + r
@@ -379,17 +395,9 @@ super + r
 super + b
     bye_prompt
 
-### tabber add screen
-super + ctrl + v
-    maim -s /tmp/tabber/$(date +%s).png
-
-### tabber show
-super + shift + v
-    tabber -show
-
-### tabber clear
-super + alt + v
-    tabber -clear
+### tabber create tab and name it
+super + alt + g
+    tabber
 
 ### wallpaper changer
 super + ctrl + b
@@ -415,6 +423,10 @@ super + ctrl + y
 ### subtube viewer
 super + ctrl + alt + shift + y
     subtube viewer
+#
+### youtube-queue play
+super + alt + y
+    youtube-queue play
 
 ### terminal emulator
 super + Return
@@ -430,7 +442,7 @@ super + shift + Return
 
 ### dmenu test
 super + alt + d
-    pwgen 13 15 | tr ' ' '\n' | ~/Apps/dmenu/dmenu -x 710 -y 200 -w 500 -l 15 -fn 'Fira Mono-19'
+    pwgen 13 15 | tr ' ' '\n' | ~/Apps/dmenu/dmenu -x 710 -y 200 -w 500 -l 15 -fn 'Fira Mono-19' | xclip -sel clipboard
 
 ### program launcher
 super + d
@@ -489,9 +501,9 @@ super + shift + f
 super + s
     bspc node -t floating
 
-### Monitor setup ARANDR
+### toggle monocle/tiled layout
 super + slash
-    arandr
+    bspc desktop -l {tiled,monocle}
 
 ### set the node flag (marked,locked,sticky,private)
 super + {_,ctrl,shift,alt} + backslash

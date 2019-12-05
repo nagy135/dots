@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Creare, modificare e condividere fogli di calcolo di Excel. Collaborare in tempo reale. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Tutte le note sempre a portata di mano in un'unica posizione, ovunque."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Creare, modificare e condividere presentazioni di PowerPoint.  Collaborare in tempo reale. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Creare, modificare e condividere documenti di Word. Collaborare in tempo reale. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

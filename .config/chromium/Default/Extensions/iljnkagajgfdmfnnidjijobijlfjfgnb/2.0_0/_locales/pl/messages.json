@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Tworzenie, edytowanie i udostępnianie arkuszy kalkulacyjnych programu Excel. Współpraca z innymi w czasie rzeczywistym. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Wszystkie notatki w jednym miejscu i dostępne przez cały czas — gdziekolwiek jesteś."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Tworzenie, edytowanie i udostępnianie prezentacji programu PowerPoint.  Współpraca z innymi w czasie rzeczywistym. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Tworzenie, edytowanie i udostępnianie dokumentów programu Word. Współpraca z innymi w czasie rzeczywistym. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

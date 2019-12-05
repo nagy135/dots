@@ -1,0 +1,8 @@
+#!/bin/bash
+
+full_path=~/Pictures/Screenshots/temporary_screen_$(date +%s).png
+
+maim -u -s $full_path
+
+bspc rule -a Sxiv --one-shot  state=floating sticky=on
+sxiv $full_path
