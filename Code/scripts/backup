@@ -14,8 +14,9 @@ echo "starting backup..."
 for val in ${files[@]}; do
     echo "$val ==> $REPO_DIR/$val"
     dir_path=$(dirname "$REPO_DIR/$val")
-    mkdir -p $dir_path && git add $dir_path
-    cp -r $val $REPO_DIR/$val
+    val_dir=$(dirname $val)
+    mkdir -p $dir_path
+    cp -r $val $REPO_DIR/$val_dir
 done
 
 cd $REPO_DIR
@@ -23,7 +24,7 @@ changed=$(git status | grep "modified:" | wc -l)
 if [[ $changed -gt 0 ]]; then
     echo "commiting changes..."
     git add .
-    stamp=$(date +%d_%m_%y|%H:%M:%S)
+    stamp=$(date "+%d_%m_%y | %H:%M:%S")
     git commit -m "backup $stamp"
     echo "pushing changes to repo"
     git push
