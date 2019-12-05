@@ -12,6 +12,12 @@ cd ~
 
 echo "starting backup..."
 for val in ${files[@]}; do
+    if cmp -s $val $REPO_DIR/$val; then
+        echo "equal"
+    else
+        echo "changed============================"
+    fi
+
     echo "$val ==> $REPO_DIR/$val"
     dir_path=$(dirname "$REPO_DIR/$val")
     val_dir=$(dirname $val)
