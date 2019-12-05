@@ -1,0 +1,26 @@
+﻿{
+  "word_title": {
+    "message": "Word Online"
+  },
+  "word_description": {
+    "message": "Opprett, rediger og del Word-dokumenter. Samarbeid med andre i sanntid. "
+  },
+  "excel_title": {
+    "message": "Excel Online"
+  },
+  "excel_description": {
+    "message": "Opprett, rediger og del Excel-regneark. Samarbeid med andre i sanntid. "
+  },
+  "powerpoint_title": {
+    "message": "PowerPoint Online"
+  },
+  "powerpoint_description": {
+    "message": "Opprett, rediger og del PowerPoint-presentasjoner.  Samarbeid med andre i sanntid. "
+  },
+  "onenote_title": {
+    "message": "OneNote Online"
+  },
+  "onenote_description": {
+    "message": "Alle notatene dine på samme sted og der du er, uansett hvor du er."
+  }
+}

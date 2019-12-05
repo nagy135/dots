@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://causalitygame.com/chrome/"
+      },
+      "urls": [ "http://causalitygame.com/chrome/" ]
+   },
+   "description": "The games feature each level that is a scenario of stickmen going about their daily activities. Your job is to kill all of them.",
+   "icons": {
+      "128": "causality-icon-128x128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDuwWcEG584JBEGEn6Lt6/kxPb8EEcfpcqMAG5SbTQb1cKtDFJ3iuGu4mW97aBrD4Gk+o5IywQRICvWMYHhmIoUB8cMRgTsWjrM8HQgzARJ+BZiPLkr6acVDPorZfSPhv8fEvLPcWXa2ucEDclTk21QfVfe7V4wz1zMuMPKqNmpXQIDAQAB",
+   "manifest_version": 2,
+   "name": "Causality Games",
+   "short_name": "Causality Games",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "11"
+}

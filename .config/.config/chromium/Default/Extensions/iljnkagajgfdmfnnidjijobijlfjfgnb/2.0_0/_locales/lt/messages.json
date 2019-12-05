@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Kurkite, redaguokite ir bendrinkite „Excel“ skaičiuokles. Dirbkite su kitais realiuoju laiku. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Visos pastabos vienoje vietoje ir keliauja su jumis."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Kurkite, redaguokite ir bendrinkite „PowerPoint“ pateiktis.  Dirbkite su kitais realiuoju laiku. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Kurkite, redaguokite ir bendrinkite „Word“ dokumentus. Dirbkite su kitais realiuoju laiku. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

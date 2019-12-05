@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Kreirajte, uređujte i delite Excel unakrsne tabele. Radite sa drugima u realnom vremenu. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Sve beleške na jednom mestu i svuda sa vama."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Kreirajte, uređujte i delite PowerPoint prezentacije.  Radite sa drugima u realnom vremenu. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Kreirajte, uređujte i delite Word dokumente. Radite sa drugima u realnom vremenu. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

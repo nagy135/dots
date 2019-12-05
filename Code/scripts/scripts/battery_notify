@@ -1,0 +1,54 @@
+#!/bin/sh
+
+ICON="~/.scripts/resources/battery.png"
+
+while true;
+do
+    status=$(acpi -b | grep 'Battery 0' | awk '{ print $3 }' | sed 's/[^a-zA-Z]\+//')
+    if [[ $status != 'Discharging' ]]; then
+        echo 100 > /tmp/battery_val
+        sleep 60
+        continue
+    fi
+    perc=$(acpi -b | grep 'Battery 0' | awk '{ print $4 }' | sed 's/%,//')
+
+    if [[ ! -f /tmp/battery_val ]]; then
+        echo $perc > /tmp/battery_val
+    fi
+
+    old=$(cat /tmp/battery_val)
+    if [[ $old -gt $perc ]]; then
+        if [[ $perc -le 1 && $old -gt 1 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>1%\n</span>"
+        elif [[ $perc -le 2 && $old -gt 2 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>2%\n</span>"
+        elif [[ $perc -le 3 && $old -gt 3 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>3%\n</span>"
+        elif [[ $perc -le 4 && $old -gt 4 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>4%\n</span>"
+        elif [[ $perc -le 5 && $old -gt 5 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>5%\n</span>"
+        elif [[ $perc -le 10 && $old -gt 10 ]]; then
+            notify-send -u critical -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#ffffff'>10%\n</span>"
+        elif [[ $perc -le 15 && $old -gt 15 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>15%\n</span>"
+        elif [[ $perc -le 20 && $old -gt 20 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>20%\n</span>"
+        elif [[ $perc -le 30 && $old -gt 30 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>30%\n</span>"
+        elif [[ $perc -le 50 && $old -gt 50 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>50%\n</span>"
+        elif [[ $perc -le 60 && $old -gt 60 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>60%\n</span>"
+        elif [[ $perc -le 70 && $old -gt 70 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>70%\n</span>"
+        elif [[ $perc -le 80 && $old -gt 80 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>80%\n</span>"
+        elif [[ $perc -le 90 && $old -gt 90 ]]; then
+            notify-send -i $ICON -t 2000 ' ' "<span font-size='35000' font-weight='bold' foreground='#c22330'>90%\n</span>"
+        fi
+    fi
+    # lego_refresh "battery"
+    echo $perc > /tmp/battery_val
+    sleep 30
+done

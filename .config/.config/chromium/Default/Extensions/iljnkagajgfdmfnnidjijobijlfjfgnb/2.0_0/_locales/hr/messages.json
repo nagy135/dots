@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Stvarajte, uređujte i zajednički koristite proračunske tablice programa Excel. Surađujte u stvarnom vremenu. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Sve vaše bilješke na jednom mjestu i s vama, ma kamo pošli."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Stvarajte, uređujte i zajednički koristite prezentacije programa PowerPoint.  Surađujte u stvarnom vremenu. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Stvarajte, uređujte i zajednički koristite dokumente programa Word. Surađujte u stvarnom vremenu. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ICON="~/.scripts/resources/transmission.png"
+notify-send -i $ICON -t 3000 "TORRENT downloaded" "$TR_TORRENT_NAME"
+/usr/bin/lego_refresh "torrent"

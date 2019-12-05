@@ -1,0 +1,155 @@
+{
+   "add_site_to_list": {
+      "message": "লিস্টে সাইড যোগ করুন"
+   },
+   "automation": {
+      "message": "Automation"
+   },
+   "brightness": {
+      "message": "উজ্জ্বলতা"
+   },
+   "change_browser_theme": {
+      "message": "Change the browser theme"
+   },
+   "contrast": {
+      "message": "Contrast"
+   },
+   "custom_browser_theme_off": {
+      "message": "Default"
+   },
+   "custom_browser_theme_on": {
+      "message": "Custom"
+   },
+   "dark": {
+      "message": "ডার্ক"
+   },
+   "donate": {
+      "message": "অনুদান"
+   },
+   "engine_dynamic": {
+      "message": "Dynamic"
+   },
+   "engine_filter": {
+      "message": "ফিল্টার"
+   },
+   "engine_filter_plus": {
+      "message": "ফিল্টার+"
+   },
+   "engine_static": {
+      "message": "Static"
+   },
+   "extension_description": {
+      "message": "প্রত্যেক ওয়েবসাইটের জন্য ডার্কমোড। নিজ চোখের যত্ম নিন, নিত্যকার ব্রাউজিং এর জন্য ব্যবহার করুন ডার্ক থিম।"
+   },
+   "filter": {
+      "message": "ফিল্টার"
+   },
+   "grayscale": {
+      "message": "Grayscale"
+   },
+   "help": {
+      "message": "সহায়তা"
+   },
+   "invert_listed_only": {
+      "message": "কেবল ইনভার্ট লিস্টেড"
+   },
+   "latitude": {
+      "message": "অক্ষাংশ"
+   },
+   "light": {
+      "message": "লাইট"
+   },
+   "loading_please_wait": {
+      "message": "লোড হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন"
+   },
+   "longitude": {
+      "message": "দ্রাঘিমা"
+   },
+   "mode": {
+      "message": "মোড"
+   },
+   "more": {
+      "message": "আরও"
+   },
+   "news": {
+      "message": "বার্তা"
+   },
+   "not_invert_listed": {
+      "message": "ইনভার্ট লিস্টেড নয়"
+   },
+   "off": {
+      "message": "বন্ধ"
+   },
+   "on": {
+      "message": "চালু"
+   },
+   "only_for": {
+      "message": "Only for"
+   },
+   "only_for_description": {
+      "message": "শুধুমাত্র বর্তমান ওয়েবসাইটের জন্য সেটিংস কার্যকর করুন"
+   },
+   "open_dev_tools": {
+      "message": "Dev tools"
+   },
+   "page_in_dark_list": {
+      "message": "এই সাইটটি গ্লোবালে আছে\nডার্ক লিস্ট"
+   },
+   "page_protected": {
+      "message": "এই পেজটি প্রোটেক্টেড\nব্রাউজার দ্বারা"
+   },
+   "privacy": {
+      "message": "Privacy"
+   },
+   "read_more": {
+      "message": "আরও পড়ুন"
+   },
+   "select_font": {
+      "message": "ফন্ট বাছাই করুন"
+   },
+   "sepia": {
+      "message": "Sepia"
+   },
+   "set_active_hours": {
+      "message": "Set active hours"
+   },
+   "set_location": {
+      "message": "Activate after sunset at location"
+   },
+   "setup_add_site_hotkey": {
+      "message": "Setup a hotkey for adding site"
+   },
+   "setup_hotkey_toggle_extension": {
+      "message": "এক্সটেনসন ঠিক করুন\ntoggle hotkey"
+   },
+   "setup_hotkey_toggle_site": {
+      "message": "বর্তমান সাইট ঠিক করুন\ntoggle hotkey"
+   },
+   "site_list": {
+      "message": "সাইট লিস্ট"
+   },
+   "store_listing": {
+      "message": "This eye-care extension enables night mode creating dark themes for websites on the fly. Dark Reader inverts bright colors making them high contrast and easy to read at night.\n\nYou can adjust brightness, contrast, sepia filter, dark mode, font settings and ignore-list.\n\nDark Reader doesn't show ads and doesn't send user's data anywhere. It is fully open-source https://github.com/darkreader/darkreader\n\nBefore you install disable similar extensions. Enjoy watching!"
+   },
+   "system_dark_mode": {
+      "message": "সিস্টেম কালার স্কিম ব্যবহার করুন"
+   },
+   "system_dark_mode_description": {
+      "message": "চালু করুন যখন সিস্টেম মোড চালু আছে"
+   },
+   "text_stroke": {
+      "message": "Text stroke"
+   },
+   "theme_generation_mode": {
+      "message": "থিম জেনারেশন মোড"
+   },
+   "toggle_current_site": {
+      "message": "Toggle current site"
+   },
+   "toggle_extension": {
+      "message": "Toggle extension"
+   },
+   "try_experimental_theme_engines": {
+      "message": "Try out **experimental** theme engines:\n**Filter+** preserves colors saturation, uses GPU\n**Static theme** generates a simple fast theme\n**Dynamic theme** analyzes colors and images"
+   }
+}

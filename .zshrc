@@ -120,5 +120,6 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/Apps/neovim/build/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
+
 # Load zsh-syntax-highlighting; should be last.
 source ~/.zsh/clones/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null

@@ -1,0 +1,86 @@
+left:music|packages
+center:workspaces
+right:torrent|subtube|volume|battery|brightness|redshift|wifi|layout|date
+
+separator=" %{F#FF0000}·%{F-} "
+powerline=true
+after_run=/home/infiniter/.scripts/lego_fix_layers
+log_file=/home/infiniter/lego.log
+
+# format #aarrggbb
+background=#110b0b0b
+
+lemon_geometry=1920x25+0+0
+
+font="Source Code Pro for Powerline-16"
+font="FontAwesome-18"
+
+stalonetray--geometry=1x1+700+0
+stalonetray--grow-gravity=E
+stalonetray--icon-gravity=W
+stalonetray-bg=#0b0b0b
+
+[music
+    interval=0
+    color=#FF282A2E
+    subscribe=/usr/bin/subscribe_music
+]
+
+[packages
+    interval=600
+    color=#FF454A4F
+#    skip_init=true
+]
+
+[workspaces
+    interval=0
+    color=none
+    subscribe=/usr/bin/subscribe_workspaces
+]
+
+[torrent
+    interval=60
+    color=#FF304bcc
+]
+
+[volume
+    interval=0
+    color=#FF454A4F
+]
+
+[subtube
+    interval=60
+    color=#FF282A2E
+]
+
+[battery
+    interval=60
+    color=#FF282A2E
+    subscribe=/usr/bin/subscribe_battery
+]
+
+[brightness
+    interval=0
+    color=#FF454A4F
+]
+
+[redshift
+    interval=0
+    color=#FF282A2E
+]
+
+[wifi
+    interval=60
+    color=#FF454A4F
+]
+
+[layout
+    interval=0
+    color=#FF282A2E
+]
+
+[date
+    interval=60
+    color=#FF454A4F
+    # left_click=mpct
+]

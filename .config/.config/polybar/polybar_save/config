@@ -1,0 +1,341 @@
+[global/wm]
+; Adjust the _NET_WM_STRUT_PARTIAL top value
+;   Used for top aligned bars
+;margin-top = 20
+
+; Adjust the _NET_WM_STRUT_PARTIAL bottom value
+;   Used for bottom aligned bars
+;margin-bottom = 0
+
+[colors]
+transparent = #99000000
+invisible = #0000
+background = #0b0b0b
+foreground = #b2d3d9
+red = #c22330
+dim = #b2d3d9
+
+[settings]
+; Define fallback values used by all module formats
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 1
+radius = 5.5
+; margin between multiple labels in a module
+; e.g. bspwm workspace module
+;format-margin = 1
+
+[bar/top]
+monitor = eDP1
+
+width = 99%
+height = 30
+
+offset-x = 0.5%
+offset-y = 1%
+
+radius = 0.0
+
+;border-left-size = 8
+;border-right-size = 8
+;border-top-size = 8
+;border-color = ${colors.invisible}
+
+padding-left = 0
+; leave room for detached tray
+padding-right = 0
+
+module-margin = 1
+
+font-0 = League Mono:size=12
+font-1 = FontAwesome:size=13
+font-2 = xos4 Terminus:size=6
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+separator =
+
+modules-left = mpd
+modules-center = bspwm
+modules-right = cpu subtube memory packages volume battery date
+
+tray-position = right
+tray-padding = 5
+tray-detached = false
+tray-background = ${colors.background}
+
+underline-size = 2
+underline-color = ${colors.foreground}
+wm-restack = bspwm
+
+; [module/music]
+; type = custom/script
+; interval = 2.0
+
+; type = custom/script
+; exec = ~/.config/polybar/musicdata
+; interval = 1
+; tail = true
+; click-left = kill -USR1 %pid%
+
+[module/wireless-network]
+type = internal/network
+interface = wlp1s0
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+udspeed-minwidth = 5
+accumulate-stats = true
+unknown-as-up = true
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <animation-packetloss> <label-connected>
+label-connected = %essid% - %signal%%
+label-connected-foreground = #eefafafa
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
+
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+interval = 1
+
+[module/subtube]
+type = custom/script
+exec = ~/.config/polybar/subtube
+interval = 1
+tail = true
+click-left = kill -USR1 %pid%
+
+[module/date]
+type = internal/date
+interval = 5.0
+date = %b %e
+time = %H:%M
+fulltitle = %H:%M%:%S
+fullbody = %b %e
+label = %{A1:notify-send --icon=none $(date +%H\:%M\:%S____%e_%B_%Y):}%time%%{A}
+
+
+[module/battery]
+format-charging-background = ${settings.format-background}
+format-charging-padding = ${settings.format-padding}
+format-discharging-background = ${settings.format-background}
+format-discharging-padding = ${settings.format-padding}
+format-full-background = ${settings.format-background}
+format-full-padding = ${settings.format-padding}
+
+type = internal/battery
+battery = BAT0
+adapter = AC
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+format-full = <label-full>
+label-discharging = BAT %percentage%%
+label-charging =  %percentage%%
+label-full =  %percentage%%
+; time-format = (%H:%M)
+
+
+[module/battery_fa_icons]
+inherit = module/battery
+
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+label-discharging = %percentage%% %time%
+label-charging =  %percentage%% %time%
+label-full =  %percentage%%
+time-format = (%H:%M)
+
+; lightning bolt!
+;label-charging =  %percentage%% %time%
+;label-full =  %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; enable this by changing 'format-charging' above
+animation-charging-0 = ${self.ramp-capacity-0}
+animation-charging-1 = ${self.ramp-capacity-1}
+animation-charging-2 = ${self.ramp-capacity-2}
+animation-charging-3 = ${self.ramp-capacity-3}
+animation-charging-4 = ${self.ramp-capacity-4}
+animation-charging-framerate = 500
+
+[module/battery_md_icons]
+inherit = module/battery
+
+format-charging = <ramp-capacity> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+label-discharging = %percentage%% %time%
+label-charging =  %percentage%% %time%
+label-full =  %percentage%%
+time-format = (%H:%M)
+
+; lightning bolt!
+;label-charging =  %percentage%% %time%
+;label-full =  %percentage%%
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+
+; enable this by changing 'format-charging' above
+animation-charging-0 = ${self.ramp-capacity-0}
+animation-charging-1 = ${self.ramp-capacity-1}
+animation-charging-2 = ${self.ramp-capacity-2}
+animation-charging-3 = ${self.ramp-capacity-3}
+animation-charging-4 = ${self.ramp-capacity-4}
+animation-charging-framerate = 500
+
+
+[module/battery_hearts]
+inherit = module/battery
+
+format-charging = <bar-capacity> <label-charging>
+format-discharging = <bar-capacity> <label-discharging>
+format-full = <bar-capacity> <label-full>
+label-charging =  %percentage%% %time%
+label-discharging = %percentage%% %time%
+label-full =  %percentage%%
+time-format = (%H:%M)
+
+bar-capacity-foreground-0 = ${colors.red}
+bar-capacity-width = 5
+bar-capacity-fill = 
+bar-capacity-empty = 
+bar-capacity-indicator =
+
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; Default: true
+pin-workspaces = false
+
+format = <label-state>
+label-focused = " %{F#f9dc29}%name%%{F-} "
+label-occupied = " %{F#19a85b}%name%%{F-} "
+label-occupied-foreground = ${colors.dim}
+label-empty = " %{F#666666}%name%%{F-} "
+label-empty-foreground = #55
+
+
+[module/memory]
+type = internal/memory
+interval = 5
+format = <label>
+label =  %gb_used%/%gb_total%
+
+
+[module/cpu]
+type = internal/cpu
+format = <ramp-coreload>
+; label = CPU %percentage%%
+
+ramp-coreload-font = 2
+ramp-coreload-5-foreground = ${colors.red}
+ramp-coreload-6-foreground = ${colors.red}
+ramp-coreload-7-foreground = ${colors.red}
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+
+[module/temperature]
+type = internal/temperature
+interval = 3
+
+; Thermal zone to use
+; To list all the zone types, run
+; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
+; Default: 0
+thermal-zone = 1
+
+; Threshold temperature to display warning label
+warn-temperature = 75
+format = <ramp> <label>
+label = TEMP %temperature%
+label-warn = TEMP %temperature%
+label-warn-foreground = ${colors.red}
+ramp-0 =
+
+
+[module/volume]
+type = internal/pulseaudio
+
+; increase/decrease volume interval
+interval = 5
+
+format-volume-background = ${settings.format-background}
+format-volume-padding = ${settings.format-padding}
+format-muted-background = ${settings.format-background}
+format-muted-padding = ${settings.format-padding}
+
+format-volume = <label-volume>
+
+label-muted-foreground = ${colors.dim}
+label-muted = 
+label-volume =  %percentage%%
+
+click-left = pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+[module/volume_icons]
+inherit = module/volume
+
+format-volume = <ramp-volume> <label-volume>
+label-muted = 
+label-volume = %percentage%%
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+
+[module/packages]
+type = custom/script
+exec = ~/.config/polybar/package_update_checker.sh lemonbar
+interval = 300
+; Tux!
+;label =  %output%
+label = PKG %output%
+
+
+[module/weather]
+type = custom/script
+exec = ~/.config/polybar/weather.sh
+interval = 600
+label = %{A1:~/.config/polybar/weather_gui.sh:}%output%%{A}
+
+
+[module/stocks]
+type = custom/script
+exec = ~/.config/polybar/ticker.py
+interval = 300
+label-font = 2
+
+; vim: set ft=dosini:

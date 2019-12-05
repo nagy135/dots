@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Izveidojiet, rediģējiet un koplietojiet Excel izklājlapas. Strādājiet kopā ar citiem reāllaikā. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Visas jūsu piezīmes vienuviet un vienmēr ar jums."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Izveidojiet, rediģējiet un koplietojiet PowerPoint prezentācijas.  Strādājiet kopā ar citiem reāllaikā. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Izveidojiet, rediģējiet un koplietojiet Word dokumentus. Strādājiet kopā ar citiem reāllaikā. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

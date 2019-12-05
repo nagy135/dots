@@ -1,0 +1,17 @@
+#!/bin/bash
+
+QUEUE_FILE=~/.scripts/resources/youtube_queue
+
+[[ ! -f $QUEUE_FILE ]] && touch $QUEUE_FILE
+
+if [[ $1 == 'add' ]]; then
+    echo "$2" >> $QUEUE_FILE
+elif [[ $1 == 'play' ]]; then
+    [[ ! -s $QUEUE_FILE ]] && notify-send -t 1000 -i none "Youtube queue" "empty" && exit 0
+    notify-send -t 1000 -i none "Youtube queue" "playing"
+    while read line; do
+        youtube-viewer --no-interactive --player=mpv --resolution=720p "$line"
+    done < $QUEUE_FILE
+    > $QUEUE_FILE
+fi
+exit 0

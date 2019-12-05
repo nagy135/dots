@@ -1,0 +1,42 @@
+#!/bin/bash
+
+ICON="~/.scripts/resources/transmission.png"
+
+output=$(transmission-remote -l | sed 's/Up & Down/Downloading/' | sed '/ETA/d' | sed '/Sum:/d' | sed 's/Unknown/1 min/' | sed 's/Done/1 min/' | sed 's/[0-9]*\.[0-9]*//' | awk '{printf $1 " " $2 " " $9 " "; for (i=10; i<NF; i++) printf $i " "; print $NF}')
+if [[ $1 == 'reminder' ]]; then
+    seed_lines_count=$(echo "$output" | grep -E "Seeding" | sed '/^\s*$/d' | wc -l)
+
+    output=$(echo "$output" | sed 's/^\s*\([[:digit:]]*\)/<span foreground="#d13273">#\1<\/span>/')
+    output=$(echo "$output" | sed 's/\([[:digit:]]*%\)/<span foreground="#f9dc2b">\1<\/span>/')
+
+    seed_lines=$(echo "$output" | grep Seeding | sed 's/\s*Seeding\s*/ /' | sed ':a;N;$!ba;s/\n/\n======================\n/g')
+
+    if [[ $seed_lines_count -gt 0 ]]; then
+        res="${res}<span foreground='#2dc189'> SEEDING:</span>\n${seed_lines}\n"
+        notify-send -u critical -i $ICON -t 3000 "TORRENTS" "$res"
+    fi
+else
+    idle_lines_count=$(echo "$output" | grep -E "Idle|Queued" | sed '/^\s*$/d' | wc -l)
+    downloading_lines_count=$(echo "$output" | grep -E Downloading | sed '/^\s*$/d' | wc -l)
+    stopped_lines_count=$(echo "$output" | grep Stopped | sed '/^\s*$/d' | wc -l)
+
+    output=$(echo "$output" | sed 's/^\s*\([[:digit:]]*\)/<span foreground="#304bcc">#\1<\/span>/')
+    output=$(echo "$output" | sed 's/\([[:digit:]]*%\)/<span foreground="#f9dc2b">\1<\/span>/')
+
+    idle_lines=$(echo "$output" | grep -E "Idle|Queued" | sed 's/\s*Idle\s*/ /' | sed 's/\s*Queued\s*/ /' | sed ':a;N;$!ba;s/\n/\n======================\n/g')
+    downloading_lines=$(echo "$output" | grep Downloading | sed 's/\s*Downloading\s*/ /' | sed ':a;N;$!ba;s/\n/\n======================\n/g')
+    stopped_lines=$(echo "$output" | grep Stopped | sed 's/\s*Stopped\s*/ /' | sed ':a;N;$!ba;s/\n/\n======================\n/g')
+
+    res=""
+    if [[ $downloading_lines_count -gt 0 ]]; then
+        res="${res}\n<span foreground='#19a85b'> DOWNLOADING:</span>\n${downloading_lines}\n"
+    fi
+    if [[ $idle_lines_count -gt 0 ]]; then
+        res="${res}\n<span foreground='#b2d3d9'> IDLE:</span>\n${idle_lines}\n"
+    fi
+    if [[ $stopped_lines_count -gt 0 ]]; then
+        res="${res}\n<span foreground='#c22330'> STOPPED:</span>\n${stopped_lines}\n"
+    fi
+
+    [[ ! -z $res ]] && notify-send -i $ICON -t 3000 "TORRENTS" "$res"
+fi

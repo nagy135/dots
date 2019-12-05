@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="clock"></div>
+        <div class="welcome-container">
+            <div class="row">
+                <div class="inline"><input id="quick_search" type="text" onkeyup="search_start( event, this )" placeholder="search..."></div>
+            </div>
+        </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title">Social</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://youtube.com" ><i class="fa fa-youtube-play" style="font-size:24px;"></i> Youtube</a>
+                    <a class="bookmark" href="https://gmail.com" ><i class="fa fa-google" style="font-size:24px;"></i> Gmail</a>
+                    <a class="bookmark" href="https://github.com" ><i class="fa fa-github" style="font-size:24px;"></i> Github</a>
+                    <a class="bookmark" href="https://facebook.com" ><i class="fa fa-facebook-square" style="font-size:24px;"></i> Facebook</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+            <div class="bookmark-title">Reddit</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://reddit.com/r/all" ><i class="fa fa-reddit-alien" style="font-size:24px;"></i> /r/all</a>
+                    <a class="bookmark" href="https://reddit.com/r/dankmemes" ><i class="fa fa-reddit-alien" style="font-size:24px;"></i> /r/dankmemes</a>
+                    <a class="bookmark" href="https://reddit.com/r/unixporn" ><i class="fa fa-reddit-alien" style="font-size:24px;"></i> /r/unixporn</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/ManjaroLinux" ><i class="fa fa-reddit-alien" style="font-size:24px;"></i> /r/Manjaro</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Twitch</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://www.twitch.tv/directory/game/League%20of%20Legends" ><i class="fa fa-twitch" style="font-size:24px;"></i> All</a>
+                    <a class="bookmark" href="https://www.twitch.tv/llstylish" ><i class="fa fa-twitch" style="font-size:24px;"></i> LL Stylish</a>
+                    <a class="bookmark" href="https://www.twitch.tv/nightblue3" ><i class="fa fa-twitch" style="font-size:24px;"></i> nightblue3</a>
+                    <a class="bookmark" href="https://www.twitch.tv/riot" ><i class="fa fa-twitch" style="font-size:24px;"></i> riot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get current time and format
+        function getTime() {
+            let date = new Date(),
+                min = date.getMinutes(),
+                sec = date.getSeconds(),
+                hour = date.getHours();
+
+            return "" +
+                (hour < 10 ? ("0" + hour) : hour) + ":" +
+                (min < 10 ? ("0" + min) : min) + ":" +
+                (sec < 10 ? ("0" + sec) : sec);
+        }
+
+        window.onload = () => {
+            // Set up the clock
+            document.getElementById("clock").innerHTML = getTime();
+            // Set clock interval to tick clock
+            setInterval( () => {
+                document.getElementById("clock").innerHTML = getTime();
+            },500);
+            document.getElementById("quick_search").focus()
+        }
+        var input = document.getElementById("search");
+
+        function search_start( event, input ){
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                window.location.href = "https://www.duckduckgo.com/?q=" + input.value
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Skapa, redigera och dela Excel-kalkylblad. Arbeta med andra i realtid. "
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Alla dina anteckningar på ett ställe och med dig, var som helst."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Skapa, redigera och dela PowerPoint-presentationer.  Arbeta med andra i realtid. "
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Skapa, redigera och dela Word-dokument. Arbeta med andra i realtid. "
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

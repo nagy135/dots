@@ -1,0 +1,6 @@
+#!/bin/bash
+
+date=$(date +%H:%M)
+urgency="normal"
+[[ $(date +%H) -lt 6 ]] && urgency="critical"
+notify-send -u $urgency -i ~/.scripts/resources/clock.png -t 2000 " " "<span  font-size='35000' font_weight='bold'>$date\n</span>"

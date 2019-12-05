@@ -1,4 +1,0 @@
-#!/bin/bash
-
-date=$(date +%H:%M)
-notify-send -i ~/.scripts/resources/clock.png -t 2000 " " "<span  font-size='35000' font_weight='bold'>$date\n</span>"

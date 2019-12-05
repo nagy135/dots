@@ -1,0 +1,26 @@
+{
+   "excel_description": {
+      "message": "Създаване, редактиране и споделяне на електронни таблици на Excel. Работа с други хора в реално време."
+   },
+   "excel_title": {
+      "message": "Excel Online"
+   },
+   "onenote_description": {
+      "message": "Всички ваши бележки на едно място и заедно с вас навсякъде."
+   },
+   "onenote_title": {
+      "message": "OneNote Online"
+   },
+   "powerpoint_description": {
+      "message": "Създаване, редактиране и споделяне на презентации на PowerPoint.  Работа с други хора в реално време."
+   },
+   "powerpoint_title": {
+      "message": "PowerPoint Online"
+   },
+   "word_description": {
+      "message": "Създаване, редактиране и споделяне на документи на Word. Работа с други хора в реално време."
+   },
+   "word_title": {
+      "message": "Word Online"
+   }
+}

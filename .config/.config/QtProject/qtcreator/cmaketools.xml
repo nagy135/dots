@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QtCreatorCMakeTools>
+<!-- Written by QtCreator 4.10.1, 2019-11-09T22:22:38. -->
+<qtcreator>
+ <data>
+  <variable>CMakeTools.0</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="AutoCreateBuildDirectory">false</value>
+   <value type="bool" key="AutoDetected">true</value>
+   <value type="bool" key="AutoRun">true</value>
+   <value type="QString" key="Binary">/usr/bin/cmake</value>
+   <value type="QString" key="DisplayName">System CMake at /usr/bin/cmake</value>
+   <value type="QString" key="Id">{1ceb02a0-ca5a-42e7-8500-d84e24a65f3a}</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>CMakeTools.1</variable>
+  <valuemap type="QVariantMap">
+   <value type="bool" key="AutoCreateBuildDirectory">false</value>
+   <value type="bool" key="AutoDetected">true</value>
+   <value type="bool" key="AutoRun">true</value>
+   <value type="QString" key="Binary">/bin/cmake</value>
+   <value type="QString" key="DisplayName">System CMake at /bin/cmake</value>
+   <value type="QString" key="Id">{a763dd78-4eca-4549-836b-c943713283bf}</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>CMakeTools.Count</variable>
+  <value type="int">2</value>
+ </data>
+ <data>
+  <variable>CMakeTools.Default</variable>
+  <value type="QString">{1ceb02a0-ca5a-42e7-8500-d84e24a65f3a}</value>
+ </data>
+ <data>
+  <variable>Version</variable>
+  <value type="int">1</value>
+ </data>
+</qtcreator>

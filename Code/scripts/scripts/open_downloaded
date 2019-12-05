@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [[ $1 == "clipboard" ]]; then
+    chosen=$(ls ~/Downloads | rofi -dmenu -i -p "Copy file path to clipboard")
+    [[ ! -z $chosen ]] && echo "~/Downloads/$chosen" | tr -d '\n' | xclip -sel clipboard ; notify-send -i none -t 2000 'File stored in clipboard' "$chosen"
+elif [[ $1 == "" ]]; then
+    echo haha
+else
+    files=$(ls ~/Downloads | grep -e 'pdf\|png\|jpg\|jpeg\|gif')
+
+    choice=$(echo "$files" | dmenu -i -p 'Choose file to open')
+
+    if [[ ! -z $choice ]]; then
+        if [[ $choice == *.pdf ]]; then
+            zathura ~/Downloads/$choice
+        elif [[ $choice == *.png ]] || [[ $choice == *.jpg ]] || [[ $choice == *.jpeg ]] || [[ $choice == *.gif ]]; then
+            sxiv ~/Downloads/$choice
+        fi
+    fi
+fi
