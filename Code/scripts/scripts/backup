@@ -23,7 +23,7 @@ changed=$(git status | grep "modified:" | wc -l)
 if [[ $changed -gt 0 ]]; then
     echo "commiting changes..."
     git add .
-    stamp=$(date "+%d_%m_%y|%H:%M:%S")
+    stamp=$(date "+%d_%m_%y | %H:%M:%S")
     git commit -m "backup $stamp"
     echo "pushing changes to repo"
     git push
