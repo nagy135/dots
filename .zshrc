@@ -114,8 +114,10 @@ source ~/.zsh/keybinds.zsh
 export VISUAL=nvim
 export EDITOR=nvim
 export XDG_CONFIG_HOME=/home/infiniter/.config
+export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/Apps/neovim/build/bin:$PATH"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
 # Load zsh-syntax-highlighting; should be last.
