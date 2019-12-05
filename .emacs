@@ -38,7 +38,7 @@
  '(line-number-mode nil)
  '(package-selected-packages
    (quote
-    (beacon rainbow-mode treemacs-evil treemacs ztree evil-magit all-the-icons-gnus all-the-icons-dired all-the-icons-ivy doom-themes doom-modeline doom django-theme snippet autopair paredit-everywhere eyebrowse emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil)))
+    (bash-completion helm-lsp company-lsp lsp-ui rust-mode lsp-mode counsel wgrep-ag beacon rainbow-mode treemacs-evil treemacs ztree evil-magit all-the-icons-gnus all-the-icons-dired all-the-icons-ivy doom-themes doom-modeline doom django-theme snippet autopair paredit-everywhere eyebrowse emmet-mode org-bullets fontawesome helm-rg ranger direx-grep web-mode python-django evil-surround evil-commentary ecb go-mode jedi-direx jedi projectile dumb-jump magit neotree ## auto-complete paredit flycheck elpy distinguished-theme material-theme better-defaults helm evil)))
  '(zoom-size (quote (0.618 . 0.618))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -210,6 +210,10 @@
   (projectile-add-known-project project-path))
 (setq helm-locate-project-list projects-list)
 
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+
 ;; Modes
 ;; (linum-relative-mode) ;; relative numberline mode
 (evil-commentary-mode) ;; commentary mode (gcc)
@@ -228,7 +232,7 @@
 (global-set-key (kbd "C-x C-c") (lambda() (interactive)(find-file "~/.emacs"))) ;; open .emacs file
 (global-set-key (kbd "C-x g") 'magit-status) ;; git status
 ;; (define-key global-map "\C-cp" 'projectile-find-file-in-known-projects) ;; find file in projects from projects-list
-(define-key global-map (kbd "C-c p") 'helm-projects-find-files) ;; find file in projects from projects-list
+;; (define-key global-map (kbd "C-c p") 'helm-projects-find-files) ;; find file in projects from projects-list
 (define-key global-map "\C-cg" 'ag-project) ;; ag string in current project
 (define-key global-map "\C-xp" 'ac-complete-filename) ;; filepath completion
 (define-key global-map (kbd "M-p M-i") 'package-install) ;; fast package-install
@@ -266,3 +270,19 @@ If called with a prefix, prompts for flags to pass to ag."
 					 :candidates projects-list)
 			      :buffer "*helm sync source*")))
   (ag/search string directory))
+
+(require 'rust-mode)
+(use-package lsp-mode
+  :hook (python-mode . lsp)
+  :hook (rust-mode . lsp)
+  :commands lsp)
+
+;; optionally
+(use-package lsp-ui :commands lsp-ui-mode)
+(use-package company-lsp :commands company-lsp)
+(use-package helm-lsp :commands helm-lsp-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+;; optionally if you want to use debugger
+
+(add-hook 'rust-mode-hook
+          (lambda () (global-set-key (kbd "C-j") 'cargo-process-run)))

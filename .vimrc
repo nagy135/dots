@@ -10,6 +10,7 @@ syntax on
 filetype indent on
 set foldmethod=marker
 set tabstop=4
+set wildoptions=pum
 set expandtab
 set shiftwidth=4
 set relativenumber
@@ -41,6 +42,8 @@ set splitbelow
 set splitright
 "}}}
 
+let mapleader = " "
+
 "Mappings {{{
 nnoremap H ^
 nnoremap L $
@@ -48,10 +51,11 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap ;ft   :NERDTreeFind<CR>
 " nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-s> :w<CR>
+nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-k> :ColorToggle<CR>
-nnoremap <c-f> :silent !ctags %<CR>:Tagbar<CR>
+nnoremap <c-f> :Tagbar<CR>
 nnoremap <c-l> :.-1read ~/.vim/snippets/loremipsum<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
@@ -63,7 +67,7 @@ vnoremap ;b :w !bash<CR>
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap <F3> :set spell!<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <C-p> :Ctrlp<CR>
 " nnoremap <C-m> :BLines<CR>
 nnoremap <c-g> :Rg<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -75,6 +79,12 @@ nnoremap <F4> :call ZathuraOpen()<CR>
 autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
 "LaTeX
 autocmd FileType tex nnoremap <c-j> :w !pdflatex % &> /dev/null<CR>
+"Rust
+autocmd FileType rust nnoremap <c-j> :w<CR>:!cargo run<CR>
+autocmd FileType rust nnoremap ;p oprintln!()<ESC>i
+autocmd FileType rust nnoremap ;P Oprintln!()<ESC>i
+autocmd FileType rust nnoremap ;;p yiwoprintln!("", )<ESC>PF"P^
+autocmd FileType rust nnoremap ;;P yiwOprintln!("", )<ESC>PF"P^
 "Python
 autocmd FileType python nnoremap <c-j> :w !python<CR>:w<CR>
 autocmd FileType python nnoremap ;p oprint()<ESC>i
@@ -107,6 +117,9 @@ autocmd FileType javascript nmap ;cl oconsole.log(<ESC>lmiA;<ESC>`ii
 autocmd FileType typescript nmap ;cL Oconsole.log(<ESC>lmiA;<ESC>`ii
 autocmd FileType javascript nmap ;cL Oconsole.log(<ESC>lmiA;<ESC>`ii
 
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
@@ -118,6 +131,9 @@ augroup END
 " colorscheme luna-term
 colorscheme jellybeans
 " }}}
+
+let g:markdown_folding = 1
+
 
 " Plugin setup {{{
 if !exists('g:jellybeans_overrides')
@@ -220,8 +236,46 @@ endfunction
 
 "}}}
 
+" Relative django jumps {{{
+let g:last_relative_dir = ''
+nnoremap \1 :call RelatedFile ("models.py")<cr>
+nnoremap \2 :call RelatedFile ("views.py")<cr>
+nnoremap \3 :call RelatedFile ("urls.py")<cr>
+nnoremap \4 :call RelatedFile ("admin.py")<cr>
+nnoremap \5 :call RelatedFile ("tests.py")<cr>
+nnoremap \6 :call RelatedFile ( "templates/" )<cr>
+nnoremap \7 :call RelatedFile ( "templatetags/" )<cr>
+nnoremap \8 :call RelatedFile ( "management/" )<cr>
+nnoremap \0 :e settings.py<cr>
+nnoremap \9 :e urls.py<cr>
+
+fun! RelatedFile(file)
+    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+        exec "edit %:h/" . a:file
+        let g:last_relative_dir = expand("%:h") . '/'
+        return ''
+    endif
+    if g:last_relative_dir != ''
+        exec "edit " . g:last_relative_dir . a:file
+        return ''
+    endif
+    echo "Cant determine where relative file is : " . a:file
+    return ''
+endfun
+
+fun SetAppDir()
+    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+        let g:last_relative_dir = expand("%:h") . '/'
+        return ''
+    endif
+endfun
+autocmd BufEnter *.py call SetAppDir()
+" }}}
+
 " Plug {{{
 call plug#begin('~/.vim/plugged')
+    Plug 'rust-lang/rust.vim'
+    Plug 'vimwiki/vimwiki'
     Plug 'vim-airline/vim-airline'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'scrooloose/nerdtree'
@@ -231,59 +285,64 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
     Plug 'raviqqe/vim-nonblank'
+    Plug 'tpope/vim-markdown'
     Plug 'chrisbra/Colorizer'
     Plug 'mattn/emmet-vim'
     Plug 'rstacruz/vim-closer'
-    " Plug 'kien/ctrlp.vim'
-    Plug 'junegunn/fzf.vim'
+    Plug 'kien/ctrlp.vim'
+    " Plug 'junegunn/fzf.vim'
     Plug 'LandonSchropp/vim-stamp'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'mhinz/vim-startify'
     " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/goyo.vim'
-    " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+    if has('nvim')
+        " Plug 'neovim/nvim-lsp'
+    endif
 call plug#end()
 "}}}
 
-" Coc.nvim setup {{{
-"
-  " Coc.nvim
+" let g:LanguageClient_serverCommands = {
+"     \ 'sh': ['bash-language-server', 'start']
+"     \ }
 
-" let g:coc_global_extensions = [ 'coc-emoji', 'coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-tslint', 'coc-tslint-plugin', 'coc-css', 'coc-json', 'coc-pyls', 'coc-yaml' ]
+" let settings = {
+"           \   "pyls" : {
+"           \     "enable" : v:true,
+"           \     "trace" : { "server" : "verbose", },
+"           \     "commandPath" : "",
+"           \     "configurationSources" : [ "pycodestyle" ],
+"           \     "plugins" : {
+"           \       "jedi_completion" : { "enabled" : v:true, },
+"           \       "jedi_hover" : { "enabled" : v:true, },
+"           \       "jedi_references" : { "enabled" : v:true, },
+"           \       "jedi_signature_help" : { "enabled" : v:true, },
+"           \       "jedi_symbols" : {
+"           \         "enabled" : v:true,
+"           \         "all_scopes" : v:true,
+"           \       },
+"           \       "mccabe" : {
+"           \         "enabled" : v:true,
+"           \         "threshold" : 15,
+"           \       },
+"           \       "preload" : { "enabled" : v:true, },
+"           \       "pycodestyle" : { "enabled" : v:true, },
+"           \       "pydocstyle" : {
+"           \         "enabled" : v:false,
+"           \         "match" : "(?!test_).*\\.py",
+"           \         "matchDir" : "[^\\.].*",
+"           \       },
+"           \       "pyflakes" : { "enabled" : v:true, },
+"           \       "rope_completion" : { "enabled" : v:true, },
+"           \       "yapf" : { "enabled" : v:true, },
+"           \     }}}
+" call nvim_lsp#setup("pyls", settings)
+" call nvim_lsp#setup("bashls", {})
 
-" " Better display for messages
-" set cmdheight=2
-" " Smaller updatetime for CursorHold & CursorHoldI
-" set updatetime=300
-" " don't give |ins-completion-menu| messages.
-" set shortmess+=c
-" " always show signcolumns
-" set signcolumn=yes
+" disable preview window
+set completeopt-=preview
 
-" " Use `lp` and `ln` for navigate diagnostics
-" nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
-" nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
+" use omni completion provided by lsp
+set omnifunc=lsp#omnifunc
 
-" " Remap keys for gotos
-" nmap <silent> <leader>ld <Plug>(coc-definition)
-" nmap <silent> <leader>lt <Plug>(coc-type-definition)
-" nmap <silent> <leader>li <Plug>(coc-implementation)
-" nmap <silent> <leader>lf <Plug>(coc-references)
-
-" " Remap for rename current word
-" nmap <leader>lr <Plug>(coc-rename)
-
-" " Use K for show documentation in preview window
-" nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" function! s:show_documentation()
-"   if &filetype == 'vim'
-"     execute 'h '.expand('<cword>')
-"   else
-"     call CocAction('doHover')
-"   endif
-" endfunction
-
-" " Highlight symbol under cursor on CursorHold
-" autocmd CursorHold * silent call CocActionAsync('highlight')
-"}}}
+let g:ctrlp_match_window = 'min:4,max:999'
