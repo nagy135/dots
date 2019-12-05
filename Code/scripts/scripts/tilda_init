@@ -1,3 +1,0 @@
-#!/bin/bash
-
-tilda -g ~/.config/tilda/config_1 &> /dev/null & disown
