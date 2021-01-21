@@ -8,9 +8,9 @@
 " Settings {{{
 syntax on
 filetype indent on
+set updatetime=300
 set foldmethod=marker
 set tabstop=4
-set wildoptions=pum
 set expandtab
 set shiftwidth=4
 set relativenumber
@@ -18,6 +18,7 @@ set sts=4
 set ts=4
 set autoindent
 set path+=**
+set mouse=a
 " set cursorline
 " set cursorcolumn
 set wildmenu
@@ -33,6 +34,7 @@ set listchars=tab:▸\ ,eol:¬
 set list
 if has('nvim')
     set inccommand=split
+    set wildoptions=pum
 endif
 set maxfuncdepth=1000
 set undofile
@@ -45,18 +47,22 @@ set splitright
 let mapleader = " "
 
 "Mappings {{{
+
 nnoremap H ^
 nnoremap L $
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap ;ft   :NERDTreeFind<CR>
+nnoremap ,b   :Tagbar<CR>
 " nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-k> :ColorToggle<CR>
-nnoremap <c-f> :Tagbar<CR>
-nnoremap <c-l> :.-1read ~/.vim/snippets/loremipsum<CR>
+nnoremap <c-p> :GFiles<CR>
+nnoremap <c-f> :Files<CR>
+nnoremap <c-e> :Buffers<CR>
+nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
 nnoremap <F4> :CtrlPClearAllCaches<CR>
@@ -64,27 +70,36 @@ nnoremap <F1> :let @+ = expand("%:p")<CR>
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 nnoremap ;b :.w !bash<CR>
 vnoremap ;b :w !bash<CR>
+nnoremap ;g :Goyo<CR>
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap <F3> :set spell!<CR>
-nnoremap <C-p> :Ctrlp<CR>
+" nnoremap <C-p> :Clap files<CR>
+" nnoremap <C-m> :Ctrlp<CR>
 " nnoremap <C-m> :BLines<CR>
 nnoremap <c-g> :Rg<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
+nnoremap <leader>x :wq<CR>
+nnoremap <leader>qq :q!<CR>
 "}}}
 
 " AutoCommands {{{
+" autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 "MatLab
 autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
 "LaTeX
 autocmd FileType tex nnoremap <c-j> :w !pdflatex % &> /dev/null<CR>
 "Rust
 autocmd FileType rust nnoremap <c-j> :w<CR>:!cargo run<CR>
-autocmd FileType rust nnoremap ;p oprintln!()<ESC>i
-autocmd FileType rust nnoremap ;P Oprintln!()<ESC>i
-autocmd FileType rust nnoremap ;;p yiwoprintln!("", )<ESC>PF"P^
-autocmd FileType rust nnoremap ;;P yiwOprintln!("", )<ESC>PF"P^
+autocmd FileType rust nnoremap ;p oprintln!();<ESC>hi
+autocmd FileType rust nnoremap ;P Oprintln!();<ESC>hi
+autocmd FileType rust nnoremap ;;p yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
+autocmd FileType rust nnoremap ;;P yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
+autocmd FileType rust nnoremap <leader>r :botright split<CR>:term cargo run<CR>
+autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
+autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
 "Python
 autocmd FileType python nnoremap <c-j> :w !python<CR>:w<CR>
 autocmd FileType python nnoremap ;p oprint()<ESC>i
@@ -97,8 +112,6 @@ autocmd FileType go nnoremap ;p ofmt.Println()<ESC>i
 autocmd FileType go nnoremap ;P Ofmt.Println()<ESC>i
 autocmd FileType go nnoremap ;;p yiwofmt.Println("", )<ESC>PF"P^
 autocmd FileType go nnoremap ;;P yiwOfmt.Println("", )<ESC>PF"P^
-"Rust
-autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
 "SH
 autocmd FileType sh nnoremap <c-j> :w !bash<CR>:w<CR>
 autocmd FileType sh nnoremap ;;p yiwoecho ""<ESC>PA $<ESC>p
@@ -111,11 +124,15 @@ autocmd FileType c nnoremap <c-j> :make!<CR>
 autocmd FileType cpp nnoremap <c-l> :!choose_main<CR>
 "Perl
 autocmd FileType perl nnoremap <c-j> :w !perl<CR>
+"PHP
+autocmd FileType php nnoremap <leader>e :w !perl<CR>
+autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
+autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
 
-autocmd FileType typescript nmap ;cl oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nmap ;cl oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType typescript nmap ;cL Oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nmap ;cL Oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nmap ;p oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nnoremap ;;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nnoremap ;;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
@@ -129,11 +146,11 @@ augroup END
 " Color schemes {{{
 " colorscheme molokai
 " colorscheme luna-term
-colorscheme jellybeans
+" colorscheme jellybeans
+" colorscheme onedark
 " }}}
 
 let g:markdown_folding = 1
-
 
 " Plugin setup {{{
 if !exists('g:jellybeans_overrides')
@@ -142,10 +159,16 @@ if !exists('g:jellybeans_overrides')
     \}
 endif
 
+let g:rustfmt_autosave = 1
+
 let g:indent_guides_enable_on_vim_startup = 1
 " let g:molokai_original = 1
 
-let g:airline_theme='jellybeans'
+" let g:airline_theme='jellybeans'
+
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
 
 let g:indentLine_char = '|'
 
@@ -160,6 +183,49 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_buffers_jump = 1
 
+" {{{ fzf floating setup
+" Using floating windows of Neovim to start fzf
+if has('nvim')
+  function! FloatingFZF(width, height, border_highlight)
+    function! s:create_float(hl, opts)
+      let buf = nvim_create_buf(v:false, v:true)
+      let opts = extend({'relative': 'editor', 'style': 'minimal'}, a:opts)
+      let win = nvim_open_win(buf, v:true, opts)
+      call setwinvar(win, '&winhighlight', 'NormalFloat:'.a:hl)
+      call setwinvar(win, '&colorcolumn', '')
+      return buf
+    endfunction
+
+    " Size and position
+    let width = float2nr(&columns * a:width)
+    let height = float2nr(&lines * a:height)
+    let row = float2nr((&lines - height) / 2)
+    let col = float2nr((&columns - width) / 2)
+
+    " Border
+    let top = '┌' . repeat('─', width - 2) . '┐'
+    let mid = '│' . repeat(' ', width - 2) . '│'
+    let bot = '└' . repeat('─', width - 2) . '┘'
+    let border = [top] + repeat([mid], height - 2) + [bot]
+
+    " Draw frame
+    let s:frame = s:create_float(a:border_highlight, {'row': row, 'col': col, 'width': width, 'height': height})
+    call nvim_buf_set_lines(s:frame, 0, -1, v:true, border)
+
+    " Draw viewport
+    call s:create_float('Normal', {'row': row + 1, 'col': col + 2, 'width': width - 4, 'height': height - 2})
+    autocmd BufWipeout <buffer> execute 'bwipeout' s:frame
+  endfunction
+
+  let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
+endif
+if has('nvim') && !exists('g:fzf_layout')
+  autocmd! FileType fzf
+  autocmd  FileType fzf set laststatus=0 noshowmode noruler
+    \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+endif
+" }}}
+
 " Opens pdf with zathura
 function! ZathuraOpen()
     let path = expand('%:p')
@@ -168,6 +234,35 @@ function! ZathuraOpen()
     execute "silent !zathura " . pdf . " &"
 endfunc
 "}}}
+
+" Powerline settings {{{
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' '
+" }}}
 
 " Functions {{{
 " Deletes function call and its brackets when hovered over function name
@@ -272,77 +367,145 @@ endfun
 autocmd BufEnter *.py call SetAppDir()
 " }}}
 
+" COC setup {{{
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gt :call CocAction('doHover')<CR>
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" }}}
+
 " Plug {{{
 call plug#begin('~/.vim/plugged')
+
+    Plug 'ThePrimeagen/vim-be-good'
+    Plug 'joshdick/onedark.vim'
+    Plug 'noahfrederick/vim-laravel'
+    Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
     Plug 'vimwiki/vimwiki'
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'scrooloose/nerdtree'
-    Plug 'ervandew/supertab'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
-    Plug 'raviqqe/vim-nonblank'
     Plug 'tpope/vim-markdown'
-    Plug 'chrisbra/Colorizer'
+    " Plug 'chrisbra/Colorizer'
+    Plug 'ap/vim-css-color'
     Plug 'mattn/emmet-vim'
     Plug 'rstacruz/vim-closer'
-    Plug 'kien/ctrlp.vim'
-    " Plug 'junegunn/fzf.vim'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
     Plug 'LandonSchropp/vim-stamp'
-    Plug 'vim-airline/vim-airline-themes'
+    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
     Plug 'mhinz/vim-startify'
+    Plug 'jwalton512/vim-blade'
+    Plug 'tpope/vim-repeat'
     " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/goyo.vim'
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
+        " Plug 'liuchengxu/vim-clap'
+        " Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python']}
+
+        Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     endif
-call plug#end()
-"}}}
+    Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc-tsserver'
+    Plug 'neoclide/vim-jsx-improve'
+    Plug 'MaxMEllon/vim-jsx-pretty'
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-" let g:LanguageClient_serverCommands = {
-"     \ 'sh': ['bash-language-server', 'start']
-"     \ }
+    Plug 'nagy135/capture-nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/playground'
 
-" let settings = {
-"           \   "pyls" : {
-"           \     "enable" : v:true,
-"           \     "trace" : { "server" : "verbose", },
-"           \     "commandPath" : "",
-"           \     "configurationSources" : [ "pycodestyle" ],
-"           \     "plugins" : {
-"           \       "jedi_completion" : { "enabled" : v:true, },
-"           \       "jedi_hover" : { "enabled" : v:true, },
-"           \       "jedi_references" : { "enabled" : v:true, },
-"           \       "jedi_signature_help" : { "enabled" : v:true, },
-"           \       "jedi_symbols" : {
-"           \         "enabled" : v:true,
-"           \         "all_scopes" : v:true,
-"           \       },
-"           \       "mccabe" : {
-"           \         "enabled" : v:true,
-"           \         "threshold" : 15,
-"           \       },
-"           \       "preload" : { "enabled" : v:true, },
-"           \       "pycodestyle" : { "enabled" : v:true, },
-"           \       "pydocstyle" : {
-"           \         "enabled" : v:false,
-"           \         "match" : "(?!test_).*\\.py",
-"           \         "matchDir" : "[^\\.].*",
-"           \       },
-"           \       "pyflakes" : { "enabled" : v:true, },
-"           \       "rope_completion" : { "enabled" : v:true, },
-"           \       "yapf" : { "enabled" : v:true, },
-"           \     }}}
-" call nvim_lsp#setup("pyls", settings)
-" call nvim_lsp#setup("bashls", {})
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+    call plug#end()
 
-" disable preview window
-set completeopt-=preview
+    "}}}
 
-" use omni completion provided by lsp
-set omnifunc=lsp#omnifunc
+let g:project_root_todo = 0
+let g:todo_file_location = ""
 
-let g:ctrlp_match_window = 'min:4,max:999'
+" {{{ Treesitter
+lua <<EOF
+require "nvim-treesitter.configs".setup {
+  playground = {
+    enable = true,
+    disable = {},
+    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    persist_queries = false -- Whether the query persists across vim sessions
+  }
+}
+EOF
+
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    custom_captures = {
+      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+      ["foo.bar"] = "Identifier",
+    },
+  },
+}
+EOF
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "is",
+      node_incremental = "o",
+      scope_incremental = "grc",
+      node_decremental = "O",
+    },
+  },
+}
+EOF
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  indent = {
+    enable = true
+  }
+}
+EOF
+" }}}
+
+colorscheme nvcode
