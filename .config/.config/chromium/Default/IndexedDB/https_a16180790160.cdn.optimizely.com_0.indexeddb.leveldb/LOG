@@ -1,0 +1,5 @@
+2020/10/24-17:56:45.413 3926 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_a16180790160.cdn.optimizely.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/25-21:22:42.157 4cd2 Level-0 table #5: started
+2020/10/25-21:22:42.166 4cd2 Level-0 table #5: 1148 bytes OK
+2020/10/25-21:22:42.177 4cd2 Delete type=0 #3
+2020/10/25-21:22:42.178 4cd2 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

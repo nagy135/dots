@@ -1,0 +1,5 @@
+2020/12/15-18:41:57.702 2053 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_pypi.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-18:43:36.679 358b Level-0 table #5: started
+2020/12/15-18:43:36.691 358b Level-0 table #5: 1099 bytes OK
+2020/12/15-18:43:36.701 358b Delete type=0 #3
+2020/12/15-18:43:36.702 358b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

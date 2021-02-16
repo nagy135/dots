@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if pgrep -x 'xfce4-clipman' &> /dev/null
-then
-    killall xfce4-clipman
-else
-    xfce4-clipman &
-fi

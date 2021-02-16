@@ -1,125 +1,56 @@
-#          _
-#  _______| |__  _ __ ___
-# |_  / __| '_ \| '__/ __|
-#  / /\__ \ | | | | | (__
-# /___|___/_| |_|_|  \___|
-#
-
-if [[ -f ~/.zplugin/bin/zplugin.zsh ]]; then
-    source ~/.zplugin/bin/zplugin.zsh
-else
-    mkdir ~/.zplugin
-    git clone https://github.com/psprint/zplugin.git ~/.zplugin/bin
-    source ~/.zplugin/bin/zplugin.zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Enable colors and change prompt:
-autoload -U colors && colors
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt histignoredups
 
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
+# man colors
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-# source common configs
-for file in $ZSH_HOME/common/*.zsh; do
-    source "$file"
-done
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/infiniter/.zshrc'
 
-# source os-specific configs
-if [[ -f "/etc/os-release" || -f "/usr/lib/os-release" ]]; then
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
-    # Source the os-release file
-    for file in /etc/os-release /usr/lib/os-release; do
-        source "$file" 2>/dev/null && break
-    done
-
-    if [[ -d "$ZSH_HOME/os/$ID" ]]; then
-        for file in $ZSH_HOME/os/$ID/*.zsh; do
-            source "$file"
-        done
-    fi
-
-fi
-
-# source host specific config
-if [[ -d "$ZSH_HOME/host/$(hostname)" ]]; then
-    for file in $ZSH_HOME/host/$(hostname)/*.zsh; do
-        source "$file"
-    done
-fi
-
-source $ZSH_HOME/plugins
 source $HOME/.aliases
 source $HOME/.functions
 
-
-# enable vim mode on commmand line
-bindkey -v
-
-# no delay entering normal mode
-# https://coderwall.com/p/h63etq
-# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
-# 10ms for key sequences
-KEYTIMEOUT=1
-#
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
-
-
-# show vim status
-# http://zshwiki.org/home/examples/zlewidgets
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-zle -N edit-command-line
-
-bindkey '^e' edit-command-line
-
-# add missing vim hotkeys
-# http://zshwiki.org/home/zle/vi-mode
-bindkey -a u undo
-bindkey -a '^T' redo
-bindkey '^?' backward-delete-char  #backspace
-#
-
-zle -N zle-line-init
-
-# history search in vim mode
-# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
-# ctrl+r to search history
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
-
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-
-source ~/.zsh/keybinds.zsh
-
 export VISUAL=nvim
 export EDITOR=nvim
+export TERMINAL=alacritty
 export XDG_CONFIG_HOME=/home/infiniter/.config
-export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src/
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/Apps/neovim/build/bin:$PATH"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
 
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-# Load zsh-syntax-highlighting; should be last.
-source ~/.zsh/clones/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+eval "$(lua ~/Clones/z.lua/z.lua --init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+zstyle ':completion:*' matcher-list 'r:|.=*'
+
+# export LANG="en_US.UTF-8"
+# export LC_COLLATE="C"

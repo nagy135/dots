@@ -1,0 +1,5 @@
+2020/08/23-18:23:31.104 2b5e Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_googleads.g.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/23-18:23:34.028 2d09 Level-0 table #5: started
+2020/08/23-18:23:34.274 2d09 Level-0 table #5: 1272 bytes OK
+2020/08/23-18:23:34.764 2d09 Delete type=0 #3
+2020/08/23-18:23:34.766 2d09 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

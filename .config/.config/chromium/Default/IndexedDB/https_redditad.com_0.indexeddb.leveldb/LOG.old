@@ -1,0 +1,5 @@
+2020/12/15-18:46:54.352 45e8 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_redditad.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-18:55:06.043 65a9 Level-0 table #5: started
+2020/12/15-18:55:06.053 65a9 Level-0 table #5: 1716 bytes OK
+2020/12/15-18:55:06.064 65a9 Delete type=0 #3
+2020/12/15-18:55:06.065 65a9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

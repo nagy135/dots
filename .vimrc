@@ -48,6 +48,7 @@ let mapleader = " "
 
 "Mappings {{{
 
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap H ^
 nnoremap L $
 nnoremap <C-b> :NERDTreeToggle<CR>
@@ -158,6 +159,7 @@ if !exists('g:jellybeans_overrides')
     \    'background': { 'guibg': '123123' },
     \}
 endif
+
 
 let g:rustfmt_autosave = 1
 
@@ -368,6 +370,12 @@ autocmd BufEnter *.py call SetAppDir()
 " }}}
 
 " COC setup {{{
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -404,7 +412,7 @@ endfunction
 " Plug {{{
 call plug#begin('~/.vim/plugged')
 
-    Plug 'ThePrimeagen/vim-be-good'
+    Plug 'liuchengxu/vim-which-key'
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
@@ -445,14 +453,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/coc-tsserver'
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
-    " Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
     Plug 'nagy135/capture-nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/playground'
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " Plug 'nvim-treesitter/playground'
 
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+    Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
     call plug#end()
 
     "}}}
@@ -461,51 +468,51 @@ let g:project_root_todo = 0
 let g:todo_file_location = ""
 
 " {{{ Treesitter
-lua <<EOF
-require "nvim-treesitter.configs".setup {
-  playground = {
-    enable = true,
-    disable = {},
-    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-    persist_queries = false -- Whether the query persists across vim sessions
-  }
-}
-EOF
-
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    custom_captures = {
-      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-      ["foo.bar"] = "Identifier",
-    },
-  },
-}
-EOF
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "is",
-      node_incremental = "o",
-      scope_incremental = "grc",
-      node_decremental = "O",
-    },
-  },
-}
-EOF
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  indent = {
-    enable = true
-  }
-}
-EOF
+" lua <<EOF
+" require "nvim-treesitter.configs".setup {
+" "  playground = {
+" "    enable = true,
+" "    disable = {},
+" "    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+" "    persist_queries = false -- Whether the query persists across vim sessions
+" "  }
+" "}
+" EOF
+" "
+" "
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+" "  highlight = {
+" "    enable = true,
+" "    custom_captures = {
+" "      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+" "      ["foo.bar"] = "Identifier",
+" "    },
+" "  },
+" "}
+" EOF
+" "
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+" "  incremental_selection = {
+" "    enable = true,
+" "    keymaps = {
+" "      init_selection = "is",
+" "      node_incremental = "o",
+" "      scope_incremental = "grc",
+" "      node_decremental = "O",
+" "    },
+" "  },
+" "}
+" EOF
+" "
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+" "  indent = {
+" "    enable = true
+" "  }
+" "}
+" EOF
 " }}}
 
 colorscheme nvcode

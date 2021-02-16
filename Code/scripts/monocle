@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [[ $1 == "--tiled" ]]; then
-    bspc desktop -l tiled
-else
-    bspc desktop -l monocle
-fi

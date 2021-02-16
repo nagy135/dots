@@ -1,6 +1,0 @@
-#!/bin/bash
-
-until sxhkd; do
-    echo "Sxhkd crashed, respawning" > /home/infiniter/sxhkd_dump
-    sleep 1
-done

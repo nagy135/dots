@@ -1,0 +1,7 @@
+2020/10/19-20:07:15.376 2547 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_www.pornhub.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/19-20:07:15.376 2547 Recovering log #3
+2020/10/19-20:07:15.376 2547 Reusing old log /home/infiniter/.config/chromium/Default/IndexedDB/https_www.pornhub.com_0.indexeddb.leveldb/000003.log 
+2020/10/19-20:12:19.818 2b5b Level-0 table #5: started
+2020/10/19-20:12:19.828 2b5b Level-0 table #5: 6502 bytes OK
+2020/10/19-20:12:19.839 2b5b Delete type=0 #3
+2020/10/19-20:12:19.840 2b5b Manual compaction at level-0 from (begin) .. (end); will stop at (end)

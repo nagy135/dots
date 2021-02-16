@@ -1,0 +1,15 @@
+2020/11/28-13:03:28.944 6fda Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/11/28-13:03:28.944 6fda Recovering log #47
+2020/11/28-13:03:28.944 6fda Reusing old log /home/infiniter/.config/chromium/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000047.log 
+2020/11/28-13:07:08.208 7ff5 Level-0 table #52: started
+2020/11/28-13:07:08.216 7ff5 Level-0 table #52: 2970 bytes OK
+2020/11/28-13:07:08.225 7ff5 Delete type=0 #47
+2020/11/28-13:07:08.225 7ff5 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/11/28-13:07:08.225 7ff5 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x02\x01\x02\x01\x16\x00a\x00p\x00p\x00l\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00_\x00s\x00e\x00r\x00v\x00e\x00r\x00_\x00k\x00e\x00y' @ 2971 : 1
+2020/11/28-13:07:08.225 7ff5 Compacting 1@1 + 1@2 files
+2020/11/28-13:07:08.233 7ff5 Generated table #53@1: 77 keys, 2338 bytes
+2020/11/28-13:07:08.233 7ff5 Compacted 1@1 + 1@2 files => 2338 bytes
+2020/11/28-13:07:08.243 7ff5 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/11/28-13:07:08.243 7ff5 Delete type=2 #52
+2020/11/28-13:07:08.243 7ff5 Delete type=2 #49
+2020/11/28-13:07:08.244 7ff5 Manual compaction at level-1 from '\x00\x02\x01\x02\x01\x16\x00a\x00p\x00p\x00l\x00i\x00c\x00a\x00t\x00i\x00o\x00n\x00_\x00s\x00e\x00r\x00v\x00e\x00r\x00_\x00k\x00e\x00y' @ 2971 : 1 .. (end); will stop at (end)

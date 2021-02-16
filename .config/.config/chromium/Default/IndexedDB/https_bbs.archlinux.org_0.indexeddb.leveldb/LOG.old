@@ -1,0 +1,5 @@
+2020/12/15-18:45:49.254 40bf Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_bbs.archlinux.org_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-18:46:30.445 404d Level-0 table #5: started
+2020/12/15-18:46:30.454 404d Level-0 table #5: 1118 bytes OK
+2020/12/15-18:46:30.466 404d Delete type=0 #3
+2020/12/15-18:46:30.466 404d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

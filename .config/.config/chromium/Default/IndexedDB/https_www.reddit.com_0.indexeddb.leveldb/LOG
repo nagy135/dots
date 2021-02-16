@@ -1,0 +1,15 @@
+2020/12/15-18:59:38.001 8d6 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/12/15-18:59:38.001 8d6 Recovering log #4
+2020/12/15-18:59:38.001 8d6 Reusing old log /home/infiniter/.config/chromium/Default/IndexedDB/https_www.reddit.com_0.indexeddb.leveldb/000004.log 
+2020/12/15-19:08:38.701 3976 Level-0 table #8: started
+2020/12/15-19:08:38.712 3976 Level-0 table #8: 1056 bytes OK
+2020/12/15-19:08:38.722 3976 Delete type=0 #4
+2020/12/15-19:08:38.722 3976 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/12/15-19:08:38.723 3976 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x008\x009\x001\x001\x002\x002\x004\x006' @ 63 : 1
+2020/12/15-19:08:38.723 3976 Compacting 1@1 + 1@2 files
+2020/12/15-19:08:38.730 3976 Generated table #9@1: 17 keys, 524 bytes
+2020/12/15-19:08:38.730 3976 Compacted 1@1 + 1@2 files => 524 bytes
+2020/12/15-19:08:38.739 3976 compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/12/15-19:08:38.740 3976 Delete type=2 #5
+2020/12/15-19:08:38.740 3976 Delete type=2 #8
+2020/12/15-19:08:38.740 3976 Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x009\x008\x009\x001\x001\x002\x002\x004\x006' @ 63 : 1 .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2020/10/24-09:59:11.722 7fdb Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_join.skype.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/24-09:59:11.722 7fdb Recovering log #4
+2020/10/24-09:59:11.722 7fdb Reusing old log /home/infiniter/.config/chromium/Default/IndexedDB/https_join.skype.com_0.indexeddb.leveldb/000004.log 
+2020/10/24-09:59:27.353 7fdb Level-0 table #8: started
+2020/10/24-09:59:27.361 7fdb Level-0 table #8: 494 bytes OK
+2020/10/24-09:59:27.372 7fdb Delete type=0 #4
+2020/10/24-09:59:27.372 7fdb Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2020/10/24-09:59:27.373 7fdb Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x008\x004\x005\x005\x005\x003\x001\x003\x001' @ 63 : 1
+2020/10/24-09:59:27.373 7fdb Compacting 1@1 + 1@2 files
+2020/10/24-09:59:27.381 7fdb Generated table #9@1: 17 keys, 534 bytes
+2020/10/24-09:59:27.381 7fdb Compacted 1@1 + 1@2 files => 534 bytes
+2020/10/24-09:59:27.391 7fdb compacted to: files[ 0 0 1 0 0 0 0 ]
+2020/10/24-09:59:27.392 7fdb Delete type=2 #5
+2020/10/24-09:59:27.392 7fdb Delete type=2 #8
+2020/10/24-09:59:27.392 7fdb Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0e\x00_\x00_\x00s\x00a\x00k\x008\x004\x005\x005\x005\x003\x001\x003\x001' @ 63 : 1 .. (end); will stop at (end)

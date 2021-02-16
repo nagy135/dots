@@ -54,9 +54,10 @@ case "$KEY" in
 "C-t")      tag_add ;;
 # "C-b")      feh --bg-fill "$file" ;;
 "b")      while read file; do feh --bg-fill "$file"; cat $file > /home/infiniter/Pictures/current_wallpaper; notify-send -i $file 'Wallpaper changed'; done ;;
-"n")      while read file; do subtube name $file; done ;;
-"t")      while read file; do subtube name $file; done ;;
-"q")      while read file; do subtube add_queue $file; rm $file; done ;;
-"r")      while read file; do rm $file; lego_refresh "subtube"; done ;;
+"c")      while read file; do bgcircle $file; notify-send -i $file 'Wallpape changed'; done ;;
+# "n")      while read file; do subtube name $file; done ;;
+# "t")      while read file; do subtube name $file; done ;;
+# "q")      while read file; do subtube add_queue $file; rm $file; done ;;
+"r")      while read file; do rm $file; done ;;
 "M-T")      tag_del ;;
 esac

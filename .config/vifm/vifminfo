@@ -4,11 +4,11 @@
 'H
 	/home/infiniter/
 	..
-1546500197
+1598287034
 'b
 	/home/infiniter/bin/
 	..
-1546500197
+1598287034
 'd
 	/home/infiniter/Downloads/
 	..
@@ -16,19 +16,19 @@
 'h
 	/home/infiniter/
 	..
-1546500197
+1598287034
 'k
-	/home/infiniter/Documents/Tabs/Next_to_You
-	3.png
-1546776943
+	/home/infiniter/Documents/Tabs/TearsInHeaven
+	tears1.png
+1602241024
 'm
 	/home/infiniter/Videos/Movies/
 	..
 1562307775
 'n
-	/home/infiniter
-	sxhkd_dump
-1546540526
+	/home/infiniter/Documents/Tabs
+	Love_of_my_life
+1586770575
 'o
 	/home/infiniter/Torrent/
 	..
@@ -49,629 +49,426 @@
 	/home/infiniter/Pictures/Wallpapers/
 	..
 1546503127
+'z
+	/home/infiniter/.config/vifm
+	..
+1598287034
 
 # Bookmarks:
 
 # TUI:
-ar
+al
 q0
 v1
-oh
+ov
 m-1
 l2
 r2
 
 # Left window history (oldest to newest):
-d/home/infiniter/Torrent/Saving Zoë (2019) [WEBRip] [1080p] [YTS.LT]
-	Saving.Zoë.2019.1080p.WEBRip.x264-[YTS.LT].mp4
+d/usr/share/icons/Adwaita/16x16
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	actions
 1
-d/home/infiniter/Torrent
-	We're the Millers (2013) [1080p]
+d/usr/share/icons/hicolor/128x128/actions
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	animations
+2
+d/usr/share/icons/hicolor/128x128/animations
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	apps
 3
-d/home/infiniter/Torrent/We're the Millers (2013) [1080p]
-	We're.the.Millers.2013.1080p.BluRay.x264.YIFY.mp4
-2
-d/home/infiniter/Torrent
-	Saving Zoë (2019) [WEBRip] [1080p] [YTS.LT]
-2
-d/home/infiniter/Torrent/Saving Zoë (2019) [WEBRip] [1080p] [YTS.LT]
-	Saving.Zoë.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Hellboy (2019) [WEBRip] [720p] [YTS.LT]
-1
-d/home/infiniter
-	Torrent
-19
-d/home/infiniter/Torrent
-	Hellboy (2019) [WEBRip] [720p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Hellboy (2019) [WEBRip] [720p] [YTS.LT]
-	Hellboy.2019.720p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	IBoy (2017) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/IBoy (2017) [WEBRip] [1080p] [YTS.LT]
-	IBoy.2017.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
+d/usr/share/icons/hicolor/128x128/apps
 	..
 0
-d/home/infiniter/Torrent
-	Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-	Romulus.&.Remus.The.First.King.2019.1080p.BluRay.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Stranger.Things.S03.WEBRip.x264-ION10
-2
-d/home/infiniter/Torrent/Stranger.Things.S03.WEBRip.x264-ION10
-	..
-0
-d/home/infiniter/Torrent
-	Batman Hush (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Batman Hush (2019) [WEBRip] [1080p] [YTS.LT]
-	Batman.Hush.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-d/home/infiniter/Torrent
-	Never Back Down No Surrender (2016) [WEBRip] [1080p] [YTS.AM]
-2
-d/home/infiniter/Torrent/Never Back Down No Surrender (2016) [WEBRip] [1080p] [YTS.AM]
-	Never.Back.Down.No.Surrender.2016.1080p.WEBRip.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Documents/Tabs
-	godfather.png
-17
-d/home/infiniter/Torrent
-	Avengers Endgame (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Avengers Endgame (2019) [WEBRip] [1080p] [YTS.LT]
-	Avengers.Endgame.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Batman Hush (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Batman Hush (2019) [WEBRip] [1080p] [YTS.LT]
-	Batman.Hush.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-d/home/infiniter/Torrent
-	Kill Bill Vol 1 (2003) [1080p]
-1
-d/home/infiniter/Torrent/Kill Bill Vol 1 (2003) [1080p]
-	Kill.Bill.Vol.1.2003.1080p.BrRIp.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Never Back Down No Surrender (2016) [WEBRip] [1080p] [YTS.AM]
-1
-d/home/infiniter/Torrent/Never Back Down No Surrender (2016) [WEBRip] [1080p] [YTS.AM]
-	Never.Back.Down.No.Surrender.2016.1080p.WEBRip.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Venom (2018) [BluRay] [1080p] [YTS.AM]
-3
-d/home/infiniter/Torrent/Venom (2018) [BluRay] [1080p] [YTS.AM]
-	..
-0
-d/home/infiniter/Torrent
-	Venom (2018) [BluRay] [1080p] [YTS.AM]
-3
-d/home/infiniter/Torrent/Venom (2018) [BluRay] [1080p] [YTS.AM]
-	Venom.2018.1080p.BluRay.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Kill Bill Vol 2 (2004) [1080p]
-1
-d/home/infiniter/Torrent/Kill Bill Vol 2 (2004) [1080p]
-	Kill.Bill.Vol.2.2004.1080p.BrRIp.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Kill Bill Vol 2 (2004) [1080p]
-1
-d/home/infiniter/Torrent/Kill Bill Vol 2 (2004) [1080p]
-	Kill.Bill.Vol.2.2004.1080p.BrRIp.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-	Romulus.&.Remus.The.First.King.2019.1080p.BluRay.x264-[YTS.LT].srt
-2
-d/home/infiniter/Torrent
-	Descendants 3 (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Descendants 3 (2019) [WEBRip] [1080p] [YTS.LT]
-	..
-0
-d/home/infiniter/Torrent
-	Descendants 3 (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Descendants 3 (2019) [WEBRip] [1080p] [YTS.LT]
-	Descendants.3.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Venom (2018) [BluRay] [1080p] [YTS.AM]
+d/usr/share/icons/hicolor/128x128
+	categories
 4
-d/home/infiniter/Torrent/Venom (2018) [BluRay] [1080p] [YTS.AM]
-	Venom.2018.1080p.BluRay.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Max Payne (2008)
-1
-d/home/infiniter/Torrent/Max Payne (2008)
-	Max.Payne.2008.UNRATED.720p.BluRay.x264.YIFY.mp4
-2
-d/home/infiniter/Torrent
-	Romulus & Remus The First King (2019) [BluRay] [1080p] [YTS.LT]
-2
-d/home/infiniter
-	Torrent
-19
-d/home/infiniter/Torrent
-	Cellular (2004)
-1
-d/home/infiniter/Torrent/Cellular (2004)
-	Cellular.2004.720p.BluRay.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Aladdin (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Aladdin (2019) [WEBRip] [1080p] [YTS.LT]
-	www.YTS.LT.jpg
-3
-d/home/infiniter/Torrent
-	Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-3
-d/home/infiniter/Torrent/Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-	Rocketman.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Zoo Wars 2 (2019) [WEBRip] [1080p] [YTS.LT]
-7
-d/home/infiniter/Torrent/Zoo Wars 2 (2019) [WEBRip] [1080p] [YTS.LT]
-	Zoo.Wars.2.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Scooby-Doo! And The Curse Of The 13th Ghost (2019) [WEBRip] [1080p] [YTS.AM]
-5
-d/home/infiniter/Torrent/Scooby-Doo! And The Curse Of The 13th Ghost (2019) [WEBRip] [1080p] [YTS.AM]
-	Scooby-Doo!.And.The.Curse.Of.The.13th.Ghost.2019.1080p.WEBRip.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Scooby-Doo! And The Curse Of The 13th Ghost (2019) [WEBRip] [1080p] [YTS.AM]
-5
-d/home/infiniter/Torrent/Scooby-Doo! And The Curse Of The 13th Ghost (2019) [WEBRip] [1080p] [YTS.AM]
-	Scooby-Doo!.And.The.Curse.Of.The.13th.Ghost.2019.1080p.WEBRip.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Brightburn (2019) [WEBRip] [1080p] [YTS.LT]
-2
-d/home/infiniter/Torrent/Brightburn (2019) [WEBRip] [1080p] [YTS.LT]
-	Brightburn.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Aladdin (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Torrent/Aladdin (2019) [WEBRip] [1080p] [YTS.LT]
-	Aladdin.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Brightburn (2019) [WEBRip] [1080p] [YTS.LT]
-1
-d/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-d/home/infiniter/Documents/Tabs/Autumn_Leaves
+d/usr/share/icons/hicolor/128x128/categories
 	..
 0
-d/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-d/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves.chords
-1
-d/home/infiniter/Torrent
-	Furious 6 (2013) [1080p]
-3
-d/home/infiniter/Torrent/Furious 6 (2013) [1080p]
-	Furious.6.2013.1080p.BluRay.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Godzilla King Of The Monsters (2019) [WEBRip] [1080p] [YTS.LT]
-4
-d/home/infiniter/Torrent/Godzilla King Of The Monsters (2019) [WEBRip] [1080p] [YTS.LT]
-	Godzilla.King.Of.The.Monsters.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Furious 6 (2013) [1080p]
-3
-d/home/infiniter/Torrent/Furious 6 (2013) [1080p]
-	Furious.6.2013.1080p.BluRay.x264.YIFY.mp4
-1
-d/home/infiniter/Torrent
-	Downsizing (2017) [BluRay] [1080p] [YTS.AM]
-2
-d/home/infiniter/Torrent/Downsizing (2017) [BluRay] [1080p] [YTS.AM]
-	Downsizing.2017.1080p.BluRay.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	The Secret Life Of Pets 2 (2019) [WEBRip] [1080p] [YTS.LT]
+d/usr/share/icons/hicolor/128x128
+	devices
+5
+d/usr/share/icons/hicolor/128x128/devices
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	emblems
 6
-d/home/infiniter/Torrent/The Secret Life Of Pets 2 (2019) [WEBRip] [1080p] [YTS.LT]
-	The.Secret.Life.Of.Pets.2.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Torrent
-	Downsizing (2017) [BluRay] [1080p] [YTS.AM]
-2
-d/home/infiniter/Torrent/Downsizing (2017) [BluRay] [1080p] [YTS.AM]
-	Downsizing.2017.1080p.BluRay.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Torrent
-	Downsizing (2017) [BluRay] [1080p] [YTS.AM]
-2
-d/home/infiniter/Videos/Movies
-	Mulan 2 The Final War (2004) [BluRay] [1080p] [YTS.LT]
+d/usr/share/icons/hicolor/128x128/emblems
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	emotes
+7
+d/usr/share/icons/hicolor/128x128/emotes
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	filesystems
 8
-d/home/infiniter/Videos/Movies/Mulan 2 The Final War (2004) [BluRay] [1080p] [YTS.LT]
-	Mulan.2.The.Final.War.2004.1080p.BluRay.x264-[YTS.LT].mp4
-1
-d/home/infiniter/Videos/Movies
-	Dante's Inferno An Animated Epic (2010) [BluRay] [1080p] [YTS.AM]
-1
-d/home/infiniter/Videos/Movies/Dante's Inferno An Animated Epic (2010) [BluRay] [1080p] [YTS.AM]
-	Dante's.Inferno.An.Animated.Epic.2010.1080p.BluRay.x264-[YTS.AM].mp4
-1
-d/home/infiniter/Videos/Movies
-	Dante's Inferno An Animated Epic (2010) [BluRay] [1080p] [YTS.AM]
-1
-d/home/infiniter/Torrent
-	Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-3
-d/home/infiniter/Videos
+d/usr/share/icons/hicolor/128x128/filesystems
 	..
 0
-d/home/infiniter/Videos/.p
+d/usr/share/icons/hicolor/128x128
+	intl
+9
+d/usr/share/icons/hicolor/128x128/intl
 	..
 0
-d/home/infiniter/Videos
+d/usr/share/icons/hicolor/128x128
+	mimetypes
+10
+d/usr/share/icons/hicolor/128x128/mimetypes
 	..
 0
-d/home/infiniter/Videos/.p
+d/usr/share/icons/hicolor/128x128
+	places
+11
+d/usr/share/icons/hicolor/128x128/places
 	..
 0
-d/home/infiniter/Documents/Tabs
-	Autumn_Leaves
+d/usr/share/icons/hicolor/128x128
+	status
+12
+d/usr/share/icons/hicolor/128x128/status
+	..
+0
+d/usr/share/icons/hicolor/128x128
+	stock
+13
+d/usr/share/icons/hicolor/128x128/stock
+	..
+0
+d/usr/share/icons/Adwaita
+	512x512
+10
+d/usr/share/icons/Adwaita/512x512
+	devices
 1
-d/home/infiniter/Torrent
-	Men In Black International (2019) [WEBRip] [1080p] [YTS.LT]
+d/usr/share/icons/Adwaita/512x512/devices
+	audio-headset.png
 2
-d/home/infiniter/Torrent/Men In Black International (2019) [WEBRip] [1080p] [YTS.LT]
-	Men.In.Black.International.2019.1080p.WEBRip.x264-[YTS.LT].mp4
+d/usr/share/icons/Adwaita/512x512
+	emblems
+2
+d/usr/share/icons/Adwaita/512x512/emblems
+	..
+0
+d/usr/share/icons/Adwaita/512x512
+	legacy
+3
+d/usr/share/icons/Adwaita/512x512/legacy
+	..
+0
+d/usr/share/icons/Adwaita/512x512
+	mimetypes
+4
+d/usr/share/icons/Adwaita/512x512/mimetypes
+	..
+0
+d/usr/share/icons/Adwaita/512x512
+	places
+5
+d/usr/share/icons/Adwaita/512x512/places
+	..
+0
+d/usr/share/icons/Adwaita/512x512
+	status
+6
+d/usr/share/icons/Adwaita/512x512/status
+	..
+0
+d/usr/share/icons/Adwaita/512x512
+	legacy
+3
+d/usr/share/icons/Adwaita/512x512/legacy
+	..
+0
+d/usr/share/icons/Adwaita
+	48x48
+6
+d/usr/share/icons/Adwaita/48x48
+	devices
+4
+d/usr/share/icons/Adwaita/48x48/devices
+	ac-adapter-symbolic.symbolic.png
 1
-d/home/infiniter/Videos/.p
+d/usr/share/icons/Adwaita/48x48
+	emblems
+5
+d/usr/share/icons/Adwaita/48x48/emblems
+	emblem-favorite-symbolic.symbolic.png
+3
+d/usr/share/icons/Adwaita/48x48
+	emotes
+6
+d/usr/share/icons/Adwaita/48x48/emotes
+	..
+0
+d/usr/share/icons/Adwaita/48x48
+	legacy
+7
+d/usr/share/icons/Adwaita/48x48/legacy
+	applets-screenshooter.png
+7
+d/usr/share/icons/Adwaita/48x48
+	mimetypes
+8
+d/usr/share/icons/Adwaita/48x48/mimetypes
+	application-x-firmware.png
+10
+d/usr/share/icons/Adwaita/48x48
+	places
+9
+d/usr/share/icons/Adwaita/48x48/places
+	user-home.png
+18
+d/usr/share/icons/Paper
+	48x48
+10
+d/usr/share/icons/Paper/48x48
+	actions
+1
+d/usr/share/icons/Paper/48x48/actions
+	document-open-recent.png
+2
+d/usr/share/icons/Paper/48x48
+	apps
+2
+d/usr/share/icons/Paper/48x48/apps
+	1CD8_rundll32.0.png
+2
+d/usr/share/icons/Paper/48x48
+	categories
+3
+d/usr/share/icons/Paper/48x48/categories
+	..
+0
+d/usr/share/icons/Paper/48x48
+	devices
+4
+d/usr/share/icons/Paper/48x48/devices
+	3floppy_unmount.png
+1
+d/usr/share/icons/Paper/48x48
+	emblems
+5
+d/usr/share/icons/Paper/48x48/emblems
+	emblem-default.png
+1
+d/usr/share/icons/Paper/48x48
+	emotes
+6
+d/usr/share/icons/Paper/48x48/emotes
+	..
+0
+d/usr/share/icons/Paper/48x48
+	mimetypes
+7
+d/usr/share/icons/Paper/48x48/mimetypes
+	..
+0
+d/usr/share/icons/Paper/48x48
+	notifications
+8
+d/usr/share/icons/Paper/48x48/notifications
+	..
+0
+d/usr/share/icons/Paper/48x48
+	mimetypes
+7
+d/usr/share/icons/Paper/48x48/mimetypes
+	..
+0
+d/usr/share/icons/Paper/48x48
+	status
+10
+d/usr/share/icons/Paper/48x48/status
+	..
+0
+d/usr/share/icons/Paper/48x48
+	web
+11
+d/usr/share/icons/Paper/48x48/web
+	..
+0
+d/usr/share/icons/Paper/48x48
+	web
+11
+d/usr/share/icons/Paper
+	48x48
+10
+d/usr/share/icons/Papirus
+	48x48
+12
+d/usr/share/icons/Papirus/48x48
+	emblems
+5
+d/usr/share/icons/Papirus/48x48/emblems
+	Nextcloud_error.svg
+1
+d/usr/share/icons/Papirus/48x48
+	devices
+4
+d/usr/share/icons/Papirus/48x48/devices
+	audio-speaker-center.svg
+8
+d/usr/share/icons/Papirus/48x48
+	emotes
+6
+d/home/infiniter/Torrent
+	Captain America The Winter Soldier (2014) [1080p]
+2
+d/home/infiniter/Torrent/Captain America The Winter Soldier (2014) [1080p]
+	Captain.America.The.Winter.Soldier.2014.1080p.BluRay.x264.YIFY.mp4
+1
+d/home/infiniter/Torrent
+	Iron Man [1080p]
+7
+d/home/infiniter/Torrent/Iron Man [1080p]
+	Iron.Man.2008.1080p.BrRip.x264.YIFY.mp4
+1
+d/home/infiniter/Torrent
+	Captain America The Winter Soldier (2014) [1080p]
+2
+d/home/infiniter/Torrent/Captain America The Winter Soldier (2014) [1080p]
+	Captain.America.The.Winter.Soldier.2014.1080p.BluRay.x264.YIFY.mp4
+1
+d/home/infiniter/Torrent
+	Counterintelligence (2020) [1080p] [WEBRip] [YTS.MX]
+3
+d/home/infiniter/Torrent/Counterintelligence (2020) [1080p] [WEBRip] [YTS.MX]
+	Counterintelligence.2020.1080p.WEBRip.x264.AAC-[YTS.MX].mp4
+1
+d/home/infiniter/Torrent
+	Hubie Halloween (2020) [1080p] [WEBRip] [5.1] [YTS.MX]
+5
+d/home/infiniter/Torrent/Hubie Halloween (2020) [1080p] [WEBRip] [5.1] [YTS.MX]
+	Hubie.Halloween.2020.1080p.WEBRip.x264.AAC5.1-[YTS.MX].mp4
+2
+d/home/infiniter/Documents/Tabs
+	TearsInHeaven
+5
+d/home/infiniter/Documents/Tabs/TearsInHeaven
 	..
 0
 d/home/infiniter/Videos
-	.p
+	Guitar
 1
-d/home/infiniter/Videos/.p
-	..
-0
+d/home/infiniter/Videos/Guitar
+	basket_case.mp4
+4
 d
 
 # Right window history (oldest to newest):
-D/home/infiniter/Torrent
-	Wonder Woman Bloodlines (2019) [WEBRip] [1080p] [YTS.LT]
-9
-D/home/infiniter/Torrent/Wonder Woman Bloodlines (2019) [WEBRip] [1080p] [YTS.LT]
-	Wonder.Woman.Bloodlines.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-D/home/infiniter/Torrent
-	Wonder Woman Bloodlines (2019) [WEBRip] [1080p] [YTS.LT]
-9
-D/home/infiniter/Documents/Tabs
-	nocturne
-21
-D/home/infiniter/Videos/Movies
-	Hotel Mumbai (2018) [WEBRip] [1080p] [YTS.AM]
-2
-D/home/infiniter/Torrent
-	The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
-5
-D/home/infiniter/Torrent/The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
-	The.Death.And.Return.Of.Superman.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-D/home/infiniter/Torrent
-	Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
-2
-D/home/infiniter/Torrent/Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
+D/home/infiniter/Videos/.p
 	..
 0
-D/home/infiniter/Torrent
-	Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
-2
-D/home/infiniter/Torrent/Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
-	Fast.&.Furious.Presents.Hobbs.&.Shaw.2019.1080p.BluRay.x264-[YTS.LT].mp4
+D/home/infiniter/Documents/Tabs
+	raise_me_up
+5
+D/home/infiniter/Documents/Tabs/raise_me_up
+	raise1.png
 1
-D/home/infiniter/Torrent
-	The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
-6
-D/home/infiniter/Torrent/The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
-	The.Death.And.Return.Of.Superman.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-D/home/infiniter/Torrent
-	Toy Story 4 (2019) [BluRay] [1080p] [YTS.LT]
-8
-D/home/infiniter/Torrent/Toy Story 4 (2019) [BluRay] [1080p] [YTS.LT]
-	Toy.Story.4.2019.1080p.BluRay.x264-[YTS.LT].mp4
+D/home/infiniter/Documents/Tabs
+	raise_me_up
+5
+D/home/infiniter/Documents/Tabs/raise_me_up
+	raise1.png
 1
-D/home/infiniter/Torrent
-	Toy Story 4 (2019) [BluRay] [1080p] [YTS.LT]
-8
+D/home/infiniter/Documents/Tabs
+	johnnyboy.png
+23
+D/home/infiniter/Videos/Movies
+	..
+0
+D/home/infiniter/Documents/Tabs
+	raise_me_up
+5
+D/home/infiniter/Documents/Tabs/raise_me_up
+	raise1.png
+1
+D/home/infiniter/Documents/Tabs
+	raise_me_up
+5
+D/home/infiniter/Documents/Tabs/raise_me_up
+	raise1.png
+1
+D/home/infiniter/Documents/Tabs
+	Autumn_Leaves
+1
+D/home/infiniter/Documents/Tabs/Autumn_Leaves
+	autumn_leaves1.png
+2
 D/home/infiniter/Documents/Tabs
 	Autumn_Leaves
 1
 D/home/infiniter/Documents/Tabs/Autumn_Leaves
 	autumn_leaves2.png
 3
+D/home/infiniter/Videos/Movies
+	..
+0
+D/home/infiniter/Videos
+	Movies
+2
 D/home/infiniter/Documents/Tabs
-	Love_of_my_life
-3
-D/home/infiniter/Documents/Tabs/Love_of_my_life
-	loveofmylife.png
-1
-D/home/infiniter/Documents/Tabs
-	hard_to_say_im_sorry.tabs
-19
-D/home/infiniter/Torrent
-	The Angry Birds Movie 2 (2019) [BluRay] [1080p] [YTS.LT]
+	scareborough
 6
-D/home/infiniter/Torrent/The Angry Birds Movie 2 (2019) [BluRay] [1080p] [YTS.LT]
-	The.Angry.Birds.Movie.2.2019.1080p.BluRay.x264-[YTS.LT].mp4
+D/home/infiniter/Documents/Tabs/scareborough
+	scareborough1.png
 1
-D/home/infiniter/Torrent
-	The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
+D/home/infiniter/Videos/Movies
+	..
+0
+D/home/infiniter/Videos/.p
+	friends.mp4
+8
+D/home/infiniter/Documents/Tabs
+	scareborough
 6
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Torrent
-	Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
-2
-D/home/infiniter/Torrent/Fast & Furious Presents Hobbs & Shaw (2019) [BluRay] [1080p] [YTS.LT]
-	Fast.&.Furious.Presents.Hobbs.&.Shaw.2019.1080p.BluRay.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves.chords
-1
-D/home/infiniter/Documents/Tabs
-	Next_to_You
-4
-D/home/infiniter/Documents/Tabs/Next_to_You
-	1.png
-1
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Documents/Tabs
-	PLAYLIST
-10
-D/home/infiniter/Torrent
-	Invader ZIM Enter The Florpus (2019) [WEBRip] [1080p] [YTS.LT]
-3
-D/home/infiniter/Torrent/Invader ZIM Enter The Florpus (2019) [WEBRip] [1080p] [YTS.LT]
-	Invader.ZIM.Enter.The.Florpus.2019.1080p.WEBRip.x264-[YTS.LT].mp4
+D/home/infiniter/Documents/Tabs/scareborough
+	scareborough1.png
 1
 D/home/infiniter/Documents/Tabs
 	johnnyboy.png
-21
-D/home/infiniter/Torrent
-	Wonder Woman Bloodlines (2019) [WEBRip] [1080p] [YTS.LT]
-10
-D/home/infiniter/Torrent/Wonder Woman Bloodlines (2019) [WEBRip] [1080p] [YTS.LT]
-	Wonder.Woman.Bloodlines.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-D/home/infiniter/Torrent
-	Watchmen Ultimate Cut (2009) [1080p]
-9
-D/home/infiniter/Documents/Tabs
-	Love_of_my_life
-3
-D/home/infiniter/Documents/Tabs/Love_of_my_life
-	loveofmylife.png
+25
+D/home/infiniter/Documents/Tabs/scareborough
+	scareborough1.png
 1
 D/home/infiniter/Documents/Tabs
-	Love_of_my_life
-3
-D/home/infiniter/Documents/Tabs/Love_of_my_life
-	loveofmylife.png
-1
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Documents/Tabs
-	Jar_of_Hearts
-2
-D/home/infiniter/Documents/Tabs/Jar_of_Hearts
-	mpv-shot0005.jpg
-5
-D/home/infiniter/Documents/Tabs
-	cityofstart.chords
-15
-D/home/infiniter/Torrent
-	The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
+	scareborough
 6
-D/home/infiniter/Torrent/The Death And Return Of Superman (2019) [WEBRip] [1080p] [YTS.LT]
-	The.Death.And.Return.Of.Superman.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-2
-D/home/infiniter/Documents/Tabs
-	my_way.png
-22
-D/home/infiniter/Torrent
-	Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-4
-D/home/infiniter/Torrent/Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-	..
-0
-D/home/infiniter/Torrent
-	Invader ZIM Enter The Florpus (2019) [WEBRip] [1080p] [YTS.LT]
-3
-D/home/infiniter/Torrent/Invader ZIM Enter The Florpus (2019) [WEBRip] [1080p] [YTS.LT]
-	Invader.ZIM.Enter.The.Florpus.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Torrent
-	..
-0
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Documents/Tabs
-	nocturne
-23
-D/home/infiniter/Torrent
-	Rocketman (2019) [WEBRip] [1080p] [YTS.LT]
-3
-D/home/infiniter/Videos/Movies
-	Hotel Mumbai (2018) [WEBRip] [1080p] [YTS.AM]
-2
-D/home/infiniter
-	Music
-9
-D/home/infiniter/Music
-	Sabaton - The Last Stand (Limited Edition)
-18
-D/home/infiniter/Torrent
-	Rogue One (2016) [1080p] [YTS.AG]
-4
-D/home/infiniter/Torrent/Rogue One (2016) [1080p] [YTS.AG]
-	Rogue.One.2016.1080p.BluRay.x264-[YTS.AG].mp4
+D/home/infiniter/Documents/Tabs/scareborough
+	scareborough1.png
 1
 D/home/infiniter/Documents/Tabs
-	canon.png
-13
-D/home/infiniter/Documents
-	My Games
-5
-D/home/infiniter/Documents/My Games
-	..
-0
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Documents/Tabs
-	greensleeves.png
-18
-D/home/infiniter/Torrent
-	Batman Unlimited Monster Mayhem (2015) [BluRay] [1080p] [YTS.LT]
-1
-D/home/infiniter/Torrent/Batman Unlimited Monster Mayhem (2015) [BluRay] [1080p] [YTS.LT]
-	Batman.Unlimited.Monster.Mayhem.2015.1080p.BluRay.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Documents/Tabs
-	Autumn_Leaves
-1
-D/home/infiniter/Documents/Tabs/Autumn_Leaves
-	autumn_leaves1.png
-2
-D/home/infiniter/Documents/Tabs
-	Game_of_Thrones
-6
-D/home/infiniter/Videos/Movies
-	Hotel Mumbai (2018) [WEBRip] [1080p] [YTS.AM]
-2
-D/home/infiniter/Torrent
-	Watchmen Ultimate Cut (2009) [1080p]
-9
-D/home/infiniter/Torrent/Watchmen Ultimate Cut (2009) [1080p]
-	..
-0
-D/home/infiniter/Documents/Tabs
-	Assassin_page1.png
-5
-D/home/infiniter/Torrent
-	Batman Unlimited Monster Mayhem (2015) [BluRay] [1080p] [YTS.LT]
-1
-D/home/infiniter/Documents/Tabs
-	my_way.png
-22
+	you_raise_me_up.pdf
+34
 D/home/infiniter/Documents
 	Tabs
 7
 D/home/infiniter/Documents/Tabs
-	Gladiator_Honor_Him.png
-7
-D/home/infiniter/Torrent
-	Batman Unlimited Monster Mayhem (2015) [BluRay] [1080p] [YTS.LT]
-1
-D/home/infiniter/Torrent/Batman Unlimited Monster Mayhem (2015) [BluRay] [1080p] [YTS.LT]
-	Batman.Unlimited.Monster.Mayhem.2015.1080p.BluRay.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Documents/Tabs
-	my_way.png
-22
-D/home/infiniter/Torrent
-	The Intent 2 The Come Up (2018) [BluRay] [1080p] [YTS.LT]
-7
-D/home/infiniter/Torrent/The Intent 2 The Come Up (2018) [BluRay] [1080p] [YTS.LT]
-	The.Intent.2.The.Come.Up.2018.1080p.BluRay.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Torrent
-	Toy Story 4 (2019) [BluRay] [1080p] [YTS.LT]
-7
-D/home/infiniter/Videos/Movies
-	I Hate Kids (2019) [WEBRip] [1080p] [YTS.AM]
-2
-D/home/infiniter/Torrent
-	Abominable (2019) [WEBRip] [1080p] [YTS.LT]
-1
-D/home/infiniter/Torrent/Abominable (2019) [WEBRip] [1080p] [YTS.LT]
-	Abominable.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Torrent
-	Klaus (2019) [WEBRip] [1080p] [YTS.LT]
-2
-D/home/infiniter/Torrent/Klaus (2019) [WEBRip] [1080p] [YTS.LT]
+	johnnyboy.png
+25
+D/home/infiniter
 	..
 0
-D/home/infiniter/Torrent
-	Klaus (2019) [WEBRip] [1080p] [YTS.LT]
-2
-D/home/infiniter/Torrent/Klaus (2019) [WEBRip] [1080p] [YTS.LT]
-	Klaus.2019.1080p.WEBRip.x264-[YTS.LT].mp4
-1
-D/home/infiniter/Documents/Tabs
-	johnnyboy.png
-21
 D
 
 # Command line history (oldest to newest):
+:mkdir pieces
 :fiile
 :file
 :ls
-:mkdir
 :mkdir Autumn_Leaves
 :help classify
 :h classify
@@ -711,8 +508,17 @@ D
 :help
 :tnail
 :sub
+:mkdir
+:mkdir raise_me_up
+:mkdir scareborough
+:new
+:^,.select
+:.,$select
 
 # Search history (oldest to newest):
+/bind
+/john
+/noctu
 /manjaro_maia
 /gnome
 /////////
@@ -733,7 +539,20 @@ D
 /har
 /vifmkj
 //
+/fade
 /jo
+/reg
+/mad
+/elvis
+/elvi
+/love
+/grief
+/tekk
+/mor
+/Docu
+/care
+/lam
+/gr
 
 # Prompt history (oldest to newest):
 pwifes.mp4
@@ -753,6 +572,7 @@ ptoaster
 ptoast
 pJenni Lee
 pMax.Payne.2008.UNRATED.720p.BluRay.x264.YIFY.srt
+pgreensleeves.png
 
 # Local filter history (oldest to newest):
 
@@ -793,11 +613,17 @@ t/home/infiniter/.local/share/vifm/Trash/000_Pet.Sematary.2019.1080p.WEBRip.x264
 	/home/infiniter/Torrent/Pet Sematary (2019) [WEBRip] [1080p] [YTS.LT]/Pet.Sematary.2019.1080p.WEBRip.x264-[YTS.LT].srt
 t/home/infiniter/.local/share/vifm/Trash/000_Aladdin.2019.1080p.WEBRip.x264-[YTS.LT].srt
 	/home/infiniter/Torrent/Aladdin (2019) [WEBRip] [1080p] [YTS.LT]/Aladdin.2019.1080p.WEBRip.x264-[YTS.LT].srt
+t/home/infiniter/.local/share/vifm/Trash/000_mod.rs
+	/home/infiniter/Code/rpm/src/bin/demo/mod.rs
+t/home/infiniter/.local/share/vifm/Trash/001_mod.rs
+	/home/infiniter/Code/rpm/src/bin/util/mod.rs
+t/home/infiniter/.local/share/vifm/Trash/000_tui.rs
+	/home/infiniter/Code/rpm/src/bin/tui.rs
 
 # State:
 f
 i1
-[.0
+[.1
 [F
 F
 I1

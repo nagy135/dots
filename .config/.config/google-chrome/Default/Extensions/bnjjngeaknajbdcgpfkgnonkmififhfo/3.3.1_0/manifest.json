@@ -1,0 +1,57 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "build/background-script.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "images/icon-128.png",
+         "16": "images/icon-16.png",
+         "32": "images/icon-32.png",
+         "48": "images/icon-48.png",
+         "64": "images/icon-64.png",
+         "96": "images/icon-96.png"
+      },
+      "default_title": "__MSG_browserActionTitle__"
+   },
+   "commands": {
+      "fill_all_inputs": {
+         "description": "__MSG_commands_fillAllInputs__",
+         "suggested_key": {
+            "default": "Ctrl+Shift+F"
+         }
+      },
+      "fill_this_form": {
+         "description": "__MSG_commands_fillThisForm__"
+      },
+      "fill_this_input": {
+         "description": "__MSG_commands_fillThisInput__"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "build/content-script.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extensionDescription__",
+   "icons": {
+      "128": "images/icon-128.png",
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "64": "images/icon-64.png",
+      "96": "images/icon-96.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlSNh/QUXYJkDg2vQMS8U4dNcxhwxWSxvi0QD45LV2I21c66r0Zt8vG1Be4bmPMYJHg7HWMinmAPCpD6BUWVigSQgW9EsavbyYN0d3L6hFEH0GS/SDrzw2BhEiCCQPeWnjI9NGvLJ3/cZkqgkSkdZ8Lw6DpIcVYDSy4KSdX5+cQQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extensionName__",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "contextMenus", "activeTab", "\u003Call_urls>", "storage" ],
+   "short_name": "__MSG_extensionName_short__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.3.1"
+}

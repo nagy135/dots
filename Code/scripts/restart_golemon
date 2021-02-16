@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cd /home/infiniter/Code/GoLemon/
-kill_golemon
-go build golemon.go
-golemon

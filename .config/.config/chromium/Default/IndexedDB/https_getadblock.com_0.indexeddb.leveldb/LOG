@@ -1,0 +1,5 @@
+2020/10/15-22:06:20.485 6757 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_getadblock.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/10/15-22:06:23.842 f4c Level-0 table #5: started
+2020/10/15-22:06:23.850 f4c Level-0 table #5: 1116 bytes OK
+2020/10/15-22:06:23.868 f4c Delete type=0 #3
+2020/10/15-22:06:23.869 f4c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

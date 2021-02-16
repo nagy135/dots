@@ -9,6 +9,10 @@ fzfvim(){
     echo $file | xclip -sel clipboard
     echo $file
 }
+cf(){
+    # open .script file in vim
+    fzfvim "/home/infiniter/.config"
+}
 sc(){
     # open .script file in vim
     fzfvim "/home/infiniter/Code/scripts"

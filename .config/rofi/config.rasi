@@ -1,0 +1,9 @@
+configuration {
+	font: "League Mono 15";
+	hide-scrollbar: true;
+	theme: "/home/infiniter/.config/rofi/tmux.rasi";
+	kb-remove-to-eol: "";
+	kb-accept-entry: "Control+l,Return";
+	kb-row-up: "Control+k,Up";
+	kb-row-down: "Control+j,Down";
+}

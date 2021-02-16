@@ -41,8 +41,8 @@
     background-color: @background;
     border:           3;
     padding:          15;
-    width:            20%;
-    height:           20%;
+    width:            45%;
+    height:           60%;
 }
 #mainbox {
     border:  0;

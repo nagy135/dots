@@ -1,0 +1,5 @@
+2020/08/23-18:23:04.930 a6f Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/08/23-18:23:29.969 2d09 Level-0 table #5: started
+2020/08/23-18:23:29.978 2d09 Level-0 table #5: 1233 bytes OK
+2020/08/23-18:23:29.988 2d09 Delete type=0 #3
+2020/08/23-18:23:29.988 2d09 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

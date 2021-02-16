@@ -1,0 +1,37 @@
+{
+   "A Material Design Theme": "",
+   "description": "A minimalistic dark material design inspired theme.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArWdbQ4Pnc+Yg4vPZTNzXFWTcNb2WPXhfM2I+72tg/cjbW7R0R4yCpqeEo7bsHq+axhtP3qlON4N04n6IhZVeefS1oLVQDQ4looNeHK3uEECs++lXgu16WDS2OwMwgFR4vo5o5NZtI8/ymDDts8FFaZH/b/wgLMe5gDbfbYfl8+foZ1GsPlznr5SnCrfZZcNfn2rrgH77JKXpGwHZo55T8y8A1CUeq2RpEYNoFSox6iXOKWl9Kvv8jwSt492xjxztShiND8yPiRLxHmNh3CaqnRdTq+r9+vVpEp/pz+G+7s3QJDxY83OTrGj62vkI3RUXW2N6FtO2dGynCgN2q0/nmQIDAQAB",
+   "manifest_version": 2,
+   "name": "Material Dark",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 241, 243, 244 ],
+         "frame": [ 32, 33, 36 ],
+         "frame_inactive": [ 60, 64, 67 ],
+         "frame_incognito": [ 32, 33, 36 ],
+         "frame_incognito_inactive": [ 60, 64, 67 ],
+         "ntp_background": [ 50, 54, 57 ],
+         "ntp_section": [ 35, 35, 35 ],
+         "ntp_section_link": [ 210, 213, 213 ],
+         "ntp_section_text": [ 210, 213, 213 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 216, 219, 221 ],
+         "tab_text": [ 236, 239, 241 ],
+         "toolbar": [ 82, 79, 82 ]
+      },
+      "images": {
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "center",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ -1, -1, 0.95 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.1"
+}

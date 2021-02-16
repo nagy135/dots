@@ -1,0 +1,155 @@
+{
+   "add_site_to_list": {
+      "message": "Site aan lijst toevoegen"
+   },
+   "automation": {
+      "message": "Automatisering"
+   },
+   "brightness": {
+      "message": "Helderheid"
+   },
+   "change_browser_theme": {
+      "message": "Browserthema wijzigen"
+   },
+   "contrast": {
+      "message": "Contrast"
+   },
+   "custom_browser_theme_off": {
+      "message": "Standaard"
+   },
+   "custom_browser_theme_on": {
+      "message": "Aangepast"
+   },
+   "dark": {
+      "message": "Donker"
+   },
+   "donate": {
+      "message": "Doneren"
+   },
+   "engine_dynamic": {
+      "message": "Dynamisch"
+   },
+   "engine_filter": {
+      "message": "Filter"
+   },
+   "engine_filter_plus": {
+      "message": "Filter+"
+   },
+   "engine_static": {
+      "message": "Statisch"
+   },
+   "extension_description": {
+      "message": "Donkere modus voor elke website. Zorg goed voor je ogen, gebruik donkere modus voor gebruik in de nacht of zelfs overdag."
+   },
+   "filter": {
+      "message": "Filter"
+   },
+   "grayscale": {
+      "message": "Grijswaarden"
+   },
+   "help": {
+      "message": "Hulp"
+   },
+   "invert_listed_only": {
+      "message": "Alleen deze omkeren"
+   },
+   "latitude": {
+      "message": "Breedtegraad"
+   },
+   "light": {
+      "message": "Licht"
+   },
+   "loading_please_wait": {
+      "message": "Laden, even geduld"
+   },
+   "longitude": {
+      "message": "Lengtegraad"
+   },
+   "mode": {
+      "message": "Modus"
+   },
+   "more": {
+      "message": "Meer"
+   },
+   "news": {
+      "message": "Nieuws"
+   },
+   "not_invert_listed": {
+      "message": "Deze niet omkeren"
+   },
+   "off": {
+      "message": "Uit"
+   },
+   "on": {
+      "message": "Aan"
+   },
+   "only_for": {
+      "message": "Alleen op"
+   },
+   "only_for_description": {
+      "message": "Instelling alleen voor deze site opslaan"
+   },
+   "open_dev_tools": {
+      "message": "Tools"
+   },
+   "page_in_dark_list": {
+      "message": "Deze site staat op\nde globale lijst"
+   },
+   "page_protected": {
+      "message": "Deze pagina wordt beschermd\ndoor de browser"
+   },
+   "privacy": {
+      "message": "Privacy"
+   },
+   "read_more": {
+      "message": "Meer hierover"
+   },
+   "select_font": {
+      "message": "Lettertype selecteren"
+   },
+   "sepia": {
+      "message": "Sepia"
+   },
+   "set_active_hours": {
+      "message": "Actieve uren instellen"
+   },
+   "set_location": {
+      "message": "Activeren na zonsondergang op locatie"
+   },
+   "setup_add_site_hotkey": {
+      "message": "Sneltoets instellen voor site toevoegen"
+   },
+   "setup_hotkey_toggle_extension": {
+      "message": "Sneltoets instellen voor\nextensie schakelen"
+   },
+   "setup_hotkey_toggle_site": {
+      "message": "Sneltoets instellen voor\nhuidige site schakelen"
+   },
+   "site_list": {
+      "message": "Sitelijst"
+   },
+   "store_listing": {
+      "message": "Deze oogzorgextensie heeft een nachtstand die automatisch donkere thema's maakt voor websites. Donkere modus keert lichte kleuren om voor goede leesbaarheid 's nachts.\n\nJe kunt de helderheid, het contrast, het kleurenfilter, de donkere modus, het lettertype en de lijst van te negeren websites geheel instellen naar wens.\n\nDark Reader laat nooit advertenties zien en gebruikt nooit je gegevens. Deze extensie is volledig open-source op https://github.com/darkreader/darkreader\n\nVoor de installatie is het aangeraden soortgelijke extensies eerst uit te schakelen. Veel kijkplezier!"
+   },
+   "system_dark_mode": {
+      "message": "Gebruik systeemkleurenschema"
+   },
+   "system_dark_mode_description": {
+      "message": "Activeren bij donker systeemthema"
+   },
+   "text_stroke": {
+      "message": "Tekstomlijning"
+   },
+   "theme_generation_mode": {
+      "message": "Themageneratiemodus"
+   },
+   "toggle_current_site": {
+      "message": "Huidige site schakelen"
+   },
+   "toggle_extension": {
+      "message": "Extensie schakelen"
+   },
+   "try_experimental_theme_engines": {
+      "message": "Probeer **experimentele** themas\n**Filter+** behoudt saturatie, videokaart vereist\n**Statisch thema** genereert snel een simpel thema\n**Dynamisch thema** analyseert kleuren en foto's"
+   }
+}

@@ -1,0 +1,15 @@
+2021/02/15-16:45:56.008 613 Reusing MANIFEST /home/infiniter/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2021/02/15-16:45:56.009 613 Recovering log #6661
+2021/02/15-16:45:56.012 613 Reusing old log /home/infiniter/.config/google-chrome/Default/Sync Data/LevelDB/006661.log 
+2021/02/15-16:45:56.310 644 Level-0 table #6665: started
+2021/02/15-16:45:56.323 644 Level-0 table #6665: 92792 bytes OK
+2021/02/15-16:45:56.333 644 Delete type=0 #6661
+2021/02/15-16:45:56.334 645 Compacting 4@0 + 1@1 files
+2021/02/15-16:45:56.344 645 Generated table #6666@0: 383 keys, 37959 bytes
+2021/02/15-16:45:56.344 645 Compacted 4@0 + 1@1 files => 37959 bytes
+2021/02/15-16:45:56.355 645 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/02/15-16:45:56.355 645 Delete type=2 #6665
+2021/02/15-16:45:56.355 645 Delete type=2 #6656
+2021/02/15-16:45:56.355 645 Delete type=2 #6662
+2021/02/15-16:45:56.355 645 Delete type=2 #6660
+2021/02/15-16:45:56.355 645 Delete type=2 #6658
