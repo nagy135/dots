@@ -129,6 +129,9 @@ autocmd FileType perl nnoremap <c-j> :w !perl<CR>
 autocmd FileType php nnoremap <leader>e :w !perl<CR>
 autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
 autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
+autocmd FileType php noremap <leader>C :set paste<CR>"9yy"9PC/**<ESC>"9pC * <ESC>"9pC * @author Viktor Nagy <viktor.nagy@01people.com><ESC>"9pC */<Esc>:set nopaste<CR>:echo "DocString generated..."<CR>^kkA
+autocmd FileType php nnoremap <leader>p yiwodd('' ,);<ESC>F'Pf,a$<ESC>p
+autocmd FileType php nnoremap <leader>P yiwOdd('' ,);<ESC>F'Pf,a$<ESC>p
 
 autocmd FileType javascript nmap ;p oconsole.log(<ESC>lmiA;<ESC>`ii
 autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
