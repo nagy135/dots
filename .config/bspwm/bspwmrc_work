@@ -1,0 +1,140 @@
+#! /bin/bash
+
+# ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗  ██████╗
+# ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗██╔════╝
+# ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝██║
+# ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗██║
+# ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██║  ██║╚██████╗
+# ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+
+PATH="/home/infiniter/.config/composer/vendor/bin:$PATH"
+
+# bspc config top_padding        24
+# bspc config bottom_padding     0
+# bspc config left_padding       0
+# bspc config right_padding      0
+# bspc config border_width       3
+# bspc config window_gap         12
+# bspc config split_ratio        0.50
+
+# # Borders and gaps
+# bspc config borderless_monocle true
+# bspc config gapless_monocle true
+
+# Rules {{{
+
+bspc rule -a qutebrowser desktop='^1' follow=on
+bspc rule -a Chromium desktop='^9' follow=on
+bspc rule -a Slack desktop='^4' follow=on
+bspc rule -a Postman desktop='^10' follow=on
+bspc rule -a jetbrains-phpstorm desktop='^6' follow=on
+bspc rule -a code-oss desktop='^7' follow=on
+bspc rule -a jetbrains-datagrip desktop='^8' follow=on
+bspc rule -a spotify desktop='^11' follow=on
+
+bspc rule -a Sxiv state=tiled
+bspc rule -a Alacritty:ncmpcpp desktop='^10' follow=on
+bspc rule -a spotify desktop='^10' follow=on
+bspc rule -a Alacritty:htop desktop='^9' follow=on
+bspc rule -a neomutt desktop='^8' follow=on
+bspc rule -a Alacritty:plain_dropdown layer=above sticky=on state=floating rectangle=800x500+560+250
+bspc rule -a Alacritty:python_dropdown layer=above sticky=on state=floating rectangle=800x500+560+250
+bspc rule -a Alacritty:subtube_viewer layer=above sticky=on state=floating rectangle=800x1000+40+40
+bspc rule -a plain_dropdown layer=above sticky=on state=floating rectangle=800x500+560+250
+bspc rule -a python_dropdown layer=above sticky=on state=floating rectangle=800x500+560+250
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a stalonetray layer=bellow
+bspc rule -a lemonbar layer=bellow
+bspc rule -a Zathura state=tiled
+bspc rule -a Steam desktop='^7' follow=on
+bspc rule -a mpv state=floating rectangle=500x300+10+760
+
+# }}}
+
+bspc config window_gap 10
+bspc config top_padding 30
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config bottom_padding 0
+
+#Various settings
+bspc config gapless_monocle     false #Default setup uses negative padding, and gapless monocle looks really weird like that
+bspc config borderless_monocle  false
+bspc config single_monocle false
+bspc config paddingless_monocle false
+bspc config focus_follows_pointer false
+bspc config pointer_follows_focus false
+bspc config pointer_follows_monitor true
+bspc config external_rules_command /home/infiniter/.config/bspwm/external_rules
+
+# Border colors
+bspc config border_width 4
+bspc config normal_border_color "#000000"
+bspc config focused_border_color "#19a85b"
+bspc config active_border_color "#fff199"
+bspc config presel_feedback_color "#19a85b"
+
+# Mouse control
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
+# single monitor {{{
+# }}}
+# dual monitors {{{
+# }}}
+# tripple monitors {{{
+# }}}
+
+monitors(){
+    if [[ $1 == "single" ]]; then
+        bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+        sxhkd -c ~/.config/sxhkd/sxhkdrc_work_single &> ~/sxhkd.log &
+    elif [[ $1 == "dual" ]]; then
+        xrandr --output eDP1 --auto  --output DP3 --mode 1920x1080 --right-of eDP1
+        bspc monitor eDP1 -d 1 2 3 4 5
+        bspc monitor DP3 -d 6 7 8 9 10
+        sxhkd -c ~/.config/sxhkd/sxhkdrc_work &> ~/sxhkd.log &
+    else
+        xrandr --addmode DP1 1920x1080
+        xrandr --output eDP1 --auto  --output DP1 --mode 1920x1080 --right-of eDP1 --output DP3 --mode 1920x1080 --right-of DP1
+        ## xrandr --output eDP-1 --auto  --output DP-3 --mode 1920x1080 --right-of eDP-1 --output DP-1 --auto --right-of DP-3
+        bspc monitor eDP1 -d 1 2 3 4
+        bspc monitor DP1 -d 5 6 7 8
+        bspc monitor DP3 -d 9 10 11
+        sxhkd -c ~/.config/sxhkd/sxhkdrc_work &> ~/sxhkd.log &
+    fi
+}
+
+monitors "single"
+# Autostarts
+# compton &
+dunst &
+battery_notify &
+# mpd-notification -t 3 -m /home/infiniter/Music &
+xautolock -time 60 -locker 'systemctl hibernate' -notify 60 -notifier "notify-send -u critical 'Inactivity' 'Hibernating in 1 minute!'" &
+unclutter -idle 3 &
+xset r rate 200 35
+xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
+setxkbmap -option caps:escape
+# xset s off -dpms #disable dpms (screen dimming)
+
+wmname LG3D
+feh  --bg-fill ~/Pictures/current_wallpaper
+xbacklight -set 50
+rmmod pcspkr &
+# bash -c "mpd ~/.config/mpd/mpd.conf"
+synclient VertScrollDelta=-111
+bash -c "transmission-daemon"
+bash -c "brightness_notification -init" # initial brightness setting
+bash -c "layout_toggler us" # just to create file in /tmp with default value "us"
+bash -c "redshift_control -init" # initial redshift setting
+bash -c "volume_change -init" # initial volume setting
+# bash -c "package_checker" # 5 hour sleep loop to notify new packages
+# bash -c "tabber -init"
+xfce4-clipman
+# /home/infiniter/Code/scripts/golemon &
+
+# bspc config active_border_color \#c22330
+# bspc config normal_border_color \#111111
