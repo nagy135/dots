@@ -76,7 +76,7 @@ sxhkd &
 dunst &
 battery_notify &
 # mpd-notification -t 3 -m /home/infiniter/Music &
-# xautolock -time 60 -locker 'systemctl hibernate' -notify 60 -notifier "notify-send -u critical 'Inactivity' 'Hibernating in 1 minute!'" &
+xautolock -time 60 -locker 'loginctl suspend' -notify 60 -notifier "notify-send -u critical 'Inactivity' 'Suspend in 1 minute!'" &
 unclutter -idle 3 &
 xset r rate 200 35
 xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
