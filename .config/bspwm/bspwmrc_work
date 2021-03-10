@@ -80,34 +80,37 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
-# single monitor {{{
-# }}}
-# dual monitors {{{
-# }}}
-# tripple monitors {{{
-# }}}
 
 monitors(){
+    # check if has dashes (sometimes they have sometimes not for some reason)
+    left="eDP1"
+    middle="DP1"
+    right="DP3"
+    if [[ $(xrandr --listmonitors | sed -n '2p' | awk '{print $NF}') == *-* ]]; then
+        left="eDP-1"
+        middle="DP-1"
+        right="DP-3"
+    fi
     if [[ $1 == "single" ]]; then
         bspc monitor -d 1 2 3 4 5 6 7 8 9 10
         sxhkd -c ~/.config/sxhkd/sxhkdrc_work_single &> ~/sxhkd.log &
     elif [[ $1 == "dual" ]]; then
-        xrandr --output eDP1 --auto  --output DP3 --mode 1920x1080 --right-of eDP1
-        bspc monitor eDP1 -d 1 2 3 4 5
-        bspc monitor DP3 -d 6 7 8 9 10
+        xrandr --output $left --auto  --output $right --mode 1920x1080 --right-of $left
+        bspc monitor $left -d 1 2 3 4 5
+        bspc monitor $right -d 6 7 8 9 10
         sxhkd -c ~/.config/sxhkd/sxhkdrc_work &> ~/sxhkd.log &
     else
-        xrandr --addmode DP1 1920x1080
-        xrandr --output eDP1 --auto  --output DP1 --mode 1920x1080 --right-of eDP1 --output DP3 --mode 1920x1080 --right-of DP1
+        xrandr --addmode $middle 1920x1080
+        xrandr --output $left --auto  --output $middle --mode 1920x1080 --right-of $left --output $right --mode 1920x1080 --right-of $middle
         ## xrandr --output eDP-1 --auto  --output DP-3 --mode 1920x1080 --right-of eDP-1 --output DP-1 --auto --right-of DP-3
-        bspc monitor eDP1 -d 1 2 3 4
-        bspc monitor DP1 -d 5 6 7 8
-        bspc monitor DP3 -d 9 10 11
+        bspc monitor $left -d 1 2 3 4
+        bspc monitor $middle -d 5 6 7 8
+        bspc monitor $right -d 9 10 11
         sxhkd -c ~/.config/sxhkd/sxhkdrc_work &> ~/sxhkd.log &
     fi
 }
 
-monitors "single"
+monitors "tripple"
 # Autostarts
 # compton &
 dunst &
