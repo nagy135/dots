@@ -282,6 +282,9 @@ XF86AudioLowerVolume
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
+XF86HomePage
+    bspc rule -a '*' --one-shot state=floating ; /home/infiniter/.cargo/bin/pomodorust
+
 ### rpm_rofi
 super + p
     rpm_rofi
@@ -305,7 +308,7 @@ super + ctrl + p
 
 ### rpm start daemon
 super + ctrl + shift + alt + p
-    killall rpd; rpd & notify-send -i none -t 2000 "RPM" "daemon running..."
+    killall rpd; /usr/bin/rpd & notify-send -i none -t 2000 "RPM" "daemon running..."
 
 ### restart song
 super + bracketleft
