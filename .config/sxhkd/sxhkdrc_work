@@ -282,8 +282,13 @@ XF86AudioLowerVolume
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
+### pomodorust start
 XF86HomePage
-    bspc rule -a '*' --one-shot state=floating ; /home/infiniter/.cargo/bin/pomodorust
+    bspc rule -a '*' --one-shot state=floating rectangle=400x200+1500+860 ; /usr/bin/pomodorust
+
+### pomodorust focus
+super + XF86HomePage
+    xdotool windowactivate $(xdotool search -class pomodorust)
 
 ### rpm_rofi
 super + p
