@@ -38,17 +38,17 @@ if has('nvim')
 endif
 set maxfuncdepth=1000
 set undofile
-set undodir=~/.vim/undodir
+" set undodir=~/.vim/undodir
 set conceallevel=0
 set splitbelow
 set splitright
 "}}}
 
 let mapleader = " "
+let mapleader = " "
 
 "Mappings {{{
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap H ^
 nnoremap L $
 nnoremap <C-b> :NERDTreeToggle<CR>
@@ -83,6 +83,18 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
+
+" Using lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+nnoremap <leader>gg :G<CR>
+nnoremap <leader>gs :G<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gP :Git pull<CR>
 "}}}
 
 " AutoCommands {{{
@@ -129,9 +141,6 @@ autocmd FileType perl nnoremap <c-j> :w !perl<CR>
 autocmd FileType php nnoremap <leader>e :w !perl<CR>
 autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
 autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
-autocmd FileType php noremap <leader>C :set paste<CR>"9yy"9PC/**<ESC>"9pC * <ESC>"9pC * @author Viktor Nagy <viktor.nagy@01people.com><ESC>"9pC */<Esc>:set nopaste<CR>:echo "DocString generated..."<CR>^kkA
-autocmd FileType php nnoremap <leader>p yiwodd('' ,);<ESC>F'Pf,a$<ESC>p
-autocmd FileType php nnoremap <leader>P yiwOdd('' ,);<ESC>F'Pf,a$<ESC>p
 
 autocmd FileType javascript nmap ;p oconsole.log(<ESC>lmiA;<ESC>`ii
 autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
@@ -415,7 +424,6 @@ endfunction
 " Plug {{{
 call plug#begin('~/.vim/plugged')
 
-    Plug 'liuchengxu/vim-which-key'
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
@@ -434,8 +442,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'ap/vim-css-color'
     Plug 'mattn/emmet-vim'
     Plug 'rstacruz/vim-closer'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim'
+    " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    " Plug 'junegunn/fzf.vim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'LandonSchropp/vim-stamp'
     " Plug 'vim-airline/vim-airline-themes'
     Plug 'itchyny/lightline.vim'
@@ -447,13 +459,13 @@ call plug#begin('~/.vim/plugged')
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
         " Plug 'liuchengxu/vim-clap'
-        " Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python']}
+        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust']}
 
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     endif
     Plug 'HerringtonDarkholme/yats.vim'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'neoclide/coc-tsserver'
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc-tsserver'
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
@@ -467,55 +479,55 @@ call plug#begin('~/.vim/plugged')
 
     "}}}
 
-let g:project_root_todo = 0
-let g:todo_file_location = ""
+    let g:project_root_todo = 0
+    let g:todo_file_location = ""
 
-" {{{ Treesitter
-" lua <<EOF
-" require "nvim-treesitter.configs".setup {
-" "  playground = {
-" "    enable = true,
-" "    disable = {},
-" "    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-" "    persist_queries = false -- Whether the query persists across vim sessions
-" "  }
-" "}
-" EOF
-" "
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  highlight = {
-" "    enable = true,
-" "    custom_captures = {
-" "      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-" "      ["foo.bar"] = "Identifier",
-" "    },
-" "  },
-" "}
-" EOF
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  incremental_selection = {
-" "    enable = true,
-" "    keymaps = {
-" "      init_selection = "is",
-" "      node_incremental = "o",
-" "      scope_incremental = "grc",
-" "      node_decremental = "O",
-" "    },
-" "  },
-" "}
-" EOF
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  indent = {
-" "    enable = true
-" "  }
-" "}
-" EOF
-" }}}
+    " {{{ Treesitter
+    " lua <<EOF
+    " require "nvim-treesitter.configs".setup {
+    " "  playground = {
+    " "    enable = true,
+    " "    disable = {},
+    " "    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    " "    persist_queries = false -- Whether the query persists across vim sessions
+    " "  }
+    " "}
+    " EOF
+    " "
+    " "
+    " lua <<EOF
+    " require'nvim-treesitter.configs'.setup {
+    " "  highlight = {
+    " "    enable = true,
+    " "    custom_captures = {
+    " "      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+    " "      ["foo.bar"] = "Identifier",
+    " "    },
+    " "  },
+    " "}
+    " EOF
+    " "
+    " lua <<EOF
+    " require'nvim-treesitter.configs'.setup {
+    " "  incremental_selection = {
+    " "    enable = true,
+    " "    keymaps = {
+    " "      init_selection = "is",
+    " "      node_incremental = "o",
+    " "      scope_incremental = "grc",
+    " "      node_decremental = "O",
+    " "    },
+    " "  },
+    " "}
+    " EOF
+    " "
+    " lua <<EOF
+    " require'nvim-treesitter.configs'.setup {
+    " "  indent = {
+    " "    enable = true
+    " "  }
+    " "}
+    " EOF
+    " }}}
 
-colorscheme nvcode
+    colorscheme nvcode
