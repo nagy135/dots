@@ -27,7 +27,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #292d3e
+background = #0b0b0b
 foreground = #c0c5ce
 alert = #bd2c40
 volume-min = #a3be8c
@@ -112,9 +112,9 @@ font-4 = "Font Awesome 5 Brands:pixelsize=13;2"
 font-5 = "FontAwesome:size=5;4"
 
 ; modules-left = padding spotify padding arrow7
-; modules-left = padding arrow7
+modules-left = padding subtube arrow7
 modules-center = bspwm
-modules-right =  arrow0 subtube arrow1 filesystem arrow2 memory arrow4 pavolume arrow5 battery arrow6 date
+modules-right =   arrow1 filesystem arrow2 memory arrow4 pavolume arrow5 battery arrow6 date
 
 tray-detached = false
 tray-offset-x = 0
@@ -263,9 +263,9 @@ format-background = ${colors.background}
 type = custom/text
 content = "%{T2}%{T-}"
 content-font = 2
-content-foreground = #0b0b0b
+content-foreground = #0a84ff
 ;#C3E88D
-content-background = #292d3e
+content-background = #0b0b0b
 
 [module/arrow1]
 ; grey to Blue
@@ -323,9 +323,9 @@ content-background = #0b0b0b
 type = custom/text
 content = "%{T2}%{T-}"
 content-font = 2
-content-foreground = #969ba5
+content-foreground = #0a84ff
 ;#C3E88D
-content-background = ${colors.background}
+content-background = #0b0b0b
 
 [module/padding]
 ; grey to Blue
@@ -334,7 +334,7 @@ content = " "
 content-font = 2
 content-foreground = #0b0b0b
 ;#C3E88D
-content-background = #969ba5
+content-background = #0a84ff
 
 ################################################################################
 ###############################################################################
@@ -354,12 +354,12 @@ format-background = #F07178
 [module/subtube]
 type = custom/script
 exec = ~/.config/polybar/subtube
-label = " %output%"
+label = " %output% "
 interval = 1
 tail = true
 click-left = kill -USR1 %pid%
-format-foreground = #b2d3d9
-format-background = #0b0b0b
+format-foreground = #0b0b0b
+format-background = #0a84ff
 
 [module/arch-aur-updates]
 type = custom/script
