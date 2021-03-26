@@ -230,11 +230,11 @@ label-private =  "  "
 label-private-foreground = #19a85b
 
 ;;;;;;;
-label-focused-foreground = #f9dc29
-label-occupied-foreground = #19a85b
+label-focused-foreground = #FFD717
+label-occupied-foreground = #B34F19
+label-empty-foreground = #0a84ff
 ;label-occupied-foreground = ${color.shade7}
 label-urgent-foreground = #e53935
-label-empty-foreground = #fff
 
 label-focused-padding = 1
 label-urgent-padding = 1
@@ -263,7 +263,7 @@ format-background = ${colors.background}
 type = custom/text
 content = "%{T2}%{T-}"
 content-font = 2
-content-foreground = #F07178
+content-foreground = #0b0b0b
 ;#C3E88D
 content-background = #292d3e
 
@@ -272,17 +272,17 @@ content-background = #292d3e
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #969ba5
+content-foreground = #0a84ff
 ;#C3E88D
-content-background = #F07178
+content-background = #0b0b0b
 
 [module/arrow2]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-background = #969ba5
-content-foreground = #82AAFF
+content-background = #0a84ff
+content-foreground = #0b0b0b
 ;#C3E88D
 
 [module/arrow3]
@@ -290,7 +290,7 @@ content-foreground = #82AAFF
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #C792EA
+content-foreground = #0a84ff
 content-background = #82AAFF
 
 [module/arrow4]
@@ -298,25 +298,25 @@ content-background = #82AAFF
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #FFE585
-content-background = #82AAFF
+content-foreground = #0a84ff
+content-background = #0b0b0b
 
 [module/arrow5]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #F07178
-content-background = #FFE585
+content-foreground = #0b0b0b
+content-background = #0a84ff
 
 [module/arrow6]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #969ba5
+content-foreground = #0a84ff
 ;content-foreground = #1D2330
-content-background = #F07178
+content-background = #0b0b0b
 
 [module/arrow7]
 ; grey to Blue
@@ -358,8 +358,8 @@ label = " %output%"
 interval = 1
 tail = true
 click-left = kill -USR1 %pid%
-format-foreground = ${colors.background}
-format-background = #F07178
+format-foreground = #b2d3d9
+format-background = #0b0b0b
 
 [module/arch-aur-updates]
 type = custom/script
@@ -451,9 +451,9 @@ label-discharging-foreground = #0b0b0b
 format-discharging-background = #F07178
 
 format-full-prefix = "  "
-format-full-prefix-foreground = #0b0b0b
-label-full-foreground = #0b0b0b
-format-full-background = #F07178
+format-full-prefix-foreground = #b2d3d9
+label-full-foreground = #b2d3d9
+format-full-background = #0b0b0b
 ;format-full-underline = #fff
 format-foreground = #12345678
 format-background = #F07178
@@ -581,12 +581,12 @@ interval = 5
 date = "%b %d, %Y | "
 date-alt = " %a %b %d, %Y"
 time = %H:%M%
-time-alt = " %a %b %d, %Y"
+time-alt = " %A - %B %d, %Y"
 ;format-prefix = " "
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-foreground = #0b0b0b
-format-background = #969ba5
+format-background = #0a84ff
 label = "%time% "
 
 #################################################################
@@ -671,7 +671,7 @@ spacing = 4
 ; format-mounted = <label-mounted>
 format-mounted = <label-mounted>
 format-mounted-foreground = #0b0b0b
-format-mounted-background = #969ba5
+format-mounted-background = #0a84ff
 
 
 ; Available tokens:
@@ -754,9 +754,9 @@ label = %percentage_used%%
 
 format = <label>
 format-prefix = "  "
-format-prefix-foreground = #292d3e
-format-foreground = #292d3e
-format-background = #82AAFF
+format-prefix-foreground = #b2d3d9
+format-foreground = #b2d3d9
+format-background = #0b0b0b
 
 ################################################################################
 
@@ -799,8 +799,8 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = ${colors.background}
-format-background = #FFE585
+format-foreground = #0b0b0b
+format-background = #0a84ff
 
 
 
