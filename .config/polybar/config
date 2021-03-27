@@ -441,14 +441,14 @@ full-at = 100
 
 format-charging = <ramp-capacity> <label-charging>
 label-charging = %percentage%%
-label-charging-foreground = #0b0b0b
+label-charging-foreground = #0a84ff
 format-charging-foreground = #f9dc2b
-format-charging-background = #F07178
+format-charging-background = #0b0b0b
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-label-discharging-foreground = #0b0b0b
-format-discharging-background = #F07178
+label-discharging-foreground = #0a84ff
+format-discharging-background = #0b0b0b
 
 format-full-prefix = "  "
 format-full-prefix-foreground = #b2d3d9
@@ -463,7 +463,7 @@ ramp-capacity-1 = " "
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
-ramp-capacity-foreground = #000000
+ramp-capacity-foreground = #0a84ff
 
 animation-charging-0 = " "
 animation-charging-1 = " "
