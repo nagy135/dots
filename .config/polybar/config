@@ -26,6 +26,13 @@ format-margin =
 format-offset =
 
 [colors]
+main-color-foreground=#0b0b0b
+main-color-background=#0a84ff
+secondary-color-foreground=#b2d3d9
+secondary-color-background=#0b0b0b
+triad-background=#0a84ff
+triad-accent=#FFD717
+triad-accent2=#B34F19
 ; Nord theme ============
 background = #0b0b0b
 foreground = #c0c5ce
@@ -112,9 +119,9 @@ font-4 = "Font Awesome 5 Brands:pixelsize=13;2"
 font-5 = "FontAwesome:size=5;4"
 
 ; modules-left = padding spotify padding arrow7
-modules-left = padding subtube arrow7
+modules-left = padding subtube reverse_arrow_foreground
 modules-center = bspwm
-modules-right =   arrow1 filesystem arrow2 memory arrow4 pavolume arrow5 battery arrow6 date
+modules-right =   arrow_foreground filesystem arrow_background memory arrow_foreground pavolume arrow_background battery arrow_foreground date
 
 tray-detached = false
 tray-offset-x = 0
@@ -230,9 +237,9 @@ label-private =  "  "
 label-private-foreground = #19a85b
 
 ;;;;;;;
-label-focused-foreground = #FFD717
-label-occupied-foreground = #B34F19
-label-empty-foreground = #0a84ff
+label-focused-foreground = ${colors.triad-accent}
+label-occupied-foreground = ${colors.triad-accent2}
+label-empty-foreground = ${colors.triad-background}
 ;label-occupied-foreground = ${color.shade7}
 label-urgent-foreground = #e53935
 
@@ -258,83 +265,40 @@ format-background = ${colors.background}
 ################################################################################
 ################################################################################
 
-[module/arrow0]
-; grey to Blue
-type = custom/text
-content = "%{T2}%{T-}"
-content-font = 2
-content-foreground = #0a84ff
-;#C3E88D
-content-background = #0b0b0b
-
-[module/arrow1]
-; grey to Blue
+[module/arrow_foreground]
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #0a84ff
-;#C3E88D
-content-background = #0b0b0b
+content-foreground = ${colors.main-color-background}
+content-background = ${colors.main-color-foreground}
 
-[module/arrow2]
-; grey to Blue
+[module/arrow_background]
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-background = #0a84ff
-content-foreground = #0b0b0b
-;#C3E88D
+content-foreground = ${colors.main-color-foreground}
+content-background = ${colors.main-color-background}
 
-[module/arrow3]
-; grey to Blue
+[module/reverse_arrow_foreground]
 type = custom/text
-content = "%{T2} %{T-}"
+content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #0a84ff
-content-background = #82AAFF
+content-foreground = ${colors.main-color-background}
+content-background = ${colors.main-color-foreground}
 
-[module/arrow4]
-; grey to Blue
+[module/reverse_arrow_background]
 type = custom/text
-content = "%{T2} %{T-}"
+content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #0a84ff
-content-background = #0b0b0b
-
-[module/arrow5]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #0b0b0b
-content-background = #0a84ff
-
-[module/arrow6]
-; grey to Blue
-type = custom/text
-content = "%{T2} %{T-}"
-content-font = 2
-content-foreground = #0a84ff
-;content-foreground = #1D2330
-content-background = #0b0b0b
-
-[module/arrow7]
-; grey to Blue
-type = custom/text
-content = "%{T2}%{T-}"
-content-font = 2
-content-foreground = #0a84ff
-;#C3E88D
-content-background = #0b0b0b
+content-foreground = ${colors.main-color-foreground}
+content-background = ${colors.main-color-background}
 
 [module/padding]
-; grey to Blue
 type = custom/text
 content = " "
 content-font = 2
-content-foreground = #0b0b0b
-;#C3E88D
-content-background = #0a84ff
+content-foreground = ${colors.main-color-foreground}
+content-background = ${colors.main-color-background}
 
 ################################################################################
 ###############################################################################
@@ -358,8 +322,8 @@ label = " %output% "
 interval = 1
 tail = true
 click-left = kill -USR1 %pid%
-format-foreground = #0b0b0b
-format-background = #0a84ff
+format-foreground = ${colors.main-color-foreground}
+format-background = ${colors.main-color-background}
 
 [module/arch-aur-updates]
 type = custom/script
@@ -441,19 +405,19 @@ full-at = 100
 
 format-charging = <ramp-capacity> <label-charging>
 label-charging = %percentage%%
-label-charging-foreground = #0a84ff
+label-charging-foreground = ${colors.secondary-color-foreground}
 format-charging-foreground = #f9dc2b
-format-charging-background = #0b0b0b
+format-charging-background = ${colors.secondary-color-background}
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-label-discharging-foreground = #0a84ff
-format-discharging-background = #0b0b0b
+label-discharging-foreground = ${colors.secondary-color-foreground}
+format-discharging-background = ${colors.secondary-color-background}
 
 format-full-prefix = "  "
-format-full-prefix-foreground = #b2d3d9
-label-full-foreground = #b2d3d9
-format-full-background = #0b0b0b
+format-full-prefix-foreground = ${colors.secondary-color-foreground}
+label-full-foreground = ${colors.secondary-color-foreground}
+format-full-background = ${colors.secondary-color-background}
 ;format-full-underline = #fff
 format-foreground = #12345678
 format-background = #F07178
@@ -585,8 +549,8 @@ time-alt = " %A - %B %d, %Y"
 ;format-prefix = " "
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-foreground = #0b0b0b
-format-background = #0a84ff
+format-foreground = ${colors.main-color-foreground}
+format-background = ${colors.main-color-background}
 label = "%time% "
 
 #################################################################
@@ -670,8 +634,8 @@ spacing = 4
 ;   <ramp-capacity>
 ; format-mounted = <label-mounted>
 format-mounted = <label-mounted>
-format-mounted-foreground = #0b0b0b
-format-mounted-background = #0a84ff
+format-mounted-foreground = ${colors.main-color-foreground}
+format-mounted-background = ${colors.main-color-background}
 
 
 ; Available tokens:
@@ -754,9 +718,9 @@ label = %percentage_used%%
 
 format = <label>
 format-prefix = "  "
-format-prefix-foreground = #b2d3d9
-format-foreground = #b2d3d9
-format-background = #0b0b0b
+format-prefix-foreground = ${colors.secondary-color-foreground}
+format-foreground = ${colors.secondary-color-foreground}
+format-background = ${colors.secondary-color-background}
 
 ################################################################################
 
@@ -799,8 +763,8 @@ click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
-format-foreground = #0b0b0b
-format-background = #0a84ff
+format-foreground = ${colors.main-color-foreground}
+format-background = ${colors.main-color-background}
 
 
 
