@@ -45,7 +45,6 @@ set splitright
 "}}}
 
 let mapleader = " "
-let mapleader = " "
 
 "Mappings {{{
 
@@ -115,6 +114,7 @@ autocmd FileType rust nnoremap ;;P yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
 autocmd FileType rust nnoremap <leader>r :botright split<CR>:term cargo run<CR>
 autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
 autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
+autocmd FileType rust nnoremap <leader><leader>t :CocCommand rust-analyzer.toggleInlayHints<CR>
 "Python
 autocmd FileType python nnoremap <c-j> :w !python<CR>:w<CR>
 autocmd FileType python nnoremap ;p oprint()<ESC>i
