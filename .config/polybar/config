@@ -427,7 +427,7 @@ ramp-capacity-1 = " "
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
-ramp-capacity-foreground = #0a84ff
+ramp-capacity-foreground = ${colors.secondary-color-foreground}
 
 animation-charging-0 = " "
 animation-charging-1 = " "
