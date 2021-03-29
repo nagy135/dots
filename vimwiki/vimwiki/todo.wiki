@@ -1,0 +1,29 @@
+== XMPP ==
+* room update (PUT) name/description [XMPP DONE, PHP NOTDONE]
+    * admin affiliation
+    * PUT /api/chat/rooms
+    {
+        "roomJID": "babasda",
+        "name": "new name",
+        "description": "new description"
+    }
+* admin remove user from room [XMPP DONE, PHP NOTDONE]
+    * admin affiliation
+    * POST /api/chat/rooms/remove-subscriber
+    {
+        "roomJID": "babasda",
+        "userUUID": "new name"
+    }
+
+* unsubscribe create new admin if last admin [XMPP NOTDONE, PHP NOTDONE]
+    * if i am last admin:
+        * random user => new admin
+    * else:
+        * gtfo
+
+== PDF ==
+* POST /statement  => 200 and send mail with pdf [PHP NOTDONE]
+    {
+        startDate,
+        endDate
+    }
