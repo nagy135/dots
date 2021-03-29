@@ -81,6 +81,8 @@ nnoremap <F3> :set spell!<CR>
 nnoremap <c-g> :Rg<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
+nnoremap <leader>c :HexokinaseToggle<CR>
+
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
 
@@ -424,6 +426,7 @@ endfunction
 " Plug {{{
 call plug#begin('~/.vim/plugged')
 
+    Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
