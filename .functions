@@ -40,3 +40,9 @@ update_dots(){
 wallpaperize(){
     mv $1 ~/Pictures/Wallpapers/
 }
+
+cdd(){
+    for (( i=0; i<${#${1}}; i++ )); do
+        [[ "${1:$i:1}" == . ]] && cd ..
+    done
+}
