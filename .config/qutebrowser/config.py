@@ -10,12 +10,11 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
-# Uncomment this to still load settings configured via autoconfig.yml
-# config.load_autoconfig()
+# Change the argument to True to still load settings configured via autoconfig.yml
+config.load_autoconfig(False)
 
 # Aliases for commands. The keys of the given dictionary are the
 # aliases, while the values are the commands they map to.
-config.load_autoconfig(False)
 # Type: Dict
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save', 'pypa': 'spawn pypass print -d --clip --masterpass ', 'wall': 'spawn --userscript wallpaper_create '}
 
@@ -67,54 +66,6 @@ config.set('content.cookies.accept', 'all', 'devtools://*')
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
-
-# User agent to send.  The following placeholders are defined:  *
-# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
-# The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
-# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
-# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
-# QtWebEngine. * `{upstream_browser_version}`: The corresponding
-# Safari/Chrome version. * `{qutebrowser_version}`: The currently
-# running qutebrowser version.  The default value is equal to the
-# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
-# read from JavaScript is always the global value. With QtWebEngine
-# between 5.12 and 5.14 (inclusive), changing the value exposed to
-# JavaScript requires a restart.
-# Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:71.0) Gecko/20100101 Firefox/71.0', 'https://accounts.google.com/*')
-
-# User agent to send.  The following placeholders are defined:  *
-# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
-# The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
-# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
-# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
-# QtWebEngine. * `{upstream_browser_version}`: The corresponding
-# Safari/Chrome version. * `{qutebrowser_version}`: The currently
-# running qutebrowser version.  The default value is equal to the
-# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
-# read from JavaScript is always the global value. With QtWebEngine
-# between 5.12 and 5.14 (inclusive), changing the value exposed to
-# JavaScript requires a restart.
-# Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
-
-# User agent to send.  The following placeholders are defined:  *
-# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
-# The underlying WebKit version (set to a fixed value   with
-# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
-# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
-# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
-# QtWebEngine. * `{upstream_browser_version}`: The corresponding
-# Safari/Chrome version. * `{qutebrowser_version}`: The currently
-# running qutebrowser version.  The default value is equal to the
-# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
-# read from JavaScript is always the global value. With QtWebEngine
-# between 5.12 and 5.14 (inclusive), changing the value exposed to
-# JavaScript requires a restart.
-# Type: FormatString
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:71.0) Gecko/20100101 Firefox/71.0', 'https://docs.google.com/*')
 
 # User agent to send.  The following placeholders are defined:  *
@@ -132,6 +83,54 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:71.0) Gecko
 # JavaScript requires a restart.
 # Type: FormatString
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:71.0) Gecko/20100101 Firefox/71.0', 'https://drive.google.com/*')
+
+# User agent to send.  The following placeholders are defined:  *
+# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
+# The underlying WebKit version (set to a fixed value   with
+# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
+# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
+# QtWebEngine. * `{upstream_browser_version}`: The corresponding
+# Safari/Chrome version. * `{qutebrowser_version}`: The currently
+# running qutebrowser version.  The default value is equal to the
+# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
+# read from JavaScript is always the global value. With QtWebEngine
+# between 5.12 and 5.14 (inclusive), changing the value exposed to
+# JavaScript requires a restart.
+# Type: FormatString
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
+
+# User agent to send.  The following placeholders are defined:  *
+# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
+# The underlying WebKit version (set to a fixed value   with
+# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
+# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
+# QtWebEngine. * `{upstream_browser_version}`: The corresponding
+# Safari/Chrome version. * `{qutebrowser_version}`: The currently
+# running qutebrowser version.  The default value is equal to the
+# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
+# read from JavaScript is always the global value. With QtWebEngine
+# between 5.12 and 5.14 (inclusive), changing the value exposed to
+# JavaScript requires a restart.
+# Type: FormatString
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version} Edg/{upstream_browser_version}', 'https://accounts.google.com/*')
+
+# User agent to send.  The following placeholders are defined:  *
+# `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
+# The underlying WebKit version (set to a fixed value   with
+# QtWebEngine). * `{qt_key}`: "Qt" for QtWebKit, "QtWebEngine" for
+# QtWebEngine. * `{qt_version}`: The underlying Qt version. *
+# `{upstream_browser_key}`: "Version" for QtWebKit, "Chrome" for
+# QtWebEngine. * `{upstream_browser_version}`: The corresponding
+# Safari/Chrome version. * `{qutebrowser_version}`: The currently
+# running qutebrowser version.  The default value is equal to the
+# unchanged user agent of QtWebKit/QtWebEngine.  Note that the value
+# read from JavaScript is always the global value. With QtWebEngine
+# between 5.12 and 5.14 (inclusive), changing the value exposed to
+# JavaScript requires a restart.
+# Type: FormatString
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99 Safari/537.36', 'https://*.slack.com/*')
 
 # Load images automatically in web pages.
 # Type: Bool
@@ -161,10 +160,10 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
-# Editor (and arguments) to use for the `open-editor` command. The
-# following placeholders are defined:  * `{file}`: Filename of the file
-# to be edited. * `{line}`: Line in which the caret is found in the
-# text. * `{column}`: Column in which the caret is found in the text. *
+# Editor (and arguments) to use for the `edit-*` commands. The following
+# placeholders are defined:  * `{file}`: Filename of the file to be
+# edited. * `{line}`: Line in which the caret is found in the text. *
+# `{column}`: Column in which the caret is found in the text. *
 # `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
 # Same as `{column}`, but starting from index 0.
 # Type: ShellCommand
@@ -194,14 +193,15 @@ c.tabs.padding = {'top': 10, 'bottom': 10, 'left': 10, 'right': 10}
 # Format to use for the tab title. The following placeholders are
 # defined:  * `{perc}`: Percentage as a string like `[10%]`. *
 # `{perc_raw}`: Raw percentage, e.g. `10`. * `{current_title}`: Title of
-# the current web page. * `{title_sep}`: The string ` - ` if a title is
-# set, empty otherwise. * `{index}`: Index of this tab. * `{id}`:
-# Internal tab ID of this tab. * `{scroll_pos}`: Page scroll position. *
-# `{host}`: Host of the current web page. * `{backend}`: Either
-# ''webkit'' or ''webengine'' * `{private}`: Indicates when private mode
-# is enabled. * `{current_url}`: URL of the current web page. *
-# `{protocol}`: Protocol (http/https/...) of the current web page. *
-# `{audio}`: Indicator for audio/mute status.
+# the current web page. * `{title_sep}`: The string `" - "` if a title
+# is set, empty otherwise. * `{index}`: Index of this tab. *
+# `{aligned_index}`: Index of this tab padded with spaces to have the
+# same   width. * `{id}`: Internal tab ID of this tab. * `{scroll_pos}`:
+# Page scroll position. * `{host}`: Host of the current web page. *
+# `{backend}`: Either `webkit` or `webengine` * `{private}`: Indicates
+# when private mode is enabled. * `{current_url}`: URL of the current
+# web page. * `{protocol}`: Protocol (http/https/...) of the current web
+# page. * `{audio}`: Indicator for audio/mute status.
 # Type: FormatString
 c.tabs.title.format = '{index}: {current_title}'
 
@@ -212,7 +212,7 @@ c.tabs.indicator.width = 0
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
 # Type: FuzzyUrl
-c.url.default_page = 'file:///home/infiniter/.config/qutebrowser/homepage/index.html'
+c.url.default_page = 'https://yts.mx/'
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -226,7 +226,8 @@ c.url.default_page = 'file:///home/infiniter/.config/qutebrowser/homepage/index.
 # * `{quoted}` quotes all characters (for `slash/and&amp` this
 # placeholder   expands to `slash%2Fand%26amp`). * `{unquoted}` quotes
 # nothing (for `slash/and&amp` this placeholder   expands to
-# `slash/and&amp`).  The search engine named `DEFAULT` is used when
+# `slash/and&amp`). * `{0}` means the same as `{}`, but can be used
+# multiple times.  The search engine named `DEFAULT` is used when
 # `url.auto_search` is turned on and something else than a URL was
 # entered to be opened. Other search engines can be used by prepending
 # the search engine name to the search term, e.g. `:open google
@@ -236,7 +237,8 @@ c.url.searchengines = {'rs': 'https://doc.rust-lang.org/std/?search={}', 'duck':
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['file:///home/infiniter/.config/qutebrowser/homepage/index.html']
+c.url.start_pages = ['https://yts.mx/']
+# c.url.start_pages = ['file:///home/infiniter/.config/qutebrowser/homepage/index.html']
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
@@ -414,7 +416,6 @@ config.bind('gM', 'open https://www.gmail.com')
 config.bind('gO', 'open https://yts.ag/')
 config.bind('gS', 'open https://www.youtube.com/user/EpicSkillshot/videos')
 config.bind('gT', 'open https://www.twitch.tv/directory/game/League%20of%20Legends')
-config.bind('gv', 'hint links normal open {hint-url}')
 config.bind('gY', 'open https://www.youtube.com')
 config.bind('gd', 'tab-give')
 config.bind('gf', 'open -t https://www.facebook.com/messages/')
