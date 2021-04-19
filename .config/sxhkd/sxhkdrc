@@ -438,6 +438,7 @@ super + alt + c
 ### theme switcher
 super + alt + ctrl + c
     theme-switcher
+
 ### open qutebrowser
 super + q
     qutebrowser
@@ -460,7 +461,6 @@ super + b
     bye_prompt
     # rofi -modi 'PowerMenu:~/.config/rofi/scripts/powermenu.sh' -show PowerMenu -theme powermenu.rasi
 
-### tabber create tab and name it
 ### tabber selection (single/multiple)
 super + alt + g
     tabber
@@ -484,7 +484,7 @@ super + y
 
 ### subtube rofi
 super + shift + ctrl + y
-    subtube rofi_play
+    youtube-rofi -m
 
 ### subtube remove
 super + alt + shift + y
@@ -492,7 +492,7 @@ super + alt + shift + y
 
 ### subtube update
 super + ctrl + y
-    subtube update
+    youtube-rofi
 
 ### subtube viewer
 super + ctrl + alt + shift + y
