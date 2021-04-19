@@ -435,6 +435,9 @@ super + ctrl + c
 super + alt + c
     color
 
+### theme switcher
+super + alt + ctrl + c
+    theme-switcher
 ### open qutebrowser
 super + q
     qutebrowser
@@ -458,8 +461,17 @@ super + b
     # rofi -modi 'PowerMenu:~/.config/rofi/scripts/powermenu.sh' -show PowerMenu -theme powermenu.rasi
 
 ### tabber create tab and name it
+### tabber selection (single/multiple)
 super + alt + g
     tabber
+
+### tabber grab another multiple
+super + ctrl + g
+    tabber grab
+
+### tabber process multiple
+super + ctrl + alt + g
+    tabber process
 
 ### wallpaper changer
 super + ctrl + b
