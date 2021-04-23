@@ -462,7 +462,7 @@ call plug#begin('~/.vim/plugged')
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
         " Plug 'liuchengxu/vim-clap'
-        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust', 'lisp', 'php']}
+        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust', 'lisp', 'php', 'lua']}
 
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     endif
