@@ -5,6 +5,7 @@
 == OTHER ==
 [[git]]
 [[vim]]
+[[linux]]
 
 == PROJECTS ==
 [[og]]
