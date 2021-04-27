@@ -22,8 +22,24 @@
         * gtfo
 
 == PDF ==
-* POST /statement  => 200 and send mail with pdf [PHP NOTDONE]
+* status: DONE
+    * might fck up on transfers
+    * not tested mail sending
+* POST /statement  => 200 and send mail with pdf 
     {
         startDate,
         endDate
     }
+== API FORK ==
+* status: DONE
+* model api-fork
+* fields
+{
+    "version": "1.0.3",
+    "environment": "develop" | "production" | "staging",
+}
+
+```
+1.0.3 | develop
+1.0.1 | production
+```
