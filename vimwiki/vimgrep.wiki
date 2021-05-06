@@ -1,0 +1,10 @@
+== Grep-ing for files without plugins ==
+
+* `:vim /search_term/ app/**/*.php`
+
+* :cope[n]     " Open the quickfix window
+* :ccl[ose]    " Close the quickfix window
+* :cn[ext]     " Go to the next error
+* :cp[revious] " Go to the previous error
+* :col[der]    " Go to older error list
+* :cnew[er]    " Go to newer error list
