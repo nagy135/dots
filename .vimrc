@@ -463,7 +463,7 @@ call plug#begin('~/.vim/plugged')
         " Plug 'neovim/nvim-lsp'
         " Plug 'liuchengxu/vim-clap'
         Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust', 'lisp', 'php', 'lua']}
-
+        Plug 'sindrets/diffview.nvim'
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     endif
     Plug 'HerringtonDarkholme/yats.vim'

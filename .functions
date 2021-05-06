@@ -31,6 +31,11 @@ zat() {
     zathura $1 & exit;
 }
 
+copy_chmod_chown(){
+    sudo chmod --reference=$1 $2
+    sudo chown --reference=$1 $2
+}
+
 update_dots(){
     # copy relevant files and change directory
     cp -r ~/Code/scripts ~/.vim/colors ~/.vimrc ~/.tmux.conf ~/.config ~/.aliases ~/.functions ~/.zshrc ~/.emacs ~/.dots
@@ -41,7 +46,7 @@ wallpaperize(){
     mv $1 ~/Pictures/Wallpapers/
 }
 
-cdd(){
+cddot(){
     for (( i=0; i<${#${1}}; i++ )); do
         [[ "${1:$i:1}" == . ]] && cd ..
     done

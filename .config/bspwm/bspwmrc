@@ -81,6 +81,7 @@ unclutter -idle 3 &
 xset r rate 200 35
 xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
 setxkbmap -option caps:escape
+xset -dpms
 # xset s off -dpms #disable dpms (screen dimming)
 
 feh --bg-fill ~/Pictures/current_wallpaper
