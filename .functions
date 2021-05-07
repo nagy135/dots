@@ -6,8 +6,8 @@ fzfvim(){
     if [[ ! -z $file ]]; then
         vim $file
     fi
-    echo $file | xclip -sel clipboard
-    echo $file
+    echo -n $file | xclip -sel clipboard
+    echo -n $file
 }
 cf(){
     # open .script file in vim
