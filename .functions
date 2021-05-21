@@ -51,3 +51,8 @@ cddot(){
         [[ "${1:$i:1}" == . ]] && cd ..
     done
 }
+
+f(){
+    q=$(echo "$@" | sed 's/\s\+/%20/g')
+    xdg-open "https://google.com/search?q=$q";
+}
