@@ -511,11 +511,11 @@ super + Return
 
 ### dropdown terminal
 super + ctrl + Return
-    dropdown
+    /home/infiniter/.scripts/dropdown
 
 ### dropdown python shell
 super + shift + Return
-    dropdown python
+    /home/infiniter/.scripts/dropdown python
 
 ### dmenu test
 super + alt + d
@@ -584,7 +584,7 @@ super + slash
 
 ### set the node flag (marked,locked,sticky,private)
 super + {_,ctrl,shift,alt} + backslash
-    flag_toggler {marked,locked,sticky,private}
+    /home/infiniter/.scripts/flag_toggler -m {marked,locked,sticky,private}
 
 ### rotate subtree/tree counter-clockwise/clockwise
 super + {ctrl,shift} + {period,comma}
