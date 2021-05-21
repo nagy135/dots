@@ -8,7 +8,7 @@
 
 ### pick color to clipboard
 super + ctrl + alt + c
-    colorpicker --one-shot --short | tr -d '\n' | xclip -sel clipboard
+    /home/infiniter/.scripts/colorpicker --one-shot --short | tr -d '\n' | xclip -sel clipboard
 
 ### prettify json in clipboard
 super + shift + alt + p
@@ -28,19 +28,19 @@ super + ctrl + r
 
 ### terminal with tmux stuff session
 super + e
-    tmux_controller
+    /home/infiniter/.scripts/tmux_controller
 
 ### terminal with tmux rofi session selector
 super + shift + e
-    tmux_controller list
+    /home/infiniter/.scripts/tmux_controller list
 
 ### kill tmux session
 super + ctrl + e
-    tmux_controller kill
+    /home/infiniter/.scripts/tmux_controller kill
 
 ### create tmux session
 super + alt + e
-    tmux_controller create
+    /home/infiniter/.scripts/tmux_controller create
 
 ### restart polybar
 super + alt + b
@@ -397,20 +397,20 @@ alt + shift + d
 
 ### toggle en/sk layouts
 alt + shift + l
-    layout_toggler toggle
+    /home/infiniter/.scripts/layout_toggler toggle
 
 ### toggle full date format in bar
 alt + shift + d
-    date_toggle
+    /home/infiniter/.scripts/date_toggle
 
 ### start ncmpcpp
 super + m
-    bash -c 'ncmpcpp_run'
+    bash -c '/home/infiniter/.scripts/ncmpcpp_run'
     # kitty --class 'ncmpcpp' -e ncmpcpp
 
 ### alsamixer
 super + ctrl + m
-    bash -c 'alsamixer_run'
+    bash -c '/home/infiniter/.scripts/alsamixer_run'
 
 ### restart mpd
 super + ctrl + shift + m
@@ -425,11 +425,11 @@ super + space
 
 ### start htop
 super + equal
-    bash -c 'htop_run'
+    bash -c '/home/infiniter/.scripts/htop_run'
 
 ### refresh pscircle
 super + alt + equal
-    bgcircle
+    /home/infiniter/.scripts/bgcircle
 
 ### dunst cpu load
 super + shift + equal
@@ -449,7 +449,7 @@ super + ctrl + c
 
 ### color to clipboard
 super + alt + c
-    color
+    /home/infiniter/.scripts/color
 
 ### open qutebrowser
 super + q
@@ -469,7 +469,7 @@ super + r
 
 ### bye script
 super + b
-    bye_prompt
+    /home/infiniter/.scripts/bye_prompt
 
 ### tabber create tab and name it
 super + alt + g
