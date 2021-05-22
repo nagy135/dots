@@ -17,8 +17,9 @@ set relativenumber
 set sts=4
 set ts=4
 set autoindent
+set termguicolors
+set smartindent
 set path+=**
-set mouse=a
 " set cursorline
 " set cursorcolumn
 set wildmenu
@@ -45,37 +46,35 @@ set splitright
 "}}}
 
 let mapleader = " "
-let mapleader = " "
 
 "Mappings {{{
-
 nnoremap H ^
 nnoremap L $
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap ;ft   :NERDTreeFind<CR>
-nnoremap ,b   :Tagbar<CR>
+nnoremap ,b    :TagbarToggle<CR>
 " nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
-nnoremap <c-k> :ColorToggle<CR>
-nnoremap <c-p> :GFiles<CR>
+nnoremap <c-k> :HexokinaseToggle<CR>
 nnoremap <c-f> :Files<CR>
 nnoremap <c-e> :Buffers<CR>
-nnoremap <c-l> :GFiles?<CR>
+" nnoremap <c-l> :.-1read ~/.vim/snippets/loremipsum<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
+" nnoremap ,c :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
 nnoremap <F4> :CtrlPClearAllCaches<CR>
 nnoremap <F1> :let @+ = expand("%:p")<CR>
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 nnoremap ;b :.w !bash<CR>
 vnoremap ;b :w !bash<CR>
-nnoremap ;g :Goyo<CR>
-nnoremap n nzz
+noremap n nzz
 nnoremap N Nzz
 nnoremap <F3> :set spell!<CR>
-" nnoremap <C-p> :Clap files<CR>
+nnoremap <c-p> :GFiles<CR>
+nnoremap <c-l> :GFiles?<CR>
 " nnoremap <C-m> :Ctrlp<CR>
 " nnoremap <C-m> :BLines<CR>
 nnoremap <c-g> :Rg<CR>
@@ -83,20 +82,49 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 nnoremap <leader>c :HexokinaseToggle<CR>
 
+nnoremap <leader>j :%!python -m json.tool<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
+nnoremap <leader>e :CocCommand explorer<CR>
 
-" Using lua functions
+" Fugitive binds
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gg :Git<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gP :Git pull<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gb :Gblame<CR>
+
+" project search {{{
+" FZF
+" nnoremap <leader>ff :GFiles<CR>
+" nnoremap <leader>fl :GFiles?<CR>
+" nnoremap <leader>fg :Rg<CR>
+" TELESCOPE
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+" }}}
 
-nnoremap <leader>gg :G<CR>
-nnoremap <leader>gs :G<CR>
-nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>gc :Git commit<CR>
-nnoremap <leader>gP :Git pull<CR>
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev QA qa
+cnoreabbrev Qa qa
+cnoreabbrev WA wa
+cnoreabbrev Wa wa
+
+" inoremap (; (<CR>);<C-c>O
+" inoremap (, (<CR>),<C-c>O
+" inoremap (<CR> (<CR>)<C-c>O
+" inoremap {; {<CR>};<C-c>O
+" inoremap {, {<CR>},<C-c>O
+" inoremap {<CR> {<CR>}<C-c>O
+" inoremap [; [<CR>];<C-c>O
+" inoremap [, [<CR>],<C-c>O
+" inoremap [<CR> [<CR>]<C-c>O
+
 "}}}
 
 " AutoCommands {{{
@@ -108,31 +136,35 @@ autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
 autocmd FileType tex nnoremap <c-j> :w !pdflatex % &> /dev/null<CR>
 "Rust
 autocmd FileType rust nnoremap <c-j> :w<CR>:!cargo run<CR>
-autocmd FileType rust nnoremap ;p oprintln!();<ESC>hi
-autocmd FileType rust nnoremap ;P Oprintln!();<ESC>hi
-autocmd FileType rust nnoremap ;;p yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
-autocmd FileType rust nnoremap ;;P yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
+autocmd FileType rust nnoremap <leader>p oprintln!();<ESC>hi
+autocmd FileType rust nnoremap <leader>P Oprintln!();<ESC>hi
+autocmd FileType rust nnoremap <leader>pp yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
+autocmd FileType rust nnoremap <leader>PP yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
 autocmd FileType rust nnoremap <leader>r :botright split<CR>:term cargo run<CR>
 autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
-autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
+
 "Python
 autocmd FileType python nnoremap <c-j> :w !python<CR>:w<CR>
-autocmd FileType python nnoremap ;p oprint()<ESC>i
-autocmd FileType python nnoremap ;P Oprint()<ESC>i
-autocmd FileType python nnoremap ;;p yiwoprint('', )<ESC>PF'P^
-autocmd FileType python nnoremap ;;P yiwOprint('', )<ESC>PF'P^
+autocmd FileType python nnoremap <leader>p oprint()<ESC>i
+autocmd FileType python nnoremap <leader>P Oprint()<ESC>i
+autocmd FileType python nnoremap <leader>pp yiwoprint('', )<ESC>PF'P^
+autocmd FileType python nnoremap <leader>PP yiwOprint('', )<ESC>PF'P^
 "Go
 autocmd FileType go nnoremap <c-j> :w !go build<CR>:w<CR>
-autocmd FileType go nnoremap ;p ofmt.Println()<ESC>i
-autocmd FileType go nnoremap ;P Ofmt.Println()<ESC>i
-autocmd FileType go nnoremap ;;p yiwofmt.Println("", )<ESC>PF"P^
-autocmd FileType go nnoremap ;;P yiwOfmt.Println("", )<ESC>PF"P^
+autocmd FileType go nnoremap <leader>p ofmt.Println()<ESC>i
+autocmd FileType go nnoremap <leader>P Ofmt.Println()<ESC>i
+autocmd FileType go nnoremap <leader>pp yiwofmt.Println("", )<ESC>PF"P^
+autocmd FileType go nnoremap <leader>PP yiwOfmt.Println("", )<ESC>PF"P^
+"Rust
+autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
 "SH
 autocmd FileType sh nnoremap <c-j> :w !bash<CR>:w<CR>
-autocmd FileType sh nnoremap ;;p yiwoecho ""<ESC>PA $<ESC>p
-autocmd FileType sh nnoremap ;;P yiwOecho ""<ESC>PA $<ESC>p
-autocmd FileType sh nnoremap ;p oecho <ESC>a
-autocmd FileType sh nnoremap ;P Oecho <ESC>a
+autocmd FileType sh nnoremap <leader>pp yiwoecho ""<ESC>PA $<ESC>p
+autocmd FileType sh nnoremap <leader>PP yiwOecho ""<ESC>PA $<ESC>p
+autocmd FileType sh nnoremap <leader>b :.w !bash<CR>
+autocmd FileType sh vnoremap <leader>b :w !bash<CR>
+autocmd FileType sh nnoremap <leader>p oecho <ESC>a
+autocmd FileType sh nnoremap <leader>P Oecho <ESC>a
 "C++
 autocmd FileType cpp nnoremap <c-j> :make!<CR>
 autocmd FileType c nnoremap <c-j> :make!<CR>
@@ -140,14 +172,26 @@ autocmd FileType cpp nnoremap <c-l> :!choose_main<CR>
 "Perl
 autocmd FileType perl nnoremap <c-j> :w !perl<CR>
 "PHP
-autocmd FileType php nnoremap <leader>e :w !perl<CR>
-autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
-autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
+autocmd FileType php nnoremap <leader>p yiwodd('' ,);<ESC>F'Pf,a$<ESC>p
+autocmd FileType php nnoremap <leader>P yiwOdd('' ,);<ESC>F'Pf,a$<ESC>p
+autocmd FileType php nnoremap <leader>r :! curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null<CR>:botright split<CR>:e /tmp/nvim_response<CR><CR>
+autocmd FileType php nnoremap <leader>t :TagbarToggle<CR>
+" autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
 
-autocmd FileType javascript nmap ;p oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nnoremap ;;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType javascript nnoremap ;;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nmap <leader>p oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nmap <leader>P Oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nnoremap <leader>pp yiwoconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nnoremap <leader>PP yiwOconsole.log("", );<ESC>hPF"P<ESC>
+" autocmd FileType javascript noremap <leader>C O/**<CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<Esc>
+
+autocmd FileType typescript set sts=2
+autocmd FileType typescript set shiftwidth=2
+autocmd FileType typescript set ts=2
+" autocmd FileType typescript noremap <leader>C O/**<CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<Esc>
+
+nnoremap <leader>C :set paste<CR>"9yy"9PC/**<ESC>"9pC * <ESC>"9pC *<ESC>"9pC * @author Viktor Nagy <viktor.nagy@01people.com><ESC>"9pC */<Esc>:set nopaste<CR>:echo "DocString generated..."<CR>^kkkA
+
+com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
 
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
@@ -162,7 +206,7 @@ augroup END
 " colorscheme molokai
 " colorscheme luna-term
 " colorscheme jellybeans
-" colorscheme onedark
+" colorscheme gruvbox
 " }}}
 
 let g:markdown_folding = 1
@@ -174,21 +218,20 @@ if !exists('g:jellybeans_overrides')
     \}
 endif
 
-
 let g:rustfmt_autosave = 1
 
 let g:indent_guides_enable_on_vim_startup = 1
 " let g:molokai_original = 1
 
 " let g:airline_theme='jellybeans'
-
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'deus',
       \ }
 
 let g:indentLine_char = '|'
 
 let g:vim_json_syntax_conceal = 0
+
 
 let g:goyo_width = 131
 let g:goyo_height = 102
@@ -198,6 +241,10 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_buffers_jump = 1
+
+autocmd VimEnter * command! -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --glob "!public/*" --glob "!vendor/*" --glob "!node_modules/*" --glob "!storage/*" --glob "!tags" --glob "!_ide_helper*.php" --color "always" '.shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " {{{ fzf floating setup
 " Using floating windows of Neovim to start fzf
@@ -250,35 +297,6 @@ function! ZathuraOpen()
     execute "silent !zathura " . pdf . " &"
 endfunc
 "}}}
-
-" Powerline settings {{{
-" air-line
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ' '
-" }}}
 
 " Functions {{{
 " Deletes function call and its brackets when hovered over function name
@@ -383,33 +401,74 @@ endfun
 autocmd BufEnter *.py call SetAppDir()
 " }}}
 
-" COC setup {{{
+" Plug {{{
+call plug#begin('~/.vim/plugged')
 
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+    " Plug 'dhruvasagar/vim-table-mode'
+    Plug 'MaxMEllon/vim-jsx-pretty'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'morhetz/gruvbox'
+    Plug 'JamshedVesuna/vim-markdown-preview'
+    Plug 'noahfrederick/vim-laravel'
+    " Plug 'airblade/vim-gitgutter'
+    Plug 'rust-lang/rust.vim'
+    Plug 'vimwiki/vimwiki'
+    " Plug 'vim-airline/vim-airline'
+    " Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'Yggdroot/indentLine'
+    Plug 'scrooloose/nerdtree'
+    " Plug 'ervandew/supertab'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-eunuch'
+    Plug 'majutsushi/tagbar'
+" Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'raviqqe/vim-nonblank'
+    Plug 'tpope/vim-markdown'
+    " Plug 'rhysd/rust-doc.vim'
+    Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    " Plug 'ap/vim-css-color'
+    Plug 'mattn/emmet-vim'
+    " Plug 'kien/ctrlp.vim'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'LandonSchropp/vim-stamp'
+    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'itchyny/lightline.vim'
+    Plug 'mhinz/vim-startify'
+    " Plug 'jwalton512/vim-blade'
+    Plug 'tpope/vim-repeat'
+    " Plug 'ycm-core/YouCompleteMe'
+    Plug 'junegunn/goyo.vim'
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gt :call CocAction('doHover')<CR>
+    Plug 'moll/vim-node'
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'christianchiarulli/nvcode.vim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+    " Plug 'jiangmiao/auto-pairs'
 
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+    Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+    if has('nvim')
+        " Plug 'neovim/nvim-lsp'
+        " Plug 'liuchengxu/vim-clap'
+        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'javascript', 'typescript', 'php', 'rust', 'json', 'lisp', 'c']}
+        Plug 'neoclide/coc-tsserver'
+    endif
+call plug#end()
+"}}}
 
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
+" coc {{{
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
+"
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -421,117 +480,25 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Remap keys for COC gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>ca <Plug>(coc-codeaction)
+
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+nnoremap <leader>d :CocList diagnostics<CR>
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 " }}}
 
-" Plug {{{
-call plug#begin('~/.vim/plugged')
+colorscheme gruvbox
+" colorscheme nvcode
 
-    Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-    Plug 'joshdick/onedark.vim'
-    Plug 'noahfrederick/vim-laravel'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'rust-lang/rust.vim'
-    Plug 'vimwiki/vimwiki'
-    " Plug 'vim-airline/vim-airline'
-    Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'scrooloose/nerdtree'
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-eunuch'
-    Plug 'majutsushi/tagbar'
-    Plug 'tpope/vim-markdown'
-    " Plug 'chrisbra/Colorizer'
-    Plug 'ap/vim-css-color'
-    Plug 'mattn/emmet-vim'
-    Plug 'rstacruz/vim-closer'
-    " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    " Plug 'junegunn/fzf.vim'
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'
-    Plug 'LandonSchropp/vim-stamp'
-    " Plug 'vim-airline/vim-airline-themes'
-    Plug 'itchyny/lightline.vim'
-    Plug 'mhinz/vim-startify'
-    Plug 'jwalton512/vim-blade'
-    Plug 'tpope/vim-repeat'
-    " Plug 'ycm-core/YouCompleteMe'
-    Plug 'junegunn/goyo.vim'
-    if has('nvim')
-        " Plug 'neovim/nvim-lsp'
-        " Plug 'liuchengxu/vim-clap'
-        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust', 'lisp']}
+set omnifunc=syntaxcomplete#Complete
 
-        Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-    endif
-    Plug 'HerringtonDarkholme/yats.vim'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'neoclide/coc-tsserver'
-    Plug 'neoclide/vim-jsx-improve'
-    Plug 'MaxMEllon/vim-jsx-pretty'
-    Plug 'christianchiarulli/nvcode-color-schemes.vim'
-
-    Plug 'nagy135/capture-nvim'
-    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " Plug 'nvim-treesitter/playground'
-
-    Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-
-call plug#end()
-
-"}}}
-
-let g:project_root_todo = 0
-let g:todo_file_location = ""
-
-" {{{ Treesitter
-" lua <<EOF
-" require "nvim-treesitter.configs".setup {
-" "  playground = {
-" "    enable = true,
-" "    disable = {},
-" "    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-" "    persist_queries = false -- Whether the query persists across vim sessions
-" "  }
-" "}
-" EOF
-" "
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  highlight = {
-" "    enable = true,
-" "    custom_captures = {
-" "      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-" "      ["foo.bar"] = "Identifier",
-" "    },
-" "  },
-" "}
-" EOF
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  incremental_selection = {
-" "    enable = true,
-" "    keymaps = {
-" "      init_selection = "is",
-" "      node_incremental = "o",
-" "      scope_incremental = "grc",
-" "      node_decremental = "O",
-" "    },
-" "  },
-" "}
-" EOF
-" "
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-" "  indent = {
-" "    enable = true
-" "  }
-" "}
-" EOF
-" }}}
-
-colorscheme nvcode

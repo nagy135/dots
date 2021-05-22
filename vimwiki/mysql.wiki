@@ -1,1 +1,2 @@
 [[mysqldump import/export]]
+[[create database grant permissions]]
