@@ -1,0 +1,6 @@
+# TODO
+* create form with correct data
+* handle response record update
+* change design
+* login
+* delete record
