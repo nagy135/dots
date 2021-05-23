@@ -415,9 +415,9 @@ super + equal
 super + alt + equal
     bgcircle
 
-### dunst cpu load
+### grid layout (once)
 super + shift + equal
-    cpu
+    bsp-layout once grid
 
 ### open ncpamixer (volume handles)
 super + shift + m
