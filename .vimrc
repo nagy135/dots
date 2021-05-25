@@ -58,7 +58,7 @@ nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
-nnoremap <c-k> :ColorToggle<CR>
+nnoremap <c-k> :! ./run.sh<CR>
 nnoremap <c-p> :GFiles<CR>
 nnoremap <c-f> :Files<CR>
 nnoremap <c-e> :Buffers<CR>
