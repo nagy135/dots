@@ -59,9 +59,7 @@ nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-k> :! ./run.sh<CR>
-nnoremap <c-p> :GFiles<CR>
 nnoremap <c-f> :Files<CR>
-nnoremap <c-e> :Buffers<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
@@ -87,8 +85,11 @@ nnoremap <leader>qq :q!<CR>
 
 " Using lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 nnoremap <leader>gg :G<CR>
