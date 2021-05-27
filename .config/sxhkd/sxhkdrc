@@ -482,7 +482,7 @@ super + ctrl + b
 super + y
     subtube play
 
-### subtube rofi
+### youtube-rofi -m
 super + shift + ctrl + y
     youtube-rofi -m
 
@@ -490,7 +490,7 @@ super + shift + ctrl + y
 super + alt + shift + y
     subtube remove
 
-### subtube update
+### youtube-rofi
 super + ctrl + y
     youtube-rofi
 
