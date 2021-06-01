@@ -83,6 +83,9 @@ nnoremap <leader>c :HexokinaseToggle<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
 
+nnoremap <leader><leader>d :CocDiagnostics<CR>
+nnoremap <leader><leader>a :CocAction<CR>
+
 " Using lua functions
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
