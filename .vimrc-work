@@ -115,15 +115,15 @@ cnoreabbrev Qa qa
 cnoreabbrev WA wa
 cnoreabbrev Wa wa
 
-" inoremap (; (<CR>);<C-c>O
+inoremap (; (<CR>);<C-c>O
 " inoremap (, (<CR>),<C-c>O
-" inoremap (<CR> (<CR>)<C-c>O
-" inoremap {; {<CR>};<C-c>O
+inoremap (<CR> (<CR>)<C-c>O
+inoremap {; {<CR>};<C-c>O
 " inoremap {, {<CR>},<C-c>O
-" inoremap {<CR> {<CR>}<C-c>O
-" inoremap [; [<CR>];<C-c>O
+inoremap {<CR> {<CR>}<C-c>O
+inoremap [; [<CR>];<C-c>O
 " inoremap [, [<CR>],<C-c>O
-" inoremap [<CR> [<CR>]<C-c>O
+inoremap [<CR> [<CR>]<C-c>O
 
 "}}}
 
@@ -225,7 +225,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " let g:airline_theme='jellybeans'
 let g:lightline = {
-      \ 'colorscheme': 'deus',
+      \ 'colorscheme': 'one',
       \ }
 
 let g:indentLine_char = '|'
@@ -408,6 +408,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'airblade/vim-gitgutter'
     Plug 'morhetz/gruvbox'
+    Plug 'mhartington/oceanic-next'
     Plug 'JamshedVesuna/vim-markdown-preview'
     Plug 'noahfrederick/vim-laravel'
     " Plug 'airblade/vim-gitgutter'
@@ -437,7 +438,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'vim-airline/vim-airline-themes'
     Plug 'itchyny/lightline.vim'
     Plug 'mhinz/vim-startify'
-    " Plug 'jwalton512/vim-blade'
+    Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
     " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/goyo.vim'
@@ -498,6 +499,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " }}}
 
 colorscheme gruvbox
+" colorscheme OceanicNext
 " colorscheme nvcode
 
 set omnifunc=syntaxcomplete#Complete
