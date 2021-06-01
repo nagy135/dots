@@ -21,4 +21,28 @@ if [[ "$class" == "mpv" ]]; then
         bspc node -f $target
         echo "state=tiled"
     fi
+else
+    desktop=$(($(bspc query -D -d --names) - 1))
+    lines=$(wmctrl -l -G -x | grep -v "_dropdown" | awk -v desktop=$desktop '$2 == desktop {print $1 " " $5*$6}' | sort -k2 -n -r)
+    [[ $(echo "$lines" | wc -l) -ne 3 ]] && exit 0
+
+    HALF=$(echo "$lines" | sed -n '1p' | sed 's/^[^\s]*\s//')
+    HALF_TARGET=$(echo "$lines" | sed -n '1p' | sed 's/\s.*//')
+    QUARTER_1=$(echo "$lines" | sed -n '2p' | sed 's/^[^\s]*\s//')
+    QUARTER_2=$(echo "$lines" | sed -n '3p' | sed 's/^[^\s]*\s//')
+
+    # TODO: some checks (revisit this)
+    [ $QUARTER_1 -ne $QUARTER_2 ] && exit 0
+    [ $HALF -lt $QUARTER_2 ] && exit 0
+    [ $HALF -lt $QUARTER_1 ] && exit 0
+
+    width=$(wmctrl -l -G | grep $HALF_TARGET | awk '{print $5}')
+    height=$(wmctrl -l -G | grep $HALF_TARGET | awk '{print $6}')
+
+    [[ $width -gt $height ]] \
+        && bspc node $HALF_TARGET -p east \
+        || bspc node $HALF_TARGET -p south
+
+    bspc node -f $HALF_TARGET
+    echo "state=tiled"
 fi
