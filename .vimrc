@@ -103,6 +103,7 @@ nnoremap <leader>gP :Git pull<CR>
 "}}}
 
 " AutoCommands {{{
+autocmd BufNewFile,BufRead *.wiki set filetype=markdown
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 "MatLab
@@ -178,6 +179,8 @@ if !exists('g:jellybeans_overrides')
     \}
 endif
 
+
+let g:wiki_root = '~/wiki'
 
 let g:rustfmt_autosave = 1
 
@@ -429,13 +432,13 @@ endfunction
 
 " Plug {{{
 call plug#begin('~/.vim/plugged')
-
+    Plug 'lervag/wiki.vim'
     Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    Plug 'vimwiki/vimwiki'
+    " Plug 'vimwiki/vimwiki'
     " Plug 'vim-airline/vim-airline'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'scrooloose/nerdtree'
