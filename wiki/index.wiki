@@ -1,0 +1,8 @@
+# PROJECT IDEAS
+* tree.js something
+    * with react
+    * [link](https://github.com/danba340/react-three-fiber-example?fbclid=IwAR2E_nGngDVxOjV_mU1lJJMW-zYBps7gFUmwQEXkGkAgdTm0qbr2BLqL_O0)
+* sort-rs
+    * sorting using multiple sorting algorithms with visualization (iced gui)
+
+[[TODO]]
