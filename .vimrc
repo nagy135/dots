@@ -454,6 +454,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'rstacruz/vim-closer'
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
+
+    Plug 'sudormrfbin/cheatsheet.nvim'
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
