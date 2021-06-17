@@ -1,2 +1,3 @@
 [[dont track permissions]]
 [[deleted file restore]]
+[[change commit author]]

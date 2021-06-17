@@ -1,1 +1,1 @@
-git config core.fileMode false
+[[git]] config core.fileMode false
