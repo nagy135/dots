@@ -579,6 +579,18 @@ super + s
 super + slash
     bspc desktop -l {monocle,tiled}
 
+### clicker record
+super + ctrl + slash
+    clicker --record
+
+### clicker clear
+super + alt + slash
+    clicker --clear
+
+### clicker perform
+super + shift + slash
+    clicker --perform
+
 ### set the node flag (marked,locked,sticky,private)
 super + {_,ctrl,shift,alt} + backslash
     flag_toggler {marked,locked,sticky,private}
