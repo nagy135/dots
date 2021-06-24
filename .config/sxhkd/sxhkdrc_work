@@ -162,20 +162,17 @@ super + alt + a
 super + ctrl + a
     mpv_history --qutebrowser
 
-### autoclicker move
-super + shift + u
-    autoclicker --move
-    # arch_updater
+### clicker record
+super + ctrl + slash
+    /home/infiniter/.scripts/clicker --record
 
-### autoclicker clear
-super + ctrl + shift + u
-    autoclicker --clear
-    # pamac-manager
+### clicker clear
+super + alt + slash
+    /home/infiniter/.scripts/clicker --clear
 
-### autoclicker record
-super + ctrl + u
-    autoclicker --record
-    # arch_updater -a
+### clicker perform
+super + shift + slash
+    /home/infiniter/.scripts/clicker --perform
 
 ### marker create mark
 # super + alt + m
@@ -248,19 +245,19 @@ super + alt + t
 
 ### make screenshot
 Print
-    screenshotter
+    /home/infiniter/.scripts/screenshotter
 
 ### make screenshot of focused window
 super + shift + Print
-    screenshotter -focused
+    /home/infiniter/.scripts/screenshotter -focused
 
 ### make screenshot of zone
 super + ctrl + Print
-    screenshotter -zone
+    /home/infiniter/.scripts/screenshotter -zone
 
 ### make screenshot, save it to home folder
 super + ctrl + shift + Print
-    screenshotter -save
+    /home/infiniter/.scripts/screenshotter -save
 
 ### open teiler, screenshotter
 super + Print
@@ -268,7 +265,7 @@ super + Print
 
 ### zoneshotter
 super + alt + Print
-    zoneshotter
+    /home/infiniter/.scripts/zoneshotter
 
 ###  volume + 5
 XF86AudioRaiseVolume
@@ -420,7 +417,7 @@ super + ctrl + shift + m
 
 ### spotify toggle play
 super + space
-    playerctl -p spotify play-pause
+    playerctl play-pause
     # dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 ### start htop
