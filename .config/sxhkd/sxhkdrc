@@ -583,6 +583,10 @@ super + slash
 super + ctrl + slash
     clicker --record
 
+### clicker record (rightclick)
+super + ctrl + shift + slash
+    clicker --record -r
+
 ### clicker clear
 super + alt + slash
     clicker --clear
