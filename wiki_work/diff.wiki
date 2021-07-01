@@ -1,4 +1,4 @@
-== cheatsheet ==
+# cheatsheet
 * ]c          - next difference
 * [c          - previous difference
 * do          - diff obtain

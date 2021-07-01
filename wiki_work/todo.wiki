@@ -1,4 +1,4 @@
-== XMPP ==
+# XMPP
 * room update (PUT) name/description [XMPP DONE, PHP NOTDONE]
     * admin affiliation
     * PUT /api/chat/rooms
@@ -21,7 +21,7 @@
     * else:
         * gtfo
 
-== PDF ==
+# PDF
 * status: DONE
     * might fck up on transfers
     * not tested mail sending
@@ -30,7 +30,7 @@
         startDate,
         endDate
     }
-== API FORK ==
+# API FORK
 * status: DONE
 * model api-fork
 * fields

@@ -1,6 +1,0 @@
-== IDEA ==
-CLI app that versions configs, with named versions.
-Uses:
-    * Rust
-    * fzf?
-    * rofi?

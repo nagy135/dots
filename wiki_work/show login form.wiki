@@ -1,0 +1,3 @@
+$('form#frm-loginForm').css('display', 'block')
+
+// vim: ft=javascript

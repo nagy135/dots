@@ -1,4 +1,4 @@
-== Grep-ing for files without plugins ==
+# Grep-ing for files without plugins
 
 * `:vim /search_term/ app/**/*.php`
 

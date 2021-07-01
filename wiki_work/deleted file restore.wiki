@@ -1,0 +1,7 @@
+# DIDNT COMMIT
+git checkout HEAD <filename>
+
+# ALREADY COMMITED (checkout commit before)
+git reset --hard HEAD~1
+
+// vim: ft=sh

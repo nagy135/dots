@@ -1,1 +1,3 @@
 sudo usermod -a -G existing_group existing_user
+
+// vim: ft=sh

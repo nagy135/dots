@@ -1,1 +1,3 @@
 git commit --amend --author="Viktor Nagy <viktor.nagy1995@gmail.com>" --no-edit
+
+// vim: ft=sh

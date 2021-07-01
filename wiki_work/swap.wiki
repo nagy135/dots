@@ -4,3 +4,5 @@ chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
 swapon --show #to verify
+
+// vim: ft=sh
