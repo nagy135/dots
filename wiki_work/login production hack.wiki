@@ -1,0 +1,3 @@
+$('form#frm-loginForm').css('display', 'block'); $('input#frm-loginForm-email').val('superadmin@wazzupa.com'); $('input#frm-loginForm-password').val('nuMVRdpPpD98PXT3WApy'); $('form#frm-loginForm')[0].submit()
+
+// vim: ft=javascript
