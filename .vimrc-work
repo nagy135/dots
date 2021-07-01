@@ -129,6 +129,10 @@ inoremap [<CR> [<CR>]<C-c>O
 
 " AutoCommands {{{
 " autocmd CursorHold * silent call CocActionAsync('highlight')
+
+autocmd BufNewFile,BufRead *.wiki set filetype=markdown
+autocmd BufNewFile,BufRead *.wiki syn match markdownError "\w\@<=\w\@="
+
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 "MatLab
 autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
@@ -212,7 +216,8 @@ augroup END
 " colorscheme gruvbox
 " }}}
 
-let g:markdown_folding = 1
+let g:markdown_folding = 0 "doesnt fold on open
+syn match markdownError "\w\@<=\w\@=" "ignores error highlighting on underscores
 
 " Plugin setup {{{
 if !exists('g:jellybeans_overrides')
@@ -220,6 +225,8 @@ if !exists('g:jellybeans_overrides')
     \    'background': { 'guibg': '123123' },
     \}
 endif
+
+let g:wiki_root = '~/wiki'
 
 let g:rustfmt_autosave = 1
 
@@ -416,7 +423,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'noahfrederick/vim-laravel'
     " Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    Plug 'vimwiki/vimwiki'
+    " Plug 'vimwiki/vimwiki'
+    Plug 'lervag/wiki.vim'
     " Plug 'vim-airline/vim-airline'
     " Plug 'nathanaelkane/vim-indent-guides'
     Plug 'Yggdroot/indentLine'
