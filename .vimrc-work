@@ -196,6 +196,9 @@ com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
+au BufReadPost *.latte set syntax=html
+au BufReadPost *.lock set syntax=json
+
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
