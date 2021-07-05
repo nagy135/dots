@@ -168,5 +168,6 @@ setxkbmap -option caps:escape
 
 riverctl border-width 3
 riverctl border-color-focused "#C22330"
+riverctl background-color "#0b0b0b"
 
 exec rivertile
