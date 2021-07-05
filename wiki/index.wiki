@@ -5,4 +5,9 @@
 * sort-rs
     * sorting using multiple sorting algorithms with visualization (iced gui)
 
+# INFOS
+
+## Wayland
+* [[wayland clipboard]]
+
 [[TODO]]
