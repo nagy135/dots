@@ -6,7 +6,12 @@
     * sorting using multiple sorting algorithms with visualization (iced gui)
 
 # TODOS
+## general
+* zsh
+* PATH
+* wayland backlight
 ## wayland
+* mpvhistory!
 * wayland dmenu + rewrite scripts
 * last selected tab bind (own script)
 * wayland workspaces (multiple focus)
