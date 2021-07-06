@@ -5,6 +5,13 @@
 * sort-rs
     * sorting using multiple sorting algorithms with visualization (iced gui)
 
+# TODOS
+* wayland dmenu + rewrite scripts
+* last selected tab bind (own script)
+* wayland workspaces (multiple focus)
+* subtube on wayland
+* river scratchpad
+
 # INFOS
 
 ## Wayland
