@@ -6,11 +6,15 @@
     * sorting using multiple sorting algorithms with visualization (iced gui)
 
 # TODOS
+## wayland
 * wayland dmenu + rewrite scripts
 * last selected tab bind (own script)
 * wayland workspaces (multiple focus)
 * subtube on wayland
 * river scratchpad
+* fix font (lazygit)
+* customize waybar
+* repair color script
 
 # INFOS
 
