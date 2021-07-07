@@ -91,19 +91,19 @@ font:
 
   # Bold font face
   bold:
-    family: MesloLGS NF Bold
+    family: MesloLGS NF
     # The `style` can be specified to pick a specific face.
     # style: Bold
 
   # Italic font face
   italic:
-    family: MesloLGS NF Italic
+    family: MesloLGS NF
     # family: League Mono
     # The `style` can be specified to pick a specific face.
     # style: Italic
 
   # Point size
-  size: 7.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -291,10 +291,10 @@ live_config_reload: true
 # You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
 # Entries in `shell.args` are passed unmodified as arguments to the shell.
 #
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/zsh
+  args:
+   - --login
 
 # Key bindings
 #
