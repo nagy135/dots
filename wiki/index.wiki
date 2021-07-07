@@ -30,4 +30,17 @@
 ## Wayland
 * [[wayland clipboard]]
 
-[[TODO]]
+== WORK ==
+
+# DATABASES
+[[mysql]]
+[[postgres]]
+
+# OTHER
+[[git]]
+[[vim]]
+[[linux]]
+
+# PROJECTS
+[[og]]
+[[fincentrum]]
