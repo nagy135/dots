@@ -169,7 +169,7 @@ augroup END
 " colorscheme onedark
 " }}}
 
-let g:markdown_folding = 1
+let g:markdown_folding = 0
 
 " Plugin setup {{{
 if !exists('g:jellybeans_overrides')
