@@ -18,8 +18,13 @@ riverctl map normal $mod Q spawn qutebrowser
 riverctl map normal $mod C spawn google-chrome-stable
 
 riverctl map normal $mod+Control B spawn 'killall waybar ; waybar &'
-riverctl map normal $mod+Control Y spawn subtube play
-riverctl map normal $mod+Control F5 spawn subtube update
+riverctl map normal $mod Y spawn subtube play
+riverctl map normal $mod F5 spawn subtube update
+
+riverctl map normal Control Grave spawn dunstctl history-pop
+riverctl map normal Control Space spawn dunstctl close
+riverctl map normal Control+Shift Space spawn dunstctl close-all
+riverctl map normal Control+Mod1 Space spawn dunstctl set-paused toggle
 
 riverctl map normal $mod R spawn $terminal -e vifm
 
