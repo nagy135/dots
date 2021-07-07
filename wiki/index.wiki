@@ -10,6 +10,9 @@
 * zsh
 * PATH
 * wayland backlight
+* keyboard click
+* lock screen
+* screen dimming
 ## wayland
 * mpvhistory!
 * wayland dmenu + rewrite scripts
