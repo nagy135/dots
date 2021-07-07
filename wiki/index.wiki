@@ -7,22 +7,19 @@
 
 # TODOS
 ## general
-* zsh
 * PATH
 * wayland backlight
 * keyboard click
 * lock screen
 * screen dimming
+* screenshot
 ## wayland
 * notification daemon
 * mpvhistory!
 * wayland dmenu + rewrite scripts
 * last selected tab bind (own script)
 * wayland workspaces (multiple focus)
-* subtube on wayland
 * river scratchpad
-* fix font (lazygit)
-* customize waybar
 * repair color script
 
 # INFOS
