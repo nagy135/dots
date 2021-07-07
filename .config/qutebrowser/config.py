@@ -353,31 +353,31 @@ c.colors.tabs.pinned.selected.even.bg = '#19a85b'
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '12pt League Mono'
+c.fonts.completion.entry = '12pt MesloLGS NF'
 
 # Font used in the completion categories.
 # Type: Font
-c.fonts.completion.category = 'bold 13pt League Mono'
+c.fonts.completion.category = 'bold 13pt MesloLGS NF'
 
 # Font used for the downloadbar.
 # Type: Font
-c.fonts.downloads = '12pt League Mono'
+c.fonts.downloads = '12pt MesloLGS NF'
 
 # Font used for the hints.
 # Type: Font
-c.fonts.hints = 'bold 12pt League Mono'
+c.fonts.hints = 'bold 12pt MesloLGS NF'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '13pt League Mono'
+c.fonts.statusbar = '13pt MesloLGS NF'
 
 # Font used for selected tabs.
 # Type: Font
-c.fonts.tabs.selected = '12pt League Mono'
+c.fonts.tabs.selected = '12pt MesloLGS NF'
 
 # Font used for unselected tabs.
 # Type: Font
-c.fonts.tabs.unselected = '12pt League Mono'
+c.fonts.tabs.unselected = '12pt MesloLGS NF'
 
 # Bindings for normal mode
 config.bind(';;C', 'spawn chromium {url}')
