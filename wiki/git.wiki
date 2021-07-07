@@ -1,3 +1,4 @@
 [[dont track permissions]]
 [[deleted file restore]]
 [[change commit author]]
+[[merge with forked upstream]]

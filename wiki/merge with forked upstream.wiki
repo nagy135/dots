@@ -1,0 +1,26 @@
+# before
+$ git remote -v
+
+    origin https://github.com/[Your UserName]/[Your Fork].git (fetch)
+    origin https://github.com/[Your UserName]/[Your Fork].git (push)
+
+# run
+$ git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
+
+# after
+$ git remote -v
+
+    origin https://github.com/[Your UserName]/[Your Fork].git (fetch)
+    origin https://github.com/[Your UserName]/[Your Fork].git (push)
+    upstream https://github.com/[Original Owner UserName]/[Original Repository].git (fetch)
+    upstream https://github.com/[Original Owner UserName]/[Original Repository].git (push)
+
+# merging
+
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
+$ git push origin master
+
+
+// vim: ft=sh
