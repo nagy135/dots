@@ -19,6 +19,7 @@ riverctl map normal $mod C spawn google-chrome-stable
 
 riverctl map normal $mod+Control B spawn 'killall waybar ; waybar &'
 riverctl map normal $mod+Control Y spawn subtube play
+riverctl map normal $mod+Control F5 spawn subtube update
 
 riverctl map normal $mod R spawn $terminal -e vifm
 
