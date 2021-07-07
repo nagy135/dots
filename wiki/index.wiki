@@ -14,6 +14,7 @@
 * lock screen
 * screen dimming
 ## wayland
+* notification daemon
 * mpvhistory!
 * wayland dmenu + rewrite scripts
 * last selected tab bind (own script)
