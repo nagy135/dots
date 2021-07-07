@@ -7,14 +7,12 @@
 
 # TODOS
 ## general
-* PATH
 * wayland backlight
 * keyboard click
 * lock screen
 * screen dimming
 * screenshot
 ## wayland
-* notification daemon
 * mpvhistory!
 * wayland dmenu + rewrite scripts
 * last selected tab bind (own script)
@@ -26,6 +24,7 @@
 
 ## Wayland
 * [[wayland clipboard]]
+* [[wayland screenshot]]
 
 == WORK ==
 
