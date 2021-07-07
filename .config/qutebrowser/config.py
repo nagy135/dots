@@ -237,8 +237,8 @@ c.url.searchengines = {'rs': 'https://doc.rust-lang.org/std/?search={}', 'duck':
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://yts.mx/']
-# c.url.start_pages = ['file:///home/infiniter/.config/qutebrowser/homepage/index.html']
+# c.url.start_pages = ['https://yts.mx/']
+c.url.start_pages = ['file:///home/infiniter/.config/qutebrowser/homepage/index.html']
 
 # Background color of the completion widget for odd rows.
 # Type: QssColor
@@ -430,7 +430,8 @@ config.bind('gv', 'jseval -q $("paper-tab[tabindex=\'-1\']").click()')
 config.bind('gy', 'open -t https://www.youtube.com')
 config.bind('j', 'scroll-page 0 0.1')
 config.bind('k', 'scroll-page 0 -0.1')
-config.bind('m', 'hint links userscript myscript')
+# config.bind('m', 'hint links userscript myscript')
+config.bind('m', 'hint links spawn mpv {hint-url}')
 config.bind('tT', 'hint links spawn twitch -qt {hint-url}')
 config.bind('tt', 'spawn twitch -qt {url}')
 config.bind('u', 'scroll-page 0 -0.5')
