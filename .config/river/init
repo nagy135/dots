@@ -13,6 +13,9 @@ mod="Mod4"
 terminal="alacritty"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
+
+# spawn binds {{{
+
 riverctl map normal $mod Return spawn $terminal
 riverctl map normal $mod Q spawn qutebrowser
 riverctl map normal $mod C spawn google-chrome-stable
@@ -23,8 +26,10 @@ riverctl map normal $mod Y spawn subtube play
 riverctl map normal $mod F5 spawn subtube update
 riverctl map normal $mod A spawn mpv_history
 riverctl map normal $mod T spawn tsm-add
+# }}}
 
 # dunst {{{
+
 riverctl map normal Control Grave spawn dunstctl history-pop
 riverctl map normal Control Space spawn dunstctl close
 riverctl map normal Control+Shift Space spawn dunstctl close-all
@@ -137,6 +142,9 @@ riverctl map normal $mod F11 enter-mode passthrough
 # Mod+F11 to return to normal mode
 riverctl map passthrough $mod F11 enter-mode normal
 
+# Select previously selected binds
+riverctl map normal $mod Grave last-focused-tags
+
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
 for mode in normal locked
@@ -177,12 +185,14 @@ riverctl csd-filter-add "gedit"
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 
-xset r rate 200 35
-xmodmap -e 'clear Lock'
-setxkbmap -option caps:escape
+# customizations {{{
 
 riverctl border-width 3
 riverctl border-color-focused "#C22330"
 riverctl background-color "#0b0b0b"
+
+# }}}
+
+dunst &
 
 exec rivertile
