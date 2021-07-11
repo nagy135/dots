@@ -1,0 +1,3 @@
+git commit --amend --date="Sat Jun 11 14:00 2021 +0200" --no-edit
+
+// vim: ft=sh
