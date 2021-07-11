@@ -5,6 +5,10 @@
 * sort-rs
     * sorting using multiple sorting algorithms with visualization (iced gui)
 
+" ####################
+" ####### TODOS { ####
+" ####################
+
 # TODOS
 ## general
 * wayland backlight
@@ -13,12 +17,14 @@
 * screen dimming
 * screenshot
 ## wayland
-* mpvhistory!
-* wayland dmenu + rewrite scripts
+* rewrite scripts
 * last selected tab bind (own script)
 * wayland workspaces (multiple focus)
 * river scratchpad
-* repair color script
+
+" ####################
+" ##### } TODOS ######
+" ####################
 
 # INFOS
 
