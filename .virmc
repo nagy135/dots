@@ -431,6 +431,7 @@ endfunction
 
 " Plug {{{
 call plug#begin('~/.vim/plugged')
+    Plug 'ziglang/zig.vim'
     Plug 'lervag/wiki.vim'
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
