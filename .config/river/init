@@ -194,5 +194,6 @@ riverctl background-color "#0b0b0b"
 # }}}
 
 dunst &
+waybar &
 
 exec rivertile
