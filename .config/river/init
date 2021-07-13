@@ -195,5 +195,6 @@ riverctl background-color "#0b0b0b"
 
 dunst &
 waybar &
+swaybg -i ~/Pictures/current_wallpaper &
 
 exec rivertile
