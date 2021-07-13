@@ -43,6 +43,9 @@
 [[vim]]
 [[linux]]
 
+# LANGUAGES
+[[php]]
+
 # PROJECTS
 [[og]]
 [[fincentrum]]

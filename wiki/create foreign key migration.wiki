@@ -1,0 +1,9 @@
+<?php
+
+$table->integer('food_id')->unsigned();
+
+$table->foreign( 'food_id')
+    ->references('id')
+    ->on('foods');
+
+// vim: ft=php
