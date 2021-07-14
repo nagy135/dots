@@ -73,6 +73,9 @@ nnoremap <F2> :let @+ = expand("%:p")<CR>
 " relative path (from project root, pwd) to clipboard
 nnoremap <F1> :let @+ = expand("%:f")<CR>
 
+vnoremap < <gv
+vnoremap > >gv
+
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 nnoremap ;b :.w !bash<CR>
 vnoremap ;b :w !bash<CR>
