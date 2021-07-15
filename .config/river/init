@@ -26,6 +26,7 @@ riverctl map normal $mod Y spawn subtube play
 riverctl map normal $mod F5 spawn subtube update
 riverctl map normal $mod A spawn mpv_history
 riverctl map normal $mod T spawn tsm-add
+riverctl map normal $mod R spawn $terminal -e vifm
 # }}}
 
 # dunst {{{
@@ -36,8 +37,6 @@ riverctl map normal Control+Shift Space spawn dunstctl close-all
 riverctl map normal Control+Mod1 Space spawn dunstctl set-paused toggle
 
 # }}}
-
-riverctl map normal $mod R spawn $terminal -e vifm
 
 # Mod+Q to close the focused view
 riverctl map normal $mod X close
