@@ -145,7 +145,7 @@ riverctl map normal $mod F11 enter-mode passthrough
 riverctl map passthrough $mod F11 enter-mode normal
 
 # Select previously selected binds
-riverctl map normal $mod Grave last-focused-tags
+riverctl map normal $mod Grave focus-previous-tags
 
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
