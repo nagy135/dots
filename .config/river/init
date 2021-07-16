@@ -12,13 +12,16 @@
 mod="Mod4"
 terminal="alacritty"
 
+# beta channel chrome with runtime flag for wayland support (fixes fullscreen issue)
+chrome="google-chrome-beta -enable-features=UseOzonePlatform -ozone-platform=wayland"
+
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 
 # spawn binds {{{
 
 riverctl map normal $mod Return spawn $terminal
 riverctl map normal $mod Q spawn qutebrowser
-riverctl map normal $mod C spawn google-chrome-stable
+riverctl map normal $mod C spawn $chrome
 
 riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
 riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
