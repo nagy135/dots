@@ -28,20 +28,19 @@
 
 # INFOS
 
+# GENERAL
+[[git]]
+[[vim]]
+[[linux]]
+[[awk]]
+
 ## Wayland
 * [[wayland clipboard]]
 * [[wayland screenshot]]
 
-== WORK ==
-
 # DATABASES
 [[mysql]]
 [[postgres]]
-
-# OTHER
-[[git]]
-[[vim]]
-[[linux]]
 
 # LANGUAGES
 [[php]]
