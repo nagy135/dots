@@ -22,6 +22,7 @@ chrome="google-chrome-beta -enable-features=UseOzonePlatform -ozone-platform=way
 riverctl map normal $mod Return spawn $terminal
 riverctl map normal $mod Q spawn qutebrowser
 riverctl map normal $mod C spawn $chrome
+riverctl map normal $mod D spawn bemenu-run
 
 riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
 riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
