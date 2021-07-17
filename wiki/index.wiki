@@ -11,16 +11,15 @@
 
 # TODOS
 ## general
-* wayland backlight
+* rethink dotfiles management
 * keyboard click
 * lock screen
 * screen dimming
 * screenshot
 ## wayland
 * rewrite scripts
-* last selected tab bind (own script)
-* wayland workspaces (multiple focus)
-* river scratchpad
+* waybar subtube block
+* river scratchpad (works but needs proper one bind script)
 
 " ####################
 " ##### } TODOS ######
