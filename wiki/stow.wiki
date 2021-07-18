@@ -1,0 +1,11 @@
+# tree -a ~/.dotfiles
+```
+work
+    .vimrc
+home
+    .vimrc
+```
+
+# stow home
+* make symlinks of all files from folder *home* (recursively) to ~
+* creates symlink `~/.vimrc -> ~/.dotfiles/home/vimrc`

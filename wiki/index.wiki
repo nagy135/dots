@@ -33,6 +33,7 @@
 [[linux]]
 [[awk]]
 [[weechat]]
+[[stow]]
 
 ## Wayland
 * [[wayland clipboard]]
