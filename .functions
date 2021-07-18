@@ -6,7 +6,6 @@ fzfvim(){
     if [[ ! -z $file ]]; then
         vim $file
     fi
-    echo -n $file | xclip -sel clipboard
     echo -n $file
 }
 cf(){
