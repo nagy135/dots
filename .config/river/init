@@ -49,6 +49,12 @@ riverctl map normal Control+Mod1 Space spawn dunstctl set-paused toggle
 
 # }}}
 
+# PrintScreen {{{
+riverctl map normal None Print spawn screenshotter
+riverctl map normal $mod+Control Print spawn screenshotter -zone
+riverctl map normal $mod Print spawn screenshotter -save
+# }}}
+
 # Mod+Q to close the focused view
 riverctl map normal $mod X close
 
