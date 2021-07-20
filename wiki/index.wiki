@@ -11,11 +11,10 @@
 
 # TODOS
 ## general
-* rethink dotfiles management
+* rethink dotfiles management => STOW
 * keyboard click
 * lock screen
 * screen dimming
-* screenshot
 ## wayland
 * rewrite scripts
 * waybar subtube block
