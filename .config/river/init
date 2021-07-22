@@ -228,7 +228,7 @@ riverctl background-color "#0b0b0b"
 # }}}
 
 dunst &
-waybar &
+killall waybar ; waybar &
 pulseaudio -D &
 swaybg -i ~/Pictures/current_wallpaper &
 
