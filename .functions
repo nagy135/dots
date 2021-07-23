@@ -55,3 +55,12 @@ f(){
     q=$(echo "$@" | sed 's/\s\+/%20/g')
     xdg-open "https://google.com/search?q=$q";
 }
+
+torrentmove(){
+    sudo rsync -r --remove-source-files --info=progress2 --info=name0 /var/lib/transmission/Downloads/* ~/Torrent
+    [ ! $? -eq 0 ] \
+        && echo "no files found" \
+        && exit
+    sudo rm -rf /var/lib/transmission/Downloads/*
+    sudo chmod -R 777 ~/Torrent/*
+}
