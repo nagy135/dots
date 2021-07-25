@@ -28,6 +28,7 @@ riverctl map normal $mod A spawn mpv_history
 
 # Downloads/*.torrent start downloading
 riverctl map normal $mod T spawn tsm-add
+riverctl map normal $mod+Shift T spawn tsm-clean
 
 # subtube
 riverctl map normal $mod Y spawn subtube play
