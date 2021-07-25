@@ -61,6 +61,5 @@ torrentmove(){
     [ ! $? -eq 0 ] \
         && echo "no files found" \
         && exit
-    sudo rm -rf /var/lib/transmission/Downloads/*
     sudo chmod -R 777 ~/Torrent/*
 }
