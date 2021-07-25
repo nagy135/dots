@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["river/tags"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["custom/subtube", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -107,16 +107,9 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
+    "custom/subtube": {
+        "format": " {}",
+        "interval": 2, 
+        "exec": "ls /usr/share/subtube/resources/thumbnails | wc -l"
+    } 
 }

@@ -2,8 +2,8 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-family: MesloLGS NF, Helvetica, Arial, sans-serif;
+    font-size: 17px;
     min-height: 0;
 }
 
@@ -66,6 +66,7 @@ window#waybar.chromium {
 }
 
 #clock,
+#custom-subtube,
 #battery,
 #cpu,
 #memory,
@@ -100,6 +101,11 @@ window#waybar.chromium {
 }
 
 #clock {
+    background-color: #0b0b0b;
+    color: #19a85b;
+}
+
+#custom-subtube {
     background-color: #0b0b0b;
     color: #19a85b;
 }
