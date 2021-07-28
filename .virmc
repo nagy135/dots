@@ -389,46 +389,6 @@ endfun
 autocmd BufEnter *.py call SetAppDir()
 " }}}
 
-" COC setup {{{
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-" inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-" nmap <silent> gt :call CocAction('doHover')<CR>
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-" }}}
-
 " Plug {{{
 call plug#begin('~/.vim/plugged')
     Plug 'ziglang/zig.vim'
@@ -470,13 +430,10 @@ call plug#begin('~/.vim/plugged')
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
         " Plug 'liuchengxu/vim-clap'
-        Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['python', 'rust', 'lisp', 'php', 'lua']}
         Plug 'sindrets/diffview.nvim'
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     endif
     Plug 'HerringtonDarkholme/yats.vim'
-    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    " Plug 'neoclide/coc-tsserver'
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
@@ -484,6 +441,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'nagy135/capture-nvim'
     " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " Plug 'nvim-treesitter/playground'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
 
     Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
     call plug#end()
@@ -493,52 +452,16 @@ call plug#begin('~/.vim/plugged')
     let g:project_root_todo = 0
     let g:todo_file_location = ""
 
-    " {{{ Treesitter
-    " lua <<EOF
-    " require "nvim-treesitter.configs".setup {
-    " "  playground = {
-    " "    enable = true,
-    " "    disable = {},
-    " "    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-    " "    persist_queries = false -- Whether the query persists across vim sessions
-    " "  }
-    " "}
-    " EOF
-    " "
-    " "
-    " lua <<EOF
-    " require'nvim-treesitter.configs'.setup {
-    " "  highlight = {
-    " "    enable = true,
-    " "    custom_captures = {
-    " "      -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-    " "      ["foo.bar"] = "Identifier",
-    " "    },
-    " "  },
-    " "}
-    " EOF
-    " "
-    " lua <<EOF
-    " require'nvim-treesitter.configs'.setup {
-    " "  incremental_selection = {
-    " "    enable = true,
-    " "    keymaps = {
-    " "      init_selection = "is",
-    " "      node_incremental = "o",
-    " "      scope_incremental = "grc",
-    " "      node_decremental = "O",
-    " "    },
-    " "  },
-    " "}
-    " EOF
-    " "
-    " lua <<EOF
-    " require'nvim-treesitter.configs'.setup {
-    " "  indent = {
-    " "    enable = true
-    " "  }
-    " "}
-    " EOF
+    " LSP {{{
+    " LSP config (the mappings used in the default file don't quite work right)
+    nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+    nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+    nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+    nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+    nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+    nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+    nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+    nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
     " }}}
 
     colorscheme nvcode
