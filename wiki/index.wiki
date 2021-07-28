@@ -15,8 +15,8 @@
 * keyboard click
 * lock screen
 * screen dimming
+* mpv history uniquer
 ## wayland
-* rewrite scripts
 * waybar subtube block
 * river scratchpad (works but needs proper one bind script)
 
