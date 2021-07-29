@@ -16,6 +16,7 @@
 * lock screen
 * screen dimming
 * mpv history uniquer
+* quickqute rewrite + wayland (bemenu)
 ## wayland
 * waybar subtube block
 * river scratchpad (works but needs proper one bind script)
