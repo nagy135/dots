@@ -68,8 +68,6 @@ vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 nnoremap ;b :.w !bash<CR>
 vnoremap ;b :w !bash<CR>
 nnoremap ;g :Goyo<CR>
-nnoremap n nzz
-nnoremap N Nzz
 nnoremap <F3> :set spell!<CR>
 " nnoremap <C-p> :Clap files<CR>
 " nnoremap <C-m> :Ctrlp<CR>
@@ -84,7 +82,7 @@ nnoremap <leader>qq :q!<CR>
 nnoremap <leader><leader>d :CocDiagnostics<CR>
 nnoremap <leader><leader>a :CocAction<CR>
 
-" Using lua functions
+" Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -93,11 +91,33 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Git
 nnoremap <leader>gg :G<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gP :Git pull<CR>
+
+nnoremap Y y$
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
 "}}}
 
 " AutoCommands {{{
