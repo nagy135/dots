@@ -1,5 +1,0 @@
-2020/12/10-16:42:19.951 11ad Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_qutebrowser.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/12/10-16:51:47.951 5f6f Level-0 table #5: started
-2020/12/10-16:51:47.962 5f6f Level-0 table #5: 1110 bytes OK
-2020/12/10-16:51:47.972 5f6f Delete type=0 #3
-2020/12/10-16:51:47.972 5f6f Manual compaction at level-0 from (begin) .. (end); will stop at (end)

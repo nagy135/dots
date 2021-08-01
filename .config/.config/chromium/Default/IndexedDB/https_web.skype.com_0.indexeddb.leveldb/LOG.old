@@ -1,5 +1,0 @@
-2020/10/24-09:57:37.767 7fdb Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_web.skype.com_0.indexeddb.leveldb/MANIFEST-000001
-2020/10/24-09:59:13.408 7fdb Level-0 table #5: started
-2020/10/24-09:59:13.440 7fdb Level-0 table #5: 550976 bytes OK
-2020/10/24-09:59:13.456 7fdb Delete type=0 #3
-2020/10/24-09:59:13.457 7fdb Manual compaction at level-0 from (begin) .. (end); will stop at (end)

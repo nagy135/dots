@@ -1,5 +1,0 @@
-2020/11/17-15:58:06.559 1016 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_en.wikipedia.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/11/17-15:58:31.744 1034 Level-0 table #5: started
-2020/11/17-15:58:31.754 1034 Level-0 table #5: 1114 bytes OK
-2020/11/17-15:58:31.770 1034 Delete type=0 #3
-2020/11/17-15:58:31.773 1034 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

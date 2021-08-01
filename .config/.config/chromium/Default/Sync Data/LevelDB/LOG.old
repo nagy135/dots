@@ -1,9 +1,0 @@
-2020/12/10-16:39:47.357 11bb Reusing MANIFEST /home/infiniter/.config/chromium/Default/Sync Data/LevelDB/MANIFEST-000001
-2020/12/10-16:39:47.357 11bb Recovering log #83
-2020/12/10-16:39:47.360 11bb Reusing old log /home/infiniter/.config/chromium/Default/Sync Data/LevelDB/000083.log 
-2020/12/10-16:42:19.714 313e Level-0 table #88: started
-2020/12/10-16:42:19.723 313e Level-0 table #88: 116192 bytes OK
-2020/12/10-16:42:19.733 313e Delete type=0 #83
-2020/12/14-05:02:54.188 655 Level-0 table #90: started
-2020/12/14-05:02:54.206 655 Level-0 table #90: 107269 bytes OK
-2020/12/14-05:02:54.234 655 Delete type=0 #87

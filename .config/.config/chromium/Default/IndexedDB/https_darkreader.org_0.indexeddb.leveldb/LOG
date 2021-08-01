@@ -1,5 +1,0 @@
-2020/08/23-18:23:29.376 2b82 Reusing MANIFEST /home/infiniter/.config/chromium/Default/IndexedDB/https_darkreader.org_0.indexeddb.leveldb/MANIFEST-000001
-2020/08/23-18:23:34.996 2d09 Level-0 table #5: started
-2020/08/23-18:23:35.087 2d09 Level-0 table #5: 1109 bytes OK
-2020/08/23-18:23:35.105 2d09 Delete type=0 #3
-2020/08/23-18:23:35.105 2d09 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
