@@ -5,7 +5,8 @@ local actions = require('telescope.actions')
 require('telescope').setup{
     defaults = {
         file_ignore_patterns = {
-            "public/*"
+            "public/*",
+            "_ide_helper*.php"
         },
         mappings = {
             i = {
@@ -22,7 +23,9 @@ require('telescope').setup{
             '--with-filename',
             '--line-number',
             '--column',
-            '--smart-case'
+            '--smart-case',
+            '--ignore-file',
+            os.getenv("XDG_CONFIG_HOME") .. '/nvim/.gitignore_global'
         },
         prompt_prefix = "> ",
         selection_caret = "> ",
@@ -40,8 +43,7 @@ require('telescope').setup{
             },
         },
         file_sorter =  require'telescope.sorters'.get_fuzzy_file,
-        file_ignore_patterns = {},
-        generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+        jeneric_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
         winblend = 0,
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
@@ -55,6 +57,12 @@ require('telescope').setup{
 
         -- Developer configurations: Not meant for general override
         buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+    },
+    extensions = {
+        fzy_native = {
+            override_generic_sorter = false,
+            override_file_sorter = true,
+        }
     }
 }
 
