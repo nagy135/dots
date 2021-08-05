@@ -35,6 +35,11 @@ riverctl map normal $mod+Shift T spawn tsm-clean
 riverctl map normal $mod Y spawn subtube play
 riverctl map normal $mod F5 spawn subtube update
 
+# tabber
+riverctl map normal $mod+Control G spawn tabber grab
+riverctl map normal $mod+Mod1 G spawn tabber
+riverctl map normal $mod+Mod1+Control G spawn tabber process
+
 # set bg
 riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
 
