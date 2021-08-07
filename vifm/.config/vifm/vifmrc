@@ -121,6 +121,7 @@ nmap ` '
 nmap <c-r> :sync<CR>
 nmap q :wq<CR>
 nmap <c-t> :tnail<CR>
+nmap <c-a> :openall<CR>
 nmap <c-s> :subtitle<CR>
 nmap <a-s> :subltitle<CR>
 
@@ -156,7 +157,8 @@ command! make !!make %a
 command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart
-command! tnail imv %d &
+command! tnail sxiv -t %d &
+command! openall find %d -maxdepth 1 -type f -exec sxiv {} \;
 command! subtitle subdl %f
 command! subltitle subliminal download -l en %f
 
@@ -245,7 +247,7 @@ fileviewer *.[1-8] man ./%c | col -b
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in imv}
-        \ imv %f &,
+        \ sxiv %f &,
         \ {View in gpicview}
         \ gpicview %c,
         \ {View in shotwell}
