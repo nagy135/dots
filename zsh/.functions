@@ -57,7 +57,8 @@ f(){
 }
 
 torrentmove(){
-    sudo rsync -r --remove-source-files --info=progress2 --info=name0 /var/lib/transmission/Downloads/* ~/Torrent
+    # sudo rsync -r --remove-source-files --info=progress2 --info=name0 /var/lib/transmission/Downloads/* ~/Torrent
+    sudo mv /var/lib/transmission/Downloads/* ~/Torrent
     [ ! $? -eq 0 ] \
         && echo "no files found" \
         && exit
