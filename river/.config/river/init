@@ -252,4 +252,10 @@ pulseaudio -D &
 # set wallpaper
 swaybg -i ~/Pictures/current_wallpaper &
 
+# inactivity
+swayidle -w \
+    timeout 540 'notify-send -u critical "Pc will dim in 5 minutes"'
+    timeout 600 'light -S 0' &
+
+
 exec rivertile
