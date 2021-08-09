@@ -62,6 +62,9 @@ riverctl map normal $mod+Control Print spawn screenshotter -zone
 riverctl map normal $mod Print spawn screenshotter -save
 # }}}
 
+# Lock screen
+riverctl map normal $mod Delete swaylock --clock
+
 # Mod+Q to close the focused view
 riverctl map normal $mod X close
 
