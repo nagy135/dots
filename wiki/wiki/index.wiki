@@ -11,12 +11,10 @@
 
 # TODOS
 ## general
-* rethink dotfiles management => STOW
 * keyboard click
-* lock screen
-* screen dimming
 * mpv history uniquer
 * quickqute rewrite + wayland (bemenu)
+* subtube automatic update
 ## wayland
 * waybar subtube block
 * river scratchpad (works but needs proper one bind script)
