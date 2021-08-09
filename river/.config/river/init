@@ -254,7 +254,7 @@ swaybg -i ~/Pictures/current_wallpaper &
 
 # inactivity
 swayidle -w \
-    timeout 3000 'notify-send -u critical "Pc will dim in 5 minutes"' \
+    timeout 3000 'notify-send -u critical "Inactivity" "Screen dim in 10 minutes"' \
     timeout 3600 'light -S 0' &
 
 exec rivertile
