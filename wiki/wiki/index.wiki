@@ -15,6 +15,9 @@
 * mpv history uniquer
 * quickqute rewrite + wayland (bemenu)
 * subtube automatic update
+* rofi selection for remembered autoclick sequences
+    * named records
+    * maybe add "parts", wait for site load
 ## wayland
 * waybar subtube block
 * river scratchpad (works but needs proper one bind script)
