@@ -19,26 +19,26 @@ chrome="google-chrome-stable"
 
 # spawn binds {{{
 
-riverctl map normal $mod Return spawn $terminal
-riverctl map normal $mod Q spawn qutebrowser
-riverctl map normal $mod C spawn $chrome
+riverctl map normal $mod Return spawn "$terminal"
+riverctl map normal $mod Q spawn "qutebrowser"
+riverctl map normal $mod C spawn "$chrome"
 riverctl map normal $mod+Control C spawn "$chrome --incognito"
-riverctl map normal $mod D spawn bemenu-run
+riverctl map normal $mod D spawn "bemenu-run"
 riverctl map normal $mod R spawn "$terminal vifm"
-riverctl map normal $mod A spawn mpv_history
+riverctl map normal $mod A spawn "mpv_history"
 
 # Downloads/*.torrent start downloading
 riverctl map normal $mod T spawn tsm-add
-riverctl map normal $mod+Shift T spawn tsm-clean
+riverctl map normal $mod+Shift T spawn "tsm-clean"
 
 # subtube
-riverctl map normal $mod Y spawn subtube play
-riverctl map normal $mod F5 spawn subtube update
+riverctl map normal $mod Y spawn "subtube play"
+riverctl map normal $mod F5 spawn "subtube update"
 
 # tabber
-riverctl map normal $mod+Control G spawn tabber grab
-riverctl map normal $mod+Mod1 G spawn tabber
-riverctl map normal $mod+Mod1+Control G spawn tabber process
+riverctl map normal $mod+Control G spawn "tabber grab"
+riverctl map normal $mod+Mod1 G spawn "tabber"
+riverctl map normal $mod+Mod1+Control G spawn "tabber process"
 
 # set bg
 riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
@@ -49,21 +49,21 @@ riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
 
 # dunst {{{
 
-riverctl map normal Control Grave spawn dunstctl history-pop
-riverctl map normal Control Space spawn dunstctl close
-riverctl map normal Control+Shift Space spawn dunstctl close-all
-riverctl map normal Control+Mod1 Space spawn dunstctl set-paused toggle
+riverctl map normal Control Grave spawn "dunstctl history-pop"
+riverctl map normal Control Space spawn "dunstctl close"
+riverctl map normal Control+Shift Space "spawn dunstctl close-all"
+riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 
 # }}}
 
 # PrintScreen {{{
-riverctl map normal None Print spawn screenshotter
-riverctl map normal $mod+Control Print spawn screenshotter -zone
-riverctl map normal $mod Print spawn screenshotter -save
+riverctl map normal None Print spawn "screenshotter"
+riverctl map normal $mod+Control Print spawn "screenshotter -zone"
+riverctl map normal $mod Print spawn "screenshotter -save"
 # }}}
 
 # Lock screen
-riverctl map normal $mod Delete swaylock --clock
+riverctl map normal $mod Delete "swaylock --clock"
 
 # Mod+Q to close the focused view
 riverctl map normal $mod X close
