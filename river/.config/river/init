@@ -10,7 +10,7 @@
 
 # Use the "logo" key as the primary modifier
 mod="Mod4"
-terminal="alacritty"
+terminal="foot"
 
 # beta channel chrome with runtime flag for wayland support (fixes fullscreen issue)
 chrome="google-chrome-stable"
@@ -24,7 +24,7 @@ riverctl map normal $mod Q spawn qutebrowser
 riverctl map normal $mod C spawn $chrome
 riverctl map normal $mod+Control C spawn "$chrome --incognito"
 riverctl map normal $mod D spawn bemenu-run
-riverctl map normal $mod R spawn "$terminal -e vifm"
+riverctl map normal $mod R spawn "$terminal vifm"
 riverctl map normal $mod A spawn mpv_history
 
 # Downloads/*.torrent start downloading
