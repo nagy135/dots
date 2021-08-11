@@ -468,12 +468,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/nvim-compe'
 
     Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-    call plug#end()
+call plug#end()
 
     "}}}
 
-    let g:project_root_todo = 0
-    let g:todo_file_location = ""
+let g:project_root_todo = 0
+let g:todo_file_location = ""
 
     " LSP {{{
     " LSP config (the mappings used in the default file don't quite work right)
