@@ -10,6 +10,7 @@ syntax on
 filetype indent on
 set updatetime=300
 set foldmethod=marker
+set foldlevel=3
 set tabstop=4
 set expandtab
 set shiftwidth=4
