@@ -26,7 +26,14 @@ c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save', 'pypa': 'spa
 # unknown-3rdparty` per-domain on QtWebKit will have the same effect as
 # `all`. If this setting is used with URL patterns, the pattern gets
 # applied to the origin/first party URL of the page making the request,
-# not the request URL.
+# not the request URL. With QtWebEngine 5.15.0+, paths will be stripped
+# from URLs, so URL patterns using paths will not match. With
+# QtWebEngine 5.15.2+, subdomains are additionally stripped as well, so
+# you will typically need to set this setting for `example.com` when the
+# cookie is set on `somesubdomain.example.com` for it to work properly.
+# To debug issues with this setting, start qutebrowser with `--debug
+# --logfilter network --debug-flag log-cookies` which will show all
+# cookies being set.
 # Type: String
 # Valid values:
 #   - all: Accept all cookies.
@@ -43,7 +50,14 @@ config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 # unknown-3rdparty` per-domain on QtWebKit will have the same effect as
 # `all`. If this setting is used with URL patterns, the pattern gets
 # applied to the origin/first party URL of the page making the request,
-# not the request URL.
+# not the request URL. With QtWebEngine 5.15.0+, paths will be stripped
+# from URLs, so URL patterns using paths will not match. With
+# QtWebEngine 5.15.2+, subdomains are additionally stripped as well, so
+# you will typically need to set this setting for `example.com` when the
+# cookie is set on `somesubdomain.example.com` for it to work properly.
+# To debug issues with this setting, start qutebrowser with `--debug
+# --logfilter network --debug-flag log-cookies` which will show all
+# cookies being set.
 # Type: String
 # Valid values:
 #   - all: Accept all cookies.
@@ -51,6 +65,11 @@ config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 #   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 #   - never: Don't accept cookies at all.
 config.set('content.cookies.accept', 'all', 'devtools://*')
+
+# Value to send in the `Accept-Language` header. Note that the value
+# read from JavaScript is always the global value.
+# Type: String
+config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -237,7 +256,6 @@ c.url.searchengines = {'rs': 'https://doc.rust-lang.org/std/?search={}', 'duck':
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://yts.mx/']
 c.url.start_pages = ['file:///home/infiniter/.config/qutebrowser/homepage/index.html']
 
 # Background color of the completion widget for odd rows.
@@ -351,6 +369,39 @@ c.colors.tabs.pinned.selected.even.fg = '#0b0b0b'
 # Type: QtColor
 c.colors.tabs.pinned.selected.even.bg = '#19a85b'
 
+# Background color for webpages if unset (or empty to use the theme's
+# color).
+# Type: QtColor
+c.colors.webpage.bg = '#333333'
+
+# Render all web contents using a dark theme. Example configurations
+# from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
+# inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
+# "With selective image inversion": Set
+# `colors.webpage.darkmode.policy.images` to `smart`.  - "With selective
+# inversion of non-image elements": Set
+# `colors.webpage.darkmode.threshold.text` to 150 and
+# `colors.webpage.darkmode.threshold.background` to 205.  - "With
+# selective inversion of everything": Combines the two variants   above.
+# Type: Bool
+c.colors.webpage.darkmode.enabled = False
+
+# Which algorithm to use for modifying how colors are rendered with
+# darkmode. The `lightness-cielab` value was added with QtWebEngine 5.14
+# and is treated like `lightness-hsl` with older QtWebEngine versions.
+# Type: String
+# Valid values:
+#   - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value. Not available with Qt < 5.14.
+#   - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
+#   - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+
+# Contrast for dark mode. This only has an effect when
+# `colors.webpage.darkmode.algorithm` is set to `lightness-hsl` or
+# `brightness-rgb`.
+# Type: Float
+c.colors.webpage.darkmode.contrast = 0.0
+
 # Font used in the completion widget.
 # Type: Font
 c.fonts.completion.entry = '12pt MesloLGS NF'
@@ -379,11 +430,8 @@ c.fonts.tabs.selected = '12pt MesloLGS NF'
 # Type: Font
 c.fonts.tabs.unselected = '12pt MesloLGS NF'
 
-chrome = 'google-chrome-stable'
-
 # Bindings for normal mode
-config.bind(';;C', 'spawn ' + chrome + ' {url}')
-config.bind('<Ctrl+c>', 'hint links spawn ' + chrome + ' {hint-url}')
+config.bind(';;C', 'spawn google-chrome-stable {url}')
 config.bind(';;M', 'spawn --userscript csfd')
 config.bind(';;c', 'hint links spawn chromium {hint-url}')
 config.bind(';;d', 'spawn --userscript remove_seen')
@@ -392,6 +440,7 @@ config.bind(';;y', 'hint links userscript add-youtube-queue')
 config.bind(';M', 'hint --rapid links spawn umpv {hint-url}')
 config.bind(';m', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/themes/darculized/darculized-all-sites.css ""')
 config.bind(';p', 'enter-mode passthrough')
+config.bind('<Ctrl+c>', 'hint links spawn google-chrome-stable {hint-url}')
 config.bind('<Ctrl+f>', 'hint links tab-bg')
 config.bind('<Ctrl+h>', 'home')
 config.bind('<Ctrl+j>', 'fake-key <Down>')
@@ -423,11 +472,11 @@ config.bind('gY', 'open https://www.youtube.com')
 config.bind('gd', 'tab-give')
 config.bind('gf', 'open -t https://www.facebook.com/messages/')
 config.bind('gh', 'history -t')
+config.bind('gl', 'tab-move -')
 config.bind('gm', 'open -t https://www.gmail.com')
 config.bind('gn', 'enter-mode insert ;; jseval -q document.getElementsByClassName("_1mf _1mj")[0].click()')
 config.bind('go', 'open -t https://yts.ag/')
 config.bind('gp', 'tab-pin')
-config.bind('gl', 'tab-move -')
 config.bind('gr', 'tab-move +')
 config.bind('gs', 'jseval -q document.getElementsByClassName("rc")[0].firstChild.firstChild.click()')
 config.bind('gt', 'open -t https://www.twitch.tv/directory/game/League%20of%20Legends')
@@ -436,7 +485,6 @@ config.bind('gy', 'open -t https://www.youtube.com')
 config.bind('j', 'scroll-page 0 0.1')
 config.bind('k', 'scroll-page 0 -0.1')
 config.bind('m', 'hint links userscript myscript')
-# config.bind('m', 'hint links spawn mpv {hint-url}')
 config.bind('tT', 'hint links spawn twitch -qt {hint-url}')
 config.bind('tt', 'spawn twitch -qt {url}')
 config.bind('u', 'scroll-page 0 -0.5')
