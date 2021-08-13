@@ -11,6 +11,7 @@
 
 # TODOS
 ## general
+* ffmpeg screencast on toggle bind
 * keyboard click
 * mpv history uniquer
 * quickqute rewrite + wayland (bemenu)
