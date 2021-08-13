@@ -1,3 +1,4 @@
 [[add group to existing user]]
 [[swap]]
 [[cli csv]]
+[[generate ssh key]]
