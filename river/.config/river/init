@@ -54,7 +54,7 @@ riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
 
 riverctl map normal Control Grave spawn "dunstctl history-pop"
 riverctl map normal Control Space spawn "dunstctl close"
-riverctl map normal Control+Shift Space "spawn dunstctl close-all"
+riverctl map normal Control+Shift Space spawn "dunstctl close-all"
 riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 
 # }}}
