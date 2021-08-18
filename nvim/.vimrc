@@ -419,6 +419,7 @@ autocmd BufEnter *.py call SetAppDir()
 
 " Plug {{{
 call plug#begin('~/.vim/plugged')
+    Plug 'sainnhe/gruvbox-material'
     Plug 'ziglang/zig.vim'
     Plug 'lervag/wiki.vim'
     Plug 'joshdick/onedark.vim'
@@ -475,21 +476,21 @@ call plug#begin('~/.vim/plugged')
     Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 call plug#end()
 
-    "}}}
+"}}}
 
 let g:project_root_todo = 0
 let g:todo_file_location = ""
 
-    " LSP {{{
-    " LSP config (the mappings used in the default file don't quite work right)
-    nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-    nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-    nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-    nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-    nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-    nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-    nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-    nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
-    " }}}
+" LSP {{{
+" LSP config (the mappings used in the default file don't quite work right)
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+" }}}
 
-    colorscheme nvcode
+colorscheme gruvbox-material
