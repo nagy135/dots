@@ -211,11 +211,6 @@ let g:wiki_root = '~/wiki'
 
 let g:rustfmt_autosave = 1
 
-let g:indent_guides_enable_on_vim_startup = 1
-" let g:molokai_original = 1
-
-" let g:airline_theme='jellybeans'
-
 let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ }
@@ -428,7 +423,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rust-lang/rust.vim'
     " Plug 'vimwiki/vimwiki'
     " Plug 'vim-airline/vim-airline'
-    Plug 'nathanaelkane/vim-indent-guides'
+    Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
