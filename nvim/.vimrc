@@ -5,7 +5,8 @@
 "  ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
 "   ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
 
-" Settings {{{
+" SETTINGS {{{
+
 syntax on
 filetype indent on
 set updatetime=300
@@ -33,29 +34,31 @@ set lazyredraw
 set noshowmode
 set listchars=tab:▸\ ,eol:¬
 set list
+set maxfuncdepth=1000
+set undofile
+set undodir=~/.vim/undodir
+set conceallevel=0
+set splitbelow
+set splitright
 if has('nvim')
     set inccommand=split
     set wildoptions=pum
 endif
-set maxfuncdepth=1000
-set undofile
-" set undodir=~/.vim/undodir
-set conceallevel=0
-set splitbelow
-set splitright
-"}}}
 
+" space as leader key
 let mapleader = " "
 
-"Mappings {{{
+"}}}
+
+" MAPPINGS {{{
 
 nnoremap H ^
 nnoremap L $
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap ;ft   :NERDTreeFind<CR>
 nnoremap ,b   :Tagbar<CR>
-" nnoremap <c-s> :source ~/.vimrc<CR>
-nnoremap <c-s> :w<CR>
+nnoremap <c-s> :source ~/.vimrc<CR>
+" nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
@@ -70,18 +73,11 @@ nnoremap ;b :.w !bash<CR>
 vnoremap ;b :w !bash<CR>
 nnoremap ;g :Goyo<CR>
 nnoremap <F3> :set spell!<CR>
-" nnoremap <C-p> :Clap files<CR>
-" nnoremap <C-m> :Ctrlp<CR>
-" nnoremap <C-m> :BLines<CR>
-nnoremap <c-g> :Rg<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
-
-nnoremap <leader><leader>d :CocDiagnostics<CR>
-nnoremap <leader><leader>a :CocAction<CR>
 
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -99,6 +95,7 @@ nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gP :Git pull<CR>
 
+" Primeagen 5 tips
 nnoremap Y y$
 
 nnoremap n nzzzv
@@ -122,11 +119,11 @@ nnoremap <leader>k :m .-2<CR>==
 
 " wiki extra binds
 nnoremap <leader>wp :WikiFzfPages<CR>
+
 "}}}
 
-" AutoCommands {{{
+" AUTOCOMMANDS {{{
 autocmd BufNewFile,BufRead *.wiki set filetype=markdown
-" autocmd CursorHold * silent call CocActionAsync('highlight')
 autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
 "MatLab
 autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
@@ -154,7 +151,7 @@ autocmd FileType go nnoremap ;p ofmt.Println()<ESC>i
 autocmd FileType go nnoremap ;P Ofmt.Println()<ESC>i
 autocmd FileType go nnoremap ;;p yiwofmt.Println("", )<ESC>PF"P^
 autocmd FileType go nnoremap ;;P yiwOfmt.Println("", )<ESC>PF"P^
-"SH
+"Shell
 autocmd FileType sh nnoremap <c-j> :w !bash<CR>:w<CR>
 autocmd FileType sh nnoremap ;;p yiwoecho ""<ESC>PA $<ESC>p
 autocmd FileType sh nnoremap ;;P yiwOecho ""<ESC>PA $<ESC>p
@@ -167,7 +164,6 @@ autocmd FileType cpp nnoremap <c-l> :!choose_main<CR>
 "Perl
 autocmd FileType perl nnoremap <c-j> :w !perl<CR>
 "PHP
-autocmd FileType php nnoremap <leader>e :w !perl<CR>
 autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
 autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
 
@@ -176,7 +172,6 @@ autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
 autocmd FileType javascript nnoremap ;;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
 autocmd FileType javascript nnoremap ;;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
 
-let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 
 augroup filetype_vim
@@ -190,98 +185,7 @@ au VimEnter,WinEnter * if !exists('w:_vsc_conflict_marker_match') |
         \ endif
 "}}}
 
-" Color schemes {{{
-" colorscheme molokai
-" colorscheme luna-term
-" colorscheme jellybeans
-" colorscheme onedark
-" }}}
-
-let g:markdown_folding = 0
-
-" Plugin setup {{{
-if !exists('g:jellybeans_overrides')
-    let g:jellybeans_overrides = {
-    \    'background': { 'guibg': '123123' },
-    \}
-endif
-
-
-let g:wiki_root = '~/wiki'
-
-let g:rustfmt_autosave = 1
-
-let g:lightline = {
-      \ 'colorscheme': 'onedark',
-      \ }
-
-let g:indentLine_char = '|'
-
-let g:vim_json_syntax_conceal = 0
-
-let g:goyo_width = 131
-let g:goyo_height = 102
-
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit' }
-let g:fzf_buffers_jump = 1
-
-" {{{ fzf floating setup
-" Using floating windows of Neovim to start fzf
-if has('nvim')
-  function! FloatingFZF(width, height, border_highlight)
-    function! s:create_float(hl, opts)
-      let buf = nvim_create_buf(v:false, v:true)
-      let opts = extend({'relative': 'editor', 'style': 'minimal'}, a:opts)
-      let win = nvim_open_win(buf, v:true, opts)
-      call setwinvar(win, '&winhighlight', 'NormalFloat:'.a:hl)
-      call setwinvar(win, '&colorcolumn', '')
-      return buf
-    endfunction
-
-    " Size and position
-    let width = float2nr(&columns * a:width)
-    let height = float2nr(&lines * a:height)
-    let row = float2nr((&lines - height) / 2)
-    let col = float2nr((&columns - width) / 2)
-
-    " Border
-    let top = '┌' . repeat('─', width - 2) . '┐'
-    let mid = '│' . repeat(' ', width - 2) . '│'
-    let bot = '└' . repeat('─', width - 2) . '┘'
-    let border = [top] + repeat([mid], height - 2) + [bot]
-
-    " Draw frame
-    let s:frame = s:create_float(a:border_highlight, {'row': row, 'col': col, 'width': width, 'height': height})
-    call nvim_buf_set_lines(s:frame, 0, -1, v:true, border)
-
-    " Draw viewport
-    call s:create_float('Normal', {'row': row + 1, 'col': col + 2, 'width': width - 4, 'height': height - 2})
-    autocmd BufWipeout <buffer> execute 'bwipeout' s:frame
-  endfunction
-
-  let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
-endif
-if has('nvim') && !exists('g:fzf_layout')
-  autocmd! FileType fzf
-  autocmd  FileType fzf set laststatus=0 noshowmode noruler
-    \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-endif
-" }}}
-
-" Opens pdf with zathura
-function! ZathuraOpen()
-    let path = expand('%:p')
-    let arr = split( path, '\.')
-    let pdf = arr[0] . '.pdf'
-    execute "silent !zathura " . pdf . " &"
-endfunc
-"}}}
-
-" Powerline settings {{{
-" air-line
+" Statusline settings {{{
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -307,9 +211,11 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ' '
+
 " }}}
 
 " Functions {{{
+
 " Deletes function call and its brackets when hovered over function name
 function! DeleteFunctionUnderCursor()
     let line = getline('.')
@@ -354,16 +260,8 @@ function! DeleteFunctionUnderCursor()
     endwhile
 endfunc
 
-function! Check_letter()
-    normal! h
-    if getline(".")[col(".")-1] == '('
-        echom "som dnu"
-    endif
-endfunc
-
+" Scrolling for tabs {{{
 function! AutoScroll()
-    " let l:line_count = str2nr(line('$'))
-    " set maxfuncdepth = l:line_count
     call AutoScrollRecurse()
 endfunction
 
@@ -373,46 +271,19 @@ function! AutoScrollRecurse()
     sleep 600m
     call AutoScrollRecurse()
 endfunction
+"}}}
+
+" Opens pdf with zathura
+function! ZathuraOpen()
+    let path = expand('%:p')
+    let arr = split( path, '\.')
+    let pdf = arr[0] . '.pdf'
+    execute "silent !zathura " . pdf . " &"
+endfunc
 
 "}}}
 
-" Relative django jumps {{{
-let g:last_relative_dir = ''
-nnoremap \1 :call RelatedFile ("models.py")<cr>
-nnoremap \2 :call RelatedFile ("views.py")<cr>
-nnoremap \3 :call RelatedFile ("urls.py")<cr>
-nnoremap \4 :call RelatedFile ("admin.py")<cr>
-nnoremap \5 :call RelatedFile ("tests.py")<cr>
-nnoremap \6 :call RelatedFile ( "templates/" )<cr>
-nnoremap \7 :call RelatedFile ( "templatetags/" )<cr>
-nnoremap \8 :call RelatedFile ( "management/" )<cr>
-nnoremap \0 :e settings.py<cr>
-nnoremap \9 :e urls.py<cr>
-
-fun! RelatedFile(file)
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        exec "edit %:h/" . a:file
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-    if g:last_relative_dir != ''
-        exec "edit " . g:last_relative_dir . a:file
-        return ''
-    endif
-    echo "Cant determine where relative file is : " . a:file
-    return ''
-endfun
-
-fun SetAppDir()
-    if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-        let g:last_relative_dir = expand("%:h") . '/'
-        return ''
-    endif
-endfun
-autocmd BufEnter *.py call SetAppDir()
-" }}}
-
-" Plug {{{
+" PLUG {{{
 call plug#begin('~/.vim/plugged')
     Plug 'sainnhe/gruvbox-material'
     Plug 'ziglang/zig.vim'
@@ -421,9 +292,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    " Plug 'vimwiki/vimwiki'
     " Plug 'vim-airline/vim-airline'
-    Plug 'lukas-reineke/indent-blankline.nvim'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
@@ -438,43 +307,116 @@ call plug#begin('~/.vim/plugged')
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
 
-    Plug 'sudormrfbin/cheatsheet.nvim'
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzy-native.nvim'
     Plug 'LandonSchropp/vim-stamp'
     " Plug 'vim-airline/vim-airline-themes'
     Plug 'itchyny/lightline.vim'
     Plug 'mhinz/vim-startify'
     Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
-    " Plug 'ycm-core/YouCompleteMe'
     Plug 'junegunn/goyo.vim'
-    if has('nvim')
-        " Plug 'neovim/nvim-lsp'
-        " Plug 'liuchengxu/vim-clap'
-        Plug 'sindrets/diffview.nvim'
-        Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-    endif
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
-
-    Plug 'nagy135/capture-nvim'
-    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " Plug 'nvim-treesitter/playground'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-compe'
-
     Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
+    if has('nvim')
+        " Plug 'neovim/nvim-lsp'
+        " Plug 'liuchengxu/vim-clap'
+        Plug 'lukas-reineke/indent-blankline.nvim'
+        Plug 'sudormrfbin/cheatsheet.nvim'
+        Plug 'nvim-lua/popup.nvim'
+        Plug 'nvim-lua/plenary.nvim'
+        Plug 'nvim-telescope/telescope.nvim'
+        Plug 'nvim-telescope/telescope-fzy-native.nvim'
+        Plug 'sindrets/diffview.nvim'
+        Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+        Plug 'nagy135/capture-nvim'
+        Plug 'neovim/nvim-lspconfig'
+        Plug 'hrsh7th/nvim-compe'
+        " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        " Plug 'nvim-treesitter/playground'
+    endif
 call plug#end()
 
 "}}}
 
+" CONFIGURATION {{{
+
+let g:markdown_folding = 0
+
+if !exists('g:jellybeans_overrides')
+    let g:jellybeans_overrides = {
+    \    'background': { 'guibg': '123123' },
+    \}
+endif
+
+let g:xml_syntax_folding=1
+
+let g:wiki_root = '~/wiki'
+
+let g:rustfmt_autosave = 1
+
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ }
+
+let g:vim_json_syntax_conceal = 0
+
+let g:goyo_width = 131
+let g:goyo_height = 102
+
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+let g:fzf_buffers_jump = 1
+
 let g:project_root_todo = 0
 let g:todo_file_location = ""
+
+" {{{ fzf floating setup
+" Using floating windows of Neovim to start fzf
+if has('nvim')
+  function! FloatingFZF(width, height, border_highlight)
+    function! s:create_float(hl, opts)
+      let buf = nvim_create_buf(v:false, v:true)
+      let opts = extend({'relative': 'editor', 'style': 'minimal'}, a:opts)
+      let win = nvim_open_win(buf, v:true, opts)
+      call setwinvar(win, '&winhighlight', 'NormalFloat:'.a:hl)
+      call setwinvar(win, '&colorcolumn', '')
+      return buf
+    endfunction
+
+    " Size and position
+    let width = float2nr(&columns * a:width)
+    let height = float2nr(&lines * a:height)
+    let row = float2nr((&lines - height) / 2)
+    let col = float2nr((&columns - width) / 2)
+
+    " Border
+    let top = '┌' . repeat('─', width - 2) . '┐'
+    let mid = '│' . repeat(' ', width - 2) . '│'
+    let bot = '└' . repeat('─', width - 2) . '┘'
+    let border = [top] + repeat([mid], height - 2) + [bot]
+
+    " Draw frame
+    let s:frame = s:create_float(a:border_highlight, {'row': row, 'col': col, 'width': width, 'height': height})
+    call nvim_buf_set_lines(s:frame, 0, -1, v:true, border)
+
+    " Draw viewport
+    call s:create_float('Normal', {'row': row + 1, 'col': col + 2, 'width': width - 4, 'height': height - 2})
+    autocmd BufWipeout <buffer> execute 'bwipeout' s:frame
+  endfunction
+
+  let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
+endif
+if has('nvim') && !exists('g:fzf_layout')
+  autocmd! FileType fzf
+  autocmd  FileType fzf set laststatus=0 noshowmode noruler
+    \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+endif
+" }}}
 
 " LSP {{{
 " LSP config (the mappings used in the default file don't quite work right)
@@ -488,4 +430,7 @@ nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " }}}
 
+" Colorscheme
 colorscheme gruvbox-material
+
+"}}}
