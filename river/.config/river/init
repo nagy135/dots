@@ -203,6 +203,15 @@ done
 # Set repeat rate
 riverctl set-repeat 35 200
 
+# Touchpad setup {{{
+
+# name can be found via:
+# riverctl list-inputs (copy whole line!)
+riverctl input 2:7:SynPS/2_Synaptics_TouchPad tap enabled
+riverctl input 2:7:SynPS/2_Synaptics_TouchPad natural-scroll enabled
+
+# }}}
+
 # Set app-ids of views which should float
 riverctl float-filter-add "float"
 riverctl float-filter-add "popup"
