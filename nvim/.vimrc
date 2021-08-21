@@ -88,6 +88,11 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Todo Comments
+nnoremap <leader>tt :TodoTelescope<CR>
+nnoremap <leader>tq :TodoQuickFix<CR>
+nnoremap <leader>tl :TodoLocList<CR>
+
 " Git
 nnoremap <leader>gg :G<CR>
 nnoremap <leader>gs :G<CR>
@@ -334,6 +339,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nagy135/capture-nvim'
         Plug 'neovim/nvim-lspconfig'
         Plug 'hrsh7th/nvim-compe'
+        Plug 'folke/todo-comments.nvim'
         " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " Plug 'nvim-treesitter/playground'
     endif
