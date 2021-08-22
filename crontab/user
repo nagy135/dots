@@ -1,2 +1,2 @@
 */10 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) /usr/bin/subtube update --secret
-*/30 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send -u low -t 1500 "$(date +\%H:\%M)"
+*/30 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send -t 1500 "$(date +\%H:\%M)"
