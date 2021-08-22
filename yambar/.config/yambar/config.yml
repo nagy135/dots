@@ -5,7 +5,7 @@
 # the sway-xkb module with the xkb module.
 
 # fonts we'll be re-using here and there
-awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=14
+awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=18
 awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=16
 
 std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
@@ -14,22 +14,22 @@ std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
 bar:
   height: 26
   location: top
-  spacing: 5
-  margin: 7
+  spacing: 10
+  margin: 5
 
   # Default font
-  font: Adobe Helvetica:pixelsize=12
+  font: MesloLGS NF:pixelsize=16
 
   foreground: ffffffff
-  background: 111111cc
+  background: 0b0b0bcc
 
   border:
     width: 1
     color: 999999cc
-    margin: 5
-    top-margin: 0
+    margin: 2
+    top-margin: 2
 
-  left:
+  center:
     - river:
         content:
           map:
@@ -37,9 +37,18 @@ bar:
             values:
               false: {empty: {}}
               true:
-                string:
-                  margin: 5
-                  text: "{id}: {state}"
+                map:
+                  tag: focused
+                  values:
+                    false:
+                      string:
+                        margin: 15
+                        text: "{id}"
+                    true:
+                      string:
+                        margin: 15
+                        text: "{id}"
+                        deco: {background: {color: c22339ff}}
 
   right:
     - removables:
@@ -93,7 +102,7 @@ bar:
                         values:
                           "": {string: {text: , font: *awesome, foreground: ffffff66}}
     - network:
-        name: wlp2s0
+        name: wlan0
         content:
           map:
             tag: state
@@ -126,7 +135,7 @@ bar:
                     - string: {text: , font: *awesome}
     - backlight:
         name: intel_backlight
-        content: [ string: {text: , font: *awesome}, string: {text: "{percent}%"}]
+        content: [ string: {text: , font: *awesome, margin: 5}, string: {text: "{percent}%"}]
     - battery:
         name: BAT0
         poll-interval: 30
@@ -154,7 +163,7 @@ bar:
                 - string: {text: "{capacity}% {estimate}"}
               full:
                 - string: {text: , foreground: 00ff00ff, font: *awesome}
-                - string: {text: "{capacity}% full"}
+                - string: {text: "{capacity}%"}
               not charging:
                 - ramp:
                     tag: capacity
@@ -171,15 +180,6 @@ bar:
                       - string: {text:  , foreground: 00ff00ff, font: *awesome}
                 - string: {text: "{capacity}%"}
     - clock:
-        time-format: "%H:%M %Z"
+        time-format: "%H:%M"
         content:
-          - string: {text: , font: *awesome}
-          - string: {text: "{date}", right-margin: 5}
-          - string: {text: , font: *awesome}
           - string: {text: "{time}"}
-    - label:
-        content:
-          string:
-            on-click: loginctl poweroff
-            text: 
-            font: *awesome
