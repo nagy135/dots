@@ -301,7 +301,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-commentary'
+    Plug 'terrortylor/nvim-comment'
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-markdown'
