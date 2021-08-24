@@ -1,8 +1,13 @@
 source ~/.vimrc
-lua require('my_telescope')
-lua require('my_diffview')
-lua require('my_lsp')
-lua require('my_indent-blackline')
-lua require('my_todo-comments')
-lua require('my_nvim-comment')
-lua require('my_nvim-colorizer')
+
+lua << EOF
+
+require('my_telescope')
+require('my_diffview')
+require('my_lsp')
+require('my_indent-blackline')
+require('my_todo-comments')
+require('my_nvim-comment')
+require('my_nvim-colorizer')
+
+EOF
