@@ -133,7 +133,7 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version} Edg/{upstream_browser_version}', 'https://accounts.google.com/*')
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -222,7 +222,12 @@ c.tabs.padding = {'top': 10, 'bottom': 10, 'left': 10, 'right': 10}
 # web page. * `{protocol}`: Protocol (http/https/...) of the current web
 # page. * `{audio}`: Indicator for audio/mute status.
 # Type: FormatString
-c.tabs.title.format = '{index}: {current_title}'
+c.tabs.title.format = '{audio}{index}: {current_title}'
+
+# Format to use for the tab title for pinned tabs. The same placeholders
+# like for `tabs.title.format` are defined.
+# Type: FormatString
+c.tabs.title.format_pinned = '{audio}{index}'
 
 # Width (in pixels) of the progress indicator (0 to disable).
 # Type: Int
@@ -468,6 +473,7 @@ config.bind('gM', 'open https://www.gmail.com')
 config.bind('gO', 'open https://yts.ag/')
 config.bind('gS', 'open https://www.youtube.com/user/EpicSkillshot/videos')
 config.bind('gT', 'open https://www.twitch.tv/directory/game/League%20of%20Legends')
+config.bind('gV', 'open https://github.com/nagy135')
 config.bind('gY', 'open https://www.youtube.com')
 config.bind('gd', 'tab-give')
 config.bind('gf', 'open -t https://www.facebook.com/messages/')
@@ -481,8 +487,6 @@ config.bind('gr', 'tab-move +')
 config.bind('gs', 'jseval -q document.getElementsByClassName("rc")[0].firstChild.firstChild.click()')
 config.bind('gt', 'open -t https://www.twitch.tv/directory/game/League%20of%20Legends')
 config.bind('gv', 'open -t https://github.com/nagy135')
-config.bind('gV', 'open https://github.com/nagy135')
-# config.bind('gv', 'jseval -q $("paper-tab[tabindex=\'-1\']").click()')
 config.bind('gy', 'open -t https://www.youtube.com')
 config.bind('j', 'scroll-page 0 0.1')
 config.bind('k', 'scroll-page 0 -0.1')

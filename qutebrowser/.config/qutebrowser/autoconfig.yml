@@ -6,13 +6,7 @@
 
 config_version: 2
 settings:
-  colors.tabs.selected.odd.fg:
-    global: '#0b0b0b'
-  colors.webpage.bg:
-    global: '#333333'
-  colors.webpage.darkmode.algorithm:
-    global: lightness-cielab
-  colors.webpage.darkmode.contrast:
-    global: 0.0
-  colors.webpage.darkmode.enabled:
-    global: false
+  tabs.title.format:
+    global: '{audio}{index}: {current_title}'
+  tabs.title.format_pinned:
+    global: '{audio}{index}'
