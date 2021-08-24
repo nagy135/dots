@@ -43,6 +43,7 @@ set splitright
 if has('nvim')
     set inccommand=split
     set wildoptions=pum
+    set termguicolors
 endif
 
 " space as leader key
@@ -92,6 +93,11 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>tt :TodoTelescope<CR>
 nnoremap <leader>tq :TodoQuickFix<CR>
 nnoremap <leader>tl :TodoLocList<CR>
+
+" nvim-colorizer.lua binds
+nnoremap <leader>cc :ColorizerToggle<CR>
+nnoremap <leader>ca :ColorizerAttachToBuffer<CR>
+nnoremap <leader>cd :ColorizerDetachFromBuffer<CR>
 
 " Git
 nnoremap <leader>gg :G<CR>
@@ -305,8 +311,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-markdown'
-    " Plug 'chrisbra/Colorizer'
-    Plug 'ap/vim-css-color'
     Plug 'mattn/emmet-vim'
     Plug 'rstacruz/vim-closer'
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -340,6 +344,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'neovim/nvim-lspconfig'
         Plug 'hrsh7th/nvim-compe'
         Plug 'folke/todo-comments.nvim'
+        Plug 'norcalli/nvim-colorizer.lua'
         " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " Plug 'nvim-treesitter/playground'
     endif
