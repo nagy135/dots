@@ -87,7 +87,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+" Telescope helps
+nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
 
 " Todo Comments
 nnoremap <leader>tt :TodoTelescope<CR>
