@@ -1,3 +1,4 @@
 [[diff]]
 [[vimgrep]]
 [[formatting]]
+[[nvim add to runtime]]
