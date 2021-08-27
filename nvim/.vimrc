@@ -89,6 +89,9 @@ nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 
+" Telescope swiper
+nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+
 " Telescope helps
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
