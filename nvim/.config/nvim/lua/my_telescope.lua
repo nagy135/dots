@@ -4,10 +4,6 @@ local actions = require('telescope.actions')
 
 require('telescope').setup{
     defaults = {
-        file_ignore_patterns = {
-            "public/*",
-            "_ide_helper*.php"
-        },
         mappings = {
             i = {
                 ["<C-j>"] = actions.move_selection_next,
