@@ -41,6 +41,7 @@
 [[awk]]
 [[weechat]]
 [[stow]]
+[[pacman]]
 
 ## Wayland
 * [[wayland clipboard]]

@@ -1,0 +1,18 @@
+# Sync (with force repository sync)
+sudo pacman -Syyuu
+
+# Install
+sudo pacman -S packge
+
+# Uninstall (with dependencies)
+sudo pacman -Rs packge
+
+# Remove cache (only uninstalled ones)
+sudo pacman -Sc
+# Remove cache (all cache)
+sudo pacman -Sc
+
+# List available updates (run after Sync)
+pacman -Qu
+
+// vim: ft=sh
