@@ -11,11 +11,11 @@
 
 # TODOS
 ## general
+* solve transmission permission (transfer after download)
 * ffmpeg screencast on toggle bind
 * keyboard click
 * mpv history uniquer
 * quickqute rewrite + wayland (bemenu)
-* subtube automatic update
 * rofi selection for remembered autoclick sequences
     * named records
     * maybe add "parts", wait for site load
