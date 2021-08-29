@@ -24,7 +24,6 @@
     * insert email bind
     * caps escape/ctrl press/hold
 ## wayland
-* tmux basics (tpm, theme etc)
 * tmux switcher
 * river scratchpad (works but needs proper one bind script)
 
