@@ -20,8 +20,13 @@ require('telescope').setup{
             '--line-number',
             '--column',
             '--smart-case',
-            '--ignore-file',
-            os.getenv("XDG_CONFIG_HOME") .. '/nvim/.gitignore_global'
+
+            '--glob', '!.git/*',
+            '--glob', '!_ide_helper*.php',
+            '--glob', '!public/packages/**',
+            '--glob', '!vendor/**',
+            '--glob', '!node_modules/**',
+            '--glob', '!tags',
         },
         prompt_prefix = "> ",
         selection_caret = "> ",
