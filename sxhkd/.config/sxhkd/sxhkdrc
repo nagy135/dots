@@ -582,6 +582,10 @@ super + slash
 ### clicker record
 super + ctrl + slash
     clicker --record
+#
+### clicker record (with left mouseclick)
+super + ctrl + button1
+    clicker --record
 
 ### clicker record (rightclick)
 super + ctrl + shift + slash
