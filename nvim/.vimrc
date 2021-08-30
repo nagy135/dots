@@ -81,6 +81,10 @@ nnoremap <F4> :call ZathuraOpen()<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
 
+" quickfix movement
+nnoremap <C-j> :cn<CR>
+nnoremap <C-k> :cp<CR>
+
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -88,6 +92,8 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
+
+nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
 " Telescope swiper
 nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
