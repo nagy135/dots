@@ -85,22 +85,33 @@ nnoremap <leader>qq :q!<CR>
 nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
 
-" Telescope
+" Telescope {{{
+
+" general {{{
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
+"neighbors
+nnoremap <leader>fn <cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>
+
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
+
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 
 nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
-" Telescope swiper
+" }}}
+
+" swiper
 nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 
-" Telescope helps
+" helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
+" }}}
+"
+" }}}
 
 " Todo Comments
 nnoremap <leader>tt :TodoTelescope<CR>
