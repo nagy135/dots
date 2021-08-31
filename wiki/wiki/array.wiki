@@ -1,0 +1,56 @@
+# create
+my_array=(1 2 "string" 4)
+
+# looping over elements
+for element in ${my_array[@]}; do
+    echo $element
+done
+
+# looping over indices
+for index in ${!my_array[@]}; do
+    echo $index ${my_array[$index]}
+done
+
+# append values
+my_array+=( "new value1" "new_value2" )
+
+
+# cheat sheet {{{ 
+
+# Create an empty array
+arr=()
+
+# Initialize array
+arr=(1 2 3)
+
+# Retrieve third element
+${arr[2]}
+
+# Retrieve all elements
+${arr[@]}
+
+# Retrieve array indices
+${!arr[@]}
+
+# Calculate array size
+${#arr[@]}
+
+# Overwrite 1st element
+arr[0]=3
+
+# Append value(s)
+arr+=(4)
+
+# Save ls output as a string
+str=$(ls)
+
+# Save ls output as an array of files
+arr=( $(ls) )
+
+# Retrieve n elements starting at index s
+${arr[@]:s:n}
+
+# }}}
+
+
+// vim: ft=sh
