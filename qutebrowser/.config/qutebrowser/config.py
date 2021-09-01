@@ -436,9 +436,11 @@ c.fonts.tabs.selected = '12pt MesloLGS NF'
 c.fonts.tabs.unselected = '12pt MesloLGS NF'
 
 # Bindings for normal mode
-config.bind(';;C', 'spawn google-chrome-stable {url}')
+chrome_bin = "google-chrome-stable"
+config.bind(';;C', 'spawn ' + chrome_bin + ' {url}')
+config.bind(';;c', 'hint links spawn ' + chrome_bin + ' {hint-url}')
+
 config.bind(';;M', 'spawn --userscript csfd')
-config.bind(';;c', 'hint links spawn chromium {hint-url}')
 config.bind(';;d', 'spawn --userscript remove_seen')
 config.bind(';;m', 'hint links spawn mpv {hint-url}')
 config.bind(';;y', 'hint links userscript add-youtube-queue')
