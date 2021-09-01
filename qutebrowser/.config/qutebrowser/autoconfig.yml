@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  tabs.title.format:
-    global: '{audio}{index}: {current_title}'
-  tabs.title.format_pinned:
-    global: '{audio}{index}'
+  colors.webpage.bg:
+    global: white

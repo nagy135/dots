@@ -377,7 +377,7 @@ c.colors.tabs.pinned.selected.even.bg = '#19a85b'
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = '#333333'
+c.colors.webpage.bg = 'white'
 
 # Render all web contents using a dark theme. Example configurations
 # from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
