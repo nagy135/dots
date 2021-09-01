@@ -109,6 +109,8 @@ nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_fi
 " helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
+nnoremap <leader>hb <cmd>lua require('telescope.builtin').keymaps()<cr>
+nnoremap <leader>hm <cmd>lua require('telescope.builtin').keymaps()<cr>
 " }}}
 "
 " }}}
