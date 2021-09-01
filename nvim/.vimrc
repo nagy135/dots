@@ -327,7 +327,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    " Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
@@ -342,7 +341,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'LandonSchropp/vim-stamp'
     " Plug 'vim-airline/vim-airline-themes'
-    Plug 'itchyny/lightline.vim'
+    " Plug 'itchyny/lightline.vim'
+    " Plug 'vim-airline/vim-airline'
     Plug 'mhinz/vim-startify'
     Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
@@ -355,7 +355,8 @@ call plug#begin('~/.vim/plugged')
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
-        " Plug 'liuchengxu/vim-clap'
+        Plug 'hoob3rt/lualine.nvim'
+        Plug 'kyazdani42/nvim-web-devicons'
         Plug 'lukas-reineke/indent-blankline.nvim'
         Plug 'sudormrfbin/cheatsheet.nvim'
         Plug 'nvim-lua/popup.nvim'
