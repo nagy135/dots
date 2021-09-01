@@ -37,6 +37,7 @@
 [[git]]
 [[vim]]
 [[linux]]
+[[bash]]
 [[awk]]
 [[weechat]]
 [[stow]]
