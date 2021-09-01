@@ -56,8 +56,8 @@ let mapleader = " "
 
 nnoremap H ^
 nnoremap L $
-nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap ;ft   :NERDTreeFind<CR>
+nnoremap <C-b> :NvimTreeToggle<CR>
+nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap ,b   :Tagbar<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 " nnoremap <c-s> :w<CR>
@@ -327,7 +327,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
     Plug 'terrortylor/nvim-comment'
@@ -370,6 +369,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/nvim-compe'
         Plug 'folke/todo-comments.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
+        Plug 'kyazdani42/nvim-tree.lua'
         " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " Plug 'nvim-treesitter/playground'
     endif
