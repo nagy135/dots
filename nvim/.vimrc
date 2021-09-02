@@ -130,6 +130,7 @@ nnoremap <leader>gg :G<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gP :Git pull<CR>
 
 " Primeagen 5 tips
