@@ -56,8 +56,8 @@ let mapleader = " "
 
 nnoremap H ^
 nnoremap L $
-nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap ;ft   :NERDTreeFind<CR>
+nnoremap <C-b> :NvimTreeToggle<CR>
+nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap ,b   :Tagbar<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 " nnoremap <c-s> :w<CR>
@@ -109,6 +109,8 @@ nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_fi
 " helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
+nnoremap <leader>hb <cmd>lua require('telescope.builtin').keymaps()<cr>
+nnoremap <leader>hm <cmd>lua require('telescope.builtin').keymaps()<cr>
 " }}}
 "
 " }}}
@@ -328,8 +330,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'noahfrederick/vim-laravel'
     Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
-    " Plug 'vim-airline/vim-airline'
-    Plug 'scrooloose/nerdtree'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
     Plug 'terrortylor/nvim-comment'
@@ -343,7 +343,8 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'LandonSchropp/vim-stamp'
     " Plug 'vim-airline/vim-airline-themes'
-    Plug 'itchyny/lightline.vim'
+    " Plug 'itchyny/lightline.vim'
+    " Plug 'vim-airline/vim-airline'
     Plug 'mhinz/vim-startify'
     Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
@@ -356,7 +357,8 @@ call plug#begin('~/.vim/plugged')
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
-        " Plug 'liuchengxu/vim-clap'
+        Plug 'hoob3rt/lualine.nvim'
+        Plug 'kyazdani42/nvim-web-devicons'
         Plug 'lukas-reineke/indent-blankline.nvim'
         Plug 'sudormrfbin/cheatsheet.nvim'
         Plug 'nvim-lua/popup.nvim'
@@ -370,6 +372,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/nvim-compe'
         Plug 'folke/todo-comments.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
+        Plug 'kyazdani42/nvim-tree.lua'
         " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " Plug 'nvim-treesitter/playground'
     endif
