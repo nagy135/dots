@@ -38,6 +38,11 @@ riverctl map normal $mod+Shift T spawn "tsm-clean"
 riverctl map normal $mod Y spawn "subtube play"
 riverctl map normal $mod F5 spawn "subtube update"
 
+# tmux controller
+riverctl map normal $mod E spawn "tmux_controller list"
+riverctl map normal $mod+Control E spawn "tmux_controller create"
+riverctl map normal $mod+Shift E spawn "tmux_controller kill"
+
 # tabber
 riverctl map normal $mod+Control G spawn "tabber grab"
 riverctl map normal $mod+Mod1 G spawn "tabber"
@@ -72,7 +77,7 @@ riverctl map normal $mod Delete "swaylock --clock"
 riverctl map normal $mod X close
 
 # Mod+E to exit river
-riverctl map normal $mod+Shift E exit
+riverctl map normal $mod+Mod1 E exit
 
 # Mod+J and Mod+K to focus the next/previous view in the layout stack
 riverctl map normal $mod J focus-view next
