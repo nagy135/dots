@@ -28,3 +28,12 @@ bindkey -M menuselect 'l' vi-forward-char
 
 # <C-x> i => interactive mode (from beginning of words)
 bindkey -M menuselect '^xi' vi-insert
+
+# <C-x> h => accept selected and continue picking
+bindkey -M menuselect '^xh' accept-and-hold
+
+# <C-x> n => accept, if directory continue picking inside
+bindkey -M menuselect '^xn' accept-and-infer-next-history
+
+# <C-x> u => undo on selections from menu
+bindkey -M menuselect '^xu' undo
