@@ -11,9 +11,14 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 export VISUAL=nvim
 export EDITOR=nvim
 export TERMINAL=foot
-export XDG_CONFIG_HOME=/home/infiniter/.config
+export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+
+# history configuration
+export HISTFILE="$HOME/.local/share/zsh/.histfile"
+export HISTSIZE=1000
+export SAVEHIST=1000
 
 # export LANG="en_US.UTF-8"
 # export LC_COLLATE="C"
