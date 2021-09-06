@@ -38,8 +38,7 @@ export XDG_CONFIG_HOME=/home/infiniter/.config
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
-autoload -Uz compinit
-compinit
+source $HOME/.zsh_completions
 # End of lines added by compinstall
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -50,7 +49,6 @@ eval "$(lua ~/Clones/z.lua/z.lua --init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-zstyle ':completion:*' matcher-list 'r:|.=*'
 
 # export LANG="en_US.UTF-8"
 # export LC_COLLATE="C"
