@@ -64,3 +64,18 @@ torrentmove(){
         && exit
     sudo chmod -R 777 ~/Torrent/*
 }
+git-last-commits(){
+    NL=$'\n'
+
+    branches=$(git branch -r | awk '{print $1}')
+    results="";
+
+    while read branch_name; do
+        result=$(git show \
+            --color=always \
+            --pretty=format:"%Cgreen%ci %Cblue%cr %Cred%cn %Creset" $branch_name \
+            | head -n 1)
+        results="$results${NL}$result#$branch_name"
+    done <<< "$branches"
+    echo "$results" | sort -r | column -t -s'#' | tr '#' ' '
+}
