@@ -85,6 +85,10 @@ nnoremap <leader>qq :q!<CR>
 nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
 
+" move tabs
+nnoremap <leader><leader>l :tabm+<CR>
+nnoremap <leader><leader>h :tabm-<CR>
+
 " Telescope {{{
 
 " general {{{
@@ -174,7 +178,7 @@ autocmd FileType rust nnoremap ;P Oprintln!();<ESC>hi
 autocmd FileType rust nnoremap ;;p yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
 autocmd FileType rust nnoremap ;;P yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
 autocmd FileType rust nnoremap <leader>r :botright split<CR>:term cargo run<CR>
-autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
+" autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
 autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
 autocmd FileType rust nnoremap <leader><leader>t :CocCommand rust-analyzer.toggleInlayHints<CR>
 "Python
