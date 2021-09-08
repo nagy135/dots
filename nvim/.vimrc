@@ -105,6 +105,8 @@ nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
 
 nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
+nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
+
 " }}}
 
 " swiper
