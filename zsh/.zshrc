@@ -17,6 +17,12 @@ zstyle :compinstall filename '/home/infiniter/.zshrc'
 
 bindkey '^R' history-incremental-search-backward
 
+# edit command in vim <C-X><C-E> or <C-X>E
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+bindkey "^XE" edit-command-line
+
 source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zsh_completions
