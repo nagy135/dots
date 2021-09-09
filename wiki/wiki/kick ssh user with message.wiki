@@ -1,0 +1,17 @@
+# go root
+sudo su
+
+# get logged users
+who
+
+# find their shell
+ps aux | grep "pts/3"
+id=666 # id of their shell process
+
+# write them
+echo "hahahahahah" | write mandrisov pts/3
+
+# kill their shell, that disconnects them
+kill $id
+
+// vim: ft=sh

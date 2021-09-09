@@ -2,3 +2,4 @@
 [[swap]]
 [[cli csv]]
 [[generate ssh key]]
+[[kick ssh user with message]]
