@@ -229,6 +229,9 @@ augroup END
 au VimEnter,WinEnter * if !exists('w:_vsc_conflict_marker_match') |
         \   let w:_vsc_conflict_marker_match = matchadd('ErrorMsg', '^\(<\|=\||\|>\)\{7\}\([^=].\+\)\?$') |
         \ endif
+au VimEnter,WinEnter * if !exists('w:_empty_lines_highlight') |
+        \   let w:_empty_lines_highlight = matchadd('WarningMsg', '^\s*$') |
+        \ endif
 "}}}
 
 " Functions {{{
