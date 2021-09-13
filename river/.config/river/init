@@ -10,9 +10,8 @@
 
 # Use the "logo" key as the primary modifier
 mod="Mod4"
-terminal="foot"
 
-# beta channel chrome with runtime flag for wayland support (fixes fullscreen issue)
+terminal="foot"
 chrome="google-chrome-stable"
 
 # Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
