@@ -11,6 +11,7 @@
 
 # TODOS
 ## general
+* subtube - create wayland version AUR package
 * tmux nord theme long session name bug (last char)
 * solve transmission permission (transfer after download)
 * ffmpeg screencast on toggle bind
