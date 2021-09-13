@@ -9,6 +9,7 @@ require('my_todo-comments')
 require('my_nvim-comment')
 require('my_nvim-colorizer')
 require('my_lualine')
+require('my_alpha-nvim')
 
 require('lsp')
 
