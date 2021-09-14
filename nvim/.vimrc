@@ -318,6 +318,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-markdown'
+    Plug 'tpope/vim-abolish'
     Plug 'mattn/emmet-vim'
     Plug 'rstacruz/vim-closer'
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
