@@ -94,7 +94,7 @@ nnoremap <leader><leader>h :tabm-<CR>
 " general {{{
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
-"neighbors
+" neighbors
 nnoremap <leader>fn <cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>
 
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -110,7 +110,11 @@ nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 " }}}
 
 " swiper
-nnoremap <leader>s <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap <leader>ss <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
+nnoremap <leader>sl <cmd>HopLineStart<cr>
+nnoremap <leader>sw <cmd>HopWord<cr>
+nnoremap <leader>s1 <cmd>HopChar1<cr>
+nnoremap <leader>s2 <cmd>HopChar2<cr>
 
 " helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
@@ -357,7 +361,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'folke/todo-comments.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'kyazdani42/nvim-tree.lua'
-        " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        Plug 'phaazon/hop.nvim'
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
