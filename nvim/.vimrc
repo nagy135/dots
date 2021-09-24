@@ -87,8 +87,8 @@ nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
 
 " locationlist movement
-nnoremap <C-n> :cnext<CR>
-nnoremap <C-p> :cprev<CR>
+nnoremap <C-n> :lnext<CR>
+nnoremap <C-p> :lprev<CR>
 
 " move tabs
 nnoremap <leader><leader>l :tabm+<CR>
