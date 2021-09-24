@@ -173,72 +173,6 @@ nnoremap <leader>wp :WikiFzfPages<CR>
 
 " AUTOCOMMANDS {{{
 autocmd BufNewFile,BufRead *.wiki set filetype=markdown
-autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
-"MatLab
-autocmd FileType matlab nnoremap gcc mlI%<space><esc>`lll
-"LaTeX
-autocmd FileType tex nnoremap <c-j> :w !pdflatex % &> /dev/null<CR>
-"Rust
-autocmd FileType rust nnoremap <c-j> :w<CR>:!cargo run<CR>
-autocmd FileType rust nnoremap ;p oprintln!();<ESC>hi
-autocmd FileType rust nnoremap ;P Oprintln!();<ESC>hi
-autocmd FileType rust nnoremap ;;p yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
-autocmd FileType rust nnoremap ;;P yiwOprintln!("{}", );<ESC>hPF{Pa <ESC>
-autocmd FileType rust nnoremap <leader>r :botright split<CR>:term cargo run<CR>
-" autocmd FileType rust nnoremap <leader>t :botright split<CR>:term cargo test<CR>
-autocmd FileType rust nnoremap <c-j> :w !cargo run<CR>:w<CR>
-autocmd FileType rust nnoremap <leader><leader>t :CocCommand rust-analyzer.toggleInlayHints<CR>
-"Python
-autocmd FileType python nnoremap <c-j> :w !python<CR>:w<CR>
-autocmd FileType python nnoremap ;p oprint()<ESC>i
-autocmd FileType python nnoremap ;P Oprint()<ESC>i
-autocmd FileType python nnoremap ;;p yiwoprint('', )<ESC>PF'P^
-autocmd FileType python nnoremap ;;P yiwOprint('', )<ESC>PF'P^
-"Go
-autocmd FileType go nnoremap <c-j> :w !go build<CR>:w<CR>
-autocmd FileType go nnoremap ;p ofmt.Println()<ESC>i
-autocmd FileType go nnoremap ;P Ofmt.Println()<ESC>i
-autocmd FileType go nnoremap ;;p yiwofmt.Println("", )<ESC>PF"P^
-autocmd FileType go nnoremap ;;P yiwOfmt.Println("", )<ESC>PF"P^
-"Shell
-autocmd FileType sh nnoremap <c-j> :w !bash<CR>:w<CR>
-autocmd FileType sh nnoremap ;;p yiwoecho ""<ESC>PA $<ESC>p
-autocmd FileType sh nnoremap ;;P yiwOecho ""<ESC>PA $<ESC>p
-autocmd FileType sh nnoremap ;p oecho <ESC>a
-autocmd FileType sh nnoremap ;P Oecho <ESC>a
-"C++
-autocmd FileType cpp nnoremap <c-j> :make!<CR>
-autocmd FileType c nnoremap <c-j> :make!<CR>
-autocmd FileType cpp nnoremap <c-l> :!choose_main<CR>
-"Perl
-autocmd FileType perl nnoremap <c-j> :w !perl<CR>
-"PHP
-autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
-autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
-
-autocmd FileType javascript nnoremap <leader>p oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nnoremap <leader>P Oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nnoremap <leader>;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType javascript nnoremap <leader>;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType javascript nnoremap <leader>;;p yiwoconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
-autocmd FileType javascript nnoremap <leader>;;P yiwOconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
-
-autocmd FileType typescript nnoremap <leader>p oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType typescript nnoremap <leader>P Oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType typescript nnoremap <leader>;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType typescript nnoremap <leader>;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType typescript nnoremap <leader>;;p yiwoconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
-autocmd FileType typescript nnoremap <leader>;;P yiwOconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
-
-
-autocmd FileType lua nnoremap <leader>r :! lua % <CR>
-
-au FileType xml setlocal foldmethod=syntax
-
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
 
 " Highlight git merge conflict markers with red background
 au VimEnter,WinEnter * if !exists('w:_vsc_conflict_marker_match') |
@@ -481,11 +415,6 @@ if has('nvim')
   endfunction
 
   let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
-endif
-if has('nvim') && !exists('g:fzf_layout')
-  autocmd! FileType fzf
-  autocmd  FileType fzf set laststatus=0 noshowmode noruler
-    \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 endif
 " }}}
 
