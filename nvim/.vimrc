@@ -133,8 +133,8 @@ nnoremap <leader>tl :TodoLocList<CR>
 
 " nvim-colorizer.lua binds
 nnoremap <leader>cc :ColorizerToggle<CR>
-nnoremap <leader>ca :ColorizerAttachToBuffer<CR>
-nnoremap <leader>cd :ColorizerDetachFromBuffer<CR>
+" nnoremap <leader>ca :ColorizerAttachToBuffer<CR>
+" nnoremap <leader>cd :ColorizerDetachFromBuffer<CR>
 
 " Git
 nnoremap <leader>gg :G<CR>
