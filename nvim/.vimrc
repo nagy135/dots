@@ -216,10 +216,20 @@ autocmd FileType perl nnoremap <c-j> :w !perl<CR>
 autocmd FileType php nnoremap <leader>r :botright split<CR>:term curl $(cat /tmp/nvim_curl 2> /dev/null) -o /tmp/nvim_response &> /dev/null && nvim /tmp/nvim_response<CR><CR>
 autocmd FileType php nnoremap <leader>e :botright split<CR>:e /tmp/nvim_curl<CR>
 
-autocmd FileType javascript nmap ;p oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nmap ;P Oconsole.log(<ESC>lmiA;<ESC>`ii
-autocmd FileType javascript nnoremap ;;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
-autocmd FileType javascript nnoremap ;;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nnoremap <leader>p oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nnoremap <leader>P Oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType javascript nnoremap <leader>;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nnoremap <leader>;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType javascript nnoremap <leader>;;p yiwoconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
+autocmd FileType javascript nnoremap <leader>;;P yiwOconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
+
+autocmd FileType typescript nnoremap <leader>p oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType typescript nnoremap <leader>P Oconsole.log(<ESC>lmiA;<ESC>`ii
+autocmd FileType typescript nnoremap <leader>;p yiwoconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType typescript nnoremap <leader>;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
+autocmd FileType typescript nnoremap <leader>;;p yiwoconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
+autocmd FileType typescript nnoremap <leader>;;P yiwOconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
+
 
 autocmd FileType lua nnoremap <leader>r :! lua % <CR>
 
