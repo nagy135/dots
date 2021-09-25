@@ -27,7 +27,7 @@
     * insert email bind
     * caps escape/ctrl press/hold
 ## wayland
-* tmux switcher
+* tmux switcher (bugs with xdotool and more)
 * river scratchpad (works but needs proper one bind script)
 
 " ####################
