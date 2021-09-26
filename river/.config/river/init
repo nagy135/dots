@@ -29,6 +29,7 @@ riverctl map normal $mod M spawn "spotify_run"
 riverctl map normal $mod+Control A spawn "mpv_history --clipboard"
 riverctl map normal $mod+Shift A spawn "mpv_history --qutebrowser"
 riverctl map normal $mod+Mod1 A spawn "mpv_history --chrome"
+riverctl map normal $mod+Mod1 C spawn "color"
 
 # Downloads/*.torrent start downloading
 riverctl map normal $mod T spawn tsm-add
