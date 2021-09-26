@@ -65,15 +65,12 @@ nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
-nnoremap <c-k> :! ./run.sh<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
 nnoremap <F4> :CtrlPClearAllCaches<CR>
 nnoremap <F1> :let @+ = expand("%:p")<CR>
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
-nnoremap ;b :.w !bash<CR>
-vnoremap ;b :w !bash<CR>
 nnoremap ;g :Goyo<CR>
 nnoremap <F3> :set spell!<CR>
 tnoremap <Esc> <C-\><C-n>
@@ -81,6 +78,10 @@ nnoremap <F4> :call ZathuraOpen()<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
+
+" bangs!
+nnoremap <c-k> :! ./run.sh<CR>
+vnoremap ;b :w !bash<CR>
 
 " quickfix movement
 nnoremap <C-j> :cn<CR>
