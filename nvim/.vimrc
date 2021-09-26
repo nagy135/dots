@@ -82,6 +82,7 @@ nnoremap <leader>qq :q!<CR>
 " bangs!
 nnoremap <c-k> :! ./run.sh<CR>
 vnoremap ;b :w !bash<CR>
+nnoremap ;p :!prettier -w %<CR>
 
 " quickfix movement
 nnoremap <C-j> :cn<CR>
