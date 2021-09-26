@@ -214,7 +214,7 @@ riverctl set-repeat 35 200
 # name can be found via:
 # riverctl list-inputs (copy whole line!)
 riverctl input 2:7:SynPS/2_Synaptics_TouchPad tap enabled
-riverctl input 2:7:SynPS/2_Synaptics_TouchPad natural-scroll enabled
+riverctl input 2:7:SynPS/2_Synaptics_TouchPad natural-scroll disabled
 
 # }}}
 
