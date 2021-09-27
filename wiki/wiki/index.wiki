@@ -19,7 +19,7 @@
 * solve transmission permission (transfer after download)
 * ffmpeg screencast on toggle bind
 * keyboard click
-* mpv history uniquer
+* mpv history uniquer (doesnt really work on mpv-history)
 * quickqute rewrite + wayland (bemenu)
 * rofi selection for remembered autoclick sequences
     * named records
