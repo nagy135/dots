@@ -1,0 +1,5 @@
+# Log in
+JWT token is in browser's local storage
+```
+https://account-wexopay-staging.01people.tech/login
+```
