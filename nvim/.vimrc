@@ -287,6 +287,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'goolord/alpha-nvim'
     Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
+    Plug 'leafgarland/typescript-vim' " fixes typescript highlight issues
     Plug 'junegunn/goyo.vim'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'neoclide/vim-jsx-improve'
