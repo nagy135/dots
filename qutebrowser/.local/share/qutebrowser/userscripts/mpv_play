@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mpv "$QUTE_URL"
+if [[ $(echo $QUTE_URL | sed '/.*\(twitch\.tv\).*/d' | wc -l) -eq 0 ]]; then
+    TITLE=$(echo $QUTE_URL | sed 's/^.*twitch.tv\/\([a-zA-Z]\+\).*$/\1/')
+    echo "$TITLE - Twitch($QUTE_URL)" >> /home/infiniter/.local/share/qutebrowser/mpv_history
+else
+    TITLE=$(youtube-dl -e "$QUTE_URL")
+    echo "$TITLE($QUTE_URL)" >> /home/infiniter/.local/share/qutebrowser/mpv_history
+    notify-send -u low -i none -t 1000 " " "<span  font-size='15000' font_weight='bold'> . \n</span>"
+fi
