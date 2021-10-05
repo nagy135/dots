@@ -1,2 +1,3 @@
 [[import_export]]
 [[psql]]
+[[alter pg database]]
