@@ -439,6 +439,9 @@ c.fonts.tabs.unselected = '12pt MesloLGS NF'
 chrome_bin = "google-chrome-stable"
 config.bind(';;C', 'spawn ' + chrome_bin + ' {url}')
 config.bind(';;c', 'hint links spawn ' + chrome_bin + ' {hint-url}')
+firefox_bin = "firefox"
+config.bind(';;F', 'spawn ' + firefox_bin + ' {url}')
+config.bind(';;f', 'hint links spawn ' + firefox_bin + ' {hint-url}')
 
 config.bind(';;M', 'spawn --userscript csfd')
 config.bind(';;d', 'spawn --userscript remove_seen')
