@@ -1,4 +1,5 @@
 [[bash]]
 [[zsh]]
+[[prompt]]
 
 [[vim mode]]

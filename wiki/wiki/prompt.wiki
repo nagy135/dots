@@ -1,0 +1,6 @@
+# Simple prompt with maximum contrast
+has colors and git branch
+```
+user@host [~/Clones/project] master$
+```
+PS1='\[\e[0;32m\]\u\[\e[0;32m\]@\[\e[0m\]\h \[\e[0;94m\][\[\e[0;38;5;196m\]\w\[\e[0;94m\]] \[\e[0;93m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\[\e[0m\]$ \[\e[0m\]'
