@@ -11,6 +11,9 @@
 
 # TODOS
 ## general
+* [ssh-fzf](https://github.com/nagy135/ssh-fzf)
+    * aur package
+    * wayland version
 * remote editing file in nvim
     * edit file, press bind and it scp replaces remote file
     * nui.nvim input
