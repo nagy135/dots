@@ -40,7 +40,7 @@ riverctl map normal $mod+Shift T spawn "tsm-clean"
 
 # subtube
 riverctl map normal $mod Y spawn "subtube play"
-riverctl map normal $mod+Shift Y spawn "subtube play -h firefox"
+riverctl map normal $mod+Shift Y spawn "MOZ_ENABLE_WAYLAND=1 subtube play -h firefox"
 riverctl map normal $mod F5 spawn "subtube update"
 
 # tmux controller
