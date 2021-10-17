@@ -269,7 +269,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rust-lang/rust.vim'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
-    Plug 'terrortylor/nvim-comment'
+    Plug 'numToStr/Comment.nvim'
     Plug 'tpope/vim-eunuch'
     Plug 'majutsushi/tagbar'
     Plug 'tpope/vim-markdown'
