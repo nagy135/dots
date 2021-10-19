@@ -33,10 +33,12 @@ riverctl map normal $mod+Mod1 A spawn "mpv_history --chrome"
 riverctl map normal $mod+Mod1 C spawn "color"
 riverctl map normal $mod Z spawn "filer ~/Downloads"
 riverctl map normal $mod+Control Z spawn "filer ~/Downloads clip"
+riverctl map normal $mod B spawn "bye_prompt"
 
 # Downloads/*.torrent start downloading
 riverctl map normal $mod T spawn tsm-add
 riverctl map normal $mod+Shift T spawn "tsm-clean"
+
 
 # subtube
 riverctl map normal $mod Y spawn "subtube play"
