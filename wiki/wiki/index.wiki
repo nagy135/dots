@@ -17,7 +17,6 @@
 * remote editing file in nvim
     * edit file, press bind and it scp replaces remote file
     * nui.nvim input
-* subtube - open in web browser (custom handler cli argument)
 * tmux nord theme long session name bug (last char)
 * solve transmission permission (transfer after download)
 * ffmpeg screencast on toggle bind
@@ -32,7 +31,6 @@
     * insert email bind
     * caps escape/ctrl press/hold
 ## wayland
-* tmux switcher (bugs with xdotool and more)
 * river scratchpad (works but needs proper one bind script)
 
 " ####################
