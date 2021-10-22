@@ -297,7 +297,7 @@ call plug#begin('~/.vim/plugged')
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
-        Plug 'hoob3rt/lualine.nvim'
+        Plug 'nvim-lualine/lualine.nvim'
         Plug 'kyazdani42/nvim-web-devicons'
         Plug 'lukas-reineke/indent-blankline.nvim'
         Plug 'sudormrfbin/cheatsheet.nvim'
