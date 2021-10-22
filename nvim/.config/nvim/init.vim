@@ -10,6 +10,7 @@ require('my_Comment')
 require('my_nvim-colorizer')
 require('my_lualine')
 require('my_alpha-nvim')
+require('my_nvim-tree')
 
 require('lsp')
 
