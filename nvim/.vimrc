@@ -315,6 +315,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'kyazdani42/nvim-tree.lua'
         Plug 'phaazon/hop.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        Plug 'olimorris/onedarkpro.nvim'
+
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
@@ -406,5 +408,5 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " }}}
 
 " Colorscheme
-colorscheme gruvbox-material
+colorscheme onedark
 "}}}
