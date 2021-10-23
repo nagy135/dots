@@ -11,6 +11,10 @@
 
 # TODOS
 ## general
+* nvim
+    * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+    * [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+    * [packer](https://github.com/wbthomason/packer.nvim)
 * [ssh-fzf](https://github.com/nagy135/ssh-fzf)
     * aur package
     * wayland version
@@ -18,14 +22,8 @@
     * edit file, press bind and it scp replaces remote file
     * nui.nvim input
 * tmux nord theme long session name bug (last char)
-* solve transmission permission (transfer after download)
 * ffmpeg screencast on toggle bind
-* keyboard click
 * mpv history uniquer (doesnt really work on mpv-history)
-* quickqute rewrite + wayland (bemenu)
-* rofi selection for remembered autoclick sequences
-    * named records
-    * maybe add "parts", wait for site load
 * KMonad
     * [gavin tutorial](https://www.youtube.com/watch?v=Dhj1eauljwU)
     * insert email bind
