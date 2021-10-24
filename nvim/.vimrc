@@ -316,6 +316,9 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         Plug 'olimorris/onedarkpro.nvim'
         Plug 'lewis6991/gitsigns.nvim'
+        Plug 'hrsh7th/cmp-nvim-lsp'
+        Plug 'hrsh7th/cmp-buffer'
+        Plug 'hrsh7th/nvim-cmp'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()

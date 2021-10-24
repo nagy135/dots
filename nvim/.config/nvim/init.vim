@@ -13,6 +13,7 @@ require('my_alpha-nvim')
 require('my_nvim-tree')
 require('my_nvim-treesitter')
 require('my_gitsigns')
+require('my_nvim-cmp')
 
 require('lsp')
 
