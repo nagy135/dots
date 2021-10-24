@@ -4,6 +4,8 @@
     * [link](https://github.com/danba340/react-three-fiber-example?fbclid=IwAR2E_nGngDVxOjV_mU1lJJMW-zYBps7gFUmwQEXkGkAgdTm0qbr2BLqL_O0)
 * sort-rs
     * sorting using multiple sorting algorithms with visualization (iced gui)
+* some project using pythons [rich](https://github.com/willmcgugan/rich)
+    * maybe pynotes rewrite???
 
 " ####################
 " ####### TODOS { ####
