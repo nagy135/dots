@@ -320,6 +320,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/cmp-buffer'
         Plug 'hrsh7th/cmp-path'
         Plug 'hrsh7th/nvim-cmp'
+        Plug 'onsails/lspkind-nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
