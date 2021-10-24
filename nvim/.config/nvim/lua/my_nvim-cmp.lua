@@ -1,5 +1,7 @@
 local cmp = require'cmp'
 
+local lspkind = require "lspkind"
+lspkind.init()
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -25,4 +27,16 @@ cmp.setup({
     }, {
         { name = 'buffer' },
     })
+    formatting = {
+        format = lspkind.cmp_format {
+            with_text = true,
+            menu = {
+                buffer = "[buf]",
+                nvim_lsp = "[LSP]",
+                nvim_lua = "[api]",
+                path = "[path]",
+                luasnip = "[snip]",
+            },
+        },
+    },
 })
