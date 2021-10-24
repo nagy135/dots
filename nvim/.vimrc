@@ -265,7 +265,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'lervag/wiki.vim'
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
-    Plug 'airblade/vim-gitgutter'
     Plug 'rust-lang/rust.vim'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-fugitive'
@@ -316,7 +315,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'phaazon/hop.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         Plug 'olimorris/onedarkpro.nvim'
-
+        Plug 'lewis6991/gitsigns.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()

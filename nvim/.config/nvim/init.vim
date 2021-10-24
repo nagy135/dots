@@ -12,6 +12,7 @@ require('my_lualine')
 require('my_alpha-nvim')
 require('my_nvim-tree')
 require('my_nvim-treesitter')
+require('my_gitsigns')
 
 require('lsp')
 
