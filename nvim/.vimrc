@@ -76,6 +76,8 @@ nnoremap <F3> :set spell!<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 
+nnoremap gt <cmd>TroubleToggle<CR>
+
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
 
@@ -321,6 +323,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/cmp-path'
         Plug 'hrsh7th/nvim-cmp'
         Plug 'onsails/lspkind-nvim'
+        Plug 'folke/trouble.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
