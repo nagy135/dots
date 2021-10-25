@@ -118,6 +118,8 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
 nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 
+nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
+
 " }}}
 
 " swiper
