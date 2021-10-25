@@ -317,6 +317,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'phaazon/hop.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         Plug 'olimorris/onedarkpro.nvim'
+        Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
         Plug 'lewis6991/gitsigns.nvim'
         Plug 'hrsh7th/cmp-nvim-lsp'
         Plug 'hrsh7th/cmp-buffer'
@@ -367,5 +368,5 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " }}}
 
 " Colorscheme
-colorscheme onedark
+colorscheme tokyonight
 "}}}
