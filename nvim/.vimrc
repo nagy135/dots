@@ -138,6 +138,22 @@ nnoremap <leader>hm <cmd>lua require('telescope.builtin').keymaps()<cr>
 "
 " }}}
 
+" Harpoon {{{
+
+nnoremap <leader>ma :lua require('harpoon.mark').add_file()<CR>
+nnoremap <leader>mm :lua require('harpoon.ui').toggle_quick_menu()<CR>
+lua << EOF
+-- jumps to specified index in Harpoon window
+function harpoonIndexJump()
+    local index = vim.fn.input("Harpoon: ")
+    if index == nil or index == '' then
+        return
+    end
+    require('harpoon.ui').nav_file(tonumber(index))
+end
+EOF
+nnoremap <leader>mi :lua harpoonIndexJump()<CR>
+" }}}
 " Todo Comments
 nnoremap <leader>tt :TodoTelescope<CR>
 nnoremap <leader>tq :TodoQuickFix<CR>
@@ -329,6 +345,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/nvim-cmp'
         Plug 'onsails/lspkind-nvim'
         Plug 'folke/trouble.nvim'
+        Plug 'ThePrimeagen/harpoon'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
