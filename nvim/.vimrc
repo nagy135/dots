@@ -98,6 +98,8 @@ nnoremap <C-p> :lprev<CR>
 nnoremap <leader><leader>l :tabm+<CR>
 nnoremap <leader><leader>h :tabm-<CR>
 
+nnoremap <leader>r :LspRestart<CR>
+
 " Telescope {{{
 
 " general {{{
