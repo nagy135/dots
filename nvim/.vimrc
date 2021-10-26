@@ -76,7 +76,7 @@ nnoremap <F3> :set spell!<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 
-nnoremap gt <cmd>TroubleToggle<CR>
+nnoremap <leader>gd <cmd>TroubleToggle<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
