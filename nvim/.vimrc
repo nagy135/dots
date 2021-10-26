@@ -389,5 +389,5 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " }}}
 
 " Colorscheme
-colorscheme tokyonight
+colorscheme onedarkpro
 "}}}
