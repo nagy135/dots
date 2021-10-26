@@ -89,6 +89,7 @@ nnoremap ;p :!prettier -w %<CR>
 " quickfix movement
 nnoremap <C-j> :cn<CR>
 nnoremap <C-k> :cp<CR>
+nnoremap <C-c> :cclose<CR>
 
 " locationlist movement
 nnoremap <C-n> :lnext<CR>
