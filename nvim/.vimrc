@@ -20,7 +20,7 @@ set sts=4
 set ts=4
 set autoindent
 set path+=**
-set mouse=a
+set mouse=
 " set cursorline
 " set cursorcolumn
 set wildmenu
