@@ -200,6 +200,7 @@ nnoremap <leader>wp :WikiFzfPages<CR>
 
 " Comment above function or class with author
 nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
+
 "}}}
 
 " AUTOCOMMANDS {{{
@@ -212,6 +213,10 @@ au VimEnter,WinEnter * if !exists('w:_vsc_conflict_marker_match') |
 au VimEnter,WinEnter * if !exists('w:_empty_lines_highlight') |
         \   let w:_empty_lines_highlight = matchadd('WarningMsg', '^\s*$') |
         \ endif
+
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2
+
 "}}}
 
 " Functions {{{
@@ -394,5 +399,5 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " }}}
 
 " Colorscheme
-colorscheme onedarkpro
+colorscheme gruvbox-material
 "}}}
