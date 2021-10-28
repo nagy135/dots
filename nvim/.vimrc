@@ -198,6 +198,8 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " wiki extra binds
 nnoremap <leader>wp :WikiFzfPages<CR>
 
+" Comment above function or class with author
+nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
 "}}}
 
 " AUTOCOMMANDS {{{
