@@ -356,6 +356,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'onsails/lspkind-nvim'
         Plug 'folke/trouble.nvim'
         Plug 'ThePrimeagen/harpoon'
+        Plug 'weilbith/nvim-code-action-menu'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
@@ -396,6 +397,7 @@ nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gK <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> <leader>cA <cmd>CodeActionMenu<CR>
 " }}}
 
 " Colorscheme
