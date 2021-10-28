@@ -317,7 +317,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
-    Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/vim-vsnip-integ'
+
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
