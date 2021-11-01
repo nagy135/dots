@@ -390,6 +390,16 @@ let g:fzf_buffers_jump = 1
 let g:project_root_todo = 0
 let g:todo_file_location = ""
 
+let g:vista_executive_for = {
+  \ 'bash': 'nvim_lsp',
+  \ 'css': 'nvim_lsp',
+  \ 'go': 'nvim_lsp',
+  \ 'php': 'nvim_lsp',
+  \ 'lua': 'nvim_lsp',
+  \ 'javascript': 'nvim_lsp',
+  \ 'typescript': 'nvim_lsp',
+  \ }
+
 " LSP {{{
 " LSP config (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
