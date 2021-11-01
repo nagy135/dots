@@ -59,7 +59,7 @@ nnoremap L $
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap <leader>e   :NvimTreeFindFile<CR>
-nnoremap ,b   :Tagbar<CR>
+nnoremap ,b   :Vista!!<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 " nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
@@ -120,6 +120,8 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 
 nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
+
+nnoremap <leader>fL <cmd>Vista finder nvim_lsp<cr>
 
 " }}}
 
@@ -357,6 +359,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'folke/trouble.nvim'
         Plug 'ThePrimeagen/harpoon'
         Plug 'weilbith/nvim-code-action-menu'
+        Plug 'liuchengxu/vista.vim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
