@@ -156,6 +156,10 @@ function harpoonIndexJump()
 end
 EOF
 nnoremap <leader>mi :lua harpoonIndexJump()<CR>
+nnoremap <A-1> :lua require('harpoon.ui').nav_file(1)<CR>
+nnoremap <A-2> :lua require('harpoon.ui').nav_file(2)<CR>
+nnoremap <A-3> :lua require('harpoon.ui').nav_file(3)<CR>
+nnoremap <A-4> :lua require('harpoon.ui').nav_file(4)<CR>
 " }}}
 " Todo Comments
 nnoremap <leader>tt :TodoTelescope<CR>
