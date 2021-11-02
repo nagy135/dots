@@ -6,8 +6,7 @@ local map = function(type, key, value)
 	vim.api.nvim_buf_set_keymap(0,type,key,value,{noremap = true, silent = true});
 end
 
-local on_attach = function(client)
-	print("LSP started.");
+local on_attach = function()
 	-- require'completion'.on_attach(client)
 	-- require'diagnostic'.on_attach(client)
 
@@ -26,6 +25,6 @@ end
 nvim_lsp.tsserver.setup {
     on_attach = function(client)
         client.resolved_capabilities.document_formatting = false
-        on_attach(client)
+        on_attach()
     end
 }
