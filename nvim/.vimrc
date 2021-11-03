@@ -390,6 +390,7 @@ let g:fzf_buffers_jump = 1
 let g:project_root_todo = 0
 let g:todo_file_location = ""
 
+let g:vista_sidebar_width = 50
 let g:vista_executive_for = {
   \ 'bash': 'nvim_lsp',
   \ 'css': 'nvim_lsp',
