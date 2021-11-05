@@ -6,7 +6,7 @@ fzfvim(){
     if [[ ! -z $file ]]; then
         vim $file
     fi
-    echo -n $file
+    echo $file
 }
 cf(){
     # open .script file in vim
