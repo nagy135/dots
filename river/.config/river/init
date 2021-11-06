@@ -62,12 +62,12 @@ riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/
 riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
 # }}}
 
-# dunst {{{
+# notification {{{
 
-riverctl map normal Control Grave spawn "dunstctl history-pop"
-riverctl map normal Control Space spawn "dunstctl close"
-riverctl map normal Control+Shift Space spawn "dunstctl close-all"
-riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
+riverctl map normal Control Grave spawn "makoctl restore"
+riverctl map normal Control Space spawn "makoctl dismiss"
+riverctl map normal Control+Shift Space spawn "makoctl dismiss -a"
+# riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 
 # }}}
 
