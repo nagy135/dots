@@ -262,7 +262,7 @@ riverctl background-color 0x0b0b0b
 # }}}
 
 # notification daemon
-dunst &
+mako &
 
 # top bar (with restart on exec)
 killall waybar ; waybar &
