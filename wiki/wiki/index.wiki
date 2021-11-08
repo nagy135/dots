@@ -25,7 +25,7 @@
     * nui.nvim input
 * tmux nord theme long session name bug (last char)
 * ffmpeg screencast on toggle bind
-* mpv history uniquer (doesnt really work on mpv-history)
+* mpv history - separate to 2 files and add only if unique video id
 * KMonad
     * [gavin tutorial](https://www.youtube.com/watch?v=Dhj1eauljwU)
     * insert email bind
