@@ -351,7 +351,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'kyazdani42/nvim-tree.lua'
         Plug 'phaazon/hop.nvim'
-        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         Plug 'olimorris/onedarkpro.nvim'
         Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
         Plug 'lewis6991/gitsigns.nvim'
@@ -364,6 +364,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'ThePrimeagen/harpoon'
         Plug 'weilbith/nvim-code-action-menu'
         Plug 'liuchengxu/vista.vim'
+        Plug 'filipdutescu/renamer.nvim', { 'branch': 'master' }
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
@@ -418,6 +419,10 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent> <leader>gf <cmd>lua vim.lsp.buf.formatting()<CR>
 vnoremap <silent> <leader>gf <cmd>lua vim.lsp.buf.range_formatting()<CR>
 nnoremap <silent> <leader>cA <cmd>CodeActionMenu<CR>
+
+" renamer.nvim
+nnoremap <silent> <leader>rn <cmd>lua require('renamer').rename()<cr>
+vnoremap <silent> <leader>rn <cmd>lua require('renamer').rename()<cr>
 " }}}
 
 " Colorscheme
