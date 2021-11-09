@@ -4,3 +4,5 @@ nnoremap <leader>;p yiwodd("", );<ESC>hPF"PF$x
 nnoremap <leader>;P yiwOdd("", );<ESC>hPF"PF$x
 nnoremap <leader>;;p yiwodd("", );<ESC>hPF"PF$x
 nnoremap <leader>;;P yiwOdd("", );<ESC>hPF"PF$x
+
+nnoremap ;c O/**<CR><BS><SPACE>*<ESC>yypppa/<LEFT><LEFT><ESC>kA<SPACE>@author Viktor Nagy <viktor.nagy@01people.com><ESC>kkA<SPACE>
