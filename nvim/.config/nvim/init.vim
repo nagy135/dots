@@ -14,6 +14,7 @@ require('my_nvim-tree')
 -- require('my_nvim-treesitter')
 require('my_gitsigns')
 require('my_nvim-cmp')
+require('my_renamer')
 
 require('lsp')
 
