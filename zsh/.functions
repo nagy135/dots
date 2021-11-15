@@ -9,15 +9,15 @@ fzfvim(){
     echo $file
 }
 cf(){
-    # open .script file in vim
     fzfvim "/home/infiniter/.config"
 }
+cdot(){
+    fzfvim "/home/infiniter/.dots"
+}
 sc(){
-    # open .script file in vim
     fzfvim "/home/infiniter/Code/scripts"
 }
 co(){
-    # open Code file in vim
     fzfvim "/home/infiniter/Code"
 }
 c() {
