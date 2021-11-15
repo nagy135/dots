@@ -351,7 +351,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'kyazdani42/nvim-tree.lua'
         Plug 'phaazon/hop.nvim'
-        " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
         Plug 'olimorris/onedarkpro.nvim'
         Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
         Plug 'lewis6991/gitsigns.nvim'
@@ -364,6 +364,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'ThePrimeagen/harpoon'
         Plug 'weilbith/nvim-code-action-menu'
         Plug 'liuchengxu/vista.vim'
+        Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'filipdutescu/renamer.nvim', { 'branch': 'master' }
         " Plug 'nvim-treesitter/playground'
     endif
