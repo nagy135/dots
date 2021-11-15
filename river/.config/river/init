@@ -64,10 +64,16 @@ riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
 
 # notification {{{
 
-riverctl map normal Control Grave spawn "makoctl restore"
-riverctl map normal Control Space spawn "makoctl dismiss"
-riverctl map normal Control+Shift Space spawn "makoctl dismiss -a"
+# riverctl map normal Control Grave spawn "makoctl restore"
+# riverctl map normal Control Space spawn "makoctl dismiss"
+# riverctl map normal Control+Shift Space spawn "makoctl dismiss -a"
+
 # riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
+
+riverctl map normal Control Grave spawn "dunstctl history-pop"
+riverctl map normal Control Space spawn "dunstctl close"
+riverctl map normal Control+Shift Space spawn "dunstctl close-all"
+riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 
 # }}}
 
@@ -262,7 +268,8 @@ riverctl background-color 0x0b0b0b
 # }}}
 
 # notification daemon
-mako &
+# mako &
+dunst &
 
 # top bar (with restart on exec)
 killall waybar ; waybar &
