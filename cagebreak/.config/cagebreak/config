@@ -11,31 +11,41 @@ workspaces 9
 escape L-grave
 
 bind Return exec alacritty
+bind c exec google-chrome-stable
+bind q exec qutebrowser
 
 bind s hsplit
 bind v vsplit
+
+bind x close
+
 bind o only
 bind D quit
+
 bind Tab focus
 bind A-Tab focusprev
+
 bind n next
 bind p prev
-bind c exec google-chrome-stable
-bind q exec qutebrowser
+
 bind R setmode resize
+
 bind N nextscreen
 bind P prevscreen
-bind a time
 bind C-n movetonextscreen
+
+bind a time
+
 bind H exchangeleft
 bind J exchangedown
 bind K exchangeup
 bind L exchangeright
+
 bind h focusleft
 bind j focusdown
 bind k focusup
 bind l focusright
-bind x close
+
 definekey resize h resizeleft
 definekey resize l resizeright
 definekey resize j resizedown
