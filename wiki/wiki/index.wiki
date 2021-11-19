@@ -48,6 +48,7 @@
 [[weechat]]
 [[stow]]
 [[pacman]]
+[[docker]]
 
 ## Wayland
 * [[wayland clipboard]]
