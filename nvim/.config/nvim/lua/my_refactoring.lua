@@ -1,5 +1,5 @@
 local refactor = require("refactoring")
-refactor.setup()
+refactor.setup({})
 
 -- telescope refactoring helper
 local function refactor(prompt_bufnr)
@@ -34,5 +34,4 @@ end
 vim.api.nvim_set_keymap("v", "<Leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("v", "<Leader>rf", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("v", "<Leader>rt", [[ <Esc><Cmd>lua M.refactors()<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>dp", [[ <Esc><Cmd>lua require('refactoring').debug.printf({below = true)<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<Leader>dP", [[ <Esc><Cmd>lua require('refactoring').debug.printf({below = false)<CR>]], {noremap = true, silent = true, expr = false})
+
