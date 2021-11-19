@@ -1,3 +1,5 @@
+local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+
 -- following options are the default
 require'nvim-tree'.setup {
   -- disables netrw completely
@@ -66,7 +68,11 @@ require'nvim-tree'.setup {
       -- if true, it will only use your list to set the mappings
       custom_only = false,
       -- list of mappings to set on the tree manually
-      list = {}
+      list = {
+          { key = "v", cb = tree_cb("vsplit") },
+          { key = "s", cb = tree_cb("split") },
+          { key = "<C-s>", cb = tree_cb("system_open") },
+      }
     }
   }
 }
