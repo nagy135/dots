@@ -3,7 +3,7 @@
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: MesloLGS NF, Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    font-size: 19px;
     min-height: 0;
 }
 
@@ -81,7 +81,7 @@ window#waybar.chromium {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    margin: 0 4px;
+    margin: 0 0 0 6px;
     color: #ffffff;
 }
 
