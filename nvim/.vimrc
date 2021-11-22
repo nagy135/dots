@@ -81,6 +81,9 @@ nnoremap <leader>gd <cmd>TroubleToggle<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
 
+nnoremap <leader><c-w>v :botright vsplit<CR>
+nnoremap <leader><c-w>s :botright split<CR>
+
 " bangs!
 nnoremap <c-k> :! ./run.sh<CR>
 vnoremap ;b :w !bash<CR>
