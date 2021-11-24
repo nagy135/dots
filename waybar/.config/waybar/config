@@ -110,6 +110,7 @@
     "custom/subtube": {
         "format": " {}",
         "interval": 2, 
+        "tooltip": " {}",
         "exec": "ls /usr/share/subtube/resources/thumbnails | wc -l"
     } 
 }
