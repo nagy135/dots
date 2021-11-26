@@ -225,6 +225,7 @@ au VimEnter,WinEnter * if !exists('w:_empty_lines_highlight') |
 
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
+autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2
 
 "}}}
 
