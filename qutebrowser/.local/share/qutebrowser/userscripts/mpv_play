@@ -1,6 +1,10 @@
 #!/bin/bash
-MPV_HISTORY=/home/infiniter/.local/share/qutebrowser/mpv_history
+
+MPV_HISTORY="$HOME/.local/share/mpv_history/history"
 SEPARATOR="##@@##@@##"
+
+[ -f "$MPV_HISTORY" ] \
+    || ( mkdir -p $(dirname "$MPV_HISTORY") && touch "$MPV_HISTORY" )
 
 store_history(){
     TITLE=$(youtube-dl -e "$QUTE_URL")
