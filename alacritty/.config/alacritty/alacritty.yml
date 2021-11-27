@@ -85,25 +85,25 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     # The `style` can be specified to pick a specific face.
     # style: Regular
 
   # Bold font face
   bold:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     # The `style` can be specified to pick a specific face.
     # style: Bold
 
   # Italic font face
   italic:
-    family: MesloLGS NF
+    family: JetBrains Mono Nerd Font
     # family: League Mono
     # The `style` can be specified to pick a specific face.
     # style: Italic
 
   # Point size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -171,14 +171,14 @@ colors:
 
   # Bright colors
   bright:
-    black:   '#333333'
-    red:     '#e05863'
-    green:   '#3de289'
+    black:   '#0b0b0b'
+    red:     '#c22330'
+    green:   '#19a85b'
     yellow:  '#f9dc2b'
     blue:    '#304bcc'
     magenta: '#d13273'
     cyan:    '#2dc189'
-    white:   '#f9dc2b'
+    white:   '#b2d3d9'
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
