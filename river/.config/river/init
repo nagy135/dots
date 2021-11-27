@@ -11,10 +11,8 @@
 # Use the "logo" key as the primary modifier
 mod="Mod4"
 
-terminal="foot"
+terminal="alacritty"
 chrome="google-chrome-stable"
-
-# Mod+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 
 # spawn binds {{{
 
@@ -24,7 +22,7 @@ riverctl map normal $mod+Shift Q spawn "firefox"
 riverctl map normal $mod C spawn "$chrome"
 riverctl map normal $mod+Control C spawn "$chrome --incognito"
 riverctl map normal $mod D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
-riverctl map normal $mod R spawn "$terminal vifm"
+riverctl map normal $mod R spawn "$terminal -e vifm"
 riverctl map normal $mod A spawn "mpv_history"
 riverctl map normal $mod M spawn "spotify_run"
 riverctl map normal $mod+Control A spawn "mpv_history --clipboard"
