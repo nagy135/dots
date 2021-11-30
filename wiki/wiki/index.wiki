@@ -14,7 +14,6 @@
 # TODOS
 ## general
 * nvim
-    * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
     * [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
     * [packer](https://github.com/wbthomason/packer.nvim)
 * [ssh-fzf](https://github.com/nagy135/ssh-fzf)
@@ -25,13 +24,8 @@
     * nui.nvim input
 * tmux nord theme long session name bug (last char)
 * ffmpeg screencast on toggle bind
-* mpv history - separate to 2 files and add only if unique video id
-* KMonad
-    * [gavin tutorial](https://www.youtube.com/watch?v=Dhj1eauljwU)
-    * insert email bind
-    * caps escape/ctrl press/hold
 ## wayland
-* river scratchpad (works but needs proper one bind script)
+* river bind helper (fuzzel script)
 
 " ####################
 " ##### } TODOS ######
