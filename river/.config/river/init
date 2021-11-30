@@ -1,196 +1,344 @@
 #!/bin/sh
 
-# This is the example configuration file for river.
-#
-# If you wish to edit this, you will probably want to copy it to
-# $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
-#
-# See the river(1), riverctl(1), and rivertile(1) man pages for complete
-# documentation.
-
-# Use the "logo" key as the primary modifier
-mod="Mod4"
+mod="Mod4" # super
 
 terminal="alacritty"
 chrome="google-chrome-stable"
 
-# spawn binds {{{
-
+### Spawn terminal
 riverctl map normal $mod Return spawn "$terminal"
+
+# Browsers {{{
+
+### Spawn qutebrowser
 riverctl map normal $mod Q spawn "qutebrowser"
+
+### Spawn firefox
 riverctl map normal $mod+Shift Q spawn "firefox"
+
+### Spawn chrome
 riverctl map normal $mod C spawn "$chrome"
+
+### Spawn chrome --incognito
 riverctl map normal $mod+Control C spawn "$chrome --incognito"
-riverctl map normal $mod D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
-riverctl map normal $mod R spawn "$terminal -e vifm"
-riverctl map normal $mod A spawn "mpv_history"
-riverctl map normal $mod M spawn "spotify_run"
-riverctl map normal $mod+Control A spawn "mpv_history --clipboard"
-riverctl map normal $mod+Shift A spawn "mpv_history --handler qutebrowser"
-riverctl map normal $mod+Mod1 A spawn "mpv_history --handler $chrome"
-riverctl map normal $mod+Mod1 C spawn "color"
-riverctl map normal $mod Z spawn "filer ~/Downloads"
-riverctl map normal $mod+Control Z spawn "filer ~/Downloads clip"
-riverctl map normal $mod B spawn "bye_prompt"
 
-# Downloads/*.torrent start downloading
-riverctl map normal $mod T spawn tsm-add
-riverctl map normal $mod+Shift T spawn "tsm-clean"
-
-
-# subtube
-riverctl map normal $mod Y spawn "subtube play"
-riverctl map normal $mod+Shift Y spawn "subtube play -h firefox"
-riverctl map normal $mod F5 spawn "subtube update"
-
-# tmux controller
-riverctl map normal $mod+Shift E spawn "tmux_controller list"
-riverctl map normal $mod+Control+Shift E spawn "tmux_controller create"
-riverctl map normal $mod+Control E spawn "tmux_controller kill"
-
-# tabber
-riverctl map normal $mod+Control G spawn "tabber grab"
-riverctl map normal $mod+Mod1 G spawn "tabber"
-riverctl map normal $mod+Mod1+Control G spawn "tabber process"
-
-# set bg
-riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
-
-# (re)start waybar
-riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
 # }}}
 
-# notification {{{
+### Fuzzel dmenu_run
+riverctl map normal $mod D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
+
+### Spawn vifm
+riverctl map normal $mod R spawn "$terminal -e vifm"
+
+# Mpv_history {{{
+
+### Spawn mpv_history
+riverctl map normal $mod A spawn "mpv_history"
+
+### Spawn mpv_history to clipboard
+riverctl map normal $mod+Control A spawn "mpv_history --clipboard"
+
+### Spawn mpv_history (open in qutebrowser)
+riverctl map normal $mod+Shift A spawn "mpv_history --handler qutebrowser"
+
+### Spawn mpv_history (open in chrome)
+riverctl map normal $mod+Mod1 A spawn "mpv_history --handler $chrome"
+
+# }}}
+
+### Spawn spotify on its workspace (or focus)
+riverctl map normal $mod M spawn "spotify_run"
+
+### Pick my color theme to clipboard
+riverctl map normal $mod+Mod1 C spawn "color"
+
+# Filer {{{
+
+### Filer (open downloads)
+riverctl map normal $mod Z spawn "filer ~/Downloads"
+
+### Filer (clipboard downloads)
+riverctl map normal $mod+Control Z spawn "filer ~/Downloads clip"
+
+# }}}
+
+### Bye prompt
+riverctl map normal $mod B spawn "bye_prompt"
+
+# Transmission {{{
+
+### Add torrent from downloads to transmission
+riverctl map normal $mod T spawn tsm-add
+
+### Remove torrent that is seeding (fuzzel picker)
+riverctl map normal $mod+Shift T spawn "tsm-clean"
+
+# }}}
+
+# Subtube {{{
+
+### Subtube play
+riverctl map normal $mod Y spawn "subtube play"
+
+### Subtube play (in firefox)
+riverctl map normal $mod+Shift Y spawn "subtube play -h firefox"
+
+### Subtube update
+riverctl map normal $mod F5 spawn "subtube update"
+
+# }}}
+
+# Tmux controller {{{
+
+### Tmux controller list
+riverctl map normal $mod+Shift E spawn "tmux_controller list"
+
+### Tmux controller create
+riverctl map normal $mod+Control+Shift E spawn "tmux_controller create"
+
+### Tmux controller kill
+riverctl map normal $mod+Control E spawn "tmux_controller kill"
+
+# }}}
+
+# Tabber {{{
+
+### Tabber grab
+riverctl map normal $mod+Control G spawn "tabber grab"
+
+### Tabber init
+riverctl map normal $mod+Mod1 G spawn "tabber"
+
+### Tabber process
+riverctl map normal $mod+Mod1+Control G spawn "tabber process"
+
+# }}}
+
+### Reset bg (paint current_wallpaper)
+riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
+
+### (re)start waybar
+riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
+
+# Notification {{{
 
 # riverctl map normal Control Grave spawn "makoctl restore"
 # riverctl map normal Control Space spawn "makoctl dismiss"
 # riverctl map normal Control+Shift Space spawn "makoctl dismiss -a"
 
-# riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
-
+### Dunst history
 riverctl map normal Control Grave spawn "dunstctl history-pop"
+
+### Dunst close
 riverctl map normal Control Space spawn "dunstctl close"
+
+### Dunst close-all
 riverctl map normal Control+Shift Space spawn "dunstctl close-all"
+
+### Dunst toggle pause
 riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
+
+# riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 
 # }}}
 
 # PrintScreen {{{
+
+### Screenshot whole screen
 riverctl map normal None Print spawn "screenshotter"
+
+### Screenshot zone
 riverctl map normal $mod+Control Print spawn "screenshotter -zone"
+
+### Screenshot save
 riverctl map normal $mod Print spawn "screenshotter -save"
+
 # }}}
 
-# Lock screen
+### Lock screen
 riverctl map normal $mod Delete "swaylock --clock"
 
-# Mod+Q to close the focused view
+### Close focused view
 riverctl map normal $mod X close
 
-# Mod+E to exit river
+### Exit river
 riverctl map normal $mod+Mod1 E exit
 
-# Mod+J and Mod+K to focus the next/previous view in the layout stack
+# Change focus next/previous {{{
+### Focus next view
 riverctl map normal $mod J focus-view next
+
+### Focus previous view
 riverctl map normal $mod K focus-view previous
 
+### Focus next view
 riverctl map normal $mod N focus-view next
+
+### Focus previous view
 riverctl map normal $mod+Shift N focus-view previous
 
-# Mod+Shift+J and Mod+Shift+K to swap the focused view with the next/previous
-# view in the layout stack
+# }}}
+
+### Swap with next view
 riverctl map normal $mod+Shift J swap next
+
+### Swap with previous view
 riverctl map normal $mod+Shift K swap previous
 
-# Mod+Period and Mod+Comma to focus the next/previous output
+# Output {{{
+
+### Focus next output
 riverctl map normal $mod Period focus-output next
+
+### Focus previous output
 riverctl map normal $mod Comma focus-output previous
 
-# Mod+Shift+{Period,Comma} to send the focused view to the next/previous output
+### Send to next output
 riverctl map normal $mod+Shift Period send-to-output next
+
+### Send to previous output
 riverctl map normal $mod+Shift Comma send-to-output previous
 
-# Mod+Return to bump the focused view to the top of the layout stack
+# }}}
+
+### Zoom (top of stack)
 riverctl map normal $mod Space zoom
 
-# Mod+H and Mod+L to decrease/increase the main_factor value of rivertile by 0.05
+# Main area ratio {{{
+
+### Decrease main area ratio by 5%
 riverctl map normal $mod H send-layout-cmd rivertile "main-ratio -0.05"
+
+### Increase main area ratio by 5%
 riverctl map normal $mod L send-layout-cmd rivertile "main-ratio +0.05"
 
-# Mod+Shift+H and Mod+Shift+L to increment/decrement the main_count value of rivertile.
+### Increase main area count by 1
 riverctl map normal $mod+Shift H send-layout-cmd rivertile "main-count +1"
+
+### Decrease main area count by 1
 riverctl map normal $mod+Shift L send-layout-cmd rivertile "main-count -1"
 
-# Mod+Alt+{H,J,K,L} to move views
+# }}}
+
+# Floating move {{{
+
+### Floating move left
 riverctl map normal $mod+Mod1 H move left 100
+
+### Floating move down
 riverctl map normal $mod+Mod1 J move down 100
+
+### Floating move up
 riverctl map normal $mod+Mod1 K move up 100
+
+### Floating move right
 riverctl map normal $mod+Mod1 L move right 100
 
-# Mod+Alt+Control+{H,J,K,L} to snap views to screen edges
+# }}}
+
+# Snap floating view to wall {{{
+
+### Snap floating view left
 riverctl map normal $mod+Mod1+Control H snap left
+
+### Snap floating view down
 riverctl map normal $mod+Mod1+Control J snap down
+
+### Snap floating view up
 riverctl map normal $mod+Mod1+Control K snap up
+
+### Snap floating view right
 riverctl map normal $mod+Mod1+Control L snap right
 
-# Mod+Alt+Shif+{H,J,K,L} to resize views
+# }}}
+
+# Resize views {{{
+
+### Resize view horizontal -100
 riverctl map normal $mod+Mod1+Shift H resize horizontal -100
+
+### Resize view vertical +100
 riverctl map normal $mod+Mod1+Shift J resize vertical 100
+
+### Resize view vertical -100
 riverctl map normal $mod+Mod1+Shift K resize vertical -100
+
+### Resize view horizontal +100
 riverctl map normal $mod+Mod1+Shift L resize horizontal 100
 
-# Mod + Left Mouse Button to move views
+# }}}
+
+### Move view
 riverctl map-pointer normal $mod BTN_LEFT move-view
 
-# Mod + Right Mouse Button to resize views
+### Resize view
 riverctl map-pointer normal $mod BTN_RIGHT resize-view
 
 for i in $(seq 1 9)
 do
     tags=$((1 << ($i - 1)))
 
-    # Mod+[1-9] to focus tag [0-8]
+    ### Mod+[1-9] to focus tag [0-8]
     riverctl map normal $mod $i set-focused-tags $tags
 
-    # Mod+Shift+[1-9] to tag focused view with tag [0-8]
+    ### Mod+Shift+[1-9] to tag focused view with tag [0-8]
     riverctl map normal $mod+Shift $i set-view-tags $tags
 
-    # Mod+Ctrl+[1-9] to toggle focus of tag [0-8]
+    ### Mod+Ctrl+[1-9] to toggle focus of tag [0-8]
     riverctl map normal $mod+Control $i toggle-focused-tags $tags
 
-    # Mod+Shift+Ctrl+[1-9] to toggle tag [0-8] of focused view
+    ### Mod+Shift+Ctrl+[1-9] to toggle tag [0-8] of focused view
     riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
 done
 
-# Mod+0 to focus all tags
-# Mod+Shift+0 to tag focused view with all tags
+# All tags {{{
 all_tags=$(((1 << 32) - 1))
+
+### Focus all tags
 riverctl map normal $mod 0 set-focused-tags $all_tags
+
+### Tag focused view with all tags
 riverctl map normal $mod+Shift 0 set-view-tags $all_tags
 
-# Mod+Space to toggle float
+# }}}
+
+### Toggle float
 riverctl map normal $mod S toggle-float
 
-# Mod+F to toggle fullscreen
+### Toggle fullscreen
 riverctl map normal $mod F toggle-fullscreen
 
-# Mod+{Up,Right,Down,Left} to change layout orientation
+# Layout orientation {{{
+
+### Layout orientation top
 riverctl map normal $mod Up    set-layout-value rivertile string main_location top
+
+### Layout orientation right
 riverctl map normal $mod Right set-layout-value rivertile string main_location right
+
+### Layout orientation bottom
 riverctl map normal $mod Down  set-layout-value rivertile string main_location bottom
+
+### Layout orientation left
 riverctl map normal $mod Left  set-layout-value rivertile string main_location left
+
+# }}}
+
+# Passthrough {{{
 
 # Declare a passthrough mode. This mode has only a single mapping to return to
 # normal mode. This makes it useful for testing a nested wayland compositor
 riverctl declare-mode passthrough
 
-# Mod+F11 to enter passthrough mode
+### Enter passthrough mode
 riverctl map normal $mod F11 enter-mode passthrough
 
-# Mod+F11 to return to normal mode
+### Return from passthrough to normal
 riverctl map passthrough $mod F11 enter-mode normal
 
-# Select previously selected binds
+# }}}
+
+### Focus previously selected tags
 riverctl map normal $mod Grave focus-previous-tags
 
 # Various media key mapping examples for both normal and locked mode which do
@@ -200,19 +348,41 @@ do
     # Eject the optical drive
     # riverctl map $mode None XF86Eject spawn "eject -T"
 
-    # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
+    # Volume {{{
+
+    ### Volume up 5%
     riverctl map $mode None XF86AudioRaiseVolume  spawn "pamixer -i 5"
+
+    ### Volume down 5%
     riverctl map $mode None XF86AudioLowerVolume  spawn "pamixer -d 5"
+
+    ### Volume mute
     riverctl map $mode None XF86AudioMute         spawn "pamixer --toggle-mute"
 
-    # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
+    # }}}
+
+    # Playerctl {{{
+
+    ### Playerctl toggle play
     riverctl map $mode None XF86AudioMedia spawn "playerctl play-pause"
+
+    ### Playerctl toggle play
     riverctl map $mode None XF86AudioPlay  spawn "playerctl play-pause"
+    
+    ### Playerctl previous
     riverctl map $mode None XF86AudioPrev  spawn "playerctl previous"
+
+    ### Playerctl next
     riverctl map $mode None XF86AudioNext  spawn "playerctl next"
 
+    # }}}
+
     # Control screen backlight brighness with light (https://github.com/haikarainen/light)
+
+    ### Brightness up 10%
     riverctl map $mode None XF86MonBrightnessUp   spawn "light -A 10"
+
+    ### Brightness down 10%
     riverctl map $mode None XF86MonBrightnessDown spawn "light -U 10"
 done
 
@@ -239,22 +409,23 @@ riverctl csd-filter-add "gedit"
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 
-# scratchpad {{{
+# Scratchpad {{{
 
 # The scratchpad will live on an unused tag. Which tags are used depends on your
 # config, but rivers default uses the first 9 tags.
 scratch_tag=$((1 << 20 ))
 
-# Toggle the scratchpad with Super+P
+### Toggle the scratchpad
 riverctl map normal $mod+Control Return toggle-focused-tags ${scratch_tag}
 
-# Send windows to the scratchpad with Super+Shift+P
+### Send view to the scratchpad with Super+Shift+P
 riverctl map normal $mod+Mod1 Return set-view-tags ${scratch_tag}
 
 # Set spawn tagmask to ensure new windows don't have the scratchpad tag unless
 # explicitly set.
 all_but_scratch_tag=$(( ((1 << 32) - 1) ^ $scratch_tag ))
 riverctl spawn-tagmask ${all_but_scratch_tag}
+
 # }}}
 
 # customizations {{{
