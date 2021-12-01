@@ -27,6 +27,8 @@ source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zsh_completions
 
+export HISTFILE=$HOME/.zsh_history
+
 # End of lines added by compinstall
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
