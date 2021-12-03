@@ -260,11 +260,11 @@ riverctl map normal $mod+Mod1+Control L snap right
 ### Resize view horizontal -100
 riverctl map normal $mod+Mod1+Shift H resize horizontal -100
 
-### Resize view vertical +100
-riverctl map normal $mod+Mod1+Shift J resize vertical 100
-
 ### Resize view vertical -100
-riverctl map normal $mod+Mod1+Shift K resize vertical -100
+riverctl map normal $mod+Mod1+Shift J resize vertical -100
+
+### Resize view vertical +100
+riverctl map normal $mod+Mod1+Shift K resize vertical 100
 
 ### Resize view horizontal +100
 riverctl map normal $mod+Mod1+Shift L resize horizontal 100
