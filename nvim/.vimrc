@@ -374,6 +374,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'weilbith/nvim-code-action-menu'
         Plug 'liuchengxu/vista.vim'
         Plug 'ThePrimeagen/refactoring.nvim'
+        Plug 'lewis6991/impatient.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()

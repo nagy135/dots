@@ -2,6 +2,8 @@ source ~/.vimrc
 
 lua << EOF
 
+require('impatient')
+
 require('my_telescope')
 require('my_diffview')
 require('my_indent-blackline')
