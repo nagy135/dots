@@ -138,7 +138,6 @@ nnoremap <leader>s2 <cmd>HopChar2<cr>
 " helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
-nnoremap <leader>hb <cmd>lua require('telescope.builtin').keymaps()<cr>
 nnoremap <leader>hm <cmd>lua require('telescope.builtin').keymaps()<cr>
 " }}}
 "
