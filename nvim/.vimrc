@@ -223,6 +223,11 @@ au VimEnter,WinEnter * if !exists('w:_empty_lines_highlight') |
         \   let w:_empty_lines_highlight = matchadd('WarningMsg', '^\s*$') |
         \ endif
 
+
+autocmd VimEnter * AddTabularPattern first_comma /^[^,]*\zs,/l0
+autocmd VimEnter * AddTabularPattern first_equal /^[^=]*\zs=/l1
+
+
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2
@@ -335,6 +340,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
 
+    Plug 'godlygeek/tabular'
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
@@ -409,6 +415,7 @@ let g:vista_executive_for = {
   \ 'javascript': 'nvim_lsp',
   \ 'typescript': 'nvim_lsp',
   \ }
+
 
 " LSP {{{
 " LSP config (the mappings used in the default file don't quite work right)
