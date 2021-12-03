@@ -369,7 +369,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'weilbith/nvim-code-action-menu'
         Plug 'liuchengxu/vista.vim'
         Plug 'ThePrimeagen/refactoring.nvim'
-        Plug 'filipdutescu/renamer.nvim', { 'branch': 'master' }
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
@@ -424,9 +423,6 @@ nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 xnoremap <leader>grf <cmd>lua vim.lsp.buf.range_formatting()<CR>
 nnoremap <silent> <leader>cA <cmd>CodeActionMenu<CR>
 
-" renamer.nvim
-nnoremap <silent> <leader>rn <cmd>lua require('renamer').rename()<cr>
-vnoremap <silent> <leader>rn <cmd>lua require('renamer').rename()<cr>
 " }}}
 
 " Colorscheme
