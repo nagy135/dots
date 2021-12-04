@@ -25,7 +25,10 @@ riverctl map normal $mod+Control C spawn "$chrome --incognito"
 # }}}
 
 ### HELP: Description => Bind
-riverctl map normal $mod V spawn "river_binds"
+riverctl map normal $mod V spawn "river_binds -d"
+
+### HELP: Bind => Description
+riverctl map normal $mod+Shift V spawn "river_binds -b"
 
 ### Fuzzel dmenu_run
 riverctl map normal $mod D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
