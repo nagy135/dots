@@ -70,6 +70,7 @@ nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
 map <F8> :call AutoScroll()<CR>
 nnoremap <F4> :CtrlPClearAllCaches<CR>
 nnoremap <F1> :let @+ = expand("%:p")<CR>
+nnoremap <F2> :let @+ = expand("%:f")<CR>
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 nnoremap ;g :Goyo<CR>
 nnoremap <F3> :set spell!<CR>
