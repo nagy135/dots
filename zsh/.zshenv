@@ -14,6 +14,7 @@ export TERMINAL=alacritty
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.nimble/bin:$PATH"
 
 # history configuration
 export HISTFILE="$HOME/.local/share/zsh/.histfile"
