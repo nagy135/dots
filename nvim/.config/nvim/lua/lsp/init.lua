@@ -11,6 +11,7 @@ require("lsp.lua-language-server")
 require("lsp.rust_analyzer")
 require("lsp.pylsp")
 require("lsp.pyright")
+require("lsp.nimls")
 
 local opts = { noremap=true, silent=true }
 local map  = vim.api.nvim_set_keymap;
