@@ -338,7 +338,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
-
+    Plug 'zah/nim.vim'
     Plug 'godlygeek/tabular'
 
     if has('nvim')
