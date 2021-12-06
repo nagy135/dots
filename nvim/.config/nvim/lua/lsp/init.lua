@@ -34,3 +34,4 @@ map('n'    , ']d'          , '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>'      
 map('n'    , '<leader>q'   , '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>'                         , opts)
 -- map('n' , '<leader>gf'  , '<cmd>lua vim.lsp.buf.formatting()<CR>'                                 , opts)
 map('v'    , '<leader>grf' , '<cmd>lua vim.lsp.buf.range_formatting()<CR>'                           , opts)
+map('n'    , '<leader>df'   , '<cmd>lua vim.diagnostic.open_float()<CR>'                             , opts)
