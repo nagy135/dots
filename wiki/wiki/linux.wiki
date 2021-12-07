@@ -4,3 +4,4 @@
 [[generate ssh key]]
 [[kick ssh user with message]]
 [[setup new user]]
+[[generate password]]
