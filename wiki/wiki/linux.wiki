@@ -5,3 +5,4 @@
 [[kick ssh user with message]]
 [[setup new user]]
 [[generate password]]
+[[base64 encode decode]]

@@ -1,0 +1,11 @@
+# Encode
+```
+echo -n "Hello World" | base64
+```
+SGVsbG8gV29ybGQ=
+
+# Decode
+```
+echo -n "SGVsbG8gV29ybGQ=" | base64 -d
+```
+Hello World%
