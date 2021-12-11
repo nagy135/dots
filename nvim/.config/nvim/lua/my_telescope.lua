@@ -66,5 +66,50 @@ require('telescope').setup{
         }
     }
 }
-
 require('telescope').load_extension('fzy_native')
+
+
+
+local M = {}
+
+function M.project_find_file(folder)
+    local pickers = require "telescope.pickers"
+    local finders = require "telescope.finders"
+    local conf = require("telescope.config").values
+    local action_state = require "telescope.actions.state"
+
+    local projects = function(opts)
+        local openPop = assert(io.popen('ls ' .. folder, 'r'))
+        local output = openPop:read('*all')
+        openPop:close()
+
+        local lines = {}
+        for s in output:gmatch("[^\r\n]+") do
+            table.insert(lines, s)
+        end
+
+        opts = opts or {}
+        pickers.new(opts, {
+            prompt_title = "Projects",
+            finder = finders.new_table {
+                results = lines
+            },
+            sorter = conf.generic_sorter(opts),
+            attach_mappings = function(prompt_bufnr)
+                actions.select_default:replace(function()
+                    actions._close(prompt_bufnr, true)
+
+                    local selection = action_state.get_selected_entry()
+
+                    require("telescope.builtin").find_files{ cwd = folder .. '/' .. selection[1], follow = true}
+                end)
+                return true
+            end,
+        }):find()
+    end
+
+    -- to execute the function
+    projects(require("telescope.themes").get_ivy{})
+end
+
+return M
