@@ -387,6 +387,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'liuchengxu/vista.vim'
         Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'lewis6991/impatient.nvim'
+        Plug 'nagy135/typebreak.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
