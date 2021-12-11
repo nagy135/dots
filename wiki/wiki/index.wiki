@@ -24,8 +24,7 @@
     * nui.nvim input
 * tmux nord theme long session name bug (last char)
 * ffmpeg screencast on toggle bind
-## wayland
-* river bind helper (fuzzel script)
+* lua version of "delete function with its braces"
 
 " ####################
 " ##### } TODOS ######
