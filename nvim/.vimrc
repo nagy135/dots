@@ -77,7 +77,7 @@ nnoremap <F3> :set spell!<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 
-nnoremap <leader>gd <cmd>TroubleToggle<CR>
+nnoremap <leader>dd <cmd>TroubleToggle<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
@@ -113,6 +113,8 @@ nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
 " neighbors
 nnoremap <leader>fn <cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>
 
+nnoremap <leader>fd <cmd>lua require("telescope.builtin").find_files{ cwd = "~/.config", follow = true, hidden = true }<CR>
+
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 
@@ -123,9 +125,19 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
 nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 
+nnoremap <leader>fo <cmd>lua require('telescope.builtin').oldfiles()<cr>
+
 nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
 
+nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
+nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
+
+nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
+nnoremap <leader>cA <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
+nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
+
 nnoremap <leader>fL <cmd>Vista finder nvim_lsp<cr>
+
 
 " }}}
 
@@ -372,7 +384,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'onsails/lspkind-nvim'
         Plug 'folke/trouble.nvim'
         Plug 'ThePrimeagen/harpoon'
-        Plug 'weilbith/nvim-code-action-menu'
         Plug 'liuchengxu/vista.vim'
         Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'lewis6991/impatient.nvim'
@@ -416,13 +427,6 @@ let g:vista_executive_for = {
   \ 'javascript': 'nvim_lsp',
   \ 'typescript': 'nvim_lsp',
   \ }
-
-
-" LSP {{{
-" LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> <leader>cA <cmd>CodeActionMenu<CR>
-
-" }}}
 
 " Colorscheme
 colorscheme gruvbox-material
