@@ -138,6 +138,9 @@ nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()
 
 nnoremap <leader>fL <cmd>Vista finder nvim_lsp<cr>
 
+" My telescope
+nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
+nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")<cr>
 
 " }}}
 
