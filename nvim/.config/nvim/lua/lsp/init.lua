@@ -13,6 +13,10 @@ require("lsp.rust_analyzer")
 require("lsp.pylsp")
 require("lsp.pyright")
 require("lsp.nimls")
+require("lsp.dockerls")
+require("lsp.htmlls")
+require("lsp.jsonls")
+require("lsp.yamlls")
 
 local opts = { noremap=true, silent=true }
 local map  = vim.api.nvim_set_keymap;
