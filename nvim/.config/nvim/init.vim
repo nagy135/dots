@@ -17,6 +17,7 @@ require('my_nvim-treesitter')
 require('my_gitsigns')
 require('my_nvim-cmp')
 require('my_refactoring')
+require('my_capture')
 
 require('lsp')
 
