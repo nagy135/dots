@@ -11,6 +11,10 @@ require('telescope').setup{
                 ["<C-s>"] = actions.select_horizontal,
                 ["<C-v>"] = actions.select_vertical,
             },
+            n = {
+                ["<C-j>"] = actions.results_scrolling_down,
+                ["<C-k>"] = actions.results_scrolling_up,
+            }
         },
         vimgrep_arguments = {
             'rg',
