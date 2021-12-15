@@ -118,8 +118,8 @@ nnoremap <leader>fd <cmd>lua require("telescope.builtin").find_files{ cwd = "~/.
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
 
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
+nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
 
 nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
 
