@@ -10,6 +10,8 @@ riverctl map normal $mod Return spawn "$terminal"
 
 # Browsers {{{
 
+riverctl map normal $mod I spawn "gist"
+
 ### Spawn qutebrowser
 riverctl map normal $mod Q spawn "qutebrowser"
 
