@@ -163,6 +163,9 @@ riverctl map normal $mod Print spawn "screenshotter -save"
 
 # }}}
 
+### Toggle nm-applet (wifi)
+riverctl map normal $mod+Control W "wifi_control_toggle"
+
 ### Lock screen
 riverctl map normal $mod Delete "swaylock --clock"
 
