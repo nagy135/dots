@@ -61,7 +61,6 @@ nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap <leader>e   :NvimTreeFindFile<CR>
 nnoremap ,b   :Vista!!<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
-" nnoremap <c-s> :w<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
@@ -230,6 +229,14 @@ nnoremap <leader>wp :WikiFzfPages<CR>
 
 " Comment above function or class with author
 nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
+
+
+" ABBREV {{{
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev WQ wq
+cnoreabbrev Wq wq
+"}}}
 
 "}}}
 
