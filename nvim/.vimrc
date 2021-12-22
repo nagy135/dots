@@ -405,6 +405,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'lewis6991/impatient.nvim'
         Plug 'nagy135/typebreak.nvim'
         Plug 'MunifTanjim/nui.nvim'
+        Plug 'p00f/nvim-ts-rainbow'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
