@@ -363,8 +363,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
-    Plug 'hrsh7th/vim-vsnip'
-    Plug 'hrsh7th/vim-vsnip-integ'
+    " Plug 'hrsh7th/vim-vsnip'
+    " Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'zah/nim.vim'
     Plug 'godlygeek/tabular'
 
@@ -403,6 +403,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'nagy135/typebreak.nvim'
         Plug 'MunifTanjim/nui.nvim'
         Plug 'p00f/nvim-ts-rainbow'
+        Plug 'L3MON4D3/LuaSnip'
+        Plug 'saadparwaiz1/cmp_luasnip'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
