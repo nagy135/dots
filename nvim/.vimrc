@@ -59,7 +59,6 @@ nnoremap L $
 nnoremap <C-b> :NvimTreeToggle<CR>
 nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap <leader>e   :NvimTreeFindFile<CR>
-nnoremap ,b   :Vista!!<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
@@ -127,6 +126,7 @@ nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 nnoremap <leader>fo <cmd>lua require('telescope.builtin').oldfiles()<cr>
 
 nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>fL <cmd>lua require('telescope.builtin').git_commits()<cr>
 
 nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
@@ -134,8 +134,6 @@ nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
 nnoremap <leader>cA <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
-
-nnoremap <leader>fL <cmd>Vista finder nvim_lsp<cr>
 
 " My telescope
 nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
@@ -400,7 +398,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'onsails/lspkind-nvim'
         Plug 'folke/trouble.nvim'
         Plug 'ThePrimeagen/harpoon'
-        Plug 'liuchengxu/vista.vim'
         Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'lewis6991/impatient.nvim'
         Plug 'nagy135/typebreak.nvim'
@@ -435,17 +432,6 @@ let g:fzf_buffers_jump = 1
 
 let g:project_root_todo = 0
 let g:todo_file_location = ""
-
-let g:vista_sidebar_width = 50
-let g:vista_executive_for = {
-  \ 'bash': 'nvim_lsp',
-  \ 'css': 'nvim_lsp',
-  \ 'go': 'nvim_lsp',
-  \ 'php': 'nvim_lsp',
-  \ 'lua': 'nvim_lsp',
-  \ 'javascript': 'nvim_lsp',
-  \ 'typescript': 'nvim_lsp',
-  \ }
 
 " Colorscheme
 colorscheme gruvbox-material
