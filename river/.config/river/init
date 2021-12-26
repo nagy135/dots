@@ -10,6 +10,7 @@ riverctl map normal $mod Return spawn "$terminal"
 
 # Browsers {{{
 
+### Gist: clipboard => gist with content as a link in clipboard
 riverctl map normal $mod I spawn "gist"
 
 ### Spawn qutebrowser
