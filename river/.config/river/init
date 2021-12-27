@@ -13,6 +13,9 @@ riverctl map normal $mod Return spawn "$terminal"
 ### Gist: clipboard => gist with content as a link in clipboard
 riverctl map normal $mod I spawn "gist"
 
+### Toggle screen capture in zone
+riverctl map normal $mod P spawn "wayland_screen_record"
+
 ### Spawn qutebrowser
 riverctl map normal $mod Q spawn "qutebrowser"
 
