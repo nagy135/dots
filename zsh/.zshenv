@@ -16,6 +16,8 @@ export PATH="$HOME/Code/scripts:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.nimble/bin:$PATH"
 
+export GOPATH="$HOME/go"
+
 # history configuration
 export HISTFILE="$HOME/.local/share/zsh/.histfile"
 export HISTSIZE=1000
