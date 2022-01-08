@@ -479,4 +479,4 @@ key_bindings:
   - { key: J       , mods: Alt|Shift    , action: ScrollPageDown   }
   - { key: K       , mods: Alt|Control  , action: ScrollLineUp     }
   - { key: J       , mods: Alt|Control  , action: ScrollLineDown   }
-  - { key: V       , mods: Control      , mode: ~Search          , action: ToggleViMode }
+  - { key: E       , mods: Alt|Control  , mode: ~Search          , action: ToggleViMode }
