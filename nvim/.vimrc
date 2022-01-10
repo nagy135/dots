@@ -250,10 +250,6 @@ au VimEnter,WinEnter * if !exists('w:_empty_lines_highlight') |
         \ endif
 
 
-autocmd VimEnter * AddTabularPattern first_comma /^[^,]*\zs,/l0
-autocmd VimEnter * AddTabularPattern first_equal /^[^=]*\zs=/l1
-
-
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescript setlocal ts=2 sts=2 sw=2
 autocmd FileType typescriptreact setlocal ts=2 sts=2 sw=2
@@ -366,7 +362,6 @@ call plug#begin('~/.vim/plugged')
     " Plug 'hrsh7th/vim-vsnip'
     " Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'zah/nim.vim'
-    Plug 'godlygeek/tabular'
 
     if has('nvim')
         " Plug 'neovim/nvim-lsp'
