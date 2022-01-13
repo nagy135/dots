@@ -257,7 +257,15 @@ c.url.default_page = 'https://yts.mx/'
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'rs': 'https://doc.rust-lang.org/std/?search={}', 'duck': 'https://duckduckgo.com/?q={}&ia=web', 'DEFAULT': 'https://www.google.sk/search?q={}', 'archrepo': 'https://www.archlinux.org/packages/?q={}', 'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch', 'tw': 'http://www.twitch.tv/{}'}
+c.url.searchengines = {
+    'rs': 'https://doc.rust-lang.org/std/?search={}',
+    'duck': 'https://duckduckgo.com/?q={}&ia=web',
+    'DEFAULT': 'https://www.google.sk/search?q={}',
+    'arch': 'https://www.archlinux.org/packages/?q={}',
+    'aur': 'https://www.aur.archlinux.org/packages/?q={}',
+    'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch',
+    'tw': 'http://www.twitch.tv/{}'
+}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
