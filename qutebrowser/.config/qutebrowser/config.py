@@ -261,8 +261,8 @@ c.url.searchengines = {
     'rs': 'https://doc.rust-lang.org/std/?search={}',
     'duck': 'https://duckduckgo.com/?q={}&ia=web',
     'DEFAULT': 'https://www.google.sk/search?q={}',
-    'arch': 'https://www.archlinux.org/packages/?q={}',
-    'aur': 'https://www.aur.archlinux.org/packages/?q={}',
+    'archrepo': 'https://www.archlinux.org/packages/?q={}',
+    'aurrepo': 'https://aur.archlinux.org/packages/?O=0&K={}',
     'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch',
     'tw': 'http://www.twitch.tv/{}'
 }
