@@ -22,6 +22,9 @@ riverctl map normal $mod P spawn "wayland_screen_record"
 ### Spawn qutebrowser
 riverctl map normal $mod Q spawn "qutebrowser"
 
+### Quickqute (qutebrowser custom quick menu)
+riverctl map normal $mod+Mod1 Q spawn "quickqute"
+
 ### Spawn firefox
 riverctl map normal $mod+Shift Q spawn "firefox"
 
