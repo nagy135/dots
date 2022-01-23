@@ -23,6 +23,14 @@ window:
     columns: 80
     lines: 24
 
+  dynamic_title: true
+
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is not scaled
@@ -226,11 +234,6 @@ bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -266,8 +269,6 @@ selection:
   # the selection clipboard. Otherwise, it will only be copied to the selection
   # clipboard.
   save_to_clipboard: false
-
-window.dynamic_title: true
 
 mouse.hide_when_typing: false
 
