@@ -86,6 +86,16 @@ riverctl map normal $mod+Control Z spawn "filer ~/Downloads clip"
 ### Bye prompt
 riverctl map normal $mod B spawn "bye_prompt"
 
+# Redshift {{{
+
+### Redshift night
+riverctl map normal $mod bracketleft   spawn "redshift -P -O 2300"
+
+### Redshift disable
+riverctl map normal $mod bracketright spawn "killall redshift"
+
+# }}}
+
 # Transmission {{{
 
 ### Add torrent from downloads to transmission
