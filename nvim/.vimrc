@@ -400,6 +400,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'p00f/nvim-ts-rainbow'
         Plug 'L3MON4D3/LuaSnip'
         Plug 'saadparwaiz1/cmp_luasnip'
+        Plug 'j-hui/fidget.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()

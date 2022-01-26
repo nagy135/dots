@@ -19,6 +19,7 @@ require('my_nvim-cmp')
 require('my_refactoring')
 require('my_capture')
 require('my_luasnip')
+require('my_fidget')
 
 require('lsp')
 
