@@ -89,7 +89,7 @@ riverctl map normal $mod B spawn "bye_prompt"
 # Redshift {{{
 
 ### Redshift night
-riverctl map normal $mod bracketleft   spawn "redshift -P -O 2300"
+riverctl map normal $mod bracketleft spawn "redshift -P -O 2300"
 
 ### Redshift disable
 riverctl map normal $mod bracketright spawn "killall redshift"
