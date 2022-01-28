@@ -1,1 +1,2 @@
 [[entity listeres]]
+[[query examples]]

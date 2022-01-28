@@ -1,0 +1,13 @@
+# Query IN, distinctOn, OrderBy multiple
+await getRepository(Feed)
+      .createQueryBuilder('feed')
+      .where({ uploaderId: In([1,2,3,4]) })
+      .distinctOn(['feed.uploaderId'])
+      .orderBy({ 'feed.uploaderId': 'ASC', 'feed.createdAt': 'DESC' })
+      .getMany()
+
+# Basic distinct select one raw column
+await this.createQueryBuilder('entity name')
+  .select('column')
+  .distinct(true)
+  .getRawMany();
