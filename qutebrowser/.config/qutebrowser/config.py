@@ -263,6 +263,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://www.google.sk/search?q={}',
     'archrepo': 'https://www.archlinux.org/packages/?q={}',
     'aurrepo': 'https://aur.archlinux.org/packages/?O=0&K={}',
+    'nix': 'https://search.nixos.org/packages?query={}',
     'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch',
     'tw': 'http://www.twitch.tv/{}'
 }
@@ -417,31 +418,31 @@ c.colors.webpage.darkmode.contrast = 0.0
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '12pt MesloLGS NF'
+c.fonts.completion.entry = '12pt FiraCode Nerd Font'
 
 # Font used in the completion categories.
 # Type: Font
-c.fonts.completion.category = 'bold 13pt MesloLGS NF'
+c.fonts.completion.category = 'bold 13pt FiraCode Nerd Font'
 
 # Font used for the downloadbar.
 # Type: Font
-c.fonts.downloads = '12pt MesloLGS NF'
+c.fonts.downloads = '12pt FiraCode Nerd Font'
 
 # Font used for the hints.
 # Type: Font
-c.fonts.hints = 'bold 12pt MesloLGS NF'
+c.fonts.hints = 'bold 12pt FiraCode Nerd Font'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '13pt MesloLGS NF'
+c.fonts.statusbar = '13pt FiraCode Nerd Font'
 
 # Font used for selected tabs.
 # Type: Font
-c.fonts.tabs.selected = '12pt MesloLGS NF'
+c.fonts.tabs.selected = '12pt FiraCode Nerd Font'
 
 # Font used for unselected tabs.
 # Type: Font
-c.fonts.tabs.unselected = '12pt MesloLGS NF'
+c.fonts.tabs.unselected = '12pt FiraCode Nerd Font'
 
 # Bindings for normal mode
 chrome_bin = "google-chrome-stable"
