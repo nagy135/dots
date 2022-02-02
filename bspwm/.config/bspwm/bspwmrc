@@ -98,7 +98,9 @@ bash -c "volume_change -init" # initial volume setting
 # bash -c "package_checker" # 5 hour sleep loop to notify new packages
 # bash -c "tabber -init"
 # /home/infiniter/Code/scripts/golemon &
-bash -c "polybar_launch"
+
+killall -q polybar
+polybar --reload mainbar-bspwm &
 
 # bspc config active_border_color \#c22330
 # bspc config normal_border_color \#111111
