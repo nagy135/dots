@@ -35,11 +35,26 @@ in {
 		xclip
 		nodePackages.npm
 		nodejs
+        sway
+        waybar
 	];
 	programs.zsh.enable = true;
 	programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
-	virtualisation.docker.enable = true;
+    programs.waybar.enable = true;
+
+    programs.sway = {
+        enable = true;
+        wrapperFeatures.gtk = true; # so that gtk works properly
+            extraPackages = with pkgs; [
+            swaylock
+            swayidle
+            wl-clipboard
+            mako # notification daemon
+            ];
+    };
+
+    virtualisation.docker.enable = true;
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
@@ -52,5 +67,5 @@ in {
 # List services that you want to enable:
 
 # Enable the OpenSSH daemon.
-	services.openssh.enable = true;
+    services.openssh.enable = true;
 }

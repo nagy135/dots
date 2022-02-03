@@ -56,24 +56,23 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
 
   # Enable the Plasma 5 Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.bspwm.enable = true;
-  services.xserver.windowManager.bspwm.configFile = null;
-  services.xserver.videoDrivers = [ "intel" ];
-  services.xserver.deviceSection = ''
-      Option "DRI" "2"
-      Option "TearFree" "true"
-      '';
-
+  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.windowManager.bspwm.enable = true;
+  # services.xserver.windowManager.bspwm.configFile = null;
+  # services.xserver.videoDrivers = [ "intel" ];
+  # services.xserver.deviceSection = ''
+  #     Option "DRI" "2"
+  #     Option "TearFree" "true"
+  #     '';
   
 
   # Configure keymap in X11
-  services.xserver.layout = "us";
-  services.xserver.xkbOptions = "eurosign:e";
+  # services.xserver.layout = "us";
+  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -83,7 +82,7 @@
   hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.infiniter = {
