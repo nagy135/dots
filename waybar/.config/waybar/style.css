@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: #0b0b0b;
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -39,10 +39,11 @@ window#waybar.chromium {
 
 #workspaces button {
     padding: 0 5px;
+    margin: 0 2px;
     background-color: transparent;
+    border: 1px solid #dcdccc;
     color: #ffffff;
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -52,8 +53,8 @@ window#waybar.chromium {
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: rgb(51,77,95);
+    color: #0b0b0b;
 }
 
 #workspaces button.urgent {
@@ -83,6 +84,7 @@ window#waybar.chromium {
     padding: 0 10px;
     margin: 0 0 0 6px;
     color: #ffffff;
+    border: 1px solid #dcdccc;
 }
 
 #window,
@@ -102,22 +104,22 @@ window#waybar.chromium {
 
 #clock {
     background-color: #0b0b0b;
-    color: #19a85b;
+    color: #b2d3d9;
 }
 
 #custom-subtube {
     background-color: #0b0b0b;
-    color: #19a85b;
+    color: #b2d3d9;
 }
 
 #battery {
-    background-color: #19a85b;
+    background-color: rgb(51,77,95);
     color: #0b0b0b;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #19a85b;
+    background-color: rgb(51,77,95);
 }
 
 @keyframes blink {
@@ -142,13 +144,13 @@ label:focus {
 }
 
 #cpu {
-    background-color: #19a85b;
+    background-color: rgb(51,77,95);
     color: #000000;
 }
 
 #memory {
     background-color: #0b0b0b;
-    color: #19a85b;
+    color: #b2d3d9;
 }
 
 #disk {
@@ -157,12 +159,12 @@ label:focus {
 
 #backlight {
     background-color: #0b0b0b;
-    color: #19a85b;
+    color: #b2d3d9;
 }
 
 #network {
     background-color: #0b0b0b;
-    color: #19a85b;
+    color: #b2d3d9;
 }
 
 #network.disconnected {
@@ -171,13 +173,14 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #19a85b;
+    background-color: rgb(51,77,95);
     color: #0b0b0b;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    /* background-color: #90b1b1; */
+    background-color: rgb(51,77,95);
+    color: #b2d3d9;
 }
 
 #custom-media {
@@ -195,7 +198,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #19a85b;
+    background-color: rgb(51,77,95);
     color: #0b0b0b;
 }
 
@@ -245,7 +248,7 @@ label:focus {
     color: #b2d3d9;
 }
 #tags button.occupied {
-    color: #19a85b;
+    color: #b2d3d9;
 }
 #tags button.focused {
     color: #f9dc2b;
