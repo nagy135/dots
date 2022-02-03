@@ -48,7 +48,7 @@ super + alt + e
 
 ### restart polybar
 super + alt + b
-    killall polybar ; polybar_launch
+    /home/infiniter/.config/polybar/launch.sh --colorblocks
     # export XDG_CONFIG_HOME="$HOME/.config" ; start_lego
 
 ### kill golemon
@@ -520,7 +520,7 @@ super + alt + d
 
 ### program launcher
 super + d
-    rofi -show run
+    dmenu_run
 
 ### window selector
 super + shift + d
