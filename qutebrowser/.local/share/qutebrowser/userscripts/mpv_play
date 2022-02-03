@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 MPV_HISTORY="$HOME/.local/share/mpv_history/history"
 SEPARATOR="##@@##@@##"
