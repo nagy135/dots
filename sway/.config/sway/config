@@ -24,7 +24,8 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/current_wallpaper fill
 
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_variant ,nodeadkeys
@@ -83,6 +84,9 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
     # Vifm
     bindsym $mod+r exec $term -e vifm
+
+    # Waybar
+    bindsym $mod+Shift+b exec pkill waybar || waybar
 
     # Kill focused window
     bindsym $mod+x kill
@@ -219,6 +223,8 @@ default_border pixel 4
 default_floating_border pixel 4
 
 exec --no-startup-id waybar
+
+
 
 #
 # Status Bar:
