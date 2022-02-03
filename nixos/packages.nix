@@ -27,6 +27,7 @@ in {
 		vifm
 		tmux
 		sxiv
+        ffmpeg
 		docker
 		docker-compose
 		fzf
