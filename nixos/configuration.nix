@@ -41,18 +41,10 @@
   };
 
   fonts.fonts = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    mplus-outline-fonts
-    dina-font
-    proggyfonts
-    pkgs.powerline-fonts
-    pkgs.font-awesome
+	  (nerdfonts.override { fonts = [ "Inconsolata" "FiraCode" "DroidSansMono" ]; })
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -61,7 +53,13 @@
   # Enable the Plasma 5 Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.windowManager.bspwm.enable = true;
-  services.xserver.windowManager.bspwm.configFile = "/home/infiniter/.config/bspwm/bspwmrc";
+  services.xserver.windowManager.bspwm.configFile = null;
+  services.xserver.videoDrivers = [ "intel" ];
+  services.xserver.deviceSection = ''
+      Option "DRI" "2"
+      Option "TearFree" "true"
+      '';
+
   
 
   # Configure keymap in X11
@@ -83,20 +81,21 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     initialPassword = "pass";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ];
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim
     wget
-    chromium
+    google-chrome
     git
     python3
     qutebrowser
     mpv
     xorg.xbacklight
+    youtube-dl
     sxhkd
     alacritty
     polybar
@@ -105,35 +104,51 @@
     zsh-powerlevel10k
     gcc
     zig
+    killall
+    lua
+    stow
+    dmenu
+    vifm
+    tmux
+    sxiv
+    docker
+    docker-compose
+    fzf
+    htop
+    xclip
+    nodePackages.npm
+    nodejs
   ];
-
   programs.zsh.enable = true;
+  programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+    virtualisation.docker.enable = true;
 
-  # List services that you want to enable:
+# Some programs need SUID wrappers, can be configured further or are
+# started in user sessions.
+# programs.mtr.enable = true;
+# programs.gnupg.agent = {
+#   enable = true;
+#   enableSSHSupport = true;
+# };
 
-  # Enable the OpenSSH daemon.
+# List services that you want to enable:
+
+# Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+# Open ports in the firewall.
+# networking.firewall.allowedTCPPorts = [ ... ];
+# networking.firewall.allowedUDPPorts = [ ... ];
+# Or disable the firewall altogether.
+# networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+# This value determines the NixOS release from which the default
+# settings for stateful data, like file locations and database versions
+# on your system were taken. It‘s perfectly fine and recommended to leave
+# this value at the release version of the first install of this system.
+# Before changing this value read the documentation for this option
+# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.11"; # Did you read the comment?
 
 }
