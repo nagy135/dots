@@ -1,155 +1,153 @@
 #!/bin/sh
 
-mod="Mod4" # super
-
 terminal="alacritty"
 chrome="google-chrome-stable"
 
 ### Spawn terminal
-riverctl map normal $mod Return spawn "$terminal"
+riverctl map normal Super Return spawn "$terminal"
 
 # Browsers {{{
 
 ### Gist: clipboard => gist with content as a link in clipboard
-riverctl map normal $mod I spawn "gist"
+riverctl map normal Super I spawn "gist"
 
 ### Json prettify: json in clipboard => prettified json in clipboard
-riverctl map normal $mod+Shift I spawn "prettify_json"
+riverctl map normal Super+Shift I spawn "prettify_json"
 
 ### Toggle screen capture in zone
-riverctl map normal $mod P spawn "wayland_screen_record"
+riverctl map normal Super P spawn "wayland_screen_record"
 
 ### Spawn qutebrowser
-riverctl map normal $mod Q spawn "qutebrowser"
+riverctl map normal Super Q spawn "qutebrowser"
 
 ### Quickqute (qutebrowser custom quick menu)
-riverctl map normal $mod+Mod1 Q spawn "quickqute"
+riverctl map normal Super+Mod1 Q spawn "quickqute"
 
 ### Spawn firefox
-riverctl map normal $mod+Shift Q spawn "firefox"
+riverctl map normal Super+Shift Q spawn "firefox"
 
 ### Spawn chrome
-riverctl map normal $mod C spawn "$chrome"
+riverctl map normal Super C spawn "$chrome"
 
 ### Spawn chrome --incognito
-riverctl map normal $mod+Control C spawn "$chrome --incognito"
+riverctl map normal Super+Control C spawn "$chrome --incognito"
 
 # }}}
 
 ### HELP: Description => Bind
-riverctl map normal $mod V spawn "river_binds -d"
+riverctl map normal Super V spawn "river_binds -d"
 
 ### HELP: Bind => Description
-riverctl map normal $mod+Shift V spawn "river_binds -b"
+riverctl map normal Super+Shift V spawn "river_binds -b"
 
 ### Fuzzel dmenu_run
-riverctl map normal $mod D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
+riverctl map normal Super D spawn "fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2"
 
 ### Spawn vifm
-riverctl map normal $mod R spawn "$terminal -e vifm"
+riverctl map normal Super R spawn "$terminal -e vifm"
 
 ### Spawn htop
-riverctl map normal $mod Equal spawn "$terminal -e htop"
+riverctl map normal Super Equal spawn "$terminal -e htop"
 
 # Mpv_history {{{
 
 ### Spawn mpv_history
-riverctl map normal $mod A spawn "mpv_history"
+riverctl map normal Super A spawn "mpv_history"
 
 ### Spawn mpv_history to clipboard
-riverctl map normal $mod+Control A spawn "mpv_history --clipboard"
+riverctl map normal Super+Control A spawn "mpv_history --clipboard"
 
 ### Spawn mpv_history (open in qutebrowser)
-riverctl map normal $mod+Shift A spawn "mpv_history --handler qutebrowser"
+riverctl map normal Super+Shift A spawn "mpv_history --handler qutebrowser"
 
 ### Spawn mpv_history (open in chrome)
-riverctl map normal $mod+Mod1 A spawn "mpv_history --handler $chrome"
+riverctl map normal Super+Mod1 A spawn "mpv_history --handler $chrome"
 
 # }}}
 
 ### Spawn spotify on its workspace (or focus)
-riverctl map normal $mod M spawn "spotify_run"
+riverctl map normal Super M spawn "spotify_run"
 
 ### Pick my color theme to clipboard
-riverctl map normal $mod+Mod1 C spawn "color"
+riverctl map normal Super+Mod1 C spawn "color"
 
 # Filer {{{
 
 ### Filer (open downloads)
-riverctl map normal $mod Z spawn "filer ~/Downloads"
+riverctl map normal Super Z spawn "filer ~/Downloads"
 
 ### Filer (clipboard downloads)
-riverctl map normal $mod+Control Z spawn "filer ~/Downloads clip"
+riverctl map normal Super+Control Z spawn "filer ~/Downloads clip"
 
 # }}}
 
 ### Bye prompt
-riverctl map normal $mod B spawn "bye_prompt"
+riverctl map normal Super B spawn "bye_prompt"
 
 # Redshift {{{
 
 ### Redshift night
-riverctl map normal $mod bracketleft spawn "redshift -P -O 2300"
+riverctl map normal Super bracketleft spawn "redshift -P -O 2300"
 
 ### Redshift disable
-riverctl map normal $mod bracketright spawn "killall redshift"
+riverctl map normal Super bracketright spawn "killall redshift"
 
 # }}}
 
 # Transmission {{{
 
 ### Add torrent from downloads to transmission
-riverctl map normal $mod T spawn tsm-add
+riverctl map normal Super T spawn tsm-add
 
 ### Remove torrent that is seeding (fuzzel picker)
-riverctl map normal $mod+Shift T spawn "tsm-clean"
+riverctl map normal Super+Shift T spawn "tsm-clean"
 
 # }}}
 
 # Subtube {{{
 
 ### Subtube play
-riverctl map normal $mod Y spawn "subtube play"
+riverctl map normal Super Y spawn "subtube play"
 
 ### Subtube play (in firefox)
-riverctl map normal $mod+Shift Y spawn "subtube play -h firefox"
+riverctl map normal Super+Shift Y spawn "subtube play -h firefox"
 
 ### Subtube update
-riverctl map normal $mod F5 spawn "subtube update"
+riverctl map normal Super F5 spawn "subtube update"
 
 # }}}
 
 # Tmux controller {{{
 
 ### Tmux controller list
-riverctl map normal $mod+Shift E spawn "tmux_controller list"
+riverctl map normal Super+Shift E spawn "tmux_controller list"
 
 ### Tmux controller create
-riverctl map normal $mod+Control+Shift E spawn "tmux_controller create"
+riverctl map normal Super+Control+Shift E spawn "tmux_controller create"
 
 ### Tmux controller kill
-riverctl map normal $mod+Control E spawn "tmux_controller kill"
+riverctl map normal Super+Control E spawn "tmux_controller kill"
 
 # }}}
 
 # Tabber {{{
 
 ### Tabber grab
-riverctl map normal $mod+Control G spawn "tabber grab"
+riverctl map normal Super+Control G spawn "tabber grab"
 
 ### Tabber init
-riverctl map normal $mod+Mod1 G spawn "tabber"
+riverctl map normal Super+Mod1 G spawn "tabber"
 
 ### Tabber process
-riverctl map normal $mod+Mod1+Control G spawn "tabber process"
+riverctl map normal Super+Mod1+Control G spawn "tabber process"
 
 # }}}
 
 ### Reset bg (paint current_wallpaper)
-riverctl map normal $mod+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
+riverctl map normal Super+Control B spawn 'killall swaybg ; swaybg -i ~/Pictures/current_wallpaper &'
 
 ### (re)start waybar
-riverctl map normal $mod+Mod1 B spawn 'killall waybar ; waybar &'
+riverctl map normal Super+Mod1 B spawn 'killall waybar ; waybar &'
 
 # Notification {{{
 
@@ -179,182 +177,182 @@ riverctl map normal Control+Mod1 Space spawn "dunstctl set-paused toggle"
 riverctl map normal None Print spawn "screenshotter"
 
 ### Screenshot zone
-riverctl map normal $mod+Control Print spawn "screenshotter -zone"
+riverctl map normal Super+Control Print spawn "screenshotter -zone"
 
 ### Screenshot save
-riverctl map normal $mod Print spawn "screenshotter -save"
+riverctl map normal Super Print spawn "screenshotter -save"
 
 # }}}
 
 ### Toggle nm-applet (wifi)
-riverctl map normal $mod+Control W "wifi_control_toggle"
+riverctl map normal Super+Control W "wifi_control_toggle"
 
 ### Lock screen
-riverctl map normal $mod Delete "swaylock --clock"
+riverctl map normal Super Delete "swaylock --clock"
 
 ### Close focused view
-riverctl map normal $mod X close
+riverctl map normal Super X close
 
 ### Exit river
-riverctl map normal $mod+Mod1 E exit
+riverctl map normal Super+Mod1 E exit
 
 # Change focus next/previous {{{
 ### Focus next view
-riverctl map normal $mod J focus-view next
+riverctl map normal Super J focus-view next
 
 ### Focus previous view
-riverctl map normal $mod K focus-view previous
+riverctl map normal Super K focus-view previous
 
 ### Focus next view
-riverctl map normal $mod N focus-view next
+riverctl map normal Super N focus-view next
 
 ### Focus previous view
-riverctl map normal $mod+Shift N focus-view previous
+riverctl map normal Super+Shift N focus-view previous
 
 # }}}
 
 ### Swap with next view
-riverctl map normal $mod+Shift J swap next
+riverctl map normal Super+Shift J swap next
 
 ### Swap with previous view
-riverctl map normal $mod+Shift K swap previous
+riverctl map normal Super+Shift K swap previous
 
 # Output {{{
 
 ### Focus next output
-riverctl map normal $mod Period focus-output next
+riverctl map normal Super Period focus-output next
 
 ### Focus previous output
-riverctl map normal $mod Comma focus-output previous
+riverctl map normal Super Comma focus-output previous
 
 ### Send to next output
-riverctl map normal $mod+Shift Period send-to-output next
+riverctl map normal Super+Shift Period send-to-output next
 
 ### Send to previous output
-riverctl map normal $mod+Shift Comma send-to-output previous
+riverctl map normal Super+Shift Comma send-to-output previous
 
 # }}}
 
 ### Zoom (top of stack)
-riverctl map normal $mod Space zoom
+riverctl map normal Super Space zoom
 
 # Main area ratio {{{
 
 ### Decrease main area ratio by 5%
-riverctl map normal $mod H send-layout-cmd rivertile "main-ratio -0.05"
+riverctl map normal Super H send-layout-cmd rivertile "main-ratio -0.05"
 
 ### Increase main area ratio by 5%
-riverctl map normal $mod L send-layout-cmd rivertile "main-ratio +0.05"
+riverctl map normal Super L send-layout-cmd rivertile "main-ratio +0.05"
 
 ### Increase main area count by 1
-riverctl map normal $mod+Shift H send-layout-cmd rivertile "main-count +1"
+riverctl map normal Super+Shift H send-layout-cmd rivertile "main-count +1"
 
 ### Decrease main area count by 1
-riverctl map normal $mod+Shift L send-layout-cmd rivertile "main-count -1"
+riverctl map normal Super+Shift L send-layout-cmd rivertile "main-count -1"
 
 # }}}
 
 # Floating move {{{
 
 ### Floating move left
-riverctl map normal $mod+Mod1 H move left 100
+riverctl map normal Super+Mod1 H move left 100
 
 ### Floating move down
-riverctl map normal $mod+Mod1 J move down 100
+riverctl map normal Super+Mod1 J move down 100
 
 ### Floating move up
-riverctl map normal $mod+Mod1 K move up 100
+riverctl map normal Super+Mod1 K move up 100
 
 ### Floating move right
-riverctl map normal $mod+Mod1 L move right 100
+riverctl map normal Super+Mod1 L move right 100
 
 # }}}
 
 # Snap floating view to wall {{{
 
 ### Snap floating view left
-riverctl map normal $mod+Mod1+Control H snap left
+riverctl map normal Super+Mod1+Control H snap left
 
 ### Snap floating view down
-riverctl map normal $mod+Mod1+Control J snap down
+riverctl map normal Super+Mod1+Control J snap down
 
 ### Snap floating view up
-riverctl map normal $mod+Mod1+Control K snap up
+riverctl map normal Super+Mod1+Control K snap up
 
 ### Snap floating view right
-riverctl map normal $mod+Mod1+Control L snap right
+riverctl map normal Super+Mod1+Control L snap right
 
 # }}}
 
 # Resize views {{{
 
 ### Resize view horizontal -100
-riverctl map normal $mod+Mod1+Shift H resize horizontal -100
+riverctl map normal Super+Mod1+Shift H resize horizontal -100
 
 ### Resize view vertical -100
-riverctl map normal $mod+Mod1+Shift J resize vertical -100
+riverctl map normal Super+Mod1+Shift J resize vertical -100
 
 ### Resize view vertical +100
-riverctl map normal $mod+Mod1+Shift K resize vertical 100
+riverctl map normal Super+Mod1+Shift K resize vertical 100
 
 ### Resize view horizontal +100
-riverctl map normal $mod+Mod1+Shift L resize horizontal 100
+riverctl map normal Super+Mod1+Shift L resize horizontal 100
 
 # }}}
 
 ### Move view
-riverctl map-pointer normal $mod BTN_LEFT move-view
+riverctl map-pointer normal Super BTN_LEFT move-view
 
 ### Resize view
-riverctl map-pointer normal $mod BTN_RIGHT resize-view
+riverctl map-pointer normal Super BTN_RIGHT resize-view
 
 for i in $(seq 1 9)
 do
     tags=$((1 << ($i - 1)))
 
     ### Mod+[1-9] to focus tag [0-8]
-    riverctl map normal $mod $i set-focused-tags $tags
+    riverctl map normal Super $i set-focused-tags $tags
 
     ### Mod+Shift+[1-9] to tag focused view with tag [0-8]
-    riverctl map normal $mod+Shift $i set-view-tags $tags
+    riverctl map normal Super+Shift $i set-view-tags $tags
 
     ### Mod+Ctrl+[1-9] to toggle focus of tag [0-8]
-    riverctl map normal $mod+Control $i toggle-focused-tags $tags
+    riverctl map normal Super+Control $i toggle-focused-tags $tags
 
     ### Mod+Shift+Ctrl+[1-9] to toggle tag [0-8] of focused view
-    riverctl map normal $mod+Shift+Control $i toggle-view-tags $tags
+    riverctl map normal Super+Shift+Control $i toggle-view-tags $tags
 done
 
 # All tags {{{
 all_tags=$(((1 << 32) - 1))
 
 ### Focus all tags
-riverctl map normal $mod 0 set-focused-tags $all_tags
+riverctl map normal Super 0 set-focused-tags $all_tags
 
 ### Tag focused view with all tags
-riverctl map normal $mod+Shift 0 set-view-tags $all_tags
+riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
 # }}}
 
 ### Toggle float
-riverctl map normal $mod S toggle-float
+riverctl map normal Super S toggle-float
 
 ### Toggle fullscreen
-riverctl map normal $mod F toggle-fullscreen
+riverctl map normal Super F toggle-fullscreen
 
 # Layout orientation {{{
 
 ### Layout orientation top
-riverctl map normal $mod Up    set-layout-value rivertile string main_location top
+riverctl map normal Super Up    set-layout-value rivertile string main_location top
 
 ### Layout orientation right
-riverctl map normal $mod Right set-layout-value rivertile string main_location right
+riverctl map normal Super Right set-layout-value rivertile string main_location right
 
 ### Layout orientation bottom
-riverctl map normal $mod Down  set-layout-value rivertile string main_location bottom
+riverctl map normal Super Down  set-layout-value rivertile string main_location bottom
 
 ### Layout orientation left
-riverctl map normal $mod Left  set-layout-value rivertile string main_location left
+riverctl map normal Super Left  set-layout-value rivertile string main_location left
 
 # }}}
 
@@ -365,59 +363,59 @@ riverctl map normal $mod Left  set-layout-value rivertile string main_location l
 riverctl declare-mode passthrough
 
 ### Enter passthrough mode
-riverctl map normal $mod F11 enter-mode passthrough
+riverctl map normal Super F11 enter-mode passthrough
 
 ### Return from passthrough to normal
-riverctl map passthrough $mod F11 enter-mode normal
+riverctl map passthrough Super F11 enter-mode normal
 
 # }}}
 
 ### Focus previously selected tags
-riverctl map normal $mod Grave focus-previous-tags
+riverctl map normal Super Grave focus-previous-tags
 
 # Various media key mapping examples for both normal and locked mode which do
 # not have a modifier
 for mode in normal locked
 do
     # Eject the optical drive
-    # riverctl map $mode None XF86Eject spawn "eject -T"
+    # riverctl map Supere None XF86Eject spawn "eject -T"
 
     # Volume {{{
 
     ### Volume up 5%
-    riverctl map $mode None XF86AudioRaiseVolume  spawn "pamixer -i 5"
+    riverctl map Supere None XF86AudioRaiseVolume  spawn "pamixer -i 5"
 
     ### Volume down 5%
-    riverctl map $mode None XF86AudioLowerVolume  spawn "pamixer -d 5"
+    riverctl map Supere None XF86AudioLowerVolume  spawn "pamixer -d 5"
 
     ### Volume mute
-    riverctl map $mode None XF86AudioMute         spawn "pamixer --toggle-mute"
+    riverctl map Supere None XF86AudioMute         spawn "pamixer --toggle-mute"
 
     # }}}
 
     # Playerctl {{{
 
     ### Playerctl toggle play
-    riverctl map $mode None XF86AudioMedia spawn "playerctl play-pause"
+    riverctl map Supere None XF86AudioMedia spawn "playerctl play-pause"
 
     ### Playerctl toggle play
-    riverctl map $mode None XF86AudioPlay  spawn "playerctl play-pause"
+    riverctl map Supere None XF86AudioPlay  spawn "playerctl play-pause"
     
     ### Playerctl previous
-    riverctl map $mode None XF86AudioPrev  spawn "playerctl previous"
+    riverctl map Supere None XF86AudioPrev  spawn "playerctl previous"
 
     ### Playerctl next
-    riverctl map $mode None XF86AudioNext  spawn "playerctl next"
+    riverctl map Supere None XF86AudioNext  spawn "playerctl next"
 
     # }}}
 
     # Control screen backlight brighness with light (https://github.com/haikarainen/light)
 
     ### Brightness up 10%
-    riverctl map $mode None XF86MonBrightnessUp   spawn "light -A 10"
+    riverctl map Supere None XF86MonBrightnessUp   spawn "light -A 10"
 
     ### Brightness down 10%
-    riverctl map $mode None XF86MonBrightnessDown spawn "light -U 10"
+    riverctl map Supere None XF86MonBrightnessDown spawn "light -U 10"
 done
 
 # Set repeat rate
@@ -450,10 +448,10 @@ riverctl default-layout rivertile
 scratch_tag=$((1 << 20 ))
 
 ### Toggle the scratchpad
-riverctl map normal $mod+Control Return toggle-focused-tags ${scratch_tag}
+riverctl map normal Super+Control Return toggle-focused-tags ${scratch_tag}
 
 ### Send view to the scratchpad
-riverctl map normal $mod+Mod1 Return set-view-tags ${scratch_tag}
+riverctl map normal Super+Mod1 Return set-view-tags ${scratch_tag}
 
 # Set spawn tagmask to ensure new windows don't have the scratchpad tag unless
 # explicitly set.
