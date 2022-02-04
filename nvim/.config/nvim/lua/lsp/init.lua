@@ -17,6 +17,7 @@ require("lsp.dockerls")
 require("lsp.htmlls")
 require("lsp.jsonls")
 require("lsp.yamlls")
+require("lsp.rnix-lsp")
 
 local opts = { noremap=true, silent=true }
 local map  = vim.api.nvim_set_keymap;
