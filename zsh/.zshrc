@@ -27,6 +27,9 @@ source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zsh_completions
 
+[[ ! -f /etc/zsh-fzf-tab/fzf-tab.plugin.zsh ]] \
+    || source /etc/zsh-fzf-tab/fzf-tab.plugin.zsh
+
 export HISTFILE=$HOME/.zsh_history
 
 # End of lines added by compinstall
