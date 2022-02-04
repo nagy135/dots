@@ -61,7 +61,8 @@ nnoremap ;ft   :NvimTreeFindFile<CR>
 nnoremap <leader>e   :NvimTreeFindFile<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
-nnoremap <c-n> :call DeleteFunctionUnderCursor()<CR>
+nnoremap M :call SurroundFunctionUnderCursor()<CR>
+nnoremap <c-m> :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
@@ -170,6 +171,7 @@ function harpoonIndexJump()
     require('harpoon.ui').nav_file(tonumber(index))
 end
 EOF
+nnoremap <leader>mi :lua DeleteFunctionUnderCursor()<CR>
 nnoremap <leader>mi :lua harpoonIndexJump()<CR>
 nnoremap <A-1> :lua require('harpoon.ui').nav_file(1)<CR>
 nnoremap <A-2> :lua require('harpoon.ui').nav_file(2)<CR>
@@ -300,6 +302,36 @@ function! DeleteFunctionUnderCursor()
         normal! l
         let i += 1
     endwhile
+endfunc
+
+function! SurroundFunctionUnderCursor()
+    let line = getline('.')
+    set iskeyword+=.
+    normal! ml
+    set iskeyword-=.
+    let i = 1
+    let c = 0
+    let start = 0
+    while i <= strlen(line)
+        let char = getline('.')[col('.') - 1]
+        if (char == '(')
+            let start = 1
+            let c += 1
+        elseif (char == ')')
+            let c -= 1
+        endif
+        if (start == 1)
+            if (c == 0)
+                normal! a)
+                normal! `l
+                break
+            endif
+        endif
+        normal! l
+        let i += 1
+    endwhile
+    normal i(
+    startinsert
 endfunc
 
 " Scrolling for tabs {{{
