@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -83,10 +83,14 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Control+c exec google-chrome-stable --incognito
 
     # Vifm
-    bindsym $mod+r exec $term -e vifm
+    bindsym $mod+r exec $term vifm
 
     # Waybar
     bindsym $mod+Shift+b exec pkill waybar || waybar
+
+    # Light
+    bindsym XF86MonBrightnessUp exec light -A 10
+    bindsym XF86MonBrightnessDown exec light -U 10
 
     # Kill focused window
     bindsym $mod+x kill
