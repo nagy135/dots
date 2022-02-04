@@ -37,6 +37,8 @@ in {
 		nodejs
         sway
         waybar
+        pavucontrol
+        yt-dlp
         zsh-fzf-tab
 	];
 
