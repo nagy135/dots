@@ -6,9 +6,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       ./packages.nix
+      ./pipewire.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -79,7 +80,7 @@
 
   # Enable sound.
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -89,7 +90,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     initialPassword = "pass";
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "docker" "video" ];
   };
 
 
