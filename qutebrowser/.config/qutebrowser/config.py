@@ -264,6 +264,8 @@ c.url.searchengines = {
     'archrepo': 'https://www.archlinux.org/packages/?q={}',
     'aurrepo': 'https://aur.archlinux.org/packages/?O=0&K={}',
     'nix': 'https://search.nixos.org/packages?query={}',
+    'optnix': 'https://search.nixos.org/options?query={}',
+    'wikinix': 'https://nixos.wiki/index.php?search={}',
     'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch',
     'tw': 'http://www.twitch.tv/{}'
 }
