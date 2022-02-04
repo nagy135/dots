@@ -37,7 +37,11 @@ in {
 		nodejs
         sway
         waybar
+        zsh-fzf-tab
 	];
+
+    environment.etc."zsh-fzf-tab/fzf-tab.plugin.zsh".source = "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh";
+
 	programs.zsh.enable = true;
 	programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
