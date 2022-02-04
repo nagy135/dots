@@ -378,44 +378,44 @@ riverctl map normal Super Grave focus-previous-tags
 for mode in normal locked
 do
     # Eject the optical drive
-    # riverctl map Supere None XF86Eject spawn "eject -T"
+    # riverctl map Super None XF86Eject spawn "eject -T"
 
     # Volume {{{
 
     ### Volume up 5%
-    riverctl map Supere None XF86AudioRaiseVolume  spawn "pamixer -i 5"
+    riverctl map Super None XF86AudioRaiseVolume  spawn "pamixer -i 5"
 
     ### Volume down 5%
-    riverctl map Supere None XF86AudioLowerVolume  spawn "pamixer -d 5"
+    riverctl map Super None XF86AudioLowerVolume  spawn "pamixer -d 5"
 
     ### Volume mute
-    riverctl map Supere None XF86AudioMute         spawn "pamixer --toggle-mute"
+    riverctl map Super None XF86AudioMute         spawn "pamixer --toggle-mute"
 
     # }}}
 
     # Playerctl {{{
 
     ### Playerctl toggle play
-    riverctl map Supere None XF86AudioMedia spawn "playerctl play-pause"
+    riverctl map Super None XF86AudioMedia spawn "playerctl play-pause"
 
     ### Playerctl toggle play
-    riverctl map Supere None XF86AudioPlay  spawn "playerctl play-pause"
+    riverctl map Super None XF86AudioPlay  spawn "playerctl play-pause"
     
     ### Playerctl previous
-    riverctl map Supere None XF86AudioPrev  spawn "playerctl previous"
+    riverctl map Super None XF86AudioPrev  spawn "playerctl previous"
 
     ### Playerctl next
-    riverctl map Supere None XF86AudioNext  spawn "playerctl next"
+    riverctl map Super None XF86AudioNext  spawn "playerctl next"
 
     # }}}
 
     # Control screen backlight brighness with light (https://github.com/haikarainen/light)
 
     ### Brightness up 10%
-    riverctl map Supere None XF86MonBrightnessUp   spawn "light -A 10"
+    riverctl map Super None XF86MonBrightnessUp   spawn "light -A 10"
 
     ### Brightness down 10%
-    riverctl map Supere None XF86MonBrightnessDown spawn "light -U 10"
+    riverctl map Super None XF86MonBrightnessDown spawn "light -U 10"
 done
 
 # Set repeat rate
