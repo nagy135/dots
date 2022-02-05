@@ -105,6 +105,12 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+t exec tsm-add
     bindsym $mod+Shift+t exec tsm-clean
 
+    # Spotify
+    bindsym $mod+m exec spotify_run
+
+    # Tmux
+    bindsym $mod+e exec tmux_run
+
     # Screenshot
     bindsym Print exec screenshotter
     bindsym $mod+Control+Print exec screenshotter -zone
