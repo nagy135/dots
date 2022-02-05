@@ -95,6 +95,29 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym XF86MonBrightnessUp exec light -A 10
     bindsym XF86MonBrightnessDown exec light -U 10
 
+    # Dunst
+    bindsym Control+Grave exec dunstctl history-pop
+    bindsym Control+Space exec dunstctl close
+    bindsym Control+Shift+Space exec dunstctl close-all
+    bindsym Control+Mod1+Space exec dunstctl set-paused toggle
+
+    # Torrent
+    bindsym $mod+t exec tsm-add
+    bindsym $mod+Shift+t exec tsm-clean
+
+    # Screenshot
+    bindsym Print exec screenshotter
+    bindsym $mod+Control+Print exec screenshotter -zone
+    bindsym $mod+Print exec screenshotter -save
+
+    # Screencast
+    bindsym $mod+Mod1+Print exec wayland_screen_record
+
+    # Volume
+    bindsym XF86AudioRaiseVolume exec pamixer -i 5
+    bindsym XF86AudioLowerVolume exec pamixer -d 5
+    bindsym XF86AudioMute exec pamixer --toggle-mute
+
     # Kill focused window
     bindsym $mod+x kill
 
@@ -219,14 +242,14 @@ mode "resize" {
     # up will shrink the containers height
     # down will grow the containers height
     bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
+    bindsym $up resize grow height 10px
+    bindsym $down resize shrink height 10px
     bindsym $right resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
+    bindsym Up resize grow height 10px
+    bindsym Down resize shrink height 10px
     bindsym Right resize grow width 10px
 
     # Return to default mode
@@ -239,8 +262,6 @@ default_border pixel 4
 default_floating_border pixel 4
 
 exec --no-startup-id waybar
-
-
 
 #
 # Status Bar:
