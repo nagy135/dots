@@ -23,10 +23,10 @@
   };
 
   environment.sessionVariables = rec {
-      XDG_CACHE_HOME  = "\${HOME}/.cache";
-      XDG_CONFIG_HOME = "\${HOME}/.config";
-      XDG_BIN_HOME    = "\${HOME}/.local/bin";
-      XDG_DATA_HOME   = "\${HOME}/.local/share";
+    XDG_CACHE_HOME = "\${HOME}/.cache";
+    XDG_CONFIG_HOME = "\${HOME}/.config";
+    XDG_BIN_HOME = "\${HOME}/.local/bin";
+    XDG_DATA_HOME = "\${HOME}/.local/share";
   };
 
 
@@ -51,7 +51,7 @@
   };
 
   fonts.fonts = with pkgs; [
-	  (nerdfonts.override { fonts = [ "Inconsolata" "FiraCode" "DroidSansMono" ]; })
+    (nerdfonts.override { fonts = [ "Inconsolata" "FiraCode" "DroidSansMono" ]; })
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -69,7 +69,7 @@
   #     Option "DRI" "2"
   #     Option "TearFree" "true"
   #     '';
-  
+
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -85,6 +85,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # share password lock between terminals
+  security.sudo.extraConfig = ''
+    Defaults !tty_tickets
+  '';
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.infiniter = {
     isNormalUser = true;
@@ -93,19 +98,27 @@
     extraGroups = [ "wheel" "docker" "video" ];
   };
 
+  # Cron
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      # "* * * * *      infiniter    notify-send ha &> /home/infiniter/testsst"
+    ];
+  };
 
-# Open ports in the firewall.
-# networking.firewall.allowedTCPPorts = [ ... ];
-# networking.firewall.allowedUDPPorts = [ ... ];
-# Or disable the firewall altogether.
-# networking.firewall.enable = false;
 
-# This value determines the NixOS release from which the default
-# settings for stateful data, like file locations and database versions
-# on your system were taken. It‘s perfectly fine and recommended to leave
-# this value at the release version of the first install of this system.
-# Before changing this value read the documentation for this option
-# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
+
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.11"; # Did you read the comment?
 
 }
