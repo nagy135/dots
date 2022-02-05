@@ -62,7 +62,7 @@ nnoremap <leader>e   :NvimTreeFindFile<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
-nnoremap <c-m> :call DeleteFunctionUnderCursor()<CR>
+nnoremap <leader>m :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
