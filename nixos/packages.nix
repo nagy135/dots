@@ -49,6 +49,7 @@ let
     transmission
     lazygit
     ripgrep
+    nodePackages.pyright
   ];
 
   waylandSwitch = with pkgs;
