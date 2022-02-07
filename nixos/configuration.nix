@@ -52,7 +52,9 @@
   };
 
   fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "Inconsolata" "FiraCode" "DroidSansMono" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # nerdfonts
+    # meslo-lgs-nf
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -80,7 +82,7 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  sound.enable = true;
+  # sound.enable = true;
   # hardware.pulseaudio.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
