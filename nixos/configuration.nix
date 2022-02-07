@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./pipewire.nix
+      ./gpu.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -122,4 +123,3 @@
   system.stateVersion = "21.11"; # Did you read the comment?
 
 }
-
