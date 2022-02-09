@@ -269,6 +269,9 @@ default_floating_border pixel 4
 
 exec --no-startup-id waybar
 
+# Color changes
+client.focused #555555 #555555 #ffffff #f9dc2b #c22330
+
 #
 # Status Bar:
 #
