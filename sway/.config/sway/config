@@ -101,6 +101,11 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym Control+Shift+Space exec dunstctl close-all
     bindsym Control+Mod1+Space exec dunstctl set-paused toggle
 
+    # Subtube
+    bindsym $mod+y exec subtube play
+    bindsym $mod+Shift+y exec subtube play -h google-chrome-stable
+    bindsym $mod+F5 exec subtube update
+
     # Torrent
     bindsym $mod+t exec tsm-add
     bindsym $mod+Shift+t exec tsm-clean
