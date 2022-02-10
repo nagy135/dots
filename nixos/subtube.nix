@@ -1,28 +1,20 @@
-{  fetchFromGitHub, bash, makeWrapper, maintainers
-}:
+with (import <nixpkgs> { });
 
-rec {
+stdenvNoCC.mkDerivation rec {
   pname = "subtube";
-  version = "git";
+  version = "2022-02-10";
 
   src = fetchFromGitHub {
     owner = "nagy135";
     repo = "subtube";
+    rev = "8212de442afeb044a68b68a1c41905da219088f7";
+    sha256 = "0xcqkijh8azid6vxw518sjzyvfw16ifgh4ha8k2ii40axsm7x5mp";
   };
 
-  buildInputs = [ bash ];
-  nativeBuildInputs = [ makeWrapper ];
+  strictDeps = true;
+  buildInputs = [ dash sxiv mpv youtube-dl jq curl gnused gnugrep ];
 
-  installPhase = ''
-    ls -la
-  '';
-
-  meta =  {
-    description = "Subtubeee";
-    homepage = "https://github.com/nagy135/subtube";
-    # license = licenses.mit;
-    # platforms = platforms.all;
-    maintainers = with maintainers; [ nagy135 ];
-    mainProgram = "subtube";
-  };
+  makeFlags = [
+    "PREFIX=${placeholder "out"}"
+  ];
 }
