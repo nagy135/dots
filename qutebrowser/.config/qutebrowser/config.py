@@ -264,6 +264,7 @@ c.url.searchengines = {
     'archrepo': 'https://www.archlinux.org/packages/?q={}',
     'aurrepo': 'https://aur.archlinux.org/packages/?O=0&K={}',
     'nixrepo': 'https://search.nixos.org/packages?query={}',
+    'nixpkgs': 'https://search.nixos.org/packages?query={}',
     'nixopt': 'https://search.nixos.org/options?query={}',
     'nixwiki': 'https://nixos.wiki/index.php?search={}',
     'you': 'https://www.youtube.com/results?search_query={}&page=&utm_source=opensearch',
