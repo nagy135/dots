@@ -2,6 +2,8 @@
 let
   unstable = import <unstable> { config = { allowUnfree = true; }; };
 
+  subtube = import ./subtube.nix;
+
   wayland = true;
   work = false;
 
@@ -50,6 +52,10 @@ let
     lazygit
     ripgrep
     nodePackages.pyright
+    z-lua
+    subtube
+    jq
+    nix-prefetch-scripts
   ];
 
   waylandSwitch = with pkgs;
