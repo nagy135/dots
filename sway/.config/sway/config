@@ -272,6 +272,8 @@ bindsym $mod+Shift+r mode "resize"
 default_border pixel 4
 default_floating_border pixel 4
 
+for_window [class="Sxiv"] floating enable
+
 exec --no-startup-id waybar
 
 # Color changes
