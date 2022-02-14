@@ -106,6 +106,12 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+y exec subtube play -h google-chrome-stable
     bindsym $mod+F5 exec subtube update
 
+    # Mpv history
+    bindsym $mod+a exec mpv_history
+    bindsym $mod+Control+a exec mpv_history --clipboard
+    bindsym $mod+Shift+a exec mpv_history --handler qutebrowser
+    bindsym $mod+Mod1+A exec mpv_history --handler google-chrome-stable
+
     # Torrent
     bindsym $mod+t exec tsm-add
     bindsym $mod+Shift+t exec tsm-clean
