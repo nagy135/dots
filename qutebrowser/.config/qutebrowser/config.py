@@ -421,31 +421,31 @@ c.colors.webpage.darkmode.contrast = 0.0
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '12pt FiraCode Nerd Font'
+c.fonts.completion.entry = '12pt JetBrainsMono Nerd Font'
 
 # Font used in the completion categories.
 # Type: Font
-c.fonts.completion.category = 'bold 13pt FiraCode Nerd Font'
+c.fonts.completion.category = 'bold 13pt JetBrainsMono Nerd Font'
 
 # Font used for the downloadbar.
 # Type: Font
-c.fonts.downloads = '12pt FiraCode Nerd Font'
+c.fonts.downloads = '12pt JetBrainsMono Nerd Font'
 
 # Font used for the hints.
 # Type: Font
-c.fonts.hints = 'bold 12pt FiraCode Nerd Font'
+c.fonts.hints = 'bold 12pt JetBrainsMono Nerd Font'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '13pt FiraCode Nerd Font'
+c.fonts.statusbar = '13pt JetBrainsMono Nerd Font'
 
 # Font used for selected tabs.
 # Type: Font
-c.fonts.tabs.selected = '12pt FiraCode Nerd Font'
+c.fonts.tabs.selected = '12pt JetBrainsMono Nerd Font'
 
 # Font used for unselected tabs.
 # Type: Font
-c.fonts.tabs.unselected = '12pt FiraCode Nerd Font'
+c.fonts.tabs.unselected = '12pt JetBrainsMono Nerd Font'
 
 # Bindings for normal mode
 chrome_bin = "google-chrome-stable"
@@ -495,10 +495,12 @@ config.bind('gV', 'open https://github.com/nagy135')
 config.bind('gY', 'open https://www.youtube.com')
 config.bind('gd', 'tab-give')
 config.bind('gf', 'open -t https://www.facebook.com/messages/')
+config.bind('gn', 'open -t https://nixos.wiki/wiki/Special:random')
+config.bind('gN', 'open https://nixos.wiki/wiki/Special:random')
 config.bind('gh', 'history -t')
 config.bind('gl', 'tab-move -')
 config.bind('gm', 'open -t https://www.gmail.com')
-config.bind('gn', 'enter-mode insert ;; jseval -q document.getElementsByClassName("_1mf _1mj")[0].click()')
+# config.bind('gn', 'enter-mode insert ;; jseval -q document.getElementsByClassName("_1mf _1mj")[0].click()')
 config.bind('go', 'open -t https://yts.ag/')
 config.bind('gp', 'tab-pin')
 config.bind('gr', 'tab-move +')
