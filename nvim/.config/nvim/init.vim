@@ -20,6 +20,7 @@ require('my_refactoring')
 require('my_capture')
 require('my_luasnip')
 require('my_fidget')
+require('my_neogit')
 
 require('lsp')
 
