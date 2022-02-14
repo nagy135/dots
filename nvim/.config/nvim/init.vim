@@ -5,7 +5,6 @@ lua << EOF
 require('impatient')
 
 require('my_telescope')
-require('my_diffview')
 require('my_indent-blackline')
 require('my_todo-comments')
 require('my_Comment')
@@ -20,6 +19,7 @@ require('my_refactoring')
 require('my_capture')
 require('my_luasnip')
 require('my_fidget')
+require('my_diffview')
 require('my_neogit')
 
 require('lsp')
