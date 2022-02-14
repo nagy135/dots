@@ -30,7 +30,6 @@ set incsearch
 set hlsearch
 set number
 set numberwidth=3
-set lazyredraw
 set noshowmode
 set listchars=tab:▸\ ,eol:¬
 set list
@@ -77,6 +76,8 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 
 nnoremap <leader>dd <cmd>TroubleToggle<CR>
+
+nnoremap <leader>uu <cmd>UndotreeToggle<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
@@ -195,12 +196,15 @@ nnoremap <leader>cc :ColorizerToggle<CR>
 " nnoremap <leader>cd :ColorizerDetachFromBuffer<CR>
 
 " Git
-nnoremap <leader>gg :G<CR>
+nnoremap <leader>gg :Neogit<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gP :Git pull<CR>
+
+" Diffview
+nnoremap <leader>dw :DiffviewOpen<CR>
 
 " Primeagen 5 tips
 nnoremap Y y$
@@ -359,6 +363,7 @@ endfunc
 
 " PLUG {{{
 call plug#begin('~/.vim/plugged')
+    Plug 'mbbill/undotree'
     Plug 'sainnhe/gruvbox-material'
     Plug 'ziglang/zig.vim'
     Plug 'lervag/wiki.vim'
@@ -405,7 +410,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
         Plug 'nvim-telescope/telescope-fzy-native.nvim'
-        Plug 'sindrets/diffview.nvim'
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
         Plug 'nagy135/capture-nvim'
         Plug 'neovim/nvim-lspconfig'
@@ -433,6 +437,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'L3MON4D3/LuaSnip'
         Plug 'saadparwaiz1/cmp_luasnip'
         Plug 'j-hui/fidget.nvim'
+        Plug 'sindrets/diffview.nvim'
+        Plug 'TimUntersberger/neogit'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
