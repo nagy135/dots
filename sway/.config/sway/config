@@ -78,6 +78,10 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Scratchpads
+    bindsym $mod+Control+Return exec sway_scratchpad
+    bindsym $mod+Shift+Return exec sway_scratchpad -t python
+
     # Qutebrowser
     bindsym $mod+q exec QT_XCB_GL_INTEGRATION=none qutebrowser
 
@@ -110,7 +114,10 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+a exec mpv_history
     bindsym $mod+Control+a exec mpv_history --clipboard
     bindsym $mod+Shift+a exec mpv_history --handler qutebrowser
-    bindsym $mod+Mod1+A exec mpv_history --handler google-chrome-stable
+    bindsym $mod+Mod1+a exec mpv_history --handler google-chrome-stable
+
+    # Color select
+    bindsym $mod+Mod1+c exec color
 
     # Torrent
     bindsym $mod+t exec tsm-add
@@ -245,11 +252,13 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+Return move scratchpad
+    # bindsym $mod+Shift+Return move scratchpad
+    # bindsym $mod+minus [title="haha"] scratchpad show
+
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+Control+Return scratchpad show
+    # bindsym $mod+Control+Return scratchpad show
 #
 # Resizing containers:
 #
