@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation rec {
   };
 
   strictDeps = true;
-  buildInputs = [ dash sxiv mpv youtube-dl jq curl gnused gnugrep ];
+  buildInputs = [ dash sxiv mpv youtube-dl jq curl gnused gnugrep wob wget ];
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"
