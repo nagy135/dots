@@ -3,6 +3,14 @@ let
   unstable = import <unstable> { config = { allowUnfree = true; }; };
 
   subtube = import ./subtube.nix;
+  mpv_history = import ./mpv_history.nix;
+  torque = import ./torque.nix;
+
+  personalPackages = with pkgs; [
+    subtube
+    mpv_history
+    torque
+  ];
 
   wayland = true;
   work = false;
@@ -53,7 +61,8 @@ let
     ripgrep
     nodePackages.pyright
     z-lua
-    subtube
+    # subtube
+    # mpv_history
     jq
     nix-prefetch-scripts
   ];
@@ -84,6 +93,7 @@ let
 in
 {
   environment.systemPackages = basePackages
+    ++ personalPackages
     ++ waylandSwitch
     ++ workSwitch;
 
