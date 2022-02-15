@@ -1,10 +1,23 @@
 { config, pkgs, ... }:
 let
-  unstable = import <unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
   subtube = import ./subtube.nix;
   mpv_history = import ./mpv_history.nix;
   torque = import ./torque.nix;
+
+  overridenFuzzel = unstable.fuzzel.overrideAttrs (oldAttrs: rec {
+    version = "1.7.x";
+
+    src = pkgs.fetchFromGitea {
+      domain = "codeberg.org";
+      owner = "dnkl";
+      repo = "fuzzel";
+      rev = "8e09393463a00fd233b8d3b2ac316c2cfea6c791";
+      sha256 = "1ywknv374yca0w862njlyn3bzcvigw3fskpa34ak8hycm05s2jfm";
+    };
+
+  });
 
   personalPackages = with pkgs; [
     subtube
@@ -17,6 +30,7 @@ let
 
   basePackages = with pkgs; [
     unstable.neovim
+    overridenFuzzel
     wget
     google-chrome
     git
