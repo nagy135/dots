@@ -56,6 +56,33 @@
     # nerdfonts
     # meslo-lgs-nf
   ];
+  fonts = {
+    enableDefaultFonts = true;
+    fontconfig = {
+      localConf = ''
+              <?xml version='1.0'?>
+        <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+        <fontconfig>
+         <alias>
+            <family>serif</family>
+            <prefer><family>JetBrainsMono Nerd Font</family></prefer>
+          </alias>
+          <alias>
+            <family>sans-serif</family>
+            <prefer><family>JetBrainsMono Nerd Font</family></prefer>
+          </alias>
+          <alias>
+            <family>sans</family>
+            <prefer><family>JetBrainsMono Nerd Font</family></prefer>
+          </alias>
+          <alias>
+            <family>monospace</family>
+            <prefer><family>JetBrainsMono Nerd Font</family></prefer>
+          </alias>
+        </fontconfig>
+      '';
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
