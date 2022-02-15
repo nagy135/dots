@@ -4,3 +4,4 @@
 [[change commit date]]
 [[merge with forked upstream]]
 [[clone with submodules]]
+[[tag remove]]

@@ -1,0 +1,5 @@
+# local
+git tag -d 1.0.0
+
+# remote
+git push --delete origin 1.0.0
