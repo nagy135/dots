@@ -78,6 +78,7 @@ nnoremap <F4> :call ZathuraOpen()<CR>
 nnoremap <leader>dd <cmd>TroubleToggle<CR>
 
 nnoremap <leader>uu <cmd>UndotreeToggle<CR>
+nnoremap <leader>ut <cmd>UndotreeToggle<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
