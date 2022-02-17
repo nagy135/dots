@@ -122,6 +122,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     # Torrent
     bindsym $mod+t exec tsm-add
     bindsym $mod+Shift+t exec tsm-clean
+    bindsym $mod+Control+t exec $term torque
+    bindsym $mod+Control+Shift+t exec $term stig
 
     # Spotify
     bindsym $mod+m exec spotify_run
@@ -136,6 +138,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 
     # Screencast
     bindsym $mod+Mod1+Print exec wayland_screen_record
+    bindsym $mod+Control+Mod1+Print exec wayland_screen_record -z
 
     # Volume
     bindsym XF86AudioRaiseVolume exec pamixer -i 5

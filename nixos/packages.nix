@@ -79,6 +79,7 @@ let
     # mpv_history
     jq
     nix-prefetch-scripts
+    steam
   ];
 
   waylandSwitch = with pkgs;
@@ -86,7 +87,6 @@ let
       foot
       sway
       waybar
-      fuzzel
       grim
       slurp
       wf-recorder
@@ -133,8 +133,6 @@ in
     ];
   };
   services.transmission = {
-    settings.umask = 493;
-    downloadDirPermissions = "775";
     enable = true;
     settings = {
       script-torrent-done-enabled = true;
