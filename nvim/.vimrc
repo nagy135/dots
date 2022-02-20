@@ -440,6 +440,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'j-hui/fidget.nvim'
         Plug 'sindrets/diffview.nvim'
         Plug 'TimUntersberger/neogit'
+        Plug 'nanotee/luv-vimdocs'
+        Plug 'milisims/nvim-luaref'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
