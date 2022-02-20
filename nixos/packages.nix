@@ -134,6 +134,8 @@ in
   };
   services.transmission = {
     enable = true;
+settings.download-dir = "${config.users.users.infiniter.home}/Videos/Movies";
+    user = "infiniter";
     settings = {
       script-torrent-done-enabled = true;
       script-torrent-done-filename = "${config.users.users.infiniter.home}/.scripts/torrent_done";
