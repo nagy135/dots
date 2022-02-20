@@ -31,6 +31,7 @@ let
   basePackages = with pkgs; [
     unstable.neovim
     overridenFuzzel
+    sxiv
     wget
     google-chrome
     git
@@ -50,7 +51,6 @@ let
     dmenu
     vifm
     tmux
-    sxiv
     ffmpeg
     docker
     docker-compose
@@ -75,11 +75,10 @@ let
     ripgrep
     nodePackages.pyright
     z-lua
-    # subtube
-    # mpv_history
     jq
     nix-prefetch-scripts
     steam
+    stig
   ];
 
   waylandSwitch = with pkgs;
