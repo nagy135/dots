@@ -138,6 +138,8 @@ nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<
 nnoremap <leader>cA <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
 
+nnoremap <leader>fe <cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>
+
 " My telescope
 nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
 nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")<cr>
@@ -442,6 +444,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'TimUntersberger/neogit'
         Plug 'nanotee/luv-vimdocs'
         Plug 'milisims/nvim-luaref'
+        Plug 'nvim-telescope/telescope-file-browser.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
