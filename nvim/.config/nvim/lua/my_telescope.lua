@@ -48,7 +48,7 @@ require('telescope').setup{
             },
         },
         file_sorter =  require'telescope.sorters'.get_fuzzy_file,
-        jeneric_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+        generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
         winblend = 0,
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
@@ -70,6 +70,9 @@ require('telescope').setup{
         },
         file_browser = {
             theme = "ivy",
+            layout_config = {
+                height = 50,
+            },
             mappings = {
                 ["i"] = {
                     -- your custom insert mode mappings
@@ -83,8 +86,6 @@ require('telescope').setup{
 }
 require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('file_browser')
-
-
 
 local M = {}
 
