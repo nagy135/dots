@@ -78,7 +78,6 @@ nnoremap <F4> :call ZathuraOpen()<CR>
 nnoremap <leader>dd <cmd>TroubleToggle<CR>
 
 nnoremap <leader>uu <cmd>UndotreeToggle<CR>
-nnoremap <leader>ut <cmd>UndotreeToggle<CR>
 
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>qq :q!<CR>
@@ -105,6 +104,10 @@ nnoremap <leader><leader>l :tabm+<CR>
 nnoremap <leader><leader>h :tabm-<CR>
 
 nnoremap <leader>r :LspRestart<CR>
+
+" zoom
+nnoremap <Leader>zz :tabnew %<CR>
+nnoremap <Leader>zc :tabclose<CR>
 
 " Telescope {{{
 
@@ -139,6 +142,11 @@ nnoremap <leader>cA <cmd>lua require("telescope.builtin").lsp_code_actions(requi
 nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
 
 nnoremap <leader>fe <cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>
+
+nnoremap <leader>ld <cmd>lua require('telescope.builtin').diagnostics()<cr>
+nnoremap <leader>lD <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<cr>
+
+nnoremap <leader>mp <cmd>lua require('telescope.builtin').man_pages()<cr>
 
 " My telescope
 nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
