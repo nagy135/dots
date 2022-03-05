@@ -1,35 +1,26 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
-### Variables
-#
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
 set $term foot
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
+
+# dmenu choice
 set $menu fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2 | xargs swaymsg exec --
 
+# gaps
 gaps inner 10
 gaps outer 2
 
-
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-# output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# background
 output * bg ~/Pictures/current_wallpaper fill
 
+# keyboard setup
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_variant ,nodeadkeys
     xkb_options caps:escape
@@ -44,7 +35,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
+## Idle configuration
 #
 # Example configuration:
 #
@@ -57,7 +48,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-### Input configuration
+## Input configuration
 #
 # Example configuration:
 #
@@ -71,98 +62,136 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-### Key bindings
-#
-# Basics:
-#
-    # Start a terminal
-    bindsym $mod+Return exec $term
 
-    # Scratchpads
-    bindsym $mod+Control+Return exec sway_scratchpad
-    bindsym $mod+Shift+Return exec sway_scratchpad -t python
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # #     K E Y B I N D S     # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-    # Qutebrowser
-    bindsym $mod+q exec QT_XCB_GL_INTEGRATION=none qutebrowser
 
-    # Chrome
-    bindsym $mod+c exec google-chrome-stable
-    bindsym $mod+Control+c exec google-chrome-stable --incognito
+### Start a terminal
+bindsym $mod+Return exec $term
 
-    # Vifm
-    bindsym $mod+r exec $term vifm
+# Scratchpads {{{
+### Terminal scratchpad
+bindsym $mod+Control+Return exec sway_scratchpad
 
-    # Waybar
-    bindsym $mod+Shift+b exec pkill waybar || waybar
+### Python scratchpad
+bindsym $mod+Shift+Return exec sway_scratchpad -t python
+# }}}
 
-    # Light
-    bindsym XF86MonBrightnessUp exec light -A 10
-    bindsym XF86MonBrightnessDown exec light -U 10
+### Qutebrowser
+bindsym $mod+q exec QT_XCB_GL_INTEGRATION=none qutebrowser
 
-    # Dunst
-    bindsym Control+Grave exec dunstctl history-pop
-    bindsym Control+Space exec dunstctl close
-    bindsym Control+Shift+Space exec dunstctl close-all
-    bindsym Control+Mod1+Space exec dunstctl set-paused toggle
+### Chrome
+bindsym $mod+c exec google-chrome-stable
 
-    # Subtube
-    bindsym $mod+y exec subtube play
-    bindsym $mod+Shift+y exec subtube play -h google-chrome-stable
-    bindsym $mod+F5 exec subtube update
+### Chrome - incognito
+bindsym $mod+Control+c exec google-chrome-stable --incognito
 
-    # Mpv history
-    bindsym $mod+a exec mpv_history
-    bindsym $mod+Control+a exec mpv_history --clipboard
-    bindsym $mod+Shift+a exec mpv_history --handler qutebrowser
-    bindsym $mod+Mod1+a exec mpv_history --handler google-chrome-stable
+### Vifm
+bindsym $mod+r exec $term vifm
 
-    # Color select
-    bindsym $mod+Mod1+c exec color
+### Waybar (toggle)
+bindsym $mod+Shift+b exec pkill waybar || waybar
 
-    # Torrent
-    bindsym $mod+t exec tsm-add
-    bindsym $mod+Shift+t exec tsm-clean
-    bindsym $mod+Control+t exec $term torque
-    bindsym $mod+Control+Shift+t exec $term stig
+# Light {{{
+### Light - brightness up 10%
+bindsym XF86MonBrightnessUp exec light -A 10
 
-    # Spotify
-    bindsym $mod+m exec spotify_run
+### Light - brightness down 10%
+bindsym XF86MonBrightnessDown exec light -U 10
+# }}}
 
-    # Tmux
-    bindsym $mod+e exec tmux_run
+# Dunst {{{
+### Dunst - history-pop
+bindsym Control+Grave exec dunstctl history-pop
+### Dunst - close one
+bindsym Control+Space exec dunstctl close
+### Dunst - close all
+bindsym Control+Shift+Space exec dunstctl close-all
+### Dunst - toggle paused
+bindsym Control+Mod1+Space exec dunstctl set-paused toggle
+# }}}
 
-    # Screenshot
-    bindsym Print exec screenshotter
-    bindsym $mod+Control+Print exec screenshotter -zone
-    bindsym $mod+Print exec screenshotter -save
+# Subtube {{{
+### Subtube play
+bindsym $mod+y exec subtube play
+### Subtube play (chrome)
+bindsym $mod+Shift+y exec subtube play -h google-chrome-stable
+### Subtube update
+bindsym $mod+F5 exec subtube update
+# }}}
 
-    # Screencast
-    bindsym $mod+Mod1+Print exec wayland_screen_record
-    bindsym $mod+Control+Mod1+Print exec wayland_screen_record -z
+# Mpv history {{{
+### mpv_history
+bindsym $mod+a exec mpv_history
+### mpv_history (clipboard)
+bindsym $mod+Control+a exec mpv_history --clipboard
+### mpv_history (qutebrowser)
+bindsym $mod+Shift+a exec mpv_history --handler qutebrowser
+### mpv_history (chrome)
+bindsym $mod+Mod1+a exec mpv_history --handler google-chrome-stable
+# }}}
 
-    # Volume
-    bindsym XF86AudioRaiseVolume exec pamixer -i 5
-    bindsym XF86AudioLowerVolume exec pamixer -d 5
-    bindsym XF86AudioMute exec pamixer --toggle-mute
+### Color select from my colors
+bindsym $mod+Mod1+c exec color
 
-    # Kill focused window
-    bindsym $mod+x kill
+# Torrent {{{
+### Torrent add
+bindsym $mod+t exec tsm-add
+### Torrent clean
+bindsym $mod+Shift+t exec tsm-clean
+### Torque
+bindsym $mod+Control+t exec $term torque
+### Stig
+bindsym $mod+Control+Shift+t exec $term stig
+# }}}
 
-    # Start your launcher
-    bindsym $mod+d exec $menu
+### Spotify
+bindsym $mod+m exec spotify_run
 
-    # Drag floating windows by holding down $mod and left mouse button.
-    # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
-    floating_modifier $mod normal
+### Tmux
+bindsym $mod+e exec tmux_run
 
-    # Reload the configuration file
-    bindsym $mod+Shift+c reload
+# Screenshot {{{
+### Basic fullscreen screenshot
+bindsym Print exec screenshotter
+### Zone screenshot
+bindsym $mod+Control+Print exec screenshotter -zone
+### Basic fullscreen screenshot (save)
+bindsym $mod+Print exec screenshotter -save
+# }}}
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+# Screencast {{{
+### Screencast (start/end)
+bindsym $mod+Mod1+Print exec wayland_screen_record
+### Screencast (start/end) choose zone
+bindsym $mod+Control+Mod1+Print exec wayland_screen_record -z
+# }}}
+
+# Volume
+bindsym XF86AudioRaiseVolume exec pamixer -i 5
+bindsym XF86AudioLowerVolume exec pamixer -d 5
+bindsym XF86AudioMute exec pamixer --toggle-mute
+
+### Kill focused window
+bindsym $mod+x kill
+
+### Start your launcher (fuzzel)
+bindsym $mod+d exec $menu
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+# Change normal to inverse to use left mouse button for resizing and right
+# mouse button for dragging.
+floating_modifier $mod normal
+
+### Reload the configuration file
+bindsym $mod+Shift+c reload
+
+### Exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -188,7 +217,10 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
 
+    ### Focus floating window
     bindsym $mod+g focus floating
+
+    ### Focus tiling window
     bindsym $mod+Shift+g focus tiling
 #
 # Workspaces:
@@ -216,39 +248,52 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
 
+    ### Move window back and forth to workspace
     bindsym $mod+Shift+Grave move container to workspace back_and_forth
+
+    ### Back and forth workspace
     bindsym $mod+Grave workspace back_and_forth
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
+    ### Split horizontally
     bindsym $mod+Control+l splith
+
+    ### Split vertically
     bindsym $mod+Control+j splitv
 
-    # Switch the current container between different layout styles
+    # Layouts {{{
+    ### Stacking layout
     bindsym $mod+w layout stacking
-    bindsym $mod+Shift+w layout tabbed
-    bindsym $mod+Shift+f layout toggle split
 
-    # Make the current focus fullscreen
+    ### Tabbed layout
+    bindsym $mod+Shift+w layout tabbed
+
+    ### Toggle splitting direction
+    bindsym $mod+Shift+f layout toggle split
+    # }}}
+
+    ### Toggle fullscreen
     bindsym $mod+f fullscreen
 
-    # Toggle the current focus between tiling and floating mode
+    ### Toggle floating
     bindsym $mod+s floating toggle
 
-    # Swap focus between the tiling area and the floating area
+    ### Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
 
-    # Move focus to the parent container
+    ### Move focus to the parent container
     bindsym $mod+o focus parent
+
+    ### Move focus to the child container
     bindsym $mod+Shift+o focus child
 
-    # Move focus to the next/previous
+    ### Move focus to the next
     bindsym $mod+n focus next
+
+    ### Move focus to the previous
     bindsym $mod+Shift+n focus prev
 #
 # Scratchpad:
@@ -287,6 +332,8 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+### Resize mode
 bindsym $mod+Shift+r mode "resize"
 
 default_border pixel 4
