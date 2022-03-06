@@ -136,6 +136,12 @@ bindsym $mod+Mod1+a exec mpv_history --handler google-chrome-stable
 ### Color select from my colors
 bindsym $mod+Mod1+c exec color
 
+### Sway binds helper script (description => bind)
+bindsym $mod+v exec sway_binds --description
+
+### Sway binds helper script (reverse, bind => description)
+bindsym $mod+Shift+v exec sway_binds --bind
+
 # Torrent {{{
 ### Torrent add
 bindsym $mod+t exec tsm-add
