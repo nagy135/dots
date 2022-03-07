@@ -302,20 +302,6 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
     ### Move focus to the previous
     bindsym $mod+Shift+n focus prev
 #
-# Scratchpad:
-#
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
-
-    # Move the currently focused window to the scratchpad
-    # bindsym $mod+Shift+Return move scratchpad
-    # bindsym $mod+minus [title="haha"] scratchpad show
-
-
-    # Show the next scratchpad window or hide the focused scratchpad window.
-    # If there are multiple scratchpad windows, this command cycles through them.
-    # bindsym $mod+Control+Return scratchpad show
-#
 # Resizing containers:
 #
 mode "resize" {
