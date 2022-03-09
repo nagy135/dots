@@ -96,10 +96,10 @@ bindsym $mod+Shift+b exec pkill waybar || waybar
 
 # Light {{{
 ### Light - brightness up 10%
-bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessUp exec brightness_notification 1
 
 ### Light - brightness down 10%
-bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86MonBrightnessDown exec brightness_notification -1
 # }}}
 
 # Dunst {{{
