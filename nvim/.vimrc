@@ -453,6 +453,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nanotee/luv-vimdocs'
         Plug 'milisims/nvim-luaref'
         Plug 'nvim-telescope/telescope-file-browser.nvim'
+        Plug 'williamboman/nvim-lsp-installer'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
