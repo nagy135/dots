@@ -2,22 +2,24 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 require("lsp.intelephense")
-require("lsp.tsserver")
 require("lsp.cssls")
 -- require("lsp.tailwindcss")
 require("lsp.gopls")
 require("lsp.bashls")
-require("lsp.lua-language-server")
 -- require("lsp.rls")
 require("lsp.rust_analyzer")
-require("lsp.pylsp")
-require("lsp.pyright")
 require("lsp.nimls")
 require("lsp.dockerls")
 require("lsp.htmlls")
 require("lsp.jsonls")
 require("lsp.yamlls")
 require("lsp.rnix-lsp")
+
+require("lsp.my_nvim-lsp-installer")
+-- require("lsp.tsserver")
+-- require("lsp.lua-language-server")
+-- require("lsp.pylsp")
+-- require("lsp.pyright")
 
 local opts = { noremap=true, silent=true }
 local map  = vim.api.nvim_set_keymap;
