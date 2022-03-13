@@ -65,15 +65,12 @@ let
     pipewire
     libnotify
     dunst
-    sumneko-lua-language-server
-    nodePackages.typescript
     spotify
     pamixer
     postman
     transmission
     lazygit
     ripgrep
-    nodePackages.pyright
     z-lua
     jq
     nix-prefetch-scripts
