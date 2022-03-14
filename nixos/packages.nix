@@ -76,6 +76,9 @@ let
     nix-prefetch-scripts
     steam
     stig
+    zip
+    unzip
+    file
   ];
 
   waylandSwitch = with pkgs;
