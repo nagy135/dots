@@ -79,6 +79,7 @@ let
     zip
     unzip
     file
+    sumneko-lua-language-server
   ];
 
   waylandSwitch = with pkgs;
