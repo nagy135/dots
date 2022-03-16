@@ -19,6 +19,28 @@ let
 
   });
 
+  overridenNeovim = unstable.neovim.overrideAttrs (oldAttrs: rec {
+    version = "0.6.1";
+    vimAlias = true;
+
+    src = pkgs.fetchFromGitHub {
+      owner = "neovim";
+      repo = "neovim";
+      rev = "4e5e0076cb643b52d762f226b27f22c8fb837567";
+      sha256 = "1bzvg0a8sj9y8js68x0djb9njz3rhmy25cz3f39b9db7llggc1pk";
+    };
+
+  });
+
+  # overridenSxiv = pkgs.sxiv.overrideAttrs(oldAttrs: rec {
+  #   overridenConfig = ''
+  #   1213 12 1 23 123
+  #   '';
+  #   preBuild = ''
+  #       echo ${overridenConfig} config.def.h;
+  #   '';
+  # });
+
   personalPackages = with pkgs; [
     subtube
     mpv_history
@@ -29,7 +51,7 @@ let
   work = false;
 
   basePackages = with pkgs; [
-    unstable.neovim
+    overridenNeovim
     overridenFuzzel
     sxiv
     wget
@@ -134,6 +156,7 @@ in
   };
   services.transmission = {
     enable = true;
+
 settings.download-dir = "${config.users.users.infiniter.home}/Videos/Movies";
     user = "infiniter";
     settings = {
