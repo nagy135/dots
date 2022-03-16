@@ -50,26 +50,33 @@ vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<C-j>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<C-j>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<C-E>", "<Plug>luasnip-next-choice", {})
-vim.api.nvim_set_keymap("s", "<C-E>", "<Plug>luasnip-next-choice", {})
+vim.api.nvim_set_keymap("i", "<C-l>", "<Plug>luasnip-next-choice", {})
+vim.api.nvim_set_keymap("s", "<C-l>", "<Plug>luasnip-next-choice", {})
 
 local fmt = require('luasnip.extras.fmt').fmt
 local s = ls.s
 local i = ls.insert_node
+local c = ls.choice_node
+local t = ls.text_node
 local rep = require('luasnip.extras').rep
 
 local ts_js = {
-    s('func', fmt("const {} = ({}) => {{\n  {}\n}};", {
+    s('func', fmt("const {} = {}({}) => {{\n  {}\n}};", {
         i(1),
-        i(2),
+        c(2, {t "", t "async "}),
+        i(3),
         i(0),
     })),
-    s('log', fmt("console.log('{}',{})", {
+    s('log', fmt("console.log('{}',{});", {
         rep(1),
         i(1)
     })),
-    -- ls.parser.parse_snippet('func', "const $1 = ($2) => {\n  $0\n};")
-    -- ls.parser.parse_snippet('log', "console.log($1)")
+    s('for', fmt("for (const {} {} {}){{\n  {}\n}}", {
+        i(1),
+        c(2, {t "of", t "in"}),
+        i(3),
+        i(0)
+    })),
 }
 
 ls.snippets = {
