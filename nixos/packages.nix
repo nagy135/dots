@@ -32,15 +32,6 @@ let
 
   });
 
-  # overridenSxiv = pkgs.sxiv.overrideAttrs(oldAttrs: rec {
-  #   overridenConfig = ''
-  #   1213 12 1 23 123
-  #   '';
-  #   preBuild = ''
-  #       echo ${overridenConfig} config.def.h;
-  #   '';
-  # });
-
   personalPackages = with pkgs; [
     subtube
     mpv_history
@@ -151,7 +142,6 @@ in
       swaylock
       swayidle
       wl-clipboard
-      # mako # notification daemon
     ];
   };
   services.transmission = {
