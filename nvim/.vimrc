@@ -146,6 +146,8 @@ nnoremap <leader>lD <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})
 
 nnoremap <leader>mp <cmd>lua require('telescope.builtin').man_pages()<cr>
 
+nnoremap <leader>fz <cmd>lua require('telescope.builtin').spell_suggest()<cr>
+
 " My telescope
 nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
 nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")<cr>
