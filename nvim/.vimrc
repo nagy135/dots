@@ -21,8 +21,6 @@ set ts=4
 set autoindent
 set path+=**
 set mouse=
-" set cursorline
-" set cursorcolumn
 set wildmenu
 set showcmd
 set showmatch
@@ -132,7 +130,7 @@ nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
 nnoremap <leader>fo <cmd>lua require('telescope.builtin').oldfiles()<cr>
 
 nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
-nnoremap <leader>fL <cmd>lua require('telescope.builtin').git_commits()<cr>
+nnoremap <leader>fL <cmd>lua require('telescope.builtin').git_bcommits()<cr>
 
 nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
