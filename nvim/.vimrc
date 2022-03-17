@@ -217,6 +217,9 @@ nnoremap <leader>gP :Git pull<CR>
 " Diffview
 nnoremap <leader>dw :DiffviewOpen<CR>
 
+" Prettier
+nnoremap <leader>lp :Prettier<CR>
+
 " Primeagen 5 tips
 nnoremap Y y$
 
@@ -444,7 +447,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'lewis6991/impatient.nvim'
         Plug 'nagy135/typebreak.nvim'
         Plug 'MunifTanjim/nui.nvim'
-        Plug 'p00f/nvim-ts-rainbow'
+        " Plug 'p00f/nvim-ts-rainbow'
         Plug 'L3MON4D3/LuaSnip'
         Plug 'saadparwaiz1/cmp_luasnip'
         Plug 'j-hui/fidget.nvim'
@@ -454,6 +457,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'milisims/nvim-luaref'
         Plug 'nvim-telescope/telescope-file-browser.nvim'
         Plug 'williamboman/nvim-lsp-installer'
+        Plug 'jose-elias-alvarez/null-ls.nvim'
+        Plug 'MunifTanjim/prettier.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
