@@ -6,3 +6,4 @@
 [[setup new user]]
 [[generate password]]
 [[base64 encode decode]]
+[[firewall]]
