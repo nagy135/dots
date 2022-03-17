@@ -6,7 +6,7 @@ end
 
 local ls = prequire('luasnip')
 
-local t = function(str)
+local tt = function(str)
     return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
 
@@ -21,11 +21,11 @@ end
 
 _G.tab_complete = function()
     if vim.fn.pumvisible() == 1 then
-        return t "<C-n>"
+        return tt "<C-n>"
     elseif ls and ls.expand_or_jumpable() then
-        return t("<Plug>luasnip-expand-or-jump")
+        return tt("<Plug>luasnip-expand-or-jump")
     elseif check_back_space() then
-        return t "<Tab>"
+        return tt "<Tab>"
     else
         return vim.fn['compe#complete']()
     end
@@ -33,11 +33,11 @@ _G.tab_complete = function()
 end
 _G.s_tab_complete = function()
     if vim.fn.pumvisible() == 1 then
-        return t "<C-p>"
+        return tt "<C-p>"
     elseif ls and ls.jumpable(-1) then
-        return t("<Plug>luasnip-jump-prev")
+        return tt("<Plug>luasnip-jump-prev")
     else
-        return t "<S-Tab>"
+        return tt "<S-Tab>"
     end
     return ""
 end
@@ -61,7 +61,8 @@ local t = ls.text_node
 local rep = require('luasnip.extras').rep
 
 local ts_js = {
-    s('func', fmt("const {} = {}({}) => {{\n  {}\n}};", {
+    s('func', fmt("/**\n* {}\n*\n* @author Viktor Nagy<viktor.nagy@01people.com>\n*/\nconst {} = {}({}) => {{\n  {}\n}};", {
+        i(4),
         i(1),
         c(2, {t "", t "async "}),
         i(3),
