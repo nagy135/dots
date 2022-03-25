@@ -102,6 +102,9 @@ bindsym XF86MonBrightnessUp exec brightness_notification 1
 bindsym XF86MonBrightnessDown exec brightness_notification -1
 # }}}
 
+### Tabber
+bindsym $mod+Mod1+g exec tabber
+
 # Dunst {{{
 ### Dunst - history-pop
 bindsym Control+Grave exec dunstctl history-pop
