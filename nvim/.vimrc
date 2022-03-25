@@ -459,6 +459,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'williamboman/nvim-lsp-installer'
         Plug 'jose-elias-alvarez/null-ls.nvim'
         Plug 'MunifTanjim/prettier.nvim'
+        Plug 'ggandor/lightspeed.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
