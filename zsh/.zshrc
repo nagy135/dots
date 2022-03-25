@@ -8,6 +8,10 @@ fi
 # Lines configured by zsh-newuser-install
 setopt histignoredups
 
+setopt noincappendhistory
+setopt nosharehistory
+setopt appendhistory
+
 # man colors
 
 bindkey -v
