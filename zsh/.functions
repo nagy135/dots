@@ -79,3 +79,9 @@ git-last-commits(){
     done <<< "$branches"
     echo "$results" | sort -r | column -t -s'#' | tr '#' ' '
 }
+
+proj(){
+    folder=~/Apps
+    choice=$(ls $folder | fzf)
+    [[ ! -z $choice ]] && cd "$folder/$choice" && ls -la
+}
