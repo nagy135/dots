@@ -132,7 +132,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      # "* * * * *      infiniter    notify-send ha &> /home/infiniter/testsst"
+      "*/5 * * * *      infiniter    XDG_RUNTIME_DIR=/run/user/$(id -u) subtube update --secret"
     ];
   };
 
