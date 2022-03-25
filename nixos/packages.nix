@@ -70,7 +70,9 @@ let
     fzf
     htop
     nodePackages.npm
-    nodejs
+    nodePackages.prettier
+    nodejs-17_x
+    yarn
     pavucontrol
     yt-dlp
     zsh-fzf-tab
@@ -147,7 +149,7 @@ in
   services.transmission = {
     enable = true;
 
-settings.download-dir = "${config.users.users.infiniter.home}/Videos/Movies";
+    settings.download-dir = "${config.users.users.infiniter.home}/Videos/Movies";
     user = "infiniter";
     settings = {
       script-torrent-done-enabled = true;
