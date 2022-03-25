@@ -61,11 +61,13 @@ local t = ls.text_node
 local rep = require('luasnip.extras').rep
 
 local ts_js = {
-    s('func', fmt("/**\n* {}\n*\n* @author Viktor Nagy<viktor.nagy@01people.com>\n*/\nconst {} = {}({}) => {{\n  {}\n}};", {
+    s('func', fmt("/**\n* {}\n*\n* @author Viktor Nagy<viktor.nagy@01people.com>\n*/\n{}const {} = {}({}){} => {{\n  {}\n}};", {
+        i(6),
+        c(1, {t "", t "export "}),
+        i(2),
+        c(3, {t "", t "async "}),
         i(4),
-        i(1),
-        c(2, {t "", t "async "}),
-        i(3),
+        i(5),
         i(0),
     })),
     s('log', fmt("console.log('{}',{});", {
