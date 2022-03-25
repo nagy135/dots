@@ -8,3 +8,10 @@ sudo ufw enable
 
 # status
 sudo ufw status
+sudo ufw status numbered
+
+# delete (using numbered status)
+sudo ufw delete 4
+
+# allow port for specific IP
+sudo ufw allow from 162.55.45.230 to any port 9091
