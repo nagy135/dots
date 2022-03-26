@@ -53,9 +53,12 @@ let mapleader = " "
 
 nnoremap H ^
 nnoremap L $
-nnoremap <C-b> :NvimTreeToggle<CR>
-nnoremap ;ft   :NvimTreeFindFile<CR>
-nnoremap <leader>e   :NvimTreeFindFile<CR>
+nnoremap <C-b>              :Neotree toggle=true<CR>
+nnoremap ;ft                :Neotree toggle=true<CR>
+nnoremap <leader>e          :Neotree toggle=true<CR>
+nnoremap <leader><leader>e  :Neotree toggle=true buffers<CR>
+nnoremap <leader>le         :Neotree toggle=true right git_status<CR>
+nnoremap <leader><leader>le :Neotree toggle=true float git_status<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
@@ -460,6 +463,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'jose-elias-alvarez/null-ls.nvim'
         Plug 'MunifTanjim/prettier.nvim'
         Plug 'ggandor/lightspeed.nvim'
+        Plug 'nvim-neo-tree/neo-tree.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
