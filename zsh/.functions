@@ -25,6 +25,13 @@ c() {
     cd "$@" && ls;
 }
 
+gop() { # go project
+    choice=$(find ~ -maxdepth 6 -type d -o -type l | fzf)
+    [[ ! -z $choice ]] \
+        && cd $choice \
+        && ls -l
+}
+
 zat() {
     # open zathura in background
     zathura $1 & exit;
