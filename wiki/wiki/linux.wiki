@@ -7,3 +7,4 @@
 [[generate password]]
 [[base64 encode decode]]
 [[firewall]]
+[[jq]]
