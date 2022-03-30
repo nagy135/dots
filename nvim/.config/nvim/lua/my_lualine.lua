@@ -4,7 +4,7 @@ require'lualine'.setup {
     theme = 'gruvbox-material',
     section_separators = {left = '', right = ''},
     component_separators = {left = '', right = ''},
-    disabled_filetypes = {}
+    disabled_filetypes = {'neo-tree'}
   },
   sections = {
     lualine_a = {'mode'},
