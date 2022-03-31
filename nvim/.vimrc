@@ -53,12 +53,12 @@ let mapleader = " "
 
 nnoremap H ^
 nnoremap L $
-nnoremap <C-b>              :Neotree toggle=true<CR>
-nnoremap ;ft                :Neotree toggle=true<CR>
-nnoremap <leader>e          :Neotree toggle=true<CR>
-nnoremap <leader><leader>e  :Neotree toggle=true buffers<CR>
-nnoremap <leader>le         :Neotree toggle=true right git_status<CR>
-nnoremap <leader><leader>le :Neotree toggle=true float git_status<CR>
+nnoremap <silent> <C-b>              :Neotree toggle=true<CR>
+nnoremap <silent> ;ft                :Neotree toggle=true<CR>
+nnoremap <silent> <leader>e          :Neotree toggle=true<CR>
+nnoremap <silent> <leader><leader>e  :Neotree toggle=true buffers<CR>
+nnoremap <silent> <leader>le         :Neotree toggle=true right git_status<CR>
+nnoremap <silent> <leader><leader>le :Neotree toggle=true float git_status<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
@@ -461,7 +461,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'williamboman/nvim-lsp-installer'
         Plug 'jose-elias-alvarez/null-ls.nvim'
         Plug 'MunifTanjim/prettier.nvim'
-        Plug 'ggandor/lightspeed.nvim'
         Plug 'nvim-neo-tree/neo-tree.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
