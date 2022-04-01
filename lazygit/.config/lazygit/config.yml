@@ -9,12 +9,12 @@ gui:
   theme:
     lightTheme: false # For terminals with a light background
     activeBorderColor:
-      - white
+      - yellow
       - bold
     inactiveBorderColor:
       - green
     optionsTextColor:
-      - blue
+      - red
     selectedLineBgColor:
       - underline
     selectedRangeBgColor:
@@ -63,7 +63,7 @@ git:
 os:
   editCommand: 'nvim' # see 'Configuring File Editing' section
   editCommandTemplate: '{{editor}} {{filename}}'
-  openCommand: ''
+  openCommand: 'nvim'
 refresher:
   refreshInterval: 60 # file/submodule refresh interval in seconds
   fetchInterval: 60 # re-fetch interval in seconds
