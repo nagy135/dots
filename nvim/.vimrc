@@ -248,7 +248,8 @@ vnoremap <leader>k :m '<-2<CR>gv=gv
 nnoremap <leader>wp :WikiFzfPages<CR>
 
 " Comment above function or class with author
-nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
+" nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
+nnoremap ;c :lua signature()<CR>
 
 
 " ABBREV {{{
