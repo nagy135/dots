@@ -23,6 +23,8 @@ require('my_diffview')
 require('my_neogit')
 require('my_neotree')
 
+require('scripts')
+
 require('lsp')
 
 EOF
