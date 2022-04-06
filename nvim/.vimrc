@@ -399,7 +399,7 @@ call plug#begin('~/.vim/plugged')
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
 
-    Plug 'LandonSchropp/vim-stamp'
+    " Plug 'LandonSchropp/vim-stamp'
     " Plug 'vim-airline/vim-airline-themes'
     " Plug 'itchyny/lightline.vim'
     " Plug 'vim-airline/vim-airline'
@@ -463,6 +463,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'jose-elias-alvarez/null-ls.nvim'
         Plug 'MunifTanjim/prettier.nvim'
         Plug 'nvim-neo-tree/neo-tree.nvim'
+        Plug 'ggandor/lightspeed.nvim'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
