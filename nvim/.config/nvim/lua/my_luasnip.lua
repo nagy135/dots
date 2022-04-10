@@ -82,7 +82,7 @@ local ts_js = {
     })),
 }
 
-ls.snippets = {
-    javascript = ts_js,
-    typescript = ts_js,
-}
+ls.add_snippets("javascript", ts_js)
+ls.add_snippets("typescript", ts_js)
+ls.add_snippets("typescriptreact", ts_js)
+ls.add_snippets("javascriptreact", ts_js)
