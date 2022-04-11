@@ -13,12 +13,16 @@ cmp.setup({
         -- ['<C-p>'] = cmp.mapping.scroll_docs(-4),
         -- ['<C-n>'] = cmp.mapping.scroll_docs(4),
         -- ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-Space>'] = cmp.mapping.close(),
         ["<c-y>"] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Insert,
+            -- behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         },
-
+        ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+        ['<C-e>'] = cmp.mapping({
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close(),
+        }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
