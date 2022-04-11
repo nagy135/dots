@@ -53,12 +53,12 @@ let mapleader = " "
 
 nnoremap H ^
 nnoremap L $
-nnoremap <silent> <C-b>              :Neotree toggle=true<CR>
-nnoremap <silent> ;ft                :Neotree toggle=true<CR>
-nnoremap <silent> <leader>e          :Neotree toggle=true<CR>
-nnoremap <silent> <leader><leader>e  :Neotree toggle=true buffers<CR>
-nnoremap <silent> <leader>le         :Neotree toggle=true right git_status<CR>
-nnoremap <silent> <leader><leader>le :Neotree toggle=true float git_status<CR>
+nnoremap <silent> <C-b>              :Neotree reveal toggle<CR>
+nnoremap <silent> ;ft                :Neotree reveal toggle<CR>
+nnoremap <silent> <leader>e          :Neotree reveal toggle<CR>
+nnoremap <silent> <leader><leader>e  :Neotree reveal toggle buffers<CR>
+nnoremap <silent> <leader>le         :Neotree reveal toggle right git_status<CR>
+nnoremap <silent> <leader><leader>le :Neotree reveal toggle float git_status<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
@@ -445,6 +445,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/nvim-cmp'
         Plug 'onsails/lspkind-nvim'
         Plug 'folke/trouble.nvim'
+        Plug 'folke/lua-dev.nvim'
         Plug 'ThePrimeagen/harpoon'
         Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'lewis6991/impatient.nvim'
