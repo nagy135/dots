@@ -50,6 +50,7 @@ let
     git
     python3
     qutebrowser
+    gopls
     mpv
     youtube-dl
     lsd
