@@ -430,7 +430,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
         Plug 'nagy135/capture-nvim'
         Plug 'neovim/nvim-lspconfig'
-        Plug 'hrsh7th/nvim-compe'
         Plug 'folke/todo-comments.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'kyazdani42/nvim-tree.lua'
