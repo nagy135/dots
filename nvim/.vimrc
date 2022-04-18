@@ -395,7 +395,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-markdown'
     Plug 'tpope/vim-abolish'
     Plug 'mattn/emmet-vim'
-    Plug 'rstacruz/vim-closer'
+    " Plug 'rstacruz/vim-closer'
     " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     " Plug 'junegunn/fzf.vim'
 
@@ -464,6 +464,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'MunifTanjim/prettier.nvim'
         Plug 'nvim-neo-tree/neo-tree.nvim'
         Plug 'ggandor/lightspeed.nvim'
+        Plug 's1n7ax/nvim-window-picker'
         " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
