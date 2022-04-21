@@ -62,7 +62,7 @@ nnoremap <silent> <leader><leader>le :Neotree reveal toggle float git_status<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
-nnoremap <leader>m :call DeleteFunctionUnderCursor()<CR>
+nnoremap <leader>df :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
@@ -185,7 +185,6 @@ function harpoonIndexJump()
     require('harpoon.ui').nav_file(tonumber(index))
 end
 EOF
-nnoremap <leader>mi :lua DeleteFunctionUnderCursor()<CR>
 nnoremap <leader>mi :lua harpoonIndexJump()<CR>
 nnoremap <A-1> :lua require('harpoon.ui').nav_file(1)<CR>
 nnoremap <A-2> :lua require('harpoon.ui').nav_file(2)<CR>
@@ -220,6 +219,7 @@ nnoremap <leader>gP :Git pull<CR>
 nnoremap <leader>dw :DiffviewOpen<CR>
 
 " Prettier
+nnoremap <leader>\ :Prettier<CR>
 nnoremap <leader>lp :Prettier<CR>
 
 " Primeagen 5 tips
