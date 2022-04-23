@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <unstable> { config = { allowUnfree = true; }; };
 
   subtube = import ./subtube.nix;
   mpv_history = import ./mpv_history.nix;
@@ -48,8 +48,10 @@ let
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
   basePackages = with pkgs; [
-    overridenNeovim
-    overridenFuzzel
+    unstable.neovim
+    unstable.lazygit
+    unstable.yarn
+    fuzzel
     sxiv
     wget
     google-chrome
@@ -79,7 +81,6 @@ let
     nodePackages.npm
     nodePackages.prettier
     nodejs-17_x
-    yarn
     pavucontrol
     yt-dlp
     zsh-fzf-tab
@@ -91,7 +92,6 @@ let
     pamixer
     postman
     transmission
-    lazygit
     ripgrep
     z-lua
     jq
