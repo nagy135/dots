@@ -41,6 +41,12 @@ let
   wayland = true;
   work = false;
 
+  my-python-packages = python-packages: with python-packages; [
+    numpy
+    pillow
+  ];
+  python-with-my-packages = pkgs.python3.withPackages my-python-packages;
+
   basePackages = with pkgs; [
     overridenNeovim
     overridenFuzzel
@@ -124,6 +130,7 @@ in
 {
   environment.systemPackages = basePackages
     ++ personalPackages
+    ++ [python-with-my-packages]
     ++ waylandSwitch
     ++ workSwitch;
 
