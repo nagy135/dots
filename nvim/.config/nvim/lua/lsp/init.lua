@@ -34,7 +34,7 @@ map('n','<leader>wa' ,'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>'         
 map('n','<leader>wr' ,'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>'                   ,opts)
 map('n','<leader>wl' ,'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>',opts)
 map('n','<leader>rn' ,'<cmd>lua vim.lsp.buf.rename()<CR>'                                    ,opts)
-map('n','<leader>ca' ,'<cmd>lua vim.lsp.buf.code_action()<CR>'                               ,opts)
+map('n','<leader>cA' ,'<cmd>lua vim.lsp.buf.code_action()<CR>'                               ,opts)
 map('n','gr'         ,'<cmd>lua vim.lsp.buf.references()<CR>'                                ,opts)
 map('n','<leader>gld','<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>'              ,opts)
 map('n','[d'         ,'<cmd>lua vim.diagnostic.goto_prev()<CR>'                              ,opts)
