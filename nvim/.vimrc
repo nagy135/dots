@@ -62,7 +62,7 @@ nnoremap <silent> <leader><leader>le :Neotree reveal toggle float git_status<CR>
 nnoremap <c-s> :source ~/.vimrc<CR>
 nnoremap <c-c> :e ~/.vimrc<CR>
 nnoremap M :call SurroundFunctionUnderCursor()<CR>
-nnoremap <leader>df :call DeleteFunctionUnderCursor()<CR>
+nnoremap <leader><leader>df :call DeleteFunctionUnderCursor()<CR>
 nnoremap <c-h> :nohl<CR>
 nnoremap <c-l> :GFiles?<CR>
 nnoremap ,html :-1read ~/.vim/snippets/html_template.html<CR>jjjf>a
@@ -138,7 +138,7 @@ nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
 nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
-nnoremap <leader>cA <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
+nnoremap <leader>ca <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
 
 nnoremap <leader>fe <cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>
@@ -149,6 +149,8 @@ nnoremap <leader>lD <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})
 nnoremap <leader>mp <cmd>lua require('telescope.builtin').man_pages()<cr>
 
 nnoremap <leader>fz <cmd>lua require('telescope.builtin').spell_suggest()<cr>
+
+nnoremap <leader>lj <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
 
 " My telescope
 nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
