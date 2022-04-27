@@ -5,4 +5,6 @@ mkswap /swapfile
 swapon /swapfile
 swapon --show #to verify
 
+echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
+
 // vim: ft=sh
