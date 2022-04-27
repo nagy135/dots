@@ -29,6 +29,9 @@ format-offset =
 ; Nord theme ============
 background = #292d3e
 foreground = #c0c5ce
+green = #19a85b
+white = #b2d3d9
+black = #0b0b0b
 alert = #bd2c40
 volume-min = #a3be8c
 volume-med = #ebcb8b
@@ -170,7 +173,7 @@ label-urgent = %icon%
 label-urgent-padding = 1
 
 label-empty = %icon%
-label-empty-foreground = #b2d3d9
+label-empty-foreground = ${colors.white}
 label-empty-padding = 1
 label-empty-background = ${colors.background}
 label-monocle = "  "
@@ -225,11 +228,11 @@ label-locked-foreground = #c22330
 label-sticky = "  "
 label-sticky-foreground = #f9dc2b
 label-private =  "  "
-label-private-foreground = #19a85b
+label-private-foreground = ${colors.green}
 
 ;;;;;;;
 label-focused-foreground = #f9dc29
-label-occupied-foreground = #19a85b
+label-occupied-foreground = ${colors.green}
 ;label-occupied-foreground = ${color.shade7}
 label-urgent-foreground = #e53935
 label-empty-foreground = #fff
@@ -261,7 +264,7 @@ format-background = ${colors.background}
 type = custom/text
 content = "%{T2}%{T-}"
 content-font = 2
-content-foreground = #F07178
+content-foreground = ${colors.green}
 ;#C3E88D
 content-background = #292d3e
 
@@ -279,8 +282,8 @@ content-background = #F07178
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-background = #F07178
-content-foreground = #82AAFF
+content-background = ${colors.green}
+content-foreground = ${colors.black}
 ;#C3E88D
 
 [module/arrow3]
@@ -296,32 +299,32 @@ content-background = #82AAFF
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #FFE585
-content-background = #82AAFF
+content-foreground = ${colors.green}
+content-background = ${colors.black}
 
 [module/arrow5]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #F07178
-content-background = #FFE585
+content-foreground = ${colors.black}
+content-background = ${colors.green}
 
 [module/arrow6]
 ; grey to Blue
 type = custom/text
 content = "%{T2} %{T-}"
 content-font = 2
-content-foreground = #969ba5
+content-foreground = ${colors.green}
 ;content-foreground = #1D2330
-content-background = #F07178
+content-background = ${colors.black}
 
 [module/arrow7]
 ; grey to Blue
 type = custom/text
 content = "%{T2}%{T-}"
 content-font = 2
-content-foreground = #969ba5
+content-foreground = ${colors.green}
 ;#C3E88D
 content-background = ${colors.background}
 
@@ -330,9 +333,9 @@ content-background = ${colors.background}
 type = custom/text
 content = " "
 content-font = 2
-content-foreground = #0b0b0b
+content-foreground = ${colors.black}
 ;#C3E88D
-content-background = #969ba5
+content-background = ${colors.green}
 
 ################################################################################
 ###############################################################################
@@ -356,8 +359,8 @@ label = " %output%"
 interval = 1
 tail = true
 click-left = kill -USR1 %pid%
-format-foreground = ${colors.background}
-format-background = #F07178
+format-foreground = ${colors.black}
+format-background = ${colors.green}
 
 [module/arch-aur-updates]
 type = custom/script
@@ -439,22 +442,22 @@ full-at = 100
 
 format-charging = <ramp-capacity> <label-charging>
 label-charging = %percentage%%
-label-charging-foreground = #0b0b0b
+label-charging-foreground = ${colors.black}
 format-charging-foreground = #f9dc2b
-format-charging-background = #F07178
+format-charging-background = ${colors.black}
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-label-discharging-foreground = #0b0b0b
-format-discharging-background = #F07178
+label-discharging-foreground = ${colors.black}
+format-discharging-background = ${colors.black}
 
 format-full-prefix = "   "
-format-full-prefix-foreground = #0b0b0b
-label-full-foreground = #0b0b0b
-format-full-background = #F07178
+format-full-prefix-foreground = ${colors.white}
+label-full-foreground = ${colors.white}
+format-full-background = ${colors.black}
 ;format-full-underline = #fff
-format-foreground = #12345678
-format-background = #F07178
+format-foreground = ${colors.white}
+format-background = ${colors.black}
 
 ramp-capacity-0 = "   "
 ramp-capacity-1 = "   "
@@ -583,8 +586,8 @@ time = %H:%M | %Y-%m-%d
 ;format-prefix = " "
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-foreground = #0b0b0b
-format-background = #969ba5
+format-foreground = ${colors.black}
+format-background = ${colors.green}
 label = "%time%  "
 
 #################################################################
@@ -668,7 +671,7 @@ spacing = 4
 ;   <ramp-capacity>
 ; format-mounted = <label-mounted>
 format-mounted = <label-mounted>
-format-mounted-foreground = #0b0b0b
+format-mounted-foreground = ${colors.black}
 format-mounted-background = #969ba5
 
 
@@ -752,9 +755,9 @@ label = %percentage_used%%
 
 format = <label>
 format-prefix = "  "
-format-prefix-foreground = #292d3e
-format-foreground = #292d3e
-format-background = #82AAFF
+format-prefix-foreground = ${colors.white}
+format-foreground = ${colors.white}
+format-background = ${colors.black}
 
 ################################################################################
 
@@ -771,7 +774,7 @@ icon-pause = 
 icon-next = 
 label-song-maxlen = 50
 label-song-ellipsis = true
-format-online-foreground = #0b0b0b
+format-online-foreground = ${colors.black}
 format-online-background = #969ba5
 
 [module/pacman-updates]
@@ -798,7 +801,7 @@ click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/polybar/scripts/pavolume.sh --up
 scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = ${colors.background}
-format-background = #FFE585
+format-background = ${colors.green}
 
 
 
@@ -849,8 +852,8 @@ format-prefix = " "
 format = <label>
 exec = ~/.config/polybar/scripts/spotify.sh
 ; exec = echo "$(python ~/.config/polybar/scripts/spotify_status.py)"
-format-foreground = #0b0b0b
-format-background = #969ba5
+format-foreground = ${colors.black}
+format-background = ${colors.green}
 
 ;[module/spotify1]
 ;;https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
