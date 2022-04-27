@@ -1,2 +1,3 @@
 [[array]]
 [[vim mode]]
+[[generate random string of length]]
