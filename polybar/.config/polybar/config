@@ -452,11 +452,11 @@ label-discharging-foreground = ${colors.black}
 format-discharging-background = ${colors.black}
 
 format-full-prefix = "   "
-format-full-prefix-foreground = ${colors.white}
-label-full-foreground = ${colors.white}
+format-full-prefix-foreground = ${colors.green}
+label-full-foreground = ${colors.green}
 format-full-background = ${colors.black}
 ;format-full-underline = #fff
-format-foreground = ${colors.white}
+format-foreground = ${colors.green}
 format-background = ${colors.black}
 
 ramp-capacity-0 = "   "
@@ -755,8 +755,8 @@ label = %percentage_used%%
 
 format = <label>
 format-prefix = "  "
-format-prefix-foreground = ${colors.white}
-format-foreground = ${colors.white}
+format-prefix-foreground = ${colors.green}
+format-foreground = ${colors.green}
 format-background = ${colors.black}
 
 ################################################################################
