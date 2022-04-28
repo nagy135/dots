@@ -138,7 +138,6 @@ nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
 nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
-nnoremap <leader>ca <cmd>lua require("telescope.builtin").lsp_code_actions(require('telescope.themes').get_cursor({}))<cr>
 nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
 
 nnoremap <leader>fe <cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>
@@ -466,8 +465,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'MunifTanjim/prettier.nvim'
         Plug 'nvim-neo-tree/neo-tree.nvim'
         Plug 'ggandor/lightspeed.nvim'
+        Plug 'nvim-telescope/telescope-ui-select.nvim'
         Plug 's1n7ax/nvim-window-picker'
-        " Plug 'nvim-treesitter/playground'
     endif
 call plug#end()
 
