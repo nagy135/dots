@@ -2,7 +2,7 @@ local actions = require('telescope.actions')
 -- Global remapping
 ------------------------------
 
-require('telescope').setup{
+require('telescope').setup {
     defaults = {
         mappings = {
             i = {
@@ -47,8 +47,8 @@ require('telescope').setup{
                 mirror = false,
             },
         },
-        file_sorter =  require'telescope.sorters'.get_fuzzy_file,
-        generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+        file_sorter = require 'telescope.sorters'.get_fuzzy_file,
+        generic_sorter = require 'telescope.sorters'.get_generic_fuzzy_sorter,
         winblend = 0,
         border = {},
         borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
@@ -56,12 +56,12 @@ require('telescope').setup{
         use_less = true,
         path_display = {},
         set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
-        file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-        grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-        qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+        file_previewer = require 'telescope.previewers'.vim_buffer_cat.new,
+        grep_previewer = require 'telescope.previewers'.vim_buffer_vimgrep.new,
+        qflist_previewer = require 'telescope.previewers'.vim_buffer_qflist.new,
 
         -- Developer configurations: Not meant for general override
-        buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+        buffer_previewer_maker = require 'telescope.previewers'.buffer_previewer_maker
     },
     extensions = {
         fzy_native = {
@@ -82,10 +82,30 @@ require('telescope').setup{
                 },
             },
         },
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+                -- even more opts
+            }
+
+            -- pseudo code / specification for writing custom displays, like the one
+            -- for "codeactions"
+            -- specific_opts = {
+            --   [kind] = {
+            --     make_indexed = function(items) -> indexed_items, width,
+            --     make_displayer = function(widths) -> displayer
+            --     make_display = function(displayer) -> function(e)
+            --     make_ordinal = function(e) -> string
+            --   },
+            --   -- for example to disable the custom builtin "codeactions" display
+            --      do the following
+            --   codeactions = false,
+            -- }
+        }
     }
 }
 require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('file_browser')
+require('telescope').load_extension('ui-select')
 
 local M = {}
 
@@ -118,7 +138,7 @@ function M.project_find_file(folder)
 
                     local selection = action_state.get_selected_entry()
 
-                    require("telescope.builtin").find_files{ cwd = folder .. '/' .. selection[1], follow = true}
+                    require("telescope.builtin").find_files { cwd = folder .. '/' .. selection[1], follow = true }
                 end)
                 return true
             end,
@@ -126,7 +146,7 @@ function M.project_find_file(folder)
     end
 
     -- to execute the function
-    projects(require("telescope.themes").get_ivy{})
+    projects(require("telescope.themes").get_ivy {})
 end
 
 return M
