@@ -63,7 +63,7 @@ require("neo-tree").setup({
         width = 40,
         mappings = {
         --     ["<2-LeftMouse>"] = "open",
-            ["l"] = "open_with_window_picker",
+            ["l"] = "open",
             ["h"] = "close_node",
             ["s"] = "split_with_window_picker",
             ["v"] = "vsplit_with_window_picker",
@@ -92,6 +92,8 @@ require("neo-tree").setup({
             visible = false, -- when true, they will just be displayed differently than normal items
             hide_dotfiles = true,
             hide_gitignored = true,
+            force_visible_in_empty_folder = true,
+            show_hidden_count = true,
             hide_by_name = {
                 ".DS_Store",
                 "thumbs.db"
