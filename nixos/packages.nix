@@ -68,7 +68,9 @@ let
     unstable.neovim
     unstable.lazygit
     unstable.yarn
+    gammastep
     fuzzel
+    rofi-wayland
     sxiv
     wget
     google-chrome
