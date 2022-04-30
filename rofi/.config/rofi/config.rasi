@@ -1,9 +1,8 @@
 configuration {
 	font: "MesloLGS NF 14";
 	hide-scrollbar: true;
-	theme: "/usr/share/rofi/themes/infi_black.rasi";
-	kb-remove-to-eol: "";
-	kb-accept-entry: "Control+l,Return";
-	kb-row-up: "Control+k,Up";
-	kb-row-down: "Control+j,Down";
+	//kb-remove-to-eol: "";
+	//kb-accept-entry: "Control+l,Return";
+	//kb-row-up: "Control+k,Up";
+	//kb-row-down: "Control+j,Down";
 }

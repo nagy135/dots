@@ -69,6 +69,9 @@
     border:  0 0 1 0;
     padding: 1px ;
 }
+element-text {
+    text-color: @normal-foreground;
+}
 #element.normal.normal {
     text-color:       @normal-foreground;
     background-color: @background;
@@ -78,12 +81,12 @@
     text-color:       @urgent-foreground;
 }
 #element.normal.active {
-    background-color: @active-background;
+    background-color: @lightfg;
     text-color:       @active-foreground;
 }
 #element.selected.normal {
     background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    text-color:       @selected-normal-background;
 }
 #element.selected.urgent {
     background-color: @selected-urgent-background;
