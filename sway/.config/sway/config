@@ -178,9 +178,9 @@ bindsym $mod+Print exec screenshotter -save
 # }}}
 
 # Screencast {{{
-### Screencast (start/end)
+### Screencast - start,end - record
 bindsym $mod+Mod1+Print exec wayland_screen_record
-### Screencast (start/end) choose zone
+### Screencast - start,end - record - choose zone
 bindsym $mod+Control+Mod1+Print exec wayland_screen_record -z
 # }}}
 
