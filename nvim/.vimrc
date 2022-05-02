@@ -85,6 +85,8 @@ nnoremap <leader>x :wq<CR>
 nnoremap <leader><c-w>v :botright vsplit<CR>
 nnoremap <leader><c-w>s :botright split<CR>
 
+nnoremap <leader>X :lua capture_module.create_todo()<CR>
+nnoremap <leader>J :lua capture_module.jump_to_file_with_column()<CR>
 " bangs!
 " nnoremap <c-k> :! ./run.sh<CR>
 " vnoremap ;b :w !bash<CR>
