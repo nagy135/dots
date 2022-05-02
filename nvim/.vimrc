@@ -112,6 +112,9 @@ nnoremap <leader>r :LspRestart<CR>
 nnoremap <Leader>zz :tabnew %<CR>
 nnoremap <Leader>zc :tabclose<CR>
 
+" Zen Mode (goyo)
+nnoremap <Leader>zm :ZenMode<CR>
+
 " Telescope {{{
 
 " general {{{
@@ -419,7 +422,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jwalton512/vim-blade'
     Plug 'tpope/vim-repeat'
     Plug 'leafgarland/typescript-vim' " fixes typescript highlight issues
-    Plug 'junegunn/goyo.vim'
+    Plug 'folke/zen-mode.nvim'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'neoclide/vim-jsx-improve'
     Plug 'MaxMEllon/vim-jsx-pretty'
