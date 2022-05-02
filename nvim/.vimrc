@@ -87,6 +87,7 @@ nnoremap <leader><c-w>s :botright split<CR>
 
 nnoremap <leader>X :lua capture_module.create_todo()<CR>
 nnoremap <leader>J :lua capture_module.jump_to_file_with_column()<CR>
+
 " bangs!
 " nnoremap <c-k> :! ./run.sh<CR>
 " vnoremap ;b :w !bash<CR>
@@ -218,6 +219,10 @@ nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gP :Git pull<CR>
 
+" Visual select move
+vnoremap > >gv
+vnoremap < <gv
+
 " Diffview
 nnoremap <leader>dw :DiffviewOpen<CR>
 
@@ -253,6 +258,9 @@ nnoremap <leader>wp :WikiFzfPages<CR>
 " Comment above function or class with author
 " nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
 nnoremap ;c :lua signature()<CR>
+vnoremap ;yy :lua copy_with_difference(true)<CR>
+nnoremap ;p :lua copy_with_difference(false)<CR>
+vnoremap ;tt :lua tabulize()<CR>
 
 
 " ABBREV {{{
