@@ -440,15 +440,15 @@ battery = BAT0
 adapter = AC0
 full-at = 100
 
-format-charging = <ramp-capacity> <label-charging>
+format-charging = <ramp-capacity><label-charging>
 label-charging = %percentage%%
-label-charging-foreground = ${colors.black}
+label-charging-foreground = ${colors.green}
 format-charging-foreground = #f9dc2b
 format-charging-background = ${colors.black}
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-label-discharging-foreground = ${colors.black}
+label-discharging-foreground = ${colors.green}
 format-discharging-background = ${colors.black}
 
 format-full-prefix = "   "
@@ -464,14 +464,14 @@ ramp-capacity-1 = "   "
 ramp-capacity-2 = "   "
 ramp-capacity-3 = "   "
 ramp-capacity-4 = "   "
-ramp-capacity-foreground = #000000
+ramp-capacity-foreground = ${colors.green}
 
 animation-charging-0 = "  "
 animation-charging-1 = "  "
 animation-charging-2 = "  "
 animation-charging-3 = "  "
 animation-charging-4 = "  "
-animation-charging-foreground = #000000
+animation-charging-foreground = ${colors.green}
 animation-charging-framerate = 750
 
 ################################################################################
