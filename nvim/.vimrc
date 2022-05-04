@@ -163,12 +163,13 @@ nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")
 
 " }}}
 
+" rest nvim"
+nnoremap ]rn :lua require('rest-nvim').run()<CR>
+nnoremap ]rr :lua require('rest-nvim').last()<CR>
+" nnoremap ]rp <Plug>RestNvimPreview<CR>
+ 
 " swiper
 nnoremap <leader>ss <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
-nnoremap <leader>sl <cmd>HopLineStart<cr>
-nnoremap <leader>sw <cmd>HopWord<cr>
-nnoremap <leader>s1 <cmd>HopChar1<cr>
-nnoremap <leader>s2 <cmd>HopChar2<cr>
 
 " helps {{{
 nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
@@ -480,6 +481,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'ggandor/lightspeed.nvim'
         Plug 'nvim-telescope/telescope-ui-select.nvim'
         Plug 's1n7ax/nvim-window-picker'
+        Plug 'NTBBloodbath/rest.nvim'
     endif
 call plug#end()
 
