@@ -8,3 +8,4 @@
 [[base64 encode decode]]
 [[firewall]]
 [[jq]]
+[[encrypt using openssl]]
