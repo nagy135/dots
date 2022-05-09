@@ -88,6 +88,7 @@ nnoremap <leader><c-w>s :botright split<CR>
 nnoremap <leader>X :lua capture_module.create_todo()<CR>
 nnoremap <leader>J :lua capture_module.jump_to_file_with_column()<CR>
 
+nnoremap <leader>ps :PresentingStart<CR>
 " bangs!
 " nnoremap <c-k> :! ./run.sh<CR>
 " vnoremap ;b :w !bash<CR>
@@ -482,6 +483,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-telescope/telescope-ui-select.nvim'
         Plug 's1n7ax/nvim-window-picker'
         Plug 'NTBBloodbath/rest.nvim'
+        Plug 'sotte/presenting.vim'
     endif
 call plug#end()
 
