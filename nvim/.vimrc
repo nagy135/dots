@@ -89,6 +89,7 @@ nnoremap <leader>X :lua capture_module.create_todo()<CR>
 nnoremap <leader>J :lua capture_module.jump_to_file_with_column()<CR>
 
 nnoremap <leader>ps :PresentingStart<CR>
+
 " bangs!
 " nnoremap <c-k> :! ./run.sh<CR>
 " vnoremap ;b :w !bash<CR>
@@ -165,8 +166,8 @@ nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")
 " }}}
 
 " rest nvim"
-nnoremap ]rn :lua require('rest-nvim').run()<CR>
-nnoremap ]rr :lua require('rest-nvim').last()<CR>
+nnoremap <leader>]r :lua require('rest-nvim').run()<CR>
+nnoremap <leader>]] :lua require('rest-nvim').last()<CR>
 " nnoremap ]rp <Plug>RestNvimPreview<CR>
  
 " swiper
