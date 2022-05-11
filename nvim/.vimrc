@@ -264,6 +264,8 @@ nnoremap <leader>wp :WikiFzfPages<CR>
 " Comment above function or class with author
 " nnoremap ;c O/**<CR><CR><CR>@author Viktor Nagy <viktor.nagy@01people.com><CR>/<ESC>kkka<SPACE>
 nnoremap ;c :lua signature()<CR>
+nnoremap ;l :lua debug_log()<CR>
+nnoremap ;L :lua debug_log(true)<CR>
 vnoremap ;yy :lua copy_with_difference(true)<CR>
 nnoremap ;p :lua copy_with_difference(false)<CR>
 vnoremap ;tt :lua tabulize()<CR>
@@ -513,6 +515,9 @@ let g:fzf_buffers_jump = 1
 
 let g:project_root_todo = 0
 let g:todo_file_location = ""
+
+let g:presenting_font_large = "ansiishadow"
+let g:presenting_font_small = "standard"
 
 " Colorscheme
 colorscheme gruvbox-material

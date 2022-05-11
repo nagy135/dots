@@ -114,12 +114,12 @@ _G.tabulize = function()
                 .. string.sub(previous_lines[1], col_end + 1) }
         for i = 1, height - 1 do
             table.insert(lines, string.sub(previous_lines[i + 1], 1, col_start - 1)
-            .. "|"
-            .. string.sub(previous_lines[i + 1], col_end + 1))
+                .. "|"
+                .. string.sub(previous_lines[i + 1], col_end + 1))
         end
         table.insert(lines, string.sub(previous_lines[height + 1], 1, col_start - 1)
-        .. "+"
-        .. string.sub(previous_lines[height + 1], col_end + 1))
+            .. "+"
+            .. string.sub(previous_lines[height + 1], col_end + 1))
 
         api.nvim_buf_set_lines(0, row_start - 1, row_end, false, lines)
         return
@@ -151,16 +151,70 @@ _G.tabulize = function()
         )
     end
     table.insert(lines, string.sub(previous_lines[height + 1], 1, col_start - 1) ..
-    bl ..
-    string.rep(h, width - 1) ..
-    br ..
-    string.sub(previous_lines[height + 1], col_end + 1)
+        bl ..
+        string.rep(h, width - 1) ..
+        br ..
+        string.sub(previous_lines[height + 1], col_end + 1)
     )
 
     api.nvim_buf_set_lines(0, row_start - 1, row_end, false, lines)
 end
 
 _G.signature = function()
+    local callback = function(value)
+        local comment_lines
+        if value:len() > 40 then
+            comment_lines = {}
+
+            local counter = 0
+            local line = ""
+            for _, word in ipairs(split_by_sep(value)) do
+                if counter > 40 then
+                    counter = 0
+                    table.insert(comment_lines, "* " .. line)
+                    line = ""
+                end
+                counter = counter + word:len()
+                line = line .. " " .. word
+            end
+            if counter ~= 0 then
+                table.insert(comment_lines, "* " .. line)
+            end
+        else
+            comment_lines = { "* " .. value }
+        end
+        local cursor_line = api.nvim_win_get_cursor(0)[1] - 1
+        api.nvim_buf_set_lines(0, cursor_line, cursor_line, false, signature_lines)
+        api.nvim_buf_set_lines(0, cursor_line + 1, cursor_line + 1, false, comment_lines)
+        vim.cmd [[ normal 4kA ]]
+        api.nvim_command(":Prettier")
+    end
+    nuiInput(callback)
+end
+
+_G.debug_log = function(up)
+    local shift = 0
+    if up == true then
+        shift = 1
+    end
+    local callback = function(value)
+        local cursor_line = api.nvim_win_get_cursor(0)[1]
+        value = "console.log('" .. value .. "');"
+
+        api.nvim_buf_set_lines(0, cursor_line - shift, cursor_line - shift, false, { value })
+        if up == true then
+            vim.cmd [[ normal =k ]]
+        else
+            vim.cmd [[ normal =j ]]
+        end
+    end
+    nuiInput(callback, ' debug log ')
+end
+
+_G.nuiInput = function(callback, prompt)
+    if prompt == nil then
+        prompt = " Description "
+    end
     local status, Input = pcall(require, "nui.input")
     if (status) then
         local event = require("nui.utils.autocmd").event
@@ -178,7 +232,7 @@ _G.signature = function()
                 highlight = "MyHighlightGroup",
                 style = "double",
                 text = {
-                    top = " Description ",
+                    top = prompt,
                     top_align = "center",
                 },
             },
@@ -189,34 +243,7 @@ _G.signature = function()
         }, {
             prompt = "> ",
             default_value = "",
-            on_submit = function(value)
-                local comment_lines
-                if value:len() > 40 then
-                    comment_lines = {}
-
-                    local counter = 0
-                    local line = ""
-                    for _, word in ipairs(split_by_sep(value)) do
-                        if counter > 40 then
-                            counter = 0
-                            table.insert(comment_lines, "* " .. line)
-                            line = ""
-                        end
-                        counter = counter + word:len()
-                        line = line .. " " .. word
-                    end
-                    if counter ~= 0 then
-                        table.insert(comment_lines, "* " .. line)
-                    end
-                else
-                    comment_lines = { "* " .. value }
-                end
-                local cursor_line = api.nvim_win_get_cursor(0)[1] - 1
-                api.nvim_buf_set_lines(0, cursor_line, cursor_line, false, signature_lines)
-                api.nvim_buf_set_lines(0, cursor_line + 1, cursor_line + 1, false, comment_lines)
-                vim.cmd [[ normal 4kA ]]
-                api.nvim_command(":Prettier")
-            end,
+            on_submit = callback
         })
 
         -- mount/open the component
@@ -232,6 +259,4 @@ _G.signature = function()
     else
         print("Install nui.nvim!")
     end
-
-
 end
