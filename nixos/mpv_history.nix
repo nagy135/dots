@@ -2,17 +2,17 @@ with (import <nixpkgs> { });
 
 stdenvNoCC.mkDerivation rec {
   pname = "mpv_history";
-  version = "2022-02-12";
+  version = "2022-05-15";
 
   src = fetchFromGitHub {
     owner = "nagy135";
     repo = "mpv_history";
-    rev = "fa46f780ad461c247fbf740b1d6b21ac5c3920dd";
-    sha256 = "0bjwna0988z16qbs2bbiynj555r6ajnxfy3yr4i6m5808wzqlr3q";
+    rev = "2c502f1e93f8686fc433ebe8d95705731c3ba584";
+    sha256 = "sha256-SI0AbbSwVDd8CkoDbkuay9iqZliBuRkwwNe47dQTqMk=";
   };
 
   strictDeps = true;
-  buildInputs = [ wl-clipboard bash mpv youtube-dl gnused gnugrep fuzzel ];
+  buildInputs = [ wl-clipboard bash mpv youtube-dl gnused gnugrep rofi ];
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"
