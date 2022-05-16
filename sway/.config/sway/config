@@ -169,12 +169,15 @@ bindsym $mod+m exec spotify_run
 bindsym $mod+e exec tmux_run
 
 # Screenshot {{{
-### Basic fullscreen screenshot
+### screenshot - fullscreen (clipboard)
 bindsym Print exec screenshotter
-### Zone screenshot
-bindsym $mod+Control+Print exec screenshotter -zone
-### Basic fullscreen screenshot (save)
-bindsym $mod+Print exec screenshotter -save
+### screenshot - zone (clipboard)
+bindsym $mod+Control+Print exec screenshotter --zone
+### screenshot - zone (save)
+bindsym $mod+Shift+Print exec screenshotter --zone --save
+### screenshot - fullscreen (save)
+bindsym $mod+Print exec screenshotter --save --timestamp
+
 # }}}
 
 # Screencast {{{
