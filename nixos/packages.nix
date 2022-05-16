@@ -5,6 +5,7 @@ let
   subtube = import ./subtube.nix;
   mpv_history = import ./mpv_history.nix;
   torque = import ./torque.nix;
+  overriden-yt-dlp = unstable.yt-dlp.override { withAlias = true; };
 
   # import package from specific revision of nixpkgs
   #
@@ -14,18 +15,6 @@ let
   #       rev = "33cf95ef36d9e2e7aec511297de9a845d6b729fe";
   #   }) {};
 
-
-
-  # nixpkgs.overlays = [
-  #   (self: super:
-  #     {
-  #       yarn = super.yarn.overrideAttrs (old: {
-  #         nodejs = pkgs.nodejs-17_x;
-  #       });
-  #     })
-  # ];
-  #
-  #
   # overridenFuzzel = unstable.fuzzel.overrideAttrs (oldAttrs: rec {
   #   version = "1.7.x";
 
@@ -48,6 +37,15 @@ let
   #   };
   #
   # });
+
+  # nixpkgs.overlays = [
+  #   (self: super:
+  #     {
+  #       yt-dlp = super.yt-dlp.overrideAttrs (old: {
+  #         withAlias = true;
+  #       });
+  #     })
+  # ];
 
   personalPackages = with pkgs; [
     subtube
@@ -78,7 +76,7 @@ let
     qutebrowser
     gopls
     mpv
-    youtube-dl
+    overriden-yt-dlp
     lsd
     zsh
     zsh-powerlevel10k
@@ -148,7 +146,7 @@ in
 {
   environment.systemPackages = basePackages
     ++ personalPackages
-    ++ [python-with-my-packages]
+    ++ [ python-with-my-packages ]
     ++ waylandSwitch
     ++ workSwitch;
 
