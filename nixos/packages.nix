@@ -66,6 +66,12 @@ let
     unstable.neovim
     unstable.lazygit
     unstable.yarn
+
+    tesseract
+    rpi-imager
+    rustup
+    rust-analyzer
+    ncdu
     gammastep
     fuzzel
     rofi-wayland
