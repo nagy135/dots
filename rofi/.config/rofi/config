@@ -1,8 +1,0 @@
-rofi.font: League Mono 14
-!rofi.separator-style: solid
-rofi.hide-scrollbar: true
-rofi.kb-accept-entry: Control+l,Return
-rofi.kb-remove-to-eol:
-rofi.kb-row-down: Control+j,Down
-rofi.kb-row-up: Control+k,Up
-rofi.theme: /home/infiniter/.config/rofi/tmux.rasi
