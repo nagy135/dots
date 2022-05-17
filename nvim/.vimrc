@@ -75,6 +75,7 @@ nnoremap ;g :Goyo<CR>
 nnoremap <F3> :set spell!<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
+inoremap <c-b> <c-o>diw
 
 nnoremap <leader>dd <cmd>TroubleToggle<CR>
 
