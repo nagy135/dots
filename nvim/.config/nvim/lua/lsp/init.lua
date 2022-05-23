@@ -11,7 +11,7 @@ require("lsp.bashls")
 require("lsp.nimls")
 require("lsp.dockerls")
 require("lsp.htmlls")
-require("lsp.jsonls")
+-- require("lsp.jsonls")
 require("lsp.yamlls")
 require("lsp.rnix-lsp")
 
