@@ -446,7 +446,7 @@ label-charging-foreground = ${colors.green}
 format-charging-foreground = #f9dc2b
 format-charging-background = ${colors.black}
 
-format-discharging = <ramp-capacity> <label-discharging>
+format-discharging = <ramp-capacity><label-discharging>
 label-discharging = %percentage%%
 label-discharging-foreground = ${colors.green}
 format-discharging-background = ${colors.black}
