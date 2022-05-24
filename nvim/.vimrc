@@ -37,12 +37,13 @@ set undodir=~/.vim/undodir
 set conceallevel=0
 set splitbelow
 set splitright
-if has('nvim')
-    set inccommand=split
-    set wildoptions=pum
-    set pumblend=15 "wildmenu transparency (15%)
-    set termguicolors
-endif
+set inccommand=split
+set wildoptions=pum
+set pumblend=15 "wildmenu transparency (15%)
+set termguicolors
+
+set laststatus=3
+set winbar=%=%m\ %f
 
 " space as leader key
 let mapleader = " "
@@ -232,6 +233,7 @@ vnoremap < <gv
 
 " Diffview
 nnoremap <leader>dw :DiffviewOpen<CR>
+nnoremap <leader>dh :DiffviewFileHistory<CR>
 
 " Prettier
 nnoremap <leader>\ :Prettier<CR>
