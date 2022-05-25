@@ -16,7 +16,7 @@ gui:
     optionsTextColor:
       - red
     selectedLineBgColor:
-      - underline
+      - reverse
     selectedRangeBgColor:
       - blue
     cherryPickedCommitBgColor:
