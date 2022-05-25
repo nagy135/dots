@@ -1,16 +1,3 @@
--- This Vim setting controls the delay before the popup appears. The way it
--- works is, if you have mappings for, say, the key "a" and the key sequence
--- "ab", if you type "a", then Vim waits timeoutlen, and if you don't press
--- another key before that amount of time, then the "a" mapping is executed, but
--- if you press "b" before timeoutlen, then the "ab" mapping is executed.
-vim.o.timeoutlen = 300
-
--- If you use <Space> as your mapping prefix, then this will make the key-menu
--- popup appear in Normal mode, after you press <Space>, after timeoutlen.
-require 'key-menu'.set('n', '<Space>')
-
--- TELESCOPE
-
 vim.keymap.set('n', '<leader>f',
   function() require 'key-menu'.open_window('<leader>f') end,
   {desc='Find X'})
@@ -47,7 +34,7 @@ vim.keymap.set('n', '<leader>fe', function() require('telescope').extensions.fil
 vim.keymap.set('n', '<leader>ld', function() require('telescope.builtin').diagnostics() end, { desc = 'Find Diagnostics' })
 vim.keymap.set('n', '<leader>lD', function() require('telescope.builtin').diagnostics({ bufnr = 0 }) end, { desc = 'Find Buffer Diagnostics' })
 
-vim.keymap.set('n', '<leader>mp', function() require('telescope.builtin').man_pages() end, { desc = 'Find Man Page' })
+vim.keymap.set('n', '<leader>fm', function() require('telescope.builtin').man_pages() end, { desc = 'Find Man Page' })
 
 vim.keymap.set('n', '<leader>fz', function() require('telescope.builtin').spell_suggest() end, { desc = 'Spell Suggest' })
 
@@ -61,9 +48,3 @@ vim.keymap.set('n', '<leader>ss', function() require('my_telescope').currenct_bu
 vim.keymap.set('n', '<leader>hh', function() require('my_telescope').help_tags() end, { desc = 'Find Help (vim help)' })
 vim.keymap.set('n', '<leader>hf', function() require('my_telescope').commands() end, { desc = 'Find Help functions (vim help)' })
 vim.keymap.set('n', '<leader>hm', function() require('my_telescope').keymaps() end, { desc = 'Find Keybind' })
-
--- REST NVIM
-
-vim.keymap.set('n', '<leader>]r', function() require('rest-nvim').run() end, { desc = 'Rest Nvim (run)' })
-vim.keymap.set('n', '<leader>]]', function() require('rest-nvim').last() end, { desc = 'Rest Nvim (repeat last)' })
-

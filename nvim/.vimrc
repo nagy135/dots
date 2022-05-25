@@ -121,32 +121,6 @@ nnoremap <Leader>zm :ZenMode<CR>
 
 " }}}
 
-" Harpoon {{{
-
-nnoremap <leader>ma :lua require('harpoon.mark').add_file()<CR>
-nnoremap <leader>mm :lua require('harpoon.ui').toggle_quick_menu()<CR>
-lua << EOF
--- jumps to specified index in Harpoon window
-function harpoonIndexJump()
-    local index = vim.fn.input("Harpoon: ")
-    if index == nil or index == '' then
-        return
-    end
-    require('harpoon.ui').nav_file(tonumber(index))
-end
-EOF
-nnoremap <leader>mi :lua harpoonIndexJump()<CR>
-nnoremap <A-1> :lua require('harpoon.ui').nav_file(1)<CR>
-nnoremap <A-2> :lua require('harpoon.ui').nav_file(2)<CR>
-nnoremap <A-3> :lua require('harpoon.ui').nav_file(3)<CR>
-nnoremap <A-4> :lua require('harpoon.ui').nav_file(4)<CR>
-nnoremap <A-5> :lua require('harpoon.ui').nav_file(5)<CR>
-nnoremap <A-6> :lua require('harpoon.ui').nav_file(6)<CR>
-nnoremap <A-7> :lua require('harpoon.ui').nav_file(7)<CR>
-nnoremap <A-8> :lua require('harpoon.ui').nav_file(8)<CR>
-nnoremap <A-9> :lua require('harpoon.ui').nav_file(9)<CR>
-nnoremap <A-0> :lua require('harpoon.ui').nav_file(10)<CR>
-" }}}
 " Todo Comments
 nnoremap <leader>tt :TodoTelescope<CR>
 nnoremap <leader>tq :TodoQuickFix<CR>
