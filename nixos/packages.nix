@@ -5,6 +5,7 @@ let
   subtube = import ./subtube.nix;
   mpv_history = import ./mpv_history.nix;
   torque = import ./torque.nix;
+
   overriden-yt-dlp = unstable.yt-dlp.override { withAlias = true; };
 
   # import package from specific revision of nixpkgs
@@ -38,15 +39,6 @@ let
   #
   # });
 
-  # nixpkgs.overlays = [
-  #   (self: super:
-  #     {
-  #       yt-dlp = super.yt-dlp.overrideAttrs (old: {
-  #         withAlias = true;
-  #       });
-  #     })
-  # ];
-
   personalPackages = with pkgs; [
     subtube
     mpv_history
@@ -62,8 +54,9 @@ let
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
+
   basePackages = with pkgs; [
-    unstable.neovim
+    neovim
     unstable.lazygit
     unstable.yarn
 
@@ -151,6 +144,17 @@ let
     ];
 in
 {
+  nixpkgs.overlays = [
+    (self: super: {
+      neovim-unwrapped = super.neovim-unwrapped.overrideAttrs (oldAttrs: {
+        version = "master";
+        src = builtins.fetchGit {
+          url = https://github.com/neovim/neovim.git;
+        };
+      });
+    })
+  ];
+
   environment.systemPackages = basePackages
     ++ personalPackages
     ++ [ python-with-my-packages ]
