@@ -119,68 +119,6 @@ nnoremap <Leader>zc :tabclose<CR>
 " Zen Mode (goyo)
 nnoremap <Leader>zm :ZenMode<CR>
 
-" Telescope {{{
-
-" general {{{
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <c-f> <cmd>lua require('telescope.builtin').find_files()<cr>
-" neighbors
-nnoremap <leader>fn <cmd>lua require("telescope.builtin").find_files({cwd = "%:h"})<cr>
-
-nnoremap <leader>fd <cmd>lua require("telescope.builtin").find_files{ cwd = "~/.config", follow = true, hidden = true }<CR>
-
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <c-g> <cmd>lua require('telescope.builtin').live_grep()<cr>
-
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-nnoremap <c-e> <cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({}))<cr>
-
-nnoremap <leader>fs <cmd>lua require('telescope.builtin').grep_string()<cr>
-
-nnoremap <leader>fc <cmd>lua require('telescope.builtin').command_history()<cr>
-
-nnoremap <leader>fo <cmd>lua require('telescope.builtin').oldfiles()<cr>
-
-nnoremap <leader>fl <cmd>lua require('telescope.builtin').git_status()<cr>
-nnoremap <leader>fL <cmd>lua require('telescope.builtin').git_bcommits()<cr>
-
-nnoremap <leader>gd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
-nnoremap <leader>gr <cmd>lua require('telescope.builtin').lsp_references()<cr>
-
-nnoremap <leader>gi <cmd>lua require('telescope.builtin').lsp_implementations()<cr>
-nnoremap <leader>gD <cmd>lua require('telescope.builtin').lsp_type_definitions()<cr>
-
-nnoremap <leader>fe <cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>
-
-nnoremap <leader>ld <cmd>lua require('telescope.builtin').diagnostics()<cr>
-nnoremap <leader>lD <cmd>lua require('telescope.builtin').diagnostics({bufnr=0})<cr>
-
-nnoremap <leader>mp <cmd>lua require('telescope.builtin').man_pages()<cr>
-
-nnoremap <leader>fz <cmd>lua require('telescope.builtin').spell_suggest()<cr>
-
-nnoremap <leader>lj <cmd>lua require('telescope.builtin').lsp_document_symbols()<cr>
-
-" My telescope
-nnoremap <leader>fp <cmd>lua require('my_telescope').project_find_file("~/Clones")<cr>
-nnoremap <leader>fa <cmd>lua require('my_telescope').project_find_file("~/Apps")<cr>
-
-" }}}
-
-" rest nvim"
-nnoremap <leader>]r :lua require('rest-nvim').run()<CR>
-nnoremap <leader>]] :lua require('rest-nvim').last()<CR>
-" nnoremap ]rp <Plug>RestNvimPreview<CR>
- 
-" swiper
-nnoremap <leader>ss <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
-
-" helps {{{
-nnoremap <leader>hh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>hf <cmd>lua require('telescope.builtin').commands()<cr>
-nnoremap <leader>hm <cmd>lua require('telescope.builtin').keymaps()<cr>
-" }}}
-"
 " }}}
 
 " Harpoon {{{
@@ -490,6 +428,7 @@ call plug#begin('~/.vim/plugged')
         Plug 's1n7ax/nvim-window-picker'
         Plug 'NTBBloodbath/rest.nvim'
         Plug 'sotte/presenting.vim'
+        Plug 'linty-org/key-menu.nvim'
     endif
 call plug#end()
 
