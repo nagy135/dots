@@ -43,9 +43,7 @@ set pumblend=15 "wildmenu transparency (15%)
 set termguicolors
 
 set laststatus=3
-if has('winbar')
-    set winbar=%=%m\ %f
-endif
+set winbar=%=%m\ %f
 
 " space as leader key
 let mapleader = " "
