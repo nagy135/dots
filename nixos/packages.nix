@@ -101,8 +101,9 @@ let
     fzf
     htop
     nodePackages.npm
+    nodePackages.typescript
     nodePackages.prettier
-    nodejs-17_x
+    nodejs
     pavucontrol
     yt-dlp
     zsh-fzf-tab
