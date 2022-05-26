@@ -341,6 +341,10 @@ mode "resize" {
 ### Resize mode
 bindsym $mod+Shift+r mode "resize"
 
+bindsym $mod+semicolon floating enable, resize set 960 540, move absolute position 480 270
+bindsym $mod+comma floating enable, resize set 560 280, move absolute position 12 788
+bindsym $mod+period floating enable, resize set 560 280, move absolute position 1348 788
+
 default_border pixel 4
 default_floating_border pixel 4
 
