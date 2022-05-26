@@ -225,15 +225,15 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    bindsym $mod+Shift+$left move left 100
+    bindsym $mod+Shift+$down move down 100
+    bindsym $mod+Shift+$up move up 100
+    bindsym $mod+Shift+$right move right 100
     # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
+    bindsym $mod+Shift+Left move left 100
+    bindsym $mod+Shift+Down move down 100
+    bindsym $mod+Shift+Up move up 100
+    bindsym $mod+Shift+Right move right 100
 
     ### Focus floating window
     bindsym $mod+g focus floating
