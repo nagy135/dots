@@ -40,11 +40,11 @@ vim.keymap.set('n', '<leader>fz', function() require('telescope.builtin').spell_
 
 vim.keymap.set('n', '<leader>lj', function() require('telescope.builtin').lsp_document_symbols() end, { desc = 'Find Document Symbols' })
 
-vim.keymap.set('n', '<leader>fp', function() require('my_telescope').project_find_file("~/Clones") end, { desc = 'Find project in ~/Clones' })
-vim.keymap.set('n', '<leader>fa', function() require('my_telescope').project_find_file("~/Apps") end, { desc = 'Find project in ~/Apps' })
+vim.keymap.set('n', '<leader>fp', function() require('telescope.builtin').project_find_file("~/Clones") end, { desc = 'Find project in ~/Clones' })
+vim.keymap.set('n', '<leader>fa', function() require('telescope.builtin').project_find_file("~/Apps") end, { desc = 'Find project in ~/Apps' })
 
-vim.keymap.set('n', '<leader>ss', function() require('my_telescope').currenct_buffer_fuzzy_find() end, { desc = 'Swiper' })
+vim.keymap.set('n', '<leader>ss', function() require('telescope.builtin').currenct_buffer_fuzzy_find() end, { desc = 'Swiper' })
 
-vim.keymap.set('n', '<leader>hh', function() require('my_telescope').help_tags() end, { desc = 'Find Help (vim help)' })
-vim.keymap.set('n', '<leader>hf', function() require('my_telescope').commands() end, { desc = 'Find Help functions (vim help)' })
-vim.keymap.set('n', '<leader>hm', function() require('my_telescope').keymaps() end, { desc = 'Find Keybind' })
+vim.keymap.set('n', '<leader>hh', function() require('telescope.builtin').help_tags() end, { desc = 'Find Help (vim help)' })
+vim.keymap.set('n', '<leader>hf', function() require('telescope.builtin').commands() end, { desc = 'Find Help functions (vim help)' })
+vim.keymap.set('n', '<leader>hm', function() require('telescope.builtin').keymaps() end, { desc = 'Find Keybind' })
