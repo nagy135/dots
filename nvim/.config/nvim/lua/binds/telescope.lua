@@ -39,6 +39,7 @@ vim.keymap.set('n', '<leader>fm', function() require('telescope.builtin').man_pa
 vim.keymap.set('n', '<leader>fz', function() require('telescope.builtin').spell_suggest() end, { desc = 'Spell Suggest' })
 
 vim.keymap.set('n', '<leader>lj', function() require('telescope.builtin').lsp_document_symbols() end, { desc = 'Find Document Symbols' })
+vim.keymap.set('n', '<leader>lJ', function() require('telescope.builtin').lsp_workspace_symbols() end, { desc = 'Find Workspace Symbols' })
 
 vim.keymap.set('n', '<leader>fp', function() require('telescope.builtin').project_find_file("~/Clones") end, { desc = 'Find project in ~/Clones' })
 vim.keymap.set('n', '<leader>fa', function() require('telescope.builtin').project_find_file("~/Apps") end, { desc = 'Find project in ~/Apps' })
