@@ -68,16 +68,6 @@ _G.copy_with_difference = function(record)
     end
 end
 
---   +----------+                                               $
---   | cryptoBE +----- POST /v1/bla --+     +--------+          $
---   +-----+----+                     +-----+ nft BE |          $
---         |     +-------------+            +--------+          $
---         +-----+ payment api |                                $
---               +-------------+                                $
---                                                              $
---                                                              $
---                                                              $
---                                                              $
 _G.tabulize = function()
     local tl = '+'
     local tr = '+'
@@ -203,9 +193,9 @@ _G.debug_log = function(up)
 
         api.nvim_buf_set_lines(0, cursor_line - shift, cursor_line - shift, false, { value })
         if up == true then
-            vim.cmd [[ normal =k ]]
+            vim.cmd [[normal =k]]
         else
-            vim.cmd [[ normal =j ]]
+            vim.cmd [[normal =j]]
         end
     end
     nuiInput(callback, ' debug log ')
