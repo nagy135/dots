@@ -59,6 +59,7 @@ let
     neovim
     unstable.lazygit
     unstable.yarn
+    unstable.fuzzel
 
     tesseract
     rpi-imager
@@ -66,7 +67,6 @@ let
     rust-analyzer
     ncdu
     gammastep
-    fuzzel
     rofi-wayland
     sxiv
     wget
@@ -118,6 +118,7 @@ let
     unzip
     file
     sumneko-lua-language-server
+    gh
   ];
 
   waylandSwitch = with pkgs;
