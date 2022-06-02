@@ -150,7 +150,8 @@ in
       neovim-unwrapped = super.neovim-unwrapped.overrideAttrs (oldAttrs: {
         version = "master";
         src = builtins.fetchGit {
-          url = https://github.com/neovim/neovim.git;
+          url = https://github.com/neovim/neovim/;
+          rev = "209824ce2c6d37332079e6e213d4b8e257d7d53b";
         };
       });
     })
