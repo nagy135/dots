@@ -1,6 +1,6 @@
 #!/bin/sh
 
-terminal="alacritty"
+terminal="foot"
 chrome="google-chrome-stable"
 
 ### Spawn terminal
