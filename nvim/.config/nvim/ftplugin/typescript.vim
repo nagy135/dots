@@ -8,4 +8,7 @@ nnoremap <leader>;P yiwOconsole.log("", );<ESC>hPF"P<ESC>
 nnoremap <leader>;;p yiwoconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
 nnoremap <leader>;;P yiwOconsole.log("================\n", "", , "\n================");<ESC>F,PF"Pa: <ESC>
 
+nnoremap <c-k> :! ./run-tests.sh<CR>
+nnoremap <leader><c-k> :botright split<CR>:term ./run-tests.sh<CR>
+
 " nnoremap <c-j> :! npx ts-node %<CR>
