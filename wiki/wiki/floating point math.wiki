@@ -1,0 +1,6 @@
+a=10
+b=2.5
+
+echo "scale = 2; $a / $b" | bc
+
+// vim: ft=sh
