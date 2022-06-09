@@ -22,7 +22,6 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ['<C-m>'] = cmp.mapping.confirm({ select = true }),
     }),
     formatting = {
         format = lspkind.cmp_format({
