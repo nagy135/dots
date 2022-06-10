@@ -10,18 +10,24 @@ M.set = function(gs, bufnr)
         vim.keymap.set(mode, l, r, opts)
     end
 
-    -- Navigation
-    map('n', ']h', function()
+    local next_hunk = function ()
         if vim.wo.diff then return ']h' end
         vim.schedule(function() gs.next_hunk() end)
         return '<Ignore>'
-    end, { expr = true })
+    end
 
-    map('n', '[h', function()
+    local prev_hunk = function ()
         if vim.wo.diff then return '[h' end
         vim.schedule(function() gs.prev_hunk() end)
         return '<Ignore>'
-    end, { expr = true })
+    end
+
+    -- Navigation
+    map('n', ']h', next_hunk, { expr = true })
+    map('n', '<M-n>', next_hunk, { expr = true })
+
+    map('n', '[h', prev_hunk, { expr = true })
+    map('n', '<M-p>', prev_hunk, { expr = true })
 
     -- Actions
     map({ 'n', 'v' }, '<leader>hs', ':Gitsigns stage_hunk<CR>', { desc = 'Stage hunk' })
