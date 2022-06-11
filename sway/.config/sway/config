@@ -358,6 +358,8 @@ default_floating_border pixel 4
 
 for_window [class="Sxiv"] floating enable
 
+for_window [class="Google-chrome"] move container to workspace 3
+
 exec --no-startup-id waybar
 
 # Color changes
