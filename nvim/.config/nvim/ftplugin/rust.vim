@@ -1,5 +1,7 @@
 nnoremap <c-j> :!cargo run<CR>
 nnoremap <c-k> :!cargo test<CR>
+nnoremap <leader><c-j> <c-w>s :term cargo run<CR>
+nnoremap <leader><c-k> <c-w>s :term cargo test<CR>
 nnoremap <leader>;p oprintln!();<ESC>hi
 nnoremap <leader>;P Oprintln!();<ESC>hi
 nnoremap <leader>;;p yiwoprintln!("{}", );<ESC>hPF{Pa <ESC>
