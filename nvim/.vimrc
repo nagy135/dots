@@ -103,8 +103,8 @@ nnoremap <C-k> :cp<CR>
 nnoremap <C-c> :cclose<CR>
 
 " locationlist movement
-nnoremap <C-n> :lnext<CR>
-nnoremap <C-p> :lprev<CR>
+nnoremap <C-n> <C-y><CR>
+nnoremap <C-p> <C-e><CR>
 
 " move tabs
 nnoremap <leader><leader>l :tabm+<CR>
@@ -400,6 +400,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'NTBBloodbath/rest.nvim'
         Plug 'sotte/presenting.vim'
         Plug 'linty-org/key-menu.nvim'
+        Plug 'mfussenegger/nvim-dap'
     endif
 call plug#end()
 
