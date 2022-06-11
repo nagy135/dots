@@ -51,6 +51,7 @@ let
   my-python-packages = python-packages: with python-packages; [
     numpy
     pillow
+    pygame
   ];
   python-with-my-packages = pkgs.python3.withPackages my-python-packages;
 
@@ -63,7 +64,8 @@ let
 
     tesseract
     rpi-imager
-    rustup
+    rustc
+    cargo
     rust-analyzer
     ncdu
     gammastep
@@ -119,6 +121,7 @@ let
     file
     sumneko-lua-language-server
     gh
+    gimp
   ];
 
   waylandSwitch = with pkgs;
@@ -151,7 +154,7 @@ in
         version = "master";
         src = builtins.fetchGit {
           url = https://github.com/neovim/neovim/;
-          rev = "209824ce2c6d37332079e6e213d4b8e257d7d53b";
+          rev = "ab1f96e1d5ba6d6664eb472c2eaade4f91982734";
         };
       });
     })
