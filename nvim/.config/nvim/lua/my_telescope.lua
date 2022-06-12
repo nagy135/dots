@@ -1,8 +1,9 @@
 local actions = require('telescope.actions')
 -- Global remapping
 ------------------------------
+local telescope = require('telescope');
 
-require('telescope').setup {
+telescope.setup {
     defaults = {
         mappings = {
             i = {
@@ -103,9 +104,9 @@ require('telescope').setup {
         }
     }
 }
-require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('file_browser')
-require('telescope').load_extension('ui-select')
+telescope.load_extension('fzy_native')
+telescope.load_extension('file_browser')
+telescope.load_extension('ui-select')
 
 local M = {}
 
