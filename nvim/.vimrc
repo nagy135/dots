@@ -149,7 +149,7 @@ nnoremap <leader>dh :DiffviewFileHistory<CR>
 
 " Prettier
 nnoremap <leader>\ :Prettier<CR>
-nnoremap <leader>lp :Prettier<CR>
+nnoremap <leader>lp :! yarn pretty-quick<CR>
 
 " Primeagen 5 tips
 nnoremap Y y$
