@@ -145,7 +145,7 @@ vnoremap < <gv
 
 " Diffview
 nnoremap <leader>dw :DiffviewOpen<CR>
-nnoremap <leader>dh :DiffviewFileHistory<CR>
+nnoremap <leader>dh :DiffviewFileHistory %<CR>
 
 " Prettier
 nnoremap <leader>\ :Prettier<CR>
