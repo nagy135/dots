@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 
 # dmenu choice
 set $menu fuzzel -b 0b0b0bdd -t b2d3d9ff -s 19a85bff -S 0b0b0bff -m f9dc2bff -C 19a85bff -B 2 | xargs swaymsg exec --
@@ -90,6 +90,7 @@ bindsym $mod+Control+c exec google-chrome-stable --incognito
 
 ### Vifm
 bindsym $mod+r exec $term vifm
+bindsym $mod+r exec $term -e vifm
 
 ### Waybar (toggle)
 bindsym $mod+Shift+b exec pkill waybar || waybar
@@ -157,9 +158,9 @@ bindsym $mod+t exec tsm-add
 ### Torrent clean
 bindsym $mod+Shift+t exec tsm-clean
 ### Torque
-bindsym $mod+Control+t exec $term torque
+bindsym $mod+Control+t exec $term -e torque
 ### Stig
-bindsym $mod+Control+Shift+t exec $term stig
+bindsym $mod+Control+Shift+t exec $term -e stig
 # }}}
 
 ### Spotify
