@@ -89,7 +89,6 @@ bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Control+c exec google-chrome-stable --incognito
 
 ### Vifm
-bindsym $mod+r exec $term vifm
 bindsym $mod+r exec $term -e vifm
 
 ### Waybar (toggle)
@@ -343,10 +342,10 @@ mode "resize" {
 bindsym $mod+Shift+r mode "resize"
 
 ### Small floating window
-bindsym $mod+semicolon floating enable, resize set 960 540, move absolute position 480 270
+bindsym $mod+Shift+semicolon floating enable, resize set 960 540, move absolute position 480 270
 
 ### Big floating window
-bindsym $mod+Shift+semicolon floating enable, resize set 1680 945, move absolute position 120 67
+bindsym $mod+semicolon floating enable, resize set 1680 945, move absolute position 120 67
 
 ### Left floating miniature
 bindsym $mod+comma floating enable, resize set 560 280, move absolute position 12 788
