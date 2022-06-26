@@ -397,6 +397,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'sotte/presenting.vim'
         Plug 'linty-org/key-menu.nvim'
         Plug 'mfussenegger/nvim-dap'
+        Plug 'ziontee113/color-picker.nvim'
     endif
 call plug#end()
 
