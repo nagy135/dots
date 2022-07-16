@@ -41,6 +41,7 @@
 [[stow]]
 [[pacman]]
 [[docker]]
+[[ffmpeg]]
 
 ## Wayland
 * [[wayland clipboard]]

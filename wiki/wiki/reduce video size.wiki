@@ -1,0 +1,39 @@
+# Methods
+
+## (BR) Modify the bitrate, using:
+ffmpeg -i $infile -b $bitrate $newoutfile
+
+## (CR) Vary the Constant Rate Factor, using:
+ffmpeg -i $infile -vcodec libx264 -crf 23 $outfile
+
+## (SZ) Change the video screen-size (for example to half its pixel size), using:
+ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile
+
+## (BL) Change the H.264 profile to "baseline", using:
+ffmpeg -i $infile -profile:v baseline $outfile
+
+## (DF) Use the default ffmpeg processing, using:
+ffmpeg -i $infile $outfile
+
+# Examples
+
+- "size"       - percent pixel size of the converted video in relation to the original.
+- "bitrate"    - bitrates of original and converted videos.
+- "definition" - pixel size of videos.
+- "convert"    - time to convert the video in seconds.
+
+             | original  | BR        | CR        | SZ      |   BL        |  DF       |
+|------------|-----------|-----------|-----------|---------|-------------|-----------|
+|size        | 64152 kb  | 214%      | 76%       | 40%     |   83%       |  76%      |
+|bitrate     | 411 kb/s  | 883       | 313       | 165     |   342       |  313      |
+|definition  | 1920x1080 | 1920x1080 | 1920x1080 | 960x540 |   1920x1080 |  1920x1080|
+|convert     | --        | 648       | 509       | 225     |   427       |  510      |
+
+=========================================================================================
+
+             | original  | BR        | CR        | SZ        |   BL        |  DF       |
+|------------|-----------|-----------|-----------|-----------|-------------|-----------|
+|size        |410301 kb  |33%        | 109%      | 28%       | 143%        | 109%      |
+|bitrate     |2687 kb/s  |880        | 2920      | 764       | 3843        | 2920      |
+|definition  |3840x2160  |3840x2160  | 3840x2160 | 1920x1080 | 3840x2160   | 3840x2160 |
+|convert     |--         | 2307      | 3188      | 1116      | 2646        | 3278      |
