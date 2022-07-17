@@ -43,7 +43,7 @@ set pumblend=15 "wildmenu transparency (15%)
 set termguicolors
 
 set laststatus=3
-set winbar=%=%m\ %f
+" set winbar=%=%m\ %f
 
 " space as leader key
 let mapleader = " "
@@ -398,6 +398,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'linty-org/key-menu.nvim'
         Plug 'mfussenegger/nvim-dap'
         Plug 'ziontee113/color-picker.nvim'
+        Plug 'b0o/incline.nvim'
     endif
 call plug#end()
 
