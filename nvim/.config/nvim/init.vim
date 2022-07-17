@@ -24,6 +24,7 @@ require('my_neogit')
 require('my_neotree')
 require('my_nvim-window-selector')
 require('my_color-picker')
+require('my_incline')
 require('binds')
 
 require('scripts')
