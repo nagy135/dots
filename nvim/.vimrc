@@ -314,7 +314,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'noahfrederick/vim-laravel'
     Plug 'rust-lang/rust.vim'
-    Plug 'tpope/vim-surround'
+    Plug 'kylechui/nvim-surround'
     " Plug 'tpope/vim-fugitive'
     Plug 'numToStr/Comment.nvim'
     Plug 'tpope/vim-eunuch'
