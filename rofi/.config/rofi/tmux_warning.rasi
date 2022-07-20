@@ -79,6 +79,9 @@
     background-color: @urgent-background;
     text-color:       @urgent-foreground;
 }
+element-text {
+    text-color: @normal-foreground;
+}
 #element.normal.active {
     background-color: @active-background;
     text-color:       @active-foreground;
