@@ -5,11 +5,17 @@ data=$(playerctl metadata 2> /dev/null)
     && echo " " \
     && exit 0
 
-echo "$data" \
-    | grep "xesam:title\|xesam:artist" \
-    | sort \
-    | tail -2 \
-    | sed 's/[a-z]* xesam:title\s*/: / ; s/[a-z]* xesam:artist\s*//' \
+title=$(echo "$data" \
+    | grep "xesam:title" \
+    | sed 's/^[^:]*:[^ ]*//' \
+    | sed 's/^\s*//' \
     | tr -d '\n' \
-    | sed 's/^\(.\{45\}\).*/\1.../' \
-    | sed 's/^\s*://'
+    | sed 's/^\(.\{25\}\).*/\1.../')
+artist=$(echo "$data" \
+    | grep "xesam:artist" \
+    | sed 's/^[^:]*:[^ ]*//' \
+    | sed 's/^\s*//' \
+    | tr -d '\n' \
+    | sed 's/^\(.\{25\}\).*/\1.../')
+
+echo "$artist: $title"
