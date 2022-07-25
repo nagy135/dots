@@ -126,11 +126,6 @@ nnoremap <leader>tt :TodoTelescope<CR>
 nnoremap <leader>tq :TodoQuickFix<CR>
 nnoremap <leader>tl :TodoLocList<CR>
 
-" nvim-colorizer.lua binds
-nnoremap <leader>cc :ColorizerToggle<CR>
-" nnoremap <leader>ca :ColorizerAttachToBuffer<CR>
-" nnoremap <leader>cd :ColorizerDetachFromBuffer<CR>
-
 " Git
 nnoremap <leader>gg :Neogit<CR>
 nnoremap <leader>gs :G<CR>
@@ -358,7 +353,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nagy135/capture-nvim'
         Plug 'neovim/nvim-lspconfig'
         Plug 'folke/todo-comments.nvim'
-        Plug 'norcalli/nvim-colorizer.lua'
+        Plug 'brenoprata10/nvim-highlight-colors'
         Plug 'kyazdani42/nvim-tree.lua'
         Plug 'phaazon/hop.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
