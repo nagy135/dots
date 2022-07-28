@@ -78,6 +78,10 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 inoremap <c-b> <c-o>diw
 
+" highlights all occurances of word under cursor, leaving cursor where found,
+" centering screen
+nnoremap <c-8> m8*`8zz
+
 nnoremap <leader>dd <cmd>TroubleToggle<CR>
 
 nnoremap <leader>uu <cmd>UndotreeToggle<CR>
