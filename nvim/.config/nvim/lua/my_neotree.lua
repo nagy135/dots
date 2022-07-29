@@ -2,17 +2,40 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 -- If you want icons for diagnostic errors, you'll need to define them somewhere:
 vim.fn.sign_define("DiagnosticSignError",
-{text = " ", texthl = "DiagnosticSignError"})
+    { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn",
-{text = " ", texthl = "DiagnosticSignWarn"})
+    { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo",
-{text = " ", texthl = "DiagnosticSignInfo"})
+    { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint",
-{text = "", texthl = "DiagnosticSignHint"})
+    { text = "", texthl = "DiagnosticSignHint" })
 -- NOTE: this is changed from v1.x, which used the old style of highlight groups
 -- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
+    sources = {
+        "filesystem",
+        "buffers",
+        "git_status",
+        "diagnostics",
+        -- ...and any additional source
+    },
+    -- These are the defaults
+    diagnostics = {
+        bind_to_cwd = true,
+        diag_sort_function = "severity", -- "severity" means diagnostic items are sorted by severity in addition to their positions.
+        -- "position" means diagnostic items are sorted strictly by their positions.
+        -- May also be a function.
+        follow_behavior = { -- Behavior when `follow_current_file` is true
+            always_focus_file = false, -- Focus the followed file, even when focus is currently on a diagnostic item belonging to that file.
+            expand_followed = true, -- Ensure the node of the followed file is expanded
+            collapse_others = true, -- Ensure other nodes are collapsed
+        },
+        follow_current_file = true,
+        group_dirs_and_files = true, -- when true, empty folders and files will be grouped together
+        group_empty_dirs = true, -- when true, empty directories will be grouped together
+        show_unloaded = true, -- show diagnostics from unloaded buffers
+    },
     close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
     popup_border_style = "rounded",
     enable_git_status = true,
@@ -62,28 +85,28 @@ require("neo-tree").setup({
         position = "left",
         width = 40,
         mappings = {
-        --     ["<2-LeftMouse>"] = "open",
+            --     ["<2-LeftMouse>"] = "open",
             ["l"] = "open",
             ["h"] = "close_node",
             ["s"] = "split_with_window_picker",
             ["v"] = "vsplit_with_window_picker",
             ["<cr>"] = "open_with_window_picker",
-        --     ["<bs>"] = "navigate_up",
-        --     ["."] = "set_root",
-        --     -- ["H"] = "toggle_hidden",
-        --     ["R"] = "refresh",
-        --     ["/"] = "fuzzy_finder",
-        --     ["f"] = "filter_on_submit",
-        --     ["<c-x>"] = "clear_filter",
-        --     ["a"] = "add",
-        --     ["d"] = "delete",
-        --     ["r"] = "rename",
-        --     ["y"] = "copy_to_clipboard",
-        --     ["x"] = "cut_to_clipboard",
-        --     ["p"] = "paste_from_clipboard",
-        --     -- ["c"] = "copy", -- takes text input for destination
-        --     -- ["m"] = "move", -- takes text input for destination
-        --     ["q"] = "close_window",
+            --     ["<bs>"] = "navigate_up",
+            --     ["."] = "set_root",
+            --     -- ["H"] = "toggle_hidden",
+            --     ["R"] = "refresh",
+            --     ["/"] = "fuzzy_finder",
+            --     ["f"] = "filter_on_submit",
+            --     ["<c-x>"] = "clear_filter",
+            --     ["a"] = "add",
+            --     ["d"] = "delete",
+            --     ["r"] = "rename",
+            --     ["y"] = "copy_to_clipboard",
+            --     ["x"] = "cut_to_clipboard",
+            --     ["p"] = "paste_from_clipboard",
+            --     -- ["c"] = "copy", -- takes text input for destination
+            --     -- ["m"] = "move", -- takes text input for destination
+            --     ["q"] = "close_window",
         }
     },
     nesting_rules = {},
