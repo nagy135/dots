@@ -82,7 +82,7 @@ inoremap <c-b> <c-o>diw
 " centering screen
 nnoremap <c-8> m8*`8zz
 
-nnoremap <leader>dd <cmd>TroubleToggle<CR>
+nnoremap <leader>dd <cmd>Neotree diagnostics reveal bottom<CR>
 
 nnoremap <leader>uu <cmd>UndotreeToggle<CR>
 
@@ -369,13 +369,13 @@ call plug#begin('~/.vim/plugged')
         Plug 'hrsh7th/cmp-path'
         Plug 'hrsh7th/nvim-cmp'
         Plug 'onsails/lspkind-nvim'
-        Plug 'folke/trouble.nvim'
         Plug 'folke/lua-dev.nvim'
         Plug 'ThePrimeagen/harpoon'
         Plug 'ThePrimeagen/refactoring.nvim'
         Plug 'lewis6991/impatient.nvim'
         Plug 'nagy135/typebreak.nvim'
         Plug 'MunifTanjim/nui.nvim'
+        Plug 'grbjarksen/neo-tree-diagnostics.nvim'
         " Plug 'p00f/nvim-ts-rainbow'
         Plug 'L3MON4D3/LuaSnip'
         Plug 'saadparwaiz1/cmp_luasnip'
