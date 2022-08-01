@@ -4,6 +4,6 @@ sudo useradd -m <username>
 # change password
 sudo passwd <username>
 
-# [[add group to existing user]]
+[[add group to existing user]]
 
 // vim: ft=sh
