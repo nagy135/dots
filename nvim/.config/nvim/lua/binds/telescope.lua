@@ -14,6 +14,7 @@ utils.alias_binds({
     end,
     { desc = 'Find Files' }
 )
+
 --
 vim.keymap.set('n', '<leader>fn', function() require("telescope.builtin").find_files({ cwd = "%:h" }) end,
     { desc = 'Find Neightbors' })
@@ -70,6 +71,7 @@ vim.keymap.set('n', '<leader>gD', function() require('telescope.builtin').lsp_ty
 --
 vim.keymap.set('n', '<leader>fe', function() require('telescope').extensions.file_browser.file_browser() end,
     { desc = 'File Browser' })
+
 --
 vim.keymap.set('n', '<leader>ld', function() require('telescope.builtin').diagnostics() end,
     { desc = 'Find Diagnostics' })
@@ -93,7 +95,7 @@ vim.keymap.set('n', '<leader>fp', function() require('telescope.builtin').projec
 vim.keymap.set('n', '<leader>fa', function() require('telescope.builtin').project_find_file("~/Apps") end,
     { desc = 'Find project in ~/Apps' })
 --
-vim.keymap.set('n', '<leader>ss', function() require('telescope.builtin').currenct_buffer_fuzzy_find() end,
+vim.keymap.set('n', '<leader>ss', function() require('telescope.builtin').current_buffer_fuzzy_find() end,
     { desc = 'Swiper' })
 --
 vim.keymap.set('n', '<leader>hh', function() require('telescope.builtin').help_tags() end,
