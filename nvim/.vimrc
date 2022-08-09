@@ -376,7 +376,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'nagy135/typebreak.nvim'
         Plug 'MunifTanjim/nui.nvim'
         Plug 'grbjarksen/neo-tree-diagnostics.nvim'
-        " Plug 'p00f/nvim-ts-rainbow'
         Plug 'L3MON4D3/LuaSnip'
         Plug 'saadparwaiz1/cmp_luasnip'
         Plug 'j-hui/fidget.nvim'
@@ -398,6 +397,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'mfussenegger/nvim-dap'
         Plug 'ziontee113/color-picker.nvim'
         Plug 'b0o/incline.nvim'
+        Plug 'p00f/nvim-ts-rainbow'
     endif
 call plug#end()
 
