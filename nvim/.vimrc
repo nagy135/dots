@@ -308,6 +308,7 @@ endfunc
 call plug#begin('~/.vim/plugged')
     Plug 'mbbill/undotree'
     Plug 'sainnhe/gruvbox-material'
+    Plug 'luisiacc/gruvbox-baby'
     Plug 'ziglang/zig.vim'
     Plug 'lervag/wiki.vim'
     Plug 'joshdick/onedark.vim'
@@ -430,6 +431,8 @@ let g:todo_file_location = ""
 let g:presenting_font_large = "ansiishadow"
 let g:presenting_font_small = "standard"
 
+let g:gruvbox_baby_background_color = "dark"
+
 " Colorscheme
-colorscheme gruvbox-material
+colorscheme gruvbox-baby
 "}}}
