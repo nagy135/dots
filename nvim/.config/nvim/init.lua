@@ -1,6 +1,4 @@
-source ~/.vimrc
-
-lua << EOF
+vim.cmd [[ source ~/.vimrc ]]
 
 require('impatient')
 
@@ -32,5 +30,3 @@ require('binds')
 require('scripts')
 
 require('lsp')
-
-EOF
