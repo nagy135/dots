@@ -358,7 +358,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'nagy135/capture-nvim'
         Plug 'neovim/nvim-lspconfig'
         Plug 'folke/todo-comments.nvim'
-        Plug 'brenoprata10/nvim-highlight-colors'
         Plug 'kyazdani42/nvim-tree.lua'
         Plug 'phaazon/hop.nvim'
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
