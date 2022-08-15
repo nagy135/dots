@@ -429,9 +429,3 @@ let g:todo_file_location = ""
 
 let g:presenting_font_large = "ansiishadow"
 let g:presenting_font_small = "standard"
-
-let g:gruvbox_baby_background_color = "dark"
-
-" Colorscheme
-colorscheme gruvbox-baby
-"}}}
