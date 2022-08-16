@@ -1,7 +1,6 @@
 vim.cmd [[ source ~/.vimrc ]]
 
 require('impatient')
-
 require('my_telescope')
 require('my_indent-blackline')
 require('my_todo-comments')
@@ -30,3 +29,4 @@ require('binds')
 require('scripts')
 
 require('lsp')
+require('colorscheme')
