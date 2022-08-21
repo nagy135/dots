@@ -25,6 +25,8 @@ require('my_color-picker')
 require('my_incline')
 require('my_nvim-surround')
 require('binds')
+require('my_lightspeed')
+require('thief')
 
 require('scripts')
 
