@@ -49,6 +49,7 @@ M.start_stealing = function()
             end)
             return true
         end,
+        prompt_title = "Steal File",
         cwd = M.project_root .. '/' .. M.thief_root,
         follow = true, hidden = true
     }
