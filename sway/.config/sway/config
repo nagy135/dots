@@ -110,6 +110,8 @@ bindsym $mod+bracketleft exec redshift_control 1
 
 ### Tabber
 bindsym $mod+Mod1+g exec tabber
+bindsym $mod+Mod1+Control+g exec tabber grab
+bindsym $mod+Mod1+Shift+Control+g exec tabber process
 
 # Dunst {{{
 ### Dunst - history-pop
