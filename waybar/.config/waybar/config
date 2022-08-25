@@ -112,6 +112,6 @@
         "format": "  {}",
         "interval": 2, 
         "tooltip": "  {}",
-        "exec": "ls $XDG_DATA_HOME/subtube/thumbnails | wc -l"
+        "exec": "ls /usr/share/subtube/resources/thumbnails | wc -l"
     } 
 }
