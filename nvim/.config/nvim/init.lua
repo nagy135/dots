@@ -27,6 +27,7 @@ require('my_nvim-surround')
 require('binds')
 require('my_lightspeed')
 require('thief')
+require('my_mind')
 
 require('scripts')
 
