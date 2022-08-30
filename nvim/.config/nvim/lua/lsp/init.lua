@@ -40,6 +40,6 @@ map('n','<leader>gld','<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>' 
 map('n','[d'         ,'<cmd>lua vim.diagnostic.goto_prev()<CR>'                              ,opts)
 map('n',']d'         ,'<cmd>lua vim.diagnostic.goto_next()<CR>'                              ,opts)
 map('n','<leader>q'  ,'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>'                        ,opts)
-map('n','<leader>lf' ,'<cmd>lua vim.lsp.buf.formatting()<CR>'                                ,opts)
+map('n','<leader>lf' ,'<cmd>lua vim.lsp.buf.format({ async = true })<CR>'                    ,opts)
 map('x','<leader>lf' ,'<cmd>lua vim.lsp.buf.range_formatting()<CR>'                          ,opts)
 map('n','<leader>df' ,'<cmd>lua vim.diagnostic.open_float()<CR>'                             ,opts)
