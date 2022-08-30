@@ -27,9 +27,12 @@ local function get_files(mask)
 end
 
 local function copy_file_to_new_root(relative_path)
-    print('copying: ' .. M.project_root .. '/' .. M.thief_root .. '/' .. relative_path .. ' => ' .. vim.fn.getcwd() .. '/' .. relative_path )
-    os.execute('mkdir -p $(dirname ' .. vim.fn.getcwd() .. '/' .. relative_path ..')' )
-    os.execute('cp ' .. M.project_root .. '/' .. M.thief_root .. '/' .. relative_path .. ' ' .. vim.fn.getcwd() .. '/' .. relative_path )
+    print('copying: ' ..
+        M.project_root ..
+        '/' .. M.thief_root .. '/' .. relative_path .. ' => ' .. vim.fn.getcwd() .. '/' .. relative_path)
+    os.execute('mkdir -p $(dirname ' .. vim.fn.getcwd() .. '/' .. relative_path .. ')')
+    os.execute('cp ' ..
+        M.project_root .. '/' .. M.thief_root .. '/' .. relative_path .. ' ' .. vim.fn.getcwd() .. '/' .. relative_path)
 end
 
 M.start_stealing = function()
@@ -77,7 +80,11 @@ M.set_root = function()
 end
 
 
-vim.keymap.set('n', '<leader>sr', M.set_root) -- Steal Root
-vim.keymap.set('n', '<leader>st', M.start_stealing) -- STeal
+vim.keymap.set('n', '<leader>s',
+    function() require 'key-menu'.open_window('<leader>s') end,
+    { desc = 'Thief' })
+
+vim.keymap.set('n', '<leader>sr', M.set_root, { desc = 'Steal Root' }) -- Steal Root
+vim.keymap.set('n', '<leader>st', M.start_stealing, { desc = 'STeal' }) -- STeal
 
 return M
