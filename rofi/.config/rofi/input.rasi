@@ -40,7 +40,7 @@
 #window {
     background-color: @background;
     border:           3;
-    padding:          15;
+    padding:          12;
     width:            30%;
     height:           62px;
 }
