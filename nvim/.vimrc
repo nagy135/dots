@@ -397,7 +397,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'mfussenegger/nvim-dap'
         Plug 'ziontee113/color-picker.nvim'
         Plug 'b0o/incline.nvim'
-        Plug 'p00f/nvim-ts-rainbow'
         Plug 'phaazon/mind.nvim'
     endif
 call plug#end()
