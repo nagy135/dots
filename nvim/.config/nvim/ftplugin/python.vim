@@ -1,5 +1,5 @@
-nnoremap <c-j> :w !python<CR>:w<CR>
-nnoremap ;p oprint()<ESC>i
-nnoremap ;P Oprint()<ESC>i
-nnoremap ;;p yiwoprint('', )<ESC>PF'P^
-nnoremap ;;P yiwOprint('', )<ESC>PF'P^
+nnoremap <leader><c-j> :w !python<CR>:w<CR>
+nnoremap <leader>;p oprint()<ESC>i
+nnoremap <leader>;P Oprint()<ESC>i
+nnoremap <leader>;;p yiwoprint('', )<ESC>PF'P^
+nnoremap <leader>;;P yiwOprint('', )<ESC>PF'P^
