@@ -87,6 +87,11 @@ git-last-commits(){
     echo "$results" | sort -r | column -t -s'#' | tr '#' ' '
 }
 
+video_to_facebook(){
+    filename=$(basename $1 .mp4)
+    ffmpeg -i $1 -c:v libx264 -preset slow -crf 20 -c:a aac -b:a 160k -vf format=yuv420p -movflags +faststart "$filename"_h264.mp4
+}
+
 proj(){
     folder=~/Apps
     choice=$(ls $folder | fzf)
