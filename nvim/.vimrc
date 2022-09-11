@@ -356,6 +356,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-telescope/telescope-fzy-native.nvim'
         Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
         Plug 'nagy135/capture-nvim'
+        Plug 'williamboman/mason.nvim'
+        Plug 'williamboman/mason-lspconfig.nvim'
         Plug 'neovim/nvim-lspconfig'
         Plug 'folke/todo-comments.nvim'
         Plug 'kyazdani42/nvim-tree.lua'
@@ -384,7 +386,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'nanotee/luv-vimdocs'
         Plug 'milisims/nvim-luaref'
         Plug 'nvim-telescope/telescope-file-browser.nvim'
-        Plug 'williamboman/nvim-lsp-installer'
         Plug 'jose-elias-alvarez/null-ls.nvim'
         Plug 'MunifTanjim/prettier.nvim'
         Plug 'nvim-neo-tree/neo-tree.nvim'
