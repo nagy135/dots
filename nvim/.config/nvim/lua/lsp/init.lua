@@ -1,6 +1,14 @@
 -- Servers:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
+require("mason").setup()
+require("mason-lspconfig").setup()
+
+-- SERVER BLOCKS
+require("lsp.tsserver")
+require("lsp.lua-language-server")
+require("lsp.pyright")
+
 require("lsp.intelephense")
 require("lsp.cssls")
 -- require("lsp.tailwindcss")
@@ -15,11 +23,8 @@ require("lsp.htmlls")
 require("lsp.yamlls")
 require("lsp.rnix-lsp")
 
-require("lsp.my_nvim-lsp-installer")
--- require("lsp.tsserver")
--- require("lsp.lua-language-server")
+-- require("lsp.my_nvim-lsp-installer")
 -- require("lsp.pylsp")
--- require("lsp.pyright")
 
 local opts = { noremap=true, silent=true }
 local map  = vim.api.nvim_set_keymap;
