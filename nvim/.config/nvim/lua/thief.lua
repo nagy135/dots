@@ -9,7 +9,7 @@ local action_state = require "telescope.actions.state"
 
 
 M.thief_root = nil
-M.project_root = "~/Apps"
+M.project_root = "~/Apps" -- default place to look for project roots to copy from
 
 local function get_files(mask)
     local files = {}
@@ -28,14 +28,14 @@ end
 
 local function copy_file_to_new_root(relative_path)
     print('copying: ' ..
-        M.project_root ..
-        '/' .. M.thief_root .. '/' .. relative_path .. ' => ' .. vim.fn.getcwd() .. '/' .. relative_path)
+        M.thief_root .. '/' .. relative_path .. ' => ' .. vim.fn.getcwd() .. '/' .. relative_path)
     os.execute('mkdir -p $(dirname ' .. vim.fn.getcwd() .. '/' .. relative_path .. ')')
     os.execute('cp ' ..
-        M.project_root .. '/' .. M.thief_root .. '/' .. relative_path .. ' ' .. vim.fn.getcwd() .. '/' .. relative_path)
+        M.thief_root .. '/' .. relative_path .. ' ' .. vim.fn.getcwd() .. '/' .. relative_path)
 end
 
 M.start_stealing = function()
+    print(M.thief_root)
     if M.thief_root == nil then
         print('NO ROOT SET')
         return
@@ -53,30 +53,34 @@ M.start_stealing = function()
             return true
         end,
         prompt_title = "Steal File",
-        cwd = M.project_root .. '/' .. M.thief_root,
+        cwd = M.thief_root,
         follow = true, hidden = true
     }
 end
 
 
-M.set_root = function()
-    local folders = get_files(M.project_root)
-    pickers.new({}, {
-        prompt_title = "Select root for stealing",
-        finder = finders.new_table(folders),
-        attach_mappings = function(prompt_bufnr, _)
-            actions.select_default:replace(function()
-                actions.close(prompt_bufnr)
-                local selection = action_state.get_selected_entry()
-                if selection.value ~= nil then
-                    M.thief_root = selection.value
-                end
-                print('Root set!')
-            end)
-            return true
-        end,
-        sorter = conf.generic_sorter({}),
-    }):find()
+M.set_root = function(optional_root)
+    if optional_root ~= nil then
+        M.thief_root = optional_root
+    else
+        local folders = get_files(M.project_root)
+        pickers.new({}, {
+            prompt_title = "Select root for stealing",
+            finder = finders.new_table(folders),
+            attach_mappings = function(prompt_bufnr, _)
+                actions.select_default:replace(function()
+                    actions.close(prompt_bufnr)
+                    local selection = action_state.get_selected_entry()
+                    if selection.value ~= nil then
+                        M.thief_root = M.project_root .. '/' .. selection.value
+                    end
+                    print('Root set!')
+                end)
+                return true
+            end,
+            sorter = conf.generic_sorter({}),
+        }):find()
+    end
 end
 
 
@@ -86,5 +90,13 @@ vim.keymap.set('n', '<leader>s',
 
 vim.keymap.set('n', '<leader>sr', M.set_root, { desc = 'Steal Root' }) -- Steal Root
 vim.keymap.set('n', '<leader>st', M.start_stealing, { desc = 'STeal' }) -- STeal
+
+vim.api.nvim_create_user_command(
+    'StealRoot',
+    function(opts)
+        M.set_root(opts.args)
+    end,
+    { nargs = 1 }
+)
 
 return M
