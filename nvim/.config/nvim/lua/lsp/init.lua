@@ -11,7 +11,7 @@ require("lsp.pyright")
 
 require("lsp.intelephense")
 require("lsp.cssls")
--- require("lsp.tailwindcss")
+require("lsp.tailwindcss")
 require("lsp.gopls")
 require("lsp.bashls")
 -- require("lsp.rls")
