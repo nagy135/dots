@@ -78,6 +78,8 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F4> :call ZathuraOpen()<CR>
 inoremap <c-b> <c-o>diw
 
+xnoremap <leader>p "_dP
+
 " highlights all occurances of word under cursor, leaving cursor where found,
 " centering screen
 nnoremap <c-8> m8*`8zz
@@ -399,6 +401,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'ziontee113/color-picker.nvim'
         Plug 'b0o/incline.nvim'
         Plug 'phaazon/mind.nvim'
+        Plug 'norcalli/nvim-colorizer.lua'
     endif
 call plug#end()
 
