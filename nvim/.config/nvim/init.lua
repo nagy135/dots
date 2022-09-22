@@ -28,6 +28,7 @@ require('binds')
 require('my_lightspeed')
 require('thief')
 require('my_mind')
+require('my_neorg')
 
 require('scripts')
 
