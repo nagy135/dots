@@ -402,6 +402,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'b0o/incline.nvim'
         Plug 'phaazon/mind.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
+        Plug 'nvim-neorg/neorg'
     endif
 call plug#end()
 
