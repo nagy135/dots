@@ -400,7 +400,6 @@ call plug#begin('~/.vim/plugged')
         Plug 'mfussenegger/nvim-dap'
         Plug 'ziontee113/color-picker.nvim'
         Plug 'b0o/incline.nvim'
-        Plug 'phaazon/mind.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'nvim-neorg/neorg'
     endif
