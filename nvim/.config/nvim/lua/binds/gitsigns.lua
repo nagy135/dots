@@ -10,13 +10,13 @@ M.set = function(gs, bufnr)
         vim.keymap.set(mode, l, r, opts)
     end
 
-    local next_hunk = function ()
+    local next_hunk = function()
         if vim.wo.diff then return ']h' end
         vim.schedule(function() gs.next_hunk() end)
         return '<Ignore>'
     end
 
-    local prev_hunk = function ()
+    local prev_hunk = function()
         if vim.wo.diff then return '[h' end
         vim.schedule(function() gs.prev_hunk() end)
         return '<Ignore>'
