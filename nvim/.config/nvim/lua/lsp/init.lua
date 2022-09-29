@@ -8,6 +8,7 @@ require("mason-lspconfig").setup()
 require("lsp.tsserver")
 require("lsp.lua-language-server")
 require("lsp.pyright")
+require("lsp.sqlls")
 
 require("lsp.intelephense")
 require("lsp.cssls")
