@@ -402,6 +402,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'b0o/incline.nvim'
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'nvim-neorg/neorg'
+        Plug 'simrat39/symbols-outline.nvim'
     endif
 call plug#end()
 
