@@ -28,6 +28,7 @@ require('binds')
 require('my_lightspeed')
 require('thief')
 require('my_neorg')
+require('my_symbols-outline')
 
 require('scripts')
 
