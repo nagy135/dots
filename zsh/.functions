@@ -2,7 +2,7 @@
 
 fzfvim(){
     # find file in $1, open it with vim and put it into clipboard
-    file=$(find $1 | fzf)
+    file=$(find -L $1 | fzf)
     if [[ ! -z $file ]]; then
         vim $file
     fi
