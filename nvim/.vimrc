@@ -403,6 +403,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'norcalli/nvim-colorizer.lua'
         Plug 'nvim-neorg/neorg'
         Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+        Plug 'phelipetls/jsonpath.nvim'
     endif
 call plug#end()
 
