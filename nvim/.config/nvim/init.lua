@@ -29,6 +29,7 @@ require('my_lightspeed')
 require('thief')
 require('my_neorg')
 require('my_lspsaga')
+require('my_neozoom')
 
 require('scripts')
 
