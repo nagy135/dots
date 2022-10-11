@@ -119,8 +119,8 @@ nnoremap <leader><leader>h :tabm-<CR>
 nnoremap <leader>r :LspRestart<CR>
 
 " zoom
-nnoremap <Leader>zz :tabnew %<CR>
-nnoremap <Leader>zc :tabclose<CR>
+nnoremap <leader><leader>z :tabnew %<CR>
+nnoremap <leader>zc :tabclose<CR>
 
 " Zen Mode (goyo)
 nnoremap <Leader>zm :ZenMode<CR>
@@ -404,6 +404,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'nvim-neorg/neorg'
         Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
         Plug 'phelipetls/jsonpath.nvim'
+        Plug 'nyngwang/NeoZoom.lua'
     endif
 call plug#end()
 
