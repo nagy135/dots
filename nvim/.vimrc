@@ -405,6 +405,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
         Plug 'phelipetls/jsonpath.nvim'
         Plug 'nyngwang/NeoZoom.lua'
+        Plug 'folke/noice.nvim'
+        Plug 'rcarriga/nvim-notify'
     endif
 call plug#end()
 
