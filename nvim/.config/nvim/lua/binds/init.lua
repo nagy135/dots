@@ -11,6 +11,7 @@ require 'key-menu'.set('n', '<Space>')
 
 require('binds.harpoon')
 require('binds.rest-nvim')
+require('binds.common')
 require('binds.telescope')
 require('binds.custom')
 require('binds.diffview')
