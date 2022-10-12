@@ -59,6 +59,9 @@ vim.keymap.set('n', '<leader>fL', function() require('telescope.builtin').git_bc
 --
 vim.keymap.set('n', '<leader>gd', function() require('telescope.builtin').lsp_definitions() end,
     { desc = 'Find LSP Definitions' })
+
+vim.keymap.set('n', '<leader>gs', function() require('telescope.builtin').lsp_document_symbols() end,
+    { desc = 'Find LSP Symbols (current buffer)' })
 --
 vim.keymap.set('n', '<leader>gr', function() require('telescope.builtin').lsp_references() end,
     { desc = 'Find LSP References' })
