@@ -1,5 +1,7 @@
 vim.cmd [[ source ~/.vimrc ]]
 
+require('plugins')
+
 require('impatient')
 require('my_telescope')
 require('my_indent-blackline')
@@ -30,7 +32,6 @@ require('thief')
 require('my_neorg')
 require('my_lspsaga')
 require('my_neozoom')
-require('my_noice')
 
 require('scripts')
 
