@@ -9,6 +9,16 @@ return require('packer').startup(function(use)
         end
     }
     use 'nagy135/capture-nvim'
+    use { 'nagy135/boole.nvim',
+        config = function()
+            require('boole').setup({
+                mappings = {
+                    increment = '<C-a>',
+                    decrement = '<C-x>'
+                }
+            })
+        end
+    }
     -- }}}
     -- themes {{{
     use 'folke/tokyonight.nvim'
