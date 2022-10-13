@@ -3,7 +3,11 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- }}}
     -- personal {{{
-    use 'nagy135/typebreak.nvim'
+    use { 'nagy135/typebreak.nvim',
+        config = function()
+            vim.keymap.set('n', '<leader>tb', require('typebreak').start, { desc = 'Typebreak'})
+        end
+    }
     use 'nagy135/capture-nvim'
     -- }}}
     -- themes {{{
