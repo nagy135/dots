@@ -9,13 +9,13 @@ return require('packer').startup(function(use)
         end
     }
     use 'nagy135/capture-nvim'
-    use { 'nagy135/boole.nvim',
+    use { 'nat-418/boole.nvim',
         config = function()
             require('boole').setup({
                 mappings = {
                     increment = '<C-a>',
                     decrement = '<C-x>'
-                }
+                },
             })
         end
     }
@@ -24,8 +24,6 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'olimorris/onedarkpro.nvim'
     -- }}}
-
-
 
     -- key-menu {{{
     use 'linty-org/key-menu.nvim'
@@ -124,8 +122,8 @@ return require('packer').startup(function(use)
     use({
         'MunifTanjim/prettier.nvim',
         requires = {
-        'jose-elias-alvarez/null-ls.nvim',
-        'neovim/nvim-lspconfig'
+            'jose-elias-alvarez/null-ls.nvim',
+            'neovim/nvim-lspconfig'
         }
     })
     -- }}}
@@ -302,4 +300,3 @@ return require('packer').startup(function(use)
     use 'zah/nim.vim'
     -- }}}
 end)
-
