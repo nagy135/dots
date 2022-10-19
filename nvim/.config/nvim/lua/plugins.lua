@@ -42,18 +42,18 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     -- }}}
     -- noice {{{
-    use({
-        "folke/noice.nvim",
-        event = "VimEnter",
-        config = function()
-            require("noice").setup()
-        end,
-        requires = {
-            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
-        }
-    })
+    -- use({
+    --     "folke/noice.nvim",
+    --     event = "VimEnter",
+    --     config = function()
+    --         require("noice").setup()
+    --     end,
+    --     requires = {
+    --         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    --         "MunifTanjim/nui.nvim",
+    --         "rcarriga/nvim-notify",
+    --     }
+    -- })
     -- }}}
     -- NeoZoom {{{
     use 'nyngwang/NeoZoom.lua'
@@ -152,6 +152,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
     -- }}}
     -- luasnip {{{
