@@ -13,3 +13,4 @@ wiki/wiki/rull_queries.wiki
 qutebrowser/.local/share/qutebrowser/blocked-hosts
 blender/Documents/blender
 qutebrowser/.local/share/qutebrowser/state
+nvim/.config/nvim/plugin/packer_compiled.lua
