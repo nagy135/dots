@@ -11,7 +11,7 @@ set $right l
 set $term alacritty
 
 # dmenu choice
-set $menu rofi -show run -theme ~/.config/rofi/tmux.rasi
+set $menu fuzzel
 
 # gaps
 gaps inner 10
