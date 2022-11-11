@@ -41,6 +41,7 @@ set inccommand=split
 set wildoptions=pum
 set pumblend=15 "wildmenu transparency (15%)
 set termguicolors
+set completeopt=menu,menuone,noselect
 
 set laststatus=3
 " set winbar=%=%m\ %f
