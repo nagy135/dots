@@ -6,7 +6,7 @@ require("mason-lspconfig").setup()
 
 -- SERVER BLOCKS
 require("lsp.tsserver")
-require("lsp.lua-language-server")
+-- require("lsp.lua-language-server")
 require("lsp.pyright")
 require("lsp.sqlls")
 require("lsp.bashls")
