@@ -23,8 +23,56 @@ return require('packer').startup(function(use)
     -- themes {{{
     use 'folke/tokyonight.nvim'
     use 'olimorris/onedarkpro.nvim'
-    -- }}}
+    use 'sainnhe/gruvbox-material'
+    use({
+        'luisiacc/gruvbox-baby',
+        config = function()
+            local colors = require('gruvbox-baby.colors').config()
 
+            --     background: string = "#282828",
+            --     background_dark: string = "#1d2021",
+            --     background_light: string = "#32302f",
+            --     blue_gray: string = "#458588",
+            --     bright_yellow: string = "#fabd2f",
+            --     clean_green: string = "#8ec07c",
+            --     comment: string = "#665c54",
+            --     dark: string = "#202020",
+            --     dark0: string = "#0d0e0f",
+            --     dark_gray: string = "#83a598",
+            --     diff: table,
+            --     error_red: string = "#cc241d",
+            --     foreground: string = "#ebdbb2",
+            --     forest_green: string = "#689d6a",
+            --     gray: string = "#DEDEDE",
+            --     light_blue: string = "#7fa2ac",
+            --     magenta: string = "#b16286",
+            --     medium_gray: string = "#504945",
+            --     milk: string = "#E7D7AD",
+            --     none: string = "NONE",
+            --     orange: string = "#d65d0e",
+            --     pink: string = "#D4879C",
+            --     red: string = "#fb4934",
+            --     soft_green: string = "#98971a",
+            --     soft_yellow: string = "#eebd35",
+
+            vim.g.gruvbox_baby_highlights = { Visual = { bg = colors.medium_gray } }
+            vim.g.gruvbox_baby_highlights = {
+                TabLineSel = {
+                    bg = colors.forest_green,
+                    fg = colors.background_dark
+                },
+                TabLine = {
+                    fg = colors.soft_yellow
+                },
+                Title = {
+                    fg = colors.milk
+                }
+            }
+            vim.g.gruvbox_baby_background_color = "dark"
+        end
+    })
+    use 'joshdick/onedark.vim'
+    -- }}}
     -- key-menu {{{
     use 'linty-org/key-menu.nvim'
     -- }}}
@@ -228,20 +276,11 @@ return require('packer').startup(function(use)
     -- undotree {{{
     use 'mbbill/undotree'
     -- }}}
-    -- gruvbox-material {{{
-    use 'sainnhe/gruvbox-material'
-    -- }}}
-    -- gruvbox-baby {{{
-    use 'luisiacc/gruvbox-baby'
-    -- }}}
     -- zig.vim {{{
     use 'ziglang/zig.vim'
     -- }}}
     -- wiki.vim {{{
     use 'lervag/wiki.vim'
-    -- }}}
-    -- onedark.vim {{{
-    use 'joshdick/onedark.vim'
     -- }}}
     -- vim-laravel {{{
     use 'noahfrederick/vim-laravel'
