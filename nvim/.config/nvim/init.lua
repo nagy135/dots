@@ -32,9 +32,9 @@ require('thief')
 require('my_neorg')
 require('my_lspsaga')
 require('my_neozoom')
-require('my_null-ls')
 
 require('scripts')
+require('autocommands')
 
 require('lsp')
 
