@@ -136,7 +136,7 @@ return require('packer').startup(function(use)
     -- }}}
     -- rest-nvim {{{
     use({
-        "NTBBloodbath/rest.nvim",
+        "rest-nvim/rest.nvim",
         requires = { "nvim-lua/plenary.nvim" },
     })
     -- }}}
