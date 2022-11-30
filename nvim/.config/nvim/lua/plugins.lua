@@ -121,6 +121,8 @@ return require('packer').startup(function(use)
         -- tag = "*",
         requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" }
     })
+    --     requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" }
+    -- })
     -- }}}
     -- incline {{{
     use 'b0o/incline.nvim'
