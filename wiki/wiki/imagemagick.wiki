@@ -1,0 +1,14 @@
+# resize to, keep ratio (one dimension will shrink if needed)
+convert old.png -resize 1920x1080 new.png
+
+# resize to, keep ratio but fill everything (overflowing)
+convert old.png -resize 1920x1080^ new.png
+
+# resize to, ignore ratio (stretch as needed)
+convert old.png -resize 1920x1080! new.png
+
+# crop part of the image (from center)
+convert old.png -resize 100x100^ -gravity center -extent 100x100 new.png
+
+# Notes
+- you can change extensions as needed (automatic filetype conversion)

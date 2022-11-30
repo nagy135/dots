@@ -42,6 +42,7 @@
 [[pacman]]
 [[docker]]
 [[ffmpeg]]
+[[imagemagick]]
 
 ## Wayland
 * [[wayland clipboard]]
