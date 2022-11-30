@@ -116,11 +116,9 @@ return require('packer').startup(function(use)
     })
     -- }}}
     -- Neog {{{
-    use({
-        "nvim-neorg/neorg",
-        -- tag = "*",
-        requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" }
-    })
+    -- use({
+    --     "nvim-neorg/neorg",
+    --     -- tag = "*",
     --     requires = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" }
     -- })
     -- }}}
