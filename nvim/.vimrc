@@ -120,7 +120,7 @@ nnoremap <leader><leader>h :tabm-<CR>
 nnoremap <leader>r :LspRestart<CR>
 
 " zoom
-nnoremap <leader><leader>z :tabnew %<CR>
+nnoremap <leader>zz :tabnew %<CR>
 nnoremap <leader>zc :tabclose<CR>
 
 " Zen Mode (goyo)
