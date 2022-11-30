@@ -2,7 +2,7 @@ local keymap = vim.keymap.set
 local saga = require('lspsaga')
 
 saga.init_lsp_saga({
-    code_action_lightbulb = { sign = false}
+    code_action_lightbulb = { enable = false }
 })
 
 -- Lsp finder find the symbol definition implement reference
