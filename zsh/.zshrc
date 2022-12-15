@@ -36,10 +36,6 @@ source $HOME/.zsh_completions
 
 export HISTFILE=$HOME/.zsh_history
 
-# End of lines added by compinstall
-[[ ! -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]] \
-    || source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 [[ ! -f ~/Clones/z.lua/z.lua ]] \
     || eval "$(lua ~/Clones/z.lua/z.lua --init zsh)"
 
@@ -56,3 +52,4 @@ export HISTFILE=$HOME/.zsh_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ] && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+[ -f /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme ] && source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
