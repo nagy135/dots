@@ -9,16 +9,16 @@ fzfvim(){
     echo $file
 }
 cf(){
-    fzfvim "/home/infiniter/.config"
+    fzfvim "$HOME/.config"
 }
 cdot(){
-    fzfvim "/home/infiniter/.dots"
+    fzfvim "$HOME/.dots"
 }
 sc(){
-    fzfvim "/home/infiniter/Code/scripts"
+    fzfvim "$HOME/.scripts"
 }
 co(){
-    fzfvim "/home/infiniter/Code"
+    fzfvim "$HOME/Code"
 }
 c() {
     # change directory and list its files
