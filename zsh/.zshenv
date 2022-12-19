@@ -28,5 +28,7 @@ export HISTFILE="$HOME/.local/share/zsh/.histfile"
 export HISTSIZE=1000
 export SAVEHIST=1000
 
+[ -f "$HOME/.zshenv_secret" ] && source "$HOME/.zshenv_secret"
+
 # export LANG="en_US.UTF-8"
 # export LC_COLLATE="C"
