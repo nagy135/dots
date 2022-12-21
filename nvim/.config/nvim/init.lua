@@ -2,7 +2,7 @@ vim.cmd [[ source ~/.vimrc ]]
 
 require('plugins')
 
-require('impatient')
+-- 
 require('my_telescope')
 require('my_indent-blackline')
 require('my_todo-comments')
