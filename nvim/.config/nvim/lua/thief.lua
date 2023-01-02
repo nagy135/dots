@@ -9,12 +9,12 @@ local action_state = require "telescope.actions.state"
 
 
 M.thief_root = nil
-M.project_root = "~/Apps" -- default place to look for project roots to copy from
+M.project_root = "~/365" -- default place to look for project roots to copy from
 
 local function get_files(mask)
     local files = {}
     local tmpfile = '/tmp/lua_nvim_thief_file.txt'
-    os.execute('find ' .. mask .. ' -maxdepth 2 -type d -printf "%P\n" > ' .. tmpfile)
+    os.execute('gfind ' .. mask .. ' -maxdepth 1 -type d -printf "%P\n" > ' .. tmpfile)
     local f = io.open(tmpfile)
     if not f then return files end
     local k = 1
