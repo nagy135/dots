@@ -37,6 +37,8 @@ yabai -m config right_padding                15
 yabai -m config window_gap                   15
 
 # apps to not manage (ignore)
+# QUERY BY: yabai -m query --windows
+yabai -m rule --add app="^DBeaver Community$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Wally$" manage=off
@@ -50,5 +52,7 @@ yabai -m rule --add app="Blender" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^choose$" manage=off
 yabai -m rule --add app="^Microsoft Teams$" manage=off
+yabai -m rule --add app="^DBeaver Community$" manage=off
+yabai -m rule --add app="^GIMP$" manage=off
 
 echo "yabai configuration loaded.."
