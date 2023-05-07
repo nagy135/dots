@@ -9,7 +9,8 @@ return {
       sources = {
         nls.builtins.formatting.shfmt,
         nls.builtins.diagnostics.eslint_d,
-        -- nls.builtins.diagnostics.flake8,
+        nls.builtins.diagnostics.flake8,
+        nls.builtins.formatting.prettierd,
       },
     }
   end,
