@@ -4,8 +4,8 @@ return {
     window = {
       mappings = {
         ["<space>"] = "none",
-        ["s"] = "open_split",
-        ["v"] = "open_vsplit",
+        ["s"] = "split_with_window_picker",
+        ["v"] = "vsplit_with_window_picker",
       },
     },
   },
