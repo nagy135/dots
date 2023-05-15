@@ -14,6 +14,7 @@ bindkey -v
 zstyle :compinstall filename '/home/infiniter/.zshrc'
 
 bindkey '^R' history-incremental-search-backward
+bindkey -s '^N' '/opt/homebrew/bin/nvim .\n' 
 
 # edit command in vim <C-X><C-E> or <C-X>E
 autoload -z edit-command-line
@@ -33,6 +34,7 @@ source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.zsh_completions
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export HISTFILE=$HOME/.zsh_history
 
 [[ ! -f ~/Clones/z.lua/z.lua ]] \
