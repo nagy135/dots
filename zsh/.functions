@@ -7,6 +7,7 @@ fzfvim(){
         vim $file
     fi
     echo $file
+    echo -n "$file" | pbcopy
 }
 cf(){
     fzfvim "$HOME/.config"
