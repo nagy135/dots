@@ -11,13 +11,13 @@ vim.keymap.set("n", "<leader>;;p",
 vim.keymap.set("n", "<leader>;;P",
   'yiwOconsole.log("================\\n", "", , "\\n================");<ESC>F,PF"Pa: <ESC>',
   { desc = "variable with lines (above)" })
-vim.keymap.set("n", "<leader>;j", 'yiwoconsole.log("", );<ESC>hPa)<ESC>BiJSON.stringify(<ESC>F"P<ESC>',
+vim.keymap.set("n", "<leader>;j", "yiwologger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify" })
-vim.keymap.set("n", "<leader>;J", 'yiwOconsole.log("", );<ESC>hPa)<ESC>BiJSON.stringify(<ESC>F"P<ESC>',
+vim.keymap.set("n", "<leader>;J", "yiwOlogger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify (above)" })
-vim.keymap.set("n", "<leader>;;j", 'yiwoconsole.log("", );<ESC>hPa)<ESC>BiJSON.stringify(<ESC>F"P<ESC>',
+vim.keymap.set("n", "<leader>;;j", "yiwologger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify" })
-vim.keymap.set("n", "<leader>;;J", 'yiwOconsole.log("", );<ESC>hPa)<ESC>BiJSON.stringify(<ESC>F"P<ESC>',
+vim.keymap.set("n", "<leader>;;J", "yiwOlogger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify (above)" })
 
 -- " nnoremap <c-k> :! ./run-tests.sh<CR>
