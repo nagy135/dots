@@ -1,5 +1,5 @@
-# focus window
 alt - h : yabai -m window --focus west
+# focus window
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
@@ -84,6 +84,8 @@ shift + alt - p : yabai -m window --display previous; yabai -m display --focus p
 
 # alacritty
 alt - return : open -a /Applications/Alacritty.app -n
+
+alt - r : open -a /Applications/Alacritty.app -n --args -e vifm
 
 alt + ctrl - o : ~/.config/alacritty/scripts/toggle_alacritty_opacity
 
