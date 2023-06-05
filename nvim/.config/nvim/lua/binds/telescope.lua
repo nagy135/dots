@@ -1,4 +1,21 @@
+local M = {}
+local actions = require('telescope.actions');
 local utils = require("../utils");
+
+M.mappings = {
+    i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-s>"] = actions.select_horizontal,
+        ["<C-v>"] = actions.select_vertical,
+        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-a>"] = actions.send_to_qflist + actions.open_qflist,
+    },
+    n = {
+        ["<C-j>"] = actions.results_scrolling_down,
+        ["<C-k>"] = actions.results_scrolling_up,
+    }
+}
 
 vim.keymap.set('n', '<leader>f',
     function() require 'key-menu'.open_window('<leader>f') end,
@@ -108,3 +125,5 @@ vim.keymap.set('n', '<leader>hf', function() require('telescope.builtin').comman
     { desc = 'Find Help functions (vim help)' })
 --
 vim.keymap.set('n', '<leader>hm', function() require('telescope.builtin').keymaps() end, { desc = 'Find Keybind' })
+
+return M
