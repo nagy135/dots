@@ -2,6 +2,11 @@
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require'lspconfig'.tsserver.setup{
-    capabilities = capabilities
+local navbuddy = require("nvim-navbuddy")
+
+require("lspconfig").tsserver.setup {
+    capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		navbuddy.attach(client, bufnr)
+	end
 }
