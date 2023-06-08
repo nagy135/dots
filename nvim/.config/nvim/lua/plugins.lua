@@ -24,17 +24,89 @@ require("lazy").setup({
     'sainnhe/gruvbox-material',
     'rebelot/kanagawa.nvim',
     'joshdick/onedark.vim',
+    'arturgoms/moonbow.nvim',
   -- }}}
 
     -- personal {{{
     { 'nagy135/typebreak.nvim',
         config = function()
-            vim.keymap.set('n', '<leader>tb', require('typebreak').start, { desc = 'Typebreak'})
+            vim.keymap.set('n', '<leader>tb', require('typebreak').start, { desc = 'Typebreak' })
         end
     },
     'nagy135/capture-nvim',
     -- }}}
 
+    -- portal {{{
+    {
+        "cbochs/portal.nvim",
+        -- Optional dependencies
+        dependencies = {
+            "cbochs/grapple.nvim",
+            "ThePrimeagen/harpoon",
+        },
+        config = function()
+            vim.keymap.set("n", "<leader>o", "<cmd>Portal jumplist backward<cr>")
+            vim.keymap.set("n", "<leader>i", "<cmd>Portal jumplist forward<cr>")
+        end
+    },
+    -- }}}
+
+    -- treesj {{{
+    {
+      'Wansmer/treesj',
+      cmd = { 'TSJToggle', 'TSJJoin', 'TSJSplit' },
+      lazy = false,
+      config = function()
+          local tsj = require('treesj')
+          tsj.setup()
+          vim.keymap.set("n", "<leader>tj", tsj.toggle, { desc = "Toggle Treesitter Join" })
+      end
+    },
+    -- }}}
+
+    -- ultimate-autopair {{{
+    -- {
+    --     'altermo/ultimate-autopair.nvim',
+    --     event={'InsertEnter','CmdlineEnter'},
+    --     config=function ()
+    --         require('ultimate-autopair').setup({
+    --             --Config goes here
+    --         })
+    --     end,
+    -- },
+    -- }}}
+
+    -- local-highlight {{{
+    -- {
+    --     'tzachar/local-highlight.nvim',
+    --     config = function()
+    --         require('local-highlight').setup({
+    --             file_types = {'python', 'cpp'},
+    --             hlgroup = 'Search',
+    --             cw_hlgroup = nil,
+    --         })
+    --     end
+    -- },
+    -- }}}
+
+    -- autoclose {{{
+    { 
+        "m4xshen/autoclose.nvim",
+        config = function()
+            --require("autoclose").setup({})
+        end
+    },
+    -- }}}
+
+    -- twilight {{{
+    { 
+        "folke/twilight.nvim",
+        config = function()
+            require("twilight").setup{}
+            vim.keymap.set('n', '<leader>tw', ':Twilight<CR>', { desc = 'Twilight toggle'})
+        end
+    },
+    -- }}}
 
     -- boole {{{
     { 'nat-418/boole.nvim',
@@ -79,8 +151,8 @@ require("lazy").setup({
 
     -- LspSaga {{{
     {
-        "glepnir/lspsaga.nvim",
-        branch = "main",
+        'glepnir/lspsaga.nvim',
+        event = 'BufRead',
     },
     -- incline {{{
     'b0o/incline.nvim',
@@ -274,7 +346,12 @@ require("lazy").setup({
     -- }}}
 
     -- wiki.vim {{{
-    'lervag/wiki.vim',
+    {
+        'lervag/wiki.vim',
+        config = function()
+            vim.cmd [[set rtp+=/opt/homebrew/opt/fzf]]
+        end
+    },
     -- }}}
 
     -- vim-laravel {{{
@@ -351,5 +428,46 @@ require("lazy").setup({
 
     -- nim.vim {{{
     'zah/nim.vim',
+    -- }}}
+
+    -- nvim-navbuddy {{{
+    {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        },
+        keys = {
+          { "<leader>gn", "<cmd>Navbuddy<cr>", desc = "Navbuddy" },
+        },
+    },
+    {
+        "Bryley/neoai.nvim",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+        },
+        cmd = {
+            "NeoAI",
+            "NeoAIOpen",
+            "NeoAIClose",
+            "NeoAIToggle",
+            "NeoAIContext",
+            "NeoAIContextOpen",
+            "NeoAIContextClose",
+            "NeoAIInject",
+            "NeoAIInjectCode",
+            "NeoAIInjectContext",
+            "NeoAIInjectContextCode",
+        },
+        keys = {
+            { "<leader><leader>n",  '<cmd>NeoAI<CR>', desc = "NeoAI" },
+        },
+        config = function()
+            require("neoai").setup({
+                -- Options go here
+            })
+        end,
+    }
     -- }}}
 })
