@@ -103,3 +103,4 @@ alias rr="export XKB_DEFAULT_OPTIONS=caps:escape; export MOZ_ENABLE_WAYLAND=1; r
 alias getpass="openssl rand -base64 20"
 alias uuid_to_clip="uuidgen | tr -d '\n' | wl-copy"
 alias sfiglet="figlet -f ansiishadow -t"
+alias l="lfcd"
