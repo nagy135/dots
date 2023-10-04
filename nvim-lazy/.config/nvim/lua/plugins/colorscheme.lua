@@ -7,6 +7,8 @@ return {
       colorscheme = "gruvbox-material",
     },
   },
+
+  'luisiacc/gruvbox-baby',
   "ellisonleao/gruvbox.nvim",
   "sainnhe/gruvbox-material",
   "folke/tokyonight.nvim",
