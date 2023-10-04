@@ -1,4 +1,3 @@
-
 # Lines configured by zsh-newuser-install
 setopt histignoredups
 
@@ -37,9 +36,8 @@ source $HOME/.zsh_completions
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export HISTFILE=$HOME/.zsh_history
 
-[[ ! -f ~/Clones/z.lua/z.lua ]] \
-    || eval "$(lua ~/Clones/z.lua/z.lua --init zsh)"
-
+[[ ! -f $(brew --prefix z.lua)/share/z.lua/z.lua ]] \
+  || eval "$(lua $(brew --prefix z.lua)/share/z.lua/z.lua --init zsh)"
 # lsx
 [[ ! -f ~/.config/lsx/lsx.sh ]] || source ~/.config/lsx/lsx.sh
 
@@ -88,3 +86,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.dots/zsh/.p10k.zsh.
 [[ ! -f ~/.dots/zsh/.p10k.zsh ]] || source ~/.dots/zsh/.p10k.zsh
+
+# opam configuration
+[[ ! -r /Users/viktornagy/.opam/opam-init/init.zsh ]] || source /Users/viktornagy/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
