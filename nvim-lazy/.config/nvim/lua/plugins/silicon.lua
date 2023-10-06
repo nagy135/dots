@@ -1,10 +1,18 @@
 return {
   "segeljakt/vim-silicon",
+  cmd = { "Silicon" },
   keys = {
     {
       "<leader>cs",
       "<cmd>Silicon<cr>",
-      desc = "Screenshot code"
+      desc = "Screenshot code",
+      mode = { "n" }
+    },
+    {
+      "<leader>cs",
+      "<cmd>'<,'>Silicon<cr>",
+      desc = "Screenshot highlight",
+      mode = { "v", "s", "x" }
     }
   },
   config = function()
