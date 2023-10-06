@@ -8,10 +8,12 @@ return {
     },
   },
 
-  'luisiacc/gruvbox-baby',
+  "mhartington/oceanic-next",
+  "luisiacc/gruvbox-baby",
   "ellisonleao/gruvbox.nvim",
   "sainnhe/gruvbox-material",
   "folke/tokyonight.nvim",
+  "sainnhe/everforest",
   "olimorris/onedarkpro.nvim",
   "sainnhe/gruvbox-material",
   "rebelot/kanagawa.nvim",
