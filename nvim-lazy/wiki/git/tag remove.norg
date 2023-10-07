@@ -1,0 +1,9 @@
+* local
+  @code bash
+  git tag -d 1.0.0
+  @end
+
+* remote
+  @code bash
+  git push --delete origin 1.0.0
+  @end

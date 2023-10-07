@@ -1,0 +1,6 @@
+{:$/vim/nvim-tree:}[nvim-tree]
+{:$/vim/lsp servers:}[lsp servers]
+{:$/vim/diff:}[diff]
+{:$/vim/vimgrep:}[vimgrep]
+{:$/vim/formatting:}[formatting]
+{:$/vim/nvim add to runtime:}[nvim add to runtime]

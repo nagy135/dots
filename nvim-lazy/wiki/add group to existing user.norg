@@ -1,0 +1,3 @@
+@code bash
+sudo usermod -a -G existing_group existing_user
+@end

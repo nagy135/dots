@@ -1,0 +1,14 @@
+* list databases
+  @code sql
+  \l
+  @end
+
+* connect to database
+  @code sql
+  \c database
+  @end
+
+* list tables
+  @code sql
+  \dt
+  @end

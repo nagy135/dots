@@ -1,0 +1,9 @@
+* export
+  @code bash
+  mysqldump -u username -p database_name > data-dump.sql
+  @end
+
+* import
+  @code bash
+  mysql -u username -p new_database < data-dump.sql
+  @end

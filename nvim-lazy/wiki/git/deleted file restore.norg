@@ -1,0 +1,9 @@
+* DIDNT COMMIT
+@bash
+git checkout HEAD <filename>
+@end
+
+* ALREADY COMMITED (checkout commit before)
+@bash
+git reset --hard HEAD~1
+@end

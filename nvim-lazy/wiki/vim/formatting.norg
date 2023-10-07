@@ -1,0 +1,8 @@
+* put in $XDG_CONFIG_HOME/nvim/ftplugin/python.vim
+   black is python's formatting tool
+   @code vim
+   if executable('black')
+       setlocal formatprg='black -q -'
+       setlocal formatexpr=
+   endif
+   @end

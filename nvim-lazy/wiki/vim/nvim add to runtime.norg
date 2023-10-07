@@ -1,0 +1,5 @@
+* Add current directory to runtime path
+This is usefull during development of plugin, to load plugin manually
+@code bash
+nvim --cmd "set rtp+=."
+@end

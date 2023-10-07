@@ -1,0 +1,9 @@
+* export
+  @code bash
+  pg_dump -U username -W my_db > db.sql
+  @end
+
+* import
+  @code bash
+  psql -U username -W my_db < db.sql
+  @end

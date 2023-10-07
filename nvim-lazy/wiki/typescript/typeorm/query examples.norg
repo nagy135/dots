@@ -1,0 +1,17 @@
+* Query IN, distinctOn, OrderBy multiple
+  @code typescript
+  await getRepository(Feed)
+        .createQueryBuilder('feed')
+        .where({ uploaderId: In([1,2,3,4]) })
+        .distinctOn(['feed.uploaderId'])
+        .orderBy({ 'feed.uploaderId': 'ASC', 'feed.createdAt': 'DESC' })
+        .getMany()
+  @end
+
+* Basic distinct select one raw column
+  @code typescript
+  await this.createQueryBuilder('entity name')
+    .select('column')
+    .distinct(true)
+    .getRawMany();
+  @end

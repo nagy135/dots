@@ -1,0 +1,20 @@
+* GENERAL
+- {:git:}[git]
+- {:vim:}[vim]
+- {:linux:}[linux]
+- {:macos:}[macos]
+- {:shell:}[shell]
+- {:awk:}[awk]
+- {:weechat:}[weechat]
+- {:pacman:}[pacman]
+- {:docker:}[docker]
+- {:ffmpeg:}[ffmpeg]
+- {:imagemagick:}[imagemagick]
+
+* DATABASES
+  - {:mysql:}[mysql]
+  - {:postgres:}[postgres]
+
+* LANGUAGES
+  - {:php:}[php]
+  - {:typescript:}[typescript]

@@ -1,0 +1,10 @@
+* create user with home folder
+  @code bash
+  sudo useradd -m <username>
+  @end
+
+* change password
+  @code bash
+  sudo passwd <username>
+  @end
+

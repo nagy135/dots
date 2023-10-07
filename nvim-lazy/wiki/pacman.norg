@@ -1,0 +1,29 @@
+* Sync (with force repository sync)
+  @code bash
+  sudo pacman -Syyuu
+  @end
+
+* Install
+  @code bash
+  sudo pacman -S packge
+  @end
+
+* Uninstall (with dependencies)
+  @code bash
+  sudo pacman -Rs packge
+  @end
+
+* Remove cache (only uninstalled ones)
+  @code bash
+  sudo pacman -Sc
+  @end
+
+* Remove cache (all cache)
+  @code bash
+  sudo pacman -Sc
+  @end
+
+* List available updates (run after Sync)
+  @code bash
+  pacman -Qu
+  @end

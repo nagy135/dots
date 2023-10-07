@@ -1,0 +1,54 @@
+* print these columns with custom separator
+  @code bash
+  awk -F ":" '{print $1 "=>" $2 "(" $3 ")"}' file
+  @end
+
+* one place to set output/input separators (FS input, OFS output)
+  @code bash
+  awk 'BEGIN{FS=":"; OFS="-" {print $1 $2 $3}' file
+  @end
+
+* print last column
+  @code bash
+  awk -F "," '{print $NF}' file
+  @end
+
+* pattern matching (only operate on lines starting with #)
+  @code bash
+  awk -F "," '/^*/ {print $NF}' file
+  @end
+
+* pattern matching on column (if first column starts with b or c, print entire line)
+  @code bash
+  awk '$1 ~ /^[b,c]/ {print $0}' file
+  @end
+
+* math on columns (first + last column, it removes non-numeric on parse)
+  @code bash
+  awk '{print $1 + $NF}' file
+  @end
+
+* print only lines longer than 7 chars ($0 is entire line)
+  @code bash
+  awk '{length($0) > 7}' file
+  @end
+
+* conditions (if last column equals that string, prints entire line
+  @code bash
+  awk '{ if($NF == "random value") print $0}' file
+  @end
+
+* awk substring - substr(string, offset, ?length)
+  @code bash
+  awk '{print substr($0, 4)}' file
+  @end
+
+* print lines 7 to 11 (with numbered lines)
+  @code bash
+  awk 'NR==7, NR==11 {print NR, $0}' file
+  @end
+
+* count number of lines in multiple files
+  @code bash
+  awk 'END {print NR}' /etc/shells /etc/passwd
+  @end

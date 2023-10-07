@@ -1,0 +1,15 @@
+* zsh
+  @code bash
+  bindkey -v
+  @end
+
+* bash
+  @code bash
+  set -o vi
+  @end
+
+* all readline respecting shell tools
+  @code bash
+  # put into `~/.inputrc`:
+  set editing-mode vi
+  @end

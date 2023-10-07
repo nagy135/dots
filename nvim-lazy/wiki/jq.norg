@@ -1,0 +1,6 @@
+* Map input with arrays to filter out one key
+
+** Example, in clipboard is json that has many items with propery nftBuyId
+  @code bash
+  xclip -sel clip -o | jq '.data.items[].nftBuyId'
+  @end

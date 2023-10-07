@@ -1,0 +1,3 @@
+{:$/postgres/import_export:}[import_export]
+{:$/postgres/psql:}[psql]
+{:$/postgres/alter pg database:}[alter pg database]

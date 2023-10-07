@@ -1,0 +1,25 @@
+* go root
+  @code bash
+  sudo su
+  @end
+
+* get logged users
+  @code bash
+  who
+  @end
+
+* find their shell
+  @code bash
+  ps aux | grep "pts/3"
+  id=666 # id of their shell process
+  @end
+
+* write them
+  @code bash
+  echo "hahahahahah" | write mandrisov pts/3
+  @end
+
+* kill their shell, that disconnects them
+  @code bash
+  kill $id
+  @end

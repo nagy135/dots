@@ -1,0 +1,15 @@
+* disable
+  @code bash
+  defaults write com.apple.dock no-bouncing -bool TRUE
+  @end
+
+* enable
+  @code bash
+  defaults write com.apple.dock no-bouncing -bool FALSE
+  @end
+
+
+* restart dock
+  @code bash
+  killall Dock
+  @end

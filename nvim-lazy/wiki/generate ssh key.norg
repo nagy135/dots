@@ -1,0 +1,3 @@
+@code bash
+ssh-keygen -t rsa
+@end

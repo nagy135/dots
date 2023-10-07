@@ -1,0 +1,4 @@
+* using md5sum
+  @code bash
+  echo $RANDOM | md5sum | head -c 27 ; echo ;
+  @end

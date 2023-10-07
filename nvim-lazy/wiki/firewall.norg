@@ -1,0 +1,27 @@
+* allow these
+  @code bash
+  sudo ufw allow ssh
+  sudo ufw allow http
+  sudo ufw allow https
+  @end
+
+* enable
+  @code bash
+  sudo ufw enable
+  @end
+
+* status
+  @code bash
+  sudo ufw status
+  sudo ufw status numbered
+  @end
+
+* delete (using numbered status)
+  @code bash
+  sudo ufw delete 4
+  @end
+
+* allow port for specific IP
+  @code bash
+  sudo ufw allow from 162.55.45.230 to any port 9091
+  @end

@@ -1,0 +1,22 @@
+* resize to, keep ratio (one dimension will shrink if needed)
+  @code bash
+  convert old.png -resize 1920x1080 new.png
+  @end
+
+* resize to, keep ratio but fill everything (overflowing)
+  @code bash
+  convert old.png -resize 1920x1080^ new.png
+  @end
+
+* resize to, ignore ratio (stretch as needed)
+  @code bash
+  convert old.png -resize 1920x1080! new.png
+  @end
+
+* crop part of the image (from center)
+  @code bash
+  convert old.png -resize 100x100^ -gravity center -extent 100x100 new.png
+  @end
+
+* Notes
+- you can change extensions as needed (automatic filetype conversion)

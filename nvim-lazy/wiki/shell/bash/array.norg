@@ -1,0 +1,79 @@
+* create
+  @code bash
+  my_array=(1 2 "string" 4)
+  @end
+
+* looping over elements
+  @code bash
+  for element in ${my_array[@]}; do
+      echo $element
+  done
+  @end
+
+* looping over indices
+  @code bash
+  for index in ${!my_array[@]}; do
+      echo $index ${my_array[$index]}
+  done
+  @end
+
+* append values
+  @code bash
+  my_array+=( "new value1" "new_value2" )
+  @end
+
+
+* Create an empty array
+  @code bash
+  arr=()
+  @end
+
+* Initialize array
+  @code bash
+  arr=(1 2 3)
+  @end
+
+* Retrieve third element
+  @code bash
+  ${arr[2]}
+  @end
+
+* Retrieve all elements
+  @code bash
+  ${arr[@]}
+  @end
+
+* Retrieve array indices
+  @code bash
+  ${!arr[@]}
+  @end
+
+* Calculate array size
+  @code bash
+  ${*arr[@]}
+  @end
+
+* Overwrite 1st element
+  @code bash
+  arr[0]=3
+  @end
+
+* Append value(s)
+  @code bash
+  arr+=(4)
+  @end
+
+* Save ls output as a string
+  @code bash
+  str=$(ls)
+  @end
+
+* Save ls output as an array of files
+  @code bash
+  arr=( $(ls) )
+  @end
+
+* Retrieve n elements starting at index s
+  @code bash
+  ${arr[@]:s:n}
+  @end

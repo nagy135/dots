@@ -1,0 +1,2 @@
+* Hooks for entities
+https://github.com/typeorm/typeorm/blob/master/docs/listeners-and-subscribers.md#afterload
