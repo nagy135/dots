@@ -26,11 +26,16 @@ return {
         ["core.queries.native"] = {},
         ["core.ui"] = {},
 
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.dirman"] = {      -- Manages Neorg workspaces
+        ["core.concealer"] = {
+          config = {
+            icon_preset = "diamond"
+          }
+        },                  -- Adds pretty icons to your documents
+        ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = "~/notes",
+              wiki = "~/wiki",
             },
             default_workspace = "notes",
           },
