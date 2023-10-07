@@ -1,0 +1,40 @@
+* Welcome
+
+
+
+
+
+██╗  ██╗███████╗██╗     ██╗      ██████╗ 
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗
+███████║█████╗  ██║     ██║     ██║   ██║
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║
+██║  ██║███████╗███████╗███████╗╚██████╔╝
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝ 
+* Code sample
+** Python code sample
+*** This is python code
+    @code python
+    print('haha')
+    @end
+*** Typescript code sample
+**** This is typescript code
+     @code typescript
+     class Haha {
+       private id: string;
+
+       async function() {
+         console.log('haha');
+       }
+     }
+     @end
+
+* Random slide
+** Subtitle
+   - ( ) Item
+   - (x) Second
+
+   1. item
+   2. Item 2
+   3. item
+   Text haha
+
