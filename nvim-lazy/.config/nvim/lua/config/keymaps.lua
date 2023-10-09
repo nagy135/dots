@@ -6,3 +6,9 @@ vim.keymap.set('n', 'c-j', '<CMD>cn<CR>', { desc = "Quickfix next" })
 vim.keymap.set('n', 'c-c', '<CMD>cc<CR>', { desc = "Quickfix close" })
 vim.keymap.set('n', ',j', '<CMD>move .+1<CR>==', { desc = "Move line down" })
 vim.keymap.set('n', ',k', '<CMD>move .-2<CR>==', { desc = "Move line up" })
+
+local wk = require("which-key")
+wk.register({
+  -- arbitrary pickers (mostly telescope)
+  ["<leader>p"] = { name = "+pick" },
+})

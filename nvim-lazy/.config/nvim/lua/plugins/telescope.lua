@@ -18,4 +18,11 @@ return {
       },
     },
   },
+  keys = {
+    {
+      "<leader>pc",
+      require("telescope.builtin").colorscheme,
+      desc = "Color",
+    }
+  }
 }
