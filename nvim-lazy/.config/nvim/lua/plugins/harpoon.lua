@@ -5,10 +5,16 @@ wk.register({
 
 
 local define_mappings = function(keys_until)
+  local harpoonToggle = function() require("harpoon.ui").toggle_quick_menu() end
   local mappings = {
     {
       "<leader>ht",
-      function() require("harpoon.ui").toggle_quick_menu() end,
+      harpoonToggle,
+      desc = "toggle"
+    },
+    {
+      "<leader>hh",
+      harpoonToggle,
       desc = "toggle"
     },
     {
@@ -23,7 +29,7 @@ local define_mappings = function(keys_until)
       function()
         require("harpoon.ui").nav_file(i)
       end,
-      desc = "jump to " .. i
+      desc = "-> " .. i
     })
   end
   return mappings
