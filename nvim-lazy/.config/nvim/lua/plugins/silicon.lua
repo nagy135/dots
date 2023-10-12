@@ -16,20 +16,21 @@ return {
     }
   },
   config = function()
-    vim.cmd [[ let g:silicon = {
-      \   'theme':              'Visual Studio Dark+',
-      \   'font':               'Mononoki Nerd Font',
-      \   'background':         '#AAAAFF',
-      \   'shadow-color':       '#222222',
-      \   'line-pad':                   2,
-      \   'pad-horiz':                 80,
-      \   'pad-vert':                 100,
-      \   'shadow-blur-radius':        30,
-      \   'shadow-offset-x':            0,
-      \   'shadow-offset-y':            0,
-      \   'line-number':           v:true,
-      \   'round-corner':          v:true,
-      \   'window-controls':       v:true,
-      \ } ]]
+    vim.g.silicon = {
+      ['theme'] = 'Visual Studio Dark+',
+      ['font'] = 'Mononoki Nerd Font',
+      ['background'] = '#AAAAFF',
+      ['shadow-color'] = '#222222',
+      ['line-pad'] = 2,
+      ['pad-horiz'] = 80,
+      ['pad-vert'] = 100,
+      ['shadow-blur-radius'] = 30,
+      ['shadow-offset-x'] = 0,
+      ['shadow-offset-y'] = 0,
+      ['line-number'] = true,
+      ['round-corner'] = true,
+      ['window-controls'] = true,
+      ['output'] = '~/Pictures/silicon',
+    }
   end
 }
