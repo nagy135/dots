@@ -2,6 +2,13 @@ local telescope_actions = require("telescope.actions")
 return {
   "nvim-telescope/telescope.nvim",
   -- change some options
+  dependencies = {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
+  },
   opts = {
     defaults = {
       mappings = {
@@ -23,6 +30,6 @@ return {
       "<leader>pc",
       require("telescope.builtin").colorscheme,
       desc = "Color",
-    }
-  }
+    },
+  },
 }
