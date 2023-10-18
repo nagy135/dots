@@ -14,6 +14,7 @@ return {
         ["<space>"] = "none",
         ["s"] = "split_with_window_picker",
         ["v"] = "vsplit_with_window_picker",
+        ["/"] = "none",
       },
     },
   },
