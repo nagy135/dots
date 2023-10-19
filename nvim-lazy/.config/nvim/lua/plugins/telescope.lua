@@ -27,9 +27,11 @@ return {
   },
   keys = {
     {
-      "<leader>pc",
-      require("telescope.builtin").colorscheme,
-      desc = "Color",
+      "<leader>fn",
+      function()
+        require("telescope.builtin").find_files({ cwd = "%:h" })
+      end,
+      desc = "Find Neightbors",
     },
   },
 }
