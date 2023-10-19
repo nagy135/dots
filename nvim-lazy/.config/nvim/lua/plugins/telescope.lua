@@ -19,6 +19,7 @@ return {
           ["<C-v>"] = telescope_actions.select_vertical,
           ["<C-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
           ["<C-a>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
+          ["<c-x>"] = "delete_buffer",
           -- ["<c-a>"] = require("trouble.providers.telescope").open_with_trouble,
           -- ["<c-q>"] = require("trouble.providers.telescope").open_selected_with_trouble,
         },
