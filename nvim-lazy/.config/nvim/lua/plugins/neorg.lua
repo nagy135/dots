@@ -12,7 +12,7 @@ return {
   dependencies = { "nvim-lua/plenary.nvim" },
   lazy = false,
   config = function()
-    require("neorg").setup {
+    require("neorg").setup({
       load = {
         ["core.defaults"] = {}, -- Loads default behaviour
 
@@ -21,28 +21,28 @@ return {
         ["core.mode"] = {},
         ["core.presenter"] = {
           config = {
-            zen_mode = "zen-mode"
-          }
+            zen_mode = "zen-mode",
+          },
         },
         ["core.queries.native"] = {},
         ["core.ui"] = {},
 
         ["core.concealer"] = {
           config = {
-            icon_preset = "diamond"
-          }
-        },                  -- Adds pretty icons to your documents
+            icon_preset = "diamond",
+          },
+        }, -- Adds pretty icons to your documents
         ["core.dirman"] = { -- Manages Neorg workspaces
           config = {
             workspaces = {
               notes = "~/notes",
               wiki = "~/wiki",
             },
-            default_workspace = "notes",
+            default_workspace = "wiki",
           },
         },
       },
-    }
+    })
   end,
   keys = {
     -- add a keymap to browse plugin files
