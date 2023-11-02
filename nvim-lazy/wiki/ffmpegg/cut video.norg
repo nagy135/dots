@@ -1,0 +1,22 @@
+* Basic
+  @code bash
+  ffmpeg -ss 30 -i input.wmv -c copy -t 10 output.wmv
+  @end
+
+* With exact timestamps
+  @code bash
+  ffmpeg -ss 00:00:30.0 -i input.wmv -c copy -t 00:00:10.0 output.wmv
+  @end
+
+* Absolute position
+  You can use -to instead of -t to specify the timestamp to which you want to cut. So, instead of 
+
+  @code bash
+  -i <input> -ss 30 -t 10 
+  @end
+
+  you could also do 
+
+  @code bash
+  -i <input> -ss 30 -to 40
+  @end
