@@ -66,6 +66,7 @@ alt - 9 : yabai -m space --focus 9
 alt - 0 : yabai -m space --focus 10
 alt - m : yabai -m space --focus 10
 alt - v : yabai -m space --focus 11
+shift + alt - v : yabai -m space --focus 12
 
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
