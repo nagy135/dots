@@ -4,14 +4,26 @@ return {
     window = {
       width = 0.6,
     },
+    plugins = {
+      twilight = {
+        enabled = false,
+      },
+    },
   },
   keys = {
     {
-      "<leader><leader>z",
+      "<leader>zz",
       function()
         require("zen-mode").toggle()
       end,
-      desc = "Zen Mode",
+      desc = "Zen Mode (toggle)",
+    },
+    {
+      "<leader>zm",
+      function()
+        require("zen-mode").toggle()
+      end,
+      desc = "Zen Mode (toggle)",
     },
   },
 }
