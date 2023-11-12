@@ -8,3 +8,17 @@
   sudo passwd <username>
   @end
 
+* add to sudoers
+  @code bash
+  usermod -aG sudo <username>
+  @end
+
+* create ssh connection
+  @code bash
+  cd /home/<username>
+  mkdir .ssh
+  chmod 700 .ssh
+  touch .ssh/authorized_keys
+  chmod 644 .ssh/authorized_keys
+  # add public key there
+  @end

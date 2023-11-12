@@ -1,3 +1,5 @@
 {:$/shell/bash:}[bash]
 {:$/shell/zsh:}[zsh]
 {:$/shell/prompt:}[prompt]
+{:$/shell/kill process on port:}[kill process on port]
+
