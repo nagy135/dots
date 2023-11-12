@@ -1,3 +1,4 @@
+* Create swap
 @code bash
 sudo su
 fallocate -l 2G /swapfile
@@ -8,3 +9,7 @@ swapon --show #to verify
 
 echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
 @end
+
+* Increase swap size
+  Delete it using `swapoff` and create a new one
+
