@@ -5,6 +5,7 @@
 - {:macos:}[macos]
 - {:shell:}[shell]
 - {:awk:}[awk]
+- {:sed:}[sed]
 - {:weechat:}[weechat]
 - {:pacman:}[pacman]
 - {:docker:}[docker]

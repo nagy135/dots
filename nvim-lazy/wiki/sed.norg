@@ -1,0 +1,4 @@
+* Print lines after matched one
+@code bash
+sed -n '/matching words/, +4p' file
+@end
