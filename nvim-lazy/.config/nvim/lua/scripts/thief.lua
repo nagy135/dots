@@ -143,7 +143,7 @@ wk.register({
   ["<leader><leader>td"] = { M.steal_directory, "Thieft Directory" },
 })
 
-vim.api.nvim_create_user_command("StealRoot", function(opts)
+vim.api.nvim_create_user_command("ThiefStealRoot", function(opts)
   M.set_root(opts.args)
 end, { nargs = 1 })
 
