@@ -7,6 +7,7 @@ return {
     build = "make",
     config = function()
       require("telescope").load_extension("fzf")
+      require("telescope").load_extension("file_browser")
     end,
   },
   opts = {
@@ -17,11 +18,17 @@ return {
           ["<C-k>"] = telescope_actions.move_selection_previous,
           ["<C-s>"] = telescope_actions.select_horizontal,
           ["<C-v>"] = telescope_actions.select_vertical,
+          ["<C-t>"] = telescope_actions.select_tab,
           ["<C-q>"] = require("telescope.actions").send_selected_to_qflist + require("telescope.actions").open_qflist,
           ["<C-a>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
           ["<c-x>"] = "delete_buffer",
           -- ["<c-a>"] = require("trouble.providers.telescope").open_with_trouble,
           -- ["<c-q>"] = require("trouble.providers.telescope").open_selected_with_trouble,
+        },
+        n = {
+          ["<C-s>"] = telescope_actions.select_horizontal,
+          ["<C-t>"] = telescope_actions.select_tab,
+          ["<c-x>"] = "delete_buffer",
         },
       },
     },
@@ -30,7 +37,7 @@ return {
     {
       "<leader>fn",
       function()
-        require("telescope.builtin").find_files({ cwd = "%:h" })
+        require("telescope").extensions.file_browser.file_browser({ cwd = "%:h" })
       end,
       desc = "Find Neightbors",
     },
