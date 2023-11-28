@@ -9,6 +9,7 @@ local action_state = require("telescope.actions.state")
 
 M.thief_root = nil
 M.project_root = "~/365" -- default place to look for project roots to copy from
+M.target_dir = nil
 
 local tmpfile = "/tmp/lua_nvim_thief_file.txt"
 
@@ -46,15 +47,37 @@ local function get_directories(root)
 end
 
 local function copy_file_to_new_root(relative_path)
-  print("copying: " .. M.thief_root .. "/" .. relative_path .. " => " .. vim.fn.getcwd() .. "/" .. relative_path)
-  os.execute("mkdir -p $(dirname " .. vim.fn.getcwd() .. "/" .. relative_path .. ")")
-  os.execute("cp " .. M.thief_root .. "/" .. relative_path .. " " .. vim.fn.getcwd() .. "/" .. relative_path)
+  print(
+    "copying: "
+      .. M.thief_root
+      .. "/"
+      .. relative_path
+      .. " => "
+      .. (M.target_dir or vim.fn.getcwd())
+      .. "/"
+      .. relative_path
+  )
+  os.execute("mkdir -p $(dirname " .. (M.target_dir or vim.fn.getcwd()) .. "/" .. relative_path .. ")")
+  os.execute(
+    "cp " .. M.thief_root .. "/" .. relative_path .. " " .. (M.target_dir or vim.fn.getcwd()) .. "/" .. relative_path
+  )
 end
 
 local function copy_directory_to_new_root(relative_path)
-  print("copying dir: " .. M.thief_root .. "/" .. relative_path .. " => " .. vim.fn.getcwd() .. "/" .. relative_path)
-  os.execute("mkdir -p $(dirname " .. vim.fn.getcwd() .. "/" .. relative_path .. ")")
-  os.execute("cp -r " .. M.thief_root .. "/" .. relative_path .. " " .. vim.fn.getcwd() .. "/" .. relative_path)
+  print(
+    "copying dir: "
+      .. M.thief_root
+      .. "/"
+      .. relative_path
+      .. " => "
+      .. (M.target_dir or vim.fn.getcwd())
+      .. "/"
+      .. relative_path
+  )
+  os.execute("mkdir -p $(dirname " .. (M.target_dir or vim.fn.getcwd()) .. "/" .. relative_path .. ")")
+  os.execute(
+    "cp -r " .. M.thief_root .. "/" .. relative_path .. " " .. (M.target_dir or vim.fn.getcwd()) .. "/" .. relative_path
+  )
 end
 
 M.steal_file = function()
@@ -145,6 +168,17 @@ wk.register({
 
 vim.api.nvim_create_user_command("ThiefStealRoot", function(opts)
   M.set_root(opts.args)
+end, { nargs = 1 })
+vim.api.nvim_create_user_command("ThiefFromTo", function(opts)
+  local from, to = opts.args:match("(.-)%" .. " " .. "(.+)")
+  if from == nil or to == nil then
+    print("Usage: ThiefFromTo <from> <to>")
+    return
+  end
+  M.thief_root = from
+  M.target_dir = to
+  print("SET!")
+  print(from .. " => " .. to)
 end, { nargs = 1 })
 
 return M
