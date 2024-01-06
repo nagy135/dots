@@ -4,3 +4,6 @@ git:
     pager: delta --dark --paging=never
 gui:
   border: "rounded"
+  theme:
+    selectedLineBgColor:
+      - black
