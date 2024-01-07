@@ -179,6 +179,6 @@ vim.api.nvim_create_user_command("ThiefFromTo", function(opts)
   M.target_dir = to
   print("SET!")
   print(from .. " => " .. to)
-end, { nargs = 1 })
+end, { nargs = 1, complete = "file" })
 
 return M
