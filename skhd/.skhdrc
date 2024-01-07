@@ -10,6 +10,8 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+shift + alt - m : yabai -m window --swap mouse
+
 # move managed window
 shift + alt + ctrl - h : yabai -m window --warp west
 shift + alt + ctrl - j : yabai -m window --warp south
@@ -51,7 +53,6 @@ shift + alt - 7 : yabai -m window --space 7
 shift + alt - 8 : yabai -m window --space 8
 shift + alt - 9 : yabai -m window --space 9
 shift + alt - 0 : yabai -m window --space 10
-shift + alt - m : yabai -m window --space 10
 
 # move window and focus desktop
 alt - 1 : yabai -m space --focus 1
