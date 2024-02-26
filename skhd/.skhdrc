@@ -69,6 +69,9 @@ alt - m : yabai -m space --focus 10
 alt - v : yabai -m space --focus 11
 shift + alt - v : yabai -m space --focus 12
 
+alt - y : /Users/viktornagy/Clones/subtube/subtube play
+shift + alt - y : /Users/viktornagy/Clones/subtube/subtube update
+
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 shift + alt - n : yabai -m space --create && \
