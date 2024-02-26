@@ -35,13 +35,19 @@ M.grep_in_monorepo = function()
   })
 end
 
-local wk = require("which-key")
-wk.register({
+local REPLACE_DEFAULTS = false
+
+local binds = {
   ["<leader>m"] = { name = "+monorepo" },
   ["<leader>mf"] = { M.find_in_monorepo, "Find in monorepo" },
-  ["<leader>ff"] = { M.find_in_monorepo, "Find in monorepo" },
   ["<leader>m/"] = { M.grep_in_monorepo, "Grep in monorepo" },
-  ["<leader>/"] = { M.grep_in_monorepo, "Grep in monorepo" },
-})
+}
+if REPLACE_DEFAULTS == true then
+  binds["<leader>/"] = { M.grep_in_monorepo, "Grep in monorepo" }
+  binds["<leader>ff"] = { M.find_in_monorepo, "Find in monorepo" }
+end
+
+local wk = require("which-key")
+wk.register(binds)
 
 return M
