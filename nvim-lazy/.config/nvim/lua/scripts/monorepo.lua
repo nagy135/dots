@@ -39,7 +39,9 @@ local wk = require("which-key")
 wk.register({
   ["<leader>m"] = { name = "+monorepo" },
   ["<leader>mf"] = { M.find_in_monorepo, "Find in monorepo" },
+  ["<leader>ff"] = { M.find_in_monorepo, "Find in monorepo" },
   ["<leader>m/"] = { M.grep_in_monorepo, "Grep in monorepo" },
+  ["<leader>/"] = { M.grep_in_monorepo, "Grep in monorepo" },
 })
 
 return M
