@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ./networking.nix # generated at runtime by nixos-infect
@@ -36,7 +36,7 @@
   #
   #  virtualisation.podman.defaultNetwork.settings.dns_enabled = true;
 
-  config.services.postgresql = {
+  services.postgresql = {
     enable = true;
     ensureDatabases = [ "3dprints" ];
     authentication = pkgs.lib.mkOverride 10 ''
