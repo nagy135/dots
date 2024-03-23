@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
   imports = [
     ./hardware-configuration.nix
     ./networking.nix # generated at runtime by nixos-infect
@@ -36,6 +36,14 @@
   #
   #  virtualisation.podman.defaultNetwork.settings.dns_enabled = true;
 
+  config.services.postgresql = {
+    enable = true;
+    ensureDatabases = [ "3dprints" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
+  };
 
   swapDevices = [{
     device = "/var/lib/swapfile";
