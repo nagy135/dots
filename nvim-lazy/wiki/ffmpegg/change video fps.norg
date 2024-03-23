@@ -1,0 +1,8 @@
+@code bash
+ffmpeg -i input.mkv -filter:v "setpts=PTS/60" output.mkv
+@end
+
+* tempo
+** <0.5, 100>
+   tempo = 0.5 => half video speed
+   tempo = 2   => 2x speedup
