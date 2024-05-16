@@ -32,6 +32,19 @@ return {
         },
       },
     },
+    extensions = {
+      file_browser = {
+        mappings = {
+          i = {
+            ["<C-m>"] = function(prompt_bufnr)
+              local entry = require("telescope.actions.state").get_selected_entry()
+              local path = entry.path -- path of the currently selected entry
+              -- do whatever you want to do when you hit `<C-m>` (for example)
+            end,
+          },
+        },
+      },
+    },
   },
   keys = {
     {
