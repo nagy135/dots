@@ -50,4 +50,16 @@ return {
       },
     },
   },
+  keys = {
+    {
+      "<leader>e",
+      "<cmd>Neotree toggle<cr>",
+      desc = "Neotree toggle",
+    },
+    {
+      "<leader>fe",
+      "<cmd>Neotree focus<cr>",
+      desc = "Neotree focus",
+    },
+  },
 }
