@@ -81,6 +81,7 @@ shift + alt - n : yabai -m space --create && \
 
 # fast focus desktop
 alt - tab : yabai -m space --focus recent
+alt - q : yabai -m space --focus recent
 
 # send window to monitor and follow focus
 shift + alt - n : yabai -m window --display next; yabai -m display --focus next
