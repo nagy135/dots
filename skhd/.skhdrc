@@ -89,11 +89,7 @@ shift + alt - p : yabai -m window --display previous; yabai -m display --focus p
 shift + alt - p : yabai -m window --display previous; yabai -m display --focus previous
 
 # alacritty
-alt - return : open -a /Applications/Alacritty.app -n
-
-alt - r : open -a /Applications/Alacritty.app -n --args -e vifm
-
-alt + ctrl - o : ~/.config/alacritty/scripts/toggle_alacritty_opacity
+alt - return : alacritty
 
 # tmux controller
-shift + alt - e : tmux_controller
+shift + alt - e : /Users/viktornagy/.scripts/tmux_controller
