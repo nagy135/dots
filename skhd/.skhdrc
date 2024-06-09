@@ -89,7 +89,7 @@ shift + alt - p : yabai -m window --display previous; yabai -m display --focus p
 shift + alt - p : yabai -m window --display previous; yabai -m display --focus previous
 
 # alacritty
-alt - return : alacritty
+alt - return : open -n -a 'Alacritty.app'
 
 # tmux controller
 shift + alt - e : /Users/viktornagy/.scripts/tmux_controller
