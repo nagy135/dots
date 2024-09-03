@@ -18,7 +18,6 @@ return {
 
         ["core.integrations.treesitter"] = {},
         ["core.syntax"] = {},
-        ["core.mode"] = {},
         ["core.presenter"] = {
           config = {
             zen_mode = "zen-mode",

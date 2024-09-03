@@ -8,7 +8,7 @@ return {
     "s1n7ax/nvim-window-picker",
   },
   opts = {
-    enable_normal_mode_for_inputs = true,
+    -- enable_normal_mode_for_inputs = true,
     window = {
       mappings = {
         ["<space>"] = "none",
