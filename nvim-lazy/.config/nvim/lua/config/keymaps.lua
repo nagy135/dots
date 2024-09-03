@@ -11,6 +11,7 @@ vim.keymap.set("n", "<c-c>", "<CMD>cclose<CR>", { desc = "Quickfix close" })
 vim.keymap.set("n", ",j", "<CMD>move .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("n", ",k", "<CMD>move .-2<CR>==", { desc = "Move line up" })
 vim.keymap.set("n", "<leader><c-h>", "<CMD>nohl<CR>", { desc = "No highlight" })
+vim.keymap.set("n", ";", ":")
 
 local wk = require("which-key")
 wk.register({
