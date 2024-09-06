@@ -1,11 +1,11 @@
 return {
   "neovim/nvim-lspconfig",
   ---@type lspconfig.options
+  ---@diagnostic disable-next-line: missing-fields
   opts = {
     inlay_hints = { enabled = false },
     servers = {
       -- tsserver will be automatically installed with mason and loaded with lspconfig
-      tsserver = {},
     },
     -- you can do any additional lsp server setup here
     -- return true if you don't want this server to be setup with lspconfig
