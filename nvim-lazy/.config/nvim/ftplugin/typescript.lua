@@ -41,7 +41,7 @@ vim.keymap.set(
   "yiwOlogger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify (above)" }
 )
-vim.keymap.set("n", "<leader>r", "<CMD>!npm run start %<CR>", { desc = "npm run start" })
+-- vim.keymap.set("n", "<leader>r", "<CMD>!npm run start %<CR>", { desc = "npm run start" })
 
 -- " nnoremap <c-k> :! ./run-tests.sh<CR>
 -- nnoremap <leader><c-k> :botright split<CR>:term ./run-tests.sh<CR>
