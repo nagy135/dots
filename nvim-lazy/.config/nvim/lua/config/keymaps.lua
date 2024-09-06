@@ -1,8 +1,8 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
--- vim.keymap.set("n", "<c-k>", "<CMD>cp<CR>", { desc = "Quickfix previous" })
--- vim.keymap.set("n", "<c-j>", "<CMD>cn<CR>", { desc = "Quickfix next" })
+vim.keymap.set("n", "<leader>k", "<CMD>cp<CR>", { desc = "Quickfix previous" })
+vim.keymap.set("n", "<leader>j", "<CMD>cn<CR>", { desc = "Quickfix next" })
 vim.keymap.set("n", "<c-j>", "<c-w>j")
 vim.keymap.set("n", "<c-k>", "<c-w>k")
 vim.keymap.set("n", "<c-l>", "<c-w>l")
