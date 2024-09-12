@@ -1,6 +1,6 @@
 local wk = require("which-key")
-wk.register({
-  ["<leader>cl"] = { name = "+lsp" },
+wk.add({
+  { "<leader>cl", group = "lsp" },
 })
 
 return {

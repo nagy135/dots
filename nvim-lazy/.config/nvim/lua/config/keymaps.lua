@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader><c-h>", "<CMD>nohl<CR>", { desc = "No highlight" })
 vim.keymap.set("n", ";", ":")
 
 local wk = require("which-key")
-wk.register({
+wk.add({
   -- arbitrary pickers (mostly telescope)
-  ["<leader>p"] = { name = "+pick" },
+  { "<leader>p", group = "pick" },
 })

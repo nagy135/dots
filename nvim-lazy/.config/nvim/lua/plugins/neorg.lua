@@ -1,9 +1,9 @@
 local wk = require("which-key")
-wk.register({
-  ["<leader>n"] = { name = "+neorg" },
+wk.add({
+  { "<leader>n", group = "neorg" },
 })
-wk.register({
-  ["<leader>np"] = { name = "+presenter" },
+wk.add({
+  { "<leader>np", group = "presenter" },
 })
 
 return {

@@ -38,16 +38,16 @@ end
 local REPLACE_DEFAULTS = false
 
 local binds = {
-  ["<leader>m"] = { name = "+monorepo" },
-  ["<leader>mf"] = { M.find_in_monorepo, "Find in monorepo" },
-  ["<leader>m/"] = { M.grep_in_monorepo, "Grep in monorepo" },
+  { "<leader>m", group = "monorepo" },
+  { "<leader>mf", M.find_in_monorepo, desc = "Find in monorepo" },
+  { "<leader>m/", M.grep_in_monorepo, desc = "Grep in monorepo" },
 }
 if REPLACE_DEFAULTS == true then
-  binds["<leader>/"] = { M.grep_in_monorepo, "Grep in monorepo" }
-  binds["<leader>ff"] = { M.find_in_monorepo, "Find in monorepo" }
+  table.insert(binds, { "<leader>/", M.grep_in_monorepo, desc = "Grep in monorepo" })
+  table.insert(binds, { "<leader>ff", M.find_in_monorepo, desc = "Find in monorepo" })
 end
 
 local wk = require("which-key")
-wk.register(binds)
+wk.add(binds)
 
 return M
