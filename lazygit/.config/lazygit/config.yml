@@ -1,9 +1,27 @@
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    pager: delta --dark --paging=never --24-bit-color=never --syntax-theme=base16
+
 gui:
   border: "rounded"
+  showFileIcons: true
+  nerdFontsVersion: "3"
+  showBottomLine: false
+  showIcons: true
+  expandFocusedSidePanel: true
+  showFileTree: true
+
+  spinner:
+    # The frames of the spinner animation.
+    rate: 80
+    frames:
+      - "▌"
+      - "▀"
+      - "▐"
+      - "▄"
+
+  showListFooter: true
   theme:
     selectedLineBgColor:
       - black
