@@ -3,6 +3,8 @@
 -- Add any additional options here
 vim.opt.foldmethod = "marker"
 
+vim.opt.wrap = true
+
 vim.cmd([[ cnoreabbrev W w ]])
 vim.cmd([[ cnoreabbrev Q q ]])
 
