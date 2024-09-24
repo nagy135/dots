@@ -8,5 +8,18 @@ return {
       },
       opts = { skip = true },
     })
-  end
+
+    vim.list_extend(opts.routes, {
+      {
+        filter = {
+          event = "msg_show",
+          any = {
+            { find = "Starting Supermaven" },
+            { find = "Supermaven Free Tier" },
+          },
+        },
+        skip = true,
+      },
+    })
+  end,
 }
