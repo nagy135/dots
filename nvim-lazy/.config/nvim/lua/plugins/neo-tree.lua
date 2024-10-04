@@ -52,6 +52,11 @@ return {
   },
   keys = {
     {
+      "<leader>ft",
+      "<cmd>Neotree reveal<cr>",
+      desc = "Neotree find tree (reveal)",
+    },
+    {
       "<leader>e",
       "<cmd>Neotree toggle<cr>",
       desc = "Neotree toggle",
