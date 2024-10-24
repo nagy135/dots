@@ -10,6 +10,7 @@ vim.cmd([[ cnoreabbrev Q q ]])
 
 vim.cmd([[ cnoreabbrev Wq wq ]])
 vim.cmd([[ cnoreabbrev wQ wq ]])
+vim.cmd([[ cnoreabbrev Qa qa ]])
 
 vim.cmd([[ cnoreabbrev wQa wqa ]])
 vim.cmd([[ cnoreabbrev Wqa wqa ]])
