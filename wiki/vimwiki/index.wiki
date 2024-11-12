@@ -56,9 +56,3 @@
 # LANGUAGES
 [[php]]
 [[typescript]]
-
-# PROJECTS
-[[og]]
-[[fincentrum]]
-[[wexo-nft]]
-[[rull]]
