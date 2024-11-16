@@ -4,3 +4,8 @@
   @code bash
   xclip -sel clip -o | jq '.data.items[].nftBuyId'
   @end
+
+** Delete one key from array of objects (items is key in objects in array)
+  @code bash
+  cat data | jq 'map(del(.items[].positions))'
+  @end
