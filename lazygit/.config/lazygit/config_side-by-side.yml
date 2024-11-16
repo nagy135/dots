@@ -7,9 +7,6 @@ gui:
   sidePanelWidth: 0.15 # gives you more space to show things side-by-side
   border: "rounded"
   theme:
-    selectedLineBgColor:
-      - black
-  theme:
     activeBorderColor:
       - "#f5a97f"
       - bold
