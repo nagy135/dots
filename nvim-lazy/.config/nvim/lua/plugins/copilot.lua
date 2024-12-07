@@ -18,13 +18,13 @@ return {
       require("supermaven-nvim").setup({})
     end,
   },
-  {
-    "L3MON4D3/LuaSnip",
-    keys = {
-      { "<tab>", false, mode = { "i", "s" } },
-      { "<s-tab>", false, mode = { "i", "s" } },
-    },
-  },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   keys = {
+  --     { "<tab>", false, mode = { "i", "s" } },
+  --     { "<s-tab>", false, mode = { "i", "s" } },
+  --   },
+  -- },
   {
     "hrsh7th/nvim-cmp",
     keys = {
