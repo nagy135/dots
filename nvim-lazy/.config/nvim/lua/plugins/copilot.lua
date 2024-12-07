@@ -11,7 +11,6 @@
 -- 			]])
 --   end,
 -- }
-local supermaven_enabled = true
 return {
   {
     "supermaven-inc/supermaven-nvim",
@@ -22,9 +21,10 @@ return {
       {
         "<leader>ct",
         function()
-          require("supermaven-nvim.api").toggle()
-          supermaven_enabled = not supermaven_enabled
-          vim.notify("SuperMaven " .. (supermaven_enabled and "enabled" or "disabled"))
+          local api = require("supermaven-nvim.api")
+          local is_running = api.is_running()
+          api.toggle()
+          vim.notify("SuperMaven " .. (is_running and "disabled" or "enabled"), is_running and "info" or "warn")
         end,
         desc = "Toggle SuperMaven",
       },
