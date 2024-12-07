@@ -11,12 +11,24 @@
 -- 			]])
 --   end,
 -- }
+local supermaven_enabled = true
 return {
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
       require("supermaven-nvim").setup({})
     end,
+    keys = {
+      {
+        "<leader>ct",
+        function()
+          require("supermaven-nvim.api").toggle()
+          supermaven_enabled = not supermaven_enabled
+          vim.notify("SuperMaven " .. (supermaven_enabled and "enabled" or "disabled"))
+        end,
+        desc = "Toggle SuperMaven",
+      },
+    },
   },
   -- {
   --   "L3MON4D3/LuaSnip",
