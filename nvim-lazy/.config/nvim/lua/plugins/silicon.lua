@@ -5,24 +5,19 @@ return {
   main = "nvim-silicon",
   opts = {
     -- Configuration here, or leave empty to use defaults
+    theme = "Visual Studio Dark+",
     line_offset = function(args)
       return args.line1
     end,
   },
   keys = {
     {
-      "<leader>cs",
+      "<leader>C",
       function()
         require("nvim-silicon").clip()
       end,
       desc = "Screenshot code",
-      mode = { "n" },
-    },
-    {
-      "<leader>cs",
-      "<cmd>'<,'>Silicon<cr>",
-      desc = "Screenshot highlight",
-      mode = { "v", "s", "x" },
+      mode = { "n", "v", "s", "x" },
     },
   },
 }
