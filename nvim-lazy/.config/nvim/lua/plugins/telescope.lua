@@ -59,7 +59,7 @@ return {
       function()
         require("telescope.builtin").find_files({ cwd = "%:h" })
       end,
-      desc = "Find Neightbors",
+      desc = "Find file in subtree",
     },
   },
 }
