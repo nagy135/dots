@@ -24,7 +24,7 @@ return {
           local api = require("supermaven-nvim.api")
           local is_running = api.is_running()
           api.toggle()
-          vim.notify("SuperMaven " .. (is_running and "disabled" or "enabled"), is_running and "info" or "warn")
+          vim.notify("SuperMaven " .. (is_running and "disabled" or "enabled"), is_running and "warn" or "info")
         end,
         desc = "Toggle SuperMaven",
       },
