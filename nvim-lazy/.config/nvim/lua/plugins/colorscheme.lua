@@ -9,6 +9,7 @@ return {
   },
 
   "mhartington/oceanic-next",
+  "savq/melange-nvim",
   "luisiacc/gruvbox-baby",
   "ellisonleao/gruvbox.nvim",
   "sainnhe/gruvbox-material",
