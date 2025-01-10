@@ -19,5 +19,6 @@ return {
   "sainnhe/gruvbox-material",
   "rebelot/kanagawa.nvim",
   "joshdick/onedark.vim",
+  "marko-cerovac/material.nvim",
   "arturgoms/moonbow.nvim",
 }
