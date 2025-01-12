@@ -1,0 +1,21 @@
+{
+  "description": "Change option+Tab to command+Tab",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "tab",
+        "modifiers": {
+          "mandatory": ["option"],
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["command"]
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
