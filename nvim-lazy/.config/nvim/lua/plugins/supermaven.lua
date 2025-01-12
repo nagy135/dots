@@ -15,7 +15,12 @@ return {
   {
     "supermaven-inc/supermaven-nvim",
     config = function()
-      require("supermaven-nvim").setup({})
+      require("supermaven-nvim").setup({
+        color = {
+          suggestion_color = "#DBDBDB",
+          cterm = 244,
+        },
+      })
     end,
     keys = {
       {
@@ -37,11 +42,11 @@ return {
   --     { "<s-tab>", false, mode = { "i", "s" } },
   --   },
   -- },
-  {
-    "hrsh7th/nvim-cmp",
-    keys = {
-      { "<tab>", false, mode = { "i", "s" } },
-      { "<s-tab>", false, mode = { "i", "s" } },
-    },
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   keys = {
+  --     { "<tab>", false, mode = { "i", "s" } },
+  --     { "<s-tab>", false, mode = { "i", "s" } },
+  --   },
+  -- },
 }
