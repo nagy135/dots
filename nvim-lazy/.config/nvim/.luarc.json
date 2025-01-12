@@ -84,5 +84,8 @@
         "/Users/viktornagy/.local/share/nvim/lazy/neoconf.nvim/types/lua",
         "${3rd}/luv/library",
         "${3rd}/luv/library"
+    ],
+    "diagnostics.globals": [
+        "walk_folders"
     ]
 }
