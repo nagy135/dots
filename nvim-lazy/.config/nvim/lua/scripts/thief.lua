@@ -8,7 +8,7 @@ local conf = require("telescope.config").values
 local action_state = require("telescope.actions.state")
 
 M.thief_root = nil
-M.project_root = "~/365" -- default place to look for project roots to copy from
+M.project_root = "~/Code" -- default place to look for project roots to copy from
 M.target_dir = nil
 
 local tmpfile = "/tmp/lua_nvim_thief_file.txt"
@@ -16,7 +16,7 @@ local tmpfile = "/tmp/lua_nvim_thief_file.txt"
 local function get_project_roots(mask)
   print("mask", vim.inspect(mask))
   local files = {}
-  os.execute("gfind " .. mask .. ' -mindepth 1 -maxdepth 1 -type d -printf "%P\n" > ' .. tmpfile)
+  os.execute("gfind " .. mask .. ' -mindepth 1 -maxdepth 2 -type d -printf "%P\n" > ' .. tmpfile)
   local f = io.open(tmpfile)
   if not f then
     return files
