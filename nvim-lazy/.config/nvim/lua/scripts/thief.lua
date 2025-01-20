@@ -161,10 +161,11 @@ local wk = require("which-key")
 wk.add({
   { "<leader><leader>", group = "extra" },
   { "<leader><leader>t", group = "thief" },
-  { "<leader><leader>tr", M.set_root, { desc = "Thief Root" } },
-  { "<leader><leader>ts", M.steal_file, { desc = "Thief Steal" } },
-  { "<leader><leader>td", M.steal_directory, { desc = "Thieft Directory" } },
 })
+
+vim.keymap.set("n", "<leader><leader>tr", M.set_root, { desc = "Thief Root" })
+vim.keymap.set("n", "<leader><leader>ts", M.steal_file, { desc = "Thief Steal" })
+vim.keymap.set("n", "<leader><leader>td", M.steal_directory, { desc = "Thief Directory" })
 
 vim.api.nvim_create_user_command("ThiefStealRoot", function(opts)
   M.set_root(opts.args)
