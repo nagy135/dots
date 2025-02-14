@@ -96,20 +96,20 @@ return {
     },
   },
   keys = {
-    {
-      "<leader>fn",
-      function()
-        require("telescope").extensions.file_browser.file_browser({ cwd = "%:h" })
-      end,
-      desc = "Find Neightbors",
-    },
-    {
-      "<leader>f.",
-      function()
-        require("telescope.builtin").find_files({ cwd = "%:h" })
-      end,
-      desc = "Find file in subtree",
-    },
+    -- {
+    --   "<leader>fn",
+    --   function()
+    --     require("telescope").extensions.file_browser.file_browser({ cwd = "%:h" })
+    --   end,
+    --   desc = "Find Neightbors",
+    -- },
+    -- {
+    --   "<leader>f.",
+    --   function()
+    --     require("telescope.builtin").find_files({ cwd = "%:h" })
+    --   end,
+    --   desc = "Find file in subtree",
+    -- },
     {
       "<leader>f/",
       ripgrep,
