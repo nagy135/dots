@@ -7,4 +7,13 @@ return {
     -- Quickfix
     config.defaults.keymap.fzf["ctrl-a"] = "select-all+accept"
   end,
+  keys = {
+    {
+      "<leader>fn",
+      function()
+        require("fzf-lua").files({ cwd = "%:h" })
+      end,
+      desc = "Find neighbor files",
+    },
+  },
 }
