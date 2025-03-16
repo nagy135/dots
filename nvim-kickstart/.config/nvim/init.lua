@@ -54,7 +54,7 @@ Kickstart Guide:
     (If you already know the Neovim basics, you can skip this step.)
 
   Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
+  f the kickstart init.lua.
 
   Next, run AND READ `:help`.
     This will open up a help window with some basic information
@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -100,6 +100,7 @@ vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.opt.number = true
+vim.opt.relativenumber = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true
@@ -117,6 +118,25 @@ vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
+
+vim.opt.foldmethod = 'marker'
+
+vim.opt.wrap = true
+
+vim.cmd [[ cnoreabbrev W w ]]
+vim.cmd [[ cnoreabbrev Q q ]]
+
+vim.cmd [[ cnoreabbrev Wq wq ]]
+vim.cmd [[ cnoreabbrev wQ wq ]]
+vim.cmd [[ cnoreabbrev Qa qa ]]
+
+vim.cmd [[ cnoreabbrev wQa wqa ]]
+vim.cmd [[ cnoreabbrev Wqa wqa ]]
+vim.cmd [[ cnoreabbrev wqA wqa ]]
+vim.cmd [[ cnoreabbrev WQa wqa ]]
+vim.cmd [[ cnoreabbrev wQA wqa ]]
+vim.cmd [[ cnoreabbrev WQA wqa ]]
+vim.cmd [[ cnoreabbrev E e ]]
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -194,6 +214,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<leader>k', '<CMD>cp<CR>', { desc = 'Quickfix previous' })
+vim.keymap.set('n', '<leader>j', '<CMD>cn<CR>', { desc = 'Quickfix next' })
+vim.keymap.set('n', '<c-c>', '<CMD>cclose<CR>', { desc = 'Quickfix close' })
+vim.keymap.set('n', ',j', '<CMD>move .+1<CR>==', { desc = 'Move line down' })
+vim.keymap.set('n', ',k', '<CMD>move .-2<CR>==', { desc = 'Move line up' })
+vim.keymap.set('n', '<leader><c-h>', '<CMD>nohl<CR>', { desc = 'No highlight' })
+vim.keymap.set('n', ';', ':')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -219,6 +247,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
+vim.keymap.set('n', '<leader>l', '<CMD>Lazy<CR>', { desc = 'Lazy' })
 
 -- [[ Configure and install plugins ]]
 --
@@ -290,7 +319,7 @@ require('lazy').setup({
     opts = {
       -- delay between pressing a key and opening which-key (milliseconds)
       -- this setting is independent of vim.opt.timeoutlen
-      delay = 0,
+      delay = 200,
       icons = {
         -- set icon mappings to true if you have a Nerd Font
         mappings = vim.g.have_nerd_font,
@@ -401,7 +430,7 @@ require('lazy').setup({
         -- defaults = {
         --   mappings = {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
+        --   }
         -- },
         -- pickers = {}
         extensions = {
@@ -420,6 +449,8 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
+      vim.keymap.set('n', '<leader>gs', builtin.git_status, { desc = '[G]it [S]status' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
@@ -451,6 +482,20 @@ require('lazy').setup({
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
     end,
+  },
+  {
+    'folke/flash.nvim',
+    event = 'VeryLazy',
+    ---@type Flash.Config
+    opts = {},
+  -- stylua: ignore
+    keys = {
+      { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+      { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+    },
   },
 
   -- LSP Plugins
@@ -734,7 +779,7 @@ require('lazy').setup({
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>f',
+        '<leader>cf',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
@@ -973,16 +1018,16 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
