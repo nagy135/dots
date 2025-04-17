@@ -1,0 +1,44 @@
+{
+  "enabled": false,
+  "manipulators": [
+    {
+      "description": "Change spacebar to command+control+option+shift.",
+      "from": {
+        "key_code": "spacebar",
+        "modifiers": {
+          "optional": ["any"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "left_shift",
+          "modifiers": ["left_command", "left_control", "left_option"]
+        }
+      ],
+      "to_if_alone": [
+        {
+          "key_code": "spacebar",
+          "halt": true
+        }
+      ],
+      "parameters": {
+        "basic.to_if_held_down_threshold_milliseconds": 250
+      },
+      "to_delayed_action": {
+        "to_if_canceled": [
+          {
+            "key_code": "spacebar"
+          }
+        ]
+      },
+      "to_if_held_down": [
+        {
+          "key_code": "spacebar",
+          "repeat": false,
+          "halt": true
+        }
+      ],
+      "type": "basic"
+    }
+  ]
+}
