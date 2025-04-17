@@ -20,25 +20,25 @@ vim.keymap.set(
 vim.keymap.set(
   "n",
   "<leader>;j",
-  "yiwologger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
+  "yiwoconsole.log('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify" }
 )
 vim.keymap.set(
   "n",
   "<leader>;J",
-  "yiwOlogger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
+  "yiwOconsole.log('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify (above)" }
 )
 vim.keymap.set(
   "n",
   "<leader>;;j",
-  "yiwologger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
+  "yiwoconsole.log('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify" }
 )
 vim.keymap.set(
   "n",
   "<leader>;;J",
-  "yiwOlogger.info('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
+  "yiwOconsole.log('', );<ESC>hPa) }<ESC>Bi{ prettified: JSON.stringify(<ESC>F'P<ESC>",
   { desc = "variable json stringify (above)" }
 )
 -- vim.keymap.set("n", "<leader>r", "<CMD>!npm run start %<CR>", { desc = "npm run start" })
