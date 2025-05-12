@@ -235,6 +235,8 @@ vim.keymap.set('n', '<leader>bb', '<CMD>e #<CR>', { desc = 'Buffer previous' })
 vim.keymap.set('n', '<leader>bd', '<CMD>bdelete<CR>', { desc = 'Buffer delete' })
 vim.keymap.set('n', '<leader>bo', '<CMD>%bdelete|edit #|normal`"<CR>', { desc = 'Buffer only' })
 vim.keymap.set('n', '<leader>to', '<CMD>tabonly<CR>', { desc = 'Tab only' })
+vim.keymap.set('n', '<leader><Tab><Tab>', '<CMD>tabe %<CR>', { desc = 'Tab edit' })
+vim.keymap.set('n', '<leader><Tab>d', '<CMD>tabc<CR>', { desc = 'Tab close' })
 
 vim.keymap.set('n', '<leader>ml', function()
   vim.cmd.colorscheme 'catppuccin-latte'
