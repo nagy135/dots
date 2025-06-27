@@ -122,6 +122,9 @@ end)
 vim.opt.foldmethod = 'marker'
 
 vim.opt.wrap = true
+vim.opt.ts = 2
+vim.opt.sw = 2
+vim.opt.expandtab = true
 
 vim.cmd [[ cnoreabbrev W w ]]
 vim.cmd [[ cnoreabbrev Q q ]]
