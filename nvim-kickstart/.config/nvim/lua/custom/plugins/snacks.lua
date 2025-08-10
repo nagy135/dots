@@ -68,7 +68,7 @@ return {
         desc = 'Notification History',
       },
       {
-        '<leader>e',
+        '<leader><leader>e',
         function()
           Snacks.explorer()
         end,
@@ -496,6 +496,30 @@ return {
           Snacks.words.jump(-vim.v.count1)
         end,
         desc = 'Prev Reference',
+      },
+      {
+        ']d',
+        function()
+          vim.diagnostic.goto_next { severity = vim.diagnostic.severity.ERROR, wrap = true }
+        end,
+      },
+      {
+        '[d',
+        function()
+          vim.diagnostic.goto_prev { severity = vim.diagnostic.severity.ERROR, wrap = true }
+        end,
+      },
+      {
+        ']D',
+        function()
+          vim.diagnostic.goto_next {}
+        end,
+      },
+      {
+        '[D',
+        function()
+          vim.diagnostic.goto_prev {}
+        end,
       },
     },
   },
