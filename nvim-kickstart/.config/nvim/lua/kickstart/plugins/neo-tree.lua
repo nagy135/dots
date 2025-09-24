@@ -12,10 +12,10 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '<leader><leader>e', ':Neotree reveal toggle<CR>', desc = 'NeoTree reveal', silent = true },
-    { '<leader><leader>E', ':Neotree focus<cr>', desc = 'Neotree focus' },
-    { '<leader><leader>gS', ':Neotree git_status float reveal<CR>', desc = '[G]it [S]tatus (Neotree)', silent = true },
-    { '<leader><leader>fB', ':Neotree buffers float reveal<CR>', desc = '[F]ind [B]uffers (Neotree)', silent = true },
+    { '<leader>e', ':Neotree reveal toggle<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>E', ':Neotree focus<cr>', desc = 'Neotree focus' },
+    { '<leader>gS', ':Neotree git_status float reveal<CR>', desc = '[G]it [S]tatus (Neotree)', silent = true },
+    { '<leader>fB', ':Neotree buffers float reveal<CR>', desc = '[F]ind [B]uffers (Neotree)', silent = true },
   },
   opts = {
     filesystem = {
@@ -23,6 +23,7 @@ return {
         enabled = true,
       },
       window = {
+        width = 60,
         mappings = {
           ['\\'] = 'close_window',
           ['<space>'] = 'none',
