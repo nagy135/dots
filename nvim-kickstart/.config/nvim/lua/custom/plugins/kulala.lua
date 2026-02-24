@@ -32,7 +32,25 @@ return {
         end,
         ft = { 'http', 'rest' }, -- sets mapping for specified file types
       },
-      ['Find request'] = false, -- set to false to disable
+    },
+    lsp = {
+      enable = true,
+      filetypes = { 'http', 'rest', 'json', 'yaml', 'bruno' },
+      keymaps = false, -- disabled by default, as Kulala relies on default Neovim LSP keymaps
+      formatter = {
+        split_params = 4, -- split query/form parameters onto multiple lines if number of params exceeds this value
+        sort = { -- enable/disable alphabetical sorting
+          metadata = true,
+          variables = true,
+          commands = false,
+          json = true,
+        },
+        quote_json_variables = true, -- add quotes around {{variable}} in JSON bodies
+        indent = 2, -- base indentation for scripts
+      },
+      on_attach = function(client, bufnr)
+        -- custom on_attach function
+      end,
     },
   },
 }
