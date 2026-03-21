@@ -5,9 +5,14 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lint = require 'lint'
-      lint.linters_by_ft = {
-        markdown = { 'markdownlint' },
-      }
+      -- lint.linters_by_ft = {
+      --   markdown = { 'markdownlint' },
+      -- }
+
+      -- Disable default linters that require external tools
+      lint.linters_by_ft['markdown'] = nil
+      lint.linters_by_ft['rst'] = nil
+      lint.linters_by_ft['text'] = nil
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
       -- instead set linters_by_ft like this:
