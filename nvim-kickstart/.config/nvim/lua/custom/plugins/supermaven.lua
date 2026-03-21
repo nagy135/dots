@@ -11,9 +11,14 @@ return {
   end,
   keys = {
     {
-      '<leader>ct',
+      '<leader>csr',
       '<CMD>SupermavenRestart<CR>',
       desc = 'Restart SuperMaven',
+    },
+    {
+      '<leader>cst',
+      '<CMD>SupermavenToggle<CR>',
+      desc = 'Toggle SuperMaven',
     },
     -- {
     --   '<leader>ct',
