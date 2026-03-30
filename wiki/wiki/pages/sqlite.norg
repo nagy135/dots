@@ -1,0 +1,72 @@
+* sqlite3 shell
+@code bash
+sqlite3 database.sqlite
+@end
+
+* List tables
+@code sql
+.tables
+@end
+
+* Show schema
+@code sql
+.schema
+.schema users
+@end
+
+* Create table
+@code sql
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    email TEXT NOT NULL UNIQUE,
+    name TEXT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+@end
+
+* Insert rows
+@code sql
+INSERT INTO users (email, name)
+VALUES ('viktor@example.com', 'Viktor');
+@end
+
+* Query rows
+@code sql
+SELECT * FROM users;
+SELECT id, email FROM users WHERE email LIKE '%@example.com';
+@end
+
+* Update rows
+@code sql
+UPDATE users
+SET name = 'Viktor Nagy'
+WHERE id = 1;
+@end
+
+* Delete rows
+@code sql
+DELETE FROM users
+WHERE id = 1;
+@end
+
+* Add a column
+@code sql
+ALTER TABLE users ADD COLUMN is_active INTEGER DEFAULT 1;
+@end
+
+* Dump database
+@code bash
+sqlite3 database.sqlite .dump > dump.sql
+@end
+
+* Import dump
+@code bash
+sqlite3 new.sqlite < dump.sql
+@end
+
+* Nice output in shell
+@code sql
+.mode column
+.headers on
+SELECT * FROM users;
+@end

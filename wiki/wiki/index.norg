@@ -52,6 +52,7 @@
 * DATABASES
 {:pages/mysql:}[mysql]
 {:pages/postgres:}[postgres]
+{:pages/sqlite:}[sqlite]
 
 * LANGUAGES
 {:pages/php:}[php]
@@ -116,6 +117,7 @@
 - {:pages/reduce-video-size:}[reduce video size]
 - {:pages/setup-new-user:}[setup new user]
 - {:pages/shell:}[shell]
+- {:pages/sqlite:}[sqlite]
 - {:pages/stow:}[stow]
 - {:pages/swap:}[swap]
 - {:pages/tag-remove:}[tag remove]

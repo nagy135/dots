@@ -10,9 +10,9 @@ return {
         ['core.dirman'] = {
           config = {
             workspaces = {
-              notes = '~/notes',
+              wiki = '~/wiki',
             },
-            default_workspace = 'notes',
+            default_workspace = 'wiki',
           },
         },
       },
