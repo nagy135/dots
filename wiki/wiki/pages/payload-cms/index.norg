@@ -1,0 +1,61 @@
+* payload cms
+
+* why it matters
+- Next.js-first fullstack framework with CMS, admin panel, db schema, auth, REST, GraphQL, and Local API in one codebase
+- code-first: schema, access, hooks, custom UI, and project structure live in git
+- best mental model: Payload config defines data model + admin behavior + API behavior
+
+* topic map
+- {:overview:}[overview]
+- {:collections-and-fields:}[collections and fields]
+- {:access-auth-and-hooks:}[access auth and hooks]
+- {:apis-and-queries:}[apis and queries]
+- {:admin-and-project-structure:}[admin and project structure]
+- {:uploads-and-media:}[uploads and media]
+
+* typical file layout
+@code text
+src/
+  payload.config.ts
+  collections/
+    Pages.ts
+    Posts.ts
+    Media.ts
+    Users.ts
+  globals/
+    Header.ts
+    Footer.ts
+  access/
+    isAdmin.ts
+    isLoggedIn.ts
+    canReadPublished.ts
+  hooks/
+    revalidatePost.ts
+    setPublishedAt.ts
+  fields/
+    slug.ts
+    hero.ts
+    seo.ts
+  components/
+    payload/
+      CustomDashboard.tsx
+app/
+  (payload)/
+    admin/
+    api/
+    graphql/
+@end
+
+* when to use what
+- collection: repeated documents like posts, products, users, media
+- global: singleton data like header, footer, site settings
+- hooks: side effects and lifecycle logic
+- access: authorization rules
+- Local API: fastest server-side access inside app code
+
+* search ideas
+- search `CollectionConfig` for schema examples
+- search `access:` for permission rules
+- search `hooks:` for lifecycle behavior
+- search `payload.find(` for Local API usage
+- search `upload:` for media setup

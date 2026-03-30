@@ -1,0 +1,69 @@
+* media collection pattern
+- docs recommend a dedicated `media` collection with `upload` enabled
+- enabling upload adds file metadata fields and upload UI automatically
+- create/update/delete operations gain file upload behavior
+
+* basic media collection
+@code ts
+import type { CollectionConfig } from 'payload'
+
+export const Media: CollectionConfig = {
+  slug: 'media',
+  upload: {
+    staticDir: 'media',
+    mimeTypes: ['image/*', 'application/pdf'],
+    imageSizes: [
+      { name: 'thumbnail', width: 400, height: 300 },
+      { name: 'card', width: 768, height: 1024 },
+    ],
+    adminThumbnail: 'thumbnail',
+  },
+  fields: [
+    { name: 'alt', type: 'text' },
+    { name: 'caption', type: 'textarea' },
+  ],
+}
+@end
+
+* docs note upload adds fields
+- `filename`
+- `mimeType`
+- `filesize`
+- `sizes` when imageSizes are configured
+
+* useful upload options
+- `disableLocalStorage` when using external storage/CDN
+- `pasteURL` for remote file import
+- `crop` / `focalPoint`
+- `adminThumbnail`
+- `mimeTypes`
+- `modifyResponseHeaders`
+
+* local api file upload
+@code ts
+await payload.create({
+  collection: 'media',
+  data: {
+    alt: 'Homepage hero',
+  },
+  filePath: path.resolve(process.cwd(), 'seed/hero.jpg'),
+})
+@end
+
+* frontend relationship pattern
+@code ts
+{
+  name: 'featuredImage',
+  type: 'upload',
+  relationTo: 'media',
+}
+@end
+
+* cautions
+- GraphQL does not handle file uploads; use REST or Local API
+- custom upload UI should use Payload's Upload component, not a raw file input alone
+- if you disable local storage, you must provide your own permanent file handling and admin thumbnail logic
+
+* related
+- {:collections-and-fields:}[collections and fields]
+- {:apis-and-queries:}[apis and queries]

@@ -1,0 +1,97 @@
+* What Nix is
+- declarative package manager and build system
+- same input should produce the same result
+- useful for reproducible dev environments and system config
+
+* Common files
+- `flake.nix` project or system entry point when using flakes
+- `flake.lock` pinned inputs
+- `default.nix` default expression for a package or folder
+- `shell.nix` development shell without flakes
+- `configuration.nix` main NixOS system config
+- `home.nix` Home Manager user config
+
+* Basic commands
+@code bash
+nix search nixpkgs git
+nix shell nixpkgs#ripgrep
+nix run nixpkgs#hello
+nix develop
+nix flake update
+@end
+
+* Temporary package
+@code bash
+nix shell nixpkgs#jq nixpkgs#fd
+@end
+
+* Dev shell with flake
+@code nix
+{
+  description = "simple dev shell";
+
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+  outputs = { self, nixpkgs }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs { inherit system; };
+    in {
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          git
+          nodejs
+          sqlite
+        ];
+      };
+    };
+}
+@end
+
+* Enter dev shell
+@code bash
+nix develop
+@end
+
+* Build a flake package
+@code bash
+nix build .
+nix build .#my-package
+@end
+
+* Run a flake app
+@code bash
+nix run .
+nix run .#my-app
+@end
+
+* Show flake outputs
+@code bash
+nix flake show
+@end
+
+* Format and inspect
+@code bash
+nix fmt
+nix repl
+@end
+
+* Nix language basics
+- attribute set is `{ key = value; }`
+- list is `[ a b c ]`
+- string is `"text"`
+- function looks like `{ pkgs }: ...` or `x: ...`
+- `with pkgs; [ git jq ]` imports names from `pkgs` into scope
+- `let ... in ...` defines local variables
+
+* Useful ideas
+- pin inputs with `flake.lock`
+- keep dev shell minimal and task-focused
+- prefer `nix develop` for project tooling
+- use `nix search` when you do not know package names
+- rebuild NixOS with `sudo nixos-rebuild switch --flake .#hostname`
+
+* Home Manager
+@code bash
+home-manager switch --flake .#user
+@end

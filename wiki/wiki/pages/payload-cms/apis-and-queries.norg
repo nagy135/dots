@@ -1,0 +1,93 @@
+* api surface
+- Local API = fastest server-side/direct database access
+- REST API = standard HTTP endpoints
+- GraphQL = generated schema and playground
+- docs say query language is shared across all of them
+
+* Local API basics
+@code ts
+const posts = await payload.find({
+  collection: 'posts',
+  where: {
+    slug: {
+      equals: 'hello-world',
+    },
+  },
+  limit: 1,
+  pagination: false,
+  depth: 0,
+  select: {
+    title: true,
+    slug: true,
+  },
+})
+@end
+
+* Local API important doc notes
+- access is skipped by default; set `overrideAccess: false` to respect access rules
+- pass `req` when using transactions or when inside existing request lifecycle
+- useful inside RSCs, route handlers, hooks, seeds, and access functions
+
+* query operators to remember
+- `equals`, `not_equals`
+- `like`, `contains`
+- `in`, `not_in`
+- numeric/date comparisons
+- `exists`
+- nested paths use dot notation like `'author.name'`
+- combine with `and` and `or`
+
+* query example
+@code ts
+const query = {
+  and: [
+    {
+      _status: { equals: 'published' },
+    },
+    {
+      or: [
+        { slug: { like: 'payload' } },
+        { 'author.name': { equals: 'Viktor' } },
+      ],
+    },
+  ],
+}
+@end
+
+* REST example
+@code ts
+import { stringify } from 'qs-esm'
+
+const qs = stringify(
+  {
+    where: {
+      slug: { equals: 'hello-world' },
+    },
+  },
+  { addQueryPrefix: true },
+)
+
+const res = await fetch(`http://localhost:3000/api/posts${qs}`)
+@end
+
+* performance tips from docs
+- add indexes to queried/sorted fields
+- use `depth` only as deep as needed
+- use `limit: 1` and `pagination: false` for unique lookups
+- use `select` to avoid field processing and large payloads
+
+* common Local API methods
+- `create`, `find`, `findByID`, `count`, `findDistinct`
+- `update`, `delete`
+- `findGlobal`, `updateGlobal`
+- auth operations like `login`, `forgotPassword`, `verifyEmail`
+
+* practical use cases
+- server component fetching pages/posts directly
+- seed scripts creating media + content
+- custom route handlers wrapping Payload logic
+- hooks triggering follow-up queries
+
+* related
+- {:access-auth-and-hooks:}[access auth and hooks]
+- {:uploads-and-media:}[uploads and media]

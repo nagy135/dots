@@ -1,0 +1,49 @@
+* payload in one minute
+- Payload is a Next.js-oriented backend and CMS framework
+- one config gives you admin panel, generated schema, database layer, REST API, GraphQL API, auth, and Local API
+- docs emphasize code-first, git-tracked configuration, and direct data ownership
+
+* core primitives
+- collections = repeatable document types
+- globals = singletons
+- fields = schema building blocks
+- access = authorization
+- hooks = lifecycle side effects
+- custom components = admin UI overrides
+
+* strong defaults
+- auth defaults to requiring a logged-in user unless you override access
+- Local API skips access by default unless `overrideAccess: false`
+- admin panel is generated from your schema and access rules
+
+* common use cases from docs
+- CMS for Next.js websites
+- internal tools with CRUD + RBAC + admin UI
+- commerce backends
+- digital asset management
+
+* starter config shape
+@code ts
+import { buildConfig } from 'payload'
+import { Posts } from './collections/Posts'
+import { Media } from './collections/Media'
+
+export default buildConfig({
+  collections: [Posts, Media],
+  globals: [],
+  admin: {
+    user: 'users',
+  },
+})
+@end
+
+* practical mental model
+- collection/global config defines storage + API + admin UI
+- field config defines shape + validation + admin behavior
+- access functions define who can do what
+- hooks glue Payload to the rest of your app
+
+* useful neighbors
+- {:collections-and-fields:}[collections and fields]
+- {:access-auth-and-hooks:}[access auth and hooks]
+- {:apis-and-queries:}[apis and queries]

@@ -1,0 +1,105 @@
+* access control
+- access runs per operation: `create`, `read`, `update`, `delete`, and admin access patterns
+- docs note default access is effectively `Boolean(user)` unless overridden
+- access can return `true`, `false`, or a query constraint for filtered access
+- admin UI responds to access rules and may hide collections/views automatically
+
+* simple access helpers
+@code ts
+export const isLoggedIn = ({ req: { user } }) => Boolean(user)
+
+export const isAdmin = ({ req: { user } }) => user?.role === 'admin'
+
+export const isAdminOrPublished = ({ req: { user } }) => {
+  if (user?.role === 'admin') return true
+
+  return {
+    _status: {
+      equals: 'published',
+    },
+  }
+}
+@end
+
+* auth-enabled collection
+@code ts
+import type { CollectionConfig } from 'payload'
+
+export const Users: CollectionConfig = {
+  slug: 'users',
+  auth: {
+    verify: true,
+    maxLoginAttempts: 5,
+    lockTime: 10 * 60 * 1000,
+    useAPIKey: true,
+  },
+  access: {
+    admin: ({ req: { user } }) => user?.role === 'admin',
+  },
+  fields: [
+    {
+      name: 'role',
+      type: 'select',
+      defaultValue: 'editor',
+      options: ['admin', 'editor'],
+      required: true,
+    },
+  ],
+}
+@end
+
+* auth notes from docs
+- `auth: true` is enough for standard behavior
+- auth collections get extra operations like login, reset password, verify email
+- built-in auth fields like `email` and `password` can be overridden carefully
+- admin panel can only use one auth-enabled collection via `admin.user`
+
+* hooks overview
+- hooks are server-only lifecycle functions
+- use them for derived data, external integrations, side effects, revalidation, notifications
+- docs warn against expensive read hooks because they run often
+- use hook context to avoid repeated expensive work and job queue for long-running tasks
+
+* practical hook example
+@code ts
+export const Posts: CollectionConfig = {
+  slug: 'posts',
+  hooks: {
+    beforeChange: [
+      ({ data }) => {
+        if (data.title && !data.slug) {
+          data.slug = data.title.toLowerCase().replace(/\s+/g, '-')
+        }
+
+        return data
+      },
+    ],
+    afterChange: [
+      async ({ doc, req }) => {
+        await req.payload.jobs.queue({
+          task: 'revalidate-post',
+          input: { id: doc.id },
+        })
+      },
+    ],
+  },
+  fields: [
+    { name: 'title', type: 'text', required: true },
+    { name: 'slug', type: 'text' },
+  ],
+}
+@end
+
+* field-level rules
+- fields can have their own `access`, `hooks`, `validate`, `defaultValue`, `admin.condition`
+- good for hiding sensitive fields, computed read values, conditional UI
+
+* patterns worth searching for
+- `access: { read:` for public/private content
+- `auth:` for user collections
+- `beforeChange` for slugging and normalization
+- `afterChange` for revalidation, webhooks, queueing
+
+* related
+- {:collections-and-fields:}[collections and fields]
+- {:apis-and-queries:}[apis and queries]

@@ -1,0 +1,91 @@
+* collection basics
+- collections are the primary unit for repeated content like posts, products, users, media
+- each collection generates database schema and Local/REST/GraphQL operations
+- if a thing should only have one document, use a global instead
+
+* minimal collection
+@code ts
+import type { CollectionConfig } from 'payload'
+
+export const Posts: CollectionConfig = {
+  slug: 'posts',
+  admin: {
+    useAsTitle: 'title',
+    defaultColumns: ['title', 'slug', 'updatedAt'],
+    listSearchableFields: ['title', 'slug'],
+  },
+  fields: [
+    { name: 'title', type: 'text', required: true, index: true },
+    { name: 'slug', type: 'text', required: true, unique: true, index: true },
+    { name: 'excerpt', type: 'textarea' },
+    { name: 'publishedAt', type: 'date' },
+  ],
+}
+@end
+
+* collection options worth remembering
+- `access` for permissions
+- `auth` to turn collection into users/accounts
+- `hooks` for lifecycle logic
+- `upload` for media collections
+- `versions` for drafts/history
+- `indexes` and field `index: true` for query performance
+- `defaultPopulate` and `forceSelect` when related documents need predictable shape
+
+* field categories from docs
+- data fields: text, textarea, number, date, relationship, richText, upload, blocks, array, group, select, json, code
+- presentational fields: row, collapsible, unnamed tabs/group, UI
+- virtual fields: `join` or any field with `virtual: true` or `virtual: 'path.to.value'`
+
+* field rules to remember
+- use JS-safe names; avoid hyphens in field names
+- field names map to API keys and db columns
+- custom validation replaces default validation unless you explicitly reuse shared validators
+
+* common pattern: reusable field factory
+@code ts
+import type { Field } from 'payload'
+
+export const slugField = (): Field => ({
+  name: 'slug',
+  type: 'text',
+  required: true,
+  unique: true,
+  index: true,
+  admin: {
+    description: 'Used in URLs',
+  },
+})
+@end
+
+* rich content patterns
+- `array`: repeated uniform items
+- `blocks`: page-builder style heterogeneous sections
+- `group`: nest fields under one object
+- `relationship`: connect collections
+- `upload`: media reference
+
+* draft of a page-builder style collection
+@code ts
+export const Pages: CollectionConfig = {
+  slug: 'pages',
+  fields: [
+    { name: 'title', type: 'text', required: true },
+    { name: 'slug', type: 'text', required: true, unique: true },
+    {
+      name: 'layout',
+      type: 'blocks',
+      blocks: [HeroBlock, ContentBlock, CTA, GalleryBlock],
+    },
+  ],
+}
+@end
+
+* performance notes from docs
+- add `index: true` to commonly queried fields
+- use collection `indexes` for compound patterns
+- narrow admin list search fields so editor search stays fast
+
+* related
+- {:access-auth-and-hooks:}[access auth and hooks]
+- {:apis-and-queries:}[apis and queries]

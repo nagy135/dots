@@ -1,0 +1,65 @@
+* admin panel model
+- generated from schema and access rules
+- built on Next.js App Router and React server/client components
+- customizable through config and custom components
+
+* project structure from docs
+@code text
+app/
+  (payload)/
+    admin/
+      [[...segments]]/
+        page.tsx
+    api/
+      [...slug]/
+        route.ts
+    graphql/
+      route.ts
+    graphql-playground/
+      route.ts
+    custom.scss
+    layout.tsx
+@end
+
+* important takeaways
+- admin, REST, and GraphQL routes live beside the frontend app
+- `(payload)` creates a routing/styling boundary
+- route locations are configurable, but file structure must match route changes
+- docs note `importMap` is regenerated; do not edit it directly
+
+* root config example
+@code ts
+export default buildConfig({
+  admin: {
+    user: 'admins',
+    autoRefresh: true,
+    components: {
+      // root-level admin component overrides
+    },
+  },
+  routes: {
+    admin: '/admin',
+    api: '/api',
+    graphQL: '/graphql',
+  },
+})
+@end
+
+* collection admin options worth using
+- `useAsTitle`
+- `defaultColumns`
+- `listSearchableFields`
+- `preview` and `livePreview`
+- `group` and `hidden`
+- `components.edit.*` to replace buttons/status/upload UI
+
+* admin user strategy
+- one auth-enabled collection logs into admin via `admin.user`
+- separate `admins` and `customers` collections is a common pattern
+- use collection access for role-based admin restrictions
+
+* search ideas
+- `admin: { user:`
+- `routes:`
+- `components: { edit:`
+- `preview:`
