@@ -3,19 +3,20 @@ return {
   'sindrets/diffview.nvim',
   keys = {
     {
-      '<leader>df',
+      '<leader>gdf',
       function()
         if diffview_open then
           require('diffview').close()
           diffview_open = false
         else
-          require('diffview').file_history()
+          vim.cmd 'DiffviewFileHistory %'
           diffview_open = true
         end
       end,
+      desc = 'File History',
     },
     {
-      '<leader>dt',
+      '<leader>gdt',
       function()
         if diffview_open then
           require('diffview').close()

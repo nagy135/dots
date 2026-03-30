@@ -10,6 +10,12 @@ return {
       end,
     })
 
+    vim.lsp.config('alejandra', {
+      on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+      end,
+    })
+
     vim.lsp.enable 'tsgo'
 
     -- Command to display navic location in notification

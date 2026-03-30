@@ -101,6 +101,7 @@ vim.g.have_nerd_font = true
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.winborder = 'rounded'
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
 -- vim.opt.relativenumber = true
@@ -110,6 +111,19 @@ vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
+
+-- Delete quickfix entry under cursor with "dd"
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'qf',
+  callback = function()
+    vim.keymap.set('n', 'dd', function()
+      local lnum = vim.fn.line '.' - 1
+      local qflist = vim.fn.getqflist()
+      table.remove(qflist, lnum + 1) -- Lua is 1-based
+      vim.fn.setqflist(qflist, 'r') -- replace quickfix list
+    end, { buffer = true, silent = true })
+  end,
+})
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -191,6 +205,8 @@ vim.opt.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>y', '<cmd>silent !bash -n % | pbcopy<CR>')
+
 vim.keymap.set('n', ']d', function()
   vim.diagnostic.goto_next()
   vim.diagnostic.open_float()
@@ -238,6 +254,11 @@ vim.keymap.set('n', '<leader>bb', '<CMD>e #<CR>', { desc = 'Buffer previous' })
 vim.keymap.set('n', '<leader>bd', '<CMD>bdelete<CR>', { desc = 'Buffer delete' })
 vim.keymap.set('n', '<leader>bo', '<CMD>%bdelete|edit #|normal`"<CR>', { desc = 'Buffer only' })
 vim.keymap.set('n', '<leader>to', '<CMD>tabonly<CR>', { desc = 'Tab only' })
+vim.keymap.set('n', '<leader><tab>o', '<CMD>tabonly<CR>', { desc = 'Tab only' })
+vim.keymap.set('n', '<leader><tab>c', '<CMD>tabc<CR>', { desc = 'Tab close' })
+vim.keymap.set('n', '<leader><tab>d', '<CMD>tabc<CR>', { desc = 'Tab delete' })
+vim.keymap.set('n', '<leader><tab><tab>', '<CMD>tabe<CR>', { desc = 'Tab open current file' })
+--
 
 vim.keymap.set('n', '<leader>ml', function()
   vim.cmd.colorscheme 'catppuccin-latte'
@@ -657,8 +678,9 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        'prettierd', -- Used to format JavaScript code
-        'vtsls',
+        -- 'vtsls',
+        'tsgo',
+        'alejandra',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -716,10 +738,10 @@ require('lazy').setup({
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
         --
-        typescript = { 'prettierd', 'prettier', stop_after_first = true },
-        typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
-        javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
+        typescript = { 'prettierd', stop_after_first = true },
+        typescriptreact = { 'prettierd', stop_after_first = true },
+        javascript = { 'prettierd', stop_after_first = true },
+        javascriptreact = { 'prettierd', stop_after_first = true },
       },
     },
   },
@@ -768,6 +790,10 @@ require('lazy').setup({
       luasnip.config.setup {}
 
       cmp.setup {
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -854,15 +880,6 @@ require('lazy').setup({
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
-
-      require('mini.files').setup {
-        options = {
-          use_as_default_explorer = false,
-        },
-      }
-      vim.keymap.set('n', '<leader>fm', function()
-        require('mini.files').open(vim.api.nvim_buf_get_name(0), true)
-      end, { desc = '[F]ile [M]ini-explorer' })
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --

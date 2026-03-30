@@ -17,18 +17,14 @@ return {
     },
     {
       '<leader>cst',
-      '<CMD>SupermavenToggle<CR>',
+      function()
+        local api = require 'supermaven-nvim.api'
+        api.toggle()
+
+        local is_running = api.is_running()
+        vim.notify('SuperMaven ' .. (is_running and 'on' or 'off'), vim.log.levels.INFO)
+      end,
       desc = 'Toggle SuperMaven',
     },
-    -- {
-    --   '<leader>ct',
-    --   function()
-    --     local api = require 'supermaven-nvim.api'
-    --     local is_running = api.is_running()
-    --     api.toggle()
-    --     vim.notify('SuperMaven ' .. (is_running and 'disabled' or 'enabled'), is_running and 'warn' or 'info')
-    --   end,
-    --   desc = 'Toggle SuperMaven',
-    -- },
   },
 }

@@ -92,6 +92,7 @@ return {
       {
         '<leader>ff',
         function()
+          -- MiniPick.builtin.files {}
           Snacks.picker.files()
         end,
         desc = 'Find Files',
@@ -99,6 +100,7 @@ return {
       {
         '<leader>fg',
         function()
+          -- MiniPick.builtin.files {}
           Snacks.picker.git_files()
         end,
         desc = 'Find Git Files',
@@ -154,7 +156,7 @@ return {
         desc = 'Git Stash',
       },
       {
-        '<leader>gd',
+        '<leader>gx',
         function()
           Snacks.picker.git_diff()
         end,
@@ -418,13 +420,13 @@ return {
         end,
         desc = 'Toggle Scratch Buffer',
       },
-      {
-        '<leader>S',
-        function()
-          Snacks.scratch.select()
-        end,
-        desc = 'Select Scratch Buffer',
-      },
+      -- {
+      --   '<leader>S',
+      --   function()
+      --     Snacks.scratch.select()
+      --   end,
+      --   desc = 'Select Scratch Buffer',
+      -- },
       {
         '<leader>n',
         function()
