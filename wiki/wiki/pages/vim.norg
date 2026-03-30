@@ -1,0 +1,7 @@
+* {:plugins:}[plugins]
+
+{:lsp-servers:}[lsp servers]
+{:diff:}[diff]
+{:vimgrep:}[vimgrep]
+{:formatting:}[formatting]
+{:nvim-add-to-runtime:}[nvim add to runtime]

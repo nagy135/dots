@@ -1,0 +1,133 @@
+* PROJECT IDEAS
+- tree.js something
+    - with react
+    - {https://github.com/danba340/react-three-fiber-example?fbclid=IwAR2E_nGngDVxOjV_mU1lJJMW-zYBps7gFUmwQEXkGkAgdTm0qbr2BLqL_O0}[link]
+- css parallax effect
+    - {https://www.youtube.com/watch?v=mxHoPYFsTuk&ab_channel=WebDevSimplified}[link]
+- node cli with colored inputs etc
+    - {https://www.youtube.com/watch?v=_oHByo8tiEY&ab_channel=Fireship}[link]
+
+
+
+
+* TODOS
+** general
+- nvim
+    - {https://github.com/lewis6991/gitsigns.nvim}[gitsigns]
+    - {https://github.com/wbthomason/packer.nvim}[packer]
+- {https://github.com/nagy135/ssh-fzf}[ssh-fzf]
+    - aur package
+    - wayland version
+- remote editing file in nvim
+    - edit file, press bind and it scp replaces remote file
+    - nui.nvim input
+- tmux nord theme long session name bug (last char)
+- ffmpeg screencast on toggle bind
+- lua version of "delete function with its braces"
+
+
+
+
+
+* INFOS
+
+* GENERAL
+{:pages/git:}[git]
+{:pages/vim:}[vim]
+{:pages/linux:}[linux]
+{:pages/macos:}[macos]
+{:pages/shell:}[shell]
+{:pages/awk:}[awk]
+{:pages/weechat:}[weechat]
+{:pages/stow:}[stow]
+{:pages/pacman:}[pacman]
+{:pages/docker:}[docker]
+{:pages/ffmpeg:}[ffmpeg]
+{:pages/imagemagick:}[imagemagick]
+
+** Wayland
+- {:pages/wayland-clipboard:}[wayland clipboard]
+- {:pages/wayland-screenshot:}[wayland screenshot]
+
+* DATABASES
+{:pages/mysql:}[mysql]
+{:pages/postgres:}[postgres]
+
+* LANGUAGES
+{:pages/php:}[php]
+{:pages/typescript:}[typescript]
+
+* All Pages
+- {:pages/add-group-to-existing-user:}[add group to existing user]
+- {:pages/alter-pg-database:}[alter pg database]
+- {:pages/array:}[array]
+- {:pages/awk:}[awk]
+- {:pages/base64-encode-decode:}[base64 encode decode]
+- {:pages/bash:}[bash]
+- {:pages/change-commit-author:}[change commit author]
+- {:pages/change-commit-date:}[change commit date]
+- {:pages/cli-csv:}[cli csv]
+- {:pages/clone-with-submodules:}[clone with submodules]
+- {:pages/create-database-grant-permissions:}[create database grant permissions]
+- {:pages/create-foreign-key-migration:}[create foreign key migration]
+- {:pages/deleted-file-restore:}[deleted file restore]
+- {:pages/diff:}[diff]
+- {:pages/dock-bouncing-icons:}[dock bouncing icons]
+- {:pages/docker:}[docker]
+- {:pages/docker-login:}[docker_login]
+- {:pages/dont-track-permissions:}[dont track permissions]
+- {:pages/encode-for-facebook:}[encode for facebook]
+- {:pages/encrypt-password-in-script:}[encrypt password in script]
+- {:pages/encrypt-using-openssl:}[encrypt using openssl]
+- {:pages/entity-listeres:}[entity listeres]
+- {:pages/mysqldump-import/export:}[export]
+- {:pages/ffmpeg:}[ffmpeg]
+- {:pages/fincentrum:}[fincentrum]
+- {:pages/firewall:}[firewall]
+- {:pages/floating-point-math:}[floating point math]
+- {:pages/formatting:}[formatting]
+- {:pages/generate-password:}[generate password]
+- {:pages/generate-random-string-of-length:}[generate random string of length]
+- {:pages/generate-ssh-key:}[generate ssh key]
+- {:pages/git:}[git]
+- {:pages/imagemagick:}[imagemagick]
+- {:pages/import-export:}[import_export]
+- {:pages/jq:}[jq]
+- {:pages/kick-ssh-user-with-message:}[kick ssh user with message]
+- {:pages/laravel:}[laravel]
+- {:pages/linux:}[linux]
+- {:pages/login-production-hack:}[login production hack]
+- {:pages/lsp-servers:}[lsp servers]
+- {:pages/macos:}[macos]
+- {:pages/merge-with-forked-upstream:}[merge with forked upstream]
+- {:pages/mysql:}[mysql]
+- {:pages/notes:}[notes]
+- {:pages/nvim-add-to-runtime:}[nvim add to runtime]
+- {:pages/nvim-tree:}[nvim-tree]
+- {:pages/og:}[og]
+- {:pages/pacman:}[pacman]
+- {:pages/php:}[php]
+- {:pages/plugins:}[plugins]
+- {:pages/postgres:}[postgres]
+- {:pages/prompt:}[prompt]
+- {:pages/psql:}[psql]
+- {:pages/query-examples:}[query examples]
+- {:pages/rails:}[rails]
+- {:pages/reduce-video-size:}[reduce video size]
+- {:pages/setup-new-user:}[setup new user]
+- {:pages/shell:}[shell]
+- {:pages/stow:}[stow]
+- {:pages/swap:}[swap]
+- {:pages/tag-remove:}[tag remove]
+- {:pages/todo:}[todo]
+- {:pages/typeorm:}[typeorm]
+- {:pages/typescript:}[typescript]
+- {:pages/vim:}[vim]
+- {:pages/vim-mode:}[vim mode]
+- {:pages/vimgrep:}[vimgrep]
+- {:pages/wayland-clipboard:}[wayland clipboard]
+- {:pages/wayland-screenshot:}[wayland screenshot]
+- {:pages/weechat:}[weechat]
+- {:pages/wexo-auth:}[wexo auth]
+- {:pages/wexo-nft:}[wexo-nft]
+- {:pages/zsh:}[zsh]
