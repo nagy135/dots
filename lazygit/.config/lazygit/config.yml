@@ -1,3 +1,10 @@
+customCommands:
+  - key: '<c-t>'
+    context: 'localBranches'
+    command: 'nvim -c "DiffviewOpen {{.SelectedLocalBranch.Name}}...{{.CheckedOutBranch.Name}} -- ."'
+    description: 'Open Diffview against selected branch'
+    output: terminal
+
 git:
   pagers:
     - colorArg: always
