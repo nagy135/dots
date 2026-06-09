@@ -1,0 +1,24 @@
+{
+  "model": "opus[1m]",
+  "enabledPlugins": {
+    "impeccable@impeccable": true
+  },
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "tui": "default",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "custom:gruvbox-material",
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
+}
