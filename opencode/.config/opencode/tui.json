@@ -1,14 +1,1 @@
-{
-  "$schema": "https://opencode.ai/tui.json",
-  "keybinds": {
-    "leader": "ctrl+x",
-    "messages_half_page_up": "ctrl+u",
-    "messages_half_page_down": "ctrl+d",
-    "messages_first": "ctrl+g,home",
-    "messages_last": "ctrl+shift+g,end",
-    "messages_next": "ctrl+f",
-    "messages_previous": "ctrl+b",
-    "variant_cycle": "none",
-    "variant_list": "ctrl+t"
-  }
-}
+../../.dots/opencode/.config/opencode/tui.json
