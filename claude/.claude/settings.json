@@ -1,7 +1,9 @@
 {
-  "model": "opus[1m]",
+  "model": "claude-opus-4-8",
   "enabledPlugins": {
-    "impeccable@impeccable": true
+    "impeccable@impeccable": true,
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "impeccable": {
@@ -20,5 +22,6 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "custom:gruvbox-material",
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "skipWorkflowUsageWarning": true
 }
