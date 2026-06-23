@@ -183,7 +183,7 @@ enable_gc = false                           # Periodic memory cleanup (adds CPU 
 "Tab" = "action move_monitor"
 
 [grid.ui]
-font_size = 13
+font_size = 15
 font_family = "Mononoki Nerd Font"
 border_width = 1
 
