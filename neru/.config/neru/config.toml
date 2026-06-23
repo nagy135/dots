@@ -286,14 +286,10 @@ invert_scroll = false                       # Invert scroll direction (for tools
 "Shift+I" = "action mouse_down"
 "Shift+U" = "action mouse_up"
 
-"Shift+Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Shift+Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Shift+Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Shift+Right" = "action move_mouse_relative --dx=10 --dy=0"
-"Up" = "action move_mouse_relative --dx=0 --dy=-40"
-"Down" = "action move_mouse_relative --dx=0 --dy=40"
-"Left" = "action move_mouse_relative --dx=-40 --dy=0"
-"Right" = "action move_mouse_relative --dx=40 --dy=0"
+"Up" = "action move_mouse_relative --dx=0 --dy=-10"
+"Down" = "action move_mouse_relative --dx=0 --dy=10"
+"Left" = "action move_mouse_relative --dx=-10 --dy=0"
+"Right" = "action move_mouse_relative --dx=10 --dy=0"
 
 "Shift+k" = "action move_mouse_relative --dx=0 --dy=-10"
 "Shift+j" = "action move_mouse_relative --dx=0 --dy=10"
