@@ -1,5 +1,15 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "youtrack": {
+      "type": "remote",
+      "url": "https://youtrack.sensory-minds.cloud/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {file:~/.config/opencode/secrets/youtrack-token}"
+      }
+    }
+  },
   "command": {
     "news": {
       "description": "Summarize incoming git changes or recent commits.",
