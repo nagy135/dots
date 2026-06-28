@@ -8,7 +8,7 @@ customCommands:
 git:
   pagers:
     - colorArg: always
-      pager: delta --dark --paging=never --24-bit-color=never --syntax-theme=base16
+      pager: "delta --dark --paging=never --true-color=always --syntax-theme=gruvbox-dark --minus-style='syntax #4a2b33' --minus-emph-style='syntax #653744' --plus-style='syntax #2f4733' --plus-emph-style='syntax #3f5f43' --line-numbers-minus-style='#f08a9a' --line-numbers-plus-style='#9ed98f'"
 gui:
   border: "rounded"
   showFileIcons: true
@@ -41,7 +41,7 @@ gui:
     cherryPickedCommitFgColor:
       - "#f5a97f"
     unstagedChangesColor:
-      - "#ed8796"
+      - "#f08a9a"
     defaultFgColor:
       - "#cad3f5"
     searchingActiveBorderColor:
