@@ -3,10 +3,11 @@
   "mcp": {
     "youtrack": {
       "type": "remote",
-      "url": "https://youtrack.sensory-minds.cloud/mcp",
+      "url": "https://agile.sensory-minds.com/mcp",
       "enabled": true,
+      "oauth": false,
       "headers": {
-        "Authorization": "Bearer {file:~/.config/opencode/secrets/youtrack-token}"
+        "Authorization": "Bearer {file:/Users/Viktor/.config/opencode/secrets/youtrack-token}"
       }
     }
   },
