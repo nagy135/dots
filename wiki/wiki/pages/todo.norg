@@ -2,18 +2,22 @@
 - room update (PUT) name/description [XMPP DONE, PHP NOTDONE]
     - admin affiliation
     - PUT /api/chat/rooms
+@code json
     {
         "roomJID": "babasda",
         "name": "new name",
         "description": "new description"
     }
+@end
 - admin remove user from room [XMPP DONE, PHP NOTDONE]
     - admin affiliation
     - POST /api/chat/rooms/remove-subscriber
+@code json
     {
         "roomJID": "babasda",
         "userUUID": "new name"
     }
+@end
 
 - unsubscribe create new admin if last admin [XMPP NOTDONE, PHP NOTDONE]
     - if i am last admin:
@@ -26,20 +30,24 @@
     - might fck up on transfers
     - not tested mail sending
 - POST /statement  => 200 and send mail with pdf 
+@code javascript
     {
         startDate,
         endDate
     }
+@end
 * API FORK
 - status: DONE
 - model api-fork
 - fields
+@code javascript
 {
     "version": "1.0.3",
     "environment": "develop" | "production" | "staging",
 }
+@end
 
-```
+@code text
 1.0.3 | develop
 1.0.1 | production
-```
+@end

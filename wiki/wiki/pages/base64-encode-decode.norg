@@ -1,11 +1,17 @@
 * Encode
-```
+@code bash
 echo -n "Hello World" | base64
-```
+@end
+
+@code text
 SGVsbG8gV29ybGQ=
+@end
 
 * Decode
-```
+@code bash
 echo -n "SGVsbG8gV29ybGQ=" | base64 -d
-```
+@end
+
+@code text
 Hello World%
+@end

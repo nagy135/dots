@@ -1,11 +1,19 @@
 * Add IRC server
+@code text
 /server add libera irc.libera.chat/6697 -ssl
+@end
 
 * Connect to IRC server
+@code text
 /connect libera
+@end
 
 * Join channel
+@code text
 /join #channel
+@end
 
 * Change nick
+@code text
 /set irc.server.libera.nicks "nagy135,infiniter"
+@end

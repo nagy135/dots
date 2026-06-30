@@ -1,9 +1,15 @@
 * zsh
-`bindkey -v`
+@code bash
+bindkey -v
+@end
 
 * bash
-`set -o vi`
+@code bash
+set -o vi
+@end
 
 * all readline respecting shell tools
 put into `~/.inputrc`:
-`set editing-mode vi`
+@code bash
+set editing-mode vi
+@end

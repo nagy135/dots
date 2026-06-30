@@ -1,5 +1,5 @@
 * Log in
 JWT token is in browser's local storage
-```
+@code text
 https://account-wexopay-staging.01people.tech/login
-```
+@end

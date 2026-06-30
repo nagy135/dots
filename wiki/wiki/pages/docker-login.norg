@@ -1,1 +1,3 @@
+@code bash
 docker login -u viktornagy01
+@end

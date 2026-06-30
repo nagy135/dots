@@ -1,13 +1,21 @@
 * Generate temporary PRIVATE key
-`$ openssl genrsa -aes128 -out temporary.pem 1024`
+@code bash
+$ openssl genrsa -aes128 -out temporary.pem 1024
+@end
 
 * Generate temporary PUBLIC key (from the PRIVATE one)
-`$ openssl rsa -in temporary.pem -pubout > temporary_public.pem`
+@code bash
+$ openssl rsa -in temporary.pem -pubout > temporary_public.pem
+@end
 
 * Encrypt
-`$ echo "secret api key value" > secret_api_key`
-`$ openssl rsautl -encrypt -inkey temporary_public.pem  -pubin -in secret_api_key -out secret_api_key.encrypted`
-`$ ls secret_api_key.encrypted`
+@code bash
+$ echo "secret api key value" > secret_api_key
+$ openssl rsautl -encrypt -inkey temporary_public.pem  -pubin -in secret_api_key -out secret_api_key.encrypted
+$ ls secret_api_key.encrypted
+@end
 
 * Decrypt
-`$ openssl rsautl -decrypt -inkey ~/.ssh/temporary.pem -in secret_api_key.encrypted`
+@code bash
+$ openssl rsautl -decrypt -inkey ~/.ssh/temporary.pem -in secret_api_key.encrypted
+@end

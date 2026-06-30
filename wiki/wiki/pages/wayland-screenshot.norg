@@ -1,17 +1,29 @@
 * Screenshoot all outputs:
+@code bash
 grim
+@end
 
 * Screenshoot a specific output:
+@code bash
 grim -o DP-1
+@end
 
 * Screenshoot a region
+@code bash
 grim -g "10,20 300x400"
+@end
 
 * Select a region and screenshoot it
+@code bash
 grim -g "$(slurp)"
+@end
 
 * Use a custom filename
+@code bash
 grim $(xdg-user-dir PICTURES)/$(date +'%s_grim.png')
+@end
 
 * Screenshoot and copy to clipboard
+@code bash
 grim - | wl-copy
+@end

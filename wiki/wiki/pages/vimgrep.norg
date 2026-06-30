@@ -1,6 +1,8 @@
 * Grep-ing for files without plugins
 
-- `:vim /search_term/ app/**/*.php`
+@code vim
+:vim /search_term/ app/**/*.php
+@end
 
 - :cope[n]     " Open the quickfix window
 - :ccl[ose]    " Close the quickfix window

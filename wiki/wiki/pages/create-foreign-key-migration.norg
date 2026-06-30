@@ -1,3 +1,4 @@
+@code php
 <?php
 
 $table->integer('food_id')->unsigned();
@@ -5,3 +6,4 @@ $table->integer('food_id')->unsigned();
 $table->foreign( 'food_id')
     ->references('id')
     ->on('foods');
+@end

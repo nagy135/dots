@@ -1,3 +1,4 @@
+@code bash
 sudo su
 fallocate -l 2G /swapfile
 chmod 600 /swapfile
@@ -6,3 +7,4 @@ swapon /swapfile
 swapon --show #to verify
 
 echo '/swapfile swap swap defaults 0 0' >> /etc/fstab
+@end

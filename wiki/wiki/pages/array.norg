@@ -1,22 +1,29 @@
 * create
+@code bash
 my_array=(1 2 "string" 4)
+@end
 
 * looping over elements
+@code bash
 for element in ${my_array[@]}; do
     echo $element
 done
+@end
 
 * looping over indices
+@code bash
 for index in ${!my_array[@]}; do
     echo $index ${my_array[$index]}
 done
+@end
 
 * append values
+@code bash
 my_array+=( "new value1" "new_value2" )
+@end
 
-
-* cheat sheet {{{ 
-
+* cheat sheet
+@code bash
 * Create an empty array
 arr=()
 
@@ -49,5 +56,4 @@ arr=( $(ls) )
 
 * Retrieve n elements starting at index s
 ${arr[@]:s:n}
-
-* }}}
+@end

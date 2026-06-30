@@ -1,20 +1,34 @@
 * copy a simple text message
+@code bash
 $ wl-copy Hello world!
+@end
 
 * copy the list of files in Downloads
+@code bash
 $ ls ~/Downloads | wl-copy
+@end
 
 * copy an image file
+@code bash
 $ wl-copy < ~/Pictures/photo.png
+@end
 
 * paste to a file
+@code bash
 $ wl-paste > clipboard.txt
+@end
 
 * grep each pasted word in file source.c
+@code bash
 $ for word in $(wl-paste); do grep $word source.c; done
+@end
 
 * copy the previous command
+@code bash
 $ wl-copy "!!"
+@end
 
 * replace the current selection with the list of types it's offered in
+@code bash
 $ wl-paste --list-types | wl-copy
+@end
