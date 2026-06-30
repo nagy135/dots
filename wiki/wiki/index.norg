@@ -137,3 +137,4 @@
 - {:pages/wexo-auth:}[wexo auth]
 - {:pages/wexo-nft:}[wexo-nft]
 - {:pages/zsh:}[zsh]
+- {:pages/kubectl:}[kubectl]

@@ -1,0 +1,7 @@
+* 1. Launch a Temporary Interactive Pod
+
+Run the following command to create a pod named `net-test`, open an interactive terminal (`-it`), and automatically delete the pod when you exit (`--rm`):
+
+@code bash
+kubectl run net-test --rm -it --image=nicolaka/netshoot -- /bin/bash
+@end
