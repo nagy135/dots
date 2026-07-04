@@ -37,7 +37,8 @@ text = "#d8a657"
 # See https://github.com/y3owk1n/neru/blob/main/docs/CLI.md
 [hotkeys]
 "Primary+Shift+F" = "hints"
-"Primary+Shift+G" = "grid"
+"Primary+Shift+G" = ["monitor_select", "action wait_for_mode_exit", "grid"]
+"Primary+Ctrl+G" = "grid"
 "Primary+Shift+C" = "recursive_grid"
 "Primary+Shift+S" = "scroll"
 
@@ -378,3 +379,26 @@ disable_file_logging = true                 # Console only (no file); file logs 
 max_file_size = 10                          # MB before rotation
 max_backups = 5                             # Old log files to keep
 max_age = 30                                # Days to retain old logs
+
+
+################################################################################
+
+[monitor_select]
+enabled = true                                # Enable interactive monitor picking mode
+characters = "123456789"                       # Characters used for monitor labels
+
+show_current_monitor = true                    # Show current monitor marker with label
+
+[monitor_select.ui]
+font_size = 96                                 # Badge label font size
+font_family = ""                               # Badge label font family
+subtitle_font_size = 18                        # Monitor name subtitle font size
+subtitle_font_family = ""                      # Subtitle font family
+border_radius = -1                             # Badge corner radius (-1 = auto)
+padding_x = -1                                 # Badge horizontal padding (-1 = auto)
+padding_y = -1                                 # Badge vertical padding (-1 = auto)
+border_width = 0                               # Badge border width
+backdrop_color = ""                            # Per-monitor tint backdrop
+
+[monitor_select.hotkeys]
+"Escape" = "idle"
