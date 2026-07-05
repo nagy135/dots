@@ -402,3 +402,8 @@ backdrop_color = ""                            # Per-monitor tint backdrop
 
 [monitor_select.hotkeys]
 "Escape" = "idle"
+
+[held_repeat]
+enabled = true
+initial_delay_ms = 0
+interval_ms = 40
