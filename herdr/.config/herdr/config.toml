@@ -1,8 +1,149 @@
+[theme]
+name = "tokyo-night"
+
+[terminal]
+new_cwd = "follow"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+prompt_new_tab_name = false
+
 [ui.toast]
 delivery = "system"
 
 [keys]
 prefix = "backtick"
 
-[ui]
-show_agent_labels_on_pane_borders = true
+# Move tmux-conflicting Herdr defaults away from your tmux keys.
+settings = ""
+detach = "prefix+ctrl+q"
+goto = "prefix+f"
+new_workspace = "prefix+ctrl+n"
+new_worktree = "prefix+ctrl+shift+g"
+close_workspace = "prefix+shift+x"
+close_tab = "prefix+ctrl+x"
+reload_config = "prefix+r"
+resize_mode = ""
+toggle_sidebar = "prefix+b"
+
+# tmux window/tab bindings.
+new_tab = "prefix+c"
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = "prefix+1..9"
+
+# tmux pane bindings.
+last_pane = ""
+split_horizontal = "prefix+s"
+split_vertical = "prefix+v"
+close_pane = "prefix+x"
+zoom = "prefix+z"
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+
+# Workspace/session-style navigation.
+previous_workspace = ""
+
+# Double-tap ` sends a literal ` in Herdr automatically.
+
+# popup scratchpad equivalent: focus/create a scratch workspace
+[[keys.command]]
+key = "alt+enter"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py scratch"
+
+# Keep tmux Shift-arrow tab navigation too.
+[[keys.command]]
+key = "shift+left"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py prev-tab"
+
+[[keys.command]]
+key = "shift+right"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py next-tab"
+
+[[keys.command]]
+key = "prefix+shift+n"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py prev-tab"
+
+# q is tmux last-window style: jump to the previously selected tab.
+[[keys.command]]
+key = "prefix+q"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py last-tab"
+
+# Q is tmux last-session style: jump to the previously selected workspace.
+[[keys.command]]
+key = "prefix+shift+q"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py last-workspace"
+
+# Kill session/workspace immediately, like tmux prefix+D.
+[[keys.command]]
+key = "prefix+shift+d"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py close-workspace-now"
+
+# Reload config aliases: prefix+r and prefix+Ctrl-c.
+[[keys.command]]
+key = "prefix+ctrl+c"
+type = "shell"
+command = "herdr server reload-config"
+
+# tmux prefix+Alt-h/j/k/l resize-pane -L/D/U/R.
+[[keys.command]]
+key = "prefix+alt+h"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py resize left"
+
+[[keys.command]]
+key = "prefix+alt+j"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py resize down"
+
+[[keys.command]]
+key = "prefix+alt+k"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py resize up"
+
+[[keys.command]]
+key = "prefix+alt+l"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py resize right"
+
+# tmux_split_jq equivalent: split right and run pbpaste | jq -C | less -R.
+[[keys.command]]
+key = "prefix+ctrl+j"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py split-jq"
+
+# Existing git browser hook, if ~/.scripts/git_open_browser.sh exists.
+[[keys.command]]
+key = "prefix+shift+g"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py git-open-browser"
+
+# tmux-launcher equivalents: create a named Herdr tab and run the command.
+[[keys.command]]
+key = "prefix+a"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py launcher OpenCode 'opencode'"
+
+[[keys.command]]
+key = "prefix+shift+a"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py launcher ClaudeCode 'claude --permission-mode auto'"
+
+[[keys.command]]
+key = "prefix+g"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py launcher LazyGit 'lazygit --ucf ~/.config/lazygit/config.yml'"
+
+[[keys.command]]
+key = "prefix+t"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py launcher test 'npm run test'"

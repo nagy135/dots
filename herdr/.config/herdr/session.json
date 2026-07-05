@@ -6,19 +6,19 @@
       "custom_name": "dots",
       "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "3": 3,
+        "9": 9,
         "11": 10,
-        "4": 4,
-        "9": 9
+        "3": 3,
+        "4": 4
       },
-      "next_public_pane_number": 11,
+      "next_public_pane_number": 15,
       "public_tab_numbers": [
         2,
         3,
-        5,
-        6
+        6,
+        7
       ],
-      "next_public_tab_number": 7,
+      "next_public_tab_number": 8,
       "tabs": [
         {
           "custom_name": "opencode",
@@ -27,13 +27,7 @@
           },
           "panes": {
             "3": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-              "agent_session": {
-                "source": "herdr:opencode",
-                "agent": "opencode",
-                "kind": "id",
-                "value": "ses_0d3ff48e1ffeK3jSh9hGqljbOD"
-              }
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
@@ -55,20 +49,6 @@
           "root_pane": 4
         },
         {
-          "custom_name": "claude",
-          "layout": {
-            "Pane": 9
-          },
-          "panes": {
-            "9": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 9,
-          "root_pane": 9
-        },
-        {
           "custom_name": null,
           "layout": {
             "Pane": 11
@@ -81,22 +61,38 @@
           "zoomed": false,
           "focused": 11,
           "root_pane": 11
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 9
+          },
+          "panes": {
+            "9": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 9,
+          "root_pane": 9
         }
       ],
-      "active_tab": 2
+      "active_tab": 1
     },
     {
       "id": "w2",
       "custom_name": "metzler",
       "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "10": 1
+        "10": 1,
+        "19": 5
       },
-      "next_public_pane_number": 2,
+      "next_public_pane_number": 6,
       "public_tab_numbers": [
-        1
+        1,
+        5
       ],
-      "next_public_tab_number": 2,
+      "next_public_tab_number": 6,
       "tabs": [
         {
           "custom_name": null,
@@ -111,13 +107,119 @@
           "zoomed": false,
           "focused": 10,
           "root_pane": 10
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 19
+          },
+          "panes": {
+            "19": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 19,
+          "root_pane": 19
         }
       ],
       "active_tab": 0
+    },
+    {
+      "id": "w3",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+      "public_pane_numbers": {
+        "14": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 14
+          },
+          "panes": {
+            "14": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 14,
+          "root_pane": 14
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w4",
+      "custom_name": "warehouse",
+      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+      "public_pane_numbers": {
+        "21": 3,
+        "15": 1,
+        "20": 2
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1,
+        2,
+        3
+      ],
+      "next_public_tab_number": 4,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 15
+          },
+          "panes": {
+            "15": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 15,
+          "root_pane": 15
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 20
+          },
+          "panes": {
+            "20": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 20,
+          "root_pane": 20
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 21
+          },
+          "panes": {
+            "21": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 21,
+          "root_pane": 21
+        }
+      ],
+      "active_tab": 2
     }
   ],
-  "active": 0,
-  "selected": 0,
+  "active": 1,
+  "selected": 1,
   "sidebar_width": 26,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []
