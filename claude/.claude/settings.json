@@ -21,6 +21,7 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "theme": "custom:gruvbox-material",
+  "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
   "skipWorkflowUsageWarning": true
