@@ -177,10 +177,10 @@ enable_gc = false                           # Periodic memory cleanup (adds CPU 
 "Shift+M" = "action middle_click"
 "Shift+I" = "action mouse_down"
 "Shift+U" = "action mouse_up"
-"Up" = "action move_mouse_relative --dx=0 --dy=-10"
-"Down" = "action move_mouse_relative --dx=0 --dy=10"
-"Left" = "action move_mouse_relative --dx=-10 --dy=0"
-"Right" = "action move_mouse_relative --dx=10 --dy=0"
+"Up" = "action move_mouse_relative --dx=0 --dy=-1"
+"Down" = "action move_mouse_relative --dx=0 --dy=1"
+"Left" = "action move_mouse_relative --dx=-1 --dy=0"
+"Right" = "action move_mouse_relative --dx=1 --dy=0"
 "Tab" = "action move_monitor"
 
 [grid.ui]
