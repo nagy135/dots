@@ -6,10 +6,10 @@
       "custom_name": "dots",
       "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "9": 9,
-        "11": 10,
-        "3": 3,
-        "4": 4
+        "4": 9,
+        "1": 3,
+        "3": 10,
+        "2": 4
       },
       "next_public_pane_number": 15,
       "public_tab_numbers": [
@@ -23,6 +23,34 @@
         {
           "custom_name": "opencode",
           "layout": {
+            "Pane": 1
+          },
+          "panes": {
+            "1": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 1,
+          "root_pane": 1
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 2
+          },
+          "panes": {
+            "2": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 2,
+          "root_pane": 2
+        },
+        {
+          "custom_name": null,
+          "layout": {
             "Pane": 3
           },
           "panes": {
@@ -35,32 +63,252 @@
           "root_pane": 3
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 4
           },
           "panes": {
             "4": {
-              "cwd": "/Users/Viktor/.dots"
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
           "focused": 4,
           "root_pane": 4
-        },
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w2",
+      "custom_name": "metzler",
+      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+      "public_pane_numbers": {
+        "6": 5,
+        "5": 1
+      },
+      "next_public_pane_number": 8,
+      "public_tab_numbers": [
+        1,
+        5
+      ],
+      "next_public_tab_number": 6,
+      "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 11
+            "Pane": 5
           },
           "panes": {
-            "11": {
+            "5": {
               "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 11,
-          "root_pane": 11
+          "focused": 5,
+          "root_pane": 5
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 6
+          },
+          "panes": {
+            "6": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 6,
+          "root_pane": 6
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w3",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/.dots/wiki/wiki",
+      "public_pane_numbers": {
+        "31": 19,
+        "42": 29,
+        "41": 28,
+        "39": 26,
+        "29": 17,
+        "43": 30,
+        "13": 2,
+        "28": 16
+      },
+      "next_public_pane_number": 31,
+      "public_tab_numbers": [
+        2,
+        20,
+        23,
+        26,
+        47,
+        48,
+        51,
+        52
+      ],
+      "next_public_tab_number": 53,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 13
+          },
+          "panes": {
+            "13": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 13,
+          "root_pane": 13
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 29
+          },
+          "panes": {
+            "29": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 29,
+          "root_pane": 29
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 31
+          },
+          "panes": {
+            "31": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 31,
+          "root_pane": 31
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 28
+          },
+          "panes": {
+            "28": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "8fdab875-f053-4654-b66f-ec1692194fc4"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 28,
+          "root_pane": 28
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 42
+          },
+          "panes": {
+            "42": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 42,
+          "root_pane": 42
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 41
+          },
+          "panes": {
+            "41": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fc9eb-2396-7f42-b384-f2ad9410bffe"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 41,
+          "root_pane": 41
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 43
+          },
+          "panes": {
+            "43": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 43,
+          "root_pane": 43
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 39
+          },
+          "panes": {
+            "39": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 39,
+          "root_pane": 39
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w4",
+      "custom_name": "warehouse",
+      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+      "public_pane_numbers": {
+        "8": 1,
+        "10": 3,
+        "9": 2
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1,
+        2,
+        3
+      ],
+      "next_public_tab_number": 4,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 8
+          },
+          "panes": {
+            "8": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 8,
+          "root_pane": 8
         },
         {
           "custom_name": null,
@@ -75,25 +323,7 @@
           "zoomed": false,
           "focused": 9,
           "root_pane": 9
-        }
-      ],
-      "active_tab": 1
-    },
-    {
-      "id": "w2",
-      "custom_name": "metzler",
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-      "public_pane_numbers": {
-        "10": 1,
-        "19": 5
-      },
-      "next_public_pane_number": 6,
-      "public_tab_numbers": [
-        1,
-        5
-      ],
-      "next_public_tab_number": 6,
-      "tabs": [
+        },
         {
           "custom_name": null,
           "layout": {
@@ -107,30 +337,16 @@
           "zoomed": false,
           "focused": 10,
           "root_pane": 10
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 19
-          },
-          "panes": {
-            "19": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 19,
-          "root_pane": 19
         }
       ],
-      "active_tab": 0
+      "active_tab": 2
     },
     {
-      "id": "w3",
+      "id": "w5",
       "custom_name": null,
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+      "identity_cwd": "/Users/Viktor/.dots/wiki/wiki",
       "public_pane_numbers": {
-        "14": 1
+        "18": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -141,85 +357,23 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 14
+            "Pane": 18
           },
           "panes": {
-            "14": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            "18": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
             }
           },
           "zoomed": false,
-          "focused": 14,
-          "root_pane": 14
+          "focused": 18,
+          "root_pane": 18
         }
       ],
       "active_tab": 0
-    },
-    {
-      "id": "w4",
-      "custom_name": "warehouse",
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-      "public_pane_numbers": {
-        "21": 3,
-        "15": 1,
-        "20": 2
-      },
-      "next_public_pane_number": 4,
-      "public_tab_numbers": [
-        1,
-        2,
-        3
-      ],
-      "next_public_tab_number": 4,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 15
-          },
-          "panes": {
-            "15": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 15,
-          "root_pane": 15
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 20
-          },
-          "panes": {
-            "20": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 20,
-          "root_pane": 20
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 21
-          },
-          "panes": {
-            "21": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 21,
-          "root_pane": 21
-        }
-      ],
-      "active_tab": 2
     }
   ],
-  "active": 1,
-  "selected": 1,
+  "active": 2,
+  "selected": 2,
   "sidebar_width": 26,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []

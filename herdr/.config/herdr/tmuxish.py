@@ -12,6 +12,37 @@ from pathlib import Path
 
 HERDR = os.environ.get("HERDR_BIN_PATH") or "herdr"
 HOME = Path.home()
+RESERVED_TAB_PREFIX = ""
+
+# Fixed launchers: copy one block to add another launcher, then bind its name
+# in config.toml with: tmuxish.py fixed-launcher <name>
+FIXED_LAUNCHERS = {
+    "lazygit": {
+        "position": 3,
+        "label": "LazyGit",
+        "command": "lazygit --ucf ~/.config/lazygit/config.yml",
+    },
+    "claude": {
+        "position": 4,
+        "label": "ClaudeCode",
+        "command": "claude --permission-mode auto",
+    },
+    "codex": {
+        "position": 6,
+        "label": "codex",
+        "command": "codex",
+    },
+    "glab-pipelines": {
+        "position": 7,
+        "label": "glab-pipelines",
+        "command": "glab-pipelines",
+    },
+    "opencode": {
+        "position": 8,
+        "label": "OpenCode",
+        "command": "opencode",
+    },
+}
 
 
 def run(args: list[str], *, check: bool = True, capture: bool = False) -> subprocess.CompletedProcess[str]:
@@ -27,6 +58,26 @@ def run(args: list[str], *, check: bool = True, capture: bool = False) -> subpro
 def herdr_json(*args: str) -> dict:
     proc = run([HERDR, *args], capture=True)
     return json.loads(proc.stdout)
+
+
+def fixed_launchers() -> dict[str, dict]:
+    launchers = FIXED_LAUNCHERS
+
+    used_positions: dict[int, str] = {}
+    for name, launcher in launchers.items():
+        position = launcher.get("position")
+        label = launcher.get("label")
+        command = launcher.get("command")
+        if not isinstance(position, int) or position < 1:
+            raise ValueError(f"launcher {name!r} needs a positive integer position")
+        if not isinstance(label, str) or not label.strip():
+            raise ValueError(f"launcher {name!r} needs a non-empty label")
+        if not isinstance(command, str) or not command.strip():
+            raise ValueError(f"launcher {name!r} needs a non-empty command")
+        if owner := used_positions.get(position):
+            raise ValueError(f"launchers {owner!r} and {name!r} both use position {position}")
+        used_positions[position] = name
+    return launchers
 
 
 def active_workspace_id() -> str:
@@ -125,18 +176,156 @@ def last_workspace() -> None:
     focus_workspace(-1)
 
 
-def create_tab_and_run(label: str, command: str) -> None:
-    created = herdr_json("tab", "create", "--workspace", active_workspace_id(), "--label", label, "--cwd", active_cwd())
+def root_pane_id(created: dict) -> str:
     result = created.get("result", {})
     root = result.get("root_pane") or result.get("pane") or result.get("root") or {}
     pane_id = root.get("pane_id") or root.get("id")
+    if pane_id:
+        return pane_id
+    raise RuntimeError(f"could not find root pane in tab create response: {created}")
+
+
+def existing_tab_pane_id(workspace_id: str, tab_id: str) -> str:
+    panes = herdr_json("pane", "list", "--workspace", workspace_id)["result"]["panes"]
+    pane_id = next((pane["pane_id"] for pane in panes if pane.get("tab_id") == tab_id), None)
     if not pane_id:
-        # Fallback for older/newer response shapes: use focused pane in the new tab.
-        panes = herdr_json("pane", "list", "--workspace", active_workspace_id())["result"]["panes"]
-        pane_id = next((pane["pane_id"] for pane in panes if pane.get("focused")), None)
-    if not pane_id:
-        raise RuntimeError(f"could not find root pane in tab create response: {created}")
-    run([HERDR, "pane", "run", pane_id, command])
+        raise RuntimeError(f"could not find a pane in tab {tab_id}")
+    return pane_id
+
+
+def move_tab_to_end(workspace_id: str, tab: dict) -> None:
+    if tab.get("pane_count") != 1:
+        raise RuntimeError(
+            f"cannot reorder tab {tab.get('label') or tab['tab_id']}: "
+            "only single-pane tabs can be moved safely"
+        )
+    pane_id = existing_tab_pane_id(workspace_id, tab["tab_id"])
+    args = ["pane", "move", pane_id, "--new-tab", "--workspace", workspace_id]
+    label = tab.get("label")
+    if label and not str(label).isdigit():
+        args.extend(["--label", label])
+    args.append("--no-focus")
+    herdr_json(*args)
+
+
+def reorder_tabs(workspace_id: str, tabs: list[dict], desired: list[dict]) -> None:
+    current_ids = [tab["tab_id"] for tab in tabs]
+    desired_ids = [tab["tab_id"] for tab in desired]
+    if current_ids == desired_ids:
+        return
+
+    # Moving a sole pane into a new tab appends that tab. Keep the longest
+    # possible desired prefix in place, then append the remaining tabs in
+    # desired order. This realizes any permutation without restarting panes.
+    tabs_to_move = desired
+    for prefix_length in range(len(desired), -1, -1):
+        prefix_ids = set(desired_ids[:prefix_length])
+        if [tab_id for tab_id in current_ids if tab_id in prefix_ids] == desired_ids[:prefix_length]:
+            tabs_to_move = desired[prefix_length:]
+            break
+
+    # Validate the complete rotation before moving anything so a split tab
+    # cannot leave the workspace only partly reordered.
+    split_tab = next((tab for tab in tabs_to_move if tab.get("pane_count") != 1), None)
+    if split_tab:
+        raise RuntimeError(
+            f"cannot restore fixed launcher positions: "
+            f"tab {split_tab.get('label') or split_tab['tab_id']} has multiple panes"
+        )
+    for tab in tabs_to_move:
+        move_tab_to_end(workspace_id, tab)
+
+
+def create_tab(workspace_id: str, *, label: str | None = None, focus: bool = False) -> dict:
+    args = ["tab", "create", "--workspace", workspace_id, "--cwd", active_cwd()]
+    if label:
+        args.extend(["--label", label])
+    args.append("--focus" if focus else "--no-focus")
+    return herdr_json(*args)
+
+
+def create_tab_and_run(label: str, command: str) -> None:
+    created = create_tab(active_workspace_id(), label=label, focus=True)
+    run([HERDR, "pane", "run", root_pane_id(created), command])
+
+
+def fixed_tab_and_run(
+    position: int,
+    label: str,
+    command: str,
+    fixed_tab_labels: dict[int, str] | None = None,
+) -> None:
+    if position < 1:
+        raise ValueError("fixed tab position must be positive")
+
+    workspace_id = active_workspace_id()
+    tabs = herdr_json("tab", "list", "--workspace", workspace_id)["result"]["tabs"]
+    if fixed_tab_labels is None:
+        fixed_tab_labels = {
+            launcher["position"]: launcher["label"] for launcher in fixed_launchers().values()
+        }
+    if fixed_tab_labels.get(position) != label:
+        raise ValueError(f"launcher {label!r} is not configured for position {position}")
+
+    pinned: dict[int, dict] = {}
+    should_run = False
+    for fixed_position, fixed_label in sorted(fixed_tab_labels.items()):
+        reserved_label = f"{RESERVED_TAB_PREFIX}{fixed_label}"
+        fixed_tab = next((tab for tab in tabs if tab.get("label") == fixed_label), None)
+        if fixed_tab is None:
+            fixed_tab = next((tab for tab in tabs if tab.get("label") == reserved_label), None)
+        if fixed_tab is None:
+            new_label = fixed_label if fixed_label == label else reserved_label
+            created = create_tab(workspace_id, label=new_label)
+            fixed_tab = created.get("result", {}).get("tab", {})
+            fixed_tab["pane_count"] = fixed_tab.get("pane_count", 1)
+            tabs.append(fixed_tab)
+            if fixed_label == label:
+                should_run = True
+        elif fixed_label == label and fixed_tab.get("label") == reserved_label:
+            run([HERDR, "tab", "rename", fixed_tab["tab_id"], fixed_label])
+            fixed_tab["label"] = fixed_label
+            should_run = True
+        pinned[fixed_position] = fixed_tab
+
+    while len(tabs) < max(fixed_tab_labels):
+        created = create_tab(workspace_id)
+        filler = created.get("result", {}).get("tab", {})
+        filler["pane_count"] = filler.get("pane_count", 1)
+        tabs.append(filler)
+
+    desired: list[dict | None] = [None] * len(tabs)
+    pinned_ids = {tab["tab_id"] for tab in pinned.values()}
+    for fixed_position, fixed_tab in pinned.items():
+        desired[fixed_position - 1] = fixed_tab
+    unpinned = iter(tab for tab in tabs if tab["tab_id"] not in pinned_ids)
+    for index, tab in enumerate(desired):
+        if tab is None:
+            desired[index] = next(unpinned)
+
+    reorder_tabs(workspace_id, tabs, [tab for tab in desired if tab is not None])
+    tabs = herdr_json("tab", "list", "--workspace", workspace_id)["result"]["tabs"]
+    launcher = next(tab for tab in tabs if tab.get("label") == label)
+    pane_id = existing_tab_pane_id(workspace_id, launcher["tab_id"])
+    run([HERDR, "tab", "focus", launcher["tab_id"]])
+    if should_run:
+        run([HERDR, "pane", "run", pane_id, command])
+
+
+def run_fixed_launcher(name: str) -> None:
+    launchers = fixed_launchers()
+    if name not in launchers:
+        raise ValueError(f"unknown fixed launcher {name!r}")
+    launcher = launchers[name]
+    labels_by_position = {
+        entry["position"]: entry["label"] for entry in launchers.values()
+    }
+    fixed_tab_and_run(
+        launcher["position"],
+        launcher["label"],
+        launcher["command"],
+        labels_by_position,
+    )
 
 
 def scratch() -> None:
@@ -196,6 +385,15 @@ def main(argv: list[str]) -> int:
         focus_workspace(1)
     elif action == "launcher" and len(argv) >= 4:
         create_tab_and_run(argv[2], " ".join(argv[3:]))
+    elif action == "fixed-launcher" and len(argv) == 3:
+        try:
+            run_fixed_launcher(argv[2])
+        except (OSError, RuntimeError, ValueError) as error:
+            run(
+                [HERDR, "notification", "show", "Launcher unavailable", "--body", str(error)],
+                check=False,
+            )
+            return 1
     elif action == "scratch":
         scratch()
     elif action == "split-jq":

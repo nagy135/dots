@@ -673,3 +673,717 @@
 2026-07-05T11:36:44.612064Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
 2026-07-05T12:21:42.824596Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
 2026-07-05T14:54:59.241708Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-03T22:41:40.177325Z  INFO herdr::platform::macos: raised server file descriptor soft limit previous=2560 target=8192
+2026-08-03T22:41:40.178150Z  INFO herdr::api::server: api server listening path=/Users/Viktor/.config/herdr/herdr.sock
+2026-08-03T22:41:40.178984Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.181376Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=71418
+2026-08-03T22:41:40.181555Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.183592Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=71419
+2026-08-03T22:41:40.183724Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.185626Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=71420
+2026-08-03T22:41:40.185730Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.187841Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=71421
+2026-08-03T22:41:40.188121Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.190167Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=71422
+2026-08-03T22:41:40.190333Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.193005Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=71423
+2026-08-03T22:41:40.193270Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=7 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.195584Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=7 pid=71424
+2026-08-03T22:41:40.195934Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=8 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.198250Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=8 pid=71425
+2026-08-03T22:41:40.198414Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=9 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.201284Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=9 pid=71426
+2026-08-03T22:41:40.201430Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=10 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.204116Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=10 pid=71427
+2026-08-03T22:41:40.204535Z  INFO herdr::logging: session restore evaluated event="persist.restore" subsystem="persist" outcome="ok" workspaces=4
+2026-08-03T22:41:40.204614Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-03T22:41:40.227392Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-03T22:41:40.229172Z  INFO herdr::server::headless: restored session already has workspaces; ignoring startup cwd cwd=/Users/Viktor
+2026-08-03T22:41:40.229501Z  INFO herdr::server::headless: client protocol socket listening path=/Users/Viktor/.config/herdr/herdr-client.sock
+2026-08-03T22:41:40.229529Z  INFO herdr::server::headless: herdr server started api_socket=/Users/Viktor/.config/herdr/herdr.sock client_socket=/Users/Viktor/.config/herdr/herdr-client.sock
+2026-08-03T22:41:40.229555Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=71417
+2026-08-03T22:41:40.316341Z  INFO herdr::logging: update available event="update.available" subsystem="update" outcome="ok" version="0.7.5"
+2026-08-03T22:41:40.341908Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="maki"
+2026-08-03T22:41:40.370282Z  INFO herdr::update: auto-update check: v0.7.5 available through Homebrew, waiting for explicit install
+2026-08-03T22:41:40.370848Z  INFO herdr::server::headless: client connected client_id=2 cols=214 rows=58 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-03T22:41:59.328936Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=11 rows=28 cols=94 scrollback_limit_bytes=10000000
+2026-08-03T22:41:59.336593Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=11 pid=73466
+2026-08-03T22:42:00.502971Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=11 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:42:00.503033Z  INFO herdr::pane: pane session terminated pane=11 pid=73466 signal=Hangup
+2026-08-03T22:42:01.189908Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=12 rows=28 cols=94 scrollback_limit_bytes=10000000
+2026-08-03T22:42:01.197235Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=12 pid=73720
+2026-08-03T22:42:02.158938Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=12 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:42:02.158988Z  INFO herdr::pane: pane session terminated pane=12 pid=73720 signal=Hangup
+2026-08-03T22:42:05.529818Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t5"
+2026-08-03T22:42:06.277028Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:06.745746Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t5"
+2026-08-03T22:42:07.414393Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:08.676847Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:42:08.676931Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t5"
+2026-08-03T22:42:08.676962Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:42:09.973390Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:42:09.973445Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:09.973476Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:42:10.783176Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:42:10.783237Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t5"
+2026-08-03T22:42:10.783270Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:42:11.550832Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:42:11.550886Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:11.550915Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:42:16.558109Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:42:30.210890Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:42:30.211005Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:42:35.214489Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:42:43.306876Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-03T22:42:43.306975Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:48.310659Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:42:51.911395Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:42:51.911496Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:42:51.911526Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:42:51.911575Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:42:52.984541Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:42:52.984597Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-03T22:42:52.984612Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:42:52.984637Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:42:54.359036Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:42:54.359090Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:42:54.359103Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:42:54.359142Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:42:59.364100Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:43:13.770842Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:43:13.770896Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-03T22:43:13.770910Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:43:13.770933Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:43:15.090595Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:43:15.090650Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:43:15.090665Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:43:15.090710Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:43:20.093029Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:43:38.197116Z  INFO herdr::pane: agent changed pane=7 previous_agent=None agent=Some(Codex) process=codex pgid=Some(79946)
+2026-08-03T22:43:44.563442Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=13 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:43:44.571712Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=13 pid=80200
+2026-08-03T22:43:44.572106Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T22:43:44.572154Z  INFO herdr::logging: tab created event="tab.create" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2" pane_id=13
+2026-08-03T22:43:49.582417Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:44:51.897346Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:44:51.897396Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:44:51.897421Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:44:56.901432Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:45:19.330815Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:45:21.203502Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T22:45:26.223244Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:45:30.699732Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:45:30.699782Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:45:30.699808Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:45:31.877686Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:45:31.877744Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T22:45:31.877779Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:45:36.885731Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:46:02.367775Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:46:02.367835Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:46:02.367865Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:46:06.029082Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:46:06.029189Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=14 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:46:06.032515Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=14 pid=81507
+2026-08-03T22:46:06.032609Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:46:06.032905Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:46:09.928869Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:46:09.928968Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=15 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:46:09.931957Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=15 pid=81691
+2026-08-03T22:46:09.932072Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:46:09.932342Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:46:10.489274Z  INFO herdr::pane: agent changed pane=15 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(81736)
+2026-08-03T22:46:13.810994Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T22:46:14.248079Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:46:14.555899Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:46:19.562271Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:46:19.738462Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:46:19.738566Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=16 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:46:19.741698Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=16 pid=82310
+2026-08-03T22:46:19.741815Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:46:19.742087Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:46:20.300498Z  INFO herdr::pane: agent changed pane=16 previous_agent=None agent=Some(Claude) process=claude pgid=Some(82355)
+2026-08-03T22:46:21.027059Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:46:22.889780Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:46:22.889834Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:46:22.889865Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:46:24.311467Z  INFO herdr::pane: agent changed pane=15 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(81736)
+2026-08-03T22:46:29.308208Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:46:37.352041Z  INFO herdr::pane: agent changed pane=15 previous_agent=Some(OpenCode) agent=None pgid=Some(81691)
+2026-08-03T22:46:42.054222Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:46:47.933796Z  INFO herdr::pane: agent changed pane=15 previous_agent=None agent=Some(Codex) process=codex pgid=Some(82745)
+2026-08-03T22:46:50.654874Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1"
+2026-08-03T22:46:52.213589Z  INFO herdr::pane: agent changed pane=7 previous_agent=Some(Codex) agent=None pgid=Some(71424)
+2026-08-03T22:46:52.755218Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=7 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:46:52.755344Z  INFO herdr::pane: pane session terminated pane=7 pid=71424 signal=Hangup
+2026-08-03T22:46:53.728292Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:46:53.728350Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:46:53.728379Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:46:58.730126Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:47:04.763078Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:47:05.496352Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:47:06.164296Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:47:06.725355Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t4"
+2026-08-03T22:47:11.731375Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:47:18.125225Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=17 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:47:18.130718Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=17 pid=83160
+2026-08-03T22:47:18.130964Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:47:18.130980Z  INFO herdr::logging: tab created event="tab.create" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6" pane_id=17
+2026-08-03T22:47:18.693861Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=15 status="ExitStatus { code: 1, signal: None }"
+2026-08-03T22:47:18.712587Z  INFO herdr::pane: pane session terminated pane=15 pid=81691 signal=Hangup
+2026-08-03T22:47:18.712898Z  WARN herdr::app::actions: PaneDied for unknown pane pane=15
+2026-08-03T22:47:23.139111Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:47:35.333568Z  INFO herdr::pane: agent changed pane=17 previous_agent=None agent=Some(Codex) process=codex pgid=Some(83364)
+2026-08-03T22:47:52.561383Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:47:53.074900Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:47:53.513148Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:47:53.874733Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:47:54.256317Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:47:54.731794Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:47:59.737958Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:48:19.976400Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:48:24.979796Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:48:34.308116Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:49:00.886260Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:49:01.684005Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t5"
+2026-08-03T22:49:02.046538Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:49:07.053578Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=4
+2026-08-03T22:49:24.873571Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=18 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:49:24.877556Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=18 pid=84434
+2026-08-03T22:49:24.877729Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w5" pane_id=18
+2026-08-03T22:49:24.877735Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w5"
+2026-08-03T22:49:24.877743Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w5" tab_id="w5:t1"
+2026-08-03T22:49:29.880685Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:49:36.813510Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:49:36.813601Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:49:41.816434Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:50:05.730907Z  INFO herdr::app::actions: copied selection to clipboard
+2026-08-03T22:50:13.458623Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:50:13.458728Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=19 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:50:13.461706Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=19 pid=84930
+2026-08-03T22:50:13.461803Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t7"
+2026-08-03T22:50:13.462007Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:50:15.700335Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:50:15.700431Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=20 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:50:15.703698Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=20 pid=85064
+2026-08-03T22:50:15.703809Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t8"
+2026-08-03T22:50:15.704029Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:50:17.416726Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t7"
+2026-08-03T22:50:18.988829Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t8"
+2026-08-03T22:50:21.448612Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:50:26.454982Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:51:41.643117Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-03T22:51:41.643163Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:51:46.648700Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:51:48.897175Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t5"
+2026-08-03T22:51:50.495457Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:51:50.495508Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:51:50.495534Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:51:51.905662Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:51:51.905722Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:51:51.905739Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:51:51.905781Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:51:52.839213Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:51:52.839279Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-03T22:51:52.839295Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-03T22:51:52.839322Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:51:53.403287Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:51:53.403340Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:51:53.403355Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:51:53.403395Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:51:58.407425Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:52:00.317145Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-08-03T22:52:00.317175Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-08-03T22:52:02.346137Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T22:52:02.346207Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:52:02.346224Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:52:02.346265Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T22:52:07.351333Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:52:09.792028Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:52:14.799784Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:52:44.885713Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:server:reload-config" method="server.reload_config" changes_ui=true
+2026-08-03T22:52:44.886153Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:server:reload-config" method="server.reload_config"
+2026-08-03T22:53:09.941371Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:53:09.941483Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=21 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:53:09.944913Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=21 pid=87121
+2026-08-03T22:53:09.945051Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t9"
+2026-08-03T22:53:09.945206Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t9"
+2026-08-03T22:53:09.945468Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:53:10.506536Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=19 status="ExitStatus { code: 1, signal: None }"
+2026-08-03T22:53:10.527691Z  INFO herdr::pane: pane session terminated pane=19 pid=84930 signal=Hangup
+2026-08-03T22:53:10.530579Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=20 status="ExitStatus { code: 1, signal: None }"
+2026-08-03T22:53:10.553467Z  INFO herdr::pane: pane session terminated pane=20 pid=85064 signal=Hangup
+2026-08-03T22:53:10.553591Z  WARN herdr::app::actions: PaneDied for unknown pane pane=19
+2026-08-03T22:53:10.553603Z  WARN herdr::app::actions: PaneDied for unknown pane pane=20
+2026-08-03T22:53:14.948578Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:53:18.522995Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t3"
+2026-08-03T22:53:20.384854Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=14 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:53:20.386114Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=21 status="ExitStatus { code: 1, signal: None }"
+2026-08-03T22:53:20.408755Z  INFO herdr::pane: pane session terminated pane=21 pid=87121 signal=Hangup
+2026-08-03T22:53:20.410278Z  INFO herdr::pane: pane session terminated pane=14 pid=81507 signal=Hangup
+2026-08-03T22:53:20.410311Z  WARN herdr::app::actions: PaneDied for unknown pane pane=21
+2026-08-03T22:53:22.467881Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:53:22.467975Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=22 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:53:22.471368Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=22 pid=87426
+2026-08-03T22:53:22.471492Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tA"
+2026-08-03T22:53:22.471509Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tA"
+2026-08-03T22:53:22.471803Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:53:25.704871Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:53:30.707035Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:53:41.790189Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T22:53:41.790321Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:53:45.308170Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:53:50.315952Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:54:03.459460Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:54:03.459552Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=23 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:54:03.462840Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=23 pid=87860
+2026-08-03T22:54:03.462955Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tB"
+2026-08-03T22:54:03.462968Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tB"
+2026-08-03T22:54:03.463199Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:54:06.498457Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T22:54:08.041966Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T22:54:08.042021Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tB"
+2026-08-03T22:54:08.042048Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T22:54:10.113263Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=23 status="ExitStatus { code: 127, signal: None }"
+2026-08-03T22:54:10.113325Z  INFO herdr::pane: pane session terminated pane=23 pid=87860 signal=Hangup
+2026-08-03T22:54:11.898736Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:54:16.907041Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:54:19.025224Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:54:22.077362Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:54:22.077453Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=24 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:54:22.080644Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=24 pid=88136
+2026-08-03T22:54:22.080741Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tC"
+2026-08-03T22:54:22.080751Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tC"
+2026-08-03T22:54:22.081021Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:54:24.171148Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T22:54:24.171255Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=25 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T22:54:24.174496Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=25 pid=88264
+2026-08-03T22:54:24.174611Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tD"
+2026-08-03T22:54:24.174622Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tD"
+2026-08-03T22:54:24.174865Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T22:54:25.645515Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=25 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:54:25.645568Z  INFO herdr::pane: pane session terminated pane=25 pid=88264 signal=Hangup
+2026-08-03T22:54:26.221734Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=24 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T22:54:26.221787Z  INFO herdr::pane: pane session terminated pane=24 pid=88136 signal=Hangup
+2026-08-03T22:54:28.034201Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:54:33.041931Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:54:39.602810Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:notification:show" method="notification.show" changes_ui=true
+2026-08-03T22:54:39.602874Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:notification:show" method="notification.show"
+2026-08-03T22:54:45.611885Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:notification:show" method="notification.show" changes_ui=true
+2026-08-03T22:54:45.611951Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:notification:show" method="notification.show"
+2026-08-03T22:57:06.949417Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:57:24.565023Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T22:58:12.397983Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T22:58:17.403088Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:01:31.360538Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:01:31.360688Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:01:31.367892Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:01:31.367957Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tE"
+2026-08-03T23:01:31.367997Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:01:36.372391Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:01:41.280243Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:01:41.280291Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-08-03T23:01:41.280306Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-08-03T23:01:41.280321Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:01:42.697657Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:01:42.697707Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T23:01:42.697718Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tE"
+2026-08-03T23:01:42.697750Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:01:44.258662Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:01:49.260813Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:01:55.363566Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:01:55.363664Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=26 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:01:55.366914Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=26 pid=91973
+2026-08-03T23:01:55.367274Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:01:55.371817Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:01:55.371891Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=27 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:01:55.374510Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=27 pid=91975
+2026-08-03T23:01:55.374912Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:01:55.379608Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:01:55.379663Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tG"
+2026-08-03T23:01:55.379691Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:01:55.384118Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:01:55.384170Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tG"
+2026-08-03T23:01:55.384197Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:01:55.927677Z  INFO herdr::pane: agent changed pane=27 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(92065)
+2026-08-03T23:01:59.672720Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:02:00.484457Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:02:00.484511Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tG"
+2026-08-03T23:02:00.484539Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:02:01.336353Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:02:02.958090Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:02:02.958141Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tE"
+2026-08-03T23:02:02.958167Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:02:07.965784Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:02:10.555386Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:02:10.555509Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=28 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:02:10.558951Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=28 pid=92693
+2026-08-03T23:02:10.559066Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tH"
+2026-08-03T23:02:10.559412Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:02:10.569687Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:02:10.569870Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:02:10.579647Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:02:10.580166Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:02:10.594714Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:02:10.594768Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tH"
+2026-08-03T23:02:10.594795Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:02:11.040159Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=16 status="ExitStatus { code: 1, signal: None }"
+2026-08-03T23:02:11.115633Z  INFO herdr::pane: agent changed pane=28 previous_agent=None agent=Some(Claude) process=claude pgid=Some(92745)
+2026-08-03T23:02:11.414149Z  INFO herdr::pane: pane session terminated pane=16 pid=82310 signal=Terminate
+2026-08-03T23:02:11.414357Z  WARN herdr::app::actions: PaneDied for unknown pane pane=16
+2026-08-03T23:02:15.786890Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tJ"
+2026-08-03T23:02:16.525127Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=26 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:02:16.525188Z  INFO herdr::pane: pane session terminated pane=26 pid=91973 signal=Hangup
+2026-08-03T23:02:18.763718Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=29 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:02:18.772222Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=29 pid=92874
+2026-08-03T23:02:18.772539Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:02:18.772569Z  INFO herdr::logging: tab created event="tab.create" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM" pane_id=29
+2026-08-03T23:02:23.779149Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:02:27.138523Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tA"
+2026-08-03T23:02:28.278334Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:02:28.278497Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:02:28.287955Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:02:28.288021Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tN"
+2026-08-03T23:02:28.288050Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:02:29.407905Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:02:34.417063Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:03:29.915425Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tA"
+2026-08-03T23:03:32.133506Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:03:32.852766Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:03:32.852856Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=30 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:03:32.855765Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=30 pid=93568
+2026-08-03T23:03:32.855882Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tP"
+2026-08-03T23:03:32.855895Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tP"
+2026-08-03T23:03:32.856224Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:03:36.467672Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=30 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:03:36.467720Z  INFO herdr::pane: pane session terminated pane=30 pid=93568 signal=Hangup
+2026-08-03T23:03:37.105368Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:03:37.479245Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tA"
+2026-08-03T23:03:38.770467Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=22 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:03:38.770534Z  INFO herdr::pane: pane session terminated pane=22 pid=87426 signal=Hangup
+2026-08-03T23:03:40.864627Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:03:40.864734Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=31 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:03:40.867774Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=31 pid=93794
+2026-08-03T23:03:40.867890Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:03:40.867901Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:03:40.868203Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:03:43.605958Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:03:48.616378Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:06:04.095715Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=32 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:06:04.099785Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=32 pid=95046
+2026-08-03T23:06:04.100021Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w6" pane_id=32
+2026-08-03T23:06:04.100030Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w6"
+2026-08-03T23:06:04.100043Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w6" tab_id="w6:t1"
+2026-08-03T23:06:06.837775Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=32 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:06:06.837829Z  INFO herdr::pane: pane session terminated pane=32 pid=95046 signal=Hangup
+2026-08-03T23:06:08.462088Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T23:06:08.462124Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t6"
+2026-08-03T23:06:13.466428Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:08:05.703746Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:server:reload-config" method="server.reload_config" changes_ui=true
+2026-08-03T23:08:05.704133Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:server:reload-config" method="server.reload_config"
+2026-08-03T23:08:05.849879Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:08:05.849995Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=33 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:08:05.852925Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=33 pid=96168
+2026-08-03T23:08:05.853099Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tR"
+2026-08-03T23:08:05.853347Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:08:05.857626Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:08:05.857710Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=34 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:08:05.860406Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=34 pid=96170
+2026-08-03T23:08:05.862004Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:08:05.872615Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:08:05.872868Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:08:05.882281Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:08:05.882430Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:08:05.892356Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:08:05.892502Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:08:05.902964Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:08:05.903174Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:08:05.912974Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:08:05.913159Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:08:05.929450Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:08:05.929575Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tW"
+2026-08-03T23:08:05.929616Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:08:10.934723Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:08:57.906289Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tV"
+2026-08-03T23:08:58.605748Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=34 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:08:58.606746Z  INFO herdr::pane: pane session terminated pane=34 pid=96170 signal=Hangup
+2026-08-03T23:09:03.613686Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:09:06.130471Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:09:08.228075Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:09:13.232654Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:09:25.393308Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:09:26.372307Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tW"
+2026-08-03T23:09:31.376263Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:09:39.126930Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:09:42.974053Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tW"
+2026-08-03T23:09:47.978439Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:11:40.342009Z  WARN herdr::detect::manifest_update: skipping unknown remote manifest agent agent="maki"
+2026-08-03T23:12:04.588377Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=35 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:12:04.594340Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=35 pid=98587
+2026-08-03T23:12:04.594542Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tZ"
+2026-08-03T23:12:04.594560Z  INFO herdr::logging: tab created event="tab.create" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tZ" pane_id=35
+2026-08-03T23:12:05.128767Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:12:05.128922Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:12:05.139164Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:12:05.139356Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:12:05.148097Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:12:05.148251Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:12:05.160771Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:12:05.160831Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t0"
+2026-08-03T23:12:05.160859Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:12:08.697687Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=36 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:12:08.703649Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=36 pid=98720
+2026-08-03T23:12:08.703983Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t13"
+2026-08-03T23:12:08.704010Z  INFO herdr::logging: tab created event="tab.create" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t13" pane_id=36
+2026-08-03T23:12:13.711942Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:13:19.965780Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:13:19.965836Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t12"
+2026-08-03T23:13:19.965861Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:13:21.424636Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:13:21.424685Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:13:21.424706Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:13:23.947504Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:13:24.432439Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tZ"
+2026-08-03T23:13:25.132189Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=35 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:13:25.132249Z  INFO herdr::pane: pane session terminated pane=35 pid=98587 signal=Hangup
+2026-08-03T23:13:27.017891Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:13:27.018031Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:13:27.026995Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:13:27.027203Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:13:27.035396Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:13:27.035588Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:13:27.049054Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:13:27.049129Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:13:27.049155Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:13:29.807762Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t13"
+2026-08-03T23:13:33.502738Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=36 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:13:33.502805Z  INFO herdr::pane: pane session terminated pane=36 pid=98720 signal=Hangup
+2026-08-03T23:13:34.834706Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t14"
+2026-08-03T23:13:39.842854Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:13:48.311470Z  INFO herdr::pane: agent changed pane=17 previous_agent=Some(Codex) agent=None pgid=Some(83160)
+2026-08-03T23:13:48.892291Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=17 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:13:48.892423Z  INFO herdr::pane: pane session terminated pane=17 pid=83160 signal=Hangup
+2026-08-03T23:13:51.125366Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t15"
+2026-08-03T23:13:51.931654Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=33 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:13:51.931707Z  INFO herdr::pane: pane session terminated pane=33 pid=96168 signal=Hangup
+2026-08-03T23:13:53.699382Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t16"
+2026-08-03T23:13:55.282315Z  INFO herdr::pane: agent changed pane=27 previous_agent=Some(OpenCode) agent=None pgid=Some(91975)
+2026-08-03T23:13:55.391850Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=27 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:13:55.392239Z  INFO herdr::pane: pane session terminated pane=27 pid=91975 signal=Hangup
+2026-08-03T23:13:56.840296Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:14:01.846413Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:14:02.029941Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:14:02.030029Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=37 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:14:02.033222Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=37 pid=320
+2026-08-03T23:14:02.033330Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t17"
+2026-08-03T23:14:02.033600Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:14:02.038315Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:14:02.038401Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=38 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:14:02.041094Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=38 pid=322
+2026-08-03T23:14:02.041301Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t18"
+2026-08-03T23:14:02.041908Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:14:02.046565Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:14:02.046649Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=39 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:14:02.049414Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=39 pid=324
+2026-08-03T23:14:02.049671Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t19"
+2026-08-03T23:14:02.050031Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:14:02.054804Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:14:02.054874Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=40 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:14:02.057674Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=40 pid=326
+2026-08-03T23:14:02.058236Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:14:02.068226Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:14:02.068496Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:14:02.079790Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:14:02.080012Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:14:02.090056Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:14:02.090249Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:14:02.105763Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:14:02.105855Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:14:02.105908Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:14:07.109784Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:14:11.243983Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:14:11.244054Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:14:11.244091Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:14:11.257192Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:14:11.257241Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:14:11.257263Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:14:11.668354Z  INFO herdr::pane: agent changed pane=39 previous_agent=None agent=Some(OpenCode) process=opencode pgid=Some(799)
+2026-08-03T23:14:13.994774Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:14:13.994829Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:14:13.994853Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:14:16.725490Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:14:21.729021Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:15:04.354730Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:15:06.691766Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:15:11.695749Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:15:14.791975Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1C"
+2026-08-03T23:15:15.283922Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:15:15.637917Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t2"
+2026-08-03T23:15:16.030828Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:15:16.933132Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:15:18.504617Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:15:20.349132Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:15:22.229640Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1A"
+2026-08-03T23:15:27.232444Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:15:27.274177Z  INFO herdr::pane: agent changed pane=40 previous_agent=None agent=Some(Codex) process=codex pgid=Some(2137)
+2026-08-03T23:15:42.477512Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:15:42.477568Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:15:42.477593Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:15:44.041432Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:15:44.041482Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-08-03T23:15:44.041495Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-08-03T23:15:44.041512Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:15:45.045336Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:15:45.045389Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T23:15:45.045404Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:15:45.045446Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:15:45.485455Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:15:45.485514Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1A"
+2026-08-03T23:15:45.485542Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:15:50.490463Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:15:58.659918Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:15:58.659978Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1D"
+2026-08-03T23:15:58.660009Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:00.097952Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:00.098004Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1A"
+2026-08-03T23:16:00.098027Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:00.661520Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:16:05.667861Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:16:13.808360Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:13.808422Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1A"
+2026-08-03T23:16:13.808457Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:17.665936Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:17.666000Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:16:17.666045Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:22.670104Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:16:22.789256Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:server:reload-config" method="server.reload_config" changes_ui=true
+2026-08-03T23:16:22.789546Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:server:reload-config" method="server.reload_config"
+2026-08-03T23:16:33.226099Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:33.226150Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1A"
+2026-08-03T23:16:33.226172Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:37.748294Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:16:39.625283Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:16:39.625355Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:16:39.625390Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:16:39.639757Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:39.639821Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:16:39.639848Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:42.194190Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:42.194245Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:16:42.194271Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:43.042769Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:43.042832Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:16:43.042862Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:44.131749Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:44.131794Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:16:44.131816Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:45.037870Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:45.037942Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:16:45.037988Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:46.790494Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1C"
+2026-08-03T23:16:51.226998Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:51.227050Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:16:51.227074Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:52.599837Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:52.599892Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:16:52.599917Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:53.537207Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:53.537256Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:16:53.537279Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:54.827511Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:16:54.827564Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:16:54.827588Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:16:55.713654Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:17:00.718835Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:17:01.742229Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:17:02.755667Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:17:03.738125Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:17:03.738179Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-08-03T23:17:03.738192Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-08-03T23:17:03.738213Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:17:04.513428Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:17:04.513485Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T23:17:04.513497Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:17:04.513532Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:17:05.204665Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:17:05.204722Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w4"
+2026-08-03T23:17:05.204734Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t3"
+2026-08-03T23:17:05.204756Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:17:05.824019Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:workspace:focus" method="workspace.focus" changes_ui=true
+2026-08-03T23:17:05.824079Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w3"
+2026-08-03T23:17:05.824092Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tT"
+2026-08-03T23:17:05.824136Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:workspace:focus" method="workspace.focus"
+2026-08-03T23:17:07.455473Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:17:07.455577Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:17:07.455604Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:17:12.461573Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:17:21.220404Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1C"
+2026-08-03T23:17:25.258654Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:17:25.258704Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1B"
+2026-08-03T23:17:25.258735Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:17:27.647624Z  INFO herdr::pane: agent changed pane=37 previous_agent=None agent=Some(Codex) process=codex pgid=Some(3751)
+2026-08-03T23:17:30.261359Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:17:31.894188Z  INFO herdr::pane: agent changed pane=37 previous_agent=Some(Codex) agent=None pgid=Some(320)
+2026-08-03T23:17:31.964977Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=37 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:17:31.965084Z  INFO herdr::pane: pane session terminated pane=37 pid=320 signal=Hangup
+2026-08-03T23:17:35.461127Z  INFO herdr::pane: agent changed pane=40 previous_agent=Some(Codex) agent=None pgid=Some(326)
+2026-08-03T23:17:36.477886Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=40 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:17:36.478004Z  INFO herdr::pane: pane session terminated pane=40 pid=326 signal=Hangup
+2026-08-03T23:17:38.058269Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:17:38.058350Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=41 rows=57 cols=210 scrollback_limit_bytes=10000000
+2026-08-03T23:17:38.061643Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=41 pid=3971
+2026-08-03T23:17:38.061732Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1E"
+2026-08-03T23:17:38.061954Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:17:38.065893Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:17:38.065962Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=42 rows=57 cols=210 scrollback_limit_bytes=10000000
+2026-08-03T23:17:38.068594Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=42 pid=3973
+2026-08-03T23:17:38.068932Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:17:38.078744Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:17:38.078929Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:17:38.088391Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:17:38.088632Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:17:38.098093Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:17:38.098686Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:17:38.111325Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:17:38.111378Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1G"
+2026-08-03T23:17:38.111406Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:17:38.618763Z  INFO herdr::pane: agent changed pane=41 previous_agent=None agent=Some(Codex) process=codex pgid=Some(4069)
+2026-08-03T23:17:39.790493Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1F"
+2026-08-03T23:17:44.794219Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:17:56.652892Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tM"
+2026-08-03T23:18:01.658085Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:18:18.146389Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:18:18.146435Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1F"
+2026-08-03T23:18:18.146457Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:18:19.384084Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1H"
+2026-08-03T23:18:20.328966Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=38 status="ExitStatus { code: 0, signal: None }"
+2026-08-03T23:18:20.329030Z  INFO herdr::pane: pane session terminated pane=38 pid=322 signal=Hangup
+2026-08-03T23:18:24.151448Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:18:24.151505Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1G"
+2026-08-03T23:18:24.151542Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:18:24.155795Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:create" method="tab.create" changes_ui=true
+2026-08-03T23:18:24.155865Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=43 rows=57 cols=188 scrollback_limit_bytes=10000000
+2026-08-03T23:18:24.159435Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=43 pid=4599
+2026-08-03T23:18:24.159532Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1K"
+2026-08-03T23:18:24.159808Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:create" method="tab.create"
+2026-08-03T23:18:24.168797Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:pane:move" method="pane.move" changes_ui=true
+2026-08-03T23:18:24.168960Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:pane:move" method="pane.move"
+2026-08-03T23:18:24.182220Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:18:24.182272Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1G"
+2026-08-03T23:18:24.182300Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:18:26.942245Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1K"
+2026-08-03T23:18:32.861672Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:18:36.847420Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:18:36.847469Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1G"
+2026-08-03T23:18:36.847499Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:18:36.859585Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:18:36.859641Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:t1G"
+2026-08-03T23:18:36.859665Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:18:41.862496Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5
+2026-08-03T23:18:54.845079Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-08-03T23:18:54.845136Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:18:54.845210Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-08-03T23:18:54.857635Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:focus" method="tab.focus" changes_ui=true
+2026-08-03T23:18:54.857677Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w3" tab_id="w3:tQ"
+2026-08-03T23:18:54.857700Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:focus" method="tab.focus"
+2026-08-03T23:18:59.862169Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/session.json workspaces=5

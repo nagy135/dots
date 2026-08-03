@@ -1,6 +1,8 @@
+onboarding = false
 [theme]
-name = "tokyo-night"
+name = "gruvbox"
 
+auto_switch = false
 [terminal]
 new_cwd = "follow"
 
@@ -127,21 +129,31 @@ key = "prefix+shift+g"
 type = "shell"
 command = "$HOME/.config/herdr/tmuxish.py git-open-browser"
 
-# tmux-launcher equivalents: create a named Herdr tab and run the command.
+# Fixed positions, labels, and commands live at the top of tmuxish.py.
 [[keys.command]]
 key = "prefix+a"
 type = "shell"
-command = "$HOME/.config/herdr/tmuxish.py launcher OpenCode 'opencode'"
+command = "$HOME/.config/herdr/tmuxish.py fixed-launcher codex"
 
 [[keys.command]]
 key = "prefix+shift+a"
 type = "shell"
-command = "$HOME/.config/herdr/tmuxish.py launcher ClaudeCode 'claude --permission-mode auto'"
+command = "$HOME/.config/herdr/tmuxish.py fixed-launcher claude"
 
 [[keys.command]]
 key = "prefix+g"
 type = "shell"
-command = "$HOME/.config/herdr/tmuxish.py launcher LazyGit 'lazygit --ucf ~/.config/lazygit/config.yml'"
+command = "$HOME/.config/herdr/tmuxish.py fixed-launcher lazygit"
+
+[[keys.command]]
+key = "prefix+shift+c"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py fixed-launcher opencode"
+
+[[keys.command]]
+key = "prefix+shift+p"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py fixed-launcher glab-pipelines"
 
 [[keys.command]]
 key = "prefix+t"
