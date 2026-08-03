@@ -21,17 +21,6 @@
           }
         ]
       }
-    ],
-    "PermissionRequest": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/usr/bin/afplay '/System/Library/Sounds/Funk.aiff'",
-            "timeout": 5
-          }
-        ]
-      }
     ]
   }
 }
