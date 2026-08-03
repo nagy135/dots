@@ -10,6 +10,25 @@ ffmpeg -i $infile -b $bitrate $newoutfile
 ffmpeg -i $infile -vcodec libx264 -crf 23 $outfile
 @end
 
+CRF has no fixed quality or original-file-size percentage. For the same video and settings, each increase of 6 CRF roughly halves the video size. Using CRF 23 as 100%:
+
+| CRF | estimated video size |
+|-----|----------------------|
+| 17  | 200%                 |
+| 18  | 178%                 |
+| 20  | 141%                 |
+| 21  | 126%                 |
+| 22  | 112%                 |
+| 23  | 100%                 |
+| 24  | 89%                  |
+| 25  | 79%                  |
+| 26  | 71%                  |
+| 27  | 63%                  |
+| 28  | 56%                  |
+| 29  | 50%                  |
+
+These are estimates relative to CRF 23, not percentages of the input file. Audio is unaffected. For a maximum size, try the estimated CRF and measure the result.
+
 ** (SZ) Change the video screen-size (for example to half its pixel size), using:
 @code bash
 ffmpeg -i $infile -vf "scale=iw/2:ih/2" $outfile
