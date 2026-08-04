@@ -17,3 +17,4 @@ nvim/.config/nvim/plugin/packer_compiled.lua
 zsh/.zshenv
 /herdr/.config/herdr/herdr-client.log
 /herdr/.config/herdr/herdr-server.log
+/herdr/.config/herdr/__pycache__
