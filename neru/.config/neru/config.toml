@@ -36,9 +36,9 @@ text = "#d8a657"
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#hotkeys
 # See https://github.com/y3owk1n/neru/blob/main/docs/CLI.md
 [hotkeys]
-"Primary+Shift+F" = "hints"
-"Primary+Shift+G" = ["monitor_select", "action wait_for_mode_exit --bail", "grid"]
-"Primary+Ctrl+G" = "grid"
+# "Primary+Shift+F" = "hints"
+"Primary+Shift+F" = ["monitor_select", "action wait_for_mode_exit --bail", "grid"]
+"Primary+Shift+G" = "grid"
 "Primary+Shift+C" = "recursive_grid"
 "Primary+Shift+S" = "scroll"
 
