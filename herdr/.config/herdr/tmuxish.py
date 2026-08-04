@@ -420,7 +420,7 @@ def focus_or_create_sesh_workspace(entry: dict) -> None:
 
 
 def sesh_picker() -> None:
-    listed = run(["sesh", "list", "--json"], capture=True)
+    listed = run(["sesh", "list", "--zoxide", "--json"], capture=True)
     entries = json.loads(listed.stdout)
     if not isinstance(entries, list) or not entries:
         raise RuntimeError("sesh did not return any sessions")

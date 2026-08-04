@@ -2,144 +2,21 @@
   "version": 3,
   "workspaces": [
     {
-      "id": "w1",
-      "custom_name": "dots",
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-      "public_pane_numbers": {
-        "4": 9,
-        "1": 3,
-        "3": 10,
-        "2": 4
-      },
-      "next_public_pane_number": 15,
-      "public_tab_numbers": [
-        2,
-        3,
-        6,
-        7
-      ],
-      "next_public_tab_number": 8,
-      "tabs": [
-        {
-          "custom_name": "opencode",
-          "layout": {
-            "Pane": 1
-          },
-          "panes": {
-            "1": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 1,
-          "root_pane": 1
-        },
-        {
-          "custom_name": "codex",
-          "layout": {
-            "Pane": 2
-          },
-          "panes": {
-            "2": {
-              "cwd": "/Users/Viktor/.dots"
-            }
-          },
-          "zoomed": false,
-          "focused": 2,
-          "root_pane": 2
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 3
-          },
-          "panes": {
-            "3": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 3,
-          "root_pane": 3
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 4
-          },
-          "panes": {
-            "4": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 4,
-          "root_pane": 4
-        }
-      ],
-      "active_tab": 1
-    },
-    {
-      "id": "w2",
-      "custom_name": "metzler",
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-      "public_pane_numbers": {
-        "6": 5,
-        "5": 1
-      },
-      "next_public_pane_number": 8,
-      "public_tab_numbers": [
-        1,
-        5
-      ],
-      "next_public_tab_number": 6,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 5
-          },
-          "panes": {
-            "5": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 5,
-          "root_pane": 5
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 6
-          },
-          "panes": {
-            "6": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 6,
-          "root_pane": 6
-        }
-      ],
-      "active_tab": 0
-    },
-    {
       "id": "w3",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/.dots/wiki/wiki",
       "public_pane_numbers": {
-        "31": 19,
-        "42": 29,
-        "41": 28,
-        "39": 26,
-        "29": 17,
-        "43": 30,
-        "13": 2,
-        "28": 16
+        "13": 29,
+        "17": 26,
+        "14": 28,
+        "16": 30,
+        "11": 19,
+        "9": 2,
+        "12": 16,
+        "10": 17,
+        "18": 34
       },
-      "next_public_pane_number": 31,
+      "next_public_pane_number": 49,
       "public_tab_numbers": [
         2,
         20,
@@ -148,168 +25,11 @@
         47,
         48,
         51,
-        52
+        52,
+        53
       ],
-      "next_public_tab_number": 53,
+      "next_public_tab_number": 54,
       "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 13
-          },
-          "panes": {
-            "13": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 13,
-          "root_pane": 13
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 29
-          },
-          "panes": {
-            "29": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 29,
-          "root_pane": 29
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 31
-          },
-          "panes": {
-            "31": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 31,
-          "root_pane": 31
-        },
-        {
-          "custom_name": "ClaudeCode",
-          "layout": {
-            "Pane": 28
-          },
-          "panes": {
-            "28": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki",
-              "agent_session": {
-                "source": "herdr:claude",
-                "agent": "claude",
-                "kind": "id",
-                "value": "8fdab875-f053-4654-b66f-ec1692194fc4"
-              }
-            }
-          },
-          "zoomed": false,
-          "focused": 28,
-          "root_pane": 28
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 42
-          },
-          "panes": {
-            "42": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 42,
-          "root_pane": 42
-        },
-        {
-          "custom_name": "codex",
-          "layout": {
-            "Pane": 41
-          },
-          "panes": {
-            "41": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "019fc9eb-2396-7f42-b384-f2ad9410bffe"
-              }
-            }
-          },
-          "zoomed": false,
-          "focused": 41,
-          "root_pane": 41
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 43
-          },
-          "panes": {
-            "43": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 43,
-          "root_pane": 43
-        },
-        {
-          "custom_name": "OpenCode",
-          "layout": {
-            "Pane": 39
-          },
-          "panes": {
-            "39": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 39,
-          "root_pane": 39
-        }
-      ],
-      "active_tab": 2
-    },
-    {
-      "id": "w4",
-      "custom_name": "warehouse",
-      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-      "public_pane_numbers": {
-        "8": 1,
-        "10": 3,
-        "9": 2
-      },
-      "next_public_pane_number": 4,
-      "public_tab_numbers": [
-        1,
-        2,
-        3
-      ],
-      "next_public_tab_number": 4,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 8
-          },
-          "panes": {
-            "8": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 8,
-          "root_pane": 8
-        },
         {
           "custom_name": null,
           "layout": {
@@ -317,7 +37,7 @@
           },
           "panes": {
             "9": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
             }
           },
           "zoomed": false,
@@ -337,23 +57,97 @@
           "zoomed": false,
           "focused": 10,
           "root_pane": 10
-        }
-      ],
-      "active_tab": 2
-    },
-    {
-      "id": "w5",
-      "custom_name": null,
-      "identity_cwd": "/Users/Viktor/.dots/wiki/wiki",
-      "public_pane_numbers": {
-        "18": 1
-      },
-      "next_public_pane_number": 2,
-      "public_tab_numbers": [
-        1
-      ],
-      "next_public_tab_number": 2,
-      "tabs": [
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 11
+          },
+          "panes": {
+            "11": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 11,
+          "root_pane": 11
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 12
+          },
+          "panes": {
+            "12": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 12,
+          "root_pane": 12
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 13
+          },
+          "panes": {
+            "13": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 13,
+          "root_pane": 13
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 14
+          },
+          "panes": {
+            "14": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fcc5c-2921-7423-a7a4-717814a45c71"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 14,
+          "root_pane": 14
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 16
+          },
+          "panes": {
+            "16": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 16,
+          "root_pane": 16
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 17
+          },
+          "panes": {
+            "17": {
+              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            }
+          },
+          "zoomed": false,
+          "focused": 17,
+          "root_pane": 17
+        },
         {
           "custom_name": null,
           "layout": {
@@ -369,11 +163,328 @@
           "root_pane": 18
         }
       ],
+      "active_tab": 2
+    },
+    {
+      "id": "w7",
+      "custom_name": "stuff",
+      "identity_cwd": "/Users/Viktor",
+      "public_pane_numbers": {
+        "19": 1
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 19
+          },
+          "panes": {
+            "19": {
+              "cwd": "/Users/Viktor"
+            }
+          },
+          "zoomed": false,
+          "focused": 19,
+          "root_pane": 19
+        }
+      ],
       "active_tab": 0
+    },
+    {
+      "id": "w9",
+      "custom_name": "warehouse",
+      "identity_cwd": "/Users/Viktor/Code/warehouse",
+      "public_pane_numbers": {
+        "20": 1
+      },
+      "next_public_pane_number": 13,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 5,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 20
+          },
+          "panes": {
+            "20": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 20,
+          "root_pane": 20
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wA",
+      "custom_name": "hdplusbusinessenginegui (service-portal)",
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessenginegui",
+      "public_pane_numbers": {
+        "30": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 30
+          },
+          "panes": {
+            "30": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessenginegui"
+            }
+          },
+          "zoomed": false,
+          "focused": 30,
+          "root_pane": 30
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wB",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine",
+      "public_pane_numbers": {
+        "36": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 36
+          },
+          "panes": {
+            "36": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 36,
+          "root_pane": 36
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wC",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/nix-darwin",
+      "public_pane_numbers": {
+        "38": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 38
+          },
+          "panes": {
+            "38": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 38,
+          "root_pane": 38
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wD",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
+      "public_pane_numbers": {
+        "44": 2,
+        "48": 6,
+        "50": 8,
+        "43": 1,
+        "49": 7,
+        "46": 4,
+        "52": 9,
+        "47": 5,
+        "45": 3
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 43
+          },
+          "panes": {
+            "43": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 43,
+          "root_pane": 43
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 49
+          },
+          "panes": {
+            "49": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 49,
+          "root_pane": 49
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 44
+          },
+          "panes": {
+            "44": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 44,
+          "root_pane": 44
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 45
+          },
+          "panes": {
+            "45": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "3d3d2487-9fab-489d-96fc-9bd9143fda7a"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 45,
+          "root_pane": 45
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 50
+          },
+          "panes": {
+            "50": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 50,
+          "root_pane": 50
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 46
+              },
+              "second": {
+                "Pane": 52
+              }
+            }
+          },
+          "panes": {
+            "52": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            },
+            "46": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fcc9b-735d-7c63-aa10-0df23309bf1a"
+              }
+            }
+          },
+          "zoomed": true,
+          "focused": 46,
+          "root_pane": 46
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 47
+          },
+          "panes": {
+            "47": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 47,
+          "root_pane": 47
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 48
+          },
+          "panes": {
+            "48": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 48,
+          "root_pane": 48
+        }
+      ],
+      "active_tab": 2
     }
   ],
-  "active": 2,
-  "selected": 2,
+  "active": 0,
+  "selected": 0,
   "sidebar_width": 26,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []

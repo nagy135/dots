@@ -30,7 +30,7 @@ toggle_sidebar = "prefix+b"
 
 # tmux window/tab bindings.
 new_tab = "prefix+c"
-previous_tab = "prefix+p"
+previous_tab = ""
 next_tab = "prefix+n"
 switch_tab = "prefix+1..9"
 
@@ -51,9 +51,11 @@ previous_workspace = ""
 # Match tmux+sesh: pick a sesh entry, then focus its Herdr workspace or create it.
 [[keys.command]]
 key = "prefix+f"
-type = "pane"
+type = "popup"
 command = "$HOME/.config/herdr/tmuxish.py sesh-picker"
 description = "pick a sesh workspace"
+width = "80%"
+height = "80%"
 
 # Double-tap ` sends a literal ` in Herdr automatically.
 
@@ -158,7 +160,7 @@ type = "shell"
 command = "$HOME/.config/herdr/tmuxish.py fixed-launcher opencode"
 
 [[keys.command]]
-key = "prefix+shift+p"
+key = "prefix+p"
 type = "shell"
 command = "$HOME/.config/herdr/tmuxish.py fixed-launcher glab-pipelines"
 
