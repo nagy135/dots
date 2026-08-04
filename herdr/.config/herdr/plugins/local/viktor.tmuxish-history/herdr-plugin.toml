@@ -1,0 +1,20 @@
+id = "viktor.tmuxish-history"
+name = "tmuxish tab history"
+version = "0.1.0"
+min_herdr_version = "0.8.0"
+description = "Track the previously focused tab for tmux-style last-window navigation"
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["python3", "../../../tmuxish.py", "record-tab-focus"]
+
+[[startup]]
+command = ["python3", "../../../tmuxish.py", "record-workspace-focus"]
+
+[[events]]
+on = "tab.focused"
+command = ["python3", "../../../tmuxish.py", "record-tab-focus"]
+
+[[events]]
+on = "workspace.focused"
+command = ["python3", "../../../tmuxish.py", "record-workspace-focus"]

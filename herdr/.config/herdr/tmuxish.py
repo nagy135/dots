@@ -3,9 +3,9 @@
 
 from __future__ import annotations
 
+import fcntl
 import json
 import os
-import re
 import subprocess
 import sys
 from collections import defaultdict
@@ -86,12 +86,12 @@ def fixed_launchers() -> dict[str, dict]:
 
 
 def active_workspace_id() -> str:
-    if value := os.environ.get("HERDR_ACTIVE_WORKSPACE_ID"):
-        return value
     workspaces = herdr_json("workspace", "list")["result"]["workspaces"]
     for workspace in workspaces:
         if workspace.get("focused"):
             return workspace["workspace_id"]
+    if value := os.environ.get("HERDR_ACTIVE_WORKSPACE_ID"):
+        return value
     raise RuntimeError("no active workspace")
 
 
@@ -131,11 +131,71 @@ def focus_workspace(offset: int) -> None:
     run([HERDR, "workspace", "focus", target])
 
 
-def log_path() -> Path:
-    config_path = Path(
-        os.environ.get("HERDR_CONFIG_PATH", HOME / ".config" / "herdr" / "config.toml")
+def tab_history_path() -> Path:
+    if value := os.environ.get("TMUXISH_TAB_HISTORY_PATH"):
+        return Path(value)
+    state_home = Path(os.environ.get("XDG_STATE_HOME", HOME / ".local" / "state"))
+    return state_home / "herdr" / "tmuxish-tab-history.json"
+
+
+def read_tab_history(path: Path) -> dict:
+    try:
+        value = json.loads(path.read_text())
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {"workspaces": {}}
+    if not isinstance(value, dict) or not isinstance(value.get("workspaces"), dict):
+        return {"workspaces": {}}
+    return value
+
+
+def record_tab_focus() -> None:
+    # Herdr dispatches event hooks concurrently. Read the live focus instead of
+    # trusting this hook's event payload, which may be older than another hook
+    # that has already started.
+    workspace_id = active_workspace_id()
+    tabs = herdr_json("tab", "list", "--workspace", workspace_id)["result"]["tabs"]
+    tab_id = next(
+        (tab["tab_id"] for tab in tabs if tab.get("focused")),
+        None,
     )
-    return config_path.parent / "herdr-server.log"
+    if not tab_id:
+        return
+
+    path = tab_history_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = path.with_suffix(path.suffix + ".lock")
+    with lock_path.open("a+") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        history = read_tab_history(path)
+        workspaces = history["workspaces"]
+        entry = workspaces.setdefault(workspace_id, {})
+        current = entry.get("current")
+        if current != tab_id:
+            entry["previous"] = current
+            entry["current"] = tab_id
+            temporary = path.with_name(f"{path.name}.{os.getpid()}.tmp")
+            temporary.write_text(json.dumps(history, indent=2, sort_keys=True) + "\n")
+            os.replace(temporary, path)
+
+
+def record_workspace_focus() -> None:
+    # See record_tab_focus: event completion order is not event focus order.
+    workspace_id = active_workspace_id()
+
+    path = tab_history_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lock_path = path.with_suffix(path.suffix + ".lock")
+    with lock_path.open("a+") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        history = read_tab_history(path)
+        entry = history.setdefault("workspace_focus", {})
+        current = entry.get("current")
+        if current != workspace_id:
+            entry["previous"] = current
+            entry["current"] = workspace_id
+            temporary = path.with_name(f"{path.name}.{os.getpid()}.tmp")
+            temporary.write_text(json.dumps(history, indent=2, sort_keys=True) + "\n")
+            os.replace(temporary, path)
 
 
 def last_tab() -> None:
@@ -146,25 +206,11 @@ def last_tab() -> None:
     if not current:
         return
 
-    path = log_path()
-    if path.exists():
-        pattern = re.compile(r'tab focused .*workspace_id="([^"]+)" tab_id="([^"]+)"')
-        with path.open("r", errors="ignore") as fh:
-            for line in reversed(fh.readlines()[-5000:]):
-                match = pattern.search(line)
-                if not match:
-                    continue
-                log_workspace, tab_id = match.groups()
-                if (
-                    log_workspace == workspace_id
-                    and tab_id != current
-                    and tab_id in existing
-                ):
-                    run([HERDR, "tab", "focus", tab_id])
-                    return
-
-    # If no history is available, fall back to the adjacent previous tab.
-    focus_tab(-1)
+    history = read_tab_history(tab_history_path())
+    previous = history["workspaces"].get(workspace_id, {}).get("previous")
+    if previous and previous != current and previous in existing:
+        run([HERDR, "tab", "focus", previous])
+        record_tab_focus()
 
 
 def last_workspace() -> None:
@@ -181,21 +227,11 @@ def last_workspace() -> None:
     if not current:
         return
 
-    path = log_path()
-    if path.exists():
-        pattern = re.compile(r'workspace focused .*workspace_id="([^"]+)"')
-        with path.open("r", errors="ignore") as fh:
-            for line in reversed(fh.readlines()[-5000:]):
-                match = pattern.search(line)
-                if not match:
-                    continue
-                workspace_id = match.group(1)
-                if workspace_id != current and workspace_id in existing:
-                    run([HERDR, "workspace", "focus", workspace_id])
-                    return
-
-    # If no history is available, fall back to the adjacent previous workspace.
-    focus_workspace(-1)
+    history = read_tab_history(tab_history_path())
+    previous = history.get("workspace_focus", {}).get("previous")
+    if previous and previous != current and previous in existing:
+        run([HERDR, "workspace", "focus", previous])
+        record_workspace_focus()
 
 
 def root_pane_id(created: dict) -> str:
@@ -513,6 +549,10 @@ def main(argv: list[str]) -> int:
         focus_tab(-1)
     elif action == "next-tab":
         focus_tab(1)
+    elif action == "record-tab-focus":
+        record_tab_focus()
+    elif action == "record-workspace-focus":
+        record_workspace_focus()
     elif action == "last-tab":
         last_tab()
     elif action == "prev-workspace":

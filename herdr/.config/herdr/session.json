@@ -4,101 +4,107 @@
     {
       "id": "w3",
       "custom_name": null,
-      "identity_cwd": "/Users/Viktor/.dots/wiki/wiki",
+      "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "13": 29,
-        "17": 26,
         "14": 28,
-        "16": 30,
-        "11": 19,
-        "9": 2,
-        "12": 16,
-        "10": 17,
-        "18": 34
+        "88": 61,
+        "87": 60,
+        "118": 63,
+        "115": 62,
+        "84": 57,
+        "86": 59,
+        "85": 58,
+        "82": 55
       },
-      "next_public_pane_number": 49,
+      "next_public_pane_number": 64,
       "public_tab_numbers": [
-        2,
-        20,
-        23,
-        26,
-        47,
-        48,
-        51,
-        52,
-        53
+        73,
+        74,
+        76,
+        78,
+        86,
+        87,
+        88,
+        89,
+        90
       ],
-      "next_public_tab_number": 54,
+      "next_public_tab_number": 91,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "herdr",
           "layout": {
-            "Pane": 9
+            "Pane": 86
           },
           "panes": {
-            "9": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 9,
-          "root_pane": 9
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 10
-          },
-          "panes": {
-            "10": {
+            "86": {
               "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 10,
-          "root_pane": 10
+          "focused": 86,
+          "root_pane": 86
+        },
+        {
+          "custom_name": "nvim",
+          "layout": {
+            "Pane": 87
+          },
+          "panes": {
+            "87": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 87,
+          "root_pane": 87
         },
         {
           "custom_name": "LazyGit",
           "layout": {
-            "Pane": 11
+            "Pane": 82
           },
           "panes": {
-            "11": {
+            "82": {
               "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 11,
-          "root_pane": 11
+          "focused": 82,
+          "root_pane": 82
+        },
+        {
+          "custom_name": ".config/herdr",
+          "layout": {
+            "Pane": 88
+          },
+          "panes": {
+            "88": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 88,
+          "root_pane": 88
         },
         {
           "custom_name": "ClaudeCode",
           "layout": {
-            "Pane": 12
+            "Pane": 115
           },
           "panes": {
-            "12": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            "115": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "dd98f9ba-406e-4f06-8f88-6e5ceaed7fff"
+              }
             }
           },
           "zoomed": false,
-          "focused": 12,
-          "root_pane": 12
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 13
-          },
-          "panes": {
-            "13": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
-            }
-          },
-          "zoomed": false,
-          "focused": 13,
-          "root_pane": 13
+          "focused": 115,
+          "root_pane": 115
         },
         {
           "custom_name": "codex",
@@ -123,44 +129,44 @@
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 16
+            "Pane": 84
           },
           "panes": {
-            "16": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            "84": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 16,
-          "root_pane": 16
+          "focused": 84,
+          "root_pane": 84
         },
         {
           "custom_name": "OpenCode",
           "layout": {
-            "Pane": 17
+            "Pane": 85
           },
           "panes": {
-            "17": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            "85": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 17,
-          "root_pane": 17
+          "focused": 85,
+          "root_pane": 85
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 18
+            "Pane": 118
           },
           "panes": {
-            "18": {
-              "cwd": "/Users/Viktor/.dots/wiki/wiki"
+            "118": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
-          "focused": 18,
-          "root_pane": 18
+          "focused": 118,
+          "root_pane": 118
         }
       ],
       "active_tab": 2
@@ -179,7 +185,7 @@
       "next_public_tab_number": 2,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "Viktor",
           "layout": {
             "Pane": 19
           },
@@ -209,7 +215,7 @@
       "next_public_tab_number": 5,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "warehouse",
           "layout": {
             "Pane": 20
           },
@@ -239,7 +245,7 @@
       "next_public_tab_number": 2,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "hdplusbusinessenginegui",
           "layout": {
             "Pane": 30
           },
@@ -269,7 +275,7 @@
       "next_public_tab_number": 2,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "hdplusbusinessengine",
           "layout": {
             "Pane": 36
           },
@@ -299,7 +305,7 @@
       "next_public_tab_number": 2,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "nix-darwin",
           "layout": {
             "Pane": 38
           },
@@ -316,21 +322,50 @@
       "active_tab": 0
     },
     {
-      "id": "wD",
+      "id": "wF",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/ai-usage",
+      "public_pane_numbers": {
+        "66": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": "ai-usage",
+          "layout": {
+            "Pane": 66
+          },
+          "panes": {
+            "66": {
+              "cwd": "/Users/Viktor/Code/ai-usage"
+            }
+          },
+          "zoomed": false,
+          "focused": 66,
+          "root_pane": 66
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wG",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
       "public_pane_numbers": {
-        "44": 2,
-        "48": 6,
-        "50": 8,
-        "43": 1,
-        "49": 7,
-        "46": 4,
-        "52": 9,
-        "47": 5,
-        "45": 3
+        "91": 2,
+        "95": 6,
+        "94": 5,
+        "92": 3,
+        "97": 8,
+        "96": 7,
+        "90": 1,
+        "93": 4
       },
-      "next_public_pane_number": 10,
+      "next_public_pane_number": 9,
       "public_tab_numbers": [
         1,
         7,
@@ -344,143 +379,125 @@
       "next_public_tab_number": 15,
       "tabs": [
         {
-          "custom_name": null,
+          "custom_name": "metzler-website-relaunch-2026",
           "layout": {
-            "Pane": 43
+            "Pane": 90
           },
           "panes": {
-            "43": {
+            "90": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 43,
-          "root_pane": 43
+          "focused": 90,
+          "root_pane": 90
         },
         {
-          "custom_name": null,
+          "custom_name": "metzler-website-relaunch-2026",
           "layout": {
-            "Pane": 49
+            "Pane": 96
           },
           "panes": {
-            "49": {
+            "96": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 49,
-          "root_pane": 49
+          "focused": 96,
+          "root_pane": 96
         },
         {
           "custom_name": "LazyGit",
           "layout": {
-            "Pane": 44
+            "Pane": 91
           },
           "panes": {
-            "44": {
+            "91": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 44,
-          "root_pane": 44
+          "focused": 91,
+          "root_pane": 91
+        },
+        {
+          "custom_name": "metzler-website-relaunch-2026",
+          "layout": {
+            "Pane": 97
+          },
+          "panes": {
+            "97": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 97,
+          "root_pane": 97
         },
         {
           "custom_name": "ClaudeCode",
           "layout": {
-            "Pane": 45
+            "Pane": 92
           },
           "panes": {
-            "45": {
+            "92": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
               "agent_session": {
                 "source": "herdr:claude",
                 "agent": "claude",
                 "kind": "id",
-                "value": "3d3d2487-9fab-489d-96fc-9bd9143fda7a"
+                "value": "a8e55471-ef0e-4ef3-9ee9-68e892c2c8b8"
               }
             }
           },
           "zoomed": false,
-          "focused": 45,
-          "root_pane": 45
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 50
-          },
-          "panes": {
-            "50": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
-            }
-          },
-          "zoomed": false,
-          "focused": 50,
-          "root_pane": 50
+          "focused": 92,
+          "root_pane": 92
         },
         {
           "custom_name": "codex",
           "layout": {
-            "Split": {
-              "direction": "Vertical",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 46
-              },
-              "second": {
-                "Pane": 52
-              }
-            }
+            "Pane": 93
           },
           "panes": {
-            "52": {
+            "93": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
-            },
-            "46": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "019fcc9b-735d-7c63-aa10-0df23309bf1a"
-              }
             }
           },
-          "zoomed": true,
-          "focused": 46,
-          "root_pane": 46
+          "zoomed": false,
+          "focused": 93,
+          "root_pane": 93
         },
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 47
+            "Pane": 94
           },
           "panes": {
-            "47": {
+            "94": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 47,
-          "root_pane": 47
+          "focused": 94,
+          "root_pane": 94
         },
         {
           "custom_name": "OpenCode",
           "layout": {
-            "Pane": 48
+            "Pane": 95
           },
           "panes": {
-            "48": {
+            "95": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 48,
-          "root_pane": 48
+          "focused": 95,
+          "root_pane": 95
         }
       ],
-      "active_tab": 2
+      "active_tab": 5
     }
   ],
   "active": 0,

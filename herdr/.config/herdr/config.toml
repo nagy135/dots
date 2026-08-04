@@ -57,6 +57,12 @@ description = "pick a sesh workspace"
 width = "80%"
 height = "80%"
 
+[[keys.command]]
+key = "prefix+shift+s"
+type = "plugin_action"
+command = "RooseveltAdvisors.herdr-leap.open"
+description = "tmux-jump-style copy-mode cursor"
+
 # Double-tap ` sends a literal ` in Herdr automatically.
 
 # popup scratchpad equivalent: focus/create a scratch workspace

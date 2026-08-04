@@ -1,0 +1,153 @@
+[
+  {
+    "plugin_id": "RooseveltAdvisors.herdr-leap",
+    "name": "herdr-leap",
+    "version": "0.2.1",
+    "min_herdr_version": "0.7.0",
+    "description": "tmux-jump-inspired word-start copy-mode jump for Herdr; credits schasse/tmux-jump",
+    "manifest_path": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc/herdr-plugin.toml",
+    "plugin_root": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "cargo",
+          "build",
+          "--release",
+          "--locked"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "open",
+        "title": "Leap (jump)",
+        "description": "Hint a word start and place the source pane's copy-mode cursor",
+        "command": [
+          "./scripts/open-leap"
+        ]
+      },
+      {
+        "id": "smart-down",
+        "title": "Smart pane down",
+        "description": "Forward Ctrl-j into Vim/Neovim/fzf, else focus the down neighbor",
+        "command": [
+          "./target/release/herdr-leap",
+          "--mode",
+          "smart-nav",
+          "--direction",
+          "down"
+        ]
+      },
+      {
+        "id": "smart-left",
+        "title": "Smart pane left",
+        "description": "Forward Ctrl-h into Vim/Neovim/fzf, else focus the left neighbor",
+        "command": [
+          "./target/release/herdr-leap",
+          "--mode",
+          "smart-nav",
+          "--direction",
+          "left"
+        ]
+      },
+      {
+        "id": "smart-right",
+        "title": "Smart pane right",
+        "description": "Forward Ctrl-l into Vim/Neovim/fzf, else focus the right neighbor",
+        "command": [
+          "./target/release/herdr-leap",
+          "--mode",
+          "smart-nav",
+          "--direction",
+          "right"
+        ]
+      },
+      {
+        "id": "smart-up",
+        "title": "Smart pane up",
+        "description": "Forward Ctrl-k into Vim/Neovim/fzf, else focus the up neighbor",
+        "command": [
+          "./target/release/herdr-leap",
+          "--mode",
+          "smart-nav",
+          "--direction",
+          "up"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "leap",
+        "title": "herdr-leap",
+        "placement": "popup",
+        "command": [
+          "./target/release/herdr-leap"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "RooseveltAdvisors",
+      "repo": "herdr-leap",
+      "resolved_commit": "be238808187636a080b46c547b95cbac9ee9988e",
+      "managed_path": "/Users/Viktor/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc",
+      "installed_unix_ms": 1785847854324
+    }
+  },
+  {
+    "plugin_id": "viktor.tmuxish-history",
+    "name": "tmuxish tab history",
+    "version": "0.1.0",
+    "min_herdr_version": "0.8.0",
+    "description": "Track the previously focused tab for tmux-style last-window navigation",
+    "manifest_path": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/local/viktor.tmuxish-history/herdr-plugin.toml",
+    "plugin_root": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/local/viktor.tmuxish-history",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "startup": [
+      {
+        "command": [
+          "python3",
+          "../../../tmuxish.py",
+          "record-tab-focus"
+        ]
+      },
+      {
+        "command": [
+          "python3",
+          "../../../tmuxish.py",
+          "record-workspace-focus"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "tab.focused",
+        "command": [
+          "python3",
+          "../../../tmuxish.py",
+          "record-tab-focus"
+        ]
+      },
+      {
+        "on": "workspace.focused",
+        "command": [
+          "python3",
+          "../../../tmuxish.py",
+          "record-workspace-focus"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "local"
+    }
+  }
+]
