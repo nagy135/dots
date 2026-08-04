@@ -8,6 +8,7 @@ import os
 import re
 import subprocess
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 HERDR = os.environ.get("HERDR_BIN_PATH") or "herdr"
@@ -337,6 +338,96 @@ def scratch() -> None:
     run([HERDR, "workspace", "create", "--label", "scratch", "--cwd", str(HOME)])
 
 
+def normalized_path(value: str) -> str:
+    return os.path.realpath(os.path.expanduser(value))
+
+
+def workspace_roots() -> dict[str, str]:
+    """Infer each workspace's project root from the cwd of all of its panes."""
+    panes = herdr_json("pane", "list")["result"]["panes"]
+    paths_by_workspace: dict[str, list[str]] = defaultdict(list)
+    for pane in panes:
+        cwd = pane.get("foreground_cwd") or pane.get("cwd")
+        if cwd:
+            paths_by_workspace[pane["workspace_id"]].append(normalized_path(cwd))
+
+    roots: dict[str, str] = {}
+    for workspace_id, paths in paths_by_workspace.items():
+        try:
+            roots[workspace_id] = os.path.commonpath(paths)
+        except ValueError:
+            # This is possible when a future Windows client reports mixed drives.
+            continue
+    return roots
+
+
+def shorten_home(path: str) -> str:
+    try:
+        relative = Path(path).relative_to(HOME)
+    except ValueError:
+        return path
+    return "~" if relative == Path(".") else f"~/{relative}"
+
+
+def choose_sesh_entry(entries: list[dict]) -> dict | None:
+    lines = []
+    for index, entry in enumerate(entries):
+        name = str(entry.get("Name") or entry.get("Path") or "")
+        path = shorten_home(normalized_path(str(entry.get("Path") or "")))
+        source = str(entry.get("Src") or "sesh")
+        lines.append(f"{index}\t{name}\t{path}\t[{source}]")
+
+    picker = subprocess.run(
+        [
+            "fzf",
+            "--layout=reverse",
+            "--border=none",
+            "--info=inline",
+            "--prompt=workspace> ",
+            "--delimiter=\t",
+            "--with-nth=2..",
+            "--no-multi",
+        ],
+        input="\n".join(lines),
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if picker.returncode in (1, 130):
+        return None
+    if picker.returncode != 0:
+        raise RuntimeError(picker.stderr.strip() or f"fzf exited with status {picker.returncode}")
+    selected_index = int(picker.stdout.split("\t", 1)[0])
+    return entries[selected_index]
+
+
+def focus_or_create_sesh_workspace(entry: dict) -> None:
+    path = normalized_path(str(entry.get("Path") or ""))
+    if not os.path.isdir(path):
+        raise RuntimeError(f"session path does not exist: {path}")
+
+    for workspace_id, root in workspace_roots().items():
+        if root == path:
+            run([HERDR, "workspace", "focus", workspace_id])
+            return
+
+    args = ["workspace", "create", "--cwd", path]
+    if entry.get("Src") != "zoxide" and entry.get("Name"):
+        args.extend(["--label", str(entry["Name"])])
+    args.append("--focus")
+    herdr_json(*args)
+
+
+def sesh_picker() -> None:
+    listed = run(["sesh", "list", "--json"], capture=True)
+    entries = json.loads(listed.stdout)
+    if not isinstance(entries, list) or not entries:
+        raise RuntimeError("sesh did not return any sessions")
+    if selected := choose_sesh_entry(entries):
+        focus_or_create_sesh_workspace(selected)
+
+
 def split_jq() -> None:
     created = herdr_json("pane", "split", "--current", "--direction", "right")
     pane = created.get("result", {}).get("pane", {})
@@ -396,6 +487,15 @@ def main(argv: list[str]) -> int:
             return 1
     elif action == "scratch":
         scratch()
+    elif action == "sesh-picker":
+        try:
+            sesh_picker()
+        except (json.JSONDecodeError, OSError, RuntimeError, subprocess.CalledProcessError, ValueError) as error:
+            run(
+                [HERDR, "notification", "show", "Sesh picker unavailable", "--body", str(error)],
+                check=False,
+            )
+            return 1
     elif action == "split-jq":
         split_jq()
     elif action == "close-workspace-now":

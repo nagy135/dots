@@ -19,7 +19,7 @@ prefix = "backtick"
 # Move tmux-conflicting Herdr defaults away from your tmux keys.
 settings = ""
 detach = "prefix+ctrl+q"
-goto = "prefix+f"
+goto = "prefix+shift+f"
 new_workspace = "prefix+ctrl+n"
 new_worktree = "prefix+ctrl+shift+g"
 close_workspace = "prefix+shift+x"
@@ -47,6 +47,13 @@ focus_pane_right = "alt+l"
 
 # Workspace/session-style navigation.
 previous_workspace = ""
+
+# Match tmux+sesh: pick a sesh entry, then focus its Herdr workspace or create it.
+[[keys.command]]
+key = "prefix+f"
+type = "pane"
+command = "$HOME/.config/herdr/tmuxish.py sesh-picker"
+description = "pick a sesh workspace"
 
 # Double-tap ` sends a literal ` in Herdr automatically.
 
