@@ -315,10 +315,6 @@ def fixed_tab_and_run(
             tabs.append(fixed_tab)
             if fixed_label == label:
                 should_run = True
-        elif fixed_label == label and fixed_tab.get("label") == reserved_label:
-            run([HERDR, "tab", "rename", fixed_tab["tab_id"], fixed_label])
-            fixed_tab["label"] = fixed_label
-            should_run = True
         pinned[fixed_position] = fixed_tab
 
     while len(tabs) < max(fixed_tab_labels):
