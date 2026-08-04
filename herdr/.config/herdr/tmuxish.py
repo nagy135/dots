@@ -24,7 +24,7 @@ FIXED_LAUNCHERS = {
         "command": "lazygit --ucf ~/.config/lazygit/config.yml",
     },
     "claude": {
-        "position": 4,
+        "position": 5,
         "label": "ClaudeCode",
         "command": "claude --permission-mode auto",
     },
@@ -46,7 +46,9 @@ FIXED_LAUNCHERS = {
 }
 
 
-def run(args: list[str], *, check: bool = True, capture: bool = False) -> subprocess.CompletedProcess[str]:
+def run(
+    args: list[str], *, check: bool = True, capture: bool = False
+) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         args,
         check=check,
@@ -76,7 +78,9 @@ def fixed_launchers() -> dict[str, dict]:
         if not isinstance(command, str) or not command.strip():
             raise ValueError(f"launcher {name!r} needs a non-empty command")
         if owner := used_positions.get(position):
-            raise ValueError(f"launchers {owner!r} and {name!r} both use position {position}")
+            raise ValueError(
+                f"launchers {owner!r} and {name!r} both use position {position}"
+            )
         used_positions[position] = name
     return launchers
 
@@ -106,7 +110,9 @@ def active_cwd() -> str:
 
 
 def focus_tab(offset: int) -> None:
-    tabs = herdr_json("tab", "list", "--workspace", active_workspace_id())["result"]["tabs"]
+    tabs = herdr_json("tab", "list", "--workspace", active_workspace_id())["result"][
+        "tabs"
+    ]
     if not tabs:
         return
     current = next((i for i, tab in enumerate(tabs) if tab.get("focused")), 0)
@@ -118,13 +124,17 @@ def focus_workspace(offset: int) -> None:
     workspaces = herdr_json("workspace", "list")["result"]["workspaces"]
     if not workspaces:
         return
-    current = next((i for i, workspace in enumerate(workspaces) if workspace.get("focused")), 0)
+    current = next(
+        (i for i, workspace in enumerate(workspaces) if workspace.get("focused")), 0
+    )
     target = workspaces[(current + offset) % len(workspaces)]["workspace_id"]
     run([HERDR, "workspace", "focus", target])
 
 
 def log_path() -> Path:
-    config_path = Path(os.environ.get("HERDR_CONFIG_PATH", HOME / ".config" / "herdr" / "config.toml"))
+    config_path = Path(
+        os.environ.get("HERDR_CONFIG_PATH", HOME / ".config" / "herdr" / "config.toml")
+    )
     return config_path.parent / "herdr-server.log"
 
 
@@ -145,7 +155,11 @@ def last_tab() -> None:
                 if not match:
                     continue
                 log_workspace, tab_id = match.groups()
-                if log_workspace == workspace_id and tab_id != current and tab_id in existing:
+                if (
+                    log_workspace == workspace_id
+                    and tab_id != current
+                    and tab_id in existing
+                ):
                     run([HERDR, "tab", "focus", tab_id])
                     return
 
@@ -156,7 +170,14 @@ def last_tab() -> None:
 def last_workspace() -> None:
     workspaces = herdr_json("workspace", "list")["result"]["workspaces"]
     existing = {workspace["workspace_id"] for workspace in workspaces}
-    current = next((workspace["workspace_id"] for workspace in workspaces if workspace.get("focused")), None)
+    current = next(
+        (
+            workspace["workspace_id"]
+            for workspace in workspaces
+            if workspace.get("focused")
+        ),
+        None,
+    )
     if not current:
         return
 
@@ -188,7 +209,9 @@ def root_pane_id(created: dict) -> str:
 
 def existing_tab_pane_id(workspace_id: str, tab_id: str) -> str:
     panes = herdr_json("pane", "list", "--workspace", workspace_id)["result"]["panes"]
-    pane_id = next((pane["pane_id"] for pane in panes if pane.get("tab_id") == tab_id), None)
+    pane_id = next(
+        (pane["pane_id"] for pane in panes if pane.get("tab_id") == tab_id), None
+    )
     if not pane_id:
         raise RuntimeError(f"could not find a pane in tab {tab_id}")
     return pane_id
@@ -221,7 +244,9 @@ def reorder_tabs(workspace_id: str, tabs: list[dict], desired: list[dict]) -> No
     tabs_to_move = desired
     for prefix_length in range(len(desired), -1, -1):
         prefix_ids = set(desired_ids[:prefix_length])
-        if [tab_id for tab_id in current_ids if tab_id in prefix_ids] == desired_ids[:prefix_length]:
+        if [tab_id for tab_id in current_ids if tab_id in prefix_ids] == desired_ids[
+            :prefix_length
+        ]:
             tabs_to_move = desired[prefix_length:]
             break
 
@@ -237,7 +262,9 @@ def reorder_tabs(workspace_id: str, tabs: list[dict], desired: list[dict]) -> No
         move_tab_to_end(workspace_id, tab)
 
 
-def create_tab(workspace_id: str, *, label: str | None = None, focus: bool = False) -> dict:
+def create_tab(
+    workspace_id: str, *, label: str | None = None, focus: bool = False
+) -> dict:
     args = ["tab", "create", "--workspace", workspace_id, "--cwd", active_cwd()]
     if label:
         args.extend(["--label", label])
@@ -263,10 +290,13 @@ def fixed_tab_and_run(
     tabs = herdr_json("tab", "list", "--workspace", workspace_id)["result"]["tabs"]
     if fixed_tab_labels is None:
         fixed_tab_labels = {
-            launcher["position"]: launcher["label"] for launcher in fixed_launchers().values()
+            launcher["position"]: launcher["label"]
+            for launcher in fixed_launchers().values()
         }
     if fixed_tab_labels.get(position) != label:
-        raise ValueError(f"launcher {label!r} is not configured for position {position}")
+        raise ValueError(
+            f"launcher {label!r} is not configured for position {position}"
+        )
 
     pinned: dict[int, dict] = {}
     should_run = False
@@ -274,7 +304,9 @@ def fixed_tab_and_run(
         reserved_label = f"{RESERVED_TAB_PREFIX}{fixed_label}"
         fixed_tab = next((tab for tab in tabs if tab.get("label") == fixed_label), None)
         if fixed_tab is None:
-            fixed_tab = next((tab for tab in tabs if tab.get("label") == reserved_label), None)
+            fixed_tab = next(
+                (tab for tab in tabs if tab.get("label") == reserved_label), None
+            )
         if fixed_tab is None:
             new_label = fixed_label if fixed_label == label else reserved_label
             created = create_tab(workspace_id, label=new_label)
@@ -397,7 +429,9 @@ def choose_sesh_entry(entries: list[dict]) -> dict | None:
     if picker.returncode in (1, 130):
         return None
     if picker.returncode != 0:
-        raise RuntimeError(picker.stderr.strip() or f"fzf exited with status {picker.returncode}")
+        raise RuntimeError(
+            picker.stderr.strip() or f"fzf exited with status {picker.returncode}"
+        )
     selected_index = int(picker.stdout.split("\t", 1)[0])
     return entries[selected_index]
 
@@ -446,7 +480,18 @@ def move_pane_to_new_tab() -> None:
 
 
 def resize(direction: str) -> None:
-    run([HERDR, "pane", "resize", "--direction", direction, "--amount", "5", "--current"])
+    run(
+        [
+            HERDR,
+            "pane",
+            "resize",
+            "--direction",
+            direction,
+            "--amount",
+            "5",
+            "--current",
+        ]
+    )
 
 
 def send_literal(text: str) -> None:
@@ -454,7 +499,13 @@ def send_literal(text: str) -> None:
 
 
 def maybe_run(command: str) -> None:
-    subprocess.Popen(command, shell=True, cwd=active_cwd(), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.Popen(
+        command,
+        shell=True,
+        cwd=active_cwd(),
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
 
 
 def main(argv: list[str]) -> int:
@@ -481,7 +532,14 @@ def main(argv: list[str]) -> int:
             run_fixed_launcher(argv[2])
         except (OSError, RuntimeError, ValueError) as error:
             run(
-                [HERDR, "notification", "show", "Launcher unavailable", "--body", str(error)],
+                [
+                    HERDR,
+                    "notification",
+                    "show",
+                    "Launcher unavailable",
+                    "--body",
+                    str(error),
+                ],
                 check=False,
             )
             return 1
@@ -490,9 +548,22 @@ def main(argv: list[str]) -> int:
     elif action == "sesh-picker":
         try:
             sesh_picker()
-        except (json.JSONDecodeError, OSError, RuntimeError, subprocess.CalledProcessError, ValueError) as error:
+        except (
+            json.JSONDecodeError,
+            OSError,
+            RuntimeError,
+            subprocess.CalledProcessError,
+            ValueError,
+        ) as error:
             run(
-                [HERDR, "notification", "show", "Sesh picker unavailable", "--body", str(error)],
+                [
+                    HERDR,
+                    "notification",
+                    "show",
+                    "Sesh picker unavailable",
+                    "--body",
+                    str(error),
+                ],
                 check=False,
             )
             return 1
