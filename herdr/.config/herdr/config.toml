@@ -10,6 +10,7 @@ new_cwd = "follow"
 show_agent_labels_on_pane_borders = true
 prompt_new_tab_name = false
 
+agent_panel_sort = "priority"
 [ui.toast]
 delivery = "system"
 
@@ -24,8 +25,8 @@ new_workspace = "prefix+ctrl+n"
 new_worktree = "prefix+ctrl+shift+g"
 close_workspace = "prefix+shift+x"
 close_tab = "prefix+ctrl+x"
-reload_config = "prefix+r"
-resize_mode = ""
+reload_config = "prefix+comma"
+resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
 
 # tmux window/tab bindings.
@@ -48,6 +49,12 @@ focus_pane_right = ["prefix+l", "alt+l"]
 # Workspace/session-style navigation.
 previous_workspace = ""
 
+# tmux break-pane: move the focused split into a new tab.
+[[keys.command]]
+key = "prefix+shift+1"
+type = "shell"
+command = "$HOME/.config/herdr/tmuxish.py move-pane-new-tab"
+
 # Match tmux+sesh: pick a sesh entry, then focus its Herdr workspace or create it.
 [[keys.command]]
 key = "prefix+f"
@@ -57,11 +64,12 @@ description = "pick a sesh workspace"
 width = "80%"
 height = "80%"
 
+# Command bar.
 [[keys.command]]
-key = "prefix+shift+s"
+key = "prefix+d"
 type = "plugin_action"
-command = "RooseveltAdvisors.herdr-leap.open"
-description = "tmux-jump-style copy-mode cursor"
+command = "herdr-bar.open"
+description = "command bar"
 
 # Double-tap ` sends a literal ` in Herdr automatically.
 
