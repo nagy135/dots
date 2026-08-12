@@ -1,102 +1,53 @@
 [
   {
-    "plugin_id": "RooseveltAdvisors.herdr-leap",
-    "name": "herdr-leap",
-    "version": "0.2.1",
-    "min_herdr_version": "0.7.0",
-    "description": "tmux-jump-inspired word-start copy-mode jump for Herdr; credits schasse/tmux-jump",
-    "manifest_path": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc/herdr-plugin.toml",
-    "plugin_root": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc",
+    "plugin_id": "herdr-bar",
+    "name": "Bar",
+    "version": "0.2.0",
+    "min_herdr_version": "0.7.4",
+    "description": "Cmd+K command bar: fuzzy-jump to any tab or agent",
+    "manifest_path": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/herdr-bar-96eebe452a9c/herdr-plugin.toml",
+    "plugin_root": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/herdr-bar-96eebe452a9c",
     "enabled": true,
     "platforms": [
       "linux",
       "macos"
     ],
-    "build": [
-      {
-        "command": [
-          "cargo",
-          "build",
-          "--release",
-          "--locked"
-        ]
-      }
-    ],
     "actions": [
       {
         "id": "open",
-        "title": "Leap (jump)",
-        "description": "Hint a word start and place the source pane's copy-mode cursor",
+        "title": "Open bar",
+        "description": "Fuzzy-jump to any tab or agent",
+        "contexts": [
+          "global"
+        ],
         "command": [
-          "./scripts/open-leap"
-        ]
-      },
-      {
-        "id": "smart-down",
-        "title": "Smart pane down",
-        "description": "Forward Ctrl-j into Vim/Neovim/fzf, else focus the down neighbor",
-        "command": [
-          "./target/release/herdr-leap",
-          "--mode",
-          "smart-nav",
-          "--direction",
-          "down"
-        ]
-      },
-      {
-        "id": "smart-left",
-        "title": "Smart pane left",
-        "description": "Forward Ctrl-h into Vim/Neovim/fzf, else focus the left neighbor",
-        "command": [
-          "./target/release/herdr-leap",
-          "--mode",
-          "smart-nav",
-          "--direction",
-          "left"
-        ]
-      },
-      {
-        "id": "smart-right",
-        "title": "Smart pane right",
-        "description": "Forward Ctrl-l into Vim/Neovim/fzf, else focus the right neighbor",
-        "command": [
-          "./target/release/herdr-leap",
-          "--mode",
-          "smart-nav",
-          "--direction",
-          "right"
-        ]
-      },
-      {
-        "id": "smart-up",
-        "title": "Smart pane up",
-        "description": "Forward Ctrl-k into Vim/Neovim/fzf, else focus the up neighbor",
-        "command": [
-          "./target/release/herdr-leap",
-          "--mode",
-          "smart-nav",
-          "--direction",
-          "up"
+          "sh",
+          "-c",
+          "herdr_bin=\"${HERDR_BIN_PATH:-herdr}\"; [ -x \"$herdr_bin\" ] || herdr_bin=herdr; exec \"$herdr_bin\" plugin pane open --plugin herdr-bar --entrypoint bar --placement popup"
         ]
       }
     ],
     "panes": [
       {
-        "id": "leap",
-        "title": "herdr-leap",
+        "id": "bar",
+        "title": "Bar",
+        "description": "Fuzzy-jump to any tab or agent",
         "placement": "popup",
+        "width": "74%",
+        "height": "62%",
         "command": [
-          "./target/release/herdr-leap"
+          "python3",
+          "run.py"
         ]
       }
     ],
     "source": {
       "kind": "github",
-      "owner": "RooseveltAdvisors",
-      "repo": "herdr-leap",
-      "resolved_commit": "be238808187636a080b46c547b95cbac9ee9988e",
-      "managed_path": "/Users/Viktor/.config/herdr/plugins/github/RooseveltAdvisors.herdr-leap-9992071554dc",
-      "installed_unix_ms": 1785847854324
+      "owner": "jeffarese",
+      "repo": "herdr-bar",
+      "resolved_commit": "a10d06386838438b16deb36fd9355c073ed365f8",
+      "managed_path": "/Users/Viktor/.config/herdr/plugins/github/herdr-bar-96eebe452a9c",
+      "installed_unix_ms": 1785873936580
     }
   },
   {

@@ -6,15 +6,15 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "14": 28,
         "88": 61,
-        "87": 60,
         "118": 63,
         "115": 62,
         "84": 57,
-        "86": 59,
         "85": 58,
-        "82": 55
+        "87": 60,
+        "86": 59,
+        "82": 55,
+        "14": 28
       },
       "next_public_pane_number": 64,
       "public_tab_numbers": [
@@ -93,13 +93,7 @@
           },
           "panes": {
             "115": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
-              "agent_session": {
-                "source": "herdr:claude",
-                "agent": "claude",
-                "kind": "id",
-                "value": "dd98f9ba-406e-4f06-8f88-6e5ceaed7fff"
-              }
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
             }
           },
           "zoomed": false,
@@ -172,64 +166,178 @@
       "active_tab": 2
     },
     {
-      "id": "w7",
-      "custom_name": "stuff",
-      "identity_cwd": "/Users/Viktor",
-      "public_pane_numbers": {
-        "19": 1
-      },
-      "next_public_pane_number": 4,
-      "public_tab_numbers": [
-        1
-      ],
-      "next_public_tab_number": 2,
-      "tabs": [
-        {
-          "custom_name": "Viktor",
-          "layout": {
-            "Pane": 19
-          },
-          "panes": {
-            "19": {
-              "cwd": "/Users/Viktor"
-            }
-          },
-          "zoomed": false,
-          "focused": 19,
-          "root_pane": 19
-        }
-      ],
-      "active_tab": 0
-    },
-    {
       "id": "w9",
       "custom_name": "warehouse",
       "identity_cwd": "/Users/Viktor/Code/warehouse",
       "public_pane_numbers": {
-        "20": 1
+        "156": 22,
+        "183": 23,
+        "149": 16,
+        "153": 20,
+        "266": 31,
+        "148": 15,
+        "154": 21,
+        "188": 25,
+        "20": 1,
+        "151": 18
       },
-      "next_public_pane_number": 13,
+      "next_public_pane_number": 32,
       "public_tab_numbers": [
-        1
+        1,
+        10,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28
       ],
-      "next_public_tab_number": 5,
+      "next_public_tab_number": 31,
       "tabs": [
         {
           "custom_name": "warehouse",
           "layout": {
-            "Pane": 20
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.19999996,
+              "first": {
+                "Pane": 20
+              },
+              "second": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.65000004,
+                  "first": {
+                    "Pane": 153
+                  },
+                  "second": {
+                    "Pane": 183
+                  }
+                }
+              }
+            }
           },
           "panes": {
+            "183": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            },
             "20": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            },
+            "153": {
               "cwd": "/Users/Viktor/Code/warehouse"
             }
           },
           "zoomed": false,
           "focused": 20,
           "root_pane": 20
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 151
+          },
+          "panes": {
+            "151": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 151,
+          "root_pane": 151
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 156
+          },
+          "panes": {
+            "156": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 156,
+          "root_pane": 156
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 266
+          },
+          "panes": {
+            "266": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 266,
+          "root_pane": 266
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 154
+          },
+          "panes": {
+            "154": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 154,
+          "root_pane": 154
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 148
+          },
+          "panes": {
+            "148": {
+              "cwd": "/Users/Viktor/Code/warehouse",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019ff236-448d-70a0-a361-c536e41e6bd0"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 148,
+          "root_pane": 148
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 149
+          },
+          "panes": {
+            "149": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 149,
+          "root_pane": 149
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 188
+          },
+          "panes": {
+            "188": {
+              "cwd": "/Users/Viktor/Code/warehouse"
+            }
+          },
+          "zoomed": false,
+          "focused": 188,
+          "root_pane": 188
         }
       ],
-      "active_tab": 0
+      "active_tab": 2
     },
     {
       "id": "wA",
@@ -266,13 +374,27 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine",
       "public_pane_numbers": {
-        "36": 1
+        "126": 6,
+        "122": 2,
+        "128": 8,
+        "36": 1,
+        "127": 7,
+        "129": 9,
+        "125": 5,
+        "124": 4
       },
-      "next_public_pane_number": 2,
+      "next_public_pane_number": 11,
       "public_tab_numbers": [
-        1
+        1,
+        7,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18
       ],
-      "next_public_tab_number": 2,
+      "next_public_tab_number": 20,
       "tabs": [
         {
           "custom_name": "hdplusbusinessengine",
@@ -287,22 +409,146 @@
           "zoomed": false,
           "focused": 36,
           "root_pane": 36
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 127
+          },
+          "panes": {
+            "127": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 127,
+          "root_pane": 127
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 122
+          },
+          "panes": {
+            "122": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 122,
+          "root_pane": 122
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 128
+          },
+          "panes": {
+            "128": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 128,
+          "root_pane": 128
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 129
+          },
+          "panes": {
+            "129": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "cbf7aa3d-81cd-4809-9c67-5398aeb6364c"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 129,
+          "root_pane": 129
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 124
+          },
+          "panes": {
+            "124": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fdb71-2618-7302-954e-35d048c65012"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 124,
+          "root_pane": 124
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 125
+          },
+          "panes": {
+            "125": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 125,
+          "root_pane": 125
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 126
+          },
+          "panes": {
+            "126": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine"
+            }
+          },
+          "zoomed": false,
+          "focused": 126,
+          "root_pane": 126
         }
       ],
-      "active_tab": 0
+      "active_tab": 6
     },
     {
       "id": "wC",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/nix-darwin",
       "public_pane_numbers": {
-        "38": 1
+        "140": 7,
+        "137": 4,
+        "139": 6,
+        "135": 2,
+        "38": 1,
+        "141": 8,
+        "136": 3,
+        "138": 5
       },
-      "next_public_pane_number": 2,
+      "next_public_pane_number": 12,
       "public_tab_numbers": [
-        1
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
       ],
-      "next_public_tab_number": 2,
+      "next_public_tab_number": 16,
       "tabs": [
         {
           "custom_name": "nix-darwin",
@@ -317,9 +563,113 @@
           "zoomed": false,
           "focused": 38,
           "root_pane": 38
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 140
+          },
+          "panes": {
+            "140": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 140,
+          "root_pane": 140
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 135
+          },
+          "panes": {
+            "135": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 135,
+          "root_pane": 135
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 141
+          },
+          "panes": {
+            "141": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 141,
+          "root_pane": 141
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 136
+          },
+          "panes": {
+            "136": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 136,
+          "root_pane": 136
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 137
+          },
+          "panes": {
+            "137": {
+              "cwd": "/Users/Viktor/Code/nix-darwin",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fcdbb-d318-7011-b412-2826759d7e7a"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 137,
+          "root_pane": 137
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 138
+          },
+          "panes": {
+            "138": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 138,
+          "root_pane": 138
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 139
+          },
+          "panes": {
+            "139": {
+              "cwd": "/Users/Viktor/Code/nix-darwin"
+            }
+          },
+          "zoomed": false,
+          "focused": 139,
+          "root_pane": 139
         }
       ],
-      "active_tab": 0
+      "active_tab": 5
     },
     {
       "id": "wF",
@@ -356,55 +706,71 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
       "public_pane_numbers": {
-        "91": 2,
+        "120": 10,
+        "130": 11,
         "95": 6,
-        "94": 5,
+        "91": 2,
+        "93": 4,
+        "131": 12,
+        "287": 25,
+        "293": 27,
         "92": 3,
-        "97": 8,
-        "96": 7,
-        "90": 1,
-        "93": 4
+        "212": 19,
+        "242": 23
       },
-      "next_public_pane_number": 9,
+      "next_public_pane_number": 28,
       "public_tab_numbers": [
-        1,
-        7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
+        19,
+        22,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        38
       ],
-      "next_public_tab_number": 15,
+      "next_public_tab_number": 39,
       "tabs": [
         {
-          "custom_name": "metzler-website-relaunch-2026",
+          "custom_name": null,
           "layout": {
-            "Pane": 90
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 130
+              },
+              "second": {
+                "Pane": 242
+              }
+            }
           },
           "panes": {
-            "90": {
+            "242": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            },
+            "130": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 90,
-          "root_pane": 90
+          "focused": 130,
+          "root_pane": 130
         },
         {
-          "custom_name": "metzler-website-relaunch-2026",
+          "custom_name": null,
           "layout": {
-            "Pane": 96
+            "Pane": 131
           },
           "panes": {
-            "96": {
+            "131": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 96,
-          "root_pane": 96
+          "focused": 131,
+          "root_pane": 131
         },
         {
           "custom_name": "LazyGit",
@@ -421,18 +787,30 @@
           "root_pane": 91
         },
         {
-          "custom_name": "metzler-website-relaunch-2026",
+          "custom_name": null,
           "layout": {
-            "Pane": 97
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 212
+              },
+              "second": {
+                "Pane": 287
+              }
+            }
           },
           "panes": {
-            "97": {
+            "287": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            },
+            "212": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 97,
-          "root_pane": 97
+          "focused": 212,
+          "root_pane": 212
         },
         {
           "custom_name": "ClaudeCode",
@@ -446,7 +824,7 @@
                 "source": "herdr:claude",
                 "agent": "claude",
                 "kind": "id",
-                "value": "a8e55471-ef0e-4ef3-9ee9-68e892c2c8b8"
+                "value": "7135ad0b-f11a-4292-96d9-72814acdc8f7"
               }
             }
           },
@@ -461,7 +839,13 @@
           },
           "panes": {
             "93": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019ff231-3f7f-79f0-98a7-595f6744570c"
+              }
             }
           },
           "zoomed": false,
@@ -471,16 +855,16 @@
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 94
+            "Pane": 120
           },
           "panes": {
-            "94": {
+            "120": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
             }
           },
           "zoomed": false,
-          "focused": 94,
-          "root_pane": 94
+          "focused": 120,
+          "root_pane": 120
         },
         {
           "custom_name": "OpenCode",
@@ -495,9 +879,247 @@
           "zoomed": false,
           "focused": 95,
           "root_pane": 95
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 293
+          },
+          "panes": {
+            "293": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 293,
+          "root_pane": 293
+        }
+      ],
+      "active_tab": 8
+    },
+    {
+      "id": "wH",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/glab-pipelines",
+      "public_pane_numbers": {
+        "159": 2,
+        "164": 7,
+        "158": 1,
+        "165": 8,
+        "161": 4,
+        "162": 5,
+        "163": 6,
+        "160": 3
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 158
+          },
+          "panes": {
+            "158": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 158,
+          "root_pane": 158
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 164
+          },
+          "panes": {
+            "164": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 164,
+          "root_pane": 164
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 159
+          },
+          "panes": {
+            "159": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 159,
+          "root_pane": 159
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 165
+          },
+          "panes": {
+            "165": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 165,
+          "root_pane": 165
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 160
+          },
+          "panes": {
+            "160": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 160,
+          "root_pane": 160
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 161
+          },
+          "panes": {
+            "161": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "019fce5c-0b16-7603-9855-4e8a3e2033c7"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 161,
+          "root_pane": 161
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 162
+          },
+          "panes": {
+            "162": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 162,
+          "root_pane": 162
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 163
+          },
+          "panes": {
+            "163": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 163,
+          "root_pane": 163
         }
       ],
       "active_tab": 5
+    },
+    {
+      "id": "wK",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Downloads/House.of.the.Dragon.S01.1080p.BluRay.x265[eztv.re]",
+      "public_pane_numbers": {
+        "252": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 252
+          },
+          "panes": {
+            "252": {
+              "cwd": "/Users/Viktor/Downloads/House.of.the.Dragon.S01.1080p.BluRay.x265[eztv.re]"
+            }
+          },
+          "zoomed": false,
+          "focused": 252,
+          "root_pane": 252
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wP",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator",
+      "public_pane_numbers": {
+        "280": 2,
+        "279": 1
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 279
+          },
+          "panes": {
+            "279": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator"
+            }
+          },
+          "zoomed": false,
+          "focused": 279,
+          "root_pane": 279
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 280
+          },
+          "panes": {
+            "280": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator"
+            }
+          },
+          "zoomed": false,
+          "focused": 280,
+          "root_pane": 280
+        }
+      ],
+      "active_tab": 1
     }
   ],
   "active": 0,
