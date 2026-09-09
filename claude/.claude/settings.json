@@ -3,9 +3,9 @@
     "allow": [
       "Bash(npx tsc *)"
     ],
-    "defaultMode": "default"
+    "defaultMode": "auto"
   },
-  "model": "claude-opus-5",
+  "model": "opus[1m]",
   "hooks": {
     "Notification": [
       {
@@ -43,7 +43,8 @@
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "impeccable@impeccable": true
+    "impeccable@impeccable": true,
+    "figma@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "impeccable": {
@@ -65,5 +66,45 @@
   "theme": "custom:gruvbox-material",
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Bash(glab:*) for read-only issue/MR listing against git.sensory-minds.com",
+      "Bash(lsof:*) for local port inspection in this repo",
+      "Bash(dig:*) for DNS lookups against public resolvers"
+    ],
+    "soft_deny": [
+      "$defaults",
+      "Bash(mongorestore:*) and scripts/replicate-remote-db.sh runs that target anything other than the local DATABASE_URL",
+      "Bash(glab:*) MR merge, release, and variable-write subcommands on bankhaus-metzler/website-relaunch-2026",
+      "pnpm replicate:object-storage runs whose TARGET_S3_BUCKET is a staging, preprod, or production deployment bucket"
+    ],
+    "environment": [
+      "### Org-wide",
+      "**Organization**: Sensory-Minds (digital agency, Offenbach am Main) — client project for Bankhaus Metzler",
+      "**Cloud provider(s)**: STACKIT (object storage endpoint object.storage.eu01.onstackit.cloud, region eu01); self-managed VMs provisioned via Terraform under server/terraform",
+      "**Repository visibility**: assume private — origin is a self-hosted GitLab at git.sensory-minds.com (bankhaus-metzler/website-relaunch-2026), not a public host; gh could not query visibility here",
+      "**Internal sharing / snippet hosting**: None configured — treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: Bitwarden (referenced in .env.example for PAYLOAD_NPM_TOKEN); local .env files and Terraform var_secrets.auto.tfvars are gitignored and must stay untracked",
+      "**Default / protected branches**: default branch is develop; main is the release target via merge request (CONTRIBUTING.md), test is the shared integration branch pushed to the test environment; no rulesets queryable on this host",
+      "**CI/CD deploy targets**: environments named test, staging, preprod, and production; app VMs plus Apache reverse proxy managed by Terraform/Ansible under server/",
+      "**Network posture**: preprod, staging and test sites sit behind the reverse proxy's Basic Auth; remote database replication runs over SSH tunnels to the environment hosts",
+      "**Source control**: self-hosted GitLab at git.sensory-minds.com; the trusted repo bankhaus-metzler/website-relaunch-2026 and its origin remote only",
+      "**Trusted internal domains**: sensory-minds.com and its subdomains — bankhaus-metzler.sensory-minds.com, bankhaus-metzler-staging.sensory-minds.com, bhm-preprod.sensory-minds.com, agile.sensory-minds.com (YouTrack), git.sensory-minds.com",
+      "**Trusted cloud buckets**: None configured — S3 bucket names are supplied per deployment via S3_BUCKET / TARGET_S3_BUCKET environment variables and none were observed in usage",
+      "**Key internal services**: YouTrack agile board (agile.sensory-minds.com), GitLab (git.sensory-minds.com), Payload CMS admin on the deployment hosts, Matomo analytics, Inxmail API (api.inxmail.com), IONOS SMTP (smtp.ionos.de), STACKIT S3-compatible object storage, client-facing Metzler hosts www.metzler.com and preprod.metzler.com",
+      "**Internal package registry**: Payload enterprise packages installed with PAYLOAD_NPM_TOKEN (token stored in Bitwarden)",
+      "**Sensitive data locations & audiences**: .env and .env.example-derived files, server/terraform/var_prod.tfvars and var_secrets.auto.tfvars, SELF_FETCH_BASIC_AUTH and Apache .htpasswd credentials, Entra tenant/client secrets, SMTP and Inxmail credentials, seeded admin credentials, and any database dump produced by scripts/replicate-remote-db.sh (contains client CMS content and user records); share only with audiences cleared at the named+specifics bar",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: production hosts and any namespace, host, or container whose name carries prod, production, preprod, or staging as a whole word or name segment (hyphen/underscore/dot-delimited) — includes bhm-preprod.sensory-minds.com, preprod.metzler.com, www.metzler.com, bankhaus-metzler-staging.sensory-minds.com",
+      "**Protected deployment namespaces / environments**: production, preprod, and staging environments and their branches (main, test) — treat writes there as deploys requiring confirmation",
+      "**Protected IaC scopes**: everything under server/terraform (main.tf, ress_public_ips_protected.tf, ress_security_groups.tf, ress_servers_cms.tf, ress_servers_proxy.tf, var_prod.tfvars, staging_import/) plus IAM, RBAC, networking, quota and node-pool resources",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development on the Bankhaus Metzler website relaunch (Next.js + Payload CMS, pnpm, MongoDB, Terraform/Ansible infra)",
+      "**Trusted repo**: /Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026 with origin git.sensory-minds.com:bankhaus-metzler/website-relaunch-2026.git — treated as private; client-confidential material is acceptable there, but secrets and personal data are never cleared by visibility",
+      "**Org-specific CLIs**: glab (GitLab CLI against git.sensory-minds.com), pnpm/payload scripts, mongodump/mongorestore for the replication scripts",
+      "**Routine under repo prefix**: pnpm scripts (dev, build, lint, typecheck, test, payload) and local-port inspection with lsof are routine inside this repo"
+    ]
+  },
   "voiceEnabled": true
 }
