@@ -1,0 +1,4 @@
+2026-08-04T20:28:04.575794Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=80137
+2026-08-04T20:28:04.575832Z  INFO herdr::client: connecting to server path=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/herdr-client.sock
+2026-08-04T20:28:04.614040Z  INFO herdr::client: handshake succeeded version=19 encoding=SemanticFrame
+2026-08-04T20:34:56.933714Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="client" outcome="completed" pid=80137

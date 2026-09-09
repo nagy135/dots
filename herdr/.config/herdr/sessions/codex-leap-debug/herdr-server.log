@@ -1,0 +1,33 @@
+2026-08-04T20:28:04.525761Z  INFO herdr::api::server: api server listening path=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/herdr.sock
+2026-08-04T20:28:04.526698Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=10000000
+2026-08-04T20:28:04.553529Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-04T20:28:04.561931Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=10000000
+2026-08-04T20:28:04.566213Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=80210
+2026-08-04T20:28:04.566568Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-08-04T20:28:04.566580Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-04T20:28:04.566706Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-04T20:28:04.566824Z  INFO herdr::server::headless: created startup workspace cwd=/Users/Viktor/.dots/herdr
+2026-08-04T20:28:04.567033Z  INFO herdr::server::headless: client protocol socket listening path=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/herdr-client.sock
+2026-08-04T20:28:04.567153Z  INFO herdr::server::headless: herdr server started api_socket=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/herdr.sock client_socket=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/herdr-client.sock
+2026-08-04T20:28:04.568072Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=80139
+2026-08-04T20:28:04.614117Z  INFO herdr::server::headless: client connected client_id=2 cols=80 rows=24 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-04T20:28:09.573919Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/session.json workspaces=1
+2026-08-04T20:28:15.496762Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.pane.open" changes_ui=true
+2026-08-04T20:28:15.498735Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=21 cols=51 scrollback_limit_bytes=10000000
+2026-08-04T20:28:15.503210Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=81628
+2026-08-04T20:28:15.503880Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.pane.open"
+2026-08-04T20:28:24.111933Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-08-04T20:28:24.112160Z  INFO herdr::pane: pane session terminated pane=2 pid=81628 signal=Hangup
+2026-08-04T20:29:27.198981Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:plugin" method="plugin.pane.open" changes_ui=true
+2026-08-04T20:29:27.200423Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=21 cols=51 scrollback_limit_bytes=10000000
+2026-08-04T20:29:27.207333Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=87935
+2026-08-04T20:29:27.207905Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:plugin" method="plugin.pane.open"
+2026-08-04T20:29:42.917413Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: None }"
+2026-08-04T20:29:42.917463Z  INFO herdr::pane: pane session terminated pane=3 pid=87935 signal=Hangup
+2026-08-04T20:34:56.933498Z  INFO herdr::server::headless: server shutdown initiated
+2026-08-04T20:34:56.986994Z  INFO herdr::server::headless: completing server shutdown
+2026-08-04T20:34:57.041401Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/Viktor/.config/herdr/sessions/codex-leap-debug/session.json workspaces=1
+2026-08-04T20:34:57.041414Z  INFO herdr::server::headless: headless server exiting
+2026-08-04T20:34:57.043005Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-08-04T20:34:57.065682Z  INFO herdr::pane: pane session terminated pane=1 pid=80210 signal=Hangup
+2026-08-04T20:34:57.066297Z  INFO herdr::logging: herdr exiting event="app.shutdown" subsystem="server" outcome="completed" pid=80139

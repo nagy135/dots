@@ -100,5 +100,48 @@
     "source": {
       "kind": "local"
     }
+  },
+  {
+    "plugin_id": "youguanxinqing.herdr-flash",
+    "name": "Herdr Flash",
+    "version": "0.3.0",
+    "min_herdr_version": "0.7.4",
+    "description": "flash.nvim-style incremental search, vim-motion selection, and yank over visible Herdr pane text",
+    "manifest_path": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/youguanxinqing.herdr-flash-c733d632e5dd/herdr-plugin.toml",
+    "plugin_root": "/Users/Viktor/.dots/herdr/.config/herdr/plugins/github/youguanxinqing.herdr-flash-c733d632e5dd",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "./scripts/build.sh"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "flash",
+        "title": "Flash: search visible text, select, and yank",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "./bin/herdr-flash",
+          "flash"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "youguanxinqing",
+      "repo": "herdr-flash",
+      "resolved_commit": "f18645409965ebd5617dac9153925b826272e3e5",
+      "managed_path": "/Users/Viktor/.config/herdr/plugins/github/youguanxinqing.herdr-flash-c733d632e5dd",
+      "installed_unix_ms": 1788948287224
+    }
   }
 ]

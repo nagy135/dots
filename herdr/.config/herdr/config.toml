@@ -9,6 +9,7 @@ new_cwd = "follow"
 [ui]
 show_agent_labels_on_pane_borders = true
 prompt_new_tab_name = false
+pane_outer_borders = false
 
 agent_panel_sort = "priority"
 [ui.toast]
@@ -70,6 +71,13 @@ key = "prefix+d"
 type = "plugin_action"
 command = "herdr-bar.open"
 description = "command bar"
+
+# Flash search/jump.
+[[keys.command]]
+key = "prefix+shift+s"
+type = "plugin_action"
+command = "youguanxinqing.herdr-flash.flash"
+description = "flash search/jump"
 
 # Double-tap ` sends a literal ` in Herdr automatically.
 
