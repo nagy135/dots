@@ -15,9 +15,9 @@
       {
         "hooks": [
           {
-            "type": "command",
             "command": "/usr/bin/afplay '/System/Library/Sounds/Hero.aiff'",
-            "timeout": 5
+            "timeout": 5,
+            "type": "command"
           }
         ]
       }

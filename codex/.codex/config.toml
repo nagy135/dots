@@ -1,7 +1,8 @@
-model = "gpt-5.6-sol"
-model_reasoning_effort = "high"
+model = "gpt-6-astra"
+model_reasoning_effort = "medium"
 notify = ["/Users/Viktor/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 approvals_reviewer = "auto_review"
+service_tier = "default"
 
 [projects."/Users/Viktor/Code/sensory-minds"]
 trust_level = "trusted"
@@ -174,12 +175,289 @@ trust_level = "trusted"
 [projects."/Users/Viktor/Documents/Codex/2026-08-04/how"]
 trust_level = "trusted"
 
+[projects."/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-04/find"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-04/ge"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-04/i-ha"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/glab-pipelines"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-07/p5"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-07/laska-kraska"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-08/at"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-09/heu"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-09/how"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-10/som"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-10/how"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-10/dep"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-10/in"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-11/find"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-11/ger"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-11/tr"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-11/lo"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-12/dock"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-12/ge"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-12/whe"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-12/sim"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-14/1-mongodb-2026-08-14t07-12"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-14/hel"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-14/ex"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-15/wh"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-16/in"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-16/cor"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/fitness-tracker"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-16/the"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-16/i"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-16/c"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-17/show"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-17/do"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-18/git"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-18/if"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-18/ger"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/lk-revenue/dashboard"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-18/how-t"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-20/my"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-20/my-2"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-20/tra"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-21/pay"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-21/i-l"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-21/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-21/the"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-21/i-w"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-22/why"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-22/what"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-23/wha"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-24/ger"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-24/what"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/ai-usage"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-25/how-d"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-25/does"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-25/tell"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-26/ger"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-26/explain-to-me-reason-for-lambda"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-26/in"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-26/dock"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-27/ger"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-27/gi"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/wha"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/mer"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/wor"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/bash-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/ex"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-28/in-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/fitness-ai"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-30/drez-s-excentrom-meaning"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-30/find"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-31/gene"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-31/find"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-08-31/what"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-01/new-chat"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-01/how-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-01/for"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/personal 2"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-02/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-02/realtime-voice-chat-2"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/mongo-backup"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/natos_cv"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-07/i-have-opened"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-07/whe"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-08/is-r"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-08/use-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-08/i-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-08/i-x20-2"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-09/use-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-09/wr"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-09/get"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/vite-portfolio"]
+trust_level = "trusted"
+
 [tui]
 theme = "gruvbox-dark"
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
 "gpt-5.6-sol" = 4
+gpt-6-astra = 4
 
 [plugins."github@openai-curated"]
 enabled = true
@@ -214,6 +492,12 @@ enabled = true
 [plugins."template-creator@openai-primary-runtime"]
 enabled = true
 
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
 [features]
 hooks = true
 js_repl = false
@@ -232,14 +516,13 @@ trusted_hash = "sha256:6ec7c45272bd652b6d55233bcdb3a60fc8134c029bc585ce1018be607
 [desktop]
 followUpQueueMode = "queue"
 realtimeVoiceScreenContextEnabled = true
+conversationDetailMode = "STEPS_PROSE"
 
 [marketplaces.openai-bundled]
-last_updated = "2026-08-03T06:43:52Z"
 source_type = "local"
 source = "/Users/Viktor/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-08-02T20:10:55Z"
 source_type = "local"
 source = "/Users/Viktor/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
@@ -252,15 +535,16 @@ startup_timeout_sec = 120
 NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
 NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
-NODE_REPL_TRUSTED_CODE_PATHS = "/Users/Viktor/.codex"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/Viktor/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/Viktor/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.727.51351"
+BROWSER_USE_CODEX_APP_VERSION = "26.901.51231"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/Viktor/.codex/plugins/cache/openai-bundled/browser/26.901.51231/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/Viktor/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
@@ -270,7 +554,12 @@ args = ["mcp"]
 cwd = "."
 enabled = false
 
+[mcp_servers.youtrack]
+command = "npx"
+args = ["-y", "mcp-remote", "https://agile.sensory-minds.com/mcp", "--header", "Authorization:${YOUTRACK_AUTH}", "--transport", "http-only"]
+
+[mcp_servers.youtrack.env]
+YOUTRACK_AUTH = "Bearer perm-di5uYWd5.NTgtNTg=.bH10LkLvCrnsizIUFsZbyIqStcfkmM"
+
 [shell_environment_policy.set]
-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
-NODE_REPL_TRUSTED_CODE_PATHS = "/Users/Viktor/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"
