@@ -36,7 +36,7 @@ text = "#d8a657"
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#hotkeys
 # See https://github.com/y3owk1n/neru/blob/main/docs/CLI.md
 [hotkeys]
-"Primary+Control+F" = "hints --action left_click"
+"Primary+Option+F" = "hints --action left_click"
 "Primary+Shift+F" = ["monitor_select", "action wait_for_mode_exit --bail", "grid"]
 "Primary+Shift+G" = "grid"
 "Primary+Shift+C" = "recursive_grid"
@@ -63,23 +63,23 @@ include_pip_hints = false
 include_screen_capture_hints = false
 detect_mission_control = false
 clickable_roles = [
-    "AXButton",
-    "AXMenuButton",
-    "AXComboBox",
-    "AXCheckBox",
-    "AXRadioButton",
-    "AXLink",
-    "AXPopUpButton",
-    "AXTextField",
-    "AXSlider",
-    "AXTabButton",
-    "AXSwitch",
-    "AXDisclosureTriangle",
-    "AXTextArea",
-    "AXMenuItem",
-    "AXCell",
-    "AXRow",
-    "AXGenericElement",
+    "button",
+    "menu_button",
+    "combo_box",
+    "checkbox",
+    "radio",
+    "link",
+    "popup_button",
+    "text_field",
+    "slider",
+    "tab",
+    "switch",
+    "disclosure",
+    "text_area",
+    "menu_item",
+    "cell",
+    "row",
+    "ax:AXGenericElement",
 ]
 ignore_clickable_check = false
 visible_check_enabled = false
