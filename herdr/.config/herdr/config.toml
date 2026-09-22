@@ -6,12 +6,16 @@ auto_switch = false
 [terminal]
 new_cwd = "follow"
 
+[experimental]
+kitty_graphics = true
+
 [ui]
 show_agent_labels_on_pane_borders = true
 prompt_new_tab_name = false
 pane_outer_borders = false
 
 agent_panel_sort = "priority"
+status_indicators = "dots"
 [ui.toast]
 delivery = "system"
 
