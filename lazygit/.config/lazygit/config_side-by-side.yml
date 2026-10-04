@@ -6,8 +6,8 @@ customCommands:
     output: terminal
 git:
   diffRenderers:
-    - colorArg: always
-      command: "delta -s --dark --paging=never --true-color=always --syntax-theme=gruvbox-dark --minus-style='syntax #4a2b33' --minus-emph-style='syntax #653744' --plus-style='syntax #2f4733' --plus-emph-style='syntax #3f5f43' --line-numbers-minus-style='#f08a9a' --line-numbers-plus-style='#9ed98f'"
+    - type: extDiff
+      command: "difft --color=always --background=dark --display=side-by-side-show-both"
 gui:
   sidePanelWidth: 0.15 # gives you more space to show things side-by-side
   border: "rounded"
