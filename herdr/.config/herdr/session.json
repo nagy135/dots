@@ -6,14 +6,14 @@
       "custom_name": "warehouse",
       "identity_cwd": "/Users/Viktor/Code/warehouse",
       "public_pane_numbers": {
-        "7": 16,
-        "1": 20,
-        "8": 25,
-        "3": 22,
+        "5": 21,
         "2": 18,
+        "3": 22,
         "4": 31,
+        "8": 25,
         "6": 15,
-        "5": 21
+        "7": 16,
+        "1": 20
       },
       "next_public_pane_number": 34,
       "public_tab_numbers": [
@@ -178,14 +178,14 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine",
       "public_pane_numbers": {
+        "15": 4,
         "13": 8,
-        "17": 6,
-        "12": 2,
-        "10": 1,
-        "11": 7,
         "14": 9,
         "16": 5,
-        "15": 4
+        "10": 1,
+        "12": 2,
+        "11": 7,
+        "17": 6
       },
       "next_public_pane_number": 11,
       "public_tab_numbers": [
@@ -326,20 +326,20 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/nix-darwin",
       "public_pane_numbers": {
-        "22": 3,
-        "24": 5,
-        "19": 7,
-        "26": 13,
-        "18": 1,
-        "25": 6,
-        "20": 2,
         "21": 8,
-        "27": 19,
-        "28": 20,
+        "22": 3,
         "29": 21,
-        "23": 17
+        "23": 17,
+        "27": 19,
+        "26": 13,
+        "24": 5,
+        "18": 1,
+        "19": 7,
+        "20": 2,
+        "25": 6,
+        "28": 20
       },
-      "next_public_pane_number": 22,
+      "next_public_pane_number": 28,
       "public_tab_numbers": [
         1,
         7,
@@ -531,23 +531,24 @@
           "root_pane": 29
         }
       ],
-      "active_tab": 0
+      "active_tab": 2
     },
     {
       "id": "wF",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/ai-usage",
       "public_pane_numbers": {
-        "30": 1,
-        "32": 2,
-        "37": 6,
-        "35": 4,
-        "36": 5,
-        "34": 3,
+        "34": 10,
+        "31": 7,
         "33": 8,
-        "31": 7
+        "38": 6,
+        "35": 3,
+        "32": 2,
+        "37": 5,
+        "30": 1,
+        "36": 4
       },
-      "next_public_pane_number": 10,
+      "next_public_pane_number": 11,
       "public_tab_numbers": [
         1,
         7,
@@ -605,33 +606,31 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 33
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 33
+              },
+              "second": {
+                "Pane": 34
+              }
+            }
           },
           "panes": {
             "33": {
               "cwd": "/Users/Viktor/Code/ai-usage"
-            }
-          },
-          "zoomed": false,
-          "focused": 33,
-          "root_pane": 33
-        },
-        {
-          "custom_name": "ClaudeCode",
-          "layout": {
-            "Pane": 34
-          },
-          "panes": {
+            },
             "34": {
-              "cwd": "/Users/Viktor/Code/ai-usage"
+              "cwd": "/Users/Viktor/Code/sensory-minds"
             }
           },
           "zoomed": false,
           "focused": 34,
-          "root_pane": 34
+          "root_pane": 33
         },
         {
-          "custom_name": "codex",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 35
           },
@@ -645,7 +644,7 @@
           "root_pane": 35
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "codex",
           "layout": {
             "Pane": 36
           },
@@ -659,7 +658,7 @@
           "root_pane": 36
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 37
           },
@@ -671,25 +670,39 @@
           "zoomed": false,
           "focused": 37,
           "root_pane": 37
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 38
+          },
+          "panes": {
+            "38": {
+              "cwd": "/Users/Viktor/Code/ai-usage"
+            }
+          },
+          "zoomed": false,
+          "focused": 38,
+          "root_pane": 38
         }
       ],
-      "active_tab": 0
+      "active_tab": 3
     },
     {
       "id": "wH",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/glab-pipelines",
       "public_pane_numbers": {
-        "40": 2,
-        "41": 8,
-        "44": 5,
-        "45": 6,
-        "38": 1,
-        "42": 3,
-        "43": 4,
-        "39": 7
+        "43": 3,
+        "46": 6,
+        "40": 7,
+        "39": 1,
+        "41": 2,
+        "44": 4,
+        "42": 8,
+        "45": 5
       },
-      "next_public_pane_number": 10,
+      "next_public_pane_number": 11,
       "public_tab_numbers": [
         1,
         7,
@@ -705,20 +718,6 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 38
-          },
-          "panes": {
-            "38": {
-              "cwd": "/Users/Viktor/Code/glab-pipelines"
-            }
-          },
-          "zoomed": false,
-          "focused": 38,
-          "root_pane": 38
-        },
-        {
-          "custom_name": null,
-          "layout": {
             "Pane": 39
           },
           "panes": {
@@ -731,7 +730,7 @@
           "root_pane": 39
         },
         {
-          "custom_name": "LazyGit",
+          "custom_name": null,
           "layout": {
             "Pane": 40
           },
@@ -745,7 +744,7 @@
           "root_pane": 40
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 41
           },
@@ -759,7 +758,7 @@
           "root_pane": 41
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": null,
           "layout": {
             "Pane": 42
           },
@@ -773,12 +772,26 @@
           "root_pane": 42
         },
         {
-          "custom_name": "codex",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 43
           },
           "panes": {
             "43": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 43,
+          "root_pane": 43
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 44
+          },
+          "panes": {
+            "44": {
               "cwd": "/Users/Viktor/Code/glab-pipelines",
               "agent_session": {
                 "source": "herdr:codex",
@@ -789,25 +802,11 @@
             }
           },
           "zoomed": false,
-          "focused": 43,
-          "root_pane": 43
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 44
-          },
-          "panes": {
-            "44": {
-              "cwd": "/Users/Viktor/Code/glab-pipelines"
-            }
-          },
-          "zoomed": false,
           "focused": 44,
           "root_pane": 44
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 45
           },
@@ -819,6 +818,20 @@
           "zoomed": false,
           "focused": 45,
           "root_pane": 45
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 46
+          },
+          "panes": {
+            "46": {
+              "cwd": "/Users/Viktor/Code/glab-pipelines"
+            }
+          },
+          "zoomed": false,
+          "focused": 46,
+          "root_pane": 46
         }
       ],
       "active_tab": 5
@@ -828,7 +841,7 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Downloads",
       "public_pane_numbers": {
-        "46": 1
+        "47": 1
       },
       "next_public_pane_number": 10,
       "public_tab_numbers": [
@@ -839,16 +852,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 46
+            "Pane": 47
           },
           "panes": {
-            "46": {
+            "47": {
               "cwd": "/Users/Viktor/Downloads"
             }
           },
           "zoomed": false,
-          "focused": 46,
-          "root_pane": 46
+          "focused": 47,
+          "root_pane": 47
         }
       ],
       "active_tab": 0
@@ -858,8 +871,8 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator",
       "public_pane_numbers": {
-        "47": 1,
-        "48": 2
+        "49": 2,
+        "48": 1
       },
       "next_public_pane_number": 3,
       "public_tab_numbers": [
@@ -868,20 +881,6 @@
       ],
       "next_public_tab_number": 3,
       "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 47
-          },
-          "panes": {
-            "47": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator"
-            }
-          },
-          "zoomed": false,
-          "focused": 47,
-          "root_pane": 47
-        },
         {
           "custom_name": null,
           "layout": {
@@ -895,6 +894,20 @@
           "zoomed": false,
           "focused": 48,
           "root_pane": 48
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 49
+          },
+          "panes": {
+            "49": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/hdplus-id-generator"
+            }
+          },
+          "zoomed": false,
+          "focused": 49,
+          "root_pane": 49
         }
       ],
       "active_tab": 1
@@ -904,14 +917,14 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/fitness-tracker",
       "public_pane_numbers": {
-        "56": 6,
-        "52": 8,
-        "53": 3,
-        "50": 7,
-        "55": 5,
-        "54": 4,
-        "49": 1,
-        "51": 2
+        "50": 1,
+        "54": 3,
+        "52": 2,
+        "57": 6,
+        "55": 4,
+        "53": 8,
+        "51": 7,
+        "56": 5
       },
       "next_public_pane_number": 14,
       "public_tab_numbers": [
@@ -929,20 +942,6 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 49
-          },
-          "panes": {
-            "49": {
-              "cwd": "/Users/Viktor/Code/fitness-tracker"
-            }
-          },
-          "zoomed": false,
-          "focused": 49,
-          "root_pane": 49
-        },
-        {
-          "custom_name": null,
-          "layout": {
             "Pane": 50
           },
           "panes": {
@@ -955,7 +954,7 @@
           "root_pane": 50
         },
         {
-          "custom_name": "LazyGit",
+          "custom_name": null,
           "layout": {
             "Pane": 51
           },
@@ -969,7 +968,7 @@
           "root_pane": 51
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 52
           },
@@ -983,7 +982,7 @@
           "root_pane": 52
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": null,
           "layout": {
             "Pane": 53
           },
@@ -997,12 +996,26 @@
           "root_pane": 53
         },
         {
-          "custom_name": "codex",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 54
           },
           "panes": {
             "54": {
+              "cwd": "/Users/Viktor/Code/fitness-tracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 54,
+          "root_pane": 54
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 55
+          },
+          "panes": {
+            "55": {
               "cwd": "/Users/Viktor/Code/fitness-tracker",
               "agent_session": {
                 "source": "herdr:codex",
@@ -1013,25 +1026,11 @@
             }
           },
           "zoomed": false,
-          "focused": 54,
-          "root_pane": 54
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 55
-          },
-          "panes": {
-            "55": {
-              "cwd": "/Users/Viktor/Code/fitness-tracker"
-            }
-          },
-          "zoomed": false,
           "focused": 55,
           "root_pane": 55
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 56
           },
@@ -1043,6 +1042,20 @@
           "zoomed": false,
           "focused": 56,
           "root_pane": 56
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 57
+          },
+          "panes": {
+            "57": {
+              "cwd": "/Users/Viktor/Code/fitness-tracker"
+            }
+          },
+          "zoomed": false,
+          "focused": 57,
+          "root_pane": 57
         }
       ],
       "active_tab": 5
@@ -1052,16 +1065,17 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/nix-server",
       "public_pane_numbers": {
-        "61": 3,
-        "64": 6,
-        "62": 4,
-        "57": 1,
-        "58": 7,
-        "59": 2,
-        "63": 5,
-        "60": 19
+        "59": 7,
+        "60": 2,
+        "58": 1,
+        "66": 6,
+        "62": 28,
+        "61": 19,
+        "63": 3,
+        "65": 5,
+        "64": 4
       },
-      "next_public_pane_number": 27,
+      "next_public_pane_number": 29,
       "public_tab_numbers": [
         1,
         7,
@@ -1077,20 +1091,6 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 57
-          },
-          "panes": {
-            "57": {
-              "cwd": "/Users/Viktor/Code/nix-server"
-            }
-          },
-          "zoomed": false,
-          "focused": 57,
-          "root_pane": 57
-        },
-        {
-          "custom_name": null,
-          "layout": {
             "Pane": 58
           },
           "panes": {
@@ -1103,7 +1103,7 @@
           "root_pane": 58
         },
         {
-          "custom_name": "LazyGit",
+          "custom_name": null,
           "layout": {
             "Pane": 59
           },
@@ -1117,7 +1117,7 @@
           "root_pane": 59
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 60
           },
@@ -1131,41 +1131,33 @@
           "root_pane": 60
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": null,
           "layout": {
-            "Pane": 61
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 61
+              },
+              "second": {
+                "Pane": 62
+              }
+            }
           },
           "panes": {
             "61": {
               "cwd": "/Users/Viktor/Code/nix-server"
-            }
-          },
-          "zoomed": false,
-          "focused": 61,
-          "root_pane": 61
-        },
-        {
-          "custom_name": "codex",
-          "layout": {
-            "Pane": 62
-          },
-          "panes": {
+            },
             "62": {
-              "cwd": "/Users/Viktor/Code/nix-server",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "01a01454-2b7e-74f3-adb3-19139aa0874c"
-              }
+              "cwd": "/Users/Viktor/Documents/Videos"
             }
           },
           "zoomed": false,
           "focused": 62,
-          "root_pane": 62
+          "root_pane": 61
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 63
           },
@@ -1179,37 +1171,71 @@
           "root_pane": 63
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 64
           },
           "panes": {
             "64": {
-              "cwd": "/Users/Viktor/Code/nix-server"
+              "cwd": "/Users/Viktor/Code/nix-server",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a01454-2b7e-74f3-adb3-19139aa0874c"
+              }
             }
           },
           "zoomed": false,
           "focused": 64,
           "root_pane": 64
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 65
+          },
+          "panes": {
+            "65": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 65,
+          "root_pane": 65
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 66
+          },
+          "panes": {
+            "66": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 66,
+          "root_pane": 66
         }
       ],
-      "active_tab": 0
+      "active_tab": 3
     },
     {
       "id": "wT",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/lk-revenue/dashboard",
       "public_pane_numbers": {
-        "65": 1,
-        "71": 5,
-        "70": 4,
-        "66": 7,
-        "67": 2,
-        "69": 3,
-        "68": 14,
-        "72": 6
+        "73": 5,
+        "71": 3,
+        "68": 7,
+        "70": 14,
+        "72": 4,
+        "69": 2,
+        "74": 6,
+        "67": 1
       },
-      "next_public_pane_number": 16,
+      "next_public_pane_number": 17,
       "public_tab_numbers": [
         1,
         7,
@@ -1224,34 +1250,6 @@
       "tabs": [
         {
           "custom_name": null,
-          "layout": {
-            "Pane": 65
-          },
-          "panes": {
-            "65": {
-              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
-            }
-          },
-          "zoomed": false,
-          "focused": 65,
-          "root_pane": 65
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 66
-          },
-          "panes": {
-            "66": {
-              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
-            }
-          },
-          "zoomed": false,
-          "focused": 66,
-          "root_pane": 66
-        },
-        {
-          "custom_name": "LazyGit",
           "layout": {
             "Pane": 67
           },
@@ -1279,7 +1277,7 @@
           "root_pane": 68
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 69
           },
@@ -1293,19 +1291,13 @@
           "root_pane": 69
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 70
           },
           "panes": {
             "70": {
-              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "01a0231c-5f37-7ca3-a7a4-5d88026d32d7"
-              }
+              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
             }
           },
           "zoomed": false,
@@ -1313,7 +1305,7 @@
           "root_pane": 70
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 71
           },
@@ -1327,18 +1319,52 @@
           "root_pane": 71
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 72
           },
           "panes": {
             "72": {
-              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
+              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a0231c-5f37-7ca3-a7a4-5d88026d32d7"
+              }
             }
           },
           "zoomed": false,
           "focused": 72,
           "root_pane": 72
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 73
+          },
+          "panes": {
+            "73": {
+              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 73,
+          "root_pane": 73
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 74
+          },
+          "panes": {
+            "74": {
+              "cwd": "/Users/Viktor/Code/lk-revenue/dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 74,
+          "root_pane": 74
         }
       ],
       "active_tab": 3
@@ -1348,17 +1374,17 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/fitness-ai",
       "public_pane_numbers": {
-        "80": 6,
-        "81": 18,
-        "78": 4,
-        "79": 5,
-        "73": 12,
-        "74": 7,
-        "76": 8,
-        "75": 2,
-        "77": 3
+        "80": 4,
+        "75": 12,
+        "76": 7,
+        "82": 6,
+        "83": 18,
+        "81": 5,
+        "77": 2,
+        "78": 8,
+        "79": 3
       },
-      "next_public_pane_number": 23,
+      "next_public_pane_number": 24,
       "public_tab_numbers": [
         1,
         7,
@@ -1374,34 +1400,6 @@
       "tabs": [
         {
           "custom_name": null,
-          "layout": {
-            "Pane": 73
-          },
-          "panes": {
-            "73": {
-              "cwd": "/Users/Viktor/Code/fitness-ai"
-            }
-          },
-          "zoomed": false,
-          "focused": 73,
-          "root_pane": 73
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 74
-          },
-          "panes": {
-            "74": {
-              "cwd": "/Users/Viktor/Code/fitness-ai"
-            }
-          },
-          "zoomed": false,
-          "focused": 74,
-          "root_pane": 74
-        },
-        {
-          "custom_name": "LazyGit",
           "layout": {
             "Pane": 75
           },
@@ -1429,7 +1427,7 @@
           "root_pane": 76
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 77
           },
@@ -1443,19 +1441,13 @@
           "root_pane": 77
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 78
           },
           "panes": {
             "78": {
-              "cwd": "/Users/Viktor/Code/fitness-ai",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "01a0782f-552c-74d2-be7a-5a1adcc97ada"
-              }
+              "cwd": "/Users/Viktor/Code/fitness-ai"
             }
           },
           "zoomed": false,
@@ -1463,7 +1455,7 @@
           "root_pane": 78
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 79
           },
@@ -1477,13 +1469,19 @@
           "root_pane": 79
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 80
           },
           "panes": {
             "80": {
-              "cwd": "/Users/Viktor/Code/fitness-ai"
+              "cwd": "/Users/Viktor/Code/fitness-ai",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a0782f-552c-74d2-be7a-5a1adcc97ada"
+              }
             }
           },
           "zoomed": false,
@@ -1491,7 +1489,7 @@
           "root_pane": 80
         },
         {
-          "custom_name": null,
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 81
           },
@@ -1503,16 +1501,44 @@
           "zoomed": false,
           "focused": 81,
           "root_pane": 81
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 82
+          },
+          "panes": {
+            "82": {
+              "cwd": "/Users/Viktor/Code/fitness-ai"
+            }
+          },
+          "zoomed": false,
+          "focused": 82,
+          "root_pane": 82
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 83
+          },
+          "panes": {
+            "83": {
+              "cwd": "/Users/Viktor/Code/fitness-ai"
+            }
+          },
+          "zoomed": false,
+          "focused": 83,
+          "root_pane": 83
         }
       ],
-      "active_tab": 3
+      "active_tab": 2
     },
     {
       "id": "wW",
       "custom_name": "scratch",
       "identity_cwd": "/Users/Viktor",
       "public_pane_numbers": {
-        "82": 1
+        "84": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -1523,16 +1549,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 82
+            "Pane": 84
           },
           "panes": {
-            "82": {
+            "84": {
               "cwd": "/Users/Viktor"
             }
           },
           "zoomed": false,
-          "focused": 82,
-          "root_pane": 82
+          "focused": 84,
+          "root_pane": 84
         }
       ],
       "active_tab": 0
@@ -1542,16 +1568,17 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/mongo-backup",
       "public_pane_numbers": {
-        "90": 6,
-        "83": 1,
-        "85": 2,
-        "84": 7,
-        "87": 3,
-        "89": 5,
-        "86": 8,
-        "88": 4
+        "89": 3,
+        "90": 4,
+        "92": 6,
+        "88": 8,
+        "86": 7,
+        "91": 5,
+        "419": 9,
+        "85": 1,
+        "87": 2
       },
-      "next_public_pane_number": 9,
+      "next_public_pane_number": 10,
       "public_tab_numbers": [
         1,
         7,
@@ -1567,43 +1594,27 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 83
-          },
-          "panes": {
-            "83": {
-              "cwd": "/Users/Viktor/Code/mongo-backup"
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 85
+              },
+              "second": {
+                "Pane": 419
+              }
             }
-          },
-          "zoomed": false,
-          "focused": 83,
-          "root_pane": 83
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 84
-          },
-          "panes": {
-            "84": {
-              "cwd": "/Users/Viktor/Code/mongo-backup"
-            }
-          },
-          "zoomed": false,
-          "focused": 84,
-          "root_pane": 84
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 85
           },
           "panes": {
             "85": {
               "cwd": "/Users/Viktor/Code/mongo-backup"
+            },
+            "419": {
+              "cwd": "/Users/Viktor/Code/mongo-backup"
             }
           },
           "zoomed": false,
-          "focused": 85,
+          "focused": 419,
           "root_pane": 85
         },
         {
@@ -1621,7 +1632,7 @@
           "root_pane": 86
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 87
           },
@@ -1635,19 +1646,13 @@
           "root_pane": 87
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 88
           },
           "panes": {
             "88": {
-              "cwd": "/Users/Viktor/Code/mongo-backup",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "01a06112-f555-7593-b069-3c1dbce8f9a9"
-              }
+              "cwd": "/Users/Viktor/Code/mongo-backup"
             }
           },
           "zoomed": false,
@@ -1655,7 +1660,7 @@
           "root_pane": 88
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 89
           },
@@ -1669,37 +1674,71 @@
           "root_pane": 89
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 90
           },
           "panes": {
             "90": {
-              "cwd": "/Users/Viktor/Code/mongo-backup"
+              "cwd": "/Users/Viktor/Code/mongo-backup",
+              "agent_session": {
+                "source": "herdr:codex",
+                "agent": "codex",
+                "kind": "id",
+                "value": "01a06112-f555-7593-b069-3c1dbce8f9a9"
+              }
             }
           },
           "zoomed": false,
           "focused": 90,
           "root_pane": 90
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 91
+          },
+          "panes": {
+            "91": {
+              "cwd": "/Users/Viktor/Code/mongo-backup"
+            }
+          },
+          "zoomed": false,
+          "focused": 91,
+          "root_pane": 91
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 92
+          },
+          "panes": {
+            "92": {
+              "cwd": "/Users/Viktor/Code/mongo-backup"
+            }
+          },
+          "zoomed": false,
+          "focused": 92,
+          "root_pane": 92
         }
       ],
-      "active_tab": 3
+      "active_tab": 6
     },
     {
       "id": "wY",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Documents/natos_cv",
       "public_pane_numbers": {
-        "98": 7,
-        "94": 4,
-        "92": 11,
-        "99": 8,
-        "91": 1,
-        "97": 6,
-        "93": 2,
-        "100": 10,
-        "95": 9,
-        "96": 5
+        "95": 2,
+        "97": 9,
+        "99": 6,
+        "101": 8,
+        "102": 10,
+        "100": 7,
+        "93": 1,
+        "98": 5,
+        "96": 4,
+        "94": 11
       },
       "next_public_pane_number": 16,
       "public_tab_numbers": [
@@ -1722,31 +1761,17 @@
               "direction": "Vertical",
               "ratio": 0.5,
               "first": {
-                "Pane": 91
+                "Pane": 93
               },
               "second": {
-                "Pane": 92
+                "Pane": 94
               }
             }
           },
           "panes": {
-            "91": {
+            "94": {
               "cwd": "/Users/Viktor/Documents/natos_cv"
             },
-            "92": {
-              "cwd": "/Users/Viktor/Documents/natos_cv"
-            }
-          },
-          "zoomed": false,
-          "focused": 91,
-          "root_pane": 91
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 93
-          },
-          "panes": {
             "93": {
               "cwd": "/Users/Viktor/Documents/natos_cv"
             }
@@ -1754,20 +1779,6 @@
           "zoomed": false,
           "focused": 93,
           "root_pane": 93
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 94
-          },
-          "panes": {
-            "94": {
-              "cwd": "/Users/Viktor/Documents/natos_cv"
-            }
-          },
-          "zoomed": false,
-          "focused": 94,
-          "root_pane": 94
         },
         {
           "custom_name": null,
@@ -1784,7 +1795,7 @@
           "root_pane": 95
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 96
           },
@@ -1798,19 +1809,13 @@
           "root_pane": 96
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 97
           },
           "panes": {
             "97": {
-              "cwd": "/Users/Viktor/Documents/natos_cv",
-              "agent_session": {
-                "source": "herdr:codex",
-                "agent": "codex",
-                "kind": "id",
-                "value": "01a066be-a32a-7763-ad23-7934ab72b333"
-              }
+              "cwd": "/Users/Viktor/Documents/natos_cv"
             }
           },
           "zoomed": false,
@@ -1818,7 +1823,7 @@
           "root_pane": 97
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 98
           },
@@ -1832,7 +1837,7 @@
           "root_pane": 98
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 99
           },
@@ -1840,10 +1845,10 @@
             "99": {
               "cwd": "/Users/Viktor/Documents/natos_cv",
               "agent_session": {
-                "source": "herdr:opencode",
-                "agent": "opencode",
+                "source": "herdr:codex",
+                "agent": "codex",
                 "kind": "id",
-                "value": "ses_f993fb149ffepw947zr2nZGUsV"
+                "value": "01a066be-a32a-7763-ad23-7934ab72b333"
               }
             }
           },
@@ -1852,7 +1857,7 @@
           "root_pane": 99
         },
         {
-          "custom_name": null,
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 100
           },
@@ -1864,6 +1869,40 @@
           "zoomed": false,
           "focused": 100,
           "root_pane": 100
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 101
+          },
+          "panes": {
+            "101": {
+              "cwd": "/Users/Viktor/Documents/natos_cv",
+              "agent_session": {
+                "source": "herdr:opencode",
+                "agent": "opencode",
+                "kind": "id",
+                "value": "ses_f993fb149ffepw947zr2nZGUsV"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 101,
+          "root_pane": 101
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 102
+          },
+          "panes": {
+            "102": {
+              "cwd": "/Users/Viktor/Documents/natos_cv"
+            }
+          },
+          "zoomed": false,
+          "focused": 102,
+          "root_pane": 102
         }
       ],
       "active_tab": 1
@@ -1873,7 +1912,7 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine/frontend",
       "public_pane_numbers": {
-        "101": 1
+        "103": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -1884,16 +1923,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 101
+            "Pane": 103
           },
           "panes": {
-            "101": {
+            "103": {
               "cwd": "/Users/Viktor/Code/sensory-minds/hdplusbusinessengine/frontend"
             }
           },
           "zoomed": false,
-          "focused": 101,
-          "root_pane": 101
+          "focused": 103,
+          "root_pane": 103
         }
       ],
       "active_tab": 0
@@ -1903,7 +1942,7 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/nix-darwin/home/config/hammerspoon/bindings",
       "public_pane_numbers": {
-        "102": 1
+        "104": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -1914,16 +1953,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 102
+            "Pane": 104
           },
           "panes": {
-            "102": {
+            "104": {
               "cwd": "/Users/Viktor/Code/nix-darwin/home/config/hammerspoon/bindings"
             }
           },
           "zoomed": false,
-          "focused": 102,
-          "root_pane": 102
+          "focused": 104,
+          "root_pane": 104
         }
       ],
       "active_tab": 0
@@ -1933,14 +1972,14 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/vite-portfolio",
       "public_pane_numbers": {
-        "103": 1,
-        "109": 4,
-        "108": 3,
-        "110": 5,
-        "184": 15,
-        "104": 7,
-        "111": 6,
-        "106": 2
+        "111": 5,
+        "109": 3,
+        "110": 4,
+        "107": 2,
+        "105": 1,
+        "108": 15,
+        "112": 6,
+        "106": 7
       },
       "next_public_pane_number": 16,
       "public_tab_numbers": [
@@ -1958,33 +1997,19 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 103
+            "Pane": 105
           },
           "panes": {
-            "103": {
+            "105": {
               "cwd": "/Users/Viktor/Code/vite-portfolio"
             }
           },
           "zoomed": false,
-          "focused": 103,
-          "root_pane": 103
+          "focused": 105,
+          "root_pane": 105
         },
         {
           "custom_name": null,
-          "layout": {
-            "Pane": 104
-          },
-          "panes": {
-            "104": {
-              "cwd": "/Users/Viktor/Code/vite-portfolio"
-            }
-          },
-          "zoomed": false,
-          "focused": 104,
-          "root_pane": 104
-        },
-        {
-          "custom_name": "LazyGit",
           "layout": {
             "Pane": 106
           },
@@ -1998,21 +2023,21 @@
           "root_pane": 106
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
-            "Pane": 184
+            "Pane": 107
           },
           "panes": {
-            "184": {
+            "107": {
               "cwd": "/Users/Viktor/Code/vite-portfolio"
             }
           },
           "zoomed": false,
-          "focused": 184,
-          "root_pane": 184
+          "focused": 107,
+          "root_pane": 107
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": null,
           "layout": {
             "Pane": 108
           },
@@ -2026,12 +2051,26 @@
           "root_pane": 108
         },
         {
-          "custom_name": "codex",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 109
           },
           "panes": {
             "109": {
+              "cwd": "/Users/Viktor/Code/vite-portfolio"
+            }
+          },
+          "zoomed": false,
+          "focused": 109,
+          "root_pane": 109
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 110
+          },
+          "panes": {
+            "110": {
               "cwd": "/Users/Viktor/Code/vite-portfolio",
               "agent_session": {
                 "source": "herdr:codex",
@@ -2042,25 +2081,11 @@
             }
           },
           "zoomed": false,
-          "focused": 109,
-          "root_pane": 109
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 110
-          },
-          "panes": {
-            "110": {
-              "cwd": "/Users/Viktor/Code/vite-portfolio"
-            }
-          },
-          "zoomed": false,
           "focused": 110,
           "root_pane": 110
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 111
           },
@@ -2072,6 +2097,20 @@
           "zoomed": false,
           "focused": 111,
           "root_pane": 111
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 112
+          },
+          "panes": {
+            "112": {
+              "cwd": "/Users/Viktor/Code/vite-portfolio"
+            }
+          },
+          "zoomed": false,
+          "focused": 112,
+          "root_pane": 112
         }
       ],
       "active_tab": 7
@@ -2081,14 +2120,14 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
       "public_pane_numbers": {
-        "113": 7,
-        "114": 2,
-        "118": 5,
-        "116": 3,
-        "112": 1,
-        "115": 8,
-        "119": 6,
-        "117": 4
+        "119": 5,
+        "113": 1,
+        "116": 8,
+        "114": 7,
+        "120": 6,
+        "118": 4,
+        "115": 2,
+        "117": 3
       },
       "next_public_pane_number": 16,
       "public_tab_numbers": [
@@ -2106,20 +2145,6 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 112
-          },
-          "panes": {
-            "112": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
-          "focused": 112,
-          "root_pane": 112
-        },
-        {
-          "custom_name": null,
-          "layout": {
             "Pane": 113
           },
           "panes": {
@@ -2132,7 +2157,7 @@
           "root_pane": 113
         },
         {
-          "custom_name": "LazyGit",
+          "custom_name": null,
           "layout": {
             "Pane": 114
           },
@@ -2146,7 +2171,7 @@
           "root_pane": 114
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 115
           },
@@ -2160,7 +2185,7 @@
           "root_pane": 115
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": null,
           "layout": {
             "Pane": 116
           },
@@ -2174,12 +2199,26 @@
           "root_pane": 116
         },
         {
-          "custom_name": "codex",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 117
           },
           "panes": {
             "117": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 117,
+          "root_pane": 117
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 118
+          },
+          "panes": {
+            "118": {
               "cwd": "/Users/Viktor/.dots/herdr/.config/herdr",
               "agent_session": {
                 "source": "herdr:codex",
@@ -2190,25 +2229,11 @@
             }
           },
           "zoomed": false,
-          "focused": 117,
-          "root_pane": 117
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 118
-          },
-          "panes": {
-            "118": {
-              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
-            }
-          },
-          "zoomed": false,
           "focused": 118,
           "root_pane": 118
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 119
           },
@@ -2220,6 +2245,20 @@
           "zoomed": false,
           "focused": 119,
           "root_pane": 119
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 120
+          },
+          "panes": {
+            "120": {
+              "cwd": "/Users/Viktor/.dots/herdr/.config/herdr"
+            }
+          },
+          "zoomed": false,
+          "focused": 120,
+          "root_pane": 120
         }
       ],
       "active_tab": 2
@@ -2229,7 +2268,7 @@
       "custom_name": null,
       "identity_cwd": "/nix/store",
       "public_pane_numbers": {
-        "120": 1
+        "121": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -2240,16 +2279,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 120
+            "Pane": 121
           },
           "panes": {
-            "120": {
+            "121": {
               "cwd": "/nix/store"
             }
           },
           "zoomed": false,
-          "focused": 120,
-          "root_pane": 120
+          "focused": 121,
+          "root_pane": 121
         }
       ],
       "active_tab": 0
@@ -2259,16 +2298,158 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/.scripts",
       "public_pane_numbers": {
-        "131": 7,
-        "130": 1,
-        "135": 4,
-        "134": 3,
-        "132": 2,
-        "136": 5,
-        "137": 6,
-        "133": 8
+        "128": 5,
+        "126": 3,
+        "125": 8,
+        "122": 1,
+        "123": 7,
+        "127": 4,
+        "124": 2,
+        "129": 6
       },
       "next_public_pane_number": 11,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 122
+          },
+          "panes": {
+            "122": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 122,
+          "root_pane": 122
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 123
+          },
+          "panes": {
+            "123": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 123,
+          "root_pane": 123
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 124
+          },
+          "panes": {
+            "124": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 124,
+          "root_pane": 124
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 125
+          },
+          "panes": {
+            "125": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 125,
+          "root_pane": 125
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 126
+          },
+          "panes": {
+            "126": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 126,
+          "root_pane": 126
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 127
+          },
+          "panes": {
+            "127": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 127,
+          "root_pane": 127
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 128
+          },
+          "panes": {
+            "128": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 128,
+          "root_pane": 128
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 129
+          },
+          "panes": {
+            "129": {
+              "cwd": "/Users/Viktor/.scripts"
+            }
+          },
+          "zoomed": false,
+          "focused": 129,
+          "root_pane": 129
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w1E",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/nix-on-droid",
+      "public_pane_numbers": {
+        "136": 5,
+        "134": 3,
+        "130": 1,
+        "137": 6,
+        "132": 2,
+        "133": 8,
+        "131": 7,
+        "135": 4
+      },
+      "next_public_pane_number": 10,
       "public_tab_numbers": [
         1,
         7,
@@ -2288,7 +2469,7 @@
           },
           "panes": {
             "130": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2302,7 +2483,7 @@
           },
           "panes": {
             "131": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2316,7 +2497,7 @@
           },
           "panes": {
             "132": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2330,7 +2511,7 @@
           },
           "panes": {
             "133": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2344,7 +2525,7 @@
           },
           "panes": {
             "134": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2358,7 +2539,7 @@
           },
           "panes": {
             "135": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2372,7 +2553,7 @@
           },
           "panes": {
             "136": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2386,7 +2567,7 @@
           },
           "panes": {
             "137": {
-              "cwd": "/Users/Viktor/.scripts"
+              "cwd": "/Users/Viktor/Code/nix-on-droid"
             }
           },
           "zoomed": false,
@@ -2397,191 +2578,19 @@
       "active_tab": 2
     },
     {
-      "id": "w1E",
-      "custom_name": null,
-      "identity_cwd": "/Users/Viktor/Code/nix-on-droid",
-      "public_pane_numbers": {
-        "139": 7,
-        "145": 6,
-        "143": 4,
-        "142": 3,
-        "138": 1,
-        "144": 5,
-        "141": 8,
-        "140": 2
-      },
-      "next_public_pane_number": 10,
-      "public_tab_numbers": [
-        1,
-        7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "next_public_tab_number": 15,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 138
-          },
-          "panes": {
-            "138": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 138,
-          "root_pane": 138
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 139
-          },
-          "panes": {
-            "139": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 139,
-          "root_pane": 139
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 140
-          },
-          "panes": {
-            "140": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 140,
-          "root_pane": 140
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 141
-          },
-          "panes": {
-            "141": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 141,
-          "root_pane": 141
-        },
-        {
-          "custom_name": "ClaudeCode",
-          "layout": {
-            "Pane": 142
-          },
-          "panes": {
-            "142": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 142,
-          "root_pane": 142
-        },
-        {
-          "custom_name": "codex",
-          "layout": {
-            "Pane": 143
-          },
-          "panes": {
-            "143": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 143,
-          "root_pane": 143
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 144
-          },
-          "panes": {
-            "144": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 144,
-          "root_pane": 144
-        },
-        {
-          "custom_name": "OpenCode",
-          "layout": {
-            "Pane": 145
-          },
-          "panes": {
-            "145": {
-              "cwd": "/Users/Viktor/Code/nix-on-droid"
-            }
-          },
-          "zoomed": false,
-          "focused": 145,
-          "root_pane": 145
-        }
-      ],
-      "active_tab": 2
-    },
-    {
-      "id": "w1F",
-      "custom_name": null,
-      "identity_cwd": "/Users/Viktor/.dots/opencode/.config",
-      "public_pane_numbers": {
-        "146": 1
-      },
-      "next_public_pane_number": 2,
-      "public_tab_numbers": [
-        1
-      ],
-      "next_public_tab_number": 2,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 146
-          },
-          "panes": {
-            "146": {
-              "cwd": "/Users/Viktor/.dots/opencode/.config"
-            }
-          },
-          "zoomed": false,
-          "focused": 146,
-          "root_pane": 146
-        }
-      ],
-      "active_tab": 0
-    },
-    {
       "id": "w1G",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/nixzero-scripts",
       "public_pane_numbers": {
-        "152": 4,
-        "148": 7,
-        "150": 8,
-        "151": 3,
-        "153": 5,
-        "155": 9,
-        "154": 6,
-        "149": 2,
-        "147": 1
+        "141": 8,
+        "146": 9,
+        "138": 1,
+        "139": 7,
+        "144": 5,
+        "142": 3,
+        "143": 4,
+        "145": 6,
+        "140": 2
       },
       "next_public_pane_number": 13,
       "public_tab_numbers": [
@@ -2600,128 +2609,128 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 147
+            "Pane": 138
           },
           "panes": {
-            "147": {
+            "138": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 147,
-          "root_pane": 147
+          "focused": 138,
+          "root_pane": 138
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 148
+            "Pane": 139
           },
           "panes": {
-            "148": {
+            "139": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 148,
-          "root_pane": 148
+          "focused": 139,
+          "root_pane": 139
         },
         {
           "custom_name": "LazyGit",
           "layout": {
-            "Pane": 149
+            "Pane": 140
           },
           "panes": {
-            "149": {
+            "140": {
               "cwd": "/Users/Viktor/Code"
             }
           },
           "zoomed": false,
-          "focused": 149,
-          "root_pane": 149
+          "focused": 140,
+          "root_pane": 140
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 150
+            "Pane": 141
           },
           "panes": {
-            "150": {
+            "141": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 150,
-          "root_pane": 150
+          "focused": 141,
+          "root_pane": 141
         },
         {
           "custom_name": "ClaudeCode",
           "layout": {
-            "Pane": 151
+            "Pane": 142
           },
           "panes": {
-            "151": {
+            "142": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 151,
-          "root_pane": 151
+          "focused": 142,
+          "root_pane": 142
         },
         {
           "custom_name": "codex",
           "layout": {
-            "Pane": 152
+            "Pane": 143
           },
           "panes": {
-            "152": {
+            "143": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 152,
-          "root_pane": 152
+          "focused": 143,
+          "root_pane": 143
         },
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 153
+            "Pane": 144
           },
           "panes": {
-            "153": {
+            "144": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 153,
-          "root_pane": 153
+          "focused": 144,
+          "root_pane": 144
         },
         {
           "custom_name": "OpenCode",
           "layout": {
-            "Pane": 154
+            "Pane": 145
           },
           "panes": {
-            "154": {
+            "145": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 154,
-          "root_pane": 154
+          "focused": 145,
+          "root_pane": 145
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 155
+            "Pane": 146
           },
           "panes": {
-            "155": {
+            "146": {
               "cwd": "/Users/Viktor/Code/nixzero-scripts"
             }
           },
           "zoomed": false,
-          "focused": 155,
-          "root_pane": 155
+          "focused": 146,
+          "root_pane": 146
         }
       ],
       "active_tab": 2
@@ -2731,8 +2740,8 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/neru",
       "public_pane_numbers": {
-        "157": 4,
-        "156": 1
+        "147": 1,
+        "148": 4
       },
       "next_public_pane_number": 5,
       "public_tab_numbers": [
@@ -2747,24 +2756,24 @@
               "direction": "Vertical",
               "ratio": 0.5,
               "first": {
-                "Pane": 156
+                "Pane": 147
               },
               "second": {
-                "Pane": 157
+                "Pane": 148
               }
             }
           },
           "panes": {
-            "156": {
+            "147": {
               "cwd": "/Users/Viktor/Code/neru"
             },
-            "157": {
+            "148": {
               "cwd": "/Users/Viktor/Code/neru"
             }
           },
           "zoomed": false,
-          "focused": 157,
-          "root_pane": 156
+          "focused": 148,
+          "root_pane": 147
         }
       ],
       "active_tab": 0
@@ -2774,7 +2783,7 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026/src/blocks/FundPricesBlock",
       "public_pane_numbers": {
-        "158": 1
+        "149": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -2785,16 +2794,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 158
+            "Pane": 149
           },
           "panes": {
-            "158": {
+            "149": {
               "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026/src/blocks/FundPricesBlock"
             }
           },
           "zoomed": false,
-          "focused": 158,
-          "root_pane": 158
+          "focused": 149,
+          "root_pane": 149
         }
       ],
       "active_tab": 0
@@ -2804,16 +2813,18 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/.dots",
       "public_pane_numbers": {
-        "246": 9,
-        "245": 8,
-        "244": 7,
-        "241": 4,
-        "159": 1,
-        "243": 6,
-        "240": 3,
-        "242": 5
+        "413": 14,
+        "154": 9,
+        "152": 11,
+        "151": 8,
+        "156": 5,
+        "157": 6,
+        "153": 3,
+        "158": 7,
+        "150": 1,
+        "155": 4
       },
-      "next_public_pane_number": 10,
+      "next_public_pane_number": 15,
       "public_tab_numbers": [
         1,
         7,
@@ -2822,121 +2833,148 @@
         11,
         12,
         13,
-        14
+        14,
+        15
       ],
-      "next_public_tab_number": 15,
+      "next_public_tab_number": 16,
       "tabs": [
         {
           "custom_name": null,
           "layout": {
-            "Pane": 159
+            "Pane": 150
           },
           "panes": {
-            "159": {
+            "150": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 159,
-          "root_pane": 159
+          "focused": 150,
+          "root_pane": 150
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 245
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 151
+              },
+              "second": {
+                "Pane": 152
+              }
+            }
           },
           "panes": {
-            "245": {
+            "151": {
+              "cwd": "/Users/Viktor/.dots"
+            },
+            "152": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 245,
-          "root_pane": 245
+          "focused": 151,
+          "root_pane": 151
         },
         {
           "custom_name": "LazyGit",
           "layout": {
-            "Pane": 240
+            "Pane": 153
           },
           "panes": {
-            "240": {
+            "153": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 240,
-          "root_pane": 240
+          "focused": 153,
+          "root_pane": 153
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 246
+            "Pane": 154
           },
           "panes": {
-            "246": {
+            "154": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 246,
-          "root_pane": 246
+          "focused": 154,
+          "root_pane": 154
         },
         {
           "custom_name": "ClaudeCode",
           "layout": {
-            "Pane": 241
+            "Pane": 155
           },
           "panes": {
-            "241": {
+            "155": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 241,
-          "root_pane": 241
+          "focused": 155,
+          "root_pane": 155
         },
         {
           "custom_name": "codex",
           "layout": {
-            "Pane": 242
+            "Pane": 156
           },
           "panes": {
-            "242": {
+            "156": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 242,
-          "root_pane": 242
+          "focused": 156,
+          "root_pane": 156
         },
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 243
+            "Pane": 157
           },
           "panes": {
-            "243": {
+            "157": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 243,
-          "root_pane": 243
+          "focused": 157,
+          "root_pane": 157
         },
         {
           "custom_name": "OpenCode",
           "layout": {
-            "Pane": 244
+            "Pane": 158
           },
           "panes": {
-            "244": {
+            "158": {
               "cwd": "/Users/Viktor/.dots"
             }
           },
           "zoomed": false,
-          "focused": 244,
-          "root_pane": 244
+          "focused": 158,
+          "root_pane": 158
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 413
+          },
+          "panes": {
+            "413": {
+              "cwd": "/Users/Viktor/Code/spore"
+            }
+          },
+          "zoomed": false,
+          "focused": 413,
+          "root_pane": 413
         }
       ],
       "active_tab": 2
@@ -2946,15 +2984,15 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/caffeinate-gui/build",
       "public_pane_numbers": {
-        "165": 4,
-        "166": 5,
-        "161": 7,
-        "164": 3,
-        "167": 6,
-        "168": 12,
-        "160": 1,
-        "162": 2,
-        "163": 8
+        "165": 5,
+        "161": 2,
+        "162": 8,
+        "160": 7,
+        "159": 1,
+        "167": 12,
+        "164": 4,
+        "163": 3,
+        "166": 6
       },
       "next_public_pane_number": 13,
       "public_tab_numbers": [
@@ -2973,11 +3011,25 @@
         {
           "custom_name": null,
           "layout": {
+            "Pane": 159
+          },
+          "panes": {
+            "159": {
+              "cwd": "/Users/Viktor/Code/caffeinate-gui/build"
+            }
+          },
+          "zoomed": false,
+          "focused": 159,
+          "root_pane": 159
+        },
+        {
+          "custom_name": null,
+          "layout": {
             "Pane": 160
           },
           "panes": {
             "160": {
-              "cwd": "/Users/Viktor/Code/caffeinate-gui/build"
+              "cwd": "/Users/Viktor/Code/caffeinate-gui"
             }
           },
           "zoomed": false,
@@ -2985,7 +3037,7 @@
           "root_pane": 160
         },
         {
-          "custom_name": null,
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 161
           },
@@ -2999,7 +3051,7 @@
           "root_pane": 161
         },
         {
-          "custom_name": "LazyGit",
+          "custom_name": null,
           "layout": {
             "Pane": 162
           },
@@ -3013,7 +3065,7 @@
           "root_pane": 162
         },
         {
-          "custom_name": null,
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 163
           },
@@ -3027,7 +3079,7 @@
           "root_pane": 163
         },
         {
-          "custom_name": "ClaudeCode",
+          "custom_name": "codex",
           "layout": {
             "Pane": 164
           },
@@ -3041,7 +3093,7 @@
           "root_pane": 164
         },
         {
-          "custom_name": "codex",
+          "custom_name": "glab-pipelines",
           "layout": {
             "Pane": 165
           },
@@ -3055,7 +3107,7 @@
           "root_pane": 165
         },
         {
-          "custom_name": "glab-pipelines",
+          "custom_name": "OpenCode",
           "layout": {
             "Pane": 166
           },
@@ -3069,7 +3121,7 @@
           "root_pane": 166
         },
         {
-          "custom_name": "OpenCode",
+          "custom_name": null,
           "layout": {
             "Pane": 167
           },
@@ -3081,20 +3133,6 @@
           "zoomed": false,
           "focused": 167,
           "root_pane": 167
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 168
-          },
-          "panes": {
-            "168": {
-              "cwd": "/Users/Viktor/Code/caffeinate-gui"
-            }
-          },
-          "zoomed": false,
-          "focused": 168,
-          "root_pane": 168
         }
       ],
       "active_tab": 8
@@ -3105,17 +3143,16 @@
       "identity_cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo",
       "public_pane_numbers": {
         "173": 4,
-        "189": 11,
-        "171": 2,
-        "170": 1,
-        "177": 8,
+        "170": 2,
         "174": 5,
-        "176": 7,
-        "172": 3,
-        "180": 10,
-        "175": 6
+        "168": 1,
+        "169": 7,
+        "175": 6,
+        "171": 8,
+        "176": 11,
+        "172": 3
       },
-      "next_public_pane_number": 13,
+      "next_public_pane_number": 14,
       "public_tab_numbers": [
         1,
         7,
@@ -3131,6 +3168,34 @@
       "tabs": [
         {
           "custom_name": null,
+          "layout": {
+            "Pane": 168
+          },
+          "panes": {
+            "168": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
+            }
+          },
+          "zoomed": false,
+          "focused": 168,
+          "root_pane": 168
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 169
+          },
+          "panes": {
+            "169": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
+            }
+          },
+          "zoomed": false,
+          "focused": 169,
+          "root_pane": 169
+        },
+        {
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 170
           },
@@ -3146,20 +3211,6 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 176
-          },
-          "panes": {
-            "176": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
-            }
-          },
-          "zoomed": false,
-          "focused": 176,
-          "root_pane": 176
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
             "Pane": 171
           },
           "panes": {
@@ -3170,32 +3221,6 @@
           "zoomed": false,
           "focused": 171,
           "root_pane": 171
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Split": {
-              "direction": "Vertical",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 177
-              },
-              "second": {
-                "Pane": 180
-              }
-            }
-          },
-          "panes": {
-            "180": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
-            },
-            "177": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
-            }
-          },
-          "zoomed": false,
-          "focused": 180,
-          "root_pane": 177
         },
         {
           "custom_name": "ClaudeCode",
@@ -3256,16 +3281,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 189
+            "Pane": 176
           },
           "panes": {
-            "189": {
+            "176": {
               "cwd": "/Users/Viktor/Code/sensory-minds/agentic_speech_demo"
             }
           },
           "zoomed": false,
-          "focused": 189,
-          "root_pane": 189
+          "focused": 176,
+          "root_pane": 176
         }
       ],
       "active_tab": 1
@@ -3275,160 +3300,18 @@
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/conversation",
       "public_pane_numbers": {
-        "202": 8,
-        "199": 5,
-        "200": 6,
-        "198": 4,
-        "196": 2,
-        "197": 3,
-        "195": 1,
-        "201": 7
+        "180": 2,
+        "182": 3,
+        "177": 1,
+        "183": 4,
+        "179": 7,
+        "185": 6,
+        "184": 5,
+        "181": 8,
+        "186": 11,
+        "178": 9
       },
-      "next_public_pane_number": 9,
-      "public_tab_numbers": [
-        1,
-        7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "next_public_tab_number": 15,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 195
-          },
-          "panes": {
-            "195": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 195,
-          "root_pane": 195
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 201
-          },
-          "panes": {
-            "201": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 201,
-          "root_pane": 201
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
-            "Pane": 196
-          },
-          "panes": {
-            "196": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 196,
-          "root_pane": 196
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 202
-          },
-          "panes": {
-            "202": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 202,
-          "root_pane": 202
-        },
-        {
-          "custom_name": "ClaudeCode",
-          "layout": {
-            "Pane": 197
-          },
-          "panes": {
-            "197": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 197,
-          "root_pane": 197
-        },
-        {
-          "custom_name": "codex",
-          "layout": {
-            "Pane": 198
-          },
-          "panes": {
-            "198": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 198,
-          "root_pane": 198
-        },
-        {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 199
-          },
-          "panes": {
-            "199": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 199,
-          "root_pane": 199
-        },
-        {
-          "custom_name": "OpenCode",
-          "layout": {
-            "Pane": 200
-          },
-          "panes": {
-            "200": {
-              "cwd": "/Users/Viktor/Code/conversation"
-            }
-          },
-          "zoomed": false,
-          "focused": 200,
-          "root_pane": 200
-        }
-      ],
-      "active_tab": 3
-    },
-    {
-      "id": "w1Q",
-      "custom_name": null,
-      "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
-      "public_pane_numbers": {
-        "209": 6,
-        "207": 4,
-        "206": 3,
-        "208": 5,
-        "204": 1,
-        "227": 18,
-        "210": 7,
-        "219": 13,
-        "211": 8,
-        "205": 2
-      },
-      "next_public_pane_number": 20,
+      "next_public_pane_number": 13,
       "public_tab_numbers": [
         1,
         7,
@@ -3438,9 +3321,9 @@
         12,
         13,
         14,
-        17
+        16
       ],
-      "next_public_tab_number": 18,
+      "next_public_tab_number": 17,
       "tabs": [
         {
           "custom_name": null,
@@ -3449,159 +3332,153 @@
               "direction": "Vertical",
               "ratio": 0.5,
               "first": {
-                "Pane": 204
+                "Pane": 177
               },
               "second": {
-                "Pane": 219
+                "Pane": 178
               }
             }
           },
           "panes": {
-            "204": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "177": {
+              "cwd": "/Users/Viktor/Code/conversation"
             },
-            "219": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "178": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 204,
-          "root_pane": 204
+          "focused": 177,
+          "root_pane": 177
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 210
+            "Pane": 179
           },
           "panes": {
-            "210": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "179": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 210,
-          "root_pane": 210
+          "focused": 179,
+          "root_pane": 179
         },
         {
           "custom_name": "LazyGit",
           "layout": {
-            "Pane": 205
+            "Pane": 180
           },
           "panes": {
-            "205": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "180": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 205,
-          "root_pane": 205
+          "focused": 180,
+          "root_pane": 180
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 211
+            "Pane": 181
           },
           "panes": {
-            "211": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "181": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 211,
-          "root_pane": 211
+          "focused": 181,
+          "root_pane": 181
         },
         {
           "custom_name": "ClaudeCode",
           "layout": {
-            "Pane": 206
+            "Pane": 182
           },
           "panes": {
-            "206": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
-              "agent_session": {
-                "source": "herdr:claude",
-                "agent": "claude",
-                "kind": "id",
-                "value": "0ca9aa6e-0784-4924-838a-9076cfdb345c"
-              }
+            "182": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 206,
-          "root_pane": 206
+          "focused": 182,
+          "root_pane": 182
         },
         {
           "custom_name": "codex",
           "layout": {
-            "Pane": 207
+            "Pane": 183
           },
           "panes": {
-            "207": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "183": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 207,
-          "root_pane": 207
+          "focused": 183,
+          "root_pane": 183
         },
         {
           "custom_name": "glab-pipelines",
           "layout": {
-            "Pane": 208
+            "Pane": 184
           },
           "panes": {
-            "208": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "184": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 208,
-          "root_pane": 208
+          "focused": 184,
+          "root_pane": 184
         },
         {
           "custom_name": "OpenCode",
           "layout": {
-            "Pane": 209
+            "Pane": 185
           },
           "panes": {
-            "209": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "185": {
+              "cwd": "/Users/Viktor/Code/conversation"
             }
           },
           "zoomed": false,
-          "focused": 209,
-          "root_pane": 209
+          "focused": 185,
+          "root_pane": 185
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 227
+            "Pane": 186
           },
           "panes": {
-            "227": {
-              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            "186": {
+              "cwd": "/Users/Viktor/Code/agent-office"
             }
           },
           "zoomed": false,
-          "focused": 227,
-          "root_pane": 227
+          "focused": 186,
+          "root_pane": 186
         }
       ],
-      "active_tab": 2
+      "active_tab": 3
     },
     {
       "id": "w1R",
       "custom_name": null,
       "identity_cwd": "/Users/Viktor/Code/file-relay",
       "public_pane_numbers": {
-        "234": 4,
-        "237": 7,
-        "232": 2,
-        "233": 3,
-        "235": 5,
-        "236": 6,
-        "231": 1,
-        "238": 8
+        "200": 2,
+        "205": 6,
+        "203": 4,
+        "198": 1,
+        "202": 3,
+        "201": 8,
+        "199": 7,
+        "204": 5
       },
       "next_public_pane_number": 9,
       "public_tab_numbers": [
@@ -3619,11 +3496,592 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 231
+            "Pane": 198
+          },
+          "panes": {
+            "198": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 198,
+          "root_pane": 198
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 199
+          },
+          "panes": {
+            "199": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 199,
+          "root_pane": 199
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 200
+          },
+          "panes": {
+            "200": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 200,
+          "root_pane": 200
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 201
+          },
+          "panes": {
+            "201": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 201,
+          "root_pane": 201
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 202
+          },
+          "panes": {
+            "202": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 202,
+          "root_pane": 202
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 203
+          },
+          "panes": {
+            "203": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 203,
+          "root_pane": 203
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 204
+          },
+          "panes": {
+            "204": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 204,
+          "root_pane": 204
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 205
+          },
+          "panes": {
+            "205": {
+              "cwd": "/Users/Viktor/Code/file-relay"
+            }
+          },
+          "zoomed": false,
+          "focused": 205,
+          "root_pane": 205
+        }
+      ],
+      "active_tab": 3
+    },
+    {
+      "id": "w1S",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal",
+      "public_pane_numbers": {
+        "207": 7,
+        "210": 3,
+        "206": 1,
+        "211": 4,
+        "208": 2,
+        "212": 5,
+        "213": 6,
+        "209": 8
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 206
+          },
+          "panes": {
+            "206": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 206,
+          "root_pane": 206
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 207
+          },
+          "panes": {
+            "207": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 207,
+          "root_pane": 207
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 208
+          },
+          "panes": {
+            "208": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 208,
+          "root_pane": 208
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 209
+          },
+          "panes": {
+            "209": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 209,
+          "root_pane": 209
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 210
+          },
+          "panes": {
+            "210": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 210,
+          "root_pane": 210
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 211
+          },
+          "panes": {
+            "211": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 211,
+          "root_pane": 211
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 212
+          },
+          "panes": {
+            "212": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 212,
+          "root_pane": 212
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 213
+          },
+          "panes": {
+            "213": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"
+            }
+          },
+          "zoomed": false,
+          "focused": 213,
+          "root_pane": 213
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w1T",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/audio-notifications",
+      "public_pane_numbers": {
+        "214": 1,
+        "216": 2,
+        "219": 4,
+        "221": 6,
+        "220": 5,
+        "217": 8,
+        "215": 7,
+        "218": 3
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 214
+          },
+          "panes": {
+            "214": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 214,
+          "root_pane": 214
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 215
+          },
+          "panes": {
+            "215": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 215,
+          "root_pane": 215
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 216
+          },
+          "panes": {
+            "216": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 216,
+          "root_pane": 216
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 217
+          },
+          "panes": {
+            "217": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 217,
+          "root_pane": 217
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 218
+          },
+          "panes": {
+            "218": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 218,
+          "root_pane": 218
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 219
+          },
+          "panes": {
+            "219": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 219,
+          "root_pane": 219
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 220
+          },
+          "panes": {
+            "220": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 220,
+          "root_pane": 220
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 221
+          },
+          "panes": {
+            "221": {
+              "cwd": "/Users/Viktor/Code/audio-notifications"
+            }
+          },
+          "zoomed": false,
+          "focused": 221,
+          "root_pane": 221
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w1V",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/uptime_dashboard",
+      "public_pane_numbers": {
+        "224": 2,
+        "223": 7,
+        "228": 5,
+        "226": 3,
+        "227": 4,
+        "225": 8,
+        "222": 1,
+        "229": 6
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 222
+          },
+          "panes": {
+            "222": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 222,
+          "root_pane": 222
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 223
+          },
+          "panes": {
+            "223": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 223,
+          "root_pane": 223
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 224
+          },
+          "panes": {
+            "224": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 224,
+          "root_pane": 224
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 225
+          },
+          "panes": {
+            "225": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 225,
+          "root_pane": 225
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 226
+          },
+          "panes": {
+            "226": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 226,
+          "root_pane": 226
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 227
+          },
+          "panes": {
+            "227": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 227,
+          "root_pane": 227
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 228
+          },
+          "panes": {
+            "228": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 228,
+          "root_pane": 228
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 229
+          },
+          "panes": {
+            "229": {
+              "cwd": "/Users/Viktor/Code/uptime_dashboard"
+            }
+          },
+          "zoomed": false,
+          "focused": 229,
+          "root_pane": 229
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w1W",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface",
+      "public_pane_numbers": {
+        "232": 7,
+        "231": 12,
+        "236": 3,
+        "234": 8,
+        "239": 6,
+        "233": 2,
+        "238": 5,
+        "237": 4,
+        "340": 23
+      },
+      "next_public_pane_number": 28,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 20,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 231
+              },
+              "second": {
+                "Pane": 340
+              }
+            }
           },
           "panes": {
             "231": {
-              "cwd": "/Users/Viktor/Code/file-relay"
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
+            },
+            "340": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
             }
           },
           "zoomed": false,
@@ -3633,25 +4091,11 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 237
-          },
-          "panes": {
-            "237": {
-              "cwd": "/Users/Viktor/Code/file-relay"
-            }
-          },
-          "zoomed": false,
-          "focused": 237,
-          "root_pane": 237
-        },
-        {
-          "custom_name": "LazyGit",
-          "layout": {
             "Pane": 232
           },
           "panes": {
             "232": {
-              "cwd": "/Users/Viktor/Code/file-relay"
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
             }
           },
           "zoomed": false,
@@ -3659,27 +4103,13 @@
           "root_pane": 232
         },
         {
-          "custom_name": null,
-          "layout": {
-            "Pane": 238
-          },
-          "panes": {
-            "238": {
-              "cwd": "/Users/Viktor/Code/file-relay"
-            }
-          },
-          "zoomed": false,
-          "focused": 238,
-          "root_pane": 238
-        },
-        {
-          "custom_name": "ClaudeCode",
+          "custom_name": "LazyGit",
           "layout": {
             "Pane": 233
           },
           "panes": {
             "233": {
-              "cwd": "/Users/Viktor/Code/file-relay"
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
             }
           },
           "zoomed": false,
@@ -3687,13 +4117,13 @@
           "root_pane": 233
         },
         {
-          "custom_name": "codex",
+          "custom_name": null,
           "layout": {
             "Pane": 234
           },
           "panes": {
             "234": {
-              "cwd": "/Users/Viktor/Code/file-relay"
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
             }
           },
           "zoomed": false,
@@ -3701,39 +4131,1475 @@
           "root_pane": 234
         },
         {
-          "custom_name": "glab-pipelines",
-          "layout": {
-            "Pane": 235
-          },
-          "panes": {
-            "235": {
-              "cwd": "/Users/Viktor/Code/file-relay"
-            }
-          },
-          "zoomed": false,
-          "focused": 235,
-          "root_pane": 235
-        },
-        {
-          "custom_name": "OpenCode",
+          "custom_name": "ClaudeCode",
           "layout": {
             "Pane": 236
           },
           "panes": {
             "236": {
-              "cwd": "/Users/Viktor/Code/file-relay"
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
             }
           },
           "zoomed": false,
           "focused": 236,
           "root_pane": 236
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 237
+          },
+          "panes": {
+            "237": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
+            }
+          },
+          "zoomed": false,
+          "focused": 237,
+          "root_pane": 237
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 238
+          },
+          "panes": {
+            "238": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
+            }
+          },
+          "zoomed": false,
+          "focused": 238,
+          "root_pane": 238
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 239
+          },
+          "panes": {
+            "239": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/conversational-interface"
+            }
+          },
+          "zoomed": false,
+          "focused": 239,
+          "root_pane": 239
+        }
+      ],
+      "active_tab": 3
+    },
+    {
+      "id": "w1X",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/addy-art-payload",
+      "public_pane_numbers": {
+        "248": 5,
+        "247": 4,
+        "246": 3,
+        "242": 9,
+        "244": 2,
+        "245": 8,
+        "243": 7,
+        "249": 6,
+        "241": 1
+      },
+      "next_public_pane_number": 11,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 241
+              },
+              "second": {
+                "Pane": 242
+              }
+            }
+          },
+          "panes": {
+            "241": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            },
+            "242": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 241,
+          "root_pane": 241
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 243
+          },
+          "panes": {
+            "243": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 243,
+          "root_pane": 243
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 244
+          },
+          "panes": {
+            "244": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 244,
+          "root_pane": 244
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 245
+          },
+          "panes": {
+            "245": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 245,
+          "root_pane": 245
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 246
+          },
+          "panes": {
+            "246": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 246,
+          "root_pane": 246
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 247
+          },
+          "panes": {
+            "247": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 247,
+          "root_pane": 247
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 248
+          },
+          "panes": {
+            "248": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 248,
+          "root_pane": 248
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 249
+          },
+          "panes": {
+            "249": {
+              "cwd": "/Users/Viktor/Code/addy-art-payload"
+            }
+          },
+          "zoomed": false,
+          "focused": 249,
+          "root_pane": 249
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w1Y",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/agent-office",
+      "public_pane_numbers": {
+        "254": 8,
+        "253": 2,
+        "256": 4,
+        "258": 6,
+        "251": 9,
+        "257": 5,
+        "250": 1,
+        "255": 3,
+        "252": 7
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 250
+              },
+              "second": {
+                "Pane": 251
+              }
+            }
+          },
+          "panes": {
+            "250": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            },
+            "251": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 250,
+          "root_pane": 250
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 252
+          },
+          "panes": {
+            "252": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 252,
+          "root_pane": 252
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 253
+          },
+          "panes": {
+            "253": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 253,
+          "root_pane": 253
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 254
+          },
+          "panes": {
+            "254": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 254,
+          "root_pane": 254
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 255
+          },
+          "panes": {
+            "255": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 255,
+          "root_pane": 255
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 256
+          },
+          "panes": {
+            "256": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 256,
+          "root_pane": 256
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 257
+          },
+          "panes": {
+            "257": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 257,
+          "root_pane": 257
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 258
+          },
+          "panes": {
+            "258": {
+              "cwd": "/Users/Viktor/Code/agent-office"
+            }
+          },
+          "zoomed": false,
+          "focused": 258,
+          "root_pane": 258
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w1Z",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/conversation",
+      "public_pane_numbers": {
+        "269": 1,
+        "274": 6,
+        "273": 5,
+        "272": 4,
+        "271": 3,
+        "275": 7,
+        "276": 8,
+        "270": 2
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 269
+          },
+          "panes": {
+            "269": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 269,
+          "root_pane": 269
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 275
+          },
+          "panes": {
+            "275": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 275,
+          "root_pane": 275
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 270
+          },
+          "panes": {
+            "270": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 270,
+          "root_pane": 270
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 276
+          },
+          "panes": {
+            "276": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 276,
+          "root_pane": 276
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 271
+          },
+          "panes": {
+            "271": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 271,
+          "root_pane": 271
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 272
+          },
+          "panes": {
+            "272": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 272,
+          "root_pane": 272
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 273
+          },
+          "panes": {
+            "273": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 273,
+          "root_pane": 273
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 274
+          },
+          "panes": {
+            "274": {
+              "cwd": "/Users/Viktor/Code/conversation"
+            }
+          },
+          "zoomed": false,
+          "focused": 274,
+          "root_pane": 274
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w10",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/pipelines-gui",
+      "public_pane_numbers": {
+        "303": 7,
+        "302": 6,
+        "298": 2,
+        "301": 5,
+        "300": 4,
+        "297": 1,
+        "304": 8,
+        "299": 3
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 297
+          },
+          "panes": {
+            "297": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 297,
+          "root_pane": 297
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 303
+          },
+          "panes": {
+            "303": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 303,
+          "root_pane": 303
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 298
+          },
+          "panes": {
+            "298": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 298,
+          "root_pane": 298
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 304
+          },
+          "panes": {
+            "304": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 304,
+          "root_pane": 304
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 299
+          },
+          "panes": {
+            "299": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 299,
+          "root_pane": 299
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 300
+          },
+          "panes": {
+            "300": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 300,
+          "root_pane": 300
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 301
+          },
+          "panes": {
+            "301": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 301,
+          "root_pane": 301
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 302
+          },
+          "panes": {
+            "302": {
+              "cwd": "/Users/Viktor/Code/pipelines-gui"
+            }
+          },
+          "zoomed": false,
+          "focused": 302,
+          "root_pane": 302
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w21",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026",
+      "public_pane_numbers": {
+        "313": 3,
+        "315": 5,
+        "316": 6,
+        "351": 13,
+        "317": 7,
+        "314": 4,
+        "354": 14,
+        "310": 1,
+        "318": 8,
+        "324": 9,
+        "312": 2
+      },
+      "next_public_pane_number": 16,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "next_public_tab_number": 16,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 310
+              },
+              "second": {
+                "Pane": 324
+              }
+            }
+          },
+          "panes": {
+            "310": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            },
+            "324": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 310,
+          "root_pane": 310
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 317
+          },
+          "panes": {
+            "317": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 317,
+          "root_pane": 317
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 312
+          },
+          "panes": {
+            "312": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 312,
+          "root_pane": 312
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Vertical",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 318
+              },
+              "second": {
+                "Pane": 354
+              }
+            }
+          },
+          "panes": {
+            "318": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            },
+            "354": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 354,
+          "root_pane": 318
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 313
+          },
+          "panes": {
+            "313": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 313,
+          "root_pane": 313
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 314
+          },
+          "panes": {
+            "314": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 314,
+          "root_pane": 314
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 315
+          },
+          "panes": {
+            "315": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 315,
+          "root_pane": 315
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 316
+          },
+          "panes": {
+            "316": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 316,
+          "root_pane": 316
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 351
+          },
+          "panes": {
+            "351": {
+              "cwd": "/Users/Viktor/Code/sensory-minds/metzler-website-relaunch-2026"
+            }
+          },
+          "zoomed": false,
+          "focused": 351,
+          "root_pane": 351
+        }
+      ],
+      "active_tab": 3
+    },
+    {
+      "id": "w23",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/show-mermaid",
+      "public_pane_numbers": {
+        "366": 4,
+        "363": 1,
+        "369": 7,
+        "368": 6,
+        "364": 2,
+        "367": 5,
+        "370": 8,
+        "365": 3
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 363
+          },
+          "panes": {
+            "363": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 363,
+          "root_pane": 363
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 369
+          },
+          "panes": {
+            "369": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 369,
+          "root_pane": 369
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 364
+          },
+          "panes": {
+            "364": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 364,
+          "root_pane": 364
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 370
+          },
+          "panes": {
+            "370": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 370,
+          "root_pane": 370
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 365
+          },
+          "panes": {
+            "365": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 365,
+          "root_pane": 365
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 366
+          },
+          "panes": {
+            "366": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 366,
+          "root_pane": 366
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 367
+          },
+          "panes": {
+            "367": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 367,
+          "root_pane": 367
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 368
+          },
+          "panes": {
+            "368": {
+              "cwd": "/Users/Viktor/Code/show-mermaid"
+            }
+          },
+          "zoomed": false,
+          "focused": 368,
+          "root_pane": 368
+        }
+      ],
+      "active_tab": 6
+    },
+    {
+      "id": "w24",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/shift-distributor",
+      "public_pane_numbers": {
+        "387": 3,
+        "386": 2,
+        "385": 1,
+        "390": 6,
+        "391": 7,
+        "388": 4,
+        "389": 5,
+        "392": 8,
+        "393": 9
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "next_public_tab_number": 16,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 385
+          },
+          "panes": {
+            "385": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 385,
+          "root_pane": 385
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 391
+          },
+          "panes": {
+            "391": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 391,
+          "root_pane": 391
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 386
+          },
+          "panes": {
+            "386": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 386,
+          "root_pane": 386
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 392
+          },
+          "panes": {
+            "392": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 392,
+          "root_pane": 392
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 387
+          },
+          "panes": {
+            "387": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 387,
+          "root_pane": 387
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 388
+          },
+          "panes": {
+            "388": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 388,
+          "root_pane": 388
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 389
+          },
+          "panes": {
+            "389": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 389,
+          "root_pane": 389
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 390
+          },
+          "panes": {
+            "390": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 390,
+          "root_pane": 390
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 393
+          },
+          "panes": {
+            "393": {
+              "cwd": "/Users/Viktor/Code/shift-distributor"
+            }
+          },
+          "zoomed": false,
+          "focused": 393,
+          "root_pane": 393
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w25",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/nix-server",
+      "public_pane_numbers": {
+        "396": 1,
+        "398": 2
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 396
+          },
+          "panes": {
+            "396": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 396,
+          "root_pane": 396
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 398
+          },
+          "panes": {
+            "398": {
+              "cwd": "/Users/Viktor/Code/fish-slop"
+            }
+          },
+          "zoomed": false,
+          "focused": 398,
+          "root_pane": 398
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w26",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/Code/nix-server",
+      "public_pane_numbers": {
+        "408": 6,
+        "407": 5,
+        "409": 7,
+        "404": 2,
+        "406": 4,
+        "403": 1,
+        "405": 3,
+        "410": 8
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 403
+          },
+          "panes": {
+            "403": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 403,
+          "root_pane": 403
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 409
+          },
+          "panes": {
+            "409": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 409,
+          "root_pane": 409
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 404
+          },
+          "panes": {
+            "404": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 404,
+          "root_pane": 404
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 410
+          },
+          "panes": {
+            "410": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 410,
+          "root_pane": 410
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 405
+          },
+          "panes": {
+            "405": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 405,
+          "root_pane": 405
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 406
+          },
+          "panes": {
+            "406": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 406,
+          "root_pane": 406
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 407
+          },
+          "panes": {
+            "407": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 407,
+          "root_pane": 407
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 408
+          },
+          "panes": {
+            "408": {
+              "cwd": "/Users/Viktor/Code/nix-server"
+            }
+          },
+          "zoomed": false,
+          "focused": 408,
+          "root_pane": 408
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w28",
+      "custom_name": null,
+      "identity_cwd": "/Users/Viktor/.dots",
+      "public_pane_numbers": {
+        "424": 2,
+        "430": 8,
+        "429": 7,
+        "423": 1,
+        "425": 3,
+        "428": 6,
+        "426": 4,
+        "427": 5
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "next_public_tab_number": 15,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 423
+          },
+          "panes": {
+            "423": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 423,
+          "root_pane": 423
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 429
+          },
+          "panes": {
+            "429": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 429,
+          "root_pane": 429
+        },
+        {
+          "custom_name": "LazyGit",
+          "layout": {
+            "Pane": 424
+          },
+          "panes": {
+            "424": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 424,
+          "root_pane": 424
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 430
+          },
+          "panes": {
+            "430": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 430,
+          "root_pane": 430
+        },
+        {
+          "custom_name": "ClaudeCode",
+          "layout": {
+            "Pane": 425
+          },
+          "panes": {
+            "425": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 425,
+          "root_pane": 425
+        },
+        {
+          "custom_name": "codex",
+          "layout": {
+            "Pane": 426
+          },
+          "panes": {
+            "426": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 426,
+          "root_pane": 426
+        },
+        {
+          "custom_name": "glab-pipelines",
+          "layout": {
+            "Pane": 427
+          },
+          "panes": {
+            "427": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 427,
+          "root_pane": 427
+        },
+        {
+          "custom_name": "OpenCode",
+          "layout": {
+            "Pane": 428
+          },
+          "panes": {
+            "428": {
+              "cwd": "/Users/Viktor/.dots"
+            }
+          },
+          "zoomed": false,
+          "focused": 428,
+          "root_pane": 428
         }
       ],
       "active_tab": 2
     }
   ],
-  "active": 26,
-  "selected": 26,
+  "active": 43,
+  "selected": 43,
   "sidebar_width": null,
   "sidebar_section_split": null,
   "collapsed_space_keys": []
