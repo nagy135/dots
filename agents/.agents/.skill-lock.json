@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "skills": {
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/pbakaus/impeccable.git",
+      "skillPath": "skill/SKILL.md",
+      "skillFolderHash": "6d2dbc37eccb5d89902bda605f1a8bdbad7f36d8",
+      "installedAt": "2026-05-19T08:40:44.045Z",
+      "updatedAt": "2026-05-19T08:40:44.045Z"
+    },
+    "payload": {
+      "source": "payloadcms/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/payloadcms/skills.git",
+      "skillPath": "skills/payload/SKILL.md",
+      "skillFolderHash": "76346504369c7d016bb77faa08c6452910baab45",
+      "installedAt": "2026-05-21T14:14:33.634Z",
+      "updatedAt": "2026-05-21T14:14:33.634Z"
+    },
+    "herdr": {
+      "source": "ogulcancelik/herdr",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ogulcancelik/herdr.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "edd08e895fc65e07e500a1fe80e88202deae6b8d",
+      "installedAt": "2026-07-04T07:49:55.941Z",
+      "updatedAt": "2026-07-04T07:49:55.941Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
