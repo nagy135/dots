@@ -1,0 +1,5 @@
+interface:
+  display_name: "Fleet Work"
+  short_description: "Use fleet sessions and the Mac Git relay"
+policy:
+  allow_implicit_invocation: true
