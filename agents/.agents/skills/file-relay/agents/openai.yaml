@@ -1,0 +1,3 @@
+interface:
+  display_name: "File Relay"
+  short_description: "Upload files and return public download links"
