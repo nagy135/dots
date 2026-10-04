@@ -1,8 +1,8 @@
 model = "gpt-6-astra"
-model_reasoning_effort = "high"
+model_reasoning_effort = "medium"
 # Computer-use cleanup is handled by the unified-computer-use plugin hooks.
 approvals_reviewer = "auto_review"
-service_tier = "default"
+service_tier = "priority"
 
 notify = ["/Users/Viktor/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
@@ -531,8 +531,81 @@ trust_level = "trusted"
 [projects."/Users/Viktor/Code/file-relay"]
 trust_level = "trusted"
 
+[projects."/Users/Viktor/Code/sensory-minds/HDPlusHaendlerPortal"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/audio-notifications"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/.codex/.chatgpt-projects/g-p-6a53a870aec88191b5cb7a7b58a4aa23"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/uptime_dashboard"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/usage-notifier"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/sensory-minds/conversational-interface"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/agent-office/nagy135/nix-darwin"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/agent-office"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-28/referenced-chatgpt-conversation-this-is-an"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-29/coo"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/pipelines-gui"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/pipelines-gui"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-09-30/new-x20"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-02/worl"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-02/find-me-nut-that-i-could"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-03/giv"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-03/use"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/shift-distributor"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/fish-slop"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/medical-cheatsheet"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-04/f"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-04/realtime-voice-chat"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Documents/Codex/2026-10-04/pro"]
+trust_level = "trusted"
+
+[projects."/Users/Viktor/Code/onmyway"]
+trust_level = "trusted"
+
 [tui]
 theme = "gruvbox-dark"
+screen_reader_detection_done = true
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
@@ -590,10 +663,63 @@ trusted_hash = "sha256:474013e4741a75970463c980bf92fb8cfa65929b95ea330abf3e077d2
 [hooks.state."/Users/Viktor/.codex/hooks.json:stop:0:0"]
 trusted_hash = "sha256:6ec7c45272bd652b6d55233bcdb3a60fc8134c029bc585ce1018be607c91805b"
 
+[hooks.state."/<session-flags>/config.toml:pre_tool_use:0:0"]
+trusted_hash = "sha256:9a0cf886899688a2c7e644cfecd5183abfad38dddcf0d1770d3b473e9838c201"
+
+[hooks.state."/<session-flags>/config.toml:permission_request:0:0"]
+trusted_hash = "sha256:a13cffb2e0ed73604a865f3d0c252e5c95ed6c1aa0fc64184f2ed2d3e9091a3a"
+
+[hooks.state."/<session-flags>/config.toml:post_tool_use:0:0"]
+trusted_hash = "sha256:5c5552e2eff6dcddf66da6b110fe276e1dee7d8f9c6fba34334940103125afcb"
+
+[hooks.state."/<session-flags>/config.toml:session_start:0:0"]
+trusted_hash = "sha256:9b59c78e1351c833b22c6ecc3bace6a74132ba940a92ff9974a1cf4696e023fa"
+
+[hooks.state."/<session-flags>/config.toml:user_prompt_submit:0:0"]
+trusted_hash = "sha256:d74b257197b5865f5fcbbd8e343d008d6852f4c2c804d709e1f23e7d582fcb30"
+
+[hooks.state."/<session-flags>/config.toml:stop:0:0"]
+trusted_hash = "sha256:9f56c22289e8c50bf60a3546c076f88790e968a1863b89ea54b995cb76001266"
+
+[hooks.state."/<session-flags>/config.toml:interrupt:0:0"]
+trusted_hash = "sha256:43eab0296c5a5beef9be36bc58f9f94346902284ae9da1200be261ed2ee96208"
+
 [desktop]
 followUpQueueMode = "queue"
 realtimeVoiceScreenContextEnabled = true
-conversationDetailMode = "STEPS_COMMANDS"
+conversationDetailMode = "STEPS_PROSE"
+appearanceDarkCodeThemeId = "material"
+usePointerCursors = true
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#80cbc4"
+accentSource = "custom"
+contrast = 60
+ink = "#eeffff"
+opaqueWindows = false
+surface = "#212121"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#c3e88d"
+diffRemoved = "#f07178"
+skill = "#c792ea"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#3a83f7"
+accentSource = "chatgpt"
+contrast = 82
+ink = "#1a1c1f"
+opaqueWindows = false
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#00a240"
+diffRemoved = "#ba2623"
+skill = "#924ff7"
 
 [marketplaces.openai-bundled]
 source_type = "local"
