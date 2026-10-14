@@ -11,12 +11,14 @@ the actual download URL from the response.
 ## Service contract
 
 - Public uploads and downloads; no account, token, or authentication headers.
-- Exactly one multipart field named `file` per request.
+- Exactly one multipart field named `file` per request, with an optional
+  `expires_in` field specifying retention in seconds.
 - Maximum file size: **200,000,000 bytes** (200 MB), inclusive.
 - Successful upload: HTTP **201**, with JSON fields `url`, `filename`, `size`,
   `uploaded_at`, and `expires_at`. The `Location` header also contains the URL.
-- Links download the original file as an attachment and expire **7 days after
-  upload**. Downloads do not extend expiry. Anyone with the URL can download.
+- Links download the original file as an attachment and expire **1 hour after
+  upload** by default. Custom retention is supported up to **1 month**.
+  Downloads do not extend expiry. Anyone with the URL can download.
 - No public file listing or deletion API. Unknown or expired URLs return 404.
 
 ## Upload
@@ -42,6 +44,19 @@ curl's multipart syntax. Preserve the original filename. For multiple requested
 files, issue separate uploads and return a link for each; do not silently zip,
 split, or transform them.
 
+When the user asks to relay a file for a specific duration, interpret that as
+the requested retention and pass it in seconds using `expires_in`. For example,
+one day is:
+
+```sh
+curl -F 'file=@example.pdf' -F 'expires_in=86400' \
+  https://relay.infiniter.tech/upload
+```
+
+Do not suggest custom retention or ask about it unprompted. If no duration is
+requested, omit `expires_in` to use the one-hour default. If the requested
+duration exceeds one month, explain the limit instead of silently shortening it.
+
 Check the exit status and parse the JSON response. Confirm a valid `url` and
 that `size` matches the local file size. Keep the returned URL; do not invent a
 UUID or construct a supposed successful link after an error. A HEAD request can
@@ -52,13 +67,14 @@ curl --fail --silent --show-error --head --max-time 30 'RETURNED_URL'
 ```
 
 Return a clickable download link labeled with the filename, plus the expiry
-from `expires_at` (or state that it expires in seven days). If verification
+from `expires_at` (or use the requested retention or one-hour default). If verification
 fails after a successful upload, retain the returned URL and explain that the
 upload succeeded but the download check failed; do not upload another copy.
 
 ## Errors
 
-- **400:** Correct the multipart request; send one `file` field only.
+- **400:** Correct the multipart request; send exactly one `file` field and
+  check any supplied `expires_in` value.
 - **413:** Report the size limit. Do not retry the unchanged file.
 - **503 from the relay's upload handler:** It accepts at most four concurrent
   uploads. Honor `Retry-After`, retry at most twice, then report it as busy.
