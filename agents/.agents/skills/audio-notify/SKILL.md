@@ -9,6 +9,8 @@ description: Send spoken summary or progress notifications to Viktor's paired An
 
 As soon as the user asks for audio or spoken notifications, enable **audio notifications for every run and every turn from that point onward in the conversation**, including the turn that enables them. The request establishes an ongoing preference, not a one-time notification. Continue without requiring the user to repeat the request, until they say "stop notifying" or otherwise clearly ask to stop audio notifications. Carry this preference into continuation or compaction summaries so it survives context changes. This skill handles audio notifications independently and does not enable or invoke any other notification channel. A request to edit or discuss notification skills alone does not enable notifications.
 
+Enable notifications silently. Do not send a startup or activation announcement such as "Audio notifications are on." The first spoken notification should contain a meaningful task update in progress mode, or the completed turn's result in summary mode.
+
 ## Notification modes
 
 Honor the user's requested mode and keep it active across turns until they change it or stop notifications. If they request notifications without specifying a mode, default to **summary**. Preserve both the active audio preference and its mode in continuation or compaction summaries.
