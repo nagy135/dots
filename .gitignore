@@ -15,6 +15,43 @@ blender/Documents/blender
 qutebrowser/.local/share/qutebrowser/state
 nvim/.config/nvim/plugin/packer_compiled.lua
 zsh/.zshenv
-/herdr/.config/herdr/herdr-client.log
-/herdr/.config/herdr/herdr-server.log
-/herdr/.config/herdr/__pycache__
+
+# Agent homes: keep persistent configuration and skills; ignore runtime state by default.
+# Add new persistent files/directories to the appropriate allowlist below.
+/claude/.claude/*
+!/claude/.claude/CLAUDE.md
+!/claude/.claude/settings.json
+!/claude/.claude/commands/
+!/claude/.claude/agents/
+!/claude/.claude/hooks/
+!/claude/.claude/rules/
+!/claude/.claude/output-styles/
+!/claude/.claude/skills/
+!/claude/.claude/themes/
+
+# Preserve synced skill content, but not trash or generated sync bookkeeping.
+/claude/.claude/skills/.trash/
+/claude/.claude/skills/synced/.bucket-*
+/claude/.claude/skills/synced/*/.last-complete-round
+/claude/.claude/skills/synced/*/manifest.json
+/claude/.claude/skills/**/__pycache__/
+
+/codex/.codex/*
+!/codex/.codex/AGENTS.md
+!/codex/.codex/config.toml
+!/codex/.codex/hooks.json
+!/codex/.codex/herdr-agent-state.sh
+!/codex/.codex/prompts/
+!/codex/.codex/rules/
+!/codex/.codex/skills/
+/codex/.codex/skills/.trash/
+/codex/.codex/skills/**/__pycache__/
+
+# Herdr: keep configuration, plugin declarations/source, and the custom helper.
+# Sessions, snapshots, sockets, logs, caches, release notes, and process locks are local.
+/herdr/.config/herdr/*
+!/herdr/.config/herdr/config.toml
+!/herdr/.config/herdr/plugins.json
+!/herdr/.config/herdr/plugins/
+!/herdr/.config/herdr/tmuxish.py
+/herdr/.config/herdr/plugins/**/__pycache__/
