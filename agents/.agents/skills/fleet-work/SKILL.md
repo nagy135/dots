@@ -53,6 +53,30 @@ Before changing a checkout, check the host, working tree, branch, and fetch/push
 URLs. Use a separate worktree when another session owns the checkout. Transfer
 committed source changes; keep credentials and runtime data on their devices.
 
+## Required delivery for changes on Nix machines
+
+Whenever modifying something on another Nix machine, complete the delivery in
+the same task:
+
+1. Commit our changes, integrate them into the repository's intended branch
+   (`master` for `nix-server`), and push that branch to `origin`. A commit left
+   only in a temporary worktree, another branch, or a relay is not delivered;
+   complete the Mac relay integration and push to the Mac's `origin` when that
+   workflow applies.
+2. Pull the published branch on each affected machine. Build there from the
+   pulled commit, using the project's build command or the matching host's NixOS
+   rebuild command. Initiate builds on the target machine; retain configured
+   build workers such as nixpi for nixzero.
+3. Verify the target has the delivered commit and the build succeeded. Finish
+   with our changes committed, pushed, pulled, and built, then remove any
+   temporary worktrees and branches created for the task once integrated.
+
+Do not leave our changes uncommitted, confined to a worktree or another branch,
+or awaiting a later push, pull, or build. If delivery or the build is blocked,
+report the exact blocker and remaining steps rather than claiming completion.
+Preserve unrelated uncommitted changes: do not commit, discard, or stash them
+as cleanup. Report any such changes still present at the end of the turn.
+
 ## Skill copies
 
 The source is `~/.agents/skills/fleet-work`; Claude discovers it through
