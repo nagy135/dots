@@ -1,9 +1,12 @@
 ---
 name: teach-me
-description: Explain code changes with brief, numbered code samples and the reason for each change. Use when the user asks to be taught or walked through changes, optionally narrowed to files, patterns, or a topic.
+description: Explain code changes with brief, numbered code samples and the reason for each change, optionally narrowed to files, patterns, or a topic. Use only when the user explicitly invokes teach-me.
+disable-model-invocation: true
 ---
 
 # Teach me
+
+Run only when the user explicitly invokes this skill, such as `$teach-me` or `/teach-me`. Do not select it automatically for general requests to explain code or changes. Follow-up questions about an existing walkthrough continue that invocation.
 
 Explain the selected changes so the user can understand and discuss individual decisions. This is an explanation task; do not edit code unless the user asks for a change.
 
