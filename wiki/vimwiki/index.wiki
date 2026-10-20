@@ -1,3 +1,6 @@
+# Legacy collection
+The active collection is in ../wiki/index.norg (Neorg format). Add and update recipes there.
+
 # PROJECT IDEAS
 * tree.js something
     * with react

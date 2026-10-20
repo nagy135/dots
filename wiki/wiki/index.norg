@@ -1,37 +1,9 @@
-* PROJECT IDEAS
-- tree.js something
-    - with react
-    - {https://github.com/danba340/react-three-fiber-example?fbclid=IwAR2E_nGngDVxOjV_mU1lJJMW-zYBps7gFUmwQEXkGkAgdTm0qbr2BLqL_O0}[link]
-- css parallax effect
-    - {https://www.youtube.com/watch?v=mxHoPYFsTuk&ab_channel=WebDevSimplified}[link]
-- node cli with colored inputs etc
-    - {https://www.youtube.com/watch?v=_oHByo8tiEY&ab_channel=Fireship}[link]
+* Command cookbook
+Short recipes for the tools I use: task, command, a useful caveat, and related pages.
+Shell examples labeled Bash require Bash; replace example paths, names, and connection details before running them.
+The older Vimwiki copy is kept in `../vimwiki/`; add and update recipes here.
 
-
-
-
-* TODOS
-** general
-- nvim
-    - {https://github.com/lewis6991/gitsigns.nvim}[gitsigns]
-    - {https://github.com/wbthomason/packer.nvim}[packer]
-- {https://github.com/nagy135/ssh-fzf}[ssh-fzf]
-    - aur package
-    - wayland version
-- remote editing file in nvim
-    - edit file, press bind and it scp replaces remote file
-    - nui.nvim input
-- tmux nord theme long session name bug (last char)
-- ffmpeg screencast on toggle bind
-- lua version of "delete function with its braces"
-
-
-
-
-
-* INFOS
-
-* GENERAL
+* General
 {:pages/git:}[git]
 {:pages/vim:}[vim]
 {:pages/linux:}[linux]
@@ -43,6 +15,7 @@
 {:pages/pacman:}[pacman]
 {:pages/nix:}[nix]
 {:pages/docker:}[docker]
+{:pages/kubectl:}[kubectl]
 {:pages/payload-cms/index:}[payload cms]
 {:pages/ffmpeg:}[ffmpeg]
 {:pages/imagemagick:}[imagemagick]
@@ -51,12 +24,12 @@
 - {:pages/wayland-clipboard:}[wayland clipboard]
 - {:pages/wayland-screenshot:}[wayland screenshot]
 
-* DATABASES
+* Databases
 {:pages/mysql:}[mysql]
 {:pages/postgres:}[postgres]
 {:pages/sqlite:}[sqlite]
 
-* LANGUAGES
+* Languages
 {:pages/php:}[php]
 {:pages/typescript:}[typescript]
 
@@ -138,3 +111,27 @@
 - {:pages/wexo-nft:}[wexo-nft]
 - {:pages/zsh:}[zsh]
 - {:pages/kubectl:}[kubectl]
+
+* Project ideas
+- tree.js something
+    - with react
+    - {https://github.com/danba340/react-three-fiber-example?fbclid=IwAR2E_nGngDVxOjV_mU1lJJMW-zYBps7gFUmwQEXkGkAgdTm0qbr2BLqL_O0}[link]
+- css parallax effect
+    - {https://www.youtube.com/watch?v=mxHoPYFsTuk&ab_channel=WebDevSimplified}[link]
+- node cli with colored inputs etc
+    - {https://www.youtube.com/watch?v=_oHByo8tiEY&ab_channel=Fireship}[link]
+
+* Todos
+** general
+- nvim
+    - {https://github.com/lewis6991/gitsigns.nvim}[gitsigns]
+    - {https://github.com/wbthomason/packer.nvim}[packer]
+- {https://github.com/nagy135/ssh-fzf}[ssh-fzf]
+    - aur package
+    - wayland version
+- remote editing file in nvim
+    - edit file, press bind and it scp replaces remote file
+    - nui.nvim input
+- tmux nord theme long session name bug (last char)
+- ffmpeg screencast on toggle bind
+- lua version of "delete function with its braces"

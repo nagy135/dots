@@ -1,6 +1,49 @@
-* Map input with arrays to filter out one key
-
-* Example, in clipboard is json that has many items with propery nftBuyId
-@code bash
-❯ xclip -sel clip -o | jq '.data.items[].nftBuyId'
+* Example input
+Save as `response.json`; the recipes below use this shape.
+@code json
+{
+  "data": {
+    "items": [
+      {"nftBuyId": "a1", "status": "ready", "amount": 12},
+      {"nftBuyId": "b2", "status": "pending", "amount": 3},
+      {"nftBuyId": "c3", "status": "ready", "amount": 20}
+    ]
+  }
+}
 @end
+
+* Extract a field as raw text
+@code bash
+jq -r '.data.items[].nftBuyId' response.json
+@end
+`-r` removes JSON quotes around strings. For clipboard input on Wayland:
+@code bash
+wl-paste | jq -r '.data.items[].nftBuyId'
+@end
+
+* Filter items and select fields
+@code bash
+jq '.data.items | map(select(.status == "ready") | {id: .nftBuyId, amount})' response.json
+@end
+`map` returns an array; `.data.items[] | select(...)` emits separate results instead.
+
+* Supply defaults for missing values
+@code bash
+jq '.data.items // [] | map(.label // "unnamed")' response.json
+@end
+`//` also replaces explicit null and false values.
+
+* Pass shell values without interpolating JSON
+@code bash
+status=ready
+jq --arg status "$status" '.data.items | map(select(.status == $status))' response.json
+jq --argjson minimum 10 '.data.items | map(select(.amount >= $minimum))' response.json
+@end
+`--arg` passes a string; `--argjson` parses a JSON value, such as a number or boolean.
+
+* Count items by status
+@code bash
+jq '.data.items | group_by(.status) | map({status: .[0].status, count: length})' response.json
+@end
+
+Related: {:shell:}[shell], {:wayland-clipboard:}[Wayland clipboard]. Reference: {https://jqlang.org/manual/}[jq manual].

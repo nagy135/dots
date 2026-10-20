@@ -1,29 +1,34 @@
-* Sync (with force repository sync)
+* Upgrade the system
 @code bash
-sudo pacman -Syyuu
+sudo pacman -Syu
+@end
+`-yy` forces a database refresh; `-uu` also allows downgrades. Use them for a specific recovery or repository change, not routine updates.
+
+* Install while upgrading the system
+@code bash
+sudo pacman -Syu package
 @end
 
-* Install
+* Uninstall with unused dependencies
 @code bash
-sudo pacman -S packge
+sudo pacman -Rs package
 @end
 
-* Uninstall (with dependencies)
-@code bash
-sudo pacman -Rs packge
-@end
-
-* Remove cache (only uninstalled ones)
-@code bash
-sudo pacman -Sc
-@end
-
-* Remove cache (all cache)
+* Remove cached packages that are no longer installed
 @code bash
 sudo pacman -Sc
 @end
 
-* List available updates (run after Sync)
+* Remove all cached packages
+@code bash
+sudo pacman -Scc
+@end
+This also removes cached versions that could otherwise be reinstalled without downloading.
+
+* List updates known to the local package database
 @code bash
 pacman -Qu
 @end
+This does not refresh repository metadata. Avoid `pacman -Sy package`, which can cause a partial upgrade.
+
+Reference: {https://man.archlinux.org/man/pacman.8.en}[pacman manual].

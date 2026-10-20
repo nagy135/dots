@@ -1,9 +1,34 @@
-* DIDNT COMMIT
+* Inspect the deletion
+Replace `path/to/file` with the tracked file to recover.
 @code bash
-git checkout HEAD <filename>
+git status --short -- path/to/file
+git diff -- path/to/file
+git diff --cached -- path/to/file
 @end
 
-* ALREADY COMMITED (checkout commit before)
+* Deleted locally, not staged
+Restore the working file from the index.
 @code bash
-git reset --hard HEAD~1
+git restore -- path/to/file
 @end
+
+* Deletion staged, not committed
+Restore the file and index from HEAD. This replaces staged and local changes to this path.
+@code bash
+git restore --source=HEAD --staged --worktree -- path/to/file
+@end
+
+* Deletion already committed
+Find a commit that still contains the file, then restore only that path.
+@code bash
+git log --all --oneline -- path/to/file
+good_commit=abc1234 # replace with a commit containing the file
+git restore --source="$good_commit" -- path/to/file
+git status --short -- path/to/file
+git add -- path/to/file
+git diff --cached -- path/to/file
+@end
+If the log shows the deletion commit, its parent (`abc1234^`) may be the source you need.
+Review and commit the recovered file. No branch reset is needed.
+
+Related: {:git:}[git]. Reference: {https://git-scm.com/docs/git-restore}[git restore].

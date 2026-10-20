@@ -70,3 +70,28 @@ sqlite3 new.sqlite < dump.sql
 .headers on
 SELECT * FROM users;
 @end
+
+* Back up a live database
+@code bash
+sqlite3 database.sqlite ".backup 'backup.sqlite'"
+@end
+Use SQLite's backup command rather than copying only the main file while writes or WAL mode may be active.
+
+* Restore into a separate database file
+@code bash
+sqlite3 restored.sqlite ".restore 'backup.sqlite'"
+sqlite3 restored.sqlite 'PRAGMA integrity_check;'
+@end
+Choose a new destination filename. `integrity_check` should return `ok`; also check the tables and data you need.
+
+* Preview an update in a transaction
+Run inside the sqlite3 shell:
+@code sql
+BEGIN;
+UPDATE users SET name = 'Example' WHERE id = 1;
+SELECT id, name FROM users WHERE id = 1;
+ROLLBACK;
+@end
+Replace `ROLLBACK;` with `COMMIT;` only when the change should persist.
+
+Reference: {https://www.sqlite.org/cli.html}[sqlite3 shell].

@@ -1,21 +1,21 @@
-* Generate temporary PRIVATE key
+* Generate an encrypted RSA private key
+OpenSSL asks for a passphrase. Keep the private key and its passphrase private; the public key can be shared.
 @code bash
-$ openssl genrsa -aes128 -out temporary.pem 1024
+umask 077
+openssl genpkey -algorithm RSA -aes-256-cbc -pkeyopt rsa_keygen_bits:3072 -out private.pem
+openssl pkey -in private.pem -pubout -out public.pem
 @end
 
-* Generate temporary PUBLIC key (from the PRIVATE one)
+* Encrypt a short file with the public key
+Use an existing `secret-api-key.txt`. RSA handles only short inputs; this is not a general file-encryption recipe.
 @code bash
-$ openssl rsa -in temporary.pem -pubout > temporary_public.pem
+openssl pkeyutl -encrypt -pubin -inkey public.pem -in secret-api-key.txt -out secret-api-key.enc -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256
 @end
 
-* Encrypt
+* Decrypt with the private key
 @code bash
-$ echo "secret api key value" > secret_api_key
-$ openssl rsautl -encrypt -inkey temporary_public.pem  -pubin -in secret_api_key -out secret_api_key.encrypted
-$ ls secret_api_key.encrypted
+openssl pkeyutl -decrypt -inkey private.pem -in secret-api-key.enc -out decrypted.txt -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256
 @end
+Both sides must use the same OAEP settings. These commands replace the deprecated `rsautl` recipe; they do not decrypt its old output with different padding.
 
-* Decrypt
-@code bash
-$ openssl rsautl -decrypt -inkey ~/.ssh/temporary.pem -in secret_api_key.encrypted
-@end
+Related: {:encrypt-password-in-script:}[passphrase-based encryption]. Reference: {https://docs.openssl.org/3.0/man1/openssl-pkeyutl/}[pkeyutl].

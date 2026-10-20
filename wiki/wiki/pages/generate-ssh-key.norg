@@ -1,3 +1,15 @@
+* Generate an Ed25519 key
+Choose a new filename to keep existing keys. ssh-keygen prompts for a passphrase.
 @code bash
-ssh-keygen -t rsa
+ssh-keygen -t ed25519 -C 'your-email@example.com' -f ~/.ssh/id_ed25519_example
 @end
+Share only the `.pub` file. Keep the private key on the client.
+
+* Load the key into an existing SSH agent
+@code bash
+ssh-add ~/.ssh/id_ed25519_example
+ssh-add -l
+@end
+An SSH agent must already be running in this session.
+
+Reference: {https://man.openbsd.org/ssh-keygen}[ssh-keygen].

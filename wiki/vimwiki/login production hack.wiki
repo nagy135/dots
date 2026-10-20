@@ -1,3 +1,8 @@
-$('form#frm-loginForm').css('display', 'block'); $('input#frm-loginForm-email').val('superadmin@wazzupa.com'); $('input#frm-loginForm-password').val('nuMVRdpPpD98PXT3WApy'); $('form#frm-loginForm')[0].submit()
+# Reveal the legacy login form
+This is a legacy note. See the current Neorg collection in ../wiki/.
+
+$('form#frm-loginForm').css('display', 'block');
+
+Enter the account email and password manually. Keep credentials in the password manager.
 
 // vim: ft=javascript

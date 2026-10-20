@@ -5,7 +5,7 @@ awk -F ":" '{print $1 "=>" $2 "(" $3 ")"}' file
 
 * one place to set output/input separators (FS input, OFS output)
 @code bash
-awk 'BEGIN{FS=":"; OFS="-" {print $1 $2 $3}' file
+awk 'BEGIN {FS=":"; OFS="-"} {print $1, $2, $3}' file
 @end
 
 * print last column
@@ -20,22 +20,22 @@ awk -F "," '/^#/ {print $NF}' file
 
 * pattern matching on column (if first column starts with b or c, print entire line)
 @code bash
-awk '$1 ~ /^[b,c]/ {print $0}' file
+awk '$1 ~ /^[bc]/ {print $0}' file
 @end
 
-* math on columns (first + last column, it removes non-numeric on parse)
+* add the first and last fields as numbers
 @code bash
 awk '{print $1 + $NF}' file
 @end
 
 * print only lines longer than 7 chars ($0 is entire line)
 @code bash
-awk '{length($0) > 7}' file
+awk 'length($0) > 7' file
 @end
 
-* conditions (if last column equals that string, prints entire line
+* print lines whose last colon-separated field equals a string
 @code bash
-awk '{ if($NF == "random value") print $0}' file
+awk -F ':' '$NF == "random value"' file
 @end
 
 * awk substring - substr(string, offset, ?length)

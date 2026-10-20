@@ -1,14 +1,48 @@
-* list databases
+* Connect to a database
+@code bash
+psql -h localhost -U username -d my_db
+@end
+The commands below run inside psql; names such as `users` are examples.
+
+* List databases, connect, and inspect tables
 @code sql
 \l
-@end
-
-* connect to database
-@code sql
-\c database
-@end
-
-* list tables
-@code sql
+\c my_db
+\dn
 \dt
+\dt public.*
+\d+ public.users
 @end
+`\dt` follows the search path; `\dt public.*` explicitly selects a schema.
+
+* Expanded output and query timing
+@code sql
+\x auto
+\timing on
+SELECT * FROM public.users LIMIT 5;
+@end
+Automatic expanded output helps with rows too wide for the terminal.
+
+* Inspect a change inside a transaction
+@code sql
+BEGIN;
+UPDATE public.users SET name = 'Example' WHERE id = 1;
+SELECT id, name FROM public.users WHERE id = 1;
+ROLLBACK;
+@end
+Use `COMMIT;` instead of `ROLLBACK;` only when the change should persist. Keep transactions short: locks remain until they finish.
+
+* Run a SQL file and stop on the first error
+@code bash
+psql -X -v ON_ERROR_STOP=1 -h localhost -U username -d my_db -f query.sql
+@end
+`-X` ignores local psql startup customizations. This alone does not undo statements committed before an error.
+
+* Help and exit
+@code sql
+\?
+\h SELECT
+\q
+@end
+
+Related: {:postgres:}[PostgreSQL], {:import-export:}[backup and restore]. Reference: {https://www.postgresql.org/docs/current/app-psql.html}[psql manual].

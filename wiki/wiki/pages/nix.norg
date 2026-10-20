@@ -98,3 +98,40 @@ nix repl
 @code bash
 home-manager switch --flake .#user
 @end
+
+* Update one flake input
+Run in the flake directory. This command uses the modern Nix CLI with flakes enabled.
+@code bash
+nix flake update nixpkgs
+git diff -- flake.lock
+@end
+Inputs that follow nixpkgs may move with it. Review the lockfile and build before committing.
+
+* Diagnose a failed build
+@code bash
+nix build .#my-package -L --show-trace --keep-failed
+@end
+`-L` prints build logs; `--show-trace` adds evaluation context. `--keep-failed` retains a failed local build directory and prints its location.
+If the error reports a derivation path, inspect its recorded log:
+@code bash
+nix log /nix/store/replace-with-reported-path.drv
+@end
+
+* Inspect NixOS generations and roll back
+These commands apply to a NixOS host, not macOS or a standalone Home Manager profile.
+@code bash
+sudo nix-env --profile /nix/var/nix/profiles/system --list-generations
+sudo nixos-rebuild switch --rollback
+@end
+Rollback activates the previous system generation. It does not revert configuration files or application data; fix the flake before the next rebuild.
+
+* Inspect Home Manager generations
+@code bash
+home-manager generations
+@end
+To reactivate a retained generation, run its `activate` script using the store path shown above:
+@code bash
+/nix/store/replace-with-generation-home-manager-generation/activate
+@end
+
+References: {https://nix.dev/manual/nix/stable/command-ref/new-cli/nix3-flake-update.html}[flake update], {https://nix.dev/manual/nix/stable/command-ref/new-cli/nix3-build.html}[build], {https://nixos.org/manual/nixos/stable/#sec-rollback}[NixOS rollback], {https://nix-community.github.io/home-manager/index.xhtml#sec-usage-rollbacks}[Home Manager rollback].

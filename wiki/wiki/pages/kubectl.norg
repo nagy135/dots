@@ -1,7 +1,44 @@
-* 1. Launch a Temporary Interactive Pod
-
-Run the following command to create a pod named `net-test`, open an interactive terminal (`-it`), and automatically delete the pod when you exit (`--rm`):
-
+* Check context and namespaces
 @code bash
-kubectl run net-test --rm -it --image=nicolaka/netshoot -- /bin/bash
+kubectl config current-context
+kubectl config get-contexts
+kubectl get namespaces
 @end
+Switch with `kubectl config use-context context_name`. The following recipes use an explicit namespace; replace `my-namespace`, `pod_name`, and `app` with your values.
+
+* Find pods and inspect a failure
+@code bash
+kubectl get pods -n my-namespace -o wide
+kubectl describe pod pod_name -n my-namespace
+kubectl get events -n my-namespace --sort-by=.metadata.creationTimestamp
+@end
+Start with pod status, then scheduling/probe errors and recent events.
+
+* Follow logs or inspect the previous container
+@code bash
+kubectl logs pod_name -n my-namespace -c app --tail=100 -f
+kubectl logs pod_name -n my-namespace -c app --previous
+@end
+`-c app` selects the container; `--previous` reads its last terminated instance when available.
+
+* Forward a service to localhost
+@code bash
+kubectl port-forward -n my-namespace service/app 8080:80
+@end
+Open `http://localhost:8080`. Here 80 is the service port; Ctrl-C closes the forwarding session.
+
+* Inspect a deployment rollout
+@code bash
+kubectl rollout status deployment/app -n my-namespace --timeout=120s
+kubectl rollout history deployment/app -n my-namespace
+kubectl describe deployment app -n my-namespace
+@end
+A timeout does not cancel the rollout. Check pod events and logs to find the cause.
+
+* Launch a temporary interactive network-debugging pod
+@code bash
+kubectl run net-test -n my-namespace --rm -it --restart=Never --image=nicolaka/netshoot -- /bin/bash
+@end
+Exit the shell to remove the pod. Cluster policy may restrict this image or its capabilities.
+
+Related: {:docker:}[docker]. Reference: {https://kubernetes.io/docs/reference/kubectl/quick-reference/}[kubectl quick reference].

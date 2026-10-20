@@ -5,3 +5,43 @@
 {:merge-with-forked-upstream:}[merge with forked upstream]
 {:clone-with-submodules:}[clone with submodules]
 {:tag-remove:}[tag remove]
+
+* Stash changes to selected files
+@code bash
+git stash push -m "temporary work" -- path/to/file another/file
+git stash list
+git stash show -p 'stash@{0}'
+git stash apply 'stash@{0}'
+@end
+`apply` keeps the stash. After reviewing the restored changes, remove it with `git stash drop 'stash@{0}'`.
+Add `-u` to `stash push` to include matching untracked files.
+
+* Discard selected unstaged hunks
+@code bash
+git diff -- path/to/file
+git restore -p -- path/to/file
+@end
+Accepted hunks are replaced with the index version; rejected hunks remain in the working file.
+
+* Recover a commit using the reflog
+@code bash
+git reflog --date=local
+recovered_commit=abc1234 # replace with the hash found above
+git show "$recovered_commit"
+git branch recovered-work "$recovered_commit"
+@end
+Creating a branch preserves the commit without changing the current checkout. Reflog entries are local and eventually expire.
+
+* Work on another branch in a separate directory
+Run from the original checkout; choose an unused branch name and directory.
+@code bash
+git worktree add -b fix/example ../project-fix HEAD
+git worktree list
+@end
+After saving or committing the work, remove the checkout from the original directory:
+@code bash
+git worktree remove ../project-fix
+@end
+The branch remains. A branch normally cannot be checked out in two worktrees at once.
+
+References: {https://git-scm.com/docs/git-stash}[stash], {https://git-scm.com/docs/git-reflog}[reflog], {https://git-scm.com/docs/git-worktree}[worktree].

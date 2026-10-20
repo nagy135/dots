@@ -1,9 +1,29 @@
-* export
+* Export a plain SQL dump
+Use a pg_dump version at least as new as the source server. Replace the connection details and database names below.
 @code bash
-pg_dump -U username -W my_db > db.sql
+pg_dump -h localhost -U username -d my_db -f db.sql
 @end
+A database dump does not include cluster-wide roles; create any required roles on the target separately.
 
-* import
+* Restore plain SQL into a new database
 @code bash
-psql -U username -W my_db < db.sql
+createdb -h localhost -U username restored_db
+psql -X -v ON_ERROR_STOP=1 -h localhost -U username -d restored_db -f db.sql
 @end
+The target must be empty. Stop on errors and check the restored tables before using the database.
+
+* Export a custom-format archive
+@code bash
+pg_dump -h localhost -U username -d my_db -Fc -f db.dump
+pg_restore --list db.dump
+@end
+Custom format supports selecting objects during restore; it is not a SQL script.
+
+* Restore the archive into another new database
+@code bash
+createdb -h localhost -U username restored_archive_db
+pg_restore --exit-on-error -h localhost -U username -d restored_archive_db db.dump
+@end
+Use `pg_restore` for archives and `psql` for plain SQL. A failed restore may leave partial data; investigate before retrying.
+
+Related: {:postgres:}[PostgreSQL], {:psql:}[psql]. References: {https://www.postgresql.org/docs/current/app-pgdump.html}[pg_dump], {https://www.postgresql.org/docs/current/app-pgrestore.html}[pg_restore].

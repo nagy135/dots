@@ -1,5 +1,45 @@
 {:bash:}[bash]
 {:zsh:}[zsh]
 {:prompt:}[prompt]
-
 {:vim-mode:}[vim mode]
+
+* Quote values and pass them as arguments
+@code bash
+file='report with spaces.txt'
+printf '%s\n' "$file"
+# -- ends option parsing, even if the filename starts with -
+cat -- "$file"
+@end
+Single quotes preserve literal text; double quotes expand variables while keeping each value together.
+
+* Check a command's exit status
+@code bash
+if rg -n -- 'needle' file.txt; then
+    printf '%s\n' 'Found a match'
+else
+    status=$?
+    printf 'Search exited with status %s\n' "$status" >&2
+fi
+@end
+Capture `$?` immediately. For ripgrep, 1 means no match; 2 means an error.
+
+* Detect failures in a pipeline (Bash)
+@code bash
+set -o pipefail
+if cat -- input.txt | sort > sorted.txt; then
+    printf '%s\n' 'Sorted successfully'
+else
+    printf '%s\n' 'Reading or sorting failed' >&2
+fi
+@end
+Without `pipefail`, only the last command determines a pipeline's status. This does not prevent a partial output file on failure.
+
+* Loop over arbitrary filenames (Bash)
+@code bash
+while IFS= read -r -d '' file; do
+    printf '%s\n' "$file"
+done < <(find . -type f -print0)
+@end
+NUL separators preserve spaces, wildcard characters, and newlines in filenames. This uses Bash process substitution.
+
+Related: {:array:}[Bash arrays], {:jq:}[jq]. Reference: {https://www.gnu.org/software/bash/manual/bash.html}[Bash manual].

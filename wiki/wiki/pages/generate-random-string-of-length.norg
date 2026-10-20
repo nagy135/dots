@@ -1,4 +1,16 @@
-* using md5sum
+* Generate 32 hexadecimal characters
+OpenSSL uses its cryptographic random generator. Each random byte becomes two hex characters.
 @code bash
-echo $RANDOM | md5sum | head -c 27 ; echo ;
+openssl rand -hex 16
 @end
+
+* Generate an exact number of hexadecimal characters (Bash)
+@code bash
+length=27
+random_hex=$(openssl rand -hex "$(((length + 1) / 2))")
+printf '%s\n' "${random_hex:0:length}"
+@end
+Choose a positive length. The extra character for an odd length is trimmed; the output includes a trailing newline.
+Do not use `$RANDOM` hashed with MD5 for secrets.
+
+Related: {:generate-password:}[generate password]. Reference: {https://docs.openssl.org/3.0/man1/openssl-rand/}[openssl rand].

@@ -1,1 +1,41 @@
-{:docker-login:}[docker_login]
+{:docker-login:}[registry login]
+
+* Start a Compose project
+Run beside `compose.yaml`. Replace `app` below with a service name from that file.
+@code bash
+docker compose config --quiet
+docker compose up -d --build
+docker compose ps
+@end
+Configuration validation does not check whether the application itself starts successfully.
+
+* Follow recent logs
+@code bash
+docker compose logs --tail=100 -f app
+@end
+Ctrl-C stops following the logs; the service keeps running.
+
+* Open a shell in a running service
+@code bash
+docker compose exec app sh
+@end
+The image must contain a shell; minimal images may not include one.
+
+* Inspect containers and mounts
+Replace `container_name` with a name from `docker ps -a`.
+@code bash
+docker ps -a
+docker inspect --format '{{json .Mounts}}' container_name
+docker volume ls
+docker volume inspect volume_name
+@end
+
+* Stop services or remove the project containers
+@code bash
+docker compose stop
+# To remove containers and the project network instead:
+docker compose down
+@end
+Named volumes remain by default. `docker compose down --volumes` deletes the project's declared named volumes and attached anonymous volumes, so use it only when that data is disposable. External volumes remain.
+
+Related: {:kubectl:}[kubectl]. Reference: {https://docs.docker.com/reference/cli/docker/compose/}[Compose commands].

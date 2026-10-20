@@ -1,59 +1,55 @@
-* create
+* Bash arrays
+These examples use Bash. Indices start at 0; Zsh arrays normally start at 1.
+
+* Create and append
 @code bash
-my_array=(1 2 "string" 4)
+my_array=(1 2 "string with spaces" 4)
+my_array+=("new value" "another value")
 @end
 
-* looping over elements
+* Loop over elements
+Quote the expansion to preserve spaces and wildcard characters in each element.
 @code bash
-for element in ${my_array[@]}; do
-    echo $element
+for element in "${my_array[@]}"; do
+    printf '%s\n' "$element"
 done
 @end
 
-* looping over indices
+* Loop over indices
 @code bash
-for index in ${!my_array[@]}; do
-    echo $index ${my_array[$index]}
+for index in "${!my_array[@]}"; do
+    printf '%s: %s\n' "$index" "${my_array[$index]}"
 done
 @end
 
-* append values
+* Common operations
 @code bash
-my_array+=( "new value1" "new_value2" )
-@end
-
-* cheat sheet
-@code bash
-* Create an empty array
+# Empty array
 arr=()
-
-* Initialize array
 arr=(1 2 3)
-
-* Retrieve third element
-${arr[2]}
-
-* Retrieve all elements
-${arr[@]}
-
-* Retrieve array indices
-${!arr[@]}
-
-* Calculate array size
-${#arr[@]}
-
-* Overwrite 1st element
+# Third element, all elements, indices, and length
+printf '%s\n' "${arr[2]}"
+printf '%s\n' "${arr[@]}"
+printf '%s\n' "${!arr[@]}"
+printf '%s\n' "${#arr[@]}"
+# Overwrite the first element and append
 arr[0]=3
-
-* Append value(s)
 arr+=(4)
-
-* Save ls output as a string
-str=$(ls)
-
-* Save ls output as an array of files
-arr=( $(ls) )
-
-* Retrieve n elements starting at index s
-${arr[@]:s:n}
+# Two elements starting at index 1
+printf '%s\n' "${arr[@]:1:2}"
 @end
+
+* Collect filenames without parsing ls
+Run in Bash; includes hidden entries and produces an empty array if there are no matches.
+@code bash
+(
+    shopt -s nullglob dotglob
+    files=(./*)
+    for file in "${files[@]}"; do
+        printf '%s\n' "$file"
+    done
+)
+@end
+The subshell keeps these options and variables local to the example.
+
+Related: {:bash:}[bash], {:shell:}[shell].
