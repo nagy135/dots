@@ -1,19 +1,31 @@
 ---
 name: audio-notify
-description: Send spoken summary or progress notifications to Viktor's paired Android phone through the private nixpi audio notification server. Use when he requests audio or spoken notifications, and on every subsequent turn until he asks to stop.
+description: Send spoken summary or progress notifications to Viktor's paired Android phone through the private nixpi audio notification server. Use when he requests audio or spoken notifications, for the current turn with `once` or `one time`, otherwise on every subsequent turn until he asks to stop.
 ---
 
 # Audio Notify
 
-## Persistent notification preference
+## Notification preference and duration
 
-As soon as the user asks for audio or spoken notifications, enable **audio notifications for every run and every turn from that point onward in the conversation**, including the turn that enables them. The request establishes an ongoing preference, not a one-time notification. Continue without requiring the user to repeat the request, until they say "stop notifying" or otherwise clearly ask to stop audio notifications. Carry this preference into continuation or compaction summaries so it survives context changes. This skill handles audio notifications independently and does not enable or invoke any other notification channel. A request to edit or discuss notification skills alone does not enable notifications.
+As soon as the user asks for audio or spoken notifications, enable them for the current turn. By default, this also enables **audio notifications for every subsequent run and turn in the conversation** until they say "stop notifying" or otherwise clearly ask to stop audio notifications.
+
+Accept the mode and duration as words after the skill mention (including a Markdown skill link) or in the notification request. Interpret `summary` and `progress` as modes, and `once` and `one time` as equivalent duration modifiers. The words can be supplied together or separately, with or without quotes; `one time` is one modifier even though it contains two words. Accept the duration before or after the mode.
+
+- `summary`: one completion notification at the end of every turn until stopped.
+- `progress`: meaningful progress notifications plus a completion summary on every turn until stopped.
+- `summary once` or `summary one time`: one completion notification at the end of this turn only.
+- `progress once` or `progress one time`: meaningful progress notifications plus a completion summary during this turn only.
+- `once` or `one time` without a mode: use summary mode for this turn only.
+
+A one-time request applies to the **whole current turn**, not just the next individual notification. After that turn's completion summary is attempted, disable audio notifications for future turns unless the user requests them again. This also ends any previously persistent audio preference; do not silently resume it. A delivery failure does not extend the one-time request to another turn.
+
+Carry the channel, mode, and duration into continuation or compaction summaries. Preserve a pending one-time request if the current turn is still underway, but do not carry an expired request forward as enabled. This skill handles audio notifications independently and does not enable or invoke any other notification channel. A request to edit or discuss notification skills alone does not enable notifications.
 
 Enable notifications silently. Do not send a startup or activation announcement such as "Audio notifications are on." The first spoken notification should contain a meaningful task update in progress mode, or the completed turn's result in summary mode.
 
 ## Notification modes
 
-Honor the user's requested mode and keep it active across turns until they change it or stop notifications. If they request notifications without specifying a mode, default to **summary**. Preserve both the active audio preference and its mode in continuation or compaction summaries.
+Honor the user's requested mode for the requested duration. If they request notifications without specifying a mode, default to **summary**. Keep the mode active across turns only for a persistent request.
 
 - **Summary notifications:** Send only one audio notification at the end of the turn, explaining what was done and the outcome. Do not send intermediate progress notifications.
 - **Progress notifications:** Send an audio notification whenever there is a self-contained progress update worth communicating: a completed step, a meaningful finding, a blocker, or a transition to the next stage. Mirror each such commentary update in a short spoken notification at that point, for example, "I finished implementation; now I'm running tests." Do not wait until the end of the turn to report these updates. Notify based on meaningful progress, not automatically after every tool call. Also send one completion summary at the end of the turn.
