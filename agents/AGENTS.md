@@ -3,6 +3,10 @@
 - Never post anything to YouTrack: no comments, issue updates, field/state changes, or new issues. Draft the text in chat and let Viktor post it, even when asked to "comment there".
 - Posting on GitLab merge requests (e.g. replies and resolved threads via pr-turn/mr-turn) is allowed.
 
+## macOS pkill
+
+This machine runs macOS 26.6.2 with BSD `/usr/bin/pkill`. Put all options before the pattern: `pkill -u "$(id -u)" -f '<task-specific pattern>'`. Arguments after the first pattern become additional patterns, even if they look like options. First preview with `pgrep -u "$(id -u)" -fl '<task-specific pattern>'` and verify that every match belongs to your task.
+
 ## Commit messages
 
 - Before writing a commit message, list recent commits with their authors (e.g. `git log -20 --format='%h %an <%ae> %s'`). Inspect more history if needed to identify our established convention.
