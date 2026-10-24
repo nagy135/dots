@@ -406,23 +406,19 @@ def normalized_path(value: str) -> str:
     return os.path.realpath(os.path.expanduser(value))
 
 
-def workspace_roots() -> dict[str, str]:
-    """Infer each workspace's project root from the cwd of all of its panes."""
-    panes = herdr_json("pane", "list")["result"]["panes"]
-    paths_by_workspace: dict[str, list[str]] = defaultdict(list)
+def workspace_paths(panes: list[dict]) -> dict[str, set[str]]:
+    """Keep each shell and foreground cwd; their common parent is not an identity."""
+    paths_by_workspace: dict[str, set[str]] = defaultdict(set)
     for pane in panes:
-        cwd = pane.get("foreground_cwd") or pane.get("cwd")
-        if cwd:
-            paths_by_workspace[pane["workspace_id"]].append(normalized_path(cwd))
+        for key in ("cwd", "foreground_cwd"):
+            if cwd := pane.get(key):
+                paths_by_workspace[pane["workspace_id"]].add(normalized_path(cwd))
+    return paths_by_workspace
 
-    roots: dict[str, str] = {}
-    for workspace_id, paths in paths_by_workspace.items():
-        try:
-            roots[workspace_id] = os.path.commonpath(paths)
-        except ValueError:
-            # This is possible when a future Windows client reports mixed drives.
-            continue
-    return roots
+
+def sesh_workspace_state_path() -> Path:
+    state_home = Path(os.environ.get("XDG_STATE_HOME", HOME / ".local" / "state"))
+    return state_home / "herdr" / "tmuxish-sesh-workspaces.json"
 
 
 def shorten_home(path: str) -> str:
@@ -469,20 +465,72 @@ def choose_sesh_entry(entries: list[dict]) -> dict | None:
 
 
 def focus_or_create_sesh_workspace(entry: dict) -> None:
-    path = normalized_path(str(entry.get("Path") or ""))
-    if not os.path.isdir(path):
-        raise RuntimeError(f"session path does not exist: {path}")
+    selected_path = str(entry.get("Path") or "")
+    if not selected_path or not os.path.isdir(path := normalized_path(selected_path)):
+        raise RuntimeError(f"session path does not exist: {selected_path}")
 
-    for workspace_id, root in workspace_roots().items():
-        if root == path:
+    state_path = sesh_workspace_state_path()
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    # Serialize the live lookup AND creation, not the interactive picker. Two
+    # invocations selecting the same new project must not both create it.
+    with state_path.with_suffix(".lock").open("a+") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        try:
+            state = json.loads(state_path.read_text())
+        except FileNotFoundError:
+            state = {}
+        # Workspace handles are stable in Herdr >= 0.7, and local to a server.
+        server = os.environ.get("HERDR_SOCKET_PATH") or os.environ.get(
+            "HERDR_CONFIG_PATH", str(HOME / ".config" / "herdr" / "config.toml")
+        )
+        workspaces = herdr_json("workspace", "list")["result"]["workspaces"]
+        live_ids = {workspace["workspace_id"] for workspace in workspaces}
+        remembered = {
+            root: workspace_id
+            for root, workspace_id in state.get(server, {}).items()
+            if workspace_id in live_ids
+        }
+        workspace_id = remembered.get(path)
+        if not workspace_id:
+            panes = herdr_json("pane", "list")["result"]["panes"]
+            paths = workspace_paths(panes)
+            for workspace in workspaces:
+                if checkout := (workspace.get("worktree") or {}).get("checkout_path"):
+                    paths[workspace["workspace_id"]].add(normalized_path(checkout))
+
+            # Adopt pre-existing workspaces, preferring an exact directory over
+            # a pane that has cd'd into a subdirectory of the selected project.
+            for exact in (True, False):
+                workspace_id = next(
+                    (
+                        workspace["workspace_id"]
+                        for workspace in workspaces
+                        if any(
+                            cwd == path if exact else Path(cwd).is_relative_to(path)
+                            for cwd in paths[workspace["workspace_id"]]
+                        )
+                    ),
+                    None,
+                )
+                if workspace_id:
+                    break
+
+        created = not workspace_id
+        if created:
+            args = ["workspace", "create", "--cwd", path]
+            if entry.get("Src") != "zoxide" and entry.get("Name"):
+                args.extend(["--label", str(entry["Name"])])
+            args.append("--focus")
+            workspace_id = herdr_json(*args)["result"]["workspace"]["workspace_id"]
+
+        # Remember the selected directory independently of all pane cwd changes.
+        remembered[path] = workspace_id
+        state[server] = remembered
+        temporary = state_path.with_name(f"{state_path.name}.{os.getpid()}.tmp")
+        temporary.write_text(json.dumps(state, indent=2, sort_keys=True) + "\n")
+        os.replace(temporary, state_path)
+        if not created:
             run([HERDR, "workspace", "focus", workspace_id])
-            return
-
-    args = ["workspace", "create", "--cwd", path]
-    if entry.get("Src") != "zoxide" and entry.get("Name"):
-        args.extend(["--label", str(entry["Name"])])
-    args.append("--focus")
-    herdr_json(*args)
 
 
 def sesh_picker() -> None:
