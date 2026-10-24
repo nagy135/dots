@@ -3,10 +3,7 @@
 import argparse
 import json
 import math
-from pathlib import Path
-import subprocess
 import sys
-import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -23,29 +20,6 @@ def request(path, method="GET", value=None):
         return json.load(response)
 
 
-def launch():
-    if sys.platform != "darwin":
-        raise RuntimeError("Progress Notifier runs on macOS; send requests on the Mac running it")
-    candidates = [Path("/Applications/Progress Notifier.app"),
-                  Path.home() / "Applications/Progress Notifier.app",
-                  Path.home() / "Code/progress-notifier/build/Progress Notifier.app"]
-    # Also work when invoked from a checkout in another location.
-    candidates.append(Path(__file__).resolve().parents[3] / "build/Progress Notifier.app")
-    app = next((path for path in candidates if path.is_dir()), None)
-    if app is None:
-        raise RuntimeError("Build the app first: cd ~/Code/progress-notifier && ./scripts/build.sh")
-    subprocess.run(["open", "-g", str(app)], check=True, capture_output=True)
-    for _ in range(30):
-        try:
-            health = request("/health")
-            if health.get("app") != "progress-notifier":
-                raise RuntimeError("Port 8766 is occupied by another service")
-            return
-        except urllib.error.URLError:
-            time.sleep(0.1)
-    raise RuntimeError("The app did not start listening on port 8766")
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("name", nargs="?", help="Stable, unique item name")
@@ -55,7 +29,8 @@ def main():
     group.add_argument("--health", action="store_true")
     group.add_argument("--list", action="store_true")
     group.add_argument("--dismiss", metavar="NAME")
-    parser.add_argument("--no-launch", action="store_true", help="Fail if the app is not running")
+    parser.add_argument("--require-running", "--no-launch", dest="require_running", action="store_true",
+                        help="Report an error if the app is stopped (default: silently skip)")
     args = parser.parse_args()
     mode = args.health or args.list or args.dismiss is not None
     if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds)):
@@ -83,16 +58,15 @@ def main():
             result = request(path, method, value)
         except urllib.error.HTTPError:
             raise
-        except urllib.error.URLError:
-            if args.no_launch:
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            if args.require_running:
                 raise RuntimeError("Progress Notifier is not listening on 127.0.0.1:8766")
-            launch()
-            result = request(path, method, value)
+            return 0
         print(json.dumps(result, ensure_ascii=False))
         return 0
     except urllib.error.HTTPError as error:
         print(f"Progress Notifier: HTTP {error.code}: {error.read().decode(errors='replace')}", file=sys.stderr)
-    except (RuntimeError, OSError, ValueError, urllib.error.URLError, subprocess.CalledProcessError) as error:
+    except (RuntimeError, OSError, ValueError, urllib.error.URLError) as error:
         print(f"Progress Notifier: {error}", file=sys.stderr)
     return 1
 

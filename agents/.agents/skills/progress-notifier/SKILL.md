@@ -5,7 +5,7 @@ description: Show and update floating progress cards in the local Progress Notif
 
 # Progress Notifier
 
-Use the bundled `scripts/progress-notify` client on the Mac. It starts the built app if needed; the checkout is `~/Code/progress-notifier`. If no app bundle exists, build it with `./scripts/build.sh` from that checkout. Python 3 and Apple Command Line Tools are required for the client and build respectively.
+Use the bundled `scripts/progress-notify` client on the Mac (requires Python 3). It sends updates only when Progress Notifier is already running. If the app is stopped or unavailable, the client silently succeeds without sending anything. Do not launch, build, install, retry, or ask the user to start the app as part of reporting progress. The user chooses when to open `/Applications/Progress Notifier.app`.
 
 ```sh
 ~/.agents/skills/progress-notifier/scripts/progress-notify 'Project · Build release' 0 180
@@ -23,7 +23,9 @@ Report meaningful milestones while the requested work runs. Use honest estimates
 ~/.agents/skills/progress-notifier/scripts/progress-notify --health
 ```
 
-Clicking X or dismissing hides that name for the rest of its run: further updates remain silent until a `100` update clears the dismissal. A new run may then reuse the name. Completion updates for unknown names are harmless no-ops. App restart clears all in-memory items and dismissals. Closing the last card leaves the app listening; quit it from its menu bar icon.
+An item's X or `--dismiss` hides that name for the rest of its run: further updates remain silent until a `100` update clears the dismissal. A new run may then reuse the name. Completion updates for unknown names are harmless no-ops.
+
+Q, ⌘W, or the window's X hides the window while the app keeps receiving updates. Updates do not reopen a hidden window. Opening the app again restores the current items. Click anywhere except an X, or press M, to toggle between the full list and a tiny task counter. With no items, the expanded window says “No progress”. Items and dismissals are saved across quitting/relaunching. Use the menu bar's Quit or ⌘Q to stop the app entirely; later skill calls silently skip until the user opens it again.
 
 The API is `http://127.0.0.1:8766`, local to the Mac running the app. For direct clients:
 
@@ -33,4 +35,4 @@ curl --fail --silent --show-error http://127.0.0.1:8766/items \
   -d '{"name":"Project · Build release","progress":30,"etaSeconds":120}'
 ```
 
-`GET /items` lists visible items; `DELETE /items?name=URL_ENCODED_NAME` dismisses one. No authentication is needed for local processes. Requests from web page origins are rejected. Do not expose or proxy this API to the network as part of sending progress. A client error should not block the main task; report unavailable notifications briefly and continue the user's work.
+`GET /items` lists tracked items (including while the window is hidden); `DELETE /items?name=URL_ENCODED_NAME` dismisses one. No authentication is needed for local processes. Requests from web page origins are rejected. Do not expose or proxy this API to the network as part of sending progress. A stopped or unavailable app needs no chat warning; continue the user's work. For explicit diagnostics only, `--health --require-running` returns an error when unavailable.
