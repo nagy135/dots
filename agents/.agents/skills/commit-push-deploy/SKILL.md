@@ -1,12 +1,19 @@
 ---
 name: commit-push-deploy
-description: Commit task changes using established conventions, push to origin, pull on the runtime machine, and deploy and verify. Use for $commit-push-deploy or requests to commit, push, and deploy. Record clarified deployment steps in the repository's AGENTS.md.
+description: Commit task changes using established conventions, push to origin, pull on the runtime machine, and deploy and verify. Use only when the user explicitly invokes commit-push-deploy. Record clarified deployment steps in the repository's AGENTS.md.
+disable-model-invocation: true
 ---
 
 # Commit, push, deploy
 
+Run only when the user explicitly invokes this skill, such as
+`$commit-push-deploy` or `/commit-push-deploy`. Do not select it automatically
+for general requests to commit, push, or deploy. A request to edit this skill
+does not invoke its delivery workflow.
+
 Invoking this skill authorizes committing, pushing, pulling, and deploying the
-current task. Proceed without routine confirmation.
+current task within the user's requested scope. Proceed without routine
+confirmation.
 
 ## Find the procedure
 
