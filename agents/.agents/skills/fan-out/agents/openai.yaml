@@ -1,0 +1,3 @@
+interface:
+  display_name: "Fan out"
+  short_description: "Compare three or more independent agent attempts"
