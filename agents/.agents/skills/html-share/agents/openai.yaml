@@ -1,0 +1,3 @@
+interface:
+  display_name: "HTML Share"
+  short_description: "Upload HTML to nixpi and return a share link"
