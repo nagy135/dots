@@ -64,8 +64,11 @@ description/percentage pairs are deduplicated. Omitted or blank descriptions pre
 existing notes and add no entry; progress and ETA still update. The card shows the latest
 note and the number of earlier descriptions (excluding the current note). The arrow/count is hidden when there are no earlier descriptions or when the ledger is unfolded. Up/Down or K/J selects a task (Down/J next, Up/K previous).
 D unfolds the timestamp ledger for the focused task only, newest first, with a recorded
-percentage and bar for each note. When details are open, moving selection switches the
-ledger to that task and folds the others. A mint outline marks the selection. Navigation
+percentage and bar for each note. Shift+D opens all tasks with earlier descriptions;
+if all are already open, it folds them all. In that mode, D toggles only the selected
+task and moving selection preserves the other ledgers. With a single ledger opened
+using D, moving selection switches the ledger to that task and folds the others.
+Both D and Shift+D expand compact mode. A mint outline marks the selection. Navigation
 keeps it visible; background updates do not change which task is selected. The latest 200 notes per task persist
 through relaunch and H recall. `GET /items` returns `description`, `updateCount`, and
 `updates` (id, description, progress, recordedAt). The API `updateCount` includes the current note; the on-card arrow excludes it. Do not treat the notes as separate tasks.
