@@ -2,3 +2,5 @@ interface:
   display_name: "Settle"
   short_description: "Commit thread work, push to origin, and settle"
   default_prompt: "Use $settle to commit our work, push it to the intended branch on origin, report leftover changes, and settle this T3 Code thread."
+policy:
+  allow_implicit_invocation: false

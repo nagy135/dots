@@ -1,12 +1,13 @@
 ---
 name: settle
-description: Commit conversation work, push to origin, report leftover changes, and settle the current T3 Code thread.
+description: Commit conversation work, push to origin, report leftover changes, and settle the current T3 Code thread. Use only when explicitly invoked.
+disable-model-invocation: true
 ---
 
 # Settle
 
-`$settle` authorizes this workflow without routine confirmation. Editing the
-skill does not invoke it.
+Run only when explicitly invoked as `$settle` or `/settle`. This authorizes the
+workflow without routine confirmation. Editing the skill does not invoke it.
 
 1. Inspect the conversation, repository instructions, changes, and unpushed
    commits. Commit everything we worked on in this thread. Exclude unrelated
