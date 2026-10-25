@@ -62,13 +62,13 @@ The API accepts optional plain text descriptions (up to 2,000 characters; newlin
 Each is saved with that request's percentage and server timestamp. Consecutive identical
 description/percentage pairs are deduplicated. Omitted or blank descriptions preserve
 existing notes and add no entry; progress and ETA still update. The card shows the latest
-note and retained update count. Up/Down or K/J selects a task (Down/J next, Up/K previous).
+note and the number of earlier descriptions (excluding the current note). The arrow/count is hidden when there are no earlier descriptions or when the ledger is unfolded. Up/Down or K/J selects a task (Down/J next, Up/K previous).
 D unfolds the timestamp ledger for the focused task only, newest first, with a recorded
 percentage and bar for each note. When details are open, moving selection switches the
 ledger to that task and folds the others. A mint outline marks the selection. Navigation
 keeps it visible; background updates do not change which task is selected. The latest 200 notes per task persist
 through relaunch and H recall. `GET /items` returns `description`, `updateCount`, and
-`updates` (id, description, progress, recordedAt). Do not treat the notes as separate tasks.
+`updates` (id, description, progress, recordedAt). The API `updateCount` includes the current note; the on-card arrow excludes it. Do not treat the notes as separate tasks.
 
 Report meaningful milestones while the requested work runs. Use honest estimates; revise them as new information arrives. Send `100 0` only when the work actually succeeds. This plays the macOS Glass sound, flashes and enlarges the card, and keeps it visible as completed history until the user clears it with C or dismisses it. Do not automatically dismiss successful results. The active API entry retires after the brief feedback phase, so the same name can be used for a new run while its completed record remains visible. C hides completed records without deleting history; H can recall them. Like other recalled history, completed records are hidden on app relaunch. On failure or cancellation, dismiss the card and explain the outcome in chat; do not signal success.
 
