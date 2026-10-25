@@ -70,7 +70,7 @@ keeps it visible; background updates do not change which task is selected. The l
 through relaunch and H recall. `GET /items` returns `description`, `updateCount`, and
 `updates` (id, description, progress, recordedAt). Do not treat the notes as separate tasks.
 
-Report meaningful milestones while the requested work runs. Use honest estimates; revise them as new information arrives. Send `100 0` only when the work actually succeeds. This plays the macOS Glass sound, flashes and enlarges the card, then removes it after 1.25 seconds. On failure or cancellation, dismiss the card and explain the outcome in chat; do not signal success.
+Report meaningful milestones while the requested work runs. Use honest estimates; revise them as new information arrives. Send `100 0` only when the work actually succeeds. This plays the macOS Glass sound, flashes and enlarges the card, and keeps it visible as completed history until the user clears it with C or dismisses it. Do not automatically dismiss successful results. The active API entry retires after the brief feedback phase, so the same name can be used for a new run while its completed record remains visible. C hides completed records without deleting history; H can recall them. Like other recalled history, completed records are hidden on app relaunch. On failure or cancellation, dismiss the card and explain the outcome in chat; do not signal success.
 
 ```sh
 ~/.agents/skills/progress-notifier/scripts/progress-notify --list
@@ -78,7 +78,7 @@ Report meaningful milestones while the requested work runs. Use honest estimates
 ~/.agents/skills/progress-notifier/scripts/progress-notify --health
 ```
 
-An item's X or `--dismiss` hides that name for the rest of its run: further updates remain silent until a `100` update clears the dismissal. A new run may then reuse the name. Completion updates for unknown names are harmless no-ops.
+Dismissing an active item with its X or `--dismiss` hides that name for the rest of its run: further updates remain silent until a `100` update clears the dismissal. A new run may then reuse the name. Completion updates for unknown names are harmless no-ops. Dismissing a completed history record only hides that record; it does not suppress a new run. A name-based dismissal targets an active run when present, otherwise it hides that name’s visible completed records.
 
 Q, ⌘W, or the window's X hides the window while the app keeps receiving updates. Updates do not reopen a hidden window. Opening the app again restores the current items. Click anywhere except an X, or press M, to toggle between the full list and a compact list with an icon and title-free bar for each item, without a header. Compact rows use the project icon, or a task-name monogram when there is no project metadata. With no items, the expanded window says “No progress”. Items and dismissals are saved across quitting/relaunching. Use the menu bar's Quit or ⌘Q to stop the app entirely; later skill calls silently skip until the user opens it again.
 
