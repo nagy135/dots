@@ -25,6 +25,8 @@ def main():
     parser.add_argument("name", nargs="?", help="Stable, unique item name")
     parser.add_argument("progress", nargs="?", type=float, help="Progress from 0 to 100")
     parser.add_argument("eta_seconds", nargs="?", type=float, help="Estimated seconds remaining")
+    parser.add_argument("--project", help="Project name displayed above the task title (empty clears metadata)")
+    parser.add_argument("--project-icon", metavar="JSON", help="T3 projectIcon object: emoji, lucide, or monogram")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--health", action="store_true")
     group.add_argument("--list", action="store_true")
@@ -33,7 +35,7 @@ def main():
                         help="Report an error if the app is stopped (default: silently skip)")
     args = parser.parse_args()
     mode = args.health or args.list or args.dismiss is not None
-    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds)):
+    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon)):
         parser.error("Do not combine an option command with update arguments")
     path, method, value = "/health", "GET", None
     if args.list:
@@ -53,6 +55,19 @@ def main():
             parser.error("ETA must be seconds remaining, between 0 and 31536000")
         path, method = "/items", "POST"
         value = {"name": args.name, "progress": args.progress, "etaSeconds": args.eta_seconds}
+        if args.project is not None:
+            project = args.project.strip()
+            if len(project) > 160 or any(ord(c) < 32 or 127 <= ord(c) <= 159 for c in project):
+                parser.error("Project must contain at most 160 characters without control characters")
+            value["project"] = project
+        if args.project_icon is not None:
+            try:
+                icon = json.loads(args.project_icon)
+            except (ValueError, TypeError):
+                parser.error("Project icon must be a JSON object")
+            if not isinstance(icon, dict) or icon.get("kind") not in ("emoji", "lucide", "monogram"):
+                parser.error("Project icon must be a T3 emoji, lucide, or monogram object")
+            value["projectIcon"] = icon
     try:
         try:
             result = request(path, method, value)
