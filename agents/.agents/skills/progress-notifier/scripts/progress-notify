@@ -25,6 +25,7 @@ def main():
     parser.add_argument("name", nargs="?", help="Stable, unique item name")
     parser.add_argument("progress", nargs="?", type=float, help="Progress from 0 to 100")
     parser.add_argument("eta_seconds", nargs="?", type=float, help="Estimated seconds remaining")
+    parser.add_argument("--description", help="Progress note saved with this percentage (up to 2000 characters)")
     parser.add_argument("--project", help="Project name displayed above the task title (empty clears metadata)")
     parser.add_argument("--project-icon", metavar="JSON", help="T3 projectIcon object: emoji, lucide, or monogram")
     group = parser.add_mutually_exclusive_group()
@@ -35,7 +36,7 @@ def main():
                         help="Report an error if the app is stopped (default: silently skip)")
     args = parser.parse_args()
     mode = args.health or args.list or args.dismiss is not None
-    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon)):
+    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon, args.description)):
         parser.error("Do not combine an option command with update arguments")
     path, method, value = "/health", "GET", None
     if args.list:
@@ -55,6 +56,11 @@ def main():
             parser.error("ETA must be seconds remaining, between 0 and 31536000")
         path, method = "/items", "POST"
         value = {"name": args.name, "progress": args.progress, "etaSeconds": args.eta_seconds}
+        if args.description is not None:
+            description = args.description.replace("\r\n", "\n").replace("\r", "\n").strip()
+            if len(description) > 2000 or any((ord(c) < 32 or 127 <= ord(c) <= 159) and c not in "\n\t" for c in description):
+                parser.error("Description must contain at most 2000 characters, with only newline and tab control characters")
+            value["description"] = description
         if args.project is not None:
             project = args.project.strip()
             if len(project) > 160 or any(ord(c) < 32 or 127 <= ord(c) <= 159 for c in project):
