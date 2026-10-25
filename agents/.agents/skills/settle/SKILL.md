@@ -15,8 +15,9 @@ workflow without routine confirmation. Editing the skill does not invoke it.
    Select files or hunks explicitly. Ask if ownership is unclear.
 2. Choose `origin/develop` or `origin/main` from repository context, honoring an
    explicit user or repository destination. Ask if unclear.
-3. Run relevant checks. Inspect recent commits with authors and follow Viktor's
-   Conventional Commit style. Skip empty commits.
+3. Run relevant tests if available, unless they already passed for the current
+   changes. Inspect recent commits with authors and follow Viktor's Conventional
+   Commit style. Skip empty commits.
 4. Integrate and push only our work to the chosen destination without force,
    preserving concurrent work. Verify the commits reached `origin`. Report
    blockers and leave the thread active if delivery is incomplete.
