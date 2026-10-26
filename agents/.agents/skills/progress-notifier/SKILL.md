@@ -1,11 +1,13 @@
 ---
 name: progress-notifier
-description: Show and update floating progress cards in the local Progress Notifier macOS app. Agents may use it proactively without being asked; progress reporting is required when the user invokes progress-notifier or asks for progress notifications. Accepts a task name, percentage, ETA, and optional description, T3 project name and icon; flashes on updates and completes with sound.
+description: Show and update floating progress cards in the local Progress Notifier macOS app. Always use this skill for agent work without requiring an explicit invocation or request. Progress reporting is best effort; continue normally if the app is stopped, unavailable, or an update fails. Accepts a task name, percentage, ETA, and optional description, T3 project name and icon; flashes on updates and completes with sound.
 ---
 
 # Progress Notifier
 
-Without an explicit request, you may use this skill at your discretion when progress cards would help the user follow the work. When the user explicitly invokes this skill or asks for progress notifications, you must report progress for the requested work: send an initial update, updates at meaningful milestones while working, and a completion or dismissal when finished. Do not treat an explicit invocation as optional or replace the cards with chat-only updates. App availability is handled as described below.
+Use this skill by default for every agent task, without waiting for the user to invoke it or ask for progress notifications. Send an initial update, updates at meaningful milestones while working, and a completion or dismissal when finished. Honor an explicit user request to skip progress notifications.
+
+Progress reporting is best effort: if the app is stopped or unavailable, the client is missing, or an update fails, continue the user's work normally. Do not retry, troubleshoot, or warn in chat unless the user explicitly asks for diagnostics. A notification failure must never block or fail the underlying task.
 
 Use the bundled `scripts/progress-notify` client on the Mac (requires Python 3). It sends updates only when Progress Notifier is already running. If the app is stopped or unavailable, the client silently succeeds without sending anything. Do not launch, build, install, retry, or ask the user to start the app as part of reporting progress. The user chooses when to open `/Applications/Progress Notifier.app`.
 
