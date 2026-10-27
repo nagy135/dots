@@ -3,6 +3,7 @@
 import argparse
 import json
 import math
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -28,6 +29,8 @@ def main():
     parser.add_argument("--description", help="Progress note saved with this percentage (up to 2000 characters)")
     parser.add_argument("--project", help="Project name displayed above the task title (empty clears metadata)")
     parser.add_argument("--project-icon", metavar="JSON", help="T3 projectIcon object: emoji, lucide, or monogram")
+    parser.add_argument("--t3-environment-id", help="T3 environment ID for Enter-to-open (requires --t3-thread-id)")
+    parser.add_argument("--t3-thread-id", help="T3 thread ID for Enter-to-open (requires --t3-environment-id)")
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--health", action="store_true")
     group.add_argument("--list", action="store_true")
@@ -36,7 +39,8 @@ def main():
                         help="Report an error if the app is stopped (default: silently skip)")
     args = parser.parse_args()
     mode = args.health or args.list or args.dismiss is not None
-    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon, args.description)):
+    if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon, args.description,
+                                                   args.t3_environment_id, args.t3_thread_id)):
         parser.error("Do not combine an option command with update arguments")
     path, method, value = "/health", "GET", None
     if args.list:
@@ -56,6 +60,11 @@ def main():
             parser.error("ETA must be seconds remaining, between 0 and 31536000")
         path, method = "/items", "POST"
         value = {"name": args.name, "progress": args.progress, "etaSeconds": args.eta_seconds}
+        if args.t3_environment_id is not None or args.t3_thread_id is not None:
+            if not all(identifier is not None and re.fullmatch(r"[A-Za-z0-9_:-]{1,512}", identifier)
+                       for identifier in (args.t3_environment_id, args.t3_thread_id)):
+                parser.error("Supply both T3 IDs, each containing 1–512 ASCII letters, digits, hyphens, underscores, or colons")
+            value["t3Thread"] = {"environmentId": args.t3_environment_id, "threadId": args.t3_thread_id}
         if args.description is not None:
             description = args.description.replace("\r\n", "\n").replace("\r", "\n").strip()
             if len(description) > 2000 or any((ord(c) < 32 or 127 <= ord(c) <= 159) and c not in "\n\t" for c in description):
