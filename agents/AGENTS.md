@@ -1,5 +1,8 @@
 # Global Rules
 
+- Start every agent run with `$progress-notifier`: create the initial progress notification before planning, inspecting task files, running task commands, or editing. Only loading the [skill](.agents/skills/progress-notifier/SKILL.md) and looking up its required project metadata may precede that notification.
+- Keep one stable task/card name throughout the run. Update it at meaningful milestones with a short description, honest progress, and remaining ETA; mark it complete only after success, or dismiss it on failure or cancellation. Follow the skill's project metadata and completion rules.
+- Progress notifications are best effort: if the app or client is unavailable or an update fails, continue the task without retries, troubleshooting, or chat warnings. Honor an explicit request to skip notifications.
 - Never post anything to YouTrack: no comments, issue updates, field/state changes, or new issues. Draft the text in chat and let Viktor post it, even when asked to "comment there".
 - Posting on GitLab merge requests (e.g. replies and resolved threads via pr-turn/mr-turn) is allowed.
 

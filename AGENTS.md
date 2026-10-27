@@ -46,3 +46,24 @@ existing session reloaded its skill catalog.
 No installation was found in the checked root/infiniter home locations on
 Hetzner. Nixzero was unreachable during delivery; its installation status is
 unverified. Inspect those hosts before treating them as deployment targets.
+
+# Global agent instructions
+
+The shared global instructions are `agents/AGENTS.md`. On the Mac,
+`/Users/Viktor/.codex/AGENTS.md` and `/Users/Viktor/.claude/CLAUDE.md` resolve
+through this checkout's `codex/.codex/AGENTS.md` and
+`claude/.claude/CLAUDE.md` to that shared file.
+
+Publish changes to `origin/master`, then pull on nixpi using the command above.
+The global instruction links on nixpi are:
+
+```sh
+ln -s /home/infiniter/.dots/codex/.codex/AGENTS.md /home/infiniter/.codex/AGENTS.md
+ln -s /home/infiniter/.dots/claude/.claude/CLAUDE.md /home/infiniter/.claude/CLAUDE.md
+```
+
+Inspect existing paths and create only missing links. Verify both installed
+files resolve to the checkout's `agents/AGENTS.md`, compare each with that
+file using `cmp`, and compare the source with `git show HEAD:agents/AGENTS.md`.
+Verify the checkout revision matches the published commit. These are static
+instructions; no build, activation, or service restart is required.
