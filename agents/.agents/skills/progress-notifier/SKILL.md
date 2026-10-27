@@ -42,27 +42,47 @@ do not overwrite each other. Percentages may be fractional. ETA is **seconds rem
 at this update**, not a timestamp or total duration. The app counts it down but never
 fabricates progress or completes a task when the ETA expires.
 
-When running in a T3 thread, use the thread's actual project name and icon. Discover the current project ID with `t3_thread_list`, then read it with `t3_project_read`. Pass its `title` as `--project` and its non-null `projectIcon` object as JSON with `--project-icon`; do not invent an emoji. When `projectIcon` is null, omit the flag: the app generates T3's default project monogram and color. Outside T3, use the known project name and omit the icon unless supplied. Keep the task title concise; the project appears in its own heading above it. Names must still be unique across concurrent tasks.
+When running in a T3 thread, use the thread's actual project name and icon. Reuse project metadata supplied by the parent when available; otherwise discover the current project ID with `t3_thread_list`, then read it with `t3_project_read`. Pass its `title` as `--project` and its non-null `projectIcon` object as JSON with `--project-icon`; do not invent an emoji. When `projectIcon` is null, omit the flag: the app generates T3's default project monogram and color. Outside T3, use the known project name and omit the icon unless supplied. Keep the task title concise; the project appears in its own heading above it. Names must still be unique across concurrent tasks.
 
-For **every run inside T3 Code**, also attach the originating thread to the initial
-card. Get `currentThreadId` from `t3_thread_list` and `environmentId` from
-`t3_environment_read`, then pass both `--t3-environment-id` and `--t3-thread-id`
-to `scripts/progress-notify`. These are T3 IDs: do not use `CODEX_THREAD_ID`,
-provider session IDs, project IDs, or infer a destination from task titles. Discover
-this metadata alongside the project before the initial notification. If the T3 tools
-are unavailable, send the ordinary unlinked notification. Omitted destinations are
-preserved by subsequent updates, including completion, so the flags are needed only
-on the first update (or when correcting the destination).
+For **every run inside T3 Code**, attach the user-facing chat to the initial card.
+**Delegates link to their parent chat, not their own subagent thread.** Resolve the
+destination alongside the project metadata, before the initial notification:
+
+- Reuse an explicit progress destination supplied by the parent: its T3 environment
+  ID, resolved chat thread ID, and project metadata. This also works for delegates
+  without T3 tools; do not replace it with the child's current thread ID.
+- Otherwise get `environmentId` from `t3_environment_read` and `currentThreadId`
+  from `t3_thread_list` with `includeSubagents: true`. Find the current thread by
+  exact `threadId`, paging or using `t3_thread_read` if needed; the first list entry
+  is not necessarily the current thread.
+- While that thread has `relationshipToParent: "subagent"`, follow its
+  `parentThreadId`, reading parent metadata as needed. Use the first ancestor whose
+  relationship is not `subagent` as the destination. Nested delegates therefore
+  share the same chat. A `fork` is its own user-facing chat; do not follow its parent.
+
+Pass the resolved IDs as `--t3-environment-id` and `--t3-thread-id` to
+`scripts/progress-notify`. These are T3 IDs: do not use `CODEX_THREAD_ID`, provider
+session IDs, project IDs, or infer a destination from task titles. If neither T3
+tools nor an explicit parent destination are available, send an ordinary unlinked
+notification. Omitted destinations are preserved by subsequent updates, including
+completion, so the flags are needed only on the first update (or when correcting it).
+
+When delegating work, include the resolved progress destination and project metadata
+in each delegate's task brief, instructing it to use these for its initial progress
+card. Pass the same destination through nested delegation. Each delegate keeps its
+own unique, stable task name; sharing the destination makes Enter open the parent
+chat and gives related cards the same thread-group symbol without merging progress.
 
 ```sh
 ~/.agents/skills/progress-notifier/scripts/progress-notify 'Build release' 0 180 \
   --project 'progress-notifier' --description 'Preparing the release build' \
-  --t3-environment-id '<environmentId>' --t3-thread-id '<currentThreadId>'
+  --t3-environment-id '<environmentId>' --t3-thread-id '<resolvedChatThreadId>'
 ```
 
 With the panel focused, **Enter** (or keypad Enter) opens the selected task's
-originating thread and focuses `/Applications/T3 Code (Beta).app`. This works in
-compact and expanded modes and for recalled completed results. Unlinked cards do
+linked chat (the parent chat for delegates) and focuses
+`/Applications/T3 Code (Beta).app`. This works in compact and expanded modes and
+for recalled completed results. Unlinked cards do
 nothing on Enter. The destination is stored as optional
 `"t3Thread":{"environmentId":"...","threadId":"..."}` in the API and saved state;
 `GET /items` returns it when present. Both IDs must contain 1–512 ASCII letters,
