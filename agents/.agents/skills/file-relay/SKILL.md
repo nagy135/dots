@@ -8,6 +8,8 @@ description: "Upload files to relay.infiniter.tech and return public download li
 Upload the requested file to `https://relay.infiniter.tech/upload` and return
 the actual download URL from the response.
 
+When delivering a file for download, upload it to the relay and return a verified public HTTPS link that works outside the workspace, never a local file path.
+
 ## Service contract
 
 - Public uploads and downloads; no account, token, or authentication headers.
