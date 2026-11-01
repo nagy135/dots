@@ -199,53 +199,27 @@ through relaunch and H recall. `GET /items` returns `description`, `updateCount`
 
 ## Warnings and questions for the user
 
-Use `--warning 'message'` on the **same task and run ID** for a recoverable issue,
-risk, or a question that deserves the user's attention. The affected progress bar
-uses static amber stripes in expanded, titled, and minimized modes. Expanded cards
-show the warning text; the bar's tooltip and accessibility value also expose it.
-Keep reporting honest progress, ETA, and `--description` as usual.
+Add `--warning 'message'` to a normal update on the **same task and run ID** for
+an issue, risk, or question needing attention. Use a short, specific message
+(1–2,000 characters). Amber stripes identify that task in every display mode;
+expanded cards also show the message.
 
-**A warning is an addition, never a replacement for what you would otherwise do.**
-It can contain a question for the user, but still ask that question through the
-normal chat or question tool and continue the useful, authorized work you would
-have done without the warning. Do not wait, stop, skip work, or silently change your
-workflow merely because you displayed a warning. If the answer genuinely blocks a
-decision, leave only that dependent work pending and continue independent work;
-a warning does not grant permission or let you guess a required answer.
+**Warnings supplement your normal work and communication.** If the message asks
+a question, still ask it through chat or the question tool and continue the useful,
+authorized work you would otherwise do. Wait only on work that genuinely depends
+on the answer. Keep sending honest progress, ETA, and `--description` updates.
 
 ```sh
-# Include the same run ID, project and chat flags as your other updates.
-progress-notify 'Build release' 45 120 \
-  --warning 'Include debug symbols? Continuing the release checks meanwhile.' \
-  --description 'Compiled the app; running tests'
-
-# After the question or issue is resolved, explicitly clear the warning.
-progress-notify 'Build release' 70 60 --clear-warning \
-  --description 'Release checks passed; packaging with debug symbols'
+progress-notify 'Build release' 45 120 --warning 'Include symbols? Continuing checks.' --description 'Running tests'
+progress-notify 'Build release' 70 60 --clear-warning --description 'Checks passed; question resolved'
 ```
 
-Omitting both warning flags **preserves** the existing warning, including at 100%.
-Use `--clear-warning` only once the issue or question is resolved; ordinary progress
-must not silently clear it. The user can acknowledge and remove the selected task's
-warning with **Enter** (including keypad Enter) in every display mode. Enter still
-opens the linked chat as usual; double-clicking or using the Open Focused Task menu
-action also acknowledges it. Acknowledgement adds a “Warning acknowledged” ledger
-entry, preserves progress and ETA, and persists across relaunch and history recall.
-It only clears the displayed warning: it is not an answer, approval, or permission.
-Do not infer a response from acknowledgement. An explicit later `--warning` can
-raise a new warning. An unresolved warning can remain on a completed result.
-A new run starts without a warning. Never create a separate warning task or use a
-warning to signal completion or failure. Warnings use the existing brief update
-flash, with no repeating animation or additional sound.
-
-Messages are plain text, 1–2,000 characters, with newlines and tabs supported.
-`--warning` and `--clear-warning` are mutually exclusive. The API's optional `warning`
-string has the same limit: omit it (or use null) to preserve, send a nonempty string
-to set/replace, or `""` to clear. `GET /items` includes `warning` when active. Warning
-changes are recorded in the existing description ledger, with each entry's warning
-snapshot retained after clearing, completion, recall, deletion undo and relaunch.
-A warning-only change records “Warning raised” or “Warning cleared” when no
-`--description` is supplied; agents should continue to supply descriptions.
+Keep the usual project, run ID, and chat flags. Omission preserves a warning,
+including at completion; clear it with `--clear-warning` once resolved. The two
+warning flags are mutually exclusive. Enter acknowledges and clears the selected
+warning while opening its linked chat as usual; double-click does the same.
+Acknowledgement is **not an answer or approval**. Warning history is retained;
+a new run starts without a warning.
 
 Report meaningful milestones while the requested work runs. Use honest estimates; revise them as new information arrives. Send `100 0` only when the work actually succeeds. This plays the macOS Glass sound, flashes and enlarges the card, and keeps it visible as completed history until the user clears it with C or dismisses it. Do not automatically dismiss successful results. The active API entry retires after the brief feedback phase, so the same name can be used for a new run while its completed record remains visible. C hides completed records without deleting history; H can recall them. Like other recalled history, completed records are hidden on app relaunch. On failure or cancellation, dismiss the card and explain the outcome in chat; do not signal success.
 
