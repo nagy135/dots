@@ -1,9 +1,9 @@
 ---
-name: post-mortum
-description: Briefly explain why a fix or change was needed, what was essential, and what could have been omitted. Use when asked for a post mortum or postmortem of completed work.
+name: post-mortem
+description: Briefly explain why a fix or change was needed, what was essential, and what could have been omitted. Use when asked for a post-mortem or postmortem of completed work.
 ---
 
-# Post mortum
+# Post-mortem
 
 End with three short points, in this order:
 

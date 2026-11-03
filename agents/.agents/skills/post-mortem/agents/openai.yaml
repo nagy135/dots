@@ -1,3 +1,3 @@
 interface:
-  display_name: "Post mortum"
+  display_name: "Post-mortem"
   short_description: "Explain the issue, essential fix, and optional work"
