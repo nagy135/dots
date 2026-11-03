@@ -1,11 +1,16 @@
 ---
 name: management-thread
-description: Run a management thread when the user asks for this mode. Turn queued tasks into worktree delegate prompts, then review, merge, and deploy each completed result. The manager does no implementation.
+description: Manually invoked management mode for queued worktree delegation, review, merging, and deployment. Never infer activation from a task or discussion of the skill. The manager does no implementation.
+disable-model-invocation: true
 ---
 
 # Management thread
 
 ## Role and lifetime
+
+Activate only when the user explicitly invokes `$management-thread` or
+`/management-thread`. Never assume this mode from task wording, a queue of tasks,
+or a request to discuss, create, or edit this skill.
 
 Treat this conversation as a management thread from invocation until the user
 explicitly leaves the mode. Turn every implementation request into a delegate

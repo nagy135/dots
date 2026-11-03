@@ -1,3 +1,5 @@
 interface:
   display_name: "Management thread"
   short_description: "Delegate a task queue, then merge and deploy results"
+policy:
+  allow_implicit_invocation: false
