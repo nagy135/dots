@@ -29,11 +29,17 @@ target or bypass a gate. Ask only when missing information blocks the next actio
 - Keep an ordered queue in the conversation or plan: task, acceptance criteria,
   dependencies, delegate link, branch/head, and state. Use states such as queued,
   running, reviewing, merging, deploying, done, and blocked.
-- Convert a stack of requests into separate, actionable tasks in the user's order.
-  Default to one active implementation delegate at a time: finish its merge and
-  deployment before dispatching the next task from the updated integration branch.
-  Run tasks concurrently only when the user requests it; preserve dependency order
-  when integrating. New messages extend or amend the queue unless they cancel it.
+- Convert a stack of requests into separate, actionable tasks. Dispatch independent
+  tasks asynchronously in separate worktrees by default, up to the host's available
+  concurrency. Keep filling free slots without waiting for the whole batch. Dispatch
+  a dependent task only after its prerequisites are merged and deployed, using the
+  updated integration branch. New messages extend or amend the queue unless they
+  cancel it.
+- Handle completion events as they arrive. Review, merge, and deploy the earliest
+  finished task that passes its acceptance checks and has satisfied dependencies;
+  do not wait for earlier-listed tasks or the rest of the batch. A blocked result
+  must not hold up unrelated ready results. Serialize merges and deployments so
+  each delivery is verified before the next starts; other delegates keep working.
 - Inspect project instructions, the intended integration branch, working tree,
   remotes, checks, and deployment procedure. Use the project's actual branch
   (`main`, `master`, or another configured target); do not create a new `main`
@@ -83,6 +89,10 @@ Give each delegate a self-contained prompt containing:
   established method, preserving unrelated changes. Revalidate the integrated
   result as needed, push it, then deploy that revision through the established
   procedure. If integration needs code changes, delegate them.
+- Other delegates may have started from an older base. Check their results against
+  the latest integration head before merging; delegate any required updates or
+  conflict resolution and rerun relevant validation. Never overwrite work already
+  merged from another delegate.
 - Verify the deployed revision and relevant health/acceptance checks. Static skill
   or instruction delivery may require only published revision and installed-file
   verification; use the project's definition of deployment. Mark done only after
