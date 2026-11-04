@@ -32,6 +32,7 @@ zsh/.zshenv
 # Preserve synced skill content, but not trash or generated sync bookkeeping.
 /claude/.claude/skills/.trash/
 /claude/.claude/skills/synced/.bucket-*
+/claude/.claude/skills/synced/*/.staging/
 /claude/.claude/skills/synced/*/.last-complete-round
 /claude/.claude/skills/synced/*/manifest.json
 /claude/.claude/skills/**/__pycache__/
