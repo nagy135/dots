@@ -42,16 +42,17 @@ fabricates progress or completes a task when the ETA expires.
 When running in a T3 thread, use the thread's actual project name and icon. Reuse project metadata supplied by the parent when available; otherwise discover the current project ID with `t3_thread_list`, then read it with `t3_project_read`. Pass its `title` as `--project` and its non-null `projectIcon` object as JSON with `--project-icon`; do not invent an emoji. When `projectIcon` is null, omit the flag: the app generates T3's default project monogram and color. Outside T3, use the known project name and omit the icon unless supplied. Keep the task title concise; the project appears in its own heading above it. Names must still be unique across concurrent tasks.
 
 For **every run inside T3 Code**, attach the user-facing chat to the initial card.
-**Delegates link to their parent chat, not their own subagent thread.** Resolve the
+**Delegates group under their parent chat and open their own subagent thread.** Resolve the
 destination alongside the project metadata, before the initial notification:
 
 - Reuse an explicit progress destination supplied by the parent: its T3 environment
   ID, resolved chat thread ID, and project metadata. This also works for delegates
-  without T3 tools; do not replace it with the child's current thread ID.
+  without T3 tools. Keep this grouping destination separate from the child's opening target.
 - Otherwise get `environmentId` from `t3_environment_read` and `currentThreadId`
   from `t3_thread_list` with `includeSubagents: true`. Find the current thread by
   exact `threadId`, paging or using `t3_thread_read` if needed; the first list entry
   is not necessarily the current thread.
+- Save the exact current thread ID as the opening target before following parents.
 - While that thread has `relationshipToParent: "subagent"`, follow its
   `parentThreadId`, reading parent metadata as needed. Use the first ancestor whose
   relationship is not `subagent` as the destination. Nested delegates therefore
@@ -63,6 +64,17 @@ session IDs, project IDs, or infer a destination from task titles. If neither T3
 tools nor an explicit parent destination are available, send an ordinary unlinked
 notification. Omitted destinations are preserved by subsequent updates, including
 completion, so the flags are needed only on the first update (or when correcting it).
+
+Children must resolve their own current T3 thread even when the parent supplied
+the grouping destination: call `t3_thread_list` with `includeSubagents: true` and
+use its `currentThreadId` (not the first listed thread). For children, also pass `--t3-open-thread-id '<ownCurrentThreadId>'` with both
+grouping flags. Enter and double-click use this target while `--t3-thread-id`
+continues to group the timeline under the root chat. Use the exact T3 thread ID,
+including literal percent signs in delegated IDs; do not decode it. If the child
+cannot discover its own T3 ID, the parent may supply it once known. Until then,
+omit the opening target and keep the parent chat fallback; never guess an ID or
+pass the parent thread as the child opening target. Native provider session IDs
+are not T3 IDs.
 
 ### Identify runs and link the timeline
 
@@ -92,7 +104,7 @@ alongside the resolved user-facing chat destination and project metadata. The ch
 generates its own UUID and sends `--child --run-id '<its UUID>' --parent-run-id
 '<spawning agent UUID>'` on its initial notification. Reuse these flags on updates.
 Nested children receive their immediate spawning agent's run ID, while keeping the
-same root chat destination. Children must never copy their parent's ID as their own.
+same root grouping destination and each using their own opening target. Children must never copy their parent's ID as their own.
 If no reliable parent run ID is supplied, keep `--child` and omit `--parent-run-id`;
 never guess ownership from task names, shared destinations or the newest main card.
 
@@ -140,14 +152,16 @@ progress destination and project metadata. For example:
 ~/.agents/skills/progress-notifier/scripts/progress-notify 'Review release' 0 120 \
   --child --run-id '<child UUID>' --parent-run-id '<spawning agent UUID>' \
   --project 'progress-notifier' --description 'Reviewing the release changes' \
-  --t3-environment-id '<environmentId>' --t3-thread-id '<resolvedChatThreadId>'
+  --t3-environment-id '<environmentId>' --t3-thread-id '<resolvedChatThreadId>' \
+  --t3-open-thread-id '<ownCurrentThreadId>'
 ```
 
 When delegating work, include the resolved progress destination and project metadata
 in each delegate's task brief, instructing it to use these for its initial progress
 card. Pass the same destination through nested delegation. Each delegate keeps its
-own unique, stable task name; sharing the destination makes Enter open the parent
-chat and groups related cards in one timeline without merging progress. Pass your run ID
+own unique, stable task name; sharing the grouping destination keeps related cards
+in one timeline without merging progress. Tell children to resolve and send their
+own opening target and pass this distinction through nested delegation. Pass your run ID
 as the parent run ID so each child branches from its actual owner.
 
 ```sh
@@ -157,13 +171,16 @@ as the parent run ID so each child branches from its actual owner.
 ```
 
 With the panel focused, **Enter** (or keypad Enter) opens the selected task's
-linked chat (the parent chat for delegates) and focuses
+linked chat (its own thread for delegates with an opening target) and focuses
 `/Applications/T3 Code (Beta).app`. This works in compact and expanded modes and
 for recalled completed results. Click a task to select it. Double-click a task to select it and open its linked chat,
 even when the panel was inactive. Unlinked cards are selectable but do not open T3 Code. The destination is stored as optional
 `"t3Thread":{"environmentId":"...","threadId":"..."}` in the API and saved state;
-`GET /items` returns it when present. Both IDs must contain 1–512 ASCII letters,
-digits, hyphens, underscores, or colons. Existing cards remain unlinked until an update
+`GET /items` returns it when present. Each ID must contain 1–512 ASCII letters,
+digits, hyphens, underscores, or colons; thread IDs also allow percent signs.
+The optional `"t3OpenThread"` object has the same shape as `t3Thread`, is persisted
+and returned by `GET /items`, and overrides only Enter/double-click navigation.
+Omitting it preserves the existing target; legacy cards fall back to `t3Thread`. Existing cards remain unlinked until an update
 supplies the IDs; a new run never inherits a previous run's destination.
 
 ```sh

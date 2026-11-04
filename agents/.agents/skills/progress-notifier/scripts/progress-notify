@@ -33,8 +33,9 @@ def main():
     parser.add_argument("--description", help="Progress note saved with this percentage (up to 2000 characters)")
     parser.add_argument("--project", help="Project name displayed above the task title (empty clears metadata)")
     parser.add_argument("--project-icon", metavar="JSON", help="T3 projectIcon object: emoji, lucide, or monogram")
-    parser.add_argument("--t3-environment-id", help="T3 environment ID for Enter-to-open (requires --t3-thread-id)")
-    parser.add_argument("--t3-thread-id", help="T3 thread ID for Enter-to-open (requires --t3-environment-id)")
+    parser.add_argument("--t3-environment-id", help="T3 environment ID for chat grouping (requires --t3-thread-id)")
+    parser.add_argument("--t3-thread-id", help="T3 thread ID for chat grouping (requires --t3-environment-id)")
+    parser.add_argument("--t3-open-thread-id", help="Own child thread to open; requires both T3 grouping IDs")
     parser.add_argument("--run-id", help="Stable UUID for this agent run")
     parser.add_argument("--parent-run-id", help="Spawning agent's run UUID (requires --run-id and --child)")
     role = parser.add_mutually_exclusive_group()
@@ -51,7 +52,7 @@ def main():
     args = parser.parse_args()
     mode = args.health or args.list or args.dismiss is not None
     if mode and any(value is not None for value in (args.name, args.progress, args.eta_seconds, args.project, args.project_icon, args.description, args.warning, True if args.clear_warning else None,
-                                                   args.t3_environment_id, args.t3_thread_id, args.is_child, args.run_id, args.parent_run_id)):
+                                                   args.t3_environment_id, args.t3_thread_id, args.t3_open_thread_id, args.is_child, args.run_id, args.parent_run_id)):
         parser.error("Do not combine an option command with update arguments")
     path, method, value = "/health", "GET", None
     if args.list:
@@ -86,11 +87,16 @@ def main():
                 parser.error("A run cannot be its own parent")
         if args.is_child is not None:
             value["isChild"] = args.is_child
-        if args.t3_environment_id is not None or args.t3_thread_id is not None:
-            if not all(identifier is not None and re.fullmatch(r"[A-Za-z0-9_:-]{1,512}", identifier)
-                       for identifier in (args.t3_environment_id, args.t3_thread_id)):
-                parser.error("Supply both T3 IDs, each containing 1–512 ASCII letters, digits, hyphens, underscores, or colons")
+        if any(v is not None for v in (args.t3_environment_id, args.t3_thread_id, args.t3_open_thread_id)):
+            if not all(identifier is not None and re.fullmatch(pattern, identifier)
+                       for identifier, pattern in ((args.t3_environment_id, r"[A-Za-z0-9_:-]{1,512}"),
+                                                   (args.t3_thread_id, r"[A-Za-z0-9_%:-]{1,512}"))):
+                parser.error("Supply both T3 IDs, each containing 1–512 ASCII letters, digits, hyphens, underscores, or colons (thread IDs also permit percent signs)")
             value["t3Thread"] = {"environmentId": args.t3_environment_id, "threadId": args.t3_thread_id}
+        if args.t3_open_thread_id is not None:
+            if not re.fullmatch(r"[A-Za-z0-9_%:-]{1,512}", args.t3_open_thread_id):
+                parser.error("Invalid T3 open thread ID")
+            value["t3OpenThread"] = {"environmentId": args.t3_environment_id, "threadId": args.t3_open_thread_id}
         if args.warning is not None:
             warning = args.warning.replace("\r\n", "\n").replace("\r", "\n").strip()
             if not warning or len(warning) > 2000 or any((ord(c) < 32 or 127 <= ord(c) <= 159) and c not in "\n\t" for c in warning):
