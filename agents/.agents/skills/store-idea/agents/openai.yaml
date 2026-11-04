@@ -1,0 +1,4 @@
+interface:
+  display_name: "Store idea"
+  short_description: "Save a discussion summary and artifacts to Ideas"
+  default_prompt: "Use $store-idea to save the latest idea or summary, including relevant artifacts, into ~/Documents/Ideas."
