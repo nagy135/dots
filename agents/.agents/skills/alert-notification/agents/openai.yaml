@@ -1,0 +1,5 @@
+interface:
+  display_name: "Alert notification"
+  short_description: "Get attention once with a centered Hammerspoon alert"
+policy:
+  allow_implicit_invocation: false
