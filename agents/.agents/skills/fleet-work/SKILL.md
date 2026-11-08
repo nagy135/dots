@@ -13,7 +13,7 @@ description: Work across Viktor's Mac, NixOS hosts, and Home Assistant Raspberry
 | nixpi | `infiniter@nixpi.tail6650cb.ts.net` | `nix-server`, `.#nixpi` |
 | nixzero | `infiniter@nixzero.tail6650cb.ts.net` | `nix-server`, `.#nixzero` |
 | Hetzner | `root@91.99.204.136` | `nix-server`, `.#hetzner` |
-| homeassistant | `homeassistant.tail6650cb.ts.net` (Raspberry Pi 4) | OS, login, and configuration management unverified |
+| homeassistant | `ssh -p 22222 root@homeassistant.tail6650cb.ts.net` | Raspberry Pi 4; Home Assistant OS image (`rpi4-64`) |
 
 T3 Code provides the fleet's agent sessions through its running backends.
 Use SSH for remote commands and Git to transfer source changes. A T3 Code
@@ -26,8 +26,10 @@ The Mac's configuration repositories are `~/Code/nix-darwin` and
 host when rebuilding. The Zero uses nixpi as its build worker.
 
 Use `infiniter` for ordinary work on nixpi and nixzero and root for administration.
-For homeassistant, verify the OS and available access before choosing commands;
-do not assume it uses NixOS, the `nix-server` repository, or the other Pis' logins.
+Homeassistant uses the Home Assistant OS host shell as root on SSH port `22222`.
+The device identifies itself as Home Assistant OS, rather than Raspberry Pi OS
+(Raspbian). Its boot configuration is `/mnt/boot/config.txt`. Do not apply the
+NixOS or `nix-server` workflow to this host.
 The Mac does not run an SSH server; initiate fleet connections from the Mac.
 
 ## Git under sensory-minds
