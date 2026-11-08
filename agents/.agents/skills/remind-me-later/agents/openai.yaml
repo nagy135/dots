@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remind me later"
+  short_description: "Schedule a persistent Mac reminder with a thread button"
+  default_prompt: "Use $remind-me-later to remind me about this tomorrow, or at the time I specify."
