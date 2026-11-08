@@ -1,6 +1,6 @@
 ---
 name: fleet-work
-description: Work across Viktor's Mac and NixOS fleet using T3 Code, SSH, and Git, including the sensory-minds Mac relay workflow.
+description: Work across Viktor's Mac, NixOS hosts, and Home Assistant Raspberry Pi using T3 Code, SSH, and Git, including the sensory-minds Mac relay workflow.
 ---
 
 # Fleet work
@@ -13,6 +13,7 @@ description: Work across Viktor's Mac and NixOS fleet using T3 Code, SSH, and Gi
 | nixpi | `infiniter@nixpi.tail6650cb.ts.net` | `nix-server`, `.#nixpi` |
 | nixzero | `infiniter@nixzero.tail6650cb.ts.net` | `nix-server`, `.#nixzero` |
 | Hetzner | `root@91.99.204.136` | `nix-server`, `.#hetzner` |
+| homeassistant | `homeassistant.tail6650cb.ts.net` (Raspberry Pi 4) | OS, login, and configuration management unverified |
 
 T3 Code provides the fleet's agent sessions through its running backends.
 Use SSH for remote commands and Git to transfer source changes. A T3 Code
@@ -24,7 +25,9 @@ The Mac's configuration repositories are `~/Code/nix-darwin` and
 `nix-server`, normally checked out at `/etc/nixos`. Select the matching flake
 host when rebuilding. The Zero uses nixpi as its build worker.
 
-Use `infiniter` for ordinary work on the Pis and root for administration.
+Use `infiniter` for ordinary work on nixpi and nixzero and root for administration.
+For homeassistant, verify the OS and available access before choosing commands;
+do not assume it uses NixOS, the `nix-server` repository, or the other Pis' logins.
 The Mac does not run an SSH server; initiate fleet connections from the Mac.
 
 ## Git under sensory-minds
